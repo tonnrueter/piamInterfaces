@@ -1,0 +1,10 @@
+{
+  "title": "piamInterfaces: Project specific interfaces to REMIND / MAgPIE",
+  "version": "0.0.2",
+  "description": "<p>Project specific interfaces to REMIND / MAgPIE.<\/p>",
+  "creators": [
+    {
+      "name": "Benke, Falk"
+    }
+  ]
+}
