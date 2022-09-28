@@ -6,13 +6,13 @@
 \usage{
 generateMappingfile(
   templates,
-  fileName = NULL,
-  remindVar,
-  remindUnit,
   targetVar,
-  targetUnit,
-  factorCol,
-  weightCol,
+  fileName = NULL,
+  remindVar = "r30m44",
+  remindUnit = "r30m44_unit",
+  targetUnit = "Unit",
+  factorCol = "r30m44_factor",
+  weightCol = NULL,
   spatialCol = "spatial",
   model = "REMIND-MAgPIE",
   commentFileName = NULL
@@ -21,25 +21,25 @@ generateMappingfile(
 \arguments{
 \item{templates}{either a character or vector of templates to use as a starting point for creating the mapping}
 
+\item{targetVar}{column name in template containing the target variable names}
+
 \item{fileName}{name of the mapping file to be created, if provided, the file is created in the "output" folder,
 otherwise a data frame is returned (optional)}
 
-\item{remindVar}{column name in template containing the REMIND variable names}
+\item{remindVar}{column name in template containing the REMIND variable names (default: r30m44)}
 
-\item{remindUnit}{column name in template containing the REMIND units}
+\item{remindUnit}{column name in template containing the REMIND units (default: r30m44_unit)}
 
-\item{targetVar}{column name in template containing the target variable names}
+\item{targetUnit}{column name in template containing the target units (default: Unit)}
 
-\item{targetUnit}{column name in template containing the target units}
+\item{factorCol}{column name in template containing conversion factors (default: r30m44_factor)}
 
-\item{factorCol}{column name in template containing conversion factors}
-
-\item{weightCol}{column name in template containing weight factors}
+\item{weightCol}{column name in template containing weight factors (optional)}
 
 \item{spatialCol}{column name in template containing regional restrictions
 for reporting the corresponding variable (optional)}
 
-\item{model}{exact name of the source model, used as column in comments file (optional)}
+\item{model}{exact name of the source model, used as column in comments file (default: REMIND-MAgPIE)}
 
 \item{commentFileName}{name of the comments file to be created, if provided,
 the file is created in the "output" folder, otherwise a data frame is

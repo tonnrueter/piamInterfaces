@@ -3,27 +3,27 @@
 #' @md
 #' @author Falk Benke
 #' @param templates either a character or vector of templates to use as a starting point for creating the mapping
+#' @param targetVar column name in template containing the target variable names
 #' @param fileName name of the mapping file to be created, if provided, the file is created in the "output" folder,
 #'        otherwise a data frame is returned (optional)
-#' @param remindVar column name in template containing the REMIND variable names
-#' @param remindUnit column name in template containing the REMIND units
-#' @param targetVar column name in template containing the target variable names
-#' @param targetUnit column name in template containing the target units
-#' @param factorCol column name in template containing conversion factors
-#' @param weightCol column name in template containing weight factors
+#' @param remindVar column name in template containing the REMIND variable names (default: r30m44)
+#' @param remindUnit column name in template containing the REMIND units (default: r30m44_unit)
+#' @param targetUnit column name in template containing the target units (default: Unit)
+#' @param factorCol column name in template containing conversion factors (default: r30m44_factor)
+#' @param weightCol column name in template containing weight factors (optional)
+#' @param spatialCol column name in template containing regional restrictions
+#'        for reporting the corresponding variable (optional)
+#' @param model exact name of the source model, used as column in comments file (default: REMIND-MAgPIE)
 #' @param commentFileName name of the comments file to be created, if provided,
 #'        the file is created in the "output" folder, otherwise a data frame is
 #'        returned (optional)
-#' @param model exact name of the source model, used as column in comments file (optional)
-#' @param spatialCol column name in template containing regional restrictions
-#'        for reporting the corresponding variable (optional)
-#'
 #' @importFrom data.table fread fwrite := setnames
 #' @export
 #'
 #'
-generateMappingfile <- function(templates, fileName = NULL, remindVar, remindUnit,
-                                targetVar, targetUnit, factorCol, weightCol,
+generateMappingfile <- function(templates, targetVar, fileName = NULL, remindVar = "r30m44",
+                                remindUnit = "r30m44_unit", targetUnit = "Unit",
+                                factorCol = "r30m44_factor", weightCol = NULL,
                                 spatialCol = "spatial", model = "REMIND-MAgPIE",
                                 commentFileName = NULL) {
   if (!dir.exists("output")) {
