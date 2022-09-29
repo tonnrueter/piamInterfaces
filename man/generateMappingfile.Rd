@@ -7,6 +7,7 @@
 generateMappingfile(
   templates,
   targetVar,
+  outputDirectory = "output",
   fileName = NULL,
   remindVar = "r30m44",
   remindUnit = "r30m44_unit",
@@ -22,6 +23,8 @@ generateMappingfile(
 \item{templates}{either a character or vector of templates to use as a starting point for creating the mapping}
 
 \item{targetVar}{column name in template containing the target variable names}
+
+\item{outputDirectory}{path to directory to place generated files (default: output)}
 
 \item{fileName}{name of the mapping file to be created, if provided, the file is created in the "output" folder,
 otherwise a data frame is returned (optional)}

@@ -4,6 +4,7 @@
 #' @author Falk Benke
 #' @param templates either a character or vector of templates to use as a starting point for creating the mapping
 #' @param targetVar column name in template containing the target variable names
+#' @param outputDirectory path to directory to place generated files (default: output)
 #' @param fileName name of the mapping file to be created, if provided, the file is created in the "output" folder,
 #'        otherwise a data frame is returned (optional)
 #' @param remindVar column name in template containing the REMIND variable names (default: r30m44)
@@ -21,13 +22,14 @@
 #' @export
 #'
 #'
-generateMappingfile <- function(templates, targetVar, fileName = NULL, remindVar = "r30m44",
+generateMappingfile <- function(templates, targetVar, outputDirectory = "output",
+                                fileName = NULL, remindVar = "r30m44",
                                 remindUnit = "r30m44_unit", targetUnit = "Unit",
                                 factorCol = "r30m44_factor", weightCol = NULL,
                                 spatialCol = "spatial", model = "REMIND-MAgPIE",
                                 commentFileName = NULL) {
-  if (!dir.exists("output")) {
-    dir.create("output", recursive = TRUE)
+  if (!dir.exists(outputDirectory)) {
+    dir.create(outputDirectory, recursive = TRUE)
   }
 
   .generateMapping <- function(template, fileName = NULL,
@@ -75,7 +77,7 @@ generateMappingfile <- function(templates, targetVar, fileName = NULL, remindVar
 
     if (!is.null(fileName)) {
       ## store mapping
-      fwrite(dt, file = paste0("output/", fileName), sep = ";")
+      fwrite(dt, file = paste0(outputDirectory, "/", fileName), sep = ";")
     } else {
       return(dt)
     }
@@ -99,7 +101,7 @@ generateMappingfile <- function(templates, targetVar, fileName = NULL, remindVar
       )]
 
       if (!is.null(fileName)) {
-        fwrite(comments, file = paste0("output/", fileName))
+        fwrite(comments, file = paste0(outputDirectory, "/", fileName))
       } else {
         return(comments)
       }
@@ -153,9 +155,9 @@ generateMappingfile <- function(templates, targetVar, fileName = NULL, remindVar
       tmpComments <- rbind(tmpComments, c)
     }
 
-    fwrite(tmp, file = paste0("output/", fileName), sep = ";")
+    fwrite(tmp, file = paste0(outputDirectory, "/", fileName), sep = ";")
     if (!is.null(tmpComments)) {
-      fwrite(tmpComments, file = paste0("output/", commentFileName), sep = ";")
+      fwrite(tmpComments, file = paste0(outputDirectory, "/", commentFileName), sep = ";")
     }
   }
 }
