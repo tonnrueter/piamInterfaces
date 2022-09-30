@@ -78,9 +78,8 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
     if (!is.null(fileName)) {
       ## store mapping
       fwrite(dt, file = paste0(outputDirectory, "/", fileName), sep = ";")
-    } else {
-      return(dt)
     }
+    return(dt)
   }
 
   .storeComments <- function(template, remindVar, targetVar, model, fileName = NULL) {
@@ -102,15 +101,14 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
 
       if (!is.null(fileName)) {
         fwrite(comments, file = paste0(outputDirectory, "/", fileName))
-      } else {
-        return(comments)
       }
+      return(comments)
     }
   }
 
 
   if (length(templates) == 1) {
-    .generateMapping(
+    mapping <- .generateMapping(
       template = templates,
       fileName = fileName,
       remindVar = remindVar,
@@ -122,7 +120,7 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
       spatialCol = spatialCol
     )
 
-    .storeComments(
+    comments <- .storeComments(
       template = templates,
       remindVar = remindVar,
       targetVar = targetVar,
@@ -130,8 +128,8 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
       fileName = commentFileName
     )
   } else {
-    tmp <- NULL
-    tmpComments <- NULL
+    mapping <- NULL
+    comments <- NULL
     for (i in seq_along(templates)) {
       m <- .generateMapping(
         template = templates[i],
@@ -144,7 +142,7 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
         spatialCol = spatialCol
       )
       setnames(m, targetVar[i], "Variable")
-      tmp <- rbind(tmp, m)
+      mapping <- rbind(mapping, m)
 
       c <- .storeComments(
         template = templates[i],
@@ -152,12 +150,15 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
         model = model,
         targetVar = targetVar[i]
       )
-      tmpComments <- rbind(tmpComments, c)
+      comments <- rbind(comments, c)
     }
 
-    fwrite(tmp, file = paste0(outputDirectory, "/", fileName), sep = ";")
-    if (!is.null(tmpComments)) {
-      fwrite(tmpComments, file = paste0(outputDirectory, "/", commentFileName), sep = ";")
+    if (!is.null(fileName)) {
+      fwrite(mapping, file = paste0(outputDirectory, "/", fileName), sep = ";")
+    }
+    if (!is.null(comments) && !is.null(commentFileName)) {
+      fwrite(comments, file = paste0(outputDirectory, "/", commentFileName), sep = ";")
     }
   }
+  return(list(mappings = mapping, comments = comments))
 }
