@@ -17,13 +17,23 @@
 #' @importFrom data.table :=
 #' @importFrom iamc write.reportProject
 #' @importFrom rmndt readMIF writeMIF
+#' @examples
+#' \dontrun{
+#' # Simple use. Generates submission file in output folder:
+#' generateIIASASubmission(
+#'   mifDirectory = "/path/to/REMIMD/mifs",
+#'   model = "REMIND-MAgPIE 2.1-4.2",
+#'   mapping = "output/template_navigate.csv",
+#'   generateSingleOutput = TRUE
+#' )
+#' }
 #' @export
-#'
 generateIIASASubmission <- function(mifDirectory, model, mapping,
                           removeFromScen = NULL, addToScen = NULL,
                           outputDirectory = "output", outputPrefix = "",
                           logFile = "output/missing.log",
-                          generateSingleOutput = FALSE, outputFilename = "submission.mif") {
+                          generateSingleOutput = FALSE,
+                          outputFilename = "submission.mif") {
   if (!dir.exists(outputDirectory)) {
     dir.create(outputDirectory)
   }
