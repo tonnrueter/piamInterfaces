@@ -19,7 +19,7 @@
 #' @importFrom rmndt readMIF writeMIF
 #' @export
 #'
-produceOutput <- function(mifDirectory, model, mapping,
+generateIIASASubmission <- function(mifDirectory, model, mapping,
                           removeFromScen = NULL, addToScen = NULL,
                           outputDirectory = "output", outputPrefix = "",
                           logFile = "output/missing.log",
