@@ -8,3 +8,4 @@
 ^codecov\.yml$
 ^\.github$
 ^.*\.zenodo.json$
+^output$
