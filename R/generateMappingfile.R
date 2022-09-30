@@ -23,14 +23,14 @@
 #' \dontrun{
 #' # Simple use. Creates NAVIGATE mapping and saves it to /output/template_navigate.csv:
 #' generateMappingfile(
-#'  templates = "inst/navigate/mapping_template_NAVIGATE.csv",
+#'  templates = "inst/templates/mapping_template_NAVIGATE.csv",
 #'  targetVar = "Variable_NAVIGATE",
 #'  fileName = "template_navigate.csv"
 #' )
 #' # More complex use. Creates combined mapping from NAVIGATE and SHAPE template:
 #' generateMappingfile(
-#'   templates = c("inst/navigate/mapping_template_NAVIGATE.csv",
-#'                 "inst/navigate/mapping_template_SHAPE.csv"),
+#'   templates = c("inst/templates/mapping_template_NAVIGATE.csv",
+#'                 "inst/templates/mapping_template_SHAPE.csv"),
 #'   targetVar = c("Variable_NAVIGATE", "Variable_SHAPE"),
 #'   fileName = "template_combined.csv"
 #' )
