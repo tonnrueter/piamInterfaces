@@ -862,18 +862,20 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 823;2;energy (final);Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of liquid efuels ("power-to-liquid")
 824;2;energy (final);Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of liquids from fossil origin (conventional & unconventional petroleum, coal-to-liquids, gas-to-liquids)
 825;1;energy (final);Final Energy|Transportation;EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;;;;final energy consumed in the transportation sector, excluding bunker fuels, excluding pipelines
-826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|++|Transport;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines
-827;1;energy (final);Final Energy|Transportation|Electricity;EJ/yr;;;;;;final energy consumption by the transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses
-828;1;energy (final);Final Energy|Transportation|Gases;EJ/yr;;;;;;final energy consumption by the transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses
-829;1;energy (final);Final Energy|Transportation|Hydrogen;EJ/yr;;;;;;final energy consumption by the transportation sector of hydrogen
-830;1;energy (final);Final Energy|Transportation|Liquids;EJ/yr;;;;;;final energy consumption by the transportation sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids)
+826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines
+826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines
+826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines
+827;1;energy (final);Final Energy|Transportation|Electricity;EJ/yr;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;;;;final energy consumption by the transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses
+828;1;energy (final);Final Energy|Transportation|Gases;EJ/yr;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;;;;final energy consumption by the transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses
+829;1;energy (final);Final Energy|Transportation|Hydrogen;EJ/yr;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;;;;final energy consumption by the transportation sector of hydrogen
+830;1;energy (final);Final Energy|Transportation|Liquids;EJ/yr;FE|Transport|w/o Bunkers|+|Liquids;EJ/yr;;;;final energy consumption by the transportation sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids)
 831;2;energy (final);Final Energy|Transportation|Other;EJ/yr;;;;;;final energy consumption by the transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab)
-832;1;energy (final);Final Energy|Transportation|Bus;EJ/yr;;;;;;final energy consumption in the transportation sector by bus
-833;1;energy (final);Final Energy|Transportation|LDV;EJ/yr;;;;;;final energy consumption in the transportation sector by light duty vehicles
-834;1;energy (final);Final Energy|Transportation|Rail;EJ/yr;;;;;;final energy consumption in the transportation sector by rail
-835;1;energy (final);Final Energy|Transportation|Truck;EJ/yr;;;;;;final energy consumption in the transportation sector by trucks
-836;1;energy (final);Final Energy|Transportation|Domestic Aviation;EJ/yr;;;;;;final energy consumption in the transportation sector by domestic aviation
-837;1;energy (final);Final Energy|Transportation|Domestic Shipping;EJ/yr;;;;;;final energy consumption in the transportation sector by domestic shipping
+832;1;energy (final);Final Energy|Transportation|Bus;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;final energy consumption in the transportation sector by bus
+833;1;energy (final);Final Energy|Transportation|LDV;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;final energy consumption in the transportation sector by light duty vehicles
+834;1;energy (final);Final Energy|Transportation|Rail;EJ/yr;FE|Transport|Rail;EJ/yr;;;;final energy consumption in the transportation sector by rail
+835;1;energy (final);Final Energy|Transportation|Truck;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;;;final energy consumption in the transportation sector by trucks
+836;1;energy (final);Final Energy|Transportation|Domestic Aviation;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy consumption in the transportation sector by domestic aviation
+837;1;energy (final);Final Energy|Transportation|Domestic Shipping;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;;;;final energy consumption in the transportation sector by domestic shipping
 838;2;energy (final);Final Energy|Transportation|Liquids|Biomass;EJ/yr;;;;;;final energy consumption by the transportation sector of liquid biofuels
 839;2;energy (final);Final Energy|Transportation|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the transportation sector of fossil based liquids (from conventional & unconventional oil, coal-to-liquids, gas-to-liquids)
 840;2;energy (final);Final Energy|Transportation|Liquids|Electricity;EJ/yr;;;;;;final energy consumption by the transportation sector of synthetic liquid efuels
@@ -884,26 +886,26 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 844;2;energy (final);Final Energy|Transportation|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption by the transportation sector of hydrogen from biomass
 845;2;energy (final);Final Energy|Transportation|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption by the transportation sector of synthetic or derived Hydrogen of fossil origin
 846;2;energy (final);Final Energy|Transportation|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption by the transportation sector of green hydrogen
-847;2;energy (final);Final Energy|Transportation|Bus|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by bus
-848;2;energy (final);Final Energy|Transportation|Bus|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by bus
-849;2;energy (final);Final Energy|Transportation|Bus|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen in the transportation sector by bus
-850;2;energy (final);Final Energy|Transportation|Bus|Liquids;EJ/yr;;;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by bus
+847;2;energy (final);Final Energy|Transportation|Bus|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by bus
+848;2;energy (final);Final Energy|Transportation|Bus|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by bus
+849;2;energy (final);Final Energy|Transportation|Bus|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by bus
+850;2;energy (final);Final Energy|Transportation|Bus|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by bus
 851;2;energy (final);Final Energy|Transportation|LDV|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by LDV
 852;2;energy (final);Final Energy|Transportation|LDV|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by LDV
-853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen in the transportation sector by LDV
-854;2;energy (final);Final Energy|Transportation|LDV|Liquids;EJ/yr;;;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by LDV
-855;2;energy (final);Final Energy|Transportation|Rail|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Rail
-856;2;energy (final);Final Energy|Transportation|Rail|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Rail
-857;2;energy (final);Final Energy|Transportation|Rail|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen in the transportation sector by Rail
-858;2;energy (final);Final Energy|Transportation|Rail|Liquids;EJ/yr;;;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Rail
-859;2;energy (final);Final Energy|Transportation|Truck|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Truck
-860;2;energy (final);Final Energy|Transportation|Truck|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Truck
-861;2;energy (final);Final Energy|Transportation|Truck|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen in the transportation sector by Truck
-862;2;energy (final);Final Energy|Transportation|Truck|Liquids;EJ/yr;;;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Truck
+853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;;;;;;
+854;2;energy (final);Final Energy|Transportation|LDV|Liquids;EJ/yr;;;;;;
+855;2;energy (final);Final Energy|Transportation|Rail|Electricity;EJ/yr;;;;;;
+856;2;energy (final);Final Energy|Transportation|Rail|Gases;EJ/yr;;;;;;
+857;2;energy (final);Final Energy|Transportation|Rail|Hydrogen;EJ/yr;;;;;;
+858;2;energy (final);Final Energy|Transportation|Rail|Liquids;EJ/yr;;;;;;
+859;2;energy (final);Final Energy|Transportation|Truck|Electricity;EJ/yr;FE|Transport|Freight|Road|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Truck
+860;2;energy (final);Final Energy|Transportation|Truck|Gases;EJ/yr;FE|Transport|Freight|Road|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Truck
+861;2;energy (final);Final Energy|Transportation|Truck|Hydrogen;EJ/yr;FE|Transport|Freight|Road|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by Truck
+862;2;energy (final);Final Energy|Transportation|Truck|Liquids;EJ/yr;FE|Transport|Freight|Road|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Truck
 863;2;energy (final);Final Energy|Transportation|Domestic Aviation|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Domestic Aviation
 864;2;energy (final);Final Energy|Transportation|Domestic Aviation|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Domestic Aviation
-865;2;energy (final);Final Energy|Transportation|Domestic Aviation|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen in the transportation sector by Domestic Aviation
-866;2;energy (final);Final Energy|Transportation|Domestic Aviation|Liquids;EJ/yr;;;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Domestic Aviation
+865;2;energy (final);Final Energy|Transportation|Domestic Aviation|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by Domestic Aviation
+866;2;energy (final);Final Energy|Transportation|Domestic Aviation|Liquids;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Domestic Aviation
 867;2;energy (final);Final Energy|Transportation|Domestic Shipping|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Domestic Shipping
 868;2;energy (final);Final Energy|Transportation|Domestic Shipping|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Domestic Shipping
 869;2;energy (final);Final Energy|Transportation|Domestic Shipping|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen in the transportation sector by Domestic Shipping
@@ -911,27 +913,27 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 871;2;energy (final);Final Energy|Transportation|Bus|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the transportation sector by bus
 872;2;energy (final);Final Energy|Transportation|Bus|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the transportation sector by bus
 873;2;energy (final);Final Energy|Transportation|Bus|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the transportation sector by bus
-874;2;energy (final);Final Energy|Transportation|Bus|Liquids|Fossil;EJ/yr;;;;;;final energy consumption of fossil Liquids in the transportation sector by bus
-875;2;energy (final);Final Energy|Transportation|Bus|Liquids|Biomass;EJ/yr;;;;;;final energy consumption of bioliquids in the transportation sector by bus
-876;2;energy (final);Final Energy|Transportation|Bus|Liquids|Electricity;EJ/yr;;;;;;final energy consumption of liquid efuels in the transportation sector by bus
+874;2;energy (final);Final Energy|Transportation|Bus|Liquids|Fossil;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the transportation sector by bus
+875;2;energy (final);Final Energy|Transportation|Bus|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the transportation sector by bus
+876;2;energy (final);Final Energy|Transportation|Bus|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the transportation sector by bus
 877;2;energy (final);Final Energy|Transportation|Bus|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the transportation sector by bus
 878;2;energy (final);Final Energy|Transportation|Bus|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the transportation sector by bus
 879;2;energy (final);Final Energy|Transportation|Bus|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the transportation sector by bus
 880;2;energy (final);Final Energy|Transportation|LDV|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the transportation sector by LDV
 881;2;energy (final);Final Energy|Transportation|LDV|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the transportation sector by LDV
 882;2;energy (final);Final Energy|Transportation|LDV|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the transportation sector by LDV
-883;2;energy (final);Final Energy|Transportation|LDV|Liquids|Fossil;EJ/yr;;;;;;final energy consumption of fossil Liquids in the transportation sector by LDV
-884;2;energy (final);Final Energy|Transportation|LDV|Liquids|Biomass;EJ/yr;;;;;;final energy consumption of bioliquids in the transportation sector by LDV
-885;2;energy (final);Final Energy|Transportation|LDV|Liquids|Electricity;EJ/yr;;;;;;final energy consumption of liquid efuels in the transportation sector by LDV
+883;2;energy (final);Final Energy|Transportation|LDV|Liquids|Fossil;EJ/yr;FE|Transport|LDV|Liquids|+|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the transportation sector by LDV
+884;2;energy (final);Final Energy|Transportation|LDV|Liquids|Biomass;EJ/yr;FE|Transport|LDV|Liquids|+|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the transportation sector by LDV
+885;2;energy (final);Final Energy|Transportation|LDV|Liquids|Electricity;EJ/yr;FE|Transport|LDV|Liquids|+|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the transportation sector by LDV
 886;2;energy (final);Final Energy|Transportation|LDV|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the transportation sector by LDV
 887;2;energy (final);Final Energy|Transportation|LDV|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the transportation sector by LDV
 888;2;energy (final);Final Energy|Transportation|LDV|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the transportation sector by LDV
 889;2;energy (final);Final Energy|Transportation|Truck|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the transportation sector by Truck
 890;2;energy (final);Final Energy|Transportation|Truck|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the transportation sector by Truck
 891;2;energy (final);Final Energy|Transportation|Truck|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the transportation sector by Truck
-892;2;energy (final);Final Energy|Transportation|Truck|Liquids|Fossil;EJ/yr;;;;;;final energy consumption of fossil Liquids in the transportation sector by Truck
-893;2;energy (final);Final Energy|Transportation|Truck|Liquids|Biomass;EJ/yr;;;;;;final energy consumption of bioliquids in the transportation sector by Truck
-894;2;energy (final);Final Energy|Transportation|Truck|Liquids|Electricity;EJ/yr;;;;;;final energy consumption of liquid efuels in the transportation sector by Truck
+892;2;energy (final);Final Energy|Transportation|Truck|Liquids|Fossil;EJ/yr;FE|Transport|Freight|Road|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the transportation sector by Truck
+893;2;energy (final);Final Energy|Transportation|Truck|Liquids|Biomass;EJ/yr;FE|Transport|Freight|Road|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the transportation sector by Truck
+894;2;energy (final);Final Energy|Transportation|Truck|Liquids|Electricity;EJ/yr;FE|Transport|Freight|Road|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the transportation sector by Truck
 895;2;energy (final);Final Energy|Transportation|Truck|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the transportation sector by Truck
 896;2;energy (final);Final Energy|Transportation|Truck|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the transportation sector by Truck
 897;2;energy (final);Final Energy|Transportation|Truck|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the transportation sector by Truck
@@ -991,25 +993,31 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 951;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Electricity;EJ/yr;;;;;;final energy consumption of liquid fuels in the transportation sector by Hybrid Bus
 952;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Liquids;EJ/yr;;;;;;final energy consumption of liquid fuels in the transportation sector by Hybrid Bus
 953;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Gases;EJ/yr;;;;;;final energy consumption of gases in the transportation sector by Hybrid Bus
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Electricity;EJ/yr;;;;final energy consumed for passenger transportation
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Gases;EJ/yr;;;;final energy consumed for passenger transportation
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Hydrogen;EJ/yr;;;;final energy consumed for passenger transportation
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Liquids|Biomass;EJ/yr;;;;final energy consumed for passenger transportation
 954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Liquids|Oil;EJ/yr;;;;final energy consumed for passenger transportation
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Liquids|Hydrogen;EJ/yr;;;;final energy consumed for passenger transportation
 955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;;;;;;final energy consumed for freight transportation
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;;;;;;final energy consumed for freight transportation
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;;;;;;final energy consumed for freight transportation
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;;;;;;final energy consumed for freight transportation
-956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Electricity;EJ/yr;;;;final energy consumption by the passenger transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses
-957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Gases;EJ/yr;;;;final energy consumption by the passenger transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses
-958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Hydrogen;EJ/yr;;;;final energy consumption by the passenger transportation sector of hydrogen
-959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Liquids|Biomass;EJ/yr;;;;final energy consumption by the passenger transportation sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids)
-959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Liquids|Oil;EJ/yr;;;;final energy consumption by the passenger transportation sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids)
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;final energy consumed for passenger transportation
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;final energy consumed for passenger transportation
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Rail;EJ/yr;;;;final energy consumed for passenger transportation
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy consumed for passenger transportation
+955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;;;final energy consumed for freight transportation
+955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Rail;EJ/yr;;;;final energy consumed for freight transportation
+955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;;;;final energy consumed for freight transportation
+956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;;;
+956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|LDV|Electricity;EJ/yr;;;;
+956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Rail|Electricity;EJ/yr;;;;
+957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;
+957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|LDV|Gases;EJ/yr;;;;
+958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;
+958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|LDV|Hydrogen;EJ/yr;;;;
+958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;;;;
+;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;
+;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|LDV|Liquids;EJ/yr;;;;
+;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Rail|Liquids;EJ/yr;;;;
+959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;;;;
 960;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of liquid biofuels
 961;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of fossil based liquids (from conventional & unconventional oil, coal-to-liquids, gas-to-liquids)
 962;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of synthetic liquid efuels
-963;2;energy (final);Final Energy|Transportation|Passenger|Other;EJ/yr;FE|Transport|Pass|Liquids|Hydrogen;EJ/yr;;;;final energy consumption by the passenger transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab)
+963;2;energy (final);Final Energy|Transportation|Passenger|Other;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab)
 964;2;energy (final);Final Energy|Transportation|Freight|Electricity;EJ/yr;;;;;;final energy consumption by the freight transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses
 965;2;energy (final);Final Energy|Transportation|Freight|Gases;EJ/yr;;;;;;final energy consumption by the freight transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses
 966;2;energy (final);Final Energy|Transportation|Freight|Hydrogen;EJ/yr;;;;;;final energy consumption by the freight transportation sector of hydrogen
@@ -1024,9 +1032,10 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 975;3;energy (final);Final Energy|Transportation|Freight|Rail;EJ/yr;;;;;;final energy consumption by the freight transportation sector by rail
 976;3;energy (final);Final Energy|Transportation|Freight|Truck;EJ/yr;;;;;;final energy consumption by the freight transportation sector by Truck
 977;3;energy (final);Final Energy|Transportation|Freight|LDV;EJ/yr;;;;;;final energy consumption by the freight transportation sector by LDV
-978;1;energy (final);Final Energy|Bunkers;EJ/yr;FE|Transport|Bunkers;EJ/yr;;;;final energy consumption in the Bunkers sector
-979;1;energy (final);Final Energy|Bunkers|International Shipping;EJ/yr;;;;;;final energy consumption in the Bunkers sector by International shipping
-980;1;energy (final);Final Energy|Bunkers|International Aviation;EJ/yr;;;;;;final energy consumption in the Bunkers sector by International aviation
+978;1;energy (final);Final Energy|Bunkers;EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumption in the Bunkers sector
+978;1;energy (final);Final Energy|Bunkers;EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumption in the Bunkers sector
+979;1;energy (final);Final Energy|Bunkers|International Shipping;EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumption in the Bunkers sector by International shipping
+980;1;energy (final);Final Energy|Bunkers|International Aviation;EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumption in the Bunkers sector by International aviation
 981;3;energy (final);Final Energy|Bunkers|Passenger;EJ/yr;;;;;;final energy consumption by the international Passenger transportation sector
 982;3;energy (final);Final Energy|Bunkers|Passenger|International Shipping;EJ/yr;;;;;;final energy consumption by the Passenger transportation sector by International Shipping
 983;3;energy (final);Final Energy|Bunkers|Passenger|International Aviation;EJ/yr;;;;;;final energy consumption by the Passenger transportation sector by International Aviation
@@ -1049,18 +1058,18 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 1000;1;energy (final);Final Energy|Bunkers|International Aviation|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the Bunkers sector by International Aviation
 1001;1;energy (final);Final Energy|Bunkers|International Aviation|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the Bunkers sector by International Aviation
 1002;1;energy (final);Final Energy|Bunkers|International Aviation|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the Bunkers sector by International Aviation
-1003;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Fossil;EJ/yr;;;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Aviation
-1004;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Biomass;EJ/yr;;;;;;final energy consumption of bioliquids in the Bunkers sector by International Aviation
-1005;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Electricity;EJ/yr;;;;;;final energy consumption of liquid efuels in the Bunkers sector by International Aviation
+1003;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Fossil;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Aviation
+1004;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the Bunkers sector by International Aviation
+1005;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the Bunkers sector by International Aviation
 1006;1;energy (final);Final Energy|Bunkers|International Aviation|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the Bunkers sector by International Aviation
 1007;1;energy (final);Final Energy|Bunkers|International Aviation|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the Bunkers sector by International Aviation
 1008;1;energy (final);Final Energy|Bunkers|International Aviation|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the Bunkers sector by International Aviation
 1009;1;energy (final);Final Energy|Bunkers|International Shipping|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the Bunkers sector by International Shipping
 1010;1;energy (final);Final Energy|Bunkers|International Shipping|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the Bunkers sector by International Shipping
 1011;1;energy (final);Final Energy|Bunkers|International Shipping|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the Bunkers sector by International Shipping
-1012;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Fossil;EJ/yr;;;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Shipping
-1013;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Biomass;EJ/yr;;;;;;final energy consumption of bioliquids in the Bunkers sector by International Shipping
-1014;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Electricity;EJ/yr;;;;;;final energy consumption of liquid efuels in the Bunkers sector by International Shipping
+1012;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Fossil;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Shipping
+1013;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Biomass;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the Bunkers sector by International Shipping
+1014;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Electricity;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the Bunkers sector by International Shipping
 1015;1;energy (final);Final Energy|Bunkers|International Shipping|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the Bunkers sector by International Shipping
 1016;1;energy (final);Final Energy|Bunkers|International Shipping|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the Bunkers sector by International Shipping
 1017;1;energy (final);Final Energy|Bunkers|International Shipping|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the Bunkers sector by International Shipping
@@ -1301,28 +1310,32 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 1247;2;energy (secondary);Conversion Input|Electricity|Heat;EJ/yr;;;;;;secondary energy consumption of electricity for the production of heat (large-scale heat pumps)
 1248;3;energy (secondary);Conversion Input|Electricity|Hydrogen|Autoproduction;EJ/yr;;;;;;secondary energy consumption of electricity for the autoproduction of hydrogen
 1249;3;energy (secondary);Conversion Input|Hydrogen|Liquids|Autoproduction;EJ/yr;;;;;;secondary energy consumption of hydrogen for the autoproduction of liquids, incl. hydrocarbon inputs for olefine production
-1250;1;energy (service);Energy Service|Commercial|Floor Space;bn m2/yr;;;;;;energy service demand for conditioned floor space in commercial buildings
-1251;1;energy (service);Energy Service|Residential and Commercial|Floor Space;bn m2/yr;Energy Service|Buildings|Floor Space;bn m2/yr;;;;energy service demand for conditioned floor space in buildings
-1252;1;energy (service);Energy Service|Residential|Floor Space;bn m2/yr;;;;;;energy service demand for conditioned floor space in residential buildings
-1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight;bn tkm/yr;;;;energy service demand for freight transport
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass;bn pkm/yr;;;;energy service demand for passenger transport
+1250;1;energy (service);Energy Service|Commercial|Floor Space;bn m2;;;;;;energy service demand for conditioned floor space in commercial buildings
+1251;1;energy (service);Energy Service|Residential and Commercial|Floor Space;bn m2;Energy Service|Buildings|Floor Space;bn m2/yr;;;;energy service demand for conditioned floor space in buildings
+1252;1;energy (service);Energy Service|Residential|Floor Space;bn m2;;;;;;energy service demand for conditioned floor space in residential buildings
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;;;;energy service demand for passenger transport
 1255;2;energy (service);Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;energy service demand for freight transport on aircrafts
-1256;2;energy (service);Energy Service|Transportation|Freight|Navigation;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport on domestic ships
+1256;2;energy (service);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport on domestic ships
 1257;2;energy (service);Energy Service|Transportation|Freight|Other;bn tkm/yr;;;;;;energy service demand for freight transport using other modes (please provide a definition of the modes in this category in the 'comments' tab)
 1258;2;energy (service);Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport on railways
 1259;2;energy (service);Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport on roads
-1260;2;energy (service);Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;;;;energy service demand for passenger transport on aircrafts
-1260;2;energy (service);Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Pass|Aviation|International;bn pkm/yr;;;;energy service demand for passenger transport on aircrafts
-1261;2;energy (service);Energy Service|Transportation|Passenger|Navigation;bn pkm/yr;;;;;;energy service demand for passenger transport on domestic ships
-1262;2;energy (service);Energy Service|Transportation|Passenger|Other;bn pkm/yr;;;;;;energy service demand for passenger transport using other modes (please provide a definition of the modes in this category in the 'comments' tab)
-1263;2;energy (service);Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport on railways
-1264;2;energy (service);Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;bn pkm/yr;;;;energy service demand for passenger transport on roads
-1264;2;energy (service);Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road|Non-Motorized;bn pkm/yr;;;;energy service demand for passenger transport on roads
-1265;2;energy (service);Energy Service|Bunkers|Freight|International Shipping;bn tkm/yr;;;;;;energy service demand for freight transport operating on international shipping routes
-1266;2;energy (service);Energy Service|Transportation|Passenger|Bicycling and Walking;bn pkm/yr;ES|Transport|Pass|Road|Non-Motorized;bn pkm/yr;;;;energy service demand for passenger transport on bicycles and by foot
-1267;2;energy (service);Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;;;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles)
-1268;2;energy (service);Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans)
-1269;2;energy (service);Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport on roads (buses)
+1260;2;energy (service);Energy Service|Transportation|Passenger|Domestic Aviation;bn pkm/yr;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;;;;energy service demand for passenger transport on aircrafts
+1262;2;energy (service);Energy Service|Transportation|Passenger|Domestic Navigation;bn pkm/yr;;;;;;energy service demand for passenger transport on domestic ships
+1263;2;energy (service);Energy Service|Transportation|Passenger|Other;bn pkm/yr;;;;;;energy service demand for passenger transport using other modes (please provide a definition of the modes in this category in the 'comments' tab)
+1264;2;energy (service);Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport on railways
+1265;2;energy (service);Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;bn pkm/yr;;;;energy service demand for passenger transport on roads
+1266;2;energy (service);Energy Service|Bunkers|Freight|International Shipping;bn tkm/yr;;;;;;energy service demand for freight transport operating on international shipping routes
+1267;2;energy (service);Energy Service|Transportation|Passenger|Cycling;bn pkm/yr;;;;;;
+1267;2;energy (service);Energy Service|Transportation|Passenger|Walking;bn pkm/yr;;;;;;energy service demand for passenger transport on bicycles and by foot
+1268;2;energy (service);Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;ES|Transport|Pass|Road|LDV|Two-Wheelers;bn pkm/yr;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles)
+1269;2;energy (service);Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans)
+1270;2;energy (service);Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport on roads (buses)
 1270;1;energy (trade);Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;;;;net exports of solid, unprocessed biomass, at the global level these should add up to the trade losses only
 1271;1;energy (trade);Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;;;;net exports of coal, at the global level these should add up to the trade losses only
 1272;1;energy (trade);Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;;;;net exports of natural gas, at the global level these should add up to the trade losses only
@@ -1462,7 +1475,7 @@ idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;intern
 1403;1;land cover;Land Cover|Built-up Area;million ha;Resources|Land Cover|+|Urban Area;million ha;;;;total built-up land associated with human settlement
 1404;1;land cover;Land Cover|Cropland;million ha;Resources|Land Cover|+|Cropland;million ha;;;;total arable land, i.e. land in bioenergy crop, food, and feed/fodder crops, permant crops as well as other arable land (physical area)
 1405;1;land cover;Land Cover|Forest;million ha;Resources|Land Cover|+|Forest;million ha;;;;managed and unmanaged forest area
-1406;1;land cover;Land Cover|Pasture;million ha;Resources|Land Cover|+|Pastures and Rangelands;million ha;;;;pasture land. All categories of pasture land - not only high quality rangeland. Based on FAO definition of "permanent meadows and pastures"
+1406;1;land cover;Land Cover|Pasture;million ha;Resources|Land Cover|+|Pastures and Rangelands;million ha;;;;pasture land. All categories of pasture land - not only high quality rangeland. Based on FAO definition of permanent meadows and pastures
 1407;2;land cover;Land Cover|Cropland|Cereals;million ha;Resources|Land Cover|Cropland|Crops|+|Cereals;million ha;;;;land dedicated to cereal crops: wheat, rice and coarse grains (maize, corn, millet, sorghum, barley, oats, rye)
 1408;2;land cover;Land Cover|Cropland|Energy Crops;million ha;Resources|Land Cover|Cropland|+|Bioenergy crops;million ha;;;;land dedicated to energy crops (e.g., switchgrass, miscanthus, fast-growing wood species)
 1409;2;land cover;Land Cover|Cropland|Energy Crops|Irrigated;million ha;Resources|Land Cover|Cropland|Bioenergy crops|irrigated;million ha;;;;irrigated land dedicated to energy crops (e.g., switchgrass, miscanthus, fast-growing wood species)
