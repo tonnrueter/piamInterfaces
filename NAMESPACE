@@ -2,6 +2,7 @@
 
 export(generateIIASASubmission)
 export(generateMappingfile)
+export(getTemplate)
 importFrom(data.table,":=")
 importFrom(data.table,fread)
 importFrom(data.table,fwrite)

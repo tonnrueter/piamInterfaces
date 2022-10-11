@@ -1,0 +1,715 @@
+parent;child;factor
+Agricultural Demand|Crops|Energy;Agricultural Demand|Crops|Energy|1st generation;1
+Agricultural Demand|Crops|Energy;Agricultural Demand|Crops|Energy|2nd generation;1
+Agricultural Demand|Crops;Agricultural Demand|Crops|Energy;1
+Agricultural Demand|Crops;Agricultural Demand|Crops|Feed;1
+Agricultural Demand|Crops;Agricultural Demand|Crops|Food;1
+Agricultural Demand|Crops;Agricultural Demand|Crops|Other;1
+Agricultural Demand|Livestock;Agricultural Demand|Livestock|Food;1
+Agricultural Demand|Livestock;Agricultural Demand|Livestock|Other;1
+Agricultural Demand;Agricultural Demand|Crops;1
+Agricultural Demand;Agricultural Demand|Livestock;1
+Capacity|Gases|Biomass;Capacity|Gases|Biomass|w/ CCS;1
+Capacity|Gases|Biomass;Capacity|Gases|Biomass|w/o CCS;1
+Capacity|Gases|Coal;Capacity|Gases|Coal|w/ CCS;1
+Capacity|Gases|Coal;Capacity|Gases|Coal|w/o CCS;1
+Capacity|Hydrogen|Biomass;Capacity|Hydrogen|Biomass|w/ CCS;1
+Capacity|Hydrogen|Biomass;Capacity|Hydrogen|Biomass|w/o CCS;1
+Capacity|Hydrogen|Coal;Capacity|Hydrogen|Coal|w/ CCS;1
+Capacity|Hydrogen|Coal;Capacity|Hydrogen|Coal|w/o CCS;1
+Capacity|Hydrogen|Gas;Capacity|Hydrogen|Gas|w/ CCS;1
+Capacity|Hydrogen|Gas;Capacity|Hydrogen|Gas|w/o CCS;1
+Capacity|Liquids|Biomass;Capacity|Liquids|Biomass|w/ CCS;1
+Capacity|Liquids|Biomass;Capacity|Liquids|Biomass|w/o CCS;1
+Capacity|Liquids|Coal;Capacity|Liquids|Coal|w/ CCS;1
+Capacity|Liquids|Coal;Capacity|Liquids|Coal|w/o CCS;1
+Capacity|Liquids|Gas;Capacity|Liquids|Gas|w/ CCS;1
+Capacity|Liquids|Gas;Capacity|Liquids|Gas|w/o CCS;1
+Carbon Sequestration|CCS|Biomass|Energy|Supply;Carbon Sequestration|CCS|Biomass|Energy|Supply|Electricity;1
+Carbon Sequestration|CCS|Biomass|Energy|Supply;Carbon Sequestration|CCS|Biomass|Energy|Supply|Gases;1
+Carbon Sequestration|CCS|Biomass|Energy|Supply;Carbon Sequestration|CCS|Biomass|Energy|Supply|Hydrogen;1
+Carbon Sequestration|CCS|Biomass|Energy|Supply;Carbon Sequestration|CCS|Biomass|Energy|Supply|Liquids;1
+Carbon Sequestration|CCS|Biomass|Energy|Supply;Carbon Sequestration|CCS|Biomass|Energy|Supply|Other;1
+Carbon Sequestration|CCS|Fossil|Energy|Supply;Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity;1
+Carbon Sequestration|CCS|Fossil|Energy|Supply;Carbon Sequestration|CCS|Fossil|Energy|Supply|Gases;1
+Carbon Sequestration|CCS|Fossil|Energy|Supply;Carbon Sequestration|CCS|Fossil|Energy|Supply|Hydrogen;1
+Carbon Sequestration|CCS|Fossil|Energy|Supply;Carbon Sequestration|CCS|Fossil|Energy|Supply|Liquids;1
+Carbon Sequestration|CCS|Fossil|Energy|Supply;Carbon Sequestration|CCS|Fossil|Energy|Supply|Other;1
+Carbon Sequestration|CCS|Biomass|Energy;Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry;1
+Carbon Sequestration|CCS|Biomass|Energy;Carbon Sequestration|CCS|Biomass|Energy|Supply;1
+Carbon Sequestration|CCS|Fossil|Energy;Carbon Sequestration|CCS|Fossil|Energy|Supply;1
+Carbon Sequestration|CCS|Biomass;Carbon Sequestration|CCS|Biomass|Energy;1
+Carbon Sequestration|CCS|Biomass;Carbon Sequestration|CCS|Biomass|Industrial Processes;1
+Carbon Sequestration|CCS|Fossil;Carbon Sequestration|CCS|Fossil|Energy;1
+Carbon Sequestration|CCS|Fossil;Carbon Sequestration|CCS|Fossil|Industrial Processes;1
+Carbon Sequestration|CCS;Carbon Sequestration|CCS|Biomass;1
+Carbon Sequestration|CCS;Carbon Sequestration|CCS|Fossil;1
+Carbon Sequestration|CCS;Carbon Sequestration|Direct Air Capture;1
+Carbon Sequestration|CCS;Carbon Sequestration|CCS|Industrial Processes;1
+Carbon Sequestration|Feedstocks;Carbon Sequestration|Feedstocks|Biomass;1
+Carbon Sequestration|Feedstocks;Carbon Sequestration|Feedstocks|Fossil;1
+Carbon Sequestration|Land Use;Carbon Sequestration|Land Use|Afforestation;1
+Carbon Sequestration|Land Use;Carbon Sequestration|Land Use|Biochar;1
+Carbon Sequestration|Land Use;Carbon Sequestration|Land Use|Other;1
+Carbon Sequestration|Land Use;Carbon Sequestration|Land Use|Soil Carbon Management;1
+Agricultural Production|Energy;Agricultural Production|Energy|Crops;1
+Agricultural Production|Energy;Agricultural Production|Energy|Residues;1
+Agricultural Production|Non-Energy;Agricultural Production|Non-Energy|Crops;1
+Agricultural Production|Non-Energy;Agricultural Production|Non-Energy|Livestock;1
+Agricultural Production;Agricultural Production|Energy;1
+Agricultural Production;Agricultural Production|Non-Energy;1
+Emissions|BC|Energy|Demand|Residential and Commercial;Emissions|BC|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|BC|Energy|Demand|Residential and Commercial;Emissions|BC|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|BC|Energy|Demand|Transportation;Emissions|BC|Energy|Demand|Transportation|Freight;1
+Emissions|BC|Energy|Demand|Transportation;Emissions|BC|Energy|Demand|Transportation|Passenger;1
+Emissions|BC|AFOLU;Emissions|BC|AFOLU|Agriculture;1
+Emissions|BC|AFOLU;Emissions|BC|AFOLU|Land;1
+Emissions|BC|Energy;Emissions|BC|Energy|Supply;1
+Emissions|BC|Energy;Emissions|BC|Energy|Demand|Residential and Commercial;1
+Emissions|BC|Energy;Emissions|BC|Energy|Demand|Industry;1
+Emissions|BC|Energy;Emissions|BC|Energy|Demand|Transportation;1
+Emissions|BC;Emissions|BC|AFOLU;1
+Emissions|BC;Emissions|BC|Energy;1
+Emissions|BC;Emissions|BC|Industrial Processes;1
+Emissions|BC;Emissions|BC|Other;1
+Emissions|BC;Emissions|BC|Waste;1
+Emissions|C2F6|AFOLU;Emissions|C2F6|AFOLU|Agriculture;1
+Emissions|C2F6|AFOLU;Emissions|C2F6|AFOLU|Land;1
+Emissions|C2F6;Emissions|C2F6|AFOLU;1
+Emissions|C2F6;Emissions|C2F6|Energy;1
+Emissions|C2F6;Emissions|C2F6|Industrial Processes;1
+Emissions|C2F6;Emissions|C2F6|Waste;1
+Cumulative Capacity|Electricity|Biomass;Cumulative Capacity|Electricity|Biomass|w/ CCS;1
+Cumulative Capacity|Electricity|Biomass;Cumulative Capacity|Electricity|Biomass|w/o CCS;1
+Cumulative Capacity|Electricity|Coal;Cumulative Capacity|Electricity|Coal|w/ CCS;1
+Cumulative Capacity|Electricity|Coal;Cumulative Capacity|Electricity|Coal|w/o CCS;1
+Cumulative Capacity|Electricity|Gas;Cumulative Capacity|Electricity|Gas|w/ CCS;1
+Cumulative Capacity|Electricity|Gas;Cumulative Capacity|Electricity|Gas|w/o CCS;1
+Cumulative Capacity|Electricity|Oil;Cumulative Capacity|Electricity|Oil|w/ CCS;1
+Cumulative Capacity|Electricity|Oil;Cumulative Capacity|Electricity|Oil|w/o CCS;1
+Cumulative Capacity|Electricity|Solar;Cumulative Capacity|Electricity|Solar|CSP;1
+Cumulative Capacity|Electricity|Solar;Cumulative Capacity|Electricity|Solar|PV;1
+Cumulative Capacity|Electricity|Wind;Cumulative Capacity|Electricity|Wind|Offshore;1
+Cumulative Capacity|Electricity|Wind;Cumulative Capacity|Electricity|Wind|Onshore;1
+Cumulative Capacity|Gases|Biomass;Cumulative Capacity|Gases|Biomass|w/ CCS;1
+Cumulative Capacity|Gases|Biomass;Cumulative Capacity|Gases|Biomass|w/o CCS;1
+Cumulative Capacity|Gases|Coal;Cumulative Capacity|Gases|Coal|w/ CCS;1
+Cumulative Capacity|Gases|Coal;Cumulative Capacity|Gases|Coal|w/o CCS;1
+Cumulative Capacity|Hydrogen|Biomass;Cumulative Capacity|Hydrogen|Biomass|w/ CCS;1
+Cumulative Capacity|Hydrogen|Biomass;Cumulative Capacity|Hydrogen|Biomass|w/o CCS;1
+Cumulative Capacity|Hydrogen|Coal;Cumulative Capacity|Hydrogen|Coal|w/ CCS;1
+Cumulative Capacity|Hydrogen|Coal;Cumulative Capacity|Hydrogen|Coal|w/o CCS;1
+Cumulative Capacity|Hydrogen|Gas;Cumulative Capacity|Hydrogen|Gas|w/ CCS;1
+Cumulative Capacity|Hydrogen|Gas;Cumulative Capacity|Hydrogen|Gas|w/o CCS;1
+Cumulative Capacity|Liquids|Biomass;Cumulative Capacity|Liquids|Biomass|w/ CCS;1
+Cumulative Capacity|Liquids|Biomass;Cumulative Capacity|Liquids|Biomass|w/o CCS;1
+Cumulative Capacity|Liquids|Coal;Cumulative Capacity|Liquids|Coal|w/ CCS;1
+Cumulative Capacity|Liquids|Coal;Cumulative Capacity|Liquids|Coal|w/o CCS;1
+Cumulative Capacity|Liquids|Gas;Cumulative Capacity|Liquids|Gas|w/ CCS;1
+Cumulative Capacity|Liquids|Gas;Cumulative Capacity|Liquids|Gas|w/o CCS;1
+Emissions|CF4|AFOLU;Emissions|CF4|AFOLU|Agriculture;1
+Emissions|CF4|AFOLU;Emissions|CF4|AFOLU|Land;1
+Emissions|CF4;Emissions|CF4|AFOLU;1
+Emissions|CF4;Emissions|CF4|Energy;1
+Emissions|CF4;Emissions|CF4|Industrial Processes;1
+Emissions|CF4;Emissions|CF4|Waste;1
+Emissions|CFC|AFOLU;Emissions|CFC|AFOLU|Agriculture;1
+Emissions|CFC|AFOLU;Emissions|CFC|AFOLU|Land;1
+Emissions|CFC;Emissions|CFC|AFOLU;1
+Emissions|CFC;Emissions|CFC|Energy;1
+Emissions|CFC;Emissions|CFC|Industrial Processes;1
+Emissions|CFC;Emissions|CFC|Waste;1
+Emissions|CH4|AFOLU|Agriculture|Livestock;Emissions|CH4|AFOLU|Agriculture|Livestock|Enteric Fermentation;1
+Emissions|CH4|AFOLU|Agriculture|Livestock;Emissions|CH4|AFOLU|Agriculture|Livestock|Manure Management;1
+Emissions|CH4|Energy|Demand|Residential and Commercial;Emissions|CH4|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|CH4|Energy|Demand|Residential and Commercial;Emissions|CH4|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|CH4|Energy|Demand|Transportation;Emissions|CH4|Energy|Demand|Transportation|Freight;1
+Emissions|CH4|Energy|Demand|Transportation;Emissions|CH4|Energy|Demand|Transportation|Passenger;1
+Emissions|CH4|AFOLU|Agriculture;Emissions|CH4|AFOLU|Agriculture|Livestock;1
+Emissions|CH4|AFOLU|Agriculture;Emissions|CH4|AFOLU|Agriculture|Rice;1
+Emissions|CH4|Industrial Processes|Chemicals;Emissions|CH4|Industrial Processes|Chemicals|Ammonia;1
+Emissions|CH4|Industrial Processes|Chemicals;Emissions|CH4|Industrial Processes|Chemicals|High value chemicals;1
+Emissions|CH4|Industrial Processes|Chemicals;Emissions|CH4|Industrial Processes|Chemicals|Methanol;1
+Emissions|CH4|Industrial Processes|Chemicals;Emissions|CH4|Industrial Processes|Chemicals|Other;1
+Emissions|CH4|AFOLU;Emissions|CH4|AFOLU|Agriculture;1
+Emissions|CH4|AFOLU;Emissions|CH4|AFOLU|Land;1
+Emissions|CH4|Industrial Processes;Emissions|CH4|Industrial Processes|Chemicals;1
+Emissions|CH4|Industrial Processes;Emissions|CH4|Industrial Processes|Non-ferrous metals;1
+Emissions|CH4|Industrial Processes;Emissions|CH4|Industrial Processes|Other;1
+Emissions|CH4|Industrial Processes;Emissions|CH4|Industrial Processes|Plastics;1
+Emissions|CH4|Industrial Processes;Emissions|CH4|Industrial Processes|Pulp and Paper;1
+Emissions|CH4|Industrial Processes;Emissions|CH4|Industrial Processes|Steel;1
+Emissions|CH4;Emissions|CH4|AFOLU;1
+Emissions|CH4;Emissions|CH4|Energy;1
+Emissions|CH4;Emissions|CH4|Industrial Processes;1
+Emissions|CH4;Emissions|CH4|Other;1
+Emissions|CH4;Emissions|CH4|Waste;1
+Emissions|CO|Energy|Demand|Residential and Commercial;Emissions|CO|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|CO|Energy|Demand|Residential and Commercial;Emissions|CO|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|CO|Energy|Demand|Transportation;Emissions|CO|Energy|Demand|Transportation|Freight;1
+Emissions|CO|Energy|Demand|Transportation;Emissions|CO|Energy|Demand|Transportation|Passenger;1
+Emissions|CO|AFOLU;Emissions|CO|AFOLU|Agriculture;1
+Emissions|CO|AFOLU;Emissions|CO|AFOLU|Land;1
+Emissions|CO|Energy;Emissions|CO|Energy|Supply;1
+Emissions|CO|Energy;Emissions|CO|Energy|Demand|Residential and Commercial;1
+Emissions|CO|Energy;Emissions|CO|Energy|Demand|Industry;1
+Emissions|CO|Energy;Emissions|CO|Energy|Demand|Transportation;1
+Emissions|CO;Emissions|CO|AFOLU;1
+Emissions|CO;Emissions|CO|Energy;1
+Emissions|CO;Emissions|CO|Industrial Processes;1
+Emissions|CO;Emissions|CO|Other;1
+Emissions|CO;Emissions|CO|Waste;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Heating;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Heating|Cooking;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Heating;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Heating|Space;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Heating;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Heating|Water;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Heating;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Heating|Cooking;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Heating;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Heating|Space;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Heating;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Heating|Water;1
+Emissions|CO2|Energy|Demand|Transportation|Road|Passenger;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|2W&3W;1
+Emissions|CO2|Energy|Demand|Transportation|Road|Passenger;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|Bus;1
+Emissions|CO2|Energy|Demand|Transportation|Road|Passenger;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|LDV;1
+Emissions|CO2|Energy|Demand|Industry|Chemicals;Emissions|CO2|Energy|Demand|Industry|Chemicals|Ammonia;1
+Emissions|CO2|Energy|Demand|Industry|Chemicals;Emissions|CO2|Energy|Demand|Industry|Chemicals|High value chemicals;1
+Emissions|CO2|Energy|Demand|Industry|Chemicals;Emissions|CO2|Energy|Demand|Industry|Chemicals|Methanol;1
+Emissions|CO2|Energy|Demand|Industry|Chemicals;Emissions|CO2|Energy|Demand|Industry|Chemicals|Other;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Education;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Health;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Heating;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Hotels;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Industrial & trade;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Offices;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial|Restaurant;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Residential;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Heating;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Residential;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Multi-family;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Residential;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Single family;1
+Emissions|CO2|Energy|Demand|Residential and Commercial|Residential;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential|Slum;1
+Emissions|CO2|Energy|Demand|Transportation|Aviation;Emissions|CO2|Energy|Demand|Transportation|Aviation|Freight;1
+Emissions|CO2|Energy|Demand|Transportation|Aviation;Emissions|CO2|Energy|Demand|Transportation|Aviation|Passenger;1
+Emissions|CO2|Energy|Demand|Transportation|Maritime;Emissions|CO2|Energy|Demand|Transportation|Maritime|Freight;1
+Emissions|CO2|Energy|Demand|Transportation|Maritime;Emissions|CO2|Energy|Demand|Transportation|Maritime|Passenger;1
+Emissions|CO2|Energy|Demand|Transportation|Rail;Emissions|CO2|Energy|Demand|Transportation|Rail|Freight;1
+Emissions|CO2|Energy|Demand|Transportation|Rail;Emissions|CO2|Energy|Demand|Transportation|Rail|Passenger;1
+Emissions|CO2|Energy|Demand|Transportation|Road;Emissions|CO2|Energy|Demand|Transportation|Road|Freight;1
+Emissions|CO2|Energy|Demand|Transportation|Road;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Cement;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Chemicals;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Non-ferrous metals;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Other;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Plastics;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Pulp and Paper;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Steel;1
+Emissions|CO2|Energy|Demand|Residential and Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|CO2|Energy|Demand|Residential and Commercial;Emissions|CO2|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|CO2|Energy|Demand|Transportation;Emissions|CO2|Energy|Demand|Transportation|Aviation|Passenger;1
+Emissions|CO2|Energy|Demand|Transportation;Emissions|CO2|Energy|Demand|Transportation|Maritime|Freight;1
+Emissions|CO2|Energy|Demand|Transportation;Emissions|CO2|Energy|Demand|Transportation|Rail;1
+Emissions|CO2|Energy|Demand|Transportation;Emissions|CO2|Energy|Demand|Transportation|Road;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|AFOFI;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Industry;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Other Sector;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Residential and Commercial;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Transportation;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Electricity;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Gases;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Heat;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Liquids;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Other Sector;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Solids;1
+Emissions|CO2|Industrial Processes|Chemicals;Emissions|CO2|Industrial Processes|Chemicals|Ammonia;1
+Emissions|CO2|Industrial Processes|Chemicals;Emissions|CO2|Industrial Processes|Chemicals|High value chemicals;1
+Emissions|CO2|Industrial Processes|Chemicals;Emissions|CO2|Industrial Processes|Chemicals|Methanol;1
+Emissions|CO2|Industrial Processes|Chemicals;Emissions|CO2|Industrial Processes|Chemicals|Other;1
+Emissions|CO2|AFOLU;Emissions|CO2|AFOLU|Agriculture;1
+Emissions|CO2|AFOLU;Emissions|CO2|AFOLU|Land;1
+Emissions|CO2|Energy;Emissions|CO2|Energy|Demand;1
+Emissions|CO2|Energy;Emissions|CO2|Energy|Supply;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Cement;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Chemicals;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Non-ferrous metals;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Other;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Plastics;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Pulp and Paper;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Steel;1
+Emissions|CO2;Emissions|CO2|AFOLU;1
+Emissions|CO2;Emissions|CO2|Energy;1
+Emissions|CO2;Emissions|CO2|Industrial Processes;1
+Emissions|CO2;Emissions|CO2|Other;1
+Emissions|CO2;Emissions|CO2|Waste;1
+Emissions|HFC|AFOLU;Emissions|HFC|AFOLU|Agriculture;1
+Emissions|HFC|AFOLU;Emissions|HFC|AFOLU|Land;1
+Emissions|HFC|Industrial Processes;Emissions|HFC|Industrial Processes|Chemicals;1
+Emissions|HFC|Industrial Processes;Emissions|HFC|Industrial Processes|Other;1
+Emissions|HFC;Emissions|HFC|AFOLU;1
+Emissions|HFC;Emissions|HFC|Energy;1
+Emissions|HFC;Emissions|HFC|Industrial Processes;1
+Emissions|HFC;Emissions|HFC|Waste;1
+Emissions|N2O|Energy|Demand|Transportation;Emissions|N2O|Energy|Demand|Transportation|Freight;1
+Emissions|N2O|Energy|Demand|Transportation;Emissions|N2O|Energy|Demand|Transportation|Passenger;1
+Emissions|N2O|AFOLU|Agriculture;Emissions|N2O|AFOLU|Agriculture|Livestock|Manure Management;1
+Emissions|N2O|AFOLU|Agriculture;Emissions|N2O|AFOLU|Agriculture|Managed Soils;1
+Emissions|N2O|AFOLU;Emissions|N2O|AFOLU|Agriculture;1
+Emissions|N2O|AFOLU;Emissions|N2O|AFOLU|Land;1
+Emissions|N2O|Industrial Processes;Emissions|N2O|Industrial Processes|Chemicals;1
+Emissions|N2O|Industrial Processes;Emissions|N2O|Industrial Processes|Non-ferrous metals;1
+Emissions|N2O|Industrial Processes;Emissions|N2O|Industrial Processes|Other;1
+Emissions|N2O|Industrial Processes;Emissions|N2O|Industrial Processes|Plastics;1
+Emissions|N2O|Industrial Processes;Emissions|N2O|Industrial Processes|Steel;1
+Emissions|N2O;Emissions|N2O|AFOLU;1
+Emissions|N2O;Emissions|N2O|Energy;1
+Emissions|N2O;Emissions|N2O|Industrial Processes;1
+Emissions|N2O;Emissions|N2O|Other;1
+Emissions|N2O;Emissions|N2O|Waste;1
+Capacity Additions|Electricity|Biomass;Capacity Additions|Electricity|Biomass|w/ CCS;1
+Capacity Additions|Electricity|Biomass;Capacity Additions|Electricity|Biomass|w/o CCS;1
+Emissions|NH3|Energy|Demand|Residential and Commercial;Emissions|NH3|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|NH3|Energy|Demand|Residential and Commercial;Emissions|NH3|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|NH3|Energy|Demand|Transportation;Emissions|NH3|Energy|Demand|Transportation|Freight;1
+Emissions|NH3|Energy|Demand|Transportation;Emissions|NH3|Energy|Demand|Transportation|Passenger;1
+Emissions|NH3|AFOLU;Emissions|NH3|AFOLU|Agriculture;1
+Emissions|NH3|AFOLU;Emissions|NH3|AFOLU|Land;1
+Emissions|NH3|Energy;Emissions|NH3|Energy|Supply;1
+Emissions|NH3|Energy;Emissions|NH3|Energy|Demand|Residential and Commercial;1
+Emissions|NH3|Energy;Emissions|NH3|Energy|Demand|Industry;1
+Emissions|NH3|Energy;Emissions|NH3|Energy|Demand|Transportation;1
+Emissions|NH3;Emissions|NH3|AFOLU;1
+Emissions|NH3;Emissions|NH3|Energy;1
+Emissions|NH3;Emissions|NH3|Industrial Processes;1
+Emissions|NH3;Emissions|NH3|Other;1
+Emissions|NH3;Emissions|NH3|Waste;1
+Emissions|NOx|Energy|Demand|Residential and Commercial;Emissions|NOx|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|NOx|Energy|Demand|Residential and Commercial;Emissions|NOx|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|NOx|Energy|Demand|Transportation;Emissions|NOx|Energy|Demand|Transportation|Freight;1
+Emissions|NOx|Energy|Demand|Transportation;Emissions|NOx|Energy|Demand|Transportation|Passenger;1
+Emissions|NOx|AFOLU;Emissions|NOx|AFOLU|Agriculture;1
+Emissions|NOx|AFOLU;Emissions|NOx|AFOLU|Land;1
+Emissions|NOx|Energy;Emissions|NOx|Energy|Supply;1
+Emissions|NOx|Energy;Emissions|NOx|Energy|Demand|Residential and Commercial;1
+Emissions|NOx|Energy;Emissions|NOx|Energy|Demand|Industry;1
+Emissions|NOx|Energy;Emissions|NOx|Energy|Demand|Transportation;1
+Emissions|NOx;Emissions|NOx|AFOLU;1
+Emissions|NOx;Emissions|NOx|Energy;1
+Emissions|NOx;Emissions|NOx|Industrial Processes;1
+Emissions|NOx;Emissions|NOx|Other;1
+Emissions|NOx;Emissions|NOx|Waste;1
+Emissions|OC|Energy|Demand|Residential and Commercial;Emissions|OC|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|OC|Energy|Demand|Residential and Commercial;Emissions|OC|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|OC|Energy|Demand|Transportation;Emissions|OC|Energy|Demand|Transportation|Freight;1
+Emissions|OC|Energy|Demand|Transportation;Emissions|OC|Energy|Demand|Transportation|Passenger;1
+Emissions|OC|AFOLU;Emissions|OC|AFOLU|Agriculture;1
+Emissions|OC|AFOLU;Emissions|OC|AFOLU|Land;1
+Emissions|OC|Energy;Emissions|OC|Energy|Supply;1
+Emissions|OC|Energy;Emissions|OC|Energy|Demand|Residential and Commercial;1
+Emissions|OC|Energy;Emissions|OC|Energy|Demand|Industry;1
+Emissions|OC|Energy;Emissions|OC|Energy|Demand|Transportation;1
+Emissions|OC;Emissions|OC|AFOLU;1
+Emissions|OC;Emissions|OC|Energy;1
+Emissions|OC;Emissions|OC|Industrial Processes;1
+Emissions|OC;Emissions|OC|Other;1
+Emissions|OC;Emissions|OC|Waste;1
+Emissions|PFC|Industrial Processes;Emissions|PFC|Industrial Processes|Non-ferrous metals;1
+Emissions|PFC|Industrial Processes;Emissions|PFC|Industrial Processes|Other;1
+Emissions|PFC|Industrial Processes;Emissions|PFC|Industrial Processes|Steel;1
+Emissions|PFC;Emissions|PFC|Industrial Processes;1
+Emissions|SF6|AFOLU;Emissions|SF6|AFOLU|Agriculture;1
+Emissions|SF6|AFOLU;Emissions|SF6|AFOLU|Land;1
+Emissions|SF6|Industrial Processes;Emissions|SF6|Industrial Processes|Chemicals;1
+Emissions|SF6|Industrial Processes;Emissions|SF6|Industrial Processes|Non-ferrous metals;1
+Emissions|SF6|Industrial Processes;Emissions|SF6|Industrial Processes|Other;1
+Emissions|SF6|Industrial Processes;Emissions|SF6|Industrial Processes|Steel;1
+Emissions|SF6;Emissions|SF6|AFOLU;1
+Emissions|SF6;Emissions|SF6|Energy;1
+Emissions|SF6;Emissions|SF6|Industrial Processes;1
+Emissions|SF6;Emissions|SF6|Waste;1
+Emissions|Sulfur|Energy|Demand|Residential and Commercial;Emissions|Sulfur|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|Sulfur|Energy|Demand|Residential and Commercial;Emissions|Sulfur|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|Sulfur|Energy|Demand|Transportation;Emissions|Sulfur|Energy|Demand|Transportation|Freight;1
+Emissions|Sulfur|Energy|Demand|Transportation;Emissions|Sulfur|Energy|Demand|Transportation|Passenger;1
+Emissions|Sulfur|AFOLU;Emissions|Sulfur|AFOLU|Agriculture;1
+Emissions|Sulfur|AFOLU;Emissions|Sulfur|AFOLU|Land;1
+Emissions|Sulfur|Energy;Emissions|Sulfur|Energy|Supply;1
+Emissions|Sulfur|Energy;Emissions|Sulfur|Energy|Demand|Residential and Commercial;1
+Emissions|Sulfur|Energy;Emissions|Sulfur|Energy|Demand|Industry;1
+Emissions|Sulfur|Energy;Emissions|Sulfur|Energy|Demand|Transportation;1
+Emissions|Sulfur;Emissions|Sulfur|AFOLU;1
+Emissions|Sulfur;Emissions|Sulfur|Energy;1
+Emissions|Sulfur;Emissions|Sulfur|Industrial Processes;1
+Emissions|Sulfur;Emissions|Sulfur|Other;1
+Emissions|Sulfur;Emissions|Sulfur|Waste;1
+Emissions|VOC|Energy|Demand|Residential and Commercial;Emissions|VOC|Energy|Demand|Residential and Commercial|Commercial;1
+Emissions|VOC|Energy|Demand|Residential and Commercial;Emissions|VOC|Energy|Demand|Residential and Commercial|Residential;1
+Emissions|VOC|Energy|Demand|Transportation;Emissions|VOC|Energy|Demand|Transportation|Freight;1
+Emissions|VOC|Energy|Demand|Transportation;Emissions|VOC|Energy|Demand|Transportation|Passenger;1
+Emissions|VOC|AFOLU;Emissions|VOC|AFOLU|Agriculture;1
+Emissions|VOC|AFOLU;Emissions|VOC|AFOLU|Land;1
+Emissions|VOC|Energy;Emissions|VOC|Energy|Supply;1
+Emissions|VOC|Energy;Emissions|VOC|Energy|Demand|Residential and Commercial;1
+Emissions|VOC|Energy;Emissions|VOC|Energy|Demand|Industry;1
+Emissions|VOC|Energy;Emissions|VOC|Energy|Demand|Transportation;1
+Emissions|VOC;Emissions|VOC|AFOLU;1
+Emissions|VOC;Emissions|VOC|Energy;1
+Emissions|VOC;Emissions|VOC|Industrial Processes;1
+Emissions|VOC;Emissions|VOC|Other;1
+Emissions|VOC;Emissions|VOC|Waste;1
+Employment|Industry;Employment|Industry|Energy ;1
+Employment|Industry;Employment|Industry|Energy Intensive;1
+Employment|Industry;Employment|Industry|Manufacturing;1
+Employment;Employment|Agriculture;1
+Employment;Employment|Industry;1
+Employment;Employment|Service;1
+Employment 2;Employment|Skilled;1
+Employment 2;Employment|Unskilled;1
+Energy Service|Transportation|Freight;Energy Service|Transportation|Freight|Aviation;1
+Energy Service|Transportation|Freight;Energy Service|Transportation|Freight|International Shipping;1
+Energy Service|Transportation|Freight;Energy Service|Transportation|Freight|Navigation;1
+Energy Service|Transportation|Freight;Energy Service|Transportation|Freight|Other;1
+Energy Service|Transportation|Freight;Energy Service|Transportation|Freight|Railways;1
+Energy Service|Transportation|Freight;Energy Service|Transportation|Freight|Road;1
+Capacity Additions|Electricity|Coal;Capacity Additions|Electricity|Coal|w/ CCS;1
+Capacity Additions|Electricity|Coal;Capacity Additions|Electricity|Coal|w/o CCS;1
+Energy Service|Transportation|Passenger|Road;Energy Service|Transportation|Passenger|Road|Bus;1
+Energy Service|Transportation|Passenger|Road;Energy Service|Transportation|Passenger|Road|LDV;1
+Energy Service|Transportation|Passenger;Energy Service|Transportation|Passenger|Bicycling and Walking;1
+Energy Service|Transportation|Passenger;Energy Service|Transportation|Passenger|Aviation;1
+Energy Service|Transportation|Passenger;Energy Service|Transportation|Passenger|Navigation;1
+Energy Service|Transportation|Passenger;Energy Service|Transportation|Passenger|Other;1
+Energy Service|Transportation|Passenger;Energy Service|Transportation|Passenger|Railways;1
+Energy Service|Transportation|Passenger;Energy Service|Transportation|Passenger|Road;1
+Fertilizer Use|Nitrogen;Fertilizer Use|Nitrogen|Inorganic;1
+Fertilizer Use|Nitrogen;Fertilizer Use|Nitrogen|Organic;1
+Fertilizer Use|Nitrogen;Fertilizer Use|Nitrogen|Biological Fixation;1
+Fertilizer Use|Potassium;Fertilizer Use|Potassium|Inorganic;1
+Fertilizer Use|Potassium;Fertilizer Use|Potassium|Organic;1
+Final Energy|Solids;Final Energy|Solids|Biomass;1
+Final Energy|Solids;Final Energy|Solids|Coal;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Biomass;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Coal;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Gas;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Oil;1
+Final Energy;Final Energy|Electricity;1
+Final Energy;Final Energy|Gases;1
+Final Energy;Final Energy|Heat;1
+Final Energy;Final Energy|Hydrogen;1
+Final Energy;Final Energy|Liquids;1
+Final Energy;Final Energy|Solids;1
+Final Energy (excl. feedstocks)|Industry|Gases;Final Energy (excl. feedstocks)|Industry|Gases|Bioenergy;1
+Final Energy (excl. feedstocks)|Industry|Gases;Final Energy (excl. feedstocks)|Industry|Gases|Fossil;1
+Final Energy (excl. feedstocks)|Industry|Gases;Final Energy (excl. feedstocks)|Industry|Gases|Hydrogen synfuel;1
+Final Energy (excl. feedstocks)|Industry|Liquids;Final Energy (excl. feedstocks)|Industry|Liquids|Bioenergy;1
+Final Energy (excl. feedstocks)|Industry|Liquids;Final Energy (excl. feedstocks)|Industry|Liquids|Fossil;1
+Final Energy (excl. feedstocks)|Industry|Liquids;Final Energy (excl. feedstocks)|Industry|Liquids|Hydrogen synfuel;1
+Final Energy (excl. feedstocks)|Industry|Solids;Final Energy (excl. feedstocks)|Industry|Solids|Bioenergy;1
+Final Energy (excl. feedstocks)|Industry|Solids;Final Energy (excl. feedstocks)|Industry|Solids|Fossil;1
+Final Energy (excl. feedstocks)|Industry;Final Energy (excl. feedstocks)|Industry|Electricity;1
+Final Energy (excl. feedstocks)|Industry;Final Energy (excl. feedstocks)|Industry|Gases;1
+Final Energy (excl. feedstocks)|Industry;Final Energy (excl. feedstocks)|Industry|Heat;1
+Final Energy (excl. feedstocks)|Industry;Final Energy (excl. feedstocks)|Industry|Hydrogen;1
+Final Energy (excl. feedstocks)|Industry;Final Energy (excl. feedstocks)|Industry|Liquids;1
+Final Energy (excl. feedstocks)|Industry;Final Energy (excl. feedstocks)|Industry|Other;1
+Final Energy (excl. feedstocks)|Industry;Final Energy (excl. feedstocks)|Industry|Solids;1
+Final Energy|Residential and Commercial|Commercial|Solids;Final Energy|Residential and Commercial|Commercial|Solids|Biomass;1
+Final Energy|Residential and Commercial|Commercial|Solids;Final Energy|Residential and Commercial|Commercial|Solids|Coal;1
+Final Energy|Residential and Commercial|Residential|Solids;Final Energy|Residential and Commercial|Residential|Solids|Biomass;1
+Final Energy|Residential and Commercial|Residential|Solids;Final Energy|Residential and Commercial|Residential|Solids|Coal;1
+Final Energy|Transportation|Passenger|Gases;Final Energy|Transportation|Passenger|Gases|Bioenergy;1
+Final Energy|Transportation|Passenger|Gases;Final Energy|Transportation|Passenger|Gases|Fossil;1
+Final Energy|Transportation|Passenger|Liquids;Final Energy|Transportation|Passenger|Liquids|Bioenergy;1
+Final Energy|Transportation|Passenger|Liquids;Final Energy|Transportation|Passenger|Liquids|Fossil synfuel;1
+Final Energy|Transportation|Passenger|Liquids;Final Energy|Transportation|Passenger|Liquids|Oil;1
+Final Energy|Transportation|Passenger|Liquids;Final Energy|Transportation|Passenger|Other;1
+Final Energy|Transportation|Freight|Gases;Final Energy|Transportation|Freight|Gases|Bioenergy;1
+Final Energy|Transportation|Freight|Gases;Final Energy|Transportation|Freight|Gases|Fossil;1
+Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Bioenergy;1
+Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Other;1
+Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Fossil synfuel;1
+Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Oil;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|  (EK ???);1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Bioenergy     (EK Use Biomass instead of bioenerg. applies to any use of bioenergy);1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Fossil;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Hydrogen synfuel   (EK Mixing of SE and PE here. H2 is listed separately as carrier. Remove? Same applies to names below);1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|   (EK ???);1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Bioenergy;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Fossil;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Hydrogen synfuel;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Oil;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Biomass;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Coal;1
+Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Biomass;1
+Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Coal;1
+Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Electricity;1
+Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Gases;1
+Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Heat;1
+Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Hydrogen;1
+Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Liquids;1
+Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Other;1
+Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Solids;1
+Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Electricity;1
+Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Gases;1
+Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Heat;1
+Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Hydrogen;1
+Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Liquids;1
+Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Other;1
+Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Solids;1
+Final Energy|Residential and Commercial|Solids;Final Energy|Residential and Commercial|Solids|Biomass;1
+Final Energy|Residential and Commercial|Solids;Final Energy|Residential and Commercial|Solids|Coal;1
+Final Energy|Transportation|Gases;Final Energy|Transportation|Gases|Bioenergy;1
+Final Energy|Transportation|Gases;Final Energy|Transportation|Gases|Fossil;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Bioenergy;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Coal;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Fossil synfuel;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Natural Gas;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Oil;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Electricity;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Gases;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Hydrogen;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Liquids;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Other;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Electricity;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Gases;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Hydrogen;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Liquids;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Other;1
+Final Energy|Industry;Final Energy|Industry|Electricity;1
+Final Energy|Industry;Final Energy|Industry|Gases;1
+Final Energy|Industry;Final Energy|Industry|Heat;1
+Final Energy|Industry;Final Energy|Industry|Hydrogen;1
+Final Energy|Industry;Final Energy|Industry|Liquids;1
+Final Energy|Industry;Final Energy|Industry|Other;1
+Final Energy|Industry;Final Energy|Industry|Solids;1
+Final Energy|Other Sector;Final Energy|Other Sector|Electricity;1
+Final Energy|Other Sector;Final Energy|Other Sector|Gases;1
+Final Energy|Other Sector;Final Energy|Other Sector|Heat;1
+Final Energy|Other Sector;Final Energy|Other Sector|Hydrogen;1
+Final Energy|Other Sector;Final Energy|Other Sector|Liquids;1
+Final Energy|Other Sector;Final Energy|Other Sector|Other;1
+Final Energy|Other Sector;Final Energy|Other Sector|Solids;1
+Final Energy|Residential and Commercial 2;Final Energy|Residential and Commercial|Commercial;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Electricity;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Gases;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Heat;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Hydrogen;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Liquids;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Other;1
+Final Energy|Residential and Commercial 2;Final Energy|Residential and Commercial|Residential;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Solids;1
+Final Energy|Transportation;Final Energy|Transportation|Electricity;1
+Final Energy|Transportation;Final Energy|Transportation|Gases;1
+Final Energy|Transportation;Final Energy|Transportation|Hydrogen;1
+Final Energy|Transportation;Final Energy|Transportation|Liquids;1
+Final Energy|Transportation;Final Energy|Transportation|Other;1
+Final Energy|Transportation 2;Final Energy|Transportation|Passenger;1
+Final Energy|Transportation 2;Final Energy|Transportation|Freight;1
+Final Energy 2;Final Energy|Industry;1
+Final Energy 2;Final Energy|Other Sector;1
+Final Energy 2;Final Energy|Residential and Commercial;1
+Final Energy 2;Final Energy|Transportation;1
+Investment|Energy Supply|Electricity|Biomass;Investment|Energy Supply|Electricity|Biomass|w/ CCS;1
+Investment|Energy Supply|Electricity|Biomass;Investment|Energy Supply|Electricity|Biomass|w/o CCS;1
+Investment|Energy Supply|Electricity|Coal;Investment|Energy Supply|Electricity|Coal|w/ CCS;1
+Investment|Energy Supply|Electricity|Coal;Investment|Energy Supply|Electricity|Coal|w/o CCS;1
+Investment|Energy Supply|Electricity|Gas;Investment|Energy Supply|Electricity|Gas|w/ CCS;1
+Investment|Energy Supply|Electricity|Gas;Investment|Energy Supply|Electricity|Gas|w/o CCS;1
+Investment|Energy Supply|Electricity|Oil;Investment|Energy Supply|Electricity|Oil|w/ CCS;1
+Investment|Energy Supply|Electricity|Oil;Investment|Energy Supply|Electricity|Oil|w/o CCS;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Biomass;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Coal;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Electricity Storage;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Gas;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Geothermal;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Hydro;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Nuclear;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Ocean;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Oil;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Other;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Solar;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Transmission and Distribution;1
+Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Wind;1
+Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Biomass;1
+Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Electricity;1
+Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Fossil;1
+Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Other;1
+Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Renewable;1
+Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Biomass;1
+Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Coal and Gas;1
+Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Oil;1
+Investment|Energy Supply;Investment|Energy Supply|CO2 Transport and Storage;1
+Investment|Energy Supply;Investment|Energy Supply|Electricity;1
+Investment|Energy Supply;Investment|Energy Supply|Heat;1
+Investment|Energy Supply;Investment|Energy Supply|Hydrogen;1
+Investment|Energy Supply;Investment|Energy Supply|Liquids;1
+Investment|Energy Supply;Investment|Energy Supply|Other;1
+Investment|Infrastructure|Transportation;Investment|Infrastructure|Transportation|Aviation;1
+Investment|Infrastructure|Transportation;Investment|Infrastructure|Transportation|Maritime;1
+Investment|Infrastructure|Transportation;Investment|Infrastructure|Transportation|Rail;1
+Investment|Infrastructure|Transportation;Investment|Infrastructure|Transportation|Road;1
+Land Cover|Cropland|Energy Crops;Land Cover|Cropland|Energy Crops|1st generation;1
+Land Cover|Cropland|Energy Crops;Land Cover|Cropland|Energy Crops|2nd generation;1
+Land Cover|Cropland;Land Cover|Cropland|Energy Crops|Irrigated;1
+Land Cover|Cropland;Land Cover|Cropland|Irrigated;1
+Land Cover|Cropland;Land Cover|Cropland|Rainfed;1
+Land Cover|Forest;Land Cover|Forest|Afforestation and Reforestation;1
+Land Cover|Forest;Land Cover|Forest|Managed;1
+Land Cover|Forest;Land Cover|Forest|Natural Forest;1
+Land Cover|Forest;Land Cover|Forest|Secondary;1
+Land Cover;Land Cover|Built-up Area;1
+Land Cover;Land Cover|Cropland;1
+Land Cover;Land Cover|Forest;1
+Land Cover;Land Cover|Other Arable Land;1
+Land Cover;Land Cover|Other Land;1
+Land Cover;Land Cover|Pasture;1
+Capacity Additions|Electricity|Gas;Capacity Additions|Electricity|Gas|w/ CCS;1
+Capacity Additions|Electricity|Gas;Capacity Additions|Electricity|Gas|w/o CCS;1
+Population;Population|Female;1
+Population;Population|Male;1
+Population 2;Population|Rural;1
+Population 2;Population|Urban;1
+Primary Energy|Biomass|Electricity;Primary Energy|Biomass|Electricity|w/ CCS;1
+Primary Energy|Biomass|Electricity;Primary Energy|Biomass|Electricity|w/o CCS;1
+Primary Energy|Coal|Electricity;Primary Energy|Coal|Electricity|w/ CCS;1
+Primary Energy|Coal|Electricity;Primary Energy|Coal|Electricity|w/o CCS;1
+Primary Energy|Gas|Electricity;Primary Energy|Gas|Electricity|w/ CCS;1
+Primary Energy|Gas|Electricity;Primary Energy|Gas|Electricity|w/o CCS;1
+Primary Energy|Oil|Electricity;Primary Energy|Oil|Electricity|w/ CCS;1
+Primary Energy|Oil|Electricity;Primary Energy|Oil|Electricity|w/o CCS;1
+Primary Energy|Biomass;Primary Energy|Biomass|Electricity;1
+Primary Energy|Biomass;Primary Energy|Biomass|Gases;1
+Primary Energy|Biomass;Primary Energy|Biomass|Hydrogen;1
+Primary Energy|Biomass;Primary Energy|Biomass|Liquids;1
+Primary Energy|Biomass;Primary Energy|Biomass|Solids;1
+Primary Energy|Biomass;Primary Energy|Biomass|Heat;1
+Primary Energy|Biomass 2;Primary Energy|Biomass|Modern;1
+Primary Energy|Biomass 2;Primary Energy|Biomass|Traditional;1
+Primary Energy|Coal;Primary Energy|Coal|Electricity;1
+Primary Energy|Coal;Primary Energy|Coal|Gases;1
+Primary Energy|Coal;Primary Energy|Coal|Hydrogen;1
+Primary Energy|Coal;Primary Energy|Coal|Liquids;1
+Primary Energy|Coal;Primary Energy|Coal|Solids;1
+Primary Energy|Coal;Primary Energy|Coal|Heat;1
+Primary Energy|Gas;Primary Energy|Gas|Electricity;1
+Primary Energy|Gas;Primary Energy|Gas|Gases;1
+Primary Energy|Gas;Primary Energy|Gas|Hydrogen;1
+Primary Energy|Gas;Primary Energy|Gas|Liquids;1
+Primary Energy|Gas;Primary Energy|Gas|Solids;1
+Primary Energy|Gas;Primary Energy|Gas|Heat;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Non-Biomass Renewables|Geothermal;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Non-Biomass Renewables|Hydro;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Non-Biomass Renewables|Ocean;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Non-Biomass Renewables|Solar;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Non-Biomass Renewables|Wind;1
+Primary Energy|Oil;Primary Energy|Oil|Electricity;1
+Primary Energy|Oil;Primary Energy|Oil|Gases;1
+Primary Energy|Oil;Primary Energy|Oil|Hydrogen;1
+Primary Energy|Oil;Primary Energy|Oil|Liquids;1
+Primary Energy|Oil;Primary Energy|Oil|Solids;1
+Primary Energy;Primary Energy|Biomass;1
+Primary Energy;Primary Energy|Coal;1
+Primary Energy;Primary Energy|Gas;1
+Primary Energy;Primary Energy|Hydro;1
+Primary Energy;Primary Energy|Solar;1
+Primary Energy;Primary Energy|Nuclear;1
+Primary Energy;Primary Energy|Oil;1
+Primary Energy;Primary Energy|Wind;1
+Primary Energy;Primary Energy|Geothermal;1
+Secondary Energy;Secondary Energy|Electricity;1
+Secondary Energy;Secondary Energy|Gases;1
+Secondary Energy;Secondary Energy|Heat;1
+Secondary Energy;Secondary Energy|Hydrogen;1
+Secondary Energy;Secondary Energy|Liquids;1
+Secondary Energy;Secondary Energy|Solids;1
+Secondary Energy|Electricity|Biomass;Secondary Energy|Electricity|Biomass|w/ CCS;1
+Secondary Energy|Electricity|Biomass;Secondary Energy|Electricity|Biomass|w/o CCS;1
+Secondary Energy|Electricity|Coal;Secondary Energy|Electricity|Coal|w/ CCS;1
+Secondary Energy|Electricity|Coal;Secondary Energy|Electricity|Coal|w/o CCS;1
+Secondary Energy|Electricity|Gas;Secondary Energy|Electricity|Gas|w/ CCS;1
+Secondary Energy|Electricity|Gas;Secondary Energy|Electricity|Gas|w/o CCS;1
+Secondary Energy|Electricity|Oil;Secondary Energy|Electricity|Oil|w/ CCS;1
+Secondary Energy|Electricity|Oil;Secondary Energy|Electricity|Oil|w/o CCS;1
+Secondary Energy|Electricity|Solar;Secondary Energy|Electricity|Solar|CSP;1
+Secondary Energy|Electricity|Solar;Secondary Energy|Electricity|Solar|PV;1
+Secondary Energy|Electricity|Wind;Secondary Energy|Electricity|Wind|Offshore;1
+Secondary Energy|Electricity|Wind;Secondary Energy|Electricity|Wind|Onshore;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Biomass;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Coal;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Gas;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Geothermal;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Hydro;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Nuclear;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Ocean;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Oil;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Other;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Solar;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Wind;1
+Secondary Energy|Gases;Secondary Energy|Gases|Biomass;1
+Secondary Energy|Gases;Secondary Energy|Gases|Coal;1
+Secondary Energy|Gases;Secondary Energy|Gases|Natural Gas;1
+Secondary Energy|Gases;Secondary Energy|Gases|Other;1
+Secondary Energy|Heat;Secondary Energy|Heat|Biomass;1
+Secondary Energy|Heat;Secondary Energy|Heat|Coal;1
+Secondary Energy|Heat;Secondary Energy|Heat|Gas;1
+Secondary Energy|Heat;Secondary Energy|Heat|Geothermal;1
+Secondary Energy|Heat;Secondary Energy|Heat|Nuclear;1
+Secondary Energy|Heat;Secondary Energy|Heat|Oil;1
+Secondary Energy|Heat;Secondary Energy|Heat|Other;1
+Secondary Energy|Heat;Secondary Energy|Heat|Solar;1
+Secondary Energy|Hydrogen|Biomass;Secondary Energy|Hydrogen|Biomass|w/ CCS;1
+Secondary Energy|Hydrogen|Biomass;Secondary Energy|Hydrogen|Biomass|w/o CCS;1
+Secondary Energy|Hydrogen|Coal;Secondary Energy|Hydrogen|Coal|w/ CCS;1
+Secondary Energy|Hydrogen|Coal;Secondary Energy|Hydrogen|Coal|w/o CCS;1
+Secondary Energy|Hydrogen|Gas;Secondary Energy|Hydrogen|Gas|w/ CCS;1
+Secondary Energy|Hydrogen|Gas;Secondary Energy|Hydrogen|Gas|w/o CCS;1
+Secondary Energy|Hydrogen;Secondary Energy|Hydrogen|Biomass;1
+Secondary Energy|Hydrogen;Secondary Energy|Hydrogen|Coal;1
+Secondary Energy|Hydrogen;Secondary Energy|Hydrogen|Electricity;1
+Secondary Energy|Hydrogen;Secondary Energy|Hydrogen|Gas;1
+Secondary Energy|Liquids|Biomass;Secondary Energy|Liquids|Biomass|w/ CCS;1
+Secondary Energy|Liquids|Biomass;Secondary Energy|Liquids|Biomass|w/o CCS;1
+Secondary Energy|Liquids|Coal;Secondary Energy|Liquids|Coal|w/ CCS;1
+Secondary Energy|Liquids|Coal;Secondary Energy|Liquids|Coal|w/o CCS;1
+Secondary Energy|Liquids|Gas;Secondary Energy|Liquids|Gas|w/ CCS;1
+Secondary Energy|Liquids|Gas;Secondary Energy|Liquids|Gas|w/o CCS;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Biomass;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Coal;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Gas;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Oil;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Other;1
+Secondary Energy|Solids;Secondary Energy|Solids|Biomass;1
+Secondary Energy|Solids;Secondary Energy|Solids|Coal;1
+Secondary Energy|Solids;Secondary Energy|Solids|Tranditional Biomass;1
+Final Energy|Industry|Other|Gases;Final Energy|Industry|Other|Gases|Bioenergy;1
+Final Energy|Industry|Other|Gases;Final Energy|Industry|Other|Gases|Fossil;1
+Final Energy|Industry|Other|Gases;Final Energy|Industry|Other|Gases|Hydrogen synfuel;1
+Final Energy|Industry|Other|Liquids;Final Energy|Industry|Other|Liquids|Bioenergy;1
+Final Energy|Industry|Other|Liquids;Final Energy|Industry|Other|Liquids|Fossil;1
+Final Energy|Industry|Other|Liquids;Final Energy|Industry|Other|Liquids|Hydrogen synfuel;1
+Final Energy|Industry|Other|Solids;Final Energy|Industry|Other|Solids|Bioenergy;1
+Final Energy|Industry|Other|Solids;Final Energy|Industry|Other|Solids|Fossil;1
+Capacity Additions|Electricity|Oil;Capacity Additions|Electricity|Oil|w/ CCS;1
+Capacity Additions|Electricity|Oil;Capacity Additions|Electricity|Oil|w/o CCS;1
+Capacity Additions|Electricity|Solar;Capacity Additions|Electricity|Solar|CSP;1
+Capacity Additions|Electricity|Solar;Capacity Additions|Electricity|Solar|PV;1
+Capacity Additions|Electricity|Wind;Capacity Additions|Electricity|Wind|Offshore;1
+Capacity Additions|Electricity|Wind;Capacity Additions|Electricity|Wind|Onshore;1
+Capacity|Electricity|Biomass;Capacity|Electricity|Biomass|w/ CCS;1
+Capacity|Electricity|Biomass;Capacity|Electricity|Biomass|w/o CCS;1
+Capacity|Electricity|Coal;Capacity|Electricity|Coal|w/ CCS;1
+Capacity|Electricity|Coal;Capacity|Electricity|Coal|w/o CCS;1
+Capacity|Electricity|Gas;Capacity|Electricity|Gas|w/ CCS;1
+Capacity|Electricity|Gas;Capacity|Electricity|Gas|w/o CCS;1
+Capacity|Electricity|Oil;Capacity|Electricity|Oil|w/ CCS;1
+Capacity|Electricity|Oil;Capacity|Electricity|Oil|w/o CCS;1
+Capacity|Electricity|Solar;Capacity|Electricity|Solar|CSP;1
+Capacity|Electricity|Solar;Capacity|Electricity|Solar|PV;1
+Capacity|Electricity|Wind;Capacity|Electricity|Wind|Offshore;1
+Capacity|Electricity|Wind;Capacity|Electricity|Wind|Onshore;1
+Capacity|Electricity;Capacity|Electricity|Biomass;1
+Capacity|Electricity;Capacity|Electricity|Coal;1
+Capacity|Electricity;Capacity|Electricity|Gas;1
+Capacity|Electricity;Capacity|Electricity|Geothermal;1
+Capacity|Electricity;Capacity|Electricity|Hydro;1
+Capacity|Electricity;Capacity|Electricity|Nuclear;1
+Capacity|Electricity;Capacity|Electricity|Ocean;1
+Capacity|Electricity;Capacity|Electricity|Oil|w/o CCS;1
+Capacity|Electricity;Capacity|Electricity|Other;1
+Capacity|Electricity;Capacity|Electricity|Solar;1
+Capacity|Electricity;Capacity|Electricity|Wind;1
+Emissions|CO2|Energy and Industrial Processes;Emissions|CO2|Energy;1
+Emissions|CO2|Energy and Industrial Processes;Emissions|CO2|Industrial Processes;1
