@@ -20,7 +20,8 @@ generateMappingfile(
 )
 }
 \arguments{
-\item{templates}{either a character or vector of templates to use as a starting point for creating the mapping}
+\item{templates}{either a character or vector of project templates to use as a starting point for
+creating the mapping, valid projects are "AR6", "SHAPE", "NAVIGATE"}
 
 \item{targetVar}{column name in template containing the target variable names}
 
@@ -55,14 +56,13 @@ Generate mapping from the template containing all the metadata
 \dontrun{
 # Simple use. Creates NAVIGATE mapping and saves it to /output/template_navigate.csv:
 generateMappingfile(
- templates = "inst/templates/mapping_template_NAVIGATE.csv",
- targetVar = "Variable_NAVIGATE",
- fileName = "template_navigate.csv"
+  templates = "NAVIGATE",
+  targetVar = "Variable_NAVIGATE",
+  fileName = "template_navigate.csv"
 )
 # More complex use. Creates combined mapping from NAVIGATE and SHAPE template:
 generateMappingfile(
-  templates = c("inst/templates/mapping_template_NAVIGATE.csv",
-                "inst/templates/mapping_template_SHAPE.csv"),
+  templates = c("NAVIGATE", "SHAPE"),
   targetVar = c("Variable_NAVIGATE", "Variable_SHAPE"),
   fileName = "template_combined.csv"
 )

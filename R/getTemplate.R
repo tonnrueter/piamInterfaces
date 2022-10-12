@@ -3,7 +3,7 @@
 #' @md
 #' @author Falk Benke
 #' @param project name of the project of requested template
-#' @importFrom data.table fread
+#' @importFrom utils read.csv2
 #' @export
 getTemplate <- function(project) {
   templates <- c(
@@ -16,5 +16,5 @@ getTemplate <- function(project) {
     stop(paste0("Invalid project, currently supported: ", paste0(unlist(names(templates)), collapse = ", ")))
   }
 
-  return(fread(paste0("inst/templates/", templates[project]), sep = ";", ))
+  return(read.csv2(system.file("templates", templates[project], package = "piamInterfaces"), sep = ";"))
 }
