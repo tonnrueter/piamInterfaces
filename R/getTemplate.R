@@ -16,5 +16,6 @@ getTemplate <- function(project) {
     stop(paste0("Invalid project, currently supported: ", paste0(unlist(names(templates)), collapse = ", ")))
   }
 
-  return(read.csv2(system.file("templates", templates[project], package = "piamInterfaces"), sep = ";"))
+  return(read.csv2(system.file("templates", templates[project], package = "piamInterfaces"),
+                   header = TRUE, sep = ";", na.strings = list("")))
 }

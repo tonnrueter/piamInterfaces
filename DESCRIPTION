@@ -1,7 +1,7 @@
 Type: Package
 Package: piamInterfaces
 Title: Project specific interfaces to REMIND / MAgPIE
-Version: 0.0.6
+Version: 0.0.7
 Date: 2022-10-12
 Authors@R:
     person("Falk", "Benke", , "benke@pik-potsdam.de", role = c("aut", "cre"))
