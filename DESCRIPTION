@@ -1,7 +1,7 @@
 Type: Package
 Package: piamInterfaces
 Title: Project specific interfaces to REMIND / MAgPIE
-Version: 0.0.7
+Version: 0.0.8
 Date: 2022-10-12
 Authors@R:
     person("Falk", "Benke", , "benke@pik-potsdam.de", role = c("aut", "cre"))
@@ -10,6 +10,7 @@ License: LGPL-3
 URL: https://github.com/pik-piam/piam_interfaces
 Imports:
     data.table,
+    gms,
     iamc,
     rmndt
 Suggests:

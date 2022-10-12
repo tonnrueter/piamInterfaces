@@ -4,7 +4,7 @@
 \alias{getTemplate}
 \title{Retrieves latest template for a given project}
 \usage{
-getTemplate(project)
+getTemplate(project = NULL)
 }
 \arguments{
 \item{project}{name of the project of requested template}
@@ -13,5 +13,5 @@ getTemplate(project)
 Retrieves latest template for a given project
 }
 \author{
-Falk Benke
+Falk Benke, Oliver Richters
 }

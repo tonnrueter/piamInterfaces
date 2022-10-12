@@ -1,4 +1,4 @@
-idx;Variable_SHAPE;Unit;r30m44;r30m44_unit;r30m44_factor;r30m44_spatial;internal_comment;Comment;Definition
+idx;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;r30m44_spatial;internal_comment;Comment;Definition
 1;Useful Energy|Per Capita|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport.
 2;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact
 3;Useful Energy|Per Capita|Industry;GJ/cap/yr;;;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.

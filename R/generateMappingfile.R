@@ -4,21 +4,21 @@
 #' @author Falk Benke
 #' @param templates either a character or vector of project templates to use as a starting point for
 #'        creating the mapping, valid projects are "AR6", "SHAPE", "NAVIGATE"
-#' @param targetVar column name in template containing the target variable names
 #' @param outputDirectory path to directory to place generated files (default: output)
 #' @param fileName name of the mapping file to be created, if provided, the file is created in the "output" folder,
 #'        otherwise a data frame is returned (optional)
+#' @param commentFileName name of the comments file to be created, if provided,
+#'        the file is created in the "output" folder, otherwise a data frame is
+#'        returned (optional)
+#' @param targetVar column name in template containing the target variable names
+#' @param targetUnit column name in template containing the target units (default: Unit)
 #' @param remindVar column name in template containing the REMIND variable names (default: r30m44)
 #' @param remindUnit column name in template containing the REMIND units (default: r30m44_unit)
-#' @param targetUnit column name in template containing the target units (default: Unit)
 #' @param factorCol column name in template containing conversion factors (default: r30m44_factor)
 #' @param weightCol column name in template containing weight factors (optional)
 #' @param spatialCol column name in template containing regional restrictions
 #'        for reporting the corresponding variable (optional)
 #' @param model exact name of the source model, used as column in comments file (default: REMIND-MAgPIE)
-#' @param commentFileName name of the comments file to be created, if provided,
-#'        the file is created in the "output" folder, otherwise a data frame is
-#'        returned (optional)
 #' @importFrom data.table as.data.table fread fwrite := setnames
 #' @examples
 #' \dontrun{
@@ -36,13 +36,18 @@
 #' )
 #' }
 #' @export
-generateMappingfile <- function(templates, targetVar, outputDirectory = "output",
-                                fileName = NULL, remindVar = "r30m44",
-                                remindUnit = "r30m44_unit", targetUnit = "Unit",
-                                factorCol = "r30m44_factor", weightCol = NULL,
-                                spatialCol = "spatial", model = "REMIND-MAgPIE",
-                                commentFileName = NULL) {
-  if (!dir.exists(outputDirectory)) {
+generateMappingfile <- function(templates = NULL, outputDirectory = "output", fileName = NULL, commentFileName = NULL,
+                                targetVar = "Variable", targetUnit = "Unit",
+                                remindVar = "r30m44", remindUnit = "r30m44_unit",
+                                factorCol = "r30m44_factor", weightCol = NULL, spatialCol = "spatial",
+                                model = "REMIND-MAgPIE"
+                                ) {
+  templateNames <- getTemplateNames()
+  templates[templates %in% names(templateNames)] <- templateNames[templates[templates %in% names(templateNames)]]
+  if (is.null(templates) || ! all(file.exists(templates))) {
+    templates <- chooseFromList(unname(templateNames), type = "templates", returnBoolean = FALSE, multiple = TRUE)
+  }
+  if (!is.null(outputDirectory) && !dir.exists(outputDirectory)) {
     dir.create(outputDirectory, recursive = TRUE)
   }
 
@@ -119,53 +124,30 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
       return(comments)
     }
   }
-
-
-  if (length(templates) == 1) {
-    mapping <- .generateMapping(
-      template = templates,
-      fileName = fileName,
+  if (length(targetVar) == 1 && length(templates) > 1) targetVar <- rep.int(targetVar, length(templates))
+  mapping <- NULL
+  comments <- NULL
+  for (i in seq_along(templates)) {
+    m <- .generateMapping(
+      template = templates[i],
       remindVar = remindVar,
       remindUnit = remindUnit,
-      targetVar = targetVar,
+      targetVar = targetVar[i],
       targetUnit = targetUnit,
       factorCol = factorCol,
       weightCol = weightCol,
       spatialCol = spatialCol
     )
+    setnames(m, targetVar[i], "Variable")
+    mapping <- rbind(mapping, m)
 
-    comments <- .storeComments(
-      template = templates,
+    c <- .storeComments(
+      template = templates[i],
       remindVar = remindVar,
-      targetVar = targetVar,
       model = model,
-      fileName = commentFileName
+      targetVar = targetVar[i]
     )
-  } else {
-    mapping <- NULL
-    comments <- NULL
-    for (i in seq_along(templates)) {
-      m <- .generateMapping(
-        template = templates[i],
-        remindVar = remindVar,
-        remindUnit = remindUnit,
-        targetVar = targetVar[i],
-        targetUnit = targetUnit,
-        factorCol = factorCol,
-        weightCol = weightCol,
-        spatialCol = spatialCol
-      )
-      setnames(m, targetVar[i], "Variable")
-      mapping <- rbind(mapping, m)
-
-      c <- .storeComments(
-        template = templates[i],
-        remindVar = remindVar,
-        model = model,
-        targetVar = targetVar[i]
-      )
-      comments <- rbind(comments, c)
-    }
+    comments <- rbind(comments, c)
 
     if (!is.null(fileName)) {
       fwrite(mapping, file = paste0(outputDirectory, "/", fileName), sep = ";")

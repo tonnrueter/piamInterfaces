@@ -5,36 +5,40 @@
 \title{Generate mapping from the template containing all the metadata}
 \usage{
 generateMappingfile(
-  templates,
-  targetVar,
+  templates = NULL,
   outputDirectory = "output",
   fileName = NULL,
+  commentFileName = NULL,
+  targetVar = "Variable",
+  targetUnit = "Unit",
   remindVar = "r30m44",
   remindUnit = "r30m44_unit",
-  targetUnit = "Unit",
   factorCol = "r30m44_factor",
   weightCol = NULL,
   spatialCol = "spatial",
-  model = "REMIND-MAgPIE",
-  commentFileName = NULL
+  model = "REMIND-MAgPIE"
 )
 }
 \arguments{
 \item{templates}{either a character or vector of project templates to use as a starting point for
 creating the mapping, valid projects are "AR6", "SHAPE", "NAVIGATE"}
 
-\item{targetVar}{column name in template containing the target variable names}
-
 \item{outputDirectory}{path to directory to place generated files (default: output)}
 
 \item{fileName}{name of the mapping file to be created, if provided, the file is created in the "output" folder,
 otherwise a data frame is returned (optional)}
 
+\item{commentFileName}{name of the comments file to be created, if provided,
+the file is created in the "output" folder, otherwise a data frame is
+returned (optional)}
+
+\item{targetVar}{column name in template containing the target variable names}
+
+\item{targetUnit}{column name in template containing the target units (default: Unit)}
+
 \item{remindVar}{column name in template containing the REMIND variable names (default: r30m44)}
 
 \item{remindUnit}{column name in template containing the REMIND units (default: r30m44_unit)}
-
-\item{targetUnit}{column name in template containing the target units (default: Unit)}
 
 \item{factorCol}{column name in template containing conversion factors (default: r30m44_factor)}
 
@@ -44,10 +48,6 @@ otherwise a data frame is returned (optional)}
 for reporting the corresponding variable (optional)}
 
 \item{model}{exact name of the source model, used as column in comments file (default: REMIND-MAgPIE)}
-
-\item{commentFileName}{name of the comments file to be created, if provided,
-the file is created in the "output" folder, otherwise a data frame is
-returned (optional)}
 }
 \description{
 Generate mapping from the template containing all the metadata
