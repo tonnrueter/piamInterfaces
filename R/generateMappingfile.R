@@ -2,7 +2,8 @@
 #'
 #' @md
 #' @author Falk Benke
-#' @param templates either a character or vector of templates to use as a starting point for creating the mapping
+#' @param templates either a character or vector of project templates to use as a starting point for
+#'        creating the mapping, valid projects are "AR6", "SHAPE", "NAVIGATE"
 #' @param targetVar column name in template containing the target variable names
 #' @param outputDirectory path to directory to place generated files (default: output)
 #' @param fileName name of the mapping file to be created, if provided, the file is created in the "output" folder,
@@ -18,19 +19,18 @@
 #' @param commentFileName name of the comments file to be created, if provided,
 #'        the file is created in the "output" folder, otherwise a data frame is
 #'        returned (optional)
-#' @importFrom data.table fread fwrite := setnames
+#' @importFrom data.table as.data.table fread fwrite := setnames
 #' @examples
 #' \dontrun{
 #' # Simple use. Creates NAVIGATE mapping and saves it to /output/template_navigate.csv:
 #' generateMappingfile(
-#'  templates = "inst/templates/mapping_template_NAVIGATE.csv",
-#'  targetVar = "Variable_NAVIGATE",
-#'  fileName = "template_navigate.csv"
+#'   templates = "NAVIGATE",
+#'   targetVar = "Variable_NAVIGATE",
+#'   fileName = "template_navigate.csv"
 #' )
 #' # More complex use. Creates combined mapping from NAVIGATE and SHAPE template:
 #' generateMappingfile(
-#'   templates = c("inst/templates/mapping_template_NAVIGATE.csv",
-#'                 "inst/templates/mapping_template_SHAPE.csv"),
+#'   templates = c("NAVIGATE", "SHAPE"),
 #'   targetVar = c("Variable_NAVIGATE", "Variable_SHAPE"),
 #'   fileName = "template_combined.csv"
 #' )
@@ -51,7 +51,7 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
                                targetVar, targetUnit,
                                factorCol, weightCol,
                                spatialCol) {
-    dt <- fread(template, sep = ";", )
+    dt <- as.data.table(getTemplate(template))
 
     ## remove to dos and empty mappings
     dt[get(remindVar) == "TODO", (remindVar) := ""]
@@ -97,7 +97,7 @@ generateMappingfile <- function(templates, targetVar, outputDirectory = "output"
   }
 
   .storeComments <- function(template, remindVar, targetVar, model, fileName = NULL) {
-    dt <- fread(template)
+    dt <- as.data.table(getTemplate(template))
     dt[get(remindVar) == "TODO", (remindVar) := ""]
     dt <- dt[get(remindVar) != ""]
 
