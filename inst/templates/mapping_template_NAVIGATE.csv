@@ -1,4 +1,4 @@
-idx;Tier;Category;Variable_NAVIGATE;Unit;r30m44;r30m44_unit;r30m44_factor;internal_comment;Comment;Definition
+idx;Tier;Category;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;internal_comment;Comment;Definition
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation)
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation)
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation)
