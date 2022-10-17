@@ -57,13 +57,11 @@ Generate mapping from the template containing all the metadata
 # Simple use. Creates NAVIGATE mapping and saves it to /output/template_navigate.csv:
 generateMappingfile(
   templates = "NAVIGATE",
-  targetVar = "Variable_NAVIGATE",
   fileName = "template_navigate.csv"
 )
 # More complex use. Creates combined mapping from NAVIGATE and SHAPE template:
 generateMappingfile(
   templates = c("NAVIGATE", "SHAPE"),
-  targetVar = c("Variable_NAVIGATE", "Variable_SHAPE"),
   fileName = "template_combined.csv"
 )
 }

@@ -19,24 +19,23 @@
 #' @param spatialCol column name in template containing regional restrictions
 #'        for reporting the corresponding variable (optional)
 #' @param model exact name of the source model, used as column in comments file (default: REMIND-MAgPIE)
-#' @importFrom data.table as.data.table fread fwrite := setnames
+#' @importFrom data.table fread fwrite := setnames
 #' @examples
 #' \dontrun{
 #' # Simple use. Creates NAVIGATE mapping and saves it to /output/template_navigate.csv:
 #' generateMappingfile(
 #'   templates = "NAVIGATE",
-#'   targetVar = "Variable_NAVIGATE",
 #'   fileName = "template_navigate.csv"
 #' )
 #' # More complex use. Creates combined mapping from NAVIGATE and SHAPE template:
 #' generateMappingfile(
 #'   templates = c("NAVIGATE", "SHAPE"),
-#'   targetVar = c("Variable_NAVIGATE", "Variable_SHAPE"),
 #'   fileName = "template_combined.csv"
 #' )
 #' }
 #' @export
-generateMappingfile <- function(templates = NULL, outputDirectory = "output", fileName = NULL, commentFileName = NULL,
+generateMappingfile <- function(templates = NULL, outputDirectory = "output",
+                                fileName = NULL, commentFileName = NULL,
                                 targetVar = "Variable", targetUnit = "Unit",
                                 remindVar = "r30m44", remindUnit = "r30m44_unit",
                                 factorCol = "r30m44_factor", weightCol = NULL, spatialCol = "spatial",
@@ -56,7 +55,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output", fi
                                targetVar, targetUnit,
                                factorCol, weightCol,
                                spatialCol) {
-    dt <- as.data.table(getTemplate(template))
+    dt <- fread(template, sep = ";", )
 
     ## remove to dos and empty mappings
     dt[get(remindVar) == "TODO", (remindVar) := ""]
@@ -102,7 +101,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output", fi
   }
 
   .storeComments <- function(template, remindVar, targetVar, model, fileName = NULL) {
-    dt <- as.data.table(getTemplate(template))
+    dt <- fread(template, sep = ";", )
     dt[get(remindVar) == "TODO", (remindVar) := ""]
     dt <- dt[get(remindVar) != ""]
 
