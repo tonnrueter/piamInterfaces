@@ -1,6 +1,6 @@
 {
   "title": "piamInterfaces: Project specific interfaces to REMIND / MAgPIE",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "<p>Project specific interfaces to REMIND / MAgPIE.<\/p>",
   "creators": [
     {

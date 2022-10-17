@@ -1,5 +1,4 @@
 idx;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;r30m44_spatial;internal_comment;Comment;Definition
-;Emissions|Kyoto Gases;Mt CO2-equiv/yr;Emi|GHG;Mt CO2eq/yr;1;;;;
 ;Emissions|Kyoto Gases|AFOLU;Mt CO2-equiv/yr;Emi|GHG|AFOLU;Mt CO2eq/yr;1;;;;
 ;Emissions|Kyoto Gases|Industry;Mt CO2-equiv/yr;Emi|GHG|Industry;Mt CO2eq/yr;1;;;;
 ;Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Transport;Mt CO2eq/yr;1;;;;
