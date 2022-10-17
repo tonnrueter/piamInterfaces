@@ -7,7 +7,7 @@
 getTemplate(project = NULL)
 }
 \arguments{
-\item{project}{name of the project of requested template}
+\item{project}{name of the project of requested template, or template filename}
 }
 \description{
 Retrieves latest template for a given project
