@@ -1,6 +1,6 @@
-for (template in c(piamInterfaces::templateNames(), list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))) {
+for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE")),
+                   list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))) {
   test_that(paste("test generateIIASASubmission with", paste(template, collapse = ",")), {
-    message(template)
     vars <- NULL
     for (i in unlist(template)) {
       templateData <- getTemplate(i)
