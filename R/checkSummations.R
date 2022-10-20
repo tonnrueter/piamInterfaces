@@ -1,17 +1,26 @@
 #' Checks for a run if the variables sum up as expected and logs spotted gaps
 #'
 #' @md
-#' @author Falk Benke
+#' @author Falk Benke, Oliver Richters
 #' @param mifFile path to the mif file to apply summation checks to
-#' @param outputDirectory path to directory to place generated files (default: output)
+#' @param dataDumpFile file where data.frame with the data analysis is saved. If NULL, result is returned
+#' @param outputDirectory path to directory to place logFile and dataDumpFile
+#' @param logFile file where human-readable summary is saved. If NULL, write to stdout
+#' @param logAppend boolean whether to append or overwrite logFile
+#' @param summationsFile in inst/summations folder that describes the required summation groups
+#' @param template mapping template to be loaded
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
 #' @importFrom quitte read.quitte
+#' @importFrom magclass unitsplit
 #' @importFrom rlang sym syms
 #' @importFrom utils write.table
+#' @importFrom stringr str_pad
 #'
 #' @export
-checkSummations <- function(mifFile, outputDirectory = "output") {
-  if (!is.null(outputDirectory) && !dir.exists(outputDirectory)) {
+checkSummations <- function(mifFile, outputDirectory = ".", template = templateNames("AR6"),
+                            summationsFile = summationsNames("AR6"),
+                            logFile = NULL, logAppend = FALSE, dataDumpFile = "checkSummations.csv") {
+  if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
     dir.create(outputDirectory, recursive = TRUE)
   }
 
@@ -24,10 +33,8 @@ checkSummations <- function(mifFile, outputDirectory = "output") {
     return(tmp)
   }
 
-  # FIXME: decide if this should become a parameter
-  summationGroups <- read.csv2(system.file("summations", "summation_groups_ar6.csv",
-    package = "piamInterfaces"
-  ), sep = ";", stringsAsFactors = FALSE)
+  summationGroups <- getSummations(summationsFile)
+  if (summationsFile %in% names(summationsNames())) summationsFile <- basename(summationsNames(summationsFile))
 
   data <- read.quitte(mifFile) %>%
     filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent))) %>%
@@ -51,22 +58,65 @@ checkSummations <- function(mifFile, outputDirectory = "output") {
 
   tmp <- left_join(tmp, data, c("scenario", "region", "variable", "period", "model")) %>%
     mutate(
-      diff = abs(!!sym("checkSum") - !!sym("value")),
-      reldiff = 100 * abs((!!sym("checkSum") - !!sym("value")) / !!sym("value"))
+      diff = !!sym("checkSum") - !!sym("value"),
+      reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value")
     ) %>%
     select(-c("factor", "parent"))
 
-  fileSmall <- filter(tmp, !!sym("reldiff") < 1, !!sym("diff") < 0.001)
-  fileLarge <- filter(tmp, !!sym("reldiff") >= 1, !!sym("diff") >= 0.001)
+  text <- paste0("\n### Analyzing ", mifFile, ".")
+  text <- c(text, paste0("# Use ", summationsFile, " to check whether summation groups add up."))
 
-  write.table(
-    arrange(fileLarge, desc(!!sym("reldiff"))), sep = ";",
-    file = paste0(outputDirectory, "/checkSummations.csv"),
-    quote = FALSE, row.names = FALSE
+  # write data to dataDumpFile
+  if (length(dataDumpFile) > 0) {
+    dataDumpFile <- file.path(outputDirectory, dataDumpFile)
+    write.table(
+      arrange(tmp, desc(abs(!!sym("reldiff")))), sep = ";",
+      file = dataDumpFile, quote = FALSE, row.names = FALSE)
+  }
+  # generate human-readable summary of larger differences
+  fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= 1, abs(!!sym("diff")) >= 0.001)
+  problematic <- unique(c(fileLarge$variable))
+  if (length(problematic) > 0) {
+    if (template %in% names(templateNames())) template <- basename(templateNames(template))
+    text <- c(text, paste0("# Derive remind2 mapping from ", template))
+    width <- 70
+    templateData <- getTemplate(template)
+    text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
+                           basename(summationsFile)), width + 8, "right"),
+            "corresponding r30m44 variables extracted from ", basename(template)))
+    for (p in problematic) {
+      childs <- summationGroups$child[summationGroups$parent == p]
+      text <- c(text, paste0("\n", str_pad(paste0(p, " !="), width + 5, "right"), "   ",
+              paste0(unitsplit(templateData$r30m44[unitsplit(templateData$Variable)$variable == p])$variable,
+                     collapse = " + "), " != "))
+      for (ch in childs) {
+        text <- c(text, paste0("   + ", str_pad(ch, width, "right"), "      + ",
+                paste0(unitsplit(templateData$r30m44[unitsplit(templateData$Variable)$variable == ch])$variable,
+                       collapse = " + ")))
+      }
+      text <- c(text, paste0("Relative difference between ",
+                        round(min(fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "% and ",
+                        round(max(fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "%, ",
+                        "absolute difference up to ",
+                        round(max(abs(fileLarge$diff[fileLarge$variable == p])), digits = 2), " ",
+                        paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
+      )
+    }
+  }
+  # print to log or stdout
+  summarytext <- c("\n### Summary",
+    paste0("# ", length(problematic), " equations are not satisfied but should according to ",
+          basename(summationsFile), "."),
+    paste0("# All deviations can be found in the returned object",
+           if (! is.null(dataDumpFile)) paste0(" and in ", dataDumpFile), ".")
   )
-  write.table(
-    arrange(fileSmall, desc(!!sym("reldiff"))), sep = ";",
-    file = paste0(outputDirectory, "/checkSummations_tiny.csv"),
-    quote = FALSE, row.names = FALSE
-  )
+  if (is.null(logFile)) {
+    message(paste(c(text, summarytext, ""), collapse = "\n"))
+  } else {
+    logFile <- file.path(outputDirectory, logFile)
+    message(paste(c(text[1], summarytext,
+            paste0("# Find log with human-readable information appended to ", logFile)), "", collapse = "\n"))
+    write(c(text, summarytext, ""), file = logFile, append = logAppend)
+  }
+  return(invisible(tmp))
 }

@@ -4,16 +4,34 @@
 \alias{checkSummations}
 \title{Checks for a run if the variables sum up as expected and logs spotted gaps}
 \usage{
-checkSummations(mifFile, outputDirectory = "output")
+checkSummations(
+  mifFile,
+  outputDirectory = ".",
+  template = templateNames("AR6"),
+  summationsFile = summationsNames("AR6"),
+  logFile = NULL,
+  logAppend = FALSE,
+  dataDumpFile = "checkSummations.csv"
+)
 }
 \arguments{
 \item{mifFile}{path to the mif file to apply summation checks to}
 
-\item{outputDirectory}{path to directory to place generated files (default: output)}
+\item{outputDirectory}{path to directory to place logFile and dataDumpFile}
+
+\item{template}{mapping template to be loaded}
+
+\item{summationsFile}{in inst/summations folder that describes the required summation groups}
+
+\item{logFile}{file where human-readable summary is saved. If NULL, write to stdout}
+
+\item{logAppend}{boolean whether to append or overwrite logFile}
+
+\item{dataDumpFile}{file where data.frame with the data analysis is saved. If NULL, result is returned}
 }
 \description{
 Checks for a run if the variables sum up as expected and logs spotted gaps
 }
 \author{
-Falk Benke
+Falk Benke, Oliver Richters
 }
