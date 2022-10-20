@@ -182,9 +182,9 @@ idx;Tier;Category;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;internal_commen
 156;1;emissions (CO2);Emissions|CO2 (w/o bunkers);Mt CO2/yr;Emi|CO2|w/ Bunkers;Mt CO2/yr;;;;total CO2 emissions excluding emissions from international bunkers (IPCC category 1A3ai and 1A3di)
 156;1;emissions (CO2);Emissions|CO2 (w/o bunkers);Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;-1;;;total CO2 emissions excluding emissions from international bunkers (IPCC category 1A3ai and 1A3di)
 157;1;emissions (CO2);Gross Emissions|CO2;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross;Mt CO2/yr;;;;Gross CO2 emissions, not accounting for negative emissions e.g. from BECCS or AFOLU
-158;1;emissions (CO2);Emissions|CO2|AFOLU;Mt CO2/yr;Emi|CO2|Land-Use Change;Mt CO2/yr;;;;CO2 emissions from agriculture, forestry and other land use (IPCC category 3), exlcuding energy-related emissions from these sectors
+158;1;emissions (CO2);Emissions|CO2|AFOLU;Mt CO2/yr;Emi|CO2|+|Land-Use Change;Mt CO2/yr;;;;CO2 emissions from agriculture, forestry and other land use (IPCC category 3), exlcuding energy-related emissions from these sectors
 159;1;emissions (CO2);Emissions|CO2|AFOLU|Agriculture;Mt CO2/yr;;;;;;CO2 emissions from agriculture
-160;1;emissions (CO2);Emissions|CO2|AFOLU|Land;Mt CO2/yr;Emi|CO2|Land-Use Change;Mt CO2/yr;;;;net CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF)
+160;1;emissions (CO2);Emissions|CO2|AFOLU|Land;Mt CO2/yr;Emi|CO2|+|Land-Use Change;Mt CO2/yr;;;;net CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF)
 161;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Positive;Mt CO2/yr;;;;;;positive CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from deforestation
 162;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Negative;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Regrowth;Mt CO2/yr;;;;negative CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from afforestation
 163;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Wetlands;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Peatland;Mt CO2/yr;;;;CO2 emissions from managed peatlands (drained and rewetted)
@@ -329,14 +329,14 @@ idx;Tier;Category;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;internal_commen
 296;2;emissions (non-CO2);Emissions|CH4|AFOLU|Agriculture|Rice;Mt CH4/yr;Emi|CH4|Agriculture|+|Rice;Mt CH4/yr;;;;CH4 emissions from rice cultivation in the agriculture sector
 297;2;emissions (non-CO2);Emissions|CH4|AFOLU|Land;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;;;;CH4 emissions from forestry and other land use
 298;2;emissions (non-CO2);Emissions|CH4|AFOLU|Land|Wetlands;Mt CH4/yr;Emi|CH4|Land-Use Change|+|Peatland;Mt CH4/yr;;;;CH4 emissions from managed peatlands (drained and rewetted)
-299;2;emissions (non-CO2);Emissions|CH4|Energy;Mt CH4/yr;Emi|CH4|Energy Supply and Demand;Mt CH4/yr;;;;CH4 emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B)
+299;2;emissions (non-CO2);Emissions|CH4|Energy;Mt CH4/yr;Emi|CH4|+|Energy Supply;Mt CH4/yr;;;;CH4 emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B)
 300;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Industry;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in industry (IPCC category 1A2)
 301;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Residential and Commercial;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in residential, commercial, institutional sectors (IPCC category 1A4a,  1A4b)
 302;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Transportation;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in transportation sector (IPCC category 1A3), excluding pipeline emissions (IPCC category 1A3ei)
 303;2;emissions (non-CO2);Emissions|CH4|Energy|Supply;Mt CH4/yr;Emi|CH4|+|Energy Supply;Mt CH4/yr;;;;CH4 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g. refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei), fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C)
 304;2;emissions (non-CO2);Emissions|CH4|Waste;Mt CH4/yr;Emi|CH4|+|Waste;Mt CH4/yr;;;;CH4 emissions from waste (IPCC category 6)
 305;3;emissions (non-CO2);Emissions|CH4|Industrial Processes;Mt CH4/yr;;;;;;CH4 emissions from industrial processes
-306;2;emissions (non-CO2);Emissions|CH4|Other;Mt CH4/yr;Emi|CH4|Other;Mt CH4/yr;;;;CH4 emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab)
+306;2;emissions (non-CO2);Emissions|CH4|Other;Mt CH4/yr;;;;;;CH4 emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab)
 307;2;emissions (non-CO2);Emissions|CO|AFOLU;Mt CO/yr;Emi|CO|Land Use;Mt CO/yr;;;;Land Use based Carbon Monoxide Emissions
 308;2;emissions (non-CO2);Emissions|CO|Energy;Mt CO/yr;Emi|CO|Energy Supply and Demand;Mt CO/yr;;;;Carbon Monoxide emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B)
 309;2;emissions (non-CO2);Emissions|CO|Energy|Demand|Industry;Mt CO/yr;Emi|CO|Energy Demand|Industry;Mt CO/yr;;;;Carbon Monoxide Emissions from Combustion in industry (IPCC 1A2) and industrial processes  (IPCC 2C1-2C5)
@@ -353,7 +353,6 @@ idx;Tier;Category;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;internal_commen
 320;2;emissions (non-CO2);Emissions|Kyoto Gases|Waste;Mt CO2-equiv/yr;Emi|GHG|+++|Waste;Mt CO2eq/yr;;;;Kyoto GHG emissions from waste (IPCC category 6)
 321;2;emissions (non-CO2);Emissions|Kyoto Gases|Industry;Mt CO2-equiv/yr;Emi|GHG|Industry;Mt CO2eq/yr;;;;Kyoto GHG emissions from fuel combustion in industry, and Kyoto GHG emissions from industrial processes (IPCC categories 2A, B, C, E), including CO2, CH4, N2O and F-gases (preferably use 100-year GWPs from AR4 for aggregation of different gases, net of bioenergy with CCS (BECCS), in case other GWPs have been used, please document this on the 'comments' tab)
 322;2;emissions (non-CO2);Emissions|Kyoto Gases|Industrial Processes;Mt CO2-equiv/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;;;;Kyoto GHG emissions from industrial processes (IPCC categories 2A, B, C, E), including CO2, CH4, N2O and F-gases (preferably use 100-year GWPs from AR4 for aggregation of different gases, in case other GWPs have been used, please document this on the 'comments' tab)
-322;2;emissions (non-CO2);Emissions|Kyoto Gases|Industrial Processes;Mt CO2-equiv/yr;Emi|GHG|+++|F-Gas;Mt CO2eq/yr;;;;
 323;2;emissions (non-CO2);Emissions|Kyoto Gases|Other;Mt CO2-equiv/yr;Emi|GHG|+++|non-BECCS CDR;Mt CO2eq/yr;;;;Kyoto GHG emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab), including CO2, CH4, N2O and F-gases (preferably use 100-year GWPs from AR4 for aggregation of different gases, in case other GWPs have been used, please document this on the 'comments' tab)
 324;2;emissions (non-CO2);Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Agriculture;kt N2O/yr;;;;N2O emissions from agriculture, forestry and other land use (IPCC category 3)
 324;2;emissions (non-CO2);Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;;;;N2O emissions from agriculture, forestry and other land use (IPCC category 3)
@@ -728,7 +727,7 @@ idx;Tier;Category;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;internal_commen
 689;2;energy (final);Final Energy|Industry|Chemicals|Solids;EJ/yr;FE|Industry|Chemicals|+|Solids;EJ/yr;;;;Final energy solid fuel consumption by the chemicals sector (including coal and solid biomass)
 690;3;energy (final);Final Energy|Industry|Chemicals|Solids|Biomass;EJ/yr;;;;;;Final energy consumption of solid biomass (modern and traditional, including renewable waste) by the chemicals sector
 691;3;energy (final);Final Energy|Industry|Chemicals|Solids|Coal;EJ/yr;;;;;;Final energy consumption of coal by the chemicals sector
-692;2;energy (final);Final Energy|Industry|Chemicals|Heat;EJ/yr;FE|Industry|Heat|Chemicals;EJ/yr;;;;Final energy consumption of centrally supplied heat by the chemicals sector
+692;2;energy (final);Final Energy|Industry|Chemicals|Heat;EJ/yr;;;;;;Final energy consumption of centrally supplied heat by the chemicals sector
 693;2;energy (final);Final Energy|Industry|Chemicals|Solar;EJ/yr;;;;;;Final energy consumption of solar thermal heat by the chemicals sector
 694;2;energy (final);Final Energy|Industry|Chemicals|Geothermal;EJ/yr;;;;;;Final energy consumption of geothermal heat by the chemicals sector
 695;2;energy (final);Final Energy|Industry|Chemicals|Waste;EJ/yr;;;;;;Final energy consumption of non-renewable waste by the chemicals sector
