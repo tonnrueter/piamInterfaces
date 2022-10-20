@@ -63,8 +63,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = templateN
     ) %>%
     select(-c("factor", "parent"))
 
-  text <- paste0("\n### Analyzing ", mifFile, ".")
-  text <- c(text, paste0("# Use ", summationsFile, " to check whether summation groups add up."))
+  text <- paste0("\n### Analyzing ", mifFile, ".\n# Use ", summationsFile, " to check if summation groups add up.")
 
   # write data to dataDumpFile
   if (length(dataDumpFile) > 0) {
@@ -104,7 +103,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = templateN
     }
   }
   # print to log or stdout
-  summarytext <- c("\n### Summary",
+  summarytext <- c("\n# Summary of summation group checks:",
     paste0("# ", length(problematic), " equations are not satisfied but should according to ",
           basename(summationsFile), "."),
     paste0("# All deviations can be found in the returned object",
