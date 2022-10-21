@@ -1,8 +1,8 @@
 idx;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;r30m44_spatial;internal_comment;Comment;Definition
 1;Useful Energy|Per Capita|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport.
 2;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact
-3;Useful Energy|Per Capita|Industry;GJ/cap/yr;;;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.
-4;Useful Energy|Per Capita|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings
+3;Useful Energy|Industry;GJ/cap/yr;UE|per capita|Industry;GJ/cap/yr;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.
+4;Useful Energy|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings
 5;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;1.10774;;;;Final energy / GDP PPP
 6;Final Energy|Industry|Electricity|Share;%;FE|Industry|Electricity|Share;%;;;;;Share of electrified FE in industry
 7;Air pollution concentration|PM2_5|Urban population;ug/m3;Air pollution concentration|PM2_5|Urban population;ug/m3;;;;;Urban population weighted annual average PM2.5 concentrations.
@@ -34,3 +34,4 @@ idx;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;r30m44_spatial;internal_comme
 29;Ocean|Carbonate Saturation|Calcite;-;Ocean|Carbonate Saturation|Calcite;-;;;;;Saturation state of calcite (Omega_C)
 30;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A)
 34;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM
+;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.
