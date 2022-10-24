@@ -21,10 +21,6 @@
 #' @export
 checkIIASASubmission <- function(mifdata, iiasatemplate, logfile) {
   variable <- NULL # to avoid global binding note
-  meslog <- function(text, logfile) {
-    message(text)
-    write(text, file = logfile, append = TRUE)
-  }
 
   # use template units as names and map it to remind2 unit with identical meaning
   identicalUnits <- c("billion m2/yr" = "bn m2/yr",
@@ -38,12 +34,12 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logfile) {
   if (length(mifdata) == 1 && file.exists(mifdata)) {
     mifdata <- read.quitte(mifdata, factors = FALSE)
   }
-  meslog(paste0("\n### Load IIASA template file ", iiasatemplate, "."), logfile)
+  cat(paste0("\n### Load IIASA template file ", iiasatemplate, ".\n"))
   template <- loadIIASATemplate(iiasatemplate)
 
   varsNotInTemplate <- unique(mifdata$variable[! mifdata$variable %in% template$variable])
 
-  message("# ", length(varsNotInTemplate), " variables not in IIASA template were deleted, see ", logfile, ".")
+  cat(paste0("# ", length(varsNotInTemplate), " variables not in IIASA template are deleted, see ", logfile, ".\n"))
   write(paste0("\n\n#--- ", length(varsNotInTemplate), " variables not in IIASAtemplate ", iiasatemplate,
                " are deleted ---#"), file = logfile, append = TRUE)
   write(paste0("  - ", paste(varsNotInTemplate, collapse = "\n  - ")), file = logfile, append = TRUE)
@@ -68,18 +64,18 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logfile) {
   if (length(logtext) > 0) {
     write(paste0("\n\n#--- ", length(logtext), " units were corrected: ---#\n",
           paste0(logtext, collapse = "\n")), file = logfile, append = TRUE)
-    message("# ", length(logtext), " units were corrected, see ", logfile)
+    cat(paste0("# ", length(logtext), " units were corrected, see ", logfile, "\n"))
   }
   if (nrow(wrongUnits) > 0) {
-    message("Unit mismatch between template and reporting, find details in ", logfile, ":")
+    cat(paste0("# ", nrow(wrongUnits), " unit mismatch between template and reporting, see ", logfile, ":\n"))
     print(unique(wrongUnits[c(2, 3)]))
     logtext <- "Unit mismatches:\n\n"
     for (w in wrongUnits) {
       logtext <- c(logtext, paste0("- ", w[[1]], "' uses '", w[[2]], "', but template requires '", w[[3]], "."))
     }
     write(logtext, file = logfile, append = TRUE)
-    message("If they are identical apart from spelling, ",
-            "add them to vector 'identicalUnits' in scripts/output/export/xlsx_IIASA.R.")
+    cat(paste0("If they are identical apart from spelling, ",
+            "add them to vector 'identicalUnits' in piamInterfaces::checkIIASASubmission().\n"))
     stop("Unit mismatches!")
   }
   return(mifdata)
