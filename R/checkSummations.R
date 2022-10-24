@@ -17,8 +17,7 @@
 #' @importFrom stringr str_pad
 #'
 #' @export
-checkSummations <- function(mifFile, outputDirectory = ".", template = templateNames("AR6"),
-                            summationsFile = summationsNames("AR6"),
+checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", summationsFile = "AR6",
                             logFile = NULL, logAppend = FALSE, dataDumpFile = "checkSummations.csv") {
   if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
     dir.create(outputDirectory, recursive = TRUE)
@@ -34,7 +33,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = templateN
   }
 
   summationGroups <- getSummations(summationsFile)
-  if (summationsFile %in% names(summationsNames())) summationsFile <- basename(summationsNames(summationsFile))
+  if (summationsFile %in% names(summationsNames())) {
+    summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
+  }
 
   data <- read.quitte(mifFile) %>%
     filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent))) %>%
@@ -76,26 +77,30 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = templateN
   fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= 1, abs(!!sym("diff")) >= 0.001)
   problematic <- unique(c(fileLarge$variable))
   if (length(problematic) > 0) {
-    if (template %in% names(templateNames())) template <- basename(templateNames(template))
+    templateData <- getTemplate(template)
+    if (template %in% names(templateNames())) {
+       template <- gsub(".*piamInterfaces", "piamInterfaces", templateNames(template))
+    }
     text <- c(text, paste0("# Derive remind2 mapping from ", template))
     width <- 70
-    templateData <- getTemplate(template)
     text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
                            basename(summationsFile)), width + 8, "right"),
             "corresponding r30m44 variables extracted from ", basename(template)))
     for (p in problematic) {
+      signofdiff <- paste0(if (max(fileLarge$diff[fileLarge$variable == p]) > 0) "<",
+                           if (min(fileLarge$diff[fileLarge$variable == p]) < 0) ">")
       childs <- summationGroups$child[summationGroups$parent == p]
-      text <- c(text, paste0("\n", str_pad(paste0(p, " !="), width + 5, "right"), "   ",
+      text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
               paste0(unitsplit(templateData$r30m44[unitsplit(templateData$Variable)$variable == p])$variable,
-                     collapse = " + "), " != "))
+                     collapse = " + "), " ", signofdiff))
       for (ch in childs) {
         text <- c(text, paste0("   + ", str_pad(ch, width, "right"), "      + ",
                 paste0(unitsplit(templateData$r30m44[unitsplit(templateData$Variable)$variable == ch])$variable,
                        collapse = " + ")))
       }
       text <- c(text, paste0("Relative difference between ",
-                        round(min(fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "% and ",
-                        round(max(fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "%, ",
+                        round(min(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "% and ",
+                        round(max(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "%, ",
                         "absolute difference up to ",
                         round(max(abs(fileLarge$diff[fileLarge$variable == p])), digits = 2), " ",
                         paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")

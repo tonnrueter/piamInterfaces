@@ -7,8 +7,8 @@
 checkSummations(
   mifFile,
   outputDirectory = ".",
-  template = templateNames("AR6"),
-  summationsFile = summationsNames("AR6"),
+  template = "AR6",
+  summationsFile = "AR6",
   logFile = NULL,
   logAppend = FALSE,
   dataDumpFile = "checkSummations.csv"
