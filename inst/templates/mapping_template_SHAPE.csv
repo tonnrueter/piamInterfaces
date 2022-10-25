@@ -1,37 +1,37 @@
-idx;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;r30m44_spatial;internal_comment;Comment;Definition
-1;Useful Energy|Per Capita|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport.
-2;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact
-3;Useful Energy|Industry;GJ/cap/yr;UE|per capita|Industry;GJ/cap/yr;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.
-4;Useful Energy|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings
-5;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;1.10774;;;;Final energy / GDP PPP
-6;Final Energy|Industry|Electricity|Share;%;FE|Industry|Electricity|Share;%;;;;;Share of electrified FE in industry
-7;Air pollution concentration|PM2_5|Urban population;ug/m3;Air pollution concentration|PM2_5|Urban population;ug/m3;;;;;Urban population weighted annual average PM2.5 concentrations.
-;Population|Extreme Poverty|International poverty line;million;Population|Extreme Poverty|International poverty line;million;;;;;population living in extreme poverty with income <US$1.90 2011 PPP per day (World Bank definition)
-8;Population|Poverty|LMIC poverty line;million;Population|Poverty|LMIC poverty line;million;;;;;population living in poverty with income <US$3.20 2011 PPP per day (World Bank LMIC definition)
-9;Population|Poverty|UMIC poverty line;million;Population|Poverty|UMIC poverty line;million;;;;;population living in poverty with income <US$5.50 2011 PPP per day (World Bank LMIC definition)
-10;Population|Gender education gap|Primary;percentage points;;;;;;from SSP;difference between genders in primary education completion rate (age 15+)
-11;Population|Gender education gap|Secondary;percentage points;;;;;;from SSP;difference between genders in secondary education completion rate (age 20+)
-12;GDPpcap|PPP|Growth rate;%;GDP|PPP|Per capita growth rate;percent;;;;;GDP/cap (PPP) growth rate
-13;GDPpcap|PPP|Ratio to OECD;%;GDP|PPP|Per capita ratio to OECD;percent;;;;;Ratio of GDP/cap (PPP) of developing regions to OECD average
-14;Population|Relative poverty|wrt median income|Share;%;Population|Relative poverty|wrt median income|Share;percent;;;;;Share of population below 50% of national median income
-15;Inequality|Bottom 40% average income|Ratio;%;Inequality|Bottom 40% average income|Ratio;percent;;;;;Average income of bottom 40% relative to national average
-16;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.10774;;;;Net international climate finance transfers (positive for inflow, negative for payment)
-;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1.10774;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers).
-17;Population|Prevalence of Underweight;million;SDG|SDG02|Prevalence of underweight;million;;;;;Number of adults with BMI<18.5 and children with <-1SD from reference BMI
-18;Population|Prevalence of Underweight|Children;million;SDG|SDG02|Prevalence of underweight|Children;million;;;;;Number of underweight children (-2SD from reference BMI, aged 0–14)
-19;Population|Prevalence of Overweight;million;SDG|SDG03|Prevalence of overweight;million;;;;;Number of adults with BMI>25 and children with >1SD from reference BMI
-20;Population|Prevalence of Overweight|Children;million;SDG|SDG03|Prevalence of overweight|Children;million;;;;;Number of overweight children (+1SD from reference BMI, aged 0–14)
-21;Population|Prevalence of Obesity;million;SDG|SDG03|Prevalence of obesity;million;;;;;Number of adults with BMI>30 and children with >2SD from reference BMI
-22;Population|Prevalence of Obesity|Children;million;SDG|SDG03|Prevalence of obesity|Children;million;;;;;Number of obese children (+2SD from reference BMI, aged 0--14)
-23;Food|Availability;kcal/cap/day;Nutrition|Calorie Supply;kcal/capita/day;;;;;Food available for consumption per capita
-;Food|Availability|Crops;kcal/cap/day;Nutrition|Calorie Supply|+|Crops;kcal/capita/day;;;;;Food crops available for consumption per capita
-;Food|Availability|Livestock;kcal/cap/day;Nutrition|Calorie Supply|+|Livestock products;kcal/capita/day;;;;;Livestock products available for consumption per capita
-;Price|Agriculture|Livestock|Index;Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Livestock;1;;;;;weighted average price index of livestock products
-24;Food Waste|Per capita;kcal/cap/day;SDG|SDG12|Food waste;kcal/cap/day;;;;;Amount of food (agriculture and livestock) per capita that is disposed and not consumed
-25;Expenditure Share|Food;%;SDG|SDG02|Food expenditure share;income;100;;;;Share of food expenditure in total income
-26;Agricultural Material Footprint;tDM/cap/yr;SDG|SDG12|Material footprint;tDM/capita/yr;;;;;Biomass usage per capita (excluding pasture + forestry)
-28;Ocean|pH value;-;Ocean|pH value;-;;;;;Ocean acidification: pH value
-29;Ocean|Carbonate Saturation|Calcite;-;Ocean|Carbonate Saturation|Calcite;-;;;;;Saturation state of calcite (Omega_C)
-30;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A)
-34;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM
-;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.
+idx;Variable;Unit;r30m44;r30m44_unit;r30m44_factor;r30m44_spatial;internal_comment;Comment;Definition;exclude_remind2_validation
+1;Useful Energy|Per Capita|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport.;
+2;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact;x
+3;Useful Energy|Industry;GJ/cap/yr;UE|per capita|Industry;GJ/cap/yr;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.;
+4;Useful Energy|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings;
+5;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;1.10774;;;;Final energy / GDP PPP;
+6;Final Energy|Industry|Electricity|Share;%;FE|Industry|Electricity|Share;%;;;;;Share of electrified FE in industry;
+7;Air pollution concentration|PM2_5|Urban population;ug/m3;Air pollution concentration|PM2_5|Urban population;ug/m3;;;;;Urban population weighted annual average PM2.5 concentrations.;x
+;Population|Extreme Poverty|International poverty line;million;Population|Extreme Poverty|International poverty line;million;;;;;population living in extreme poverty with income <US$1.90 2011 PPP per day (World Bank definition);x
+8;Population|Poverty|LMIC poverty line;million;Population|Poverty|LMIC poverty line;million;;;;;population living in poverty with income <US$3.20 2011 PPP per day (World Bank LMIC definition);x
+9;Population|Poverty|UMIC poverty line;million;Population|Poverty|UMIC poverty line;million;;;;;population living in poverty with income <US$5.50 2011 PPP per day (World Bank LMIC definition);x
+10;Population|Gender education gap|Primary;percentage points;;;;;;from SSP;difference between genders in primary education completion rate (age 15+);
+11;Population|Gender education gap|Secondary;percentage points;;;;;;from SSP;difference between genders in secondary education completion rate (age 20+);
+12;GDPpcap|PPP|Growth rate;%;GDP|PPP|Per capita growth rate;percent;;;;;GDP/cap (PPP) growth rate;x
+13;GDPpcap|PPP|Ratio to OECD;%;GDP|PPP|Per capita ratio to OECD;percent;;;;;Ratio of GDP/cap (PPP) of developing regions to OECD average;x
+14;Population|Relative poverty|wrt median income|Share;%;Population|Relative poverty|wrt median income|Share;percent;;;;;Share of population below 50% of national median income;x
+15;Inequality|Bottom 40% average income|Ratio;%;Inequality|Bottom 40% average income|Ratio;percent;;;;;Average income of bottom 40% relative to national average;x
+16;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.10774;;;;Net international climate finance transfers (positive for inflow, negative for payment);x
+;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1.10774;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers).;x
+17;Population|Prevalence of Underweight;million;SDG|SDG02|Prevalence of underweight;million;;;;;Number of adults with BMI<18.5 and children with <-1SD from reference BMI;x
+18;Population|Prevalence of Underweight|Children;million;SDG|SDG02|Prevalence of underweight|Children;million;;;;;Number of underweight children (-2SD from reference BMI, aged 0–14);x
+19;Population|Prevalence of Overweight;million;SDG|SDG03|Prevalence of overweight;million;;;;;Number of adults with BMI>25 and children with >1SD from reference BMI;x
+20;Population|Prevalence of Overweight|Children;million;SDG|SDG03|Prevalence of overweight|Children;million;;;;;Number of overweight children (+1SD from reference BMI, aged 0–14);x
+21;Population|Prevalence of Obesity;million;SDG|SDG03|Prevalence of obesity;million;;;;;Number of adults with BMI>30 and children with >2SD from reference BMI;x
+22;Population|Prevalence of Obesity|Children;million;SDG|SDG03|Prevalence of obesity|Children;million;;;;;Number of obese children (+2SD from reference BMI, aged 0--14);x
+23;Food|Availability;kcal/cap/day;Nutrition|Calorie Supply;kcal/capita/day;;;;;Food available for consumption per capita;x
+;Food|Availability|Crops;kcal/cap/day;Nutrition|Calorie Supply|+|Crops;kcal/capita/day;;;;;Food crops available for consumption per capita;x
+;Food|Availability|Livestock;kcal/cap/day;Nutrition|Calorie Supply|+|Livestock products;kcal/capita/day;;;;;Livestock products available for consumption per capita;x
+;Price|Agriculture|Livestock|Index;Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Livestock;1;;;;;weighted average price index of livestock products;x
+24;Food Waste|Per capita;kcal/cap/day;SDG|SDG12|Food waste;kcal/cap/day;;;;;Amount of food (agriculture and livestock) per capita that is disposed and not consumed;x
+25;Expenditure Share|Food;%;SDG|SDG02|Food expenditure share;income;100;;;;Share of food expenditure in total income;x
+26;Agricultural Material Footprint;tDM/cap/yr;SDG|SDG12|Material footprint;tDM/capita/yr;;;;;Biomass usage per capita (excluding pasture + forestry);x
+28;Ocean|pH value;-;Ocean|pH value;-;;;;;Ocean acidification: pH value;x
+29;Ocean|Carbonate Saturation|Calcite;-;Ocean|Carbonate Saturation|Calcite;-;;;;;Saturation state of calcite (Omega_C);x
+30;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A);x
+34;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM;x
+;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.;
