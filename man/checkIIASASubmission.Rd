@@ -4,14 +4,22 @@
 \alias{checkIIASASubmission}
 \title{Check IIASA submission by comparing mif data to a template file (xlsx or yaml) provided by IIASA}
 \usage{
-checkIIASASubmission(mifdata, iiasatemplate, logfile)
+checkIIASASubmission(
+  mifdata,
+  iiasatemplate,
+  logFile = NULL,
+  failOnUnitMismatch = TRUE
+)
 }
 \arguments{
 \item{mifdata}{quitte object or filename of mif file}
 
 \item{iiasatemplate}{filename of xlsx or yaml file provided by IIASA}
 
-\item{logfile}{filename of file for logging}
+\item{logFile}{filename of file for logging}
+
+\item{failOnUnitMismatch}{boolean whether to fail in case of unit mismatches
+recommended for submission, not used for generating templates}
 }
 \value{
 quitte object with adapted mif data
@@ -25,7 +33,7 @@ Check IIASA submission by comparing mif data to a template file (xlsx or yaml) p
 checkIIASASubmission(
   mifdata = "file.mif",
   iiasatemplate = "template.xlsx",
-  logfile = "logfile.txt"
+  logFile = "logFile.txt"
 )
 }
 }
