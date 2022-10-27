@@ -8,9 +8,10 @@ generateMappingfile(
   templates = NULL,
   outputDirectory = "output",
   fileName = NULL,
-  commentFileName = NULL,
-  targetVar = "Variable",
-  targetUnit = "Unit",
+  logFile = NULL,
+  iiasatemplate = NULL,
+  targetVar = "variable",
+  targetUnit = "unit",
   remindVar = "r30m44",
   remindUnit = "r30m44_unit",
   factorCol = "r30m44_factor",
@@ -28,13 +29,16 @@ creating the mapping, valid projects are "AR6", "SHAPE", "NAVIGATE"}
 \item{fileName}{name of the mapping file to be created, if provided, the file is created in the "output" folder,
 otherwise a data frame is returned (optional)}
 
-\item{commentFileName}{name of the comments file to be created, if provided,
+\item{logFile}{name of the comments file to be created, if provided,
 the file is created in the "output" folder, otherwise a data frame is
 returned (optional)}
 
-\item{targetVar}{column name in template containing the target variable names}
+\item{iiasatemplate}{filename of xlsx or yaml file provided by IIASA}
 
-\item{targetUnit}{column name in template containing the target units (default: Unit)}
+\item{targetVar}{(vector of) column name in template(s) containing the target variable names
+(default: variable)}
+
+\item{targetUnit}{column name in template containing the target units (default: unit)}
 
 \item{remindVar}{column name in template containing the REMIND variable names (default: r30m44)}
 
@@ -67,5 +71,5 @@ generateMappingfile(
 }
 }
 \author{
-Falk Benke
+Falk Benke, Oliver Richters
 }
