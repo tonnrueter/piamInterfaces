@@ -9,6 +9,7 @@
 #' @param logAppend boolean whether to append or overwrite logFile
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #' @param template mapping template to be loaded
+#' @param remindVar REMIND/MAgPIE variable column name in template
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
 #' @importFrom quitte read.quitte
 #' @importFrom magclass unitsplit
@@ -18,7 +19,8 @@
 #'
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", summationsFile = "AR6",
-                            logFile = NULL, logAppend = FALSE, dataDumpFile = "checkSummations.csv") {
+                            logFile = NULL, logAppend = FALSE, dataDumpFile = "checkSummations.csv",
+                            remindVar = "piam_variable") {
   if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
     dir.create(outputDirectory, recursive = TRUE)
   }
@@ -81,21 +83,21 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
     if (template %in% names(templateNames())) {
        template <- gsub(".*piamInterfaces", "piamInterfaces", templateNames(template))
     }
-    text <- c(text, paste0("# Derive remind2 mapping from ", template))
+    text <- c(text, paste0("# Derive mapping from ", template))
     width <- 70
     text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
                            basename(summationsFile)), width + 8, "right"),
-            "corresponding r30m44 variables extracted from ", basename(template)))
+            "corresponding REMIND/MAgPIE variables extracted from ", basename(template)))
     for (p in problematic) {
       signofdiff <- paste0(if (max(fileLarge$diff[fileLarge$variable == p]) > 0) "<",
                            if (min(fileLarge$diff[fileLarge$variable == p]) < 0) ">")
       childs <- summationGroups$child[summationGroups$parent == p]
       text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
-              paste0(unitsplit(templateData$r30m44[unitsplit(templateData$Variable)$variable == p])$variable,
+              paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable,
                      collapse = " + "), " ", signofdiff))
       for (ch in childs) {
         text <- c(text, paste0("   + ", str_pad(ch, width, "right"), "      + ",
-                paste0(unitsplit(templateData$r30m44[unitsplit(templateData$Variable)$variable == ch])$variable,
+                paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable,
                        collapse = " + ")))
       }
       text <- c(text, paste0("Relative difference between ",

@@ -14,9 +14,9 @@
 #' @param targetVar (vector of) column name in template(s) containing the target variable names
 #'        (default: variable)
 #' @param targetUnit column name in template containing the target units (default: unit)
-#' @param remindVar column name in template containing the REMIND variable names (default: r30m44)
-#' @param remindUnit column name in template containing the REMIND units (default: r30m44_unit)
-#' @param factorCol column name in template containing conversion factors (default: r30m44_factor)
+#' @param remindVar column name in template containing the REMIND variable names (default: piam_variable)
+#' @param remindUnit column name in template containing the REMIND units (default: piam_unit)
+#' @param factorCol column name in template containing conversion factors (default: piam_factor)
 #' @param weightCol column name in template containing weight factors (optional)
 #' @param spatialCol column name in template containing regional restrictions
 #'        for reporting the corresponding variable (optional)
@@ -40,8 +40,8 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
                                 fileName = NULL, logFile = NULL,
                                 iiasatemplate = NULL,
                                 targetVar = "variable", targetUnit = "unit",
-                                remindVar = "r30m44", remindUnit = "r30m44_unit",
-                                factorCol = "r30m44_factor", weightCol = NULL, spatialCol = "spatial",
+                                remindVar = "piam_variable", remindUnit = "piam_unit",
+                                factorCol = "piam_factor", weightCol = NULL, spatialCol = "spatial",
                                 model = "REMIND-MAgPIE"
                                 ) {
   if (is.null(templates)) {

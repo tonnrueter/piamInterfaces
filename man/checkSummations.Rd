@@ -11,7 +11,8 @@ checkSummations(
   summationsFile = "AR6",
   logFile = NULL,
   logAppend = FALSE,
-  dataDumpFile = "checkSummations.csv"
+  dataDumpFile = "checkSummations.csv",
+  remindVar = "remmag_variable"
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ checkSummations(
 \item{logAppend}{boolean whether to append or overwrite logFile}
 
 \item{dataDumpFile}{file where data.frame with the data analysis is saved. If NULL, result is returned}
+
+\item{remindVar}{REMIND/MAgPIE variable column name in template}
 }
 \description{
 Checks for a run if the variables sum up as expected and logs spotted gaps

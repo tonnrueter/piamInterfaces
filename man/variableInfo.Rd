@@ -7,8 +7,8 @@
 variableInfo(
   varname,
   template = NULL,
-  remindVar = "r30m44",
-  remindUnit = "r30m44_unit"
+  remindVar = "remmag_variable",
+  remindUnit = "remmag_unit"
 )
 }
 \arguments{
@@ -16,9 +16,9 @@ variableInfo(
 
 \item{template}{template shortcut (AR6, NAVIGATE). NULL means all}
 
-\item{remindVar}{column name of variable in templates (default: r30m44)}
+\item{remindVar}{column name of variable in templates (default: remmag_variable)}
 
-\item{remindUnit}{column name of unit in templates (default: r30m44_unit)}
+\item{remindUnit}{column name of unit in templates (default: remmag_unit)}
 }
 \value{
 prints human-readable summary to the user

@@ -4,7 +4,8 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE")),
     vars <- NULL
     for (i in unlist(template)) {
       templateData <- getTemplate(i)
-      vars <- c(vars, paste0(templateData$r30m44, " (", templateData$r30m44_unit, ")")[! is.na(templateData$r30m44)])
+      vars <- c(vars, paste0(templateData$piam_variable, " (",
+                             templateData$piam_unit, ")")[! is.na(templateData$piam_variable)])
     }
     data <- magclass::new.magpie(cells_and_regions = "GLO", years = seq(2005, 2100, 5), fill = 1, names = unique(vars))
     magclass::getSets(data)[3] <- "variable"

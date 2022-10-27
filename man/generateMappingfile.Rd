@@ -12,9 +12,9 @@ generateMappingfile(
   iiasatemplate = NULL,
   targetVar = "variable",
   targetUnit = "unit",
-  remindVar = "r30m44",
-  remindUnit = "r30m44_unit",
-  factorCol = "r30m44_factor",
+  remindVar = "remmag_variable",
+  remindUnit = "remmag_unit",
+  factorCol = "remmag_factor",
   weightCol = NULL,
   spatialCol = "spatial",
   model = "REMIND-MAgPIE"
@@ -40,11 +40,11 @@ returned (optional)}
 
 \item{targetUnit}{column name in template containing the target units (default: unit)}
 
-\item{remindVar}{column name in template containing the REMIND variable names (default: r30m44)}
+\item{remindVar}{column name in template containing the REMIND variable names (default: remmag_variable)}
 
-\item{remindUnit}{column name in template containing the REMIND units (default: r30m44_unit)}
+\item{remindUnit}{column name in template containing the REMIND units (default: remmag_unit)}
 
-\item{factorCol}{column name in template containing conversion factors (default: r30m44_factor)}
+\item{factorCol}{column name in template containing conversion factors (default: remmag_factor)}
 
 \item{weightCol}{column name in template containing weight factors (optional)}
 

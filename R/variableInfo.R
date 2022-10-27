@@ -4,8 +4,8 @@
 #' @author Oliver Richters
 #' @param varname string with variable name
 #' @param template template shortcut (AR6, NAVIGATE). NULL means all
-#' @param remindVar column name of variable in templates (default: r30m44)
-#' @param remindUnit column name of unit in templates (default: r30m44_unit)
+#' @param remindVar column name of variable in templates (default: piam_variable)
+#' @param remindUnit column name of unit in templates (default: piam_unit)
 #' @importFrom stringr str_split str_pad
 #' @importFrom magclass unitsplit
 #' @return prints human-readable summary to the user
@@ -15,7 +15,7 @@
 #'   "Emi|CO2"
 #' )
 #' @export
-variableInfo <- function(varname, template = NULL, remindVar = "r30m44", remindUnit = "r30m44_unit") {
+variableInfo <- function(varname, template = NULL, remindVar = "piam_variable", remindUnit = "piam_unit") {
   templates <- templateNames(template)
 
   green <- "\033[0;32m"
@@ -61,8 +61,8 @@ variableInfo <- function(varname, template = NULL, remindVar = "r30m44", remindU
         exportchilds <- summationGroups$child[summationGroups$parent == exportname]
         # print summation parents
         message(". ", str_pad(paste(exportname, "="), width + 3, "right"), "   . ",
-                paste0(unitsplit(templateData$r30m44[unitsplit(templateData$Variable)$variable == exportname])$variable,
-                collapse = " + "), " =")
+                paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable
+                                                           == exportname])$variable, collapse = " + "), " =")
         # print summation childs
         for (ch in exportchilds) {
           remindchilds <- unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable
@@ -72,7 +72,7 @@ variableInfo <- function(varname, template = NULL, remindVar = "r30m44", remindU
         allexportchilds <- setdiff(allexportchilds, exportchilds)
       } else {
         message(". ", str_pad(paste0(exportname, " (", templateData$Unit[no], ")"), width + 3, "right"),
-                "   . ", remindname, " (", templateData$r30m44_unit[no], ")")
+                "   . ", remindname, " (", templateData[, remindUnit][no], ")")
       }
       if (length(allexportchilds) + length(allremindchilds) > 0) {
         message("\n# Child variables", if (t %in% names(summationsNames())) " not in summation group")
