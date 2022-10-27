@@ -4,7 +4,10 @@
 \alias{getREMINDTemplateVariables}
 \title{Retrieves all REMIND variables potentially used in mappings to project variables}
 \usage{
-getREMINDTemplateVariables()
+getREMINDTemplateVariables(project)
+}
+\arguments{
+\item{project}{name of the project of requested template}
 }
 \description{
 Retrieves all REMIND variables potentially used in mappings to project variables
