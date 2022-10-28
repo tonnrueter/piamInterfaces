@@ -10,13 +10,8 @@ for (summationFile in names(summationsNames())) {
     expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "test.mif"), logFile = NULL,
                            template = "AR6", summationsFile = summationFile, outputDirectory = tempdir(),
                            dataDumpFile = "checkSummations.csv"),
-                   "0 equations are not satisfied")
-    expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "test.mif"), logFile = "log.txt",
-                           template = "AR6", summationsFile = summationFile, outputDirectory = tempdir(),
-                           dataDumpFile = "checkSummations.csv"),
-                   "Find log with human-readable information")
+                   "All summation checks were fine")
     expect_true(all(tmp$diff == 0))
-    expect_true(all(file.exists(file.path(tempdir(), c("log.txt", "checkSummations.csv")))))
   })
   test_that(paste("test summationFile with errors using ", summationFile), {
     vars <- NULL

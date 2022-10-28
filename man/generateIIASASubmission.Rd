@@ -5,24 +5,28 @@
 \title{Generates an IIASA submission from REMIND runs by applying a project-specific mapping}
 \usage{
 generateIIASASubmission(
-  mifDirectory,
-  model,
-  mapping,
+  mifs = ".",
+  mapping = NULL,
+  model = "REMIND 3.0",
+  mappingFile = NULL,
   removeFromScen = NULL,
   addToScen = NULL,
   outputDirectory = "output",
   outputPrefix = "",
   logFile = "output/missing.log",
-  generateSingleOutput = FALSE,
-  outputFilename = "submission.mif"
+  generateSingleOutput = TRUE,
+  outputFilename = "submission.mif",
+  iiasatemplate = NULL
 )
 }
 \arguments{
-\item{mifDirectory}{path to directory with mif files of a REMIND run}
+\item{mifs}{path to mif files or directories with mif files of a REMIND run}
+
+\item{mapping}{mapping template names such as c("AR6", "AR6_NGFS"). If NULL, user is asked}
 
 \item{model}{name of model registered with IIASA}
 
-\item{mapping}{path to mapping applied}
+\item{mappingFile}{path to mapping. If NULL, mapping is generated based on param mapping}
 
 \item{removeFromScen}{string to be removed from scenario name (optional)}
 
@@ -39,6 +43,9 @@ into a single output file}
 
 \item{outputFilename}{filename of the generated submission file,
 if \code{generateSingleOutput} is set to TRUE (default: submission.mif)}
+
+\item{iiasatemplate}{optional filename of xlsx or yaml file provided by IIASA
+used to delete superfluous variables and adapt units}
 }
 \description{
 Generates an IIASA submission from REMIND runs by applying a project-specific mapping
@@ -55,5 +62,5 @@ generateIIASASubmission(
 }
 }
 \author{
-Falk Benke
+Falk Benke, Oliver Richters
 }

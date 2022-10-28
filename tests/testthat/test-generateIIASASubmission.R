@@ -13,10 +13,21 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE")),
     data <- magclass::add_dimension(data, dim = 3.1, add = "scenario", nm = "default")
     magclass::write.report(data, file = file.path(tempdir(), "test.mif"), ndigit = 0)
     generateMappingfile(templates = unlist(template), outputDir = tempdir(), fileName = "mapping.csv")
-    expect_warning(generateIIASASubmission(tempdir(), model = "REMIND", mapping = file.path(tempdir(), "mapping.csv"),
-                                          outputDirectory = tempdir(), logFile = file.path(tempdir(), "missing.log"),
-                                          outputFilename = "submission.mif", generateSingleOutput = TRUE), regexp = NA)
-    expectedFiles <- file.path(tempdir(), c("mapping.csv", "submission.mif", "missing.log", "test.mif"))
+    # expect_warning with regexp = NA implies no warning
+    expect_warning(generateIIASASubmission(tempdir(), model = "MAgPIE",
+                                           mappingFile = file.path(tempdir(), "mapping.csv"),
+                                           outputDirectory = file.path(tempdir(), "output"),
+                                           logFile = file.path(tempdir(), "missing.log"),
+                                           outputFilename = "submission1.mif", generateSingleOutput = TRUE),
+                   regexp = NA)
+    expect_warning(generateIIASASubmission(tempdir(), model = "REMIND", mapping = template,
+                                           outputDirectory = file.path(tempdir(), "output"),
+                                           logFile = file.path(tempdir(), "missing.log"),
+                                           outputFilename = "submission2.mif", generateSingleOutput = TRUE),
+                   regexp = NA)
+    expectedFiles <- file.path(tempdir(), c("mapping.csv", "missing.log", "test.mif",
+                 file.path("output", c(paste0("mapping_", paste0(template, collapse = "_"), ".csv"),
+                                       "submission1.mif", "submission1.xlsx", "submission2.mif", "submission2.xlsx"))))
     expect_true(all(file.exists(expectedFiles)))
     unlink(expectedFiles)
   })
