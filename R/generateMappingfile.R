@@ -52,15 +52,17 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
   for (v in c("targetVar", "targetUnit", "remindVar", "remindUnit", "factorCol", "weightCol", "spatialCol")) {
     assign(v, tolower(get(v)))
   }
-  if (!is.null(outputDirectory) && !dir.exists(outputDirectory)) {
-    dir.create(outputDirectory, recursive = TRUE)
+  if (! is.null(outputDirectory)) {
+    dir.create(outputDirectory, recursive = TRUE, showWarnings = FALSE)
   }
-  message("### Generating mapping file based on templates ", paste(templates, collapse = ", "))
-  if (length(targetVar) == 1 && length(templates) > 1) targetVar <- rep.int(targetVar, length(templates))
+  message("### Generating mapping ", if (!is.null(fileName)) basename(fileName),
+          " based on templates ", paste(templates, collapse = ", "))
+  if (length(targetVar) == 1) targetVar <- rep.int(targetVar, length(templates))
   mapping <- NULL
   comments <- NULL
 
   for (i in seq_along(templates)) {
+    message("# Read ", templates[i])
     dt <- as.data.table(getTemplate(templates[i]))
     names(dt) <- tolower(names(dt))
 
@@ -116,10 +118,12 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
   }
 
   if (!is.null(fileName)) {
-    fwrite(mapping, file = paste0(outputDirectory, "/", fileName), sep = ";")
+    fileName <- if (is.null(outputDirectory)) fileName else file.path(outputDirectory, fileName)
+    message("# Write mapping to ", fileName)
+    fwrite(mapping, file = fileName, sep = ";")
   }
   if (!is.null(comments) && !is.null(logFile)) {
-    fwrite(comments, file = paste0(outputDirectory, "/", logFile), sep = ";")
+    fwrite(comments, file = if (is.null(outputDirectory)) logFile else file.path(outputDirectory, logFile), sep = ";")
   }
   return(invisible(list(mappings = mapping, comments = comments)))
 }

@@ -12,7 +12,7 @@ checkSummations(
   logFile = NULL,
   logAppend = FALSE,
   dataDumpFile = "checkSummations.csv",
-  remindVar = "remmag_variable"
+  remindVar = "piam_variable"
 )
 }
 \arguments{

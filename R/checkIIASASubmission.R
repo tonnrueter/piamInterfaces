@@ -40,18 +40,17 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
   if (is.null(logFile)) {
     logFile <- stdout()
   } else {
-    cat(paste0("# Find info on deleted variables and unit mismatches in", logFile, ".\n"))
+    cat(paste0("# Find info on deleted variables and unit mismatches in ", logFile, ".\n"))
   }
   template <- loadIIASATemplate(iiasatemplate)
 
   varsNotInTemplate <- sort(unique(mifdata$variable[! mifdata$variable %in% template$variable]))
-  if (length(varsNotInTemplate) > 0) {
-    cat(paste0("# ", length(varsNotInTemplate), " variables not in IIASA template are deleted.\n"))
-    write(paste0("\n\n#--- ", length(varsNotInTemplate), " variables not in IIASAtemplate ", iiasatemplate,
-                 " are deleted ---#"), file = logFile, append = TRUE)
-    write(paste0("  - ", paste(varsNotInTemplate, collapse = "\n  - ")), file = logFile, append = TRUE)
-    mifdata <- filter(mifdata, variable %in% template$variable)
-  }
+
+  cat(paste0("# ", length(varsNotInTemplate), " variables not in IIASA template are deleted.\n"))
+  write(paste0("\n\n#--- ", length(varsNotInTemplate), " variables not in IIASAtemplate ", iiasatemplate,
+               " are deleted ---#"), file = logFile, append = TRUE)
+  write(paste0("  - ", paste(varsNotInTemplate, collapse = "\n  - ")), file = logFile, append = TRUE)
+  mifdata <- filter(mifdata, variable %in% template$variable)
 
   wrongUnits <- data.frame(variable = character(), templateunit = character(), mifunit = character())
   logtext <- NULL

@@ -108,18 +108,20 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
                         paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
       )
     }
+    # print to log or stdout
+    summarytext <- c("\n# Summary of summation group checks:",
+      paste0("# ", length(problematic), " equations are not satisfied but should according to ",
+            basename(summationsFile), "."),
+      paste0("# All deviations can be found in the returned object",
+             if (! is.null(dataDumpFile)) paste0(" and in ", dataDumpFile), ".")
+    )
+  } else {
+    summarytext <- "\n# All summation checks were fine."
   }
-  # print to log or stdout
-  summarytext <- c("\n# Summary of summation group checks:",
-    paste0("# ", length(problematic), " equations are not satisfied but should according to ",
-          basename(summationsFile), "."),
-    paste0("# All deviations can be found in the returned object",
-           if (! is.null(dataDumpFile)) paste0(" and in ", dataDumpFile), ".")
-  )
   if (is.null(logFile)) {
     message(paste(c(text, summarytext, ""), collapse = "\n"))
   } else {
-    logFile <- file.path(outputDirectory, logFile)
+    if (! is.null(outputDirectory)) logFile <- file.path(outputDirectory, logFile)
     message(paste(c(text[1], summarytext,
             paste0("# Find log with human-readable information appended to ", logFile)), "", collapse = "\n"))
     write(c(text, summarytext, ""), file = logFile, append = logAppend)
