@@ -99,7 +99,11 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
 
     ## remove variables not in iiasatemplate and correct units
     if (! is.null(iiasatemplate)) {
-      dt <- rbind(checkIIASASubmission(dt, iiasatemplate, logFile = logFile, failOnUnitMismatch = FALSE))
+      if (file.exists(iiasatemplate)) {
+        dt <- rbind(checkIIASASubmission(dt, iiasatemplate, logFile = logFile, failOnUnitMismatch = FALSE))
+      } else {
+        message("iiasatemplate ", iiasatemplate, " not found, returning full mapping template")
+      }
     }
 
     dt <- dt[, c(remindVar, targetVar[i], "factor", "weight", "spatial") :=
