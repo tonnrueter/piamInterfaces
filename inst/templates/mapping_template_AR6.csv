@@ -1052,7 +1052,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 978;Final Energy|Other Sector;EJ/yr;FE|++|CDR;EJ/yr;;;;Carbon Dioxide Removal;total final energy consumption by other sectors;
 979;Final Energy|Other Sector|Electricity;EJ/yr;FE|CDR|+|Electricity;EJ/yr;;;;;final energy consumption by other sectors of electricity (including on-site solar PV),excluding transmission/distribution losses;
 980;Final Energy|Other Sector|Gases;EJ/yr;FE|CDR|+|Gases;EJ/yr;;;;;final energy consumption by other sectors of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses;
-981;Final Energy|Other Sector|Heat;EJ/yr;;;;;;;final energy consumption by other sectors of heat (e.g.,district heat,process heat,solar heating and warm water),excluding transmission/distribution losses;x
+981;Final Energy|Other Sector|Heat;EJ/yr;FE|CDR|+|Heat;EJ/yr;;;;;final energy consumption by other sectors of heat (e.g.,district heat,process heat,solar heating and warm water),excluding transmission/distribution losses;x
 982;Final Energy|Other Sector|Hydrogen;EJ/yr;FE|CDR|+|Hydrogen;EJ/yr;;;;;final energy consumption by other sectors of hydrogen;
 983;Final Energy|Other Sector|Liquids;EJ/yr;FE|CDR|+|Liquids;EJ/yr;;;;;final energy consumption by other sectors of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids);
 984;Final Energy|Other Sector|Other;EJ/yr;;;;;;;final energy consumption by other sectors of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);x
