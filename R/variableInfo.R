@@ -25,8 +25,8 @@ variableInfo <- function(varname, template = NULL, remindVar = "piam_variable", 
   width <- 60
 
   .getChilds <- function(v, c) {
-    tobefound <- paste0("^", gsub("|", "\\|", remind2::deletePlus(v), fixed = TRUE), "\\|[^\\|]*$")
-    c[which(grepl(tobefound, remind2::deletePlus(c)))]
+    tobefound <- paste0("^", gsub("|", "\\|", deletePlus(v), fixed = TRUE), "\\|[^\\|]*$")
+    c[which(grepl(tobefound, deletePlus(c)))]
   }
 
   message("\n##### Search for information on ", green, varname, nc, " in mapping templates")
