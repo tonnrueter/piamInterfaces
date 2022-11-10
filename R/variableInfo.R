@@ -8,6 +8,7 @@
 #' @param remindUnit column name of unit in templates (default: piam_unit)
 #' @importFrom stringr str_split str_pad
 #' @importFrom magclass unitsplit
+#' @importFrom remind2 deletePlus
 #' @return prints human-readable summary to the user
 #' @examples
 #' # Simple use. prints human-readable summary to the reader on Emi|CO2:
@@ -24,7 +25,8 @@ variableInfo <- function(varname, template = NULL, remindVar = "piam_variable", 
   width <- 60
 
   .getChilds <- function(v, c) {
-    c[which(grepl(paste0("^", gsub("|", "\\|", v, fixed = TRUE), "\\|[^\\|]*$"), gsub("+|", "", c, fixed = TRUE)))]
+    tobefound <- paste0("^", gsub("|", "\\|", remind2::deletePlus(v), fixed = TRUE), "\\|[^\\|]*$")
+    c[which(grepl(tobefound, remind2::deletePlus(c)))]
   }
 
   message("\n##### Search for information on ", green, varname, nc, " in mapping templates")

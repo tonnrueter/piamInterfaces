@@ -1,8 +1,8 @@
 Type: Package
 Package: piamInterfaces
 Title: Project specific interfaces to REMIND / MAgPIE
-Version: 0.0.23
-Date: 2022-11-02
+Version: 0.0.24
+Date: 2022-11-10
 Authors@R: c(
     person("Falk", "Benke", , "benke@pik-potsdam.de", role = c("aut", "cre")),
     person("Oliver", "Richters", role = "aut")
@@ -19,6 +19,7 @@ Imports:
     readxl,
     rmndt,
     quitte,
+    remind2,
     rlang,
     stringr,
     tibble,
