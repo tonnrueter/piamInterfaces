@@ -3,12 +3,13 @@
 #' @md
 #' @author Oliver Richters
 #' @param varname string with variable name
+#' @param mif filename of miffile
 #' @param template template shortcut (AR6, NAVIGATE). NULL means all
 #' @param remindVar column name of variable in templates (default: piam_variable)
 #' @param remindUnit column name of unit in templates (default: piam_unit)
+#' @importFrom quitte read.quitte
 #' @importFrom stringr str_split str_pad
 #' @importFrom magclass unitsplit
-#' @importFrom remind2 deletePlus
 #' @return prints human-readable summary to the user
 #' @examples
 #' # Simple use. prints human-readable summary to the reader on Emi|CO2:
@@ -16,7 +17,7 @@
 #'   "Emi|CO2"
 #' )
 #' @export
-variableInfo <- function(varname, template = NULL, remindVar = "piam_variable", remindUnit = "piam_unit") {
+variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam_variable", remindUnit = "piam_unit") {
   templates <- templateNames(template)
 
   green <- "\033[0;32m"
@@ -25,8 +26,8 @@ variableInfo <- function(varname, template = NULL, remindVar = "piam_variable", 
   width <- 60
 
   .getChilds <- function(v, c) {
-    tobefound <- paste0("^", gsub("|", "\\|", deletePlus(v), fixed = TRUE), "\\|[^\\|]*$")
-    c[which(grepl(tobefound, deletePlus(c)))]
+    tobefound <- paste0("^", gsub("|", "\\|", gsub("\\|\\++\\|", "|", v), fixed = TRUE), "\\|[^\\|]*$")
+    c[which(grepl(tobefound, gsub("\\|\\++\\|", "|", c)))]
   }
 
   message("\n##### Search for information on ", green, varname, nc, " in mapping templates")
@@ -84,11 +85,21 @@ variableInfo <- function(varname, template = NULL, remindVar = "piam_variable", 
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         for (ch in allremindchilds) {
-          message("   . ", str_pad("NA", width, "right"), "     . ", ch)
+          exportchild <- unique(unitsplit(templateData$Variable[unitsplit(templateData[, remindVar])$variable == ch])$variable)
+          exportchild <- exportchild[! is.na(exportchild)]
+          message("   . ", str_pad(paste(exportchild, collapse = ", "), width, "right"), "     . ", ch)
         }
       }
       message("Units: ", str_pad(paste0(unique(templateData$Unit[no]), collapse = ", "), width, "right"),
               " Units: ", paste0(unique(templateData[, remindUnit][no]), collapse = ", "))
+    }
+  }
+  if (! is.null(mif)) {
+    mifdata <- read.quitte(mif)
+    message("\n### Variables found in mif file")
+    mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)))
+    for (ch in mifchilds) {
+      message("- ", ch)
     }
   }
 }

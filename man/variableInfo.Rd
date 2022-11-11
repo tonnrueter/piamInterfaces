@@ -6,6 +6,7 @@
 \usage{
 variableInfo(
   varname,
+  mif = NULL,
   template = NULL,
   remindVar = "piam_variable",
   remindUnit = "piam_unit"
@@ -13,6 +14,8 @@ variableInfo(
 }
 \arguments{
 \item{varname}{string with variable name}
+
+\item{mif}{filename of miffile}
 
 \item{template}{template shortcut (AR6, NAVIGATE). NULL means all}
 
