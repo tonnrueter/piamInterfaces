@@ -2,7 +2,7 @@
 #'
 #' @md
 #' @author Falk Benke, Oliver Richters
-#' @param mifFile path to the mif file to apply summation checks to
+#' @param mifFile path to the mif file to apply summation checks to, or quitte object
 #' @param dataDumpFile file where data.frame with the data analysis is saved. If NULL, result is returned
 #' @param outputDirectory path to directory to place logFile and dataDumpFile
 #' @param logFile file where human-readable summary is saved. If NULL, write to stdout
@@ -11,11 +11,11 @@
 #' @param template mapping template to be loaded
 #' @param remindVar REMIND/MAgPIE variable column name in template
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
-#' @importFrom quitte read.quitte
 #' @importFrom magclass unitsplit
 #' @importFrom rlang sym syms
 #' @importFrom utils write.table
 #' @importFrom stringr str_pad
+#' @importFrom quitte as.quitte
 #'
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", summationsFile = "AR6",
@@ -39,7 +39,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
     summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
   }
 
-  data <- read.quitte(mifFile) %>%
+  data <- quitte::as.quitte(mifFile) %>%
     filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent))) %>%
     left_join(summationGroups, by = c("variable" = "child"))
 

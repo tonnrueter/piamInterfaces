@@ -16,7 +16,7 @@ checkSummations(
 )
 }
 \arguments{
-\item{mifFile}{path to the mif file to apply summation checks to}
+\item{mifFile}{path to the mif file to apply summation checks to, or quitte object}
 
 \item{outputDirectory}{path to directory to place logFile and dataDumpFile}
 
