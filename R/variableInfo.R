@@ -85,7 +85,8 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         for (ch in allremindchilds) {
-          exportchild <- unique(unitsplit(templateData$Variable[unitsplit(templateData[, remindVar])$variable == ch])$variable)
+          exportchild <- unique(unitsplit(
+                         templateData$Variable[unitsplit(templateData[, remindVar])$variable == ch])$variable)
           exportchild <- exportchild[! is.na(exportchild)]
           message("   . ", str_pad(paste(exportchild, collapse = ", "), width, "right"), "     . ", ch)
         }
