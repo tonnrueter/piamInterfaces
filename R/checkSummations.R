@@ -66,7 +66,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
     ) %>%
     select(-c("factor", "parent"))
 
-  text <- paste0("\n### Analyzing ", mifFile, ".\n# Use ", summationsFile, " to check if summation groups add up.")
+  text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
+                 ".\n# Use ", summationsFile, " to check if summation groups add up.")
 
   # write data to dataDumpFile
   if (length(dataDumpFile) > 0) {

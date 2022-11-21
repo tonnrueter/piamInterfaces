@@ -7,6 +7,10 @@ for (summationFile in names(summationsNames())) {
     data <- magclass::add_dimension(data, dim = 3.1, add = "model", nm = "REMIND")
     data <- magclass::add_dimension(data, dim = 3.1, add = "scenario", nm = "default")
     magclass::write.report(data, file = file.path(tempdir(), "test.mif"), ndigit = 0)
+    expect_message(tmp <- checkSummations(data, logFile = NULL,
+                           template = "AR6", summationsFile = summationFile, outputDirectory = tempdir(),
+                           dataDumpFile = "checkSummations.csv"),
+                   "All summation checks were fine")
     expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "test.mif"), logFile = NULL,
                            template = "AR6", summationsFile = summationFile, outputDirectory = tempdir(),
                            dataDumpFile = "checkSummations.csv"),
@@ -21,6 +25,10 @@ for (summationFile in names(summationsNames())) {
     data <- magclass::add_dimension(data, dim = 3.1, add = "model", nm = "REMIND")
     data <- magclass::add_dimension(data, dim = 3.1, add = "scenario", nm = "default")
     magclass::write.report(data, file = file.path(tempdir(), "test.mif"), ndigit = 0)
+    expect_message(tmp <- checkSummations(mifFile = data, logFile = NULL,
+                           template = "AR6", summationsFile = summationFile, outputDirectory = tempdir(),
+                           dataDumpFile = "checkSummations.csv"),
+                   "Final Energy")
     expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "test.mif"), logFile = NULL,
                            template = "AR6", summationsFile = summationFile, outputDirectory = tempdir(),
                            dataDumpFile = "checkSummations.csv"),
