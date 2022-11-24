@@ -842,7 +842,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 776;Final Energy|Residential and Commercial|Residential|Solids|Coal;EJ/yr;;;;;;;final energy coal consumption by the residential sector;x
 777;Final Energy|Residential and Commercial|Solids;EJ/yr;FE|Buildings|+|Solids;EJ/yr;;;;;final energy solid fuel consumption by the residential & commercial sector (including coal and solid biomass);
 778;Final Energy|Residential and Commercial|Solids|Biomass;EJ/yr;FE|Buildings|Solids|+|Biomass;EJ/yr;;;;;final energy consumption by the residential & commercial sector of solid biomass (modern and traditional);
-779;Final Energy|Residential and Commercial|Solids|Biomass|Traditional;EJ/yr;FE|Buildings|Solids|Biomass|Traditional;EJ/yr;;;;;final energy consumed in the residential & commercial sector coming from biomass (traditional);
+779;Final Energy|Residential and Commercial|Solids|Biomass|Traditional;EJ/yr;FE|Buildings|Solids|Biomass|+|Traditional;EJ/yr;;;;;final energy consumed in the residential & commercial sector coming from biomass (traditional);
 780;Final Energy|Residential and Commercial|Solids|Coal;EJ/yr;FE|Buildings|Solids|Coal;EJ/yr;;;;;final energy coal consumption by the residential & commercial sector;
 782;Final Energy|Electricity;EJ/yr;FE|+|Electricity;EJ/yr;;;;;final energy consumption of electricity (including on-site solar PV),excluding transmission/distribution losses;
 783;Final Energy|Gases;EJ/yr;FE|+|Gases;EJ/yr;;;;;final energy consumption of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses;
