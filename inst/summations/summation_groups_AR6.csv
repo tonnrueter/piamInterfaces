@@ -379,6 +379,8 @@ Fertilizer Use|Nitrogen;Fertilizer Use|Nitrogen|Organic;1
 Fertilizer Use|Nitrogen;Fertilizer Use|Nitrogen|Biological Fixation;1
 Fertilizer Use|Potassium;Fertilizer Use|Potassium|Inorganic;1
 Fertilizer Use|Potassium;Fertilizer Use|Potassium|Organic;1
+Final Energy|Solids;Final Energy|Solids|Biomass;1
+Final Energy|Solids;Final Energy|Solids|Coal;1
 Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Biomass;1
 Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Coal;1
 Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Gas;1
@@ -445,6 +447,8 @@ Final Energy|Residential and Commercial|Residential;Final Energy|Residential and
 Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Liquids;1
 Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Other;1
 Final Energy|Residential and Commercial|Residential;Final Energy|Residential and Commercial|Residential|Solids;1
+Final Energy|Residential and Commercial|Solids;Final Energy|Residential and Commercial|Solids|Biomass;1
+Final Energy|Residential and Commercial|Solids;Final Energy|Residential and Commercial|Solids|Coal;1
 Final Energy|Transportation|Gases;Final Energy|Transportation|Gases|Bioenergy;1
 Final Energy|Transportation|Gases;Final Energy|Transportation|Gases|Fossil;1
 Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Electricity;1
