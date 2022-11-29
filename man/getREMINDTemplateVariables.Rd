@@ -4,12 +4,10 @@
 \alias{getREMINDTemplateVariables}
 \title{Retrieves all REMIND variables potentially used in mappings to project variables}
 \usage{
-getREMINDTemplateVariables(project, excludeMAGICC = TRUE)
+getREMINDTemplateVariables(project)
 }
 \arguments{
 \item{project}{name of the project of requested template}
-
-\item{excludeMAGICC}{exclude MAGICC variables used in template}
 }
 \description{
 Retrieves all REMIND variables potentially used in mappings to project variables
