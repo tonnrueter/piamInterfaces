@@ -11,3 +11,4 @@
 ^\.github$
 ^.*\.zenodo.json$
 ^output$
+^Makefile$

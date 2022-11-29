@@ -96,9 +96,9 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 51;Capital Cost|Electricity|Coal|w/ CCS;US$2010/kW;Tech|Electricity|Coal|Gasification Combined Cycle w/ CC|Capital Costs;US$2005/kW;1.10774;;;;capital cost of a new coal power plant with CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most;
 50;Capital Cost|Electricity|Biomass|w/o CCS;US$2010/kW;Tech|Electricity|Biomass|Combined Heat and Power w/o CC|Capital Costs;US$2005/kW;1.10774;;;Other tech: internal gasification combined cycle power plants;capital cost of a new biomass power plant w/o CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most;
 49;Capital Cost|Electricity|Biomass|w/ CCS;US$2010/kW;Tech|Electricity|Biomass|Gasification Combined Cycle w/ CC|Capital Costs;US$2005/kW;1.10774;;;;capital cost of a new biomass power plant with CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most;
-80;Concentration|CH4;ppb;Concentration|CH4;ppb;;glo;;;atmospheric concentration of methane;
-81;Concentration|CO2;ppm;Concentration|CO2;ppm;;glo;;;atmospheric concentration of carbon dioxide;
-82;Concentration|N2O;ppb;Concentration|N2O;ppb;;glo;;;atmospheric concentration of nitrous oxide;
+80;Concentration|CH4;ppb;Concentration|CH4;ppb;;glo;;;atmospheric concentration of methane;x
+81;Concentration|CO2;ppm;Concentration|CO2;ppm;;glo;;;atmospheric concentration of carbon dioxide;x
+82;Concentration|N2O;ppb;Concentration|N2O;ppb;;glo;;;atmospheric concentration of nitrous oxide;x
 83;Effective Forcing;W/m2;;;;;;;effective radiative forcing from all greenhouse gases and forcing agents,including contributions from albedo change,nitrate,and mineral dust;x
 84;Effective Forcing|Aerosol;W/m2;;;;;;;total effective radiative forcing from aerosols via both aerosol-cloud and aerosol-radiative effects;x
 85;Effective Forcing|Aerosol|BC;W/m2;;;;;;;effective radiative forcing from black carbon via aerosol-radiative effects;x
@@ -116,24 +116,24 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 97;Effective Forcing|N2O;W/m2;;;;;;;total effective radiative forcing from N2O;x
 98;Effective Forcing|Other;W/m2;;;;;;;total effective radiative forcing from factors not covered in other categories (including stratospheric ozone and stratospheric water vapor);x
 99;Effective Forcing|Tropospheric Ozone;W/m2;;;;;;;total effective radiative forcing from tropospheric ozone;x
-100;Forcing;W/m2;Forcing;W/m2;;;;;radiative forcing from all greenhouse gases and forcing agents,including contributions from albedo change,nitrate,and mineral dust;
-101;Forcing|Aerosol;W/m2;Forcing|Aerosol;W/m2;;;;;total radiative forcing from aerosols via both aerosol-cloud and aerosol-radiative effects;
-102;Forcing|Aerosol|BC;W/m2;Forcing|Aerosol|BC;W/m2;;;;;radiative forcing from black carbon via aerosol-radiative effects;
+100;Forcing;W/m2;Forcing;W/m2;;;;;radiative forcing from all greenhouse gases and forcing agents,including contributions from albedo change,nitrate,and mineral dust;x
+101;Forcing|Aerosol;W/m2;Forcing|Aerosol;W/m2;;;;;total radiative forcing from aerosols via both aerosol-cloud and aerosol-radiative effects;x
+102;Forcing|Aerosol|BC;W/m2;Forcing|Aerosol|BC;W/m2;;;;;radiative forcing from black carbon via aerosol-radiative effects;x
 103;Forcing|Aerosol|Black and Organic Carbon;W/m2;;W/m2;;;;;radiative forcing from black and organic carbon via aerosol-radiative effects;x
-104;Forcing|Aerosol|Cloud Indirect;W/m2;Forcing|Aerosol|Cloud Indirect;W/m2;;;;;radiative forcing from indirect effects of all anthropogenic aerosols on clouds (i.e. aerosol-cloud effects);
-105;Forcing|Aerosol|OC;W/m2;Forcing|Aerosol|OC;W/m2;;;;;radiative forcing from organic carbon via aerosol-radiative effects;
-106;Forcing|Aerosol|Other;W/m2;Forcing|Aerosol|Other;W/m2;;;;;total radiative forcing from aerosols not covered in the other categories (including aerosols from biomass burning) via aerosol-radiative effects;
-107;Forcing|Aerosol|Sulfate Direct;W/m2;Forcing|Aerosol|Sulfate Direct;W/m2;;;;;radiative forcing from direct sulfate effects (i.e. aerosol-radiative effects);
-108;Forcing|Albedo Change and Mineral Dust;W/m2;Forcing|Albedo Change and Mineral Dust;W/m2;;;;;total radiative forcing from albedo change and mineral dust;
-109;Forcing|CH4;W/m2;Forcing|CH4;W/m2;;;;;total radiative forcing from CH4;
-110;Forcing|CO2;W/m2;Forcing|CO2;W/m2;;;;;total radiative forcing from CO2;
-111;Forcing|F-Gases;W/m2;Forcing|F-Gases;W/m2;;;;;total radiative forcing from F-gases;
-112;Forcing|Kyoto Gases;W/m2;Forcing|Kyoto Gases;W/m2;;;;;radiative forcing of the six Kyoto gases (CO2,CH4,N2O,SF6,HFCs,PFCs);
-113;Forcing|Montreal Gases;W/m2;Forcing|Montreal Gases;W/m2;;;;;total radiative forcing from Montreal gases;
-114;Forcing|N2O;W/m2;Forcing|N2O;W/m2;;;;;total radiative forcing from N2O;
-115;Forcing|Other;W/m2;Forcing|Other;W/m2;;;;;total radiative forcing from factors not covered in other categories (including stratospheric ozone and stratospheric water vapor);
-116;Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;;;;total radiative forcing from tropospheric ozone;
-117;Temperature|Global Mean;°C;Temperature|Global Mean;K;;;;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab;
+104;Forcing|Aerosol|Cloud Indirect;W/m2;Forcing|Aerosol|Cloud Indirect;W/m2;;;;;radiative forcing from indirect effects of all anthropogenic aerosols on clouds (i.e. aerosol-cloud effects);x
+105;Forcing|Aerosol|OC;W/m2;Forcing|Aerosol|OC;W/m2;;;;;radiative forcing from organic carbon via aerosol-radiative effects;x
+106;Forcing|Aerosol|Other;W/m2;Forcing|Aerosol|Other;W/m2;;;;;total radiative forcing from aerosols not covered in the other categories (including aerosols from biomass burning) via aerosol-radiative effects;x
+107;Forcing|Aerosol|Sulfate Direct;W/m2;Forcing|Aerosol|Sulfate Direct;W/m2;;;;;radiative forcing from direct sulfate effects (i.e. aerosol-radiative effects);x
+108;Forcing|Albedo Change and Mineral Dust;W/m2;Forcing|Albedo Change and Mineral Dust;W/m2;;;;;total radiative forcing from albedo change and mineral dust;x
+109;Forcing|CH4;W/m2;Forcing|CH4;W/m2;;;;;total radiative forcing from CH4;x
+110;Forcing|CO2;W/m2;Forcing|CO2;W/m2;;;;;total radiative forcing from CO2;x
+111;Forcing|F-Gases;W/m2;Forcing|F-Gases;W/m2;;;;;total radiative forcing from F-gases;x
+112;Forcing|Kyoto Gases;W/m2;Forcing|Kyoto Gases;W/m2;;;;;radiative forcing of the six Kyoto gases (CO2,CH4,N2O,SF6,HFCs,PFCs);x
+113;Forcing|Montreal Gases;W/m2;Forcing|Montreal Gases;W/m2;;;;;total radiative forcing from Montreal gases;x
+114;Forcing|N2O;W/m2;Forcing|N2O;W/m2;;;;;total radiative forcing from N2O;x
+115;Forcing|Other;W/m2;Forcing|Other;W/m2;;;;;total radiative forcing from factors not covered in other categories (including stratospheric ozone and stratospheric water vapor);x
+116;Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;;;;total radiative forcing from tropospheric ozone;x
+117;Temperature|Global Mean;°C;Temperature|Global Mean;K;;;;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab;x
 118;Capital Formation;billion US$2010/yr;Investments;billion US$2005/yr;1.10774;;;might not fit completely;net additions to the physical capital stock;
 119;Capital Stock;billion US$2010/yr;TODO;billion US$2005;1.10774;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND;TODO: report yearly value,Macroeconomic capital stock;x
 120;Consumption;billion US$2010/yr;Consumption;billion US$2005/yr;1.10774;;;quality depends on capital market realization (switch);total consumption of all goods,by all consumers in a region;
