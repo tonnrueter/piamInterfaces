@@ -1319,11 +1319,6 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1224;Export|Developing Country Share;%;;;;;;;Developing countries’ and least developed countries’ share of global exports;x
 1225;Revenue|Government;billion US$2010/yr;;;;;;;government revenue;x
 1226;Revenue|Government|Tax;billion US$2010/yr;;;;;;;government revenue from taxes;x
-;Revenue|Government|Tax|Carbon;billion US$2010/yr;Revenue|Government|Tax|Carbon;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing (weighted aggregation of carbon price by region/sector multiplied by GHG emissions);
-;Revenue|Government|Tax|Carbon|Demand|Buildings;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Buildings;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing on buildings sector emissions (carbon price by region multiplied by GHG emissions);
-;Revenue|Government|Tax|Carbon|Demand|Industry;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Industry;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing on industry sector emissions (carbon price by region multiplied by GHG emissions);
-;Revenue|Government|Tax|Carbon|Demand|Transport;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Transport;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing on transport sector emissions (carbon price by region multiplied by GHG emissions);
-;Revenue|Government|Tax|Carbon|Supply;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Supply;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing on the supply sector emissions (carbon price by region multiplied by GHG emissions);
 ;Revenue|Industry|Cement;billion US$2010/yr;;;;;;;total revenue of the cement industry (production x price);x
 ;Revenue|Industry|Steel;billion US$2010/yr;;;;;;;total revenue of the steel industry (production x price);x
 1227;Tariffs|Average;%;;;;;;;Weighted trade tariff-average (regional and global indicator relevant);x
