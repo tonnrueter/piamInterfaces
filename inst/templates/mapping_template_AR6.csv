@@ -226,7 +226,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 192;Emissions|BC|AFOLU|Agriculture;Mt BC/yr;Emi|BC|Land Use|Agriculture;Mt BC/yr;;;;;BC|AFOLU|Agric emissions from agriculture;
 193;Emissions|BC|AFOLU|Land;Mt BC/yr;;;;;;;BC|AFOL emissions from forestry and other land use;x
 194;Emissions|BC|Energy;Mt BC/yr;Emi|BC|Energy Supply and Demand;Mt BC/yr;;;;;black carbon emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
-195;Emissions|BC|Energy|Demand|Residential and Commercial;Mt BC/yr;Emi|BC|Energy Demand|ResCom;Mt BC/yr;;;;;black carbon emissions from fuel combustion in residential,commercial,institutional sectors and agriculture (IPCC category 1A4a,1A4b);
+195;Emissions|BC|Energy|Demand|Residential and Commercial;Mt BC/yr;Emi|BC|Energy Demand|Buildings;Mt BC/yr;;;;;black carbon emissions from fuel combustion in residential,commercial,institutional sectors and agriculture (IPCC category 1A4a,1A4b);
 196;Emissions|BC|Energy|Demand|Residential and Commercial|Commercial;Mt BC/yr;;;;;;;BC emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 197;Emissions|BC|Energy|Demand|Residential and Commercial|Residential;Mt BC/yr;;;;;;;BC emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 199;Emissions|BC|Energy|Demand|Industry;Mt BC/yr;Emi|BC|Energy Demand|Industry;Mt BC/yr;;;;;black carbon emissions from fuel combustion in industry (IPCC category 1A2);
@@ -387,7 +387,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 340;Emissions|CO|AFOLU|Agriculture;Mt CO/yr;;;;;;;CO|AFOLU|Agric emissions from agriculture;x
 341;Emissions|CO|AFOLU|Land;Mt CO/yr;;;;;;;CO|AFOL emissions from forestry and other land use;x
 342;Emissions|CO|Energy;Mt CO/yr;Emi|CO|Energy Supply and Demand;Mt CO/yr;;;;;carbon monoxide emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
-343;Emissions|CO|Energy|Demand|Residential and Commercial;Mt CO/yr;Emi|CO|Energy Demand|ResCom;Mt CO/yr;;;;;carbon monoxide emissions from Combustion in Residential and Commercial/Institutional Sectors (IPCC 1A4A,1A4B);
+343;Emissions|CO|Energy|Demand|Residential and Commercial;Mt CO/yr;Emi|CO|Energy Demand|Buildings;Mt CO/yr;;;;;carbon monoxide emissions from Combustion in Residential and Commercial/Institutional Sectors (IPCC 1A4A,1A4B);
 344;Emissions|CO|Energy|Demand|Residential and Commercial|Commercial;Mt CO/yr;;;;;;;CO emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 345;Emissions|CO|Energy|Demand|Residential and Commercial|Residential;Mt CO/yr;;;;;;;CO emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 347;Emissions|CO|Energy|Demand|Industry;Mt CO/yr;Emi|CO|Energy Demand|Industry;Mt CO/yr;;;;;carbon monoxide emissions from Combustion in industry (IPCC 1A2) and industrial processes (IPCC 2C1-2C5);
@@ -443,7 +443,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 395;Emissions|NH3|AFOLU|Agriculture;Mt NH3/yr;;;;;;;NH3|AFOLU|Agric emissions from agriculture;x
 396;Emissions|NH3|AFOLU|Land;Mt NH3/yr;;;;;;;NH3|AFOL emissions from forestry and other land use;x
 397;Emissions|NH3|Energy;Mt NH3/yr;Emi|NH3|Energy Supply and Demand;Mt NH3/yr;;;;;ammonia emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
-398;Emissions|NH3|Energy|Demand|Residential and Commercial;Mt NH3/yr;Emi|NH3|Energy Demand|ResCom;Mt NH3/yr;;;;;ammonia Emissions from Combustion in Residential and Commercial/Institutional Sectors (IPCC 1A4A,1A4B);
+398;Emissions|NH3|Energy|Demand|Residential and Commercial;Mt NH3/yr;Emi|NH3|Energy Demand|Buildings;Mt NH3/yr;;;;;ammonia Emissions from Combustion in Residential and Commercial/Institutional Sectors (IPCC 1A4A,1A4B);
 399;Emissions|NH3|Energy|Demand|Residential and Commercial|Commercial;Mt NH3/yr;;;;;;;NH3 emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 400;Emissions|NH3|Energy|Demand|Residential and Commercial|Residential;Mt NH3/yr;;;;;;;NH3 emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 402;Emissions|NH3|Energy|Demand|Industry;Mt NH3/yr;Emi|NH3|Energy Demand|Industry;Mt NH3/yr;;;;;ammonia Emissions from Combustion in industry (IPCC 1A2) and industrial processes (IPCC 2C1-2C5);
@@ -459,7 +459,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 412;Emissions|NOx|AFOLU|Agriculture;Mt NO2/yr;;;;;;;NOx|AFOLU|Agric emissions from agriculture;x
 413;Emissions|NOx|AFOLU|Land;Mt NO2/yr;;;;;;;NOx|AFOL emissions from forestry and other land use;x
 414;Emissions|NOx|Energy;Mt NO2/yr;Emi|NOX|Energy Supply and Demand;Mt NOX/yr;;;;;NOx emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
-415;Emissions|NOx|Energy|Demand|Residential and Commercial;Mt NO2/yr;Emi|NOX|Energy Demand|ResCom;Mt NOX/yr;;;;;NOx emissions from fuel combustion in residential,commercial,institutional sectors (IPCC category 1A4a,1A4b);
+415;Emissions|NOx|Energy|Demand|Residential and Commercial;Mt NO2/yr;Emi|NOX|Energy Demand|Buildings;Mt NOX/yr;;;;;NOx emissions from fuel combustion in residential,commercial,institutional sectors (IPCC category 1A4a,1A4b);
 416;Emissions|NOx|Energy|Demand|Residential and Commercial|Commercial;Mt NO2/yr;;;;;;;NOx emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 417;Emissions|NOx|Energy|Demand|Residential and Commercial|Residential;Mt NO2/yr;;;;;;;NOx emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 419;Emissions|NOx|Energy|Demand|Industry;Mt NO2/yr;Emi|NOX|Energy Demand|Industry;Mt NOX/yr;;;;;NOx emissions from fuel combustion in industry (IPCC category 1A2);
@@ -475,7 +475,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 429;Emissions|OC|AFOLU|Agriculture;Mt OC/yr;;;;;;;OC|AFOLU|Agric emissions from agriculture;x
 430;Emissions|OC|AFOLU|Land;Mt OC/yr;;;;;;;OC|AFOL emissions from forestry and other land use;x
 431;Emissions|OC|Energy;Mt OC/yr;Emi|OC|Energy Supply and Demand;Mt OC/yr;;;;;organic carbon emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
-432;Emissions|OC|Energy|Demand|Residential and Commercial;Mt OC/yr;Emi|OC|Energy Demand|ResCom;Mt OC/yr;;;;;organic carbon emissions from fuel combustion in residential,commercial,institutional sectors (IPCC category 1A4a,1A4b);
+432;Emissions|OC|Energy|Demand|Residential and Commercial;Mt OC/yr;Emi|OC|Energy Demand|Buildings;Mt OC/yr;;;;;organic carbon emissions from fuel combustion in residential,commercial,institutional sectors (IPCC category 1A4a,1A4b);
 433;Emissions|OC|Energy|Demand|Residential and Commercial|Commercial;Mt OC/yr;;;;;;;OC emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 434;Emissions|OC|Energy|Demand|Residential and Commercial|Residential;Mt OC/yr;;;;;;;OC emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 436;Emissions|OC|Energy|Demand|Industry;Mt OC/yr;Emi|OC|Energy Demand|Industry;Mt OC/yr;;;;;organic carbon emissions from fuel combustion in industry (IPCC category 1A2);
@@ -510,7 +510,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 464;Emissions|Sulfur|AFOLU|Agriculture;Mt SO2/yr;;;;;;;Sulfur|AFOLU|Agric emissions from agriculture;x
 465;Emissions|Sulfur|AFOLU|Land;Mt SO2/yr;;;;;;;Sulfur|AFOL emissions from forestry and other land use;x
 466;Emissions|Sulfur|Energy;Mt SO2/yr;Emi|SO2|Energy Supply and Demand;Mt SO2/yr;;;;;sulfur emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
-467;Emissions|Sulfur|Energy|Demand|Residential and Commercial;Mt SO2/yr;Emi|SO2|Energy Demand|ResCom;Mt SO2/yr;;;;;sulfur emissions from fuel combustion in residential,commercial,institutional sectors (IPCC category 1A4a,1A4b);
+467;Emissions|Sulfur|Energy|Demand|Residential and Commercial;Mt SO2/yr;Emi|SO2|Energy Demand|Buildings;Mt SO2/yr;;;;;sulfur emissions from fuel combustion in residential,commercial,institutional sectors (IPCC category 1A4a,1A4b);
 468;Emissions|Sulfur|Energy|Demand|Residential and Commercial|Commercial;Mt SO2/yr;;;;;;;Sulfur emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 469;Emissions|Sulfur|Energy|Demand|Residential and Commercial|Residential;Mt SO2/yr;;;;;;;Sulfur emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 471;Emissions|Sulfur|Energy|Demand|Industry;Mt SO2/yr;Emi|SO2|Energy Demand|Industry;Mt SO2/yr;;;;;sulfur emissions from fuel combustion in industry (IPCC category 1A2);
@@ -526,7 +526,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 481;Emissions|VOC|AFOLU|Agriculture;Mt VOC/yr;;;;;;;VOC|AFOLU|Agric emissions from agriculture;x
 482;Emissions|VOC|AFOLU|Land;Mt VOC/yr;;;;;;;VOC|AFOL emissions from forestry and other land use;x
 483;Emissions|VOC|Energy;Mt VOC/yr;Emi|VOC|Energy Supply and Demand;Mt VOC/yr;;;;;volatile organic compounds emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
-484;Emissions|VOC|Energy|Demand|Residential and Commercial;Mt VOC/yr;Emi|VOC|Energy Demand|ResCom;Mt VOC/yr;;;;;volatile organic compounds Emissions from Combustion in Residential and Commercial/Institutional Sectors (IPCC 1A4A,1A4B);
+484;Emissions|VOC|Energy|Demand|Residential and Commercial;Mt VOC/yr;Emi|VOC|Energy Demand|Buildings;Mt VOC/yr;;;;;volatile organic compounds Emissions from Combustion in Residential and Commercial/Institutional Sectors (IPCC 1A4A,1A4B);
 485;Emissions|VOC|Energy|Demand|Residential and Commercial|Commercial;Mt VOC/yr;;;;;;;VOC emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 486;Emissions|VOC|Energy|Demand|Residential and Commercial|Residential;Mt VOC/yr;;;;;;;VOC emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 488;Emissions|VOC|Energy|Demand|Industry;Mt VOC/yr;Emi|VOC|Energy Demand|Industry;Mt VOC/yr;;;;;volatile organic compounds Emissions from Combustion in industry (IPCC 1A2) and industrial processes (IPCC 2C1-2C5);
