@@ -54,9 +54,9 @@ Generates an IIASA submission from REMIND runs by applying a project-specific ma
 \dontrun{
 # Simple use. Generates submission file in output folder:
 generateIIASASubmission(
-  mifDirectory = "/path/to/REMIMD/mifs",
+  mifs = "/path/to/REMIMD/mifs",
   model = "REMIND-MAgPIE 2.1-4.2",
-  mapping = "output/template_navigate.csv",
+  mappingFile = "output/template_navigate.csv",
   generateSingleOutput = TRUE
 )
 }

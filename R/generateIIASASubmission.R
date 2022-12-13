@@ -29,9 +29,9 @@
 #' \dontrun{
 #' # Simple use. Generates submission file in output folder:
 #' generateIIASASubmission(
-#'   mifDirectory = "/path/to/REMIMD/mifs",
+#'   mifs = "/path/to/REMIMD/mifs",
 #'   model = "REMIND-MAgPIE 2.1-4.2",
-#'   mapping = "output/template_navigate.csv",
+#'   mappingFile = "output/template_navigate.csv",
 #'   generateSingleOutput = TRUE
 #' )
 #' }
@@ -109,7 +109,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       mifdata <- read.quitte(outputMif, factors = FALSE) %>%
         mutate(model = paste(model)) %>%
         mutate(value = ifelse(!is.finite(value) | is.na(value), 0, value)) %>%
-        mutate(scenario = gsub("NA", "", scenario))
+        mutate(scenario = gsub("^NA$", "", scenario))
 
       if (! is.null(iiasatemplate) && file.exists(iiasatemplate)) {
         mifdata <- checkIIASASubmission(mifdata, iiasatemplate, logFile)
