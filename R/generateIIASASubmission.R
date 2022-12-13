@@ -21,10 +21,9 @@
 #' @importFrom iamc write.reportProject
 #' @importFrom magclass getNames getNames<- mbind read.report write.report
 #' @importFrom rmndt readMIF writeMIF
-#' @importFrom quitte write.mif read.quitte
+#' @importFrom quitte write.mif read.quitte write.IAMCxlsx
 #' @importFrom stringr str_sub
 #' @importFrom tidyr pivot_wider
-#' @importFrom writexl write_xlsx
 #' @examples
 #' \dontrun{
 #' # Simple use. Generates submission file in output folder:
@@ -135,13 +134,8 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
                                 logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory))
       }
 
-      writetoexcel <- mifdata %>%
-        mutate(value = ifelse(!is.finite(value) | paste(value) == "", 0, value)) %>%
-        pivot_wider(names_from = "period", values_from = "value")
-
       outputXlsx <- paste0(gsub("\\.mif$", "", outputMif), ".xlsx")
-      writexl::write_xlsx(list("data" = writetoexcel), outputXlsx)
-
+      quitte::write.IAMCxlsx(mifdata, outputXlsx)
       message("\n### Output files written:\n- ", outputMif, "\n- ", outputXlsx, "\n")
     }
   }

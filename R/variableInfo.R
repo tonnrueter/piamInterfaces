@@ -7,7 +7,7 @@
 #' @param template template shortcut (AR6, NAVIGATE). NULL means all
 #' @param remindVar column name of variable in templates (default: piam_variable)
 #' @param remindUnit column name of unit in templates (default: piam_unit)
-#' @importFrom quitte read.quitte
+#' @importFrom quitte read.quitte as.quitte
 #' @importFrom stringr str_split str_pad
 #' @importFrom magclass unitsplit
 #' @return prints human-readable summary to the user
@@ -96,7 +96,7 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
     }
   }
   if (! is.null(mif)) {
-    mifdata <- read.quitte(mif)
+    mifdata <- quitte::as.quitte(mif)
     message("\n### Variables found in mif file")
     mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)))
     for (ch in mifchilds) {

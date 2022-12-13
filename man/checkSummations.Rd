@@ -11,6 +11,7 @@ checkSummations(
   summationsFile = "AR6",
   logFile = NULL,
   logAppend = FALSE,
+  generatePlots = FALSE,
   dataDumpFile = "checkSummations.csv",
   remindVar = "piam_variable"
 )
@@ -27,6 +28,8 @@ checkSummations(
 \item{logFile}{file where human-readable summary is saved. If NULL, write to stdout}
 
 \item{logAppend}{boolean whether to append or overwrite logFile}
+
+\item{generatePlots}{boolean whether pdfs to compare data are generated}
 
 \item{dataDumpFile}{file where data.frame with the data analysis is saved. If NULL, result is returned}
 
