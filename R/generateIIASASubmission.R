@@ -17,6 +17,7 @@
 #'        if `generateSingleOutput` is set to TRUE (default: submission.mif)
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
+#' @param generatePlots boolean, whether to generate plots of failing summation checks
 #' @importFrom data.table :=
 #' @importFrom iamc write.reportProject
 #' @importFrom magclass getNames getNames<- mbind read.report write.report
@@ -42,7 +43,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
                                     logFile = "output/missing.log",
                                     generateSingleOutput = TRUE,
                                     outputFilename = "submission.mif",
-                                    iiasatemplate = NULL) {
+                                    iiasatemplate = NULL, generatePlots = FALSE) {
   scenario <- NULL # added to avoid no visible binding error
   value <- NULL
   variable <- NULL
@@ -131,7 +132,8 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       # perform summation checks
       for (sumFile in intersect(mapping, names(summationsNames()))) {
         invisible(checkSummations(outputMif, template = mappingFile, summationsFile = sumFile,
-                                logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory))
+                                logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
+                                generatePlots = generatePlots))
       }
 
       outputXlsx <- paste0(gsub("\\.mif$", "", outputMif), ".xlsx")

@@ -17,7 +17,7 @@ variableInfo(
 
 \item{mif}{filename of miffile}
 
-\item{template}{template shortcut (AR6, NAVIGATE). NULL means all}
+\item{template}{vector of template shortcuts (AR6, NAVIGATE) or mapping/template filenames. NULL means all}
 
 \item{remindVar}{column name of variable in templates (default: piam_variable)}
 
