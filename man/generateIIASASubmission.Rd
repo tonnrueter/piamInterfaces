@@ -16,7 +16,8 @@ generateIIASASubmission(
   logFile = "output/missing.log",
   generateSingleOutput = TRUE,
   outputFilename = "submission.mif",
-  iiasatemplate = NULL
+  iiasatemplate = NULL,
+  generatePlots = FALSE
 )
 }
 \arguments{
@@ -46,6 +47,8 @@ if \code{generateSingleOutput} is set to TRUE (default: submission.mif)}
 
 \item{iiasatemplate}{optional filename of xlsx or yaml file provided by IIASA
 used to delete superfluous variables and adapt units}
+
+\item{generatePlots}{boolean, whether to generate plots of failing summation checks}
 }
 \description{
 Generates an IIASA submission from REMIND runs by applying a project-specific mapping

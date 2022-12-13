@@ -2,15 +2,15 @@
 % Please edit documentation in R/getTemplate.R
 \name{getTemplate}
 \alias{getTemplate}
-\title{Retrieves latest template for a given project}
+\title{Retrieves latest template for a given project or mapping file}
 \usage{
 getTemplate(project = NULL)
 }
 \arguments{
-\item{project}{name of the project of requested template, or template filename}
+\item{project}{name of the project of requested template, or filename of mapping or template}
 }
 \description{
-Retrieves latest template for a given project
+Retrieves latest template for a given project or mapping file
 }
 \author{
 Falk Benke, Oliver Richters

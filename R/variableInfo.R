@@ -4,7 +4,7 @@
 #' @author Oliver Richters
 #' @param varname string with variable name
 #' @param mif filename of miffile
-#' @param template template shortcut (AR6, NAVIGATE). NULL means all
+#' @param template vector of template shortcuts (AR6, NAVIGATE) or mapping/template filenames. NULL means all
 #' @param remindVar column name of variable in templates (default: piam_variable)
 #' @param remindUnit column name of unit in templates (default: piam_unit)
 #' @importFrom quitte read.quitte as.quitte
@@ -18,8 +18,7 @@
 #' )
 #' @export
 variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam_variable", remindUnit = "piam_unit") {
-  templates <- templateNames(template)
-
+  if (is.null(template)) template <- names(templateNames())
   green <- "\033[0;32m"
   blue  <- "\033[0;34m"
   nc    <- "\033[0m"   # No Color
@@ -31,16 +30,16 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
   }
 
   message("\n##### Search for information on ", green, varname, nc, " in mapping templates")
-  for (t in names(templates)) {
+  for (t in template) {
     templateData <- getTemplate(t)
-    template <- basename(templateNames(t))
+    templateName <- basename(t)
     remindno <- which(varname == templateData[, remindVar])
     exportno <- which(varname == templateData$Variable)
     if (length(remindno) + length(exportno) == 0) {
-      message("\n### Nothing found in template: ", blue, template, nc)
+      message("\n### Nothing found in template: ", blue, templateName, nc)
       next
     } else {
-      message("\n### Results from template: ", blue, template, nc)
+      message("\n### Results from template: ", blue, templateName, nc)
     }
     if (t %in% names(summationsNames())) {
       summationGroups <- getSummations(t)
@@ -97,7 +96,7 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
   }
   if (! is.null(mif)) {
     mifdata <- quitte::as.quitte(mif)
-    message("\n### Variables found in mif file")
+    message("\n### Variables found in file ", basename(mif))
     mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)))
     for (ch in mifchilds) {
       message("- ", ch)
