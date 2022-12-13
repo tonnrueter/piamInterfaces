@@ -7,20 +7,23 @@
 #' @param outputDirectory path to directory to place logFile and dataDumpFile
 #' @param logFile file where human-readable summary is saved. If NULL, write to stdout
 #' @param logAppend boolean whether to append or overwrite logFile
+#' @param generatePlots boolean whether pdfs to compare data are generated
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #' @param template mapping template to be loaded
 #' @param remindVar REMIND/MAgPIE variable column name in template
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
 #' @importFrom magclass unitsplit
+#' @importFrom mip showAreaAndBarPlots
 #' @importFrom rlang sym syms
 #' @importFrom utils write.table
 #' @importFrom stringr str_pad
-#' @importFrom quitte as.quitte
+#' @importFrom quitte as.quitte getModels getRegs getScenarios
+#' @importFrom grDevices pdf dev.off
 #'
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", summationsFile = "AR6",
-                            logFile = NULL, logAppend = FALSE, dataDumpFile = "checkSummations.csv",
-                            remindVar = "piam_variable") {
+                            logFile = NULL, logAppend = FALSE, generatePlots = FALSE,
+                            dataDumpFile = "checkSummations.csv", remindVar = "piam_variable") {
   if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
     dir.create(outputDirectory, recursive = TRUE)
   }
@@ -39,10 +42,11 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
     summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
   }
 
-  data <- quitte::as.quitte(mifFile) %>%
+  data <- quitte::as.quitte(mifFile, na.rm = TRUE) %>%
     filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent))) %>%
     left_join(summationGroups, by = c("variable" = "child"))
-
+  message(length(unique(data$variable)), " variables are analyzed.")
+  if (length(unique(data$variable)) < 10) message("Are you sure that ", mifFile, " is a valid submission file?")
   checkVariables <- list()
 
   for (i in unique(summationGroups$parent)) {
@@ -66,9 +70,6 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
     ) %>%
     select(-c("factor", "parent"))
 
-  text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
-                 ".\n# Use ", summationsFile, " to check if summation groups add up.")
-
   # write data to dataDumpFile
   if (length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
@@ -77,47 +78,88 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       file = dataDumpFile, quote = FALSE, row.names = FALSE)
   }
   # generate human-readable summary of larger differences
-  fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= 1, abs(!!sym("diff")) >= 0.001)
-  problematic <- unique(c(fileLarge$variable))
-  if (length(problematic) > 0) {
+  .checkSummationsSummary(mifFile, data, tmp, template, summationsFile, summationGroups,
+                   generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar)
+
+  return(invisible(tmp))
+}
+
+.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups,
+                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar) {
+  text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
+                 ".\n# Use ", summationsFile, " to check if summation groups add up.")
+  summarytext <- NULL
+  if (! is.null(template)) {
     templateData <- getTemplate(template)
+    templateName <- template
     if (template %in% names(templateNames())) {
-       template <- gsub(".*piamInterfaces", "piamInterfaces", templateNames(template))
+      templateName <- gsub(".*piamInterfaces", "piamInterfaces", templateNames(template))
     }
-    text <- c(text, paste0("# Derive mapping from ", template))
-    width <- 70
-    text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
-                           basename(summationsFile)), width + 8, "right"),
-            "corresponding REMIND/MAgPIE variables extracted from ", basename(template)))
-    for (p in problematic) {
-      signofdiff <- paste0(if (max(fileLarge$diff[fileLarge$variable == p]) > 0) "<",
-                           if (min(fileLarge$diff[fileLarge$variable == p]) < 0) ">")
-      childs <- summationGroups$child[summationGroups$parent == p]
-      text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
-              paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable,
-                     collapse = " + "), " ", signofdiff))
-      for (ch in childs) {
-        text <- c(text, paste0("   + ", str_pad(ch, width, "right"), "      + ",
-                paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable,
-                       collapse = " + ")))
+    text <- c(text, paste0("# Derive mapping from ", templateName))
+  }
+  for (thismodel in quitte::getModels(data)) {
+    text <- c(text, paste0("# Analyzing results of model ", thismodel))
+    fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= 1, abs(!!sym("diff")) >= 0.001, !!sym("model") == thismodel)
+    problematic <- unique(c(fileLarge$variable))
+    if (length(problematic) > 0) {
+      if (generatePlots) {
+        pdfFilename <- file.path(outputDirectory, paste0("checkSummations_", gsub(" ", "_", thismodel), ".pdf"))
+        pdf(pdfFilename,
+            width = max(12, length(quitte::getRegs(fileLarge)), length(quitte::getScenarios(fileLarge)) * 2))
+        plotdata <- filter(data, !!sym("model") == thismodel)
+        message(length(problematic), " plots will be generated, this will take some time.")
       }
-      text <- c(text, paste0("Relative difference between ",
-                        round(min(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "% and ",
-                        round(max(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "%, ",
-                        "absolute difference up to ",
-                        round(max(abs(fileLarge$diff[fileLarge$variable == p])), digits = 2), " ",
-                        paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
-      )
+      width <- 70
+      text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
+                             basename(summationsFile)), width + 8, "right"),
+         paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(template))[! is.null(template)]
+         ))
+      for (p in problematic) {
+        signofdiff <- paste0(if (max(fileLarge$diff[fileLarge$variable == p]) > 0) "<",
+                             if (min(fileLarge$diff[fileLarge$variable == p]) < 0) ">")
+        childs <- summationGroups$child[summationGroups$parent == p]
+        remindchilds <- if (is.null(template)) NULL else
+                        unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable
+        text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
+                  paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff))[! is.null(remindchilds)]
+                  )
+        for (ch in childs) {
+          remindch <- if (is.null(template)) NULL else
+                      unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable
+          text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
+                    if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
+        }
+        text <- c(text, paste0("Relative difference between ",
+                          round(min(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "% and ",
+                          round(max(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "%, ",
+                          "absolute difference up to ",
+                          round(max(abs(fileLarge$diff[fileLarge$variable == p])), digits = 2), " ",
+                          paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
+        )
+        if (generatePlots) {
+          message("Add plot for ", p)
+          mip::showAreaAndBarPlots(plotdata, intersect(childs, unique(plotdata$variable)), tot = p,
+                                   mainReg = "World", yearsBarPlot = c(2030, 2050), scales = "fixed")
+        }
+      }
+      # print to log or stdout
+      summarytext <- c(summarytext, "\n# Summary of summation group checks:",
+        paste0("# ", length(problematic), " equations are not satisfied but should according to ",
+              basename(summationsFile), "."),
+        paste0("# All deviations can be found in the returned object",
+               paste0(" and in ", dataDumpFile)[! is.null(dataDumpFile)], "."),
+        paste0("# To get more detailed information on '", problematic[1], "', run piamInterfaces::variableInfo('",
+               problematic[1], "').")
+        )
+      if (generatePlots) {
+        dev.off()
+        summarytext <- c(summarytext, paste0("\n# Find plot comparison of all errors in ", pdfFilename))
+      } else {
+        summarytext <- c(summarytext, "\n# As generatePlots=FALSE, no plot comparison was produced.")
+      }
+    } else {
+      summarytext <- c(summarytext, paste0("\n# All summation checks were fine for model ", thismodel, "."))
     }
-    # print to log or stdout
-    summarytext <- c("\n# Summary of summation group checks:",
-      paste0("# ", length(problematic), " equations are not satisfied but should according to ",
-            basename(summationsFile), "."),
-      paste0("# All deviations can be found in the returned object",
-             if (! is.null(dataDumpFile)) paste0(" and in ", dataDumpFile), ".")
-    )
-  } else {
-    summarytext <- "\n# All summation checks were fine."
   }
   if (is.null(logFile)) {
     message(paste(c(text, summarytext, ""), collapse = "\n"))
@@ -127,5 +169,4 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
             paste0("# Find log with human-readable information appended to ", logFile)), "", collapse = "\n"))
     write(c(text, summarytext, ""), file = logFile, append = logAppend)
   }
-  return(invisible(tmp))
 }
