@@ -54,6 +54,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
   }
   if (! is.null(outputDirectory)) {
     dir.create(outputDirectory, recursive = TRUE, showWarnings = FALSE)
+    if (! is.null(logFile)) logFile <- file.path(outputDirectory, logFile)
   }
   message("### Generating mapping ", if (!is.null(fileName)) basename(fileName),
           " based on templates ", paste(templates, collapse = ", "))
@@ -127,7 +128,8 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
     fwrite(mapping, file = fileName, sep = ";")
   }
   if (!is.null(comments) && !is.null(logFile)) {
-    fwrite(comments, file = if (is.null(outputDirectory)) logFile else file.path(outputDirectory, logFile), sep = ";")
+    write("Comments from generateMappingfile():", file = logFile, append = TRUE)
+    fwrite(comments, file = logFile, sep = ";", append = TRUE)
   }
   return(invisible(list(mappings = mapping, comments = comments)))
 }

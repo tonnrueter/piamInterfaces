@@ -422,6 +422,11 @@ Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|
 Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Other;1
 Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Fossil synfuel;1
 Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Oil;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Bioenergy;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Coal;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Fossil synfuel;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Natural Gas;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Oil;1
 Final Energy|Industry|Gases;Final Energy|Industry|Gases|  (EK ???);1
 Final Energy|Industry|Gases;Final Energy|Industry|Gases|Bioenergy     (EK Use Biomass instead of bioenerg. applies to any use of bioenergy);1
 Final Energy|Industry|Gases;Final Energy|Industry|Gases|Fossil;1
@@ -431,6 +436,8 @@ Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Bioenergy;1
 Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Fossil;1
 Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Hydrogen synfuel;1
 Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Oil;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Biomass;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Coal;1
 Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Biomass;1
 Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Coal;1
 Final Energy|Residential and Commercial|Commercial;Final Energy|Residential and Commercial|Commercial|Electricity;1
