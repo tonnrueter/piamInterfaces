@@ -106,22 +106,22 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
         pdf(pdfFilename,
             width = max(12, length(quitte::getRegs(fileLarge)), length(quitte::getScenarios(fileLarge)) * 2))
         plotdata <- filter(data, !!sym("model") == thismodel)
-        message(length(problematic), " plots will be generated, this will take some time.")
+        message(length(problematic), " plots will be generated for ", thismodel, ", this will take some time.")
       }
       width <- 70
       text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
                              basename(summationsFile)), width + 8, "right"),
-         paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(template))[! is.null(template)]
+           if (! is.null(template)) paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(template))
          ))
       for (p in problematic) {
-        signofdiff <- paste0(if (max(fileLarge$diff[fileLarge$variable == p]) > 0) "<",
-                             if (min(fileLarge$diff[fileLarge$variable == p]) < 0) ">")
+        signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
+                             ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
         childs <- summationGroups$child[summationGroups$parent == p]
         remindchilds <- if (is.null(template)) NULL else
                         unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
-                  paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff))[! is.null(remindchilds)]
-                  )
+                  paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff)[! is.null(remindchilds)]
+                  ))
         for (ch in childs) {
           remindch <- if (is.null(template)) NULL else
                       unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable
@@ -142,7 +142,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
         }
       }
       # print to log or stdout
-      summarytext <- c(summarytext, "\n# Summary of summation group checks:",
+      summarytext <- c(summarytext, paste0("\n# Summary of summation group checks for model ", thismodel, ":"),
         paste0("# ", length(problematic), " equations are not satisfied but should according to ",
               basename(summationsFile), "."),
         paste0("# All deviations can be found in the returned object",
@@ -153,13 +153,12 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       if (generatePlots) {
         dev.off()
         summarytext <- c(summarytext, paste0("\n# Find plot comparison of all errors in ", pdfFilename))
-      } else {
-        summarytext <- c(summarytext, "\n# As generatePlots=FALSE, no plot comparison was produced.")
       }
     } else {
       summarytext <- c(summarytext, paste0("\n# All summation checks were fine for model ", thismodel, "."))
     }
   }
+  summarytext <- c(summarytext, "\n# As generatePlots=FALSE, no plot comparison was produced."[! generatePlots])
   if (is.null(logFile)) {
     message(paste(c(text, summarytext, ""), collapse = "\n"))
   } else {
