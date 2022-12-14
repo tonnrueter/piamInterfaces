@@ -106,7 +106,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
         pdf(pdfFilename,
             width = max(12, length(quitte::getRegs(fileLarge)), length(quitte::getScenarios(fileLarge)) * 2))
         plotdata <- filter(data, !!sym("model") == thismodel)
-        message(length(problematic), " plots will be generated, this will take some time.")
+        message(length(problematic), " plots will be generated for ", thismodel, ", this will take some time.")
       }
       width <- 70
       text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
