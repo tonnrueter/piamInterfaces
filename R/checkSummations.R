@@ -45,8 +45,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
   data <- quitte::as.quitte(mifFile, na.rm = TRUE) %>%
     filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent))) %>%
     left_join(summationGroups, by = c("variable" = "child"))
-  message(length(unique(data$variable)), " variables are analyzed.")
-  if (length(unique(data$variable)) < 10) message("Are you sure that ", mifFile, " is a valid submission file?")
+  message("The filtered data contains ", length(unique(data$variable)), " variables.")
   checkVariables <- list()
 
   for (i in unique(summationGroups$parent)) {
