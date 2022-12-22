@@ -9,7 +9,7 @@ Authors@R: c(
   )
 Description: Project specific interfaces to REMIND / MAgPIE.
 License: LGPL-3
-URL: https://github.com/pik-piam/piam_interfaces
+URL: https://github.com/pik-piam/piamInterfaces
 Imports:
     data.table,
     dplyr,

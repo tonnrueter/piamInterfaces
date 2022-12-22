@@ -11,7 +11,7 @@ Project specific interfaces to REMIND / MAgPIE.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/pik-piam/piam_interfaces}
+  \item \url{https://github.com/pik-piam/piamInterfaces}
 }
 
 }
