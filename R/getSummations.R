@@ -13,12 +13,16 @@ getSummations <- function(project = NULL) {
                               returnBoolean = FALSE, multiple = TRUE, addAllPattern = FALSE)
     if (length(project) == 0) stop("No summation group files selected, abort.")
   }
-  if (! file.exists(project)) {
+  if (!file.exists(project)) {
     project <- gsub("\\.csv$", "", gsub("^summation_groups_", "", project))
   }
   filename <- if (project %in% names(summations)) summations[project] else project
   if (file.exists(filename)) {
-    return(read.csv2(filename, sep = ";", stringsAsFactors = FALSE))
+    summations <- read.csv2(filename, sep = ";", stringsAsFactors = FALSE)
+    if (!("factor" %in% summations)) {
+      summations$factor <- 1
+    }
+    return(summations)
   } else {
     stop("Summation group file ", filename, " not found.")
   }
