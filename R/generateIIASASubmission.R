@@ -18,6 +18,7 @@
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
+#' @param timesteps timesteps that are accepted in final submission
 #' @importFrom data.table :=
 #' @importFrom iamc write.reportProject
 #' @importFrom magclass getNames getNames<- mbind read.report write.report
@@ -36,17 +37,17 @@
 #' )
 #' }
 #' @export
-generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.0",
+generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.0", # nolint: cyclocomp_linter.
                                     mappingFile = NULL,
                                     removeFromScen = NULL, addToScen = NULL,
                                     outputDirectory = "output", outputPrefix = "",
                                     logFile = "output/missing.log",
                                     generateSingleOutput = TRUE,
                                     outputFilename = "submission.mif",
-                                    iiasatemplate = NULL, generatePlots = FALSE) {
-  scenario <- NULL # added to avoid no visible binding error
-  value <- NULL
-  variable <- NULL
+                                    iiasatemplate = NULL, generatePlots = FALSE,
+                                    timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10))) {
+  value <- variable <- scenario <- period <- NULL # added to avoid no visible binding error
+  if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
   dir.create(outputDirectory, showWarnings = FALSE)
 
   # for each directory, include all mif files
@@ -63,7 +64,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   }
 
   message("\n### Generating .mif and .xlsx files using mapping ", mappingFile, ".")
-  message("# Correct model name to '", model, "'.")
+  if (! is.null(model)) message("# Correct model name to '", model, "'.")
   message("# Adapt scenario names: '",
           addToScen, "' will be prepended, '", removeFromScen, "' will be removed.")
   message("# Apply mapping from ", mappingFile)
@@ -92,6 +93,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
         file = outputMif,
         missing_log = logFile,
       )
+      unlink(tmpfile)
       message("# Restore PM2.5 and poverty w.r.t. median income dots in variable names")
       command <- paste("sed -i 's/wrt median income/w\\.r\\.t\\. median income/g;s/PM2\\_5/PM2\\.5/g'", outputMif)
       system(command)
@@ -100,16 +102,11 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       command <- paste("sed -i 's/N\\/A//g'", outputMif)
       system(command)
 
-      message("# Remove unwanted timesteps")
-      command <- paste("cut -d ';' -f1-21 ", outputMif, " > ", tmpfile)
-      system(command)
-      file.rename(tmpfile, outputMif)
-
       message("# Read data again")
       mifdata <- read.quitte(outputMif, factors = FALSE) %>%
-        mutate(model = paste(model)) %>%
-        mutate(value = ifelse(!is.finite(value) | is.na(value), 0, value)) %>%
-        mutate(scenario = gsub("^NA$", "", scenario))
+        mutate(value = ifelse(!is.finite(value) | is.na(value), NA, value)) %>%
+        mutate(scenario = gsub("^NA$", "", scenario)) %>%
+        filter(period %in% timesteps)
 
       if (! is.null(iiasatemplate) && file.exists(iiasatemplate)) {
         mifdata <- checkIIASASubmission(mifdata, iiasatemplate, logFile)
@@ -127,7 +124,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       }
 
       unlink(outputMif)
-      write.mif(mifdata, outputMif)
+      write.mif(mutate(mifdata, value = ifelse(is.na(value), "", value)), outputMif)
 
       # perform summation checks
       for (sumFile in intersect(mapping, names(summationsNames()))) {
@@ -148,7 +145,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
     Model <- NULL    # nolint
     dt <- readMIF(mif)
     scenarioNames <- unique(dt$Scenario)
-    dt[, Model := model]
+    if (! is.null(model)) dt[, Model := model]
     if (! is.null(scenRemove)) dt[, Scenario := gsub(scenRemove, "", Scenario)]
     if (! is.null(scenAdd)) {
       if (all(grepl(scenAdd, unique(dt$Scenario), fixed = TRUE))) {
