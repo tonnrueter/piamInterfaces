@@ -17,7 +17,8 @@ generateIIASASubmission(
   generateSingleOutput = TRUE,
   outputFilename = "submission.mif",
   iiasatemplate = NULL,
-  generatePlots = FALSE
+  generatePlots = FALSE,
+  timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10))
 )
 }
 \arguments{
@@ -49,6 +50,8 @@ if \code{generateSingleOutput} is set to TRUE (default: submission.mif)}
 used to delete superfluous variables and adapt units}
 
 \item{generatePlots}{boolean, whether to generate plots of failing summation checks}
+
+\item{timesteps}{timesteps that are accepted in final submission}
 }
 \description{
 Generates an IIASA submission from REMIND runs by applying a project-specific mapping
