@@ -44,6 +44,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
                                 factorCol = "piam_factor", weightCol = NULL, spatialCol = "spatial",
                                 model = "REMIND-MAgPIE"
                                 ) {
+  if (is.null(model)) model <- "Model"
   if (is.null(templates)) {
     templates <- chooseFromList(names(templateNames()), type = "templates",
                                 returnBoolean = FALSE, multiple = TRUE, addAllPattern = FALSE)

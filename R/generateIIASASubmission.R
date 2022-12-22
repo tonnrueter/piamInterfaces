@@ -64,7 +64,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   }
 
   message("\n### Generating .mif and .xlsx files using mapping ", mappingFile, ".")
-  message("# Correct model name to '", model, "'.")
+  if (! is.null(model)) message("# Correct model name to '", model, "'.")
   message("# Adapt scenario names: '",
           addToScen, "' will be prepended, '", removeFromScen, "' will be removed.")
   message("# Apply mapping from ", mappingFile)
@@ -104,7 +104,6 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
 
       message("# Read data again")
       mifdata <- read.quitte(outputMif, factors = FALSE) %>%
-        mutate(model = paste(model)) %>%
         mutate(value = ifelse(!is.finite(value) | is.na(value), NA, value)) %>%
         mutate(scenario = gsub("^NA$", "", scenario)) %>%
         filter(period %in% timesteps)
@@ -125,10 +124,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       }
 
       unlink(outputMif)
-      write.mif(mifdata, outputMif)
-      message("# Replace N/A for missing years with blanks as recommended by Ed Byers")
-      command <- paste("sed -i 's/N\\/A//g'", outputMif)
-      system(command)
+      write.mif(mutate(mifdata, value = ifelse(is.na(value), "", value)), outputMif)
 
       # perform summation checks
       for (sumFile in intersect(mapping, names(summationsNames()))) {
@@ -149,7 +145,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
     Model <- NULL    # nolint
     dt <- readMIF(mif)
     scenarioNames <- unique(dt$Scenario)
-    dt[, Model := model]
+    if (! is.null(model)) dt[, Model := model]
     if (! is.null(scenRemove)) dt[, Scenario := gsub(scenRemove, "", Scenario)]
     if (! is.null(scenAdd)) {
       if (all(grepl(scenAdd, unique(dt$Scenario), fixed = TRUE))) {
