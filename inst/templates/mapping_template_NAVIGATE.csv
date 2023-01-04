@@ -133,30 +133,30 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 107;2;carbon management;Carbon Removal|Materials|Plastics;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through both short- and long-lived plastic products. Emissions from incineration of plastic should be reported under Emissions|CO2|Waste|Biomass;
 108;2;carbon management;Carbon Removal|Materials|Other;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through other long-lived materials;
 109;2;carbon management;Carbon Removal|Other;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through other techniques  (please provide a definition of other sources in this category in the 'comments' tab);
-110;1;climate;Forcing;W/m2;Forcing;W/m2;;;;radiative forcing from all greenhouse gases and forcing agents, including contributions from albedo change, nitrate, and mineral dust;
-111;1;climate;Temperature|Global Mean;°C;Temperature|Global Mean;K;;;;change in global mean temperature relative to pre-industrial;
-112;2;climate;Concentration|CH4;ppb;Concentration|CH4;ppb;;;;atmospheric concentration of methane;
-113;2;climate;Concentration|CO2;ppm;Concentration|CO2;ppm;;;;atmospheric concentration of carbon dioxide;
-114;2;climate;Concentration|N2O;ppb;Concentration|N2O;ppb;;;;atmospheric concentration of nitrous oxide;
-115;2;climate;Forcing|Aerosol;W/m2;Forcing|Aerosol;W/m2;;;;total radiative forcing from aerosols;
-116;2;climate;Forcing|Aerosol|BC;W/m2;Forcing|Aerosol|BC;W/m2;;;;total radiative forcing from black carbon;
+110;1;climate;Forcing;W/m2;Forcing;W/m2;;;;radiative forcing from all greenhouse gases and forcing agents, including contributions from albedo change, nitrate, and mineral dust;x
+111;1;climate;Temperature|Global Mean;°C;Temperature|Global Mean;K;;;;change in global mean temperature relative to pre-industrial;x
+112;2;climate;Concentration|CH4;ppb;Concentration|CH4;ppb;;;;atmospheric concentration of methane;x
+113;2;climate;Concentration|CO2;ppm;Concentration|CO2;ppm;;;;atmospheric concentration of carbon dioxide;x
+114;2;climate;Concentration|N2O;ppb;Concentration|N2O;ppb;;;;atmospheric concentration of nitrous oxide;x
+115;2;climate;Forcing|Aerosol;W/m2;Forcing|Aerosol;W/m2;;;;total radiative forcing from aerosols;x
+116;2;climate;Forcing|Aerosol|BC;W/m2;Forcing|Aerosol|BC;W/m2;;;;total radiative forcing from black carbon;x
 117;2;climate;Forcing|Aerosol|Black and Organic Carbon;W/m2;;;;;;total radiative forcing from black and organic carbon;
-118;2;climate;Forcing|Aerosol|Cloud Indirect;W/m2;Forcing|Aerosol|Cloud Indirect;W/m2;;;;total radiative forcing from indirect effects of aerosols on clouds;
-119;2;climate;Forcing|Aerosol|OC;W/m2;Forcing|Aerosol|OC;W/m2;;;;total radiative forcing from organic carbon;
-120;2;climate;Forcing|Aerosol|Other;W/m2;Forcing|Aerosol|Other;W/m2;;;;total radiative forcing from aerosols not covered in the other categories (including aerosols from biomass burning);
-121;2;climate;Forcing|Aerosol|Sulfate Direct;W/m2;Forcing|Aerosol|Sulfate Direct;W/m2;;;;total radiative forcing from direct sufate effects;
-122;2;climate;Forcing|Albedo Change and Mineral Dust;W/m2;Forcing|Albedo Change and Mineral Dust;W/m2;;;;total radiative forcing from albedo change and mineral dust;
-123;2;climate;Forcing|CH4;W/m2;Forcing|CH4;W/m2;;;;total radiative forcing from CH4;
-124;2;climate;Forcing|CO2;W/m2;Forcing|CO2;W/m2;;;;total radiative forcing from CO2;
-125;2;climate;Forcing|F-Gases;W/m2;Forcing|F-Gases;W/m2;;;;total radiative forcing from F-gases;
-126;2;climate;Forcing|Kyoto Gases;W/m2;Forcing|Kyoto Gases;W/m2;;;;radiative forcing of the six Kyoto gases (CO2, CH4, N2O, SF6, HFCs, PFCs);
-127;2;climate;Forcing|Montreal Gases;W/m2;Forcing|Montreal Gases;W/m2;;;;total radiative forcing from Montreal gases;
-128;2;climate;Forcing|N2O;W/m2;Forcing|N2O;W/m2;;;;total radiative forcing from N2O;
-129;2;climate;Forcing|Other;W/m2;Forcing|Other;W/m2;;;;total radiative forcing from factors not covered in other categories (including stratospheric ozone and stratospheric water vapor);
-130;2;climate;Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;;;total radiative forcing from tropospheric ozone;
+118;2;climate;Forcing|Aerosol|Cloud Indirect;W/m2;Forcing|Aerosol|Cloud Indirect;W/m2;;;;total radiative forcing from indirect effects of aerosols on clouds;x
+119;2;climate;Forcing|Aerosol|OC;W/m2;Forcing|Aerosol|OC;W/m2;;;;total radiative forcing from organic carbon;x
+120;2;climate;Forcing|Aerosol|Other;W/m2;Forcing|Aerosol|Other;W/m2;;;;total radiative forcing from aerosols not covered in the other categories (including aerosols from biomass burning);x
+121;2;climate;Forcing|Aerosol|Sulfate Direct;W/m2;Forcing|Aerosol|Sulfate Direct;W/m2;;;;total radiative forcing from direct sufate effects;x
+122;2;climate;Forcing|Albedo Change and Mineral Dust;W/m2;Forcing|Albedo Change and Mineral Dust;W/m2;;;;total radiative forcing from albedo change and mineral dust;x
+123;2;climate;Forcing|CH4;W/m2;Forcing|CH4;W/m2;;;;total radiative forcing from CH4;x
+124;2;climate;Forcing|CO2;W/m2;Forcing|CO2;W/m2;;;;total radiative forcing from CO2;x
+125;2;climate;Forcing|F-Gases;W/m2;Forcing|F-Gases;W/m2;;;;total radiative forcing from F-gases;x
+126;2;climate;Forcing|Kyoto Gases;W/m2;Forcing|Kyoto Gases;W/m2;;;;radiative forcing of the six Kyoto gases (CO2, CH4, N2O, SF6, HFCs, PFCs);x
+127;2;climate;Forcing|Montreal Gases;W/m2;Forcing|Montreal Gases;W/m2;;;;total radiative forcing from Montreal gases;x
+128;2;climate;Forcing|N2O;W/m2;Forcing|N2O;W/m2;;;;total radiative forcing from N2O;x
+129;2;climate;Forcing|Other;W/m2;Forcing|Other;W/m2;;;;total radiative forcing from factors not covered in other categories (including stratospheric ozone and stratospheric water vapor);x
+130;2;climate;Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;;;total radiative forcing from tropospheric ozone;x
 131;1;demography;Population;million;Population;million;;;;Total population;
 132;2;demography;Population|Rural;million;;;;;;Total population living in rural areas;
-133;2;demography;Population|Urban;million;Population|Urban;million;;;;Total population living in urban areas;
+133;2;demography;Population|Urban;million;Population|Urban;million;;;;Total population living in urban areas;x
 134;2;demography;Population|Working Age;million;;;;;;Total working age population (age 15-65 years);
 135;1;economy;Consumption;billion US$2010/yr;Consumption;billion US$2005/yr;1.10774;;;total consumption of all goods, by all consumers in a region;
 136;1;economy;GDP|MER;billion US$2010/yr;GDP|MER;billion US$2005/yr;1.10774;;;GDP at market exchange rate;
@@ -170,7 +170,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 144;1;economy;Export;billion US$2010/yr;;;;;;total exports measured in monetary quantities.;
 145;1;economy;Import;billion US$2010/yr;;;;;;total imports measured in monetary quantities.;
 146;2;economy;Capital Stock;billion US$2010/yr;;;;;;Macroeconomic capital stock;
-147;2;economy;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;%;;;;Real interest rate or return on capital that is relevant for energy system investments;
+147;2;economy;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;unitless;;;;Real interest rate or return on capital that is relevant for energy system investments;
 148;2;economy;Value Added|Industry|Chemicals;billion US$2010/yr;Value Added|Industry|Chemicals;billion US$2005/yr;1.10774;;;value added of the chemical industries.;
 149;2;economy;Value Added|Industry|Iron and Steel;billion US$2010/yr;;;;;;value added of iron and steel production;
 150;2;economy;Value Added|Industry|Non-Metallic Minerals;billion US$2010/yr;;;;;;value added of non-metallic minerals industries;
@@ -186,8 +186,8 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 159;1;emissions (CO2);Emissions|CO2|AFOLU|Agriculture;Mt CO2/yr;;;;;;CO2 emissions from agriculture;
 160;1;emissions (CO2);Emissions|CO2|AFOLU|Land;Mt CO2/yr;Emi|CO2|+|Land-Use Change;Mt CO2/yr;;;;net CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF);
 161;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Positive;Mt CO2/yr;;;;;;positive CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from deforestation;
-162;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Negative;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Regrowth;Mt CO2/yr;;;;negative CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from afforestation;
-163;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Wetlands;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Peatland;Mt CO2/yr;;;;CO2 emissions from managed peatlands (drained and rewetted);
+162;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Negative;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Regrowth;Mt CO2/yr;;;;negative CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from afforestation;x
+163;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Wetlands;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Peatland;Mt CO2/yr;;;;CO2 emissions from managed peatlands (drained and rewetted);x
 164;1;emissions (CO2);Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;;;CO2 emissions from industrial processes (IPCC categories 2A, B, C, E);
 165;1;emissions (CO2);Gross Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;;;Gross CO2 emissions from industrial processes (IPCC categories 2A, B, C, E), not accounting for negative emissions from BECCS;
 166;2;emissions (CO2);Emissions|CO2|Industrial Processes|Iron and Steel;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from iron & steel;
@@ -251,7 +251,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 220;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Aviation;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by domestic aviation;
 221;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Shipping;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by domestic shipping;
 222;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by light duty vehicles;
-223;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Emi|CO2|Transport|Rail|Demand;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by trains;
+223;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Emi|CO2|Transport|Rail|Demand;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by trains;x
 224;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Truck;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by trucks;
 225;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus|Liquids;Mt CO2/yr;;;;;;Fossil CO2 emissions from Liquids use in the transportation sector by buses;
 226;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus|Gases;Mt CO2/yr;;;;;;Fossil CO2 emissions from Gases use in the transportation sector by buses;
@@ -365,9 +365,9 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 327;2;emissions (non-CO2);Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Pasture;kt N2O/yr;;;;N2O  emissions from soil management practices in the agriculture sector;
 328;2;emissions (non-CO2);Emissions|N2O|AFOLU|Land;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;;;;N2O emissions from forestry and other land use;
 329;2;emissions (non-CO2);Emissions|N2O|AFOLU|Land|Wetlands;kt N2O/yr;Emi|N2O|Land-Use Change|+|Peatland;kt N2O/yr;;;;N2O emissions from managed peatlands (drained and rewetted);
-330;2;emissions (non-CO2);Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|Energy Supply and Demand;kt N2O/yr;;;;N2O emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
+330;2;emissions (non-CO2);Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|Energy Supply and Demand;kt N2O/yr;;;;N2O emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);x
 331;2;emissions (non-CO2);Emissions|N2O|Waste;kt N2O/yr;Emi|N2O|+|Waste;kt N2O/yr;;;;N2O emissions from waste (IPCC category 6);
-332;2;emissions (non-CO2);Emissions|N2O|Other;kt N2O/yr;Emi|N2O|Other;kt N2O/yr;;;;N2O emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);
+332;2;emissions (non-CO2);Emissions|N2O|Other;kt N2O/yr;Emi|N2O|Other;kt N2O/yr;;;;N2O emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);x
 333;2;emissions (non-CO2);Emissions|NH3;Mt NH3/yr;Emi|NH3;Mt NH3/yr;;;;total ammonium emissions;
 334;2;emissions (non-CO2);Emissions|NH3|AFOLU;Mt NH3/yr;Emi|NH3|Land Use;Mt NH3/yr;;;;Land Use based Ammonia Emissions;
 335;2;emissions (non-CO2);Emissions|NH3|Energy;Mt NH3/yr;Emi|NH3|Energy Supply and Demand;Mt NH3/yr;;;;Ammonia emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
@@ -393,7 +393,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 355;2;emissions (non-CO2);Emissions|OC|Energy|Supply;Mt OC/yr;Emi|OC|Energy Supply;Mt OC/yr;;;;OC emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g. refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei), fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C);
 356;2;emissions (non-CO2);Emissions|OC|Waste;Mt OC/yr;Emi|OC|Waste;Mt OC/yr;;;;OC emissions from waste (IPCC category 6);
 357;2;emissions (non-CO2);Emissions|OC|Other;Mt OC/yr;Emi|OC|Solvents;Mt OC/yr;;;;OC emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);
-358;2;emissions (non-CO2);Emissions|PFC;kt CF4-equiv/yr;Emi|PFC;kt CF4-equiv/yr;;;;total emissions of perfluorocarbons (PFCs), provided as aggregate CF4-equivalents;
+358;2;emissions (non-CO2);Emissions|PFC;kt CF4-equiv/yr;Emi|PFC;kt CF4-equiv/yr;;;;total emissions of perfluorocarbons (PFCs), provided as aggregate CF4-equivalents;x
 359;2;emissions (non-CO2);Emissions|SF6;kt SF6/yr;Emi|SF6;kt SF6/yr;;;;total emissions of sulfur hexafluoride (SF6);
 360;2;emissions (non-CO2);Emissions|Sulfur|AFOLU;Mt SO2/yr;Emi|SO2|Land Use;Mt SO2/yr;;;;Sulfur (SO2) emissions from agriculture, forestry and other land use (IPCC category 3);
 361;2;emissions (non-CO2);Emissions|Sulfur|Energy;Mt SO2/yr;Emi|SO2|Energy Supply and Demand;Mt SO2/yr;;;;Sulfur (SO2) emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
@@ -475,7 +475,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 437;2;energy (capacity);Capacity|Electricity|Geothermal;GW;Cap|Electricity|Geothermal;GW;;;;Total installed (available) capacity of operating geothermal plants;
 438;2;energy (capacity);Capacity|Electricity|Oil;GW;Cap|Electricity|Oil|w/o CC;GW;;;;Total installed (available) capacity of operating oil plants;
 439;2;energy (capacity);Capacity|Electricity|Other;GW;Cap|Electricity|Hydrogen;GW;;;;Total installed (available) capacity of all others types of operating power plants;
-440;2;energy (capacity);Capacity|Electricity|Peak Demand;GW;Cap|Electricity|Peak Demand|Estimated from FE x 1p4 x 1p1;GW;;;;peak (maximum) electricity load;
+440;2;energy (capacity);Capacity|Electricity|Peak Demand;GW;Cap|Electricity|Peak Demand|Estimated from FE x 1p4 x 1p1;GW;;;;peak (maximum) electricity load;x
 441;2;energy (capacity);Capacity|Electricity|Solar;GW;Cap|Electricity|Solar;GW;;;;Total installed (available) capacity of all operating solar facilities (both CSP and PV);
 442;2;energy (capacity);Capacity|Electricity|Storage;GW;Cap|Electricity|Storage|Battery;GW;;;;Total installed (available) capacity of operating electricity storage;
 443;2;energy (capacity);Capacity|Gases|Biomass;GW;Cap|Gases|Biomass;GW;;;;Total installed (available) capacity of biomass to gas plants.;
@@ -520,11 +520,11 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 482;2;energy (capacity);Cumulative Capacity|Hydrogen|Biomass|w/ CCS;GW;Cumulative Cap|Hydrogen|Biomass|w/ CC;GW;;;;Cumulative installed capacity (since 2005) of biomass to hydrogen plants with CCS. The cumulative capacity of CCS biomass to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Biomass|w/ CCS|1, ..., Cumulative Capacity|Hydrogen|Biomass|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
 483;2;energy (capacity);Cumulative Capacity|Hydrogen|Biomass|w/o CCS;GW;Cumulative Cap|Hydrogen|Biomass|w/o CC;GW;;;;Cumulative installed capacity (since 2005) of biomass to hydrogen plants without CCS. The cumulative capacity of biomass to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Biomass|w/o CCS|1, ..., Cumulative Capacity|Hydrogen|Biomass|w/o CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
 484;2;energy (capacity);Cumulative Capacity|Hydrogen|Coal;GW;Cumulative Cap|Hydrogen|Coal;GW;;;;Cumulative installed capacity (since 2005) of coal to hydrogen plants.;
-485;2;energy (capacity);Cumulative Capacity|Hydrogen|Coal|w/ CCS;GW;Cumulative Cap|Hydrogen|Coal|w CC;GW;;;;Cumulative installed capacity (since 2005) of coal to hydrogen plants with CCS. The cumulative capacity of CCS coal to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Coal|w/ CCS|1, ..., Cumulative Capacity|Hydrogen|Coal|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
+485;2;energy (capacity);Cumulative Capacity|Hydrogen|Coal|w/ CCS;GW;Cumulative Cap|Hydrogen|Coal|w/ CC;GW;;;;Cumulative installed capacity (since 2005) of coal to hydrogen plants with CCS. The cumulative capacity of CCS coal to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Coal|w/ CCS|1, ..., Cumulative Capacity|Hydrogen|Coal|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
 486;2;energy (capacity);Cumulative Capacity|Hydrogen|Coal|w/o CCS;GW;Cumulative Cap|Hydrogen|Coal|w/o CC;GW;;;;Cumulative installed capacity (since 2005) of coal to hydrogen plants without CCS. The cumulative capacity of coal to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Coal|w/o CCS|1, ..., Cumulative Capacity|Hydrogen|Coal|w/o CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
 487;2;energy (capacity);Cumulative Capacity|Hydrogen|Electricity;GW;Cumulative Cap|Hydrogen|Electricity;GW;;;;Cumulative installed capacity (since 2005) of hydrogen-by-electrolysis plants. The cumulative capacity of hydrogen-by-electrolysis plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Electricity|1, ..., Cumulative Capacity|Hydrogen|Electricity|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
 488;2;energy (capacity);Cumulative Capacity|Hydrogen|Gas;GW;Cumulative Cap|Hydrogen|Gas;GW;;;;Cumulative installed capacity (since 2005) of gas to hydrogen plants.;
-489;2;energy (capacity);Cumulative Capacity|Hydrogen|Gas|w/ CCS;GW;Cumulative Cap|Hydrogen|Gas|w CC;GW;;;;Cumulative installed capacity (since 2005) of gas to hydrogen plants with CCS. The cumulative capacity of CCS gas to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Gas|w/ CCS|1, ..., Cumulative Capacity|Hydrogen|Gas|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
+489;2;energy (capacity);Cumulative Capacity|Hydrogen|Gas|w/ CCS;GW;Cumulative Cap|Hydrogen|Gas|w/ CC;GW;;;;Cumulative installed capacity (since 2005) of gas to hydrogen plants with CCS. The cumulative capacity of CCS gas to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Gas|w/ CCS|1, ..., Cumulative Capacity|Hydrogen|Gas|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
 490;2;energy (capacity);Cumulative Capacity|Hydrogen|Gas|w/o CCS;GW;Cumulative Cap|Hydrogen|Gas|w/o CC;GW;;;;Cumulative installed capacity (since 2005) of gas to hydrogen plants without CCS. The cumulative capacity of gas to hydrogen plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Hydrogen|Gas|w/o CCS|1, ..., Cumulative Capacity|Hydrogen|Gas|w/o CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
 491;2;energy (capacity);Cumulative Capacity|Liquids|Biomass;GW;;;;;;Cumulative installed capacity (since 2005) of biomass to liquids plants.;
 492;2;energy (capacity);Cumulative Capacity|Liquids|Biomass|w/ CCS;GW;;;;;;Cumulative installed capacity (since 2005) of biomass to liquids plants with CCS. The cumulative capacity of CCS biomass to liquids plants by plant type for which capital costs are reported should be reported by adding variables Cumulative Capacity|Liquids|Biomass|w/ CCS|1, ..., Cumulative Capacity|Liquids|Biomass|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
@@ -862,19 +862,19 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 824;2;energy (final);Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of liquids from fossil origin (conventional & unconventional petroleum, coal-to-liquids, gas-to-liquids);
 825;1;energy (final);Final Energy|Transportation;EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;;;;final energy consumed in the transportation sector, excluding bunker fuels, excluding pipelines;
 826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;
-826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;
-826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;
+826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;x
+826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;x
 827;1;energy (final);Final Energy|Transportation|Electricity;EJ/yr;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;;;;final energy consumption by the transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses;
 828;1;energy (final);Final Energy|Transportation|Gases;EJ/yr;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;;;;final energy consumption by the transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;
 829;1;energy (final);Final Energy|Transportation|Hydrogen;EJ/yr;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;;;;final energy consumption by the transportation sector of hydrogen;
 830;1;energy (final);Final Energy|Transportation|Liquids;EJ/yr;FE|Transport|w/o Bunkers|+|Liquids;EJ/yr;;;;final energy consumption by the transportation sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);
 831;2;energy (final);Final Energy|Transportation|Other;EJ/yr;;;;;;final energy consumption by the transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);
-832;1;energy (final);Final Energy|Transportation|Bus;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;final energy consumption in the transportation sector by bus;
-833;1;energy (final);Final Energy|Transportation|LDV;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;final energy consumption in the transportation sector by light duty vehicles;
-834;1;energy (final);Final Energy|Transportation|Rail;EJ/yr;FE|Transport|Rail;EJ/yr;;;;final energy consumption in the transportation sector by rail;
-835;1;energy (final);Final Energy|Transportation|Truck;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;;;final energy consumption in the transportation sector by trucks;
-836;1;energy (final);Final Energy|Transportation|Domestic Aviation;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy consumption in the transportation sector by domestic aviation;
-837;1;energy (final);Final Energy|Transportation|Domestic Shipping;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;;;;final energy consumption in the transportation sector by domestic shipping;
+832;1;energy (final);Final Energy|Transportation|Bus;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;final energy consumption in the transportation sector by bus;x
+833;1;energy (final);Final Energy|Transportation|LDV;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;final energy consumption in the transportation sector by light duty vehicles;x
+834;1;energy (final);Final Energy|Transportation|Rail;EJ/yr;FE|Transport|Rail;EJ/yr;;;;final energy consumption in the transportation sector by rail;x
+835;1;energy (final);Final Energy|Transportation|Truck;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;;;final energy consumption in the transportation sector by trucks;x
+836;1;energy (final);Final Energy|Transportation|Domestic Aviation;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy consumption in the transportation sector by domestic aviation;x
+837;1;energy (final);Final Energy|Transportation|Domestic Shipping;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;;;;final energy consumption in the transportation sector by domestic shipping;x
 838;2;energy (final);Final Energy|Transportation|Liquids|Biomass;EJ/yr;;;;;;final energy consumption by the transportation sector of liquid biofuels;
 839;2;energy (final);Final Energy|Transportation|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the transportation sector of fossil based liquids (from conventional & unconventional oil, coal-to-liquids, gas-to-liquids);
 840;2;energy (final);Final Energy|Transportation|Liquids|Electricity;EJ/yr;;;;;;final energy consumption by the transportation sector of synthetic liquid efuels;
@@ -885,10 +885,10 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 844;2;energy (final);Final Energy|Transportation|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption by the transportation sector of hydrogen from biomass;
 845;2;energy (final);Final Energy|Transportation|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption by the transportation sector of synthetic or derived Hydrogen of fossil origin;
 846;2;energy (final);Final Energy|Transportation|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption by the transportation sector of green hydrogen;
-847;2;energy (final);Final Energy|Transportation|Bus|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by bus;
-848;2;energy (final);Final Energy|Transportation|Bus|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by bus;
-849;2;energy (final);Final Energy|Transportation|Bus|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by bus;
-850;2;energy (final);Final Energy|Transportation|Bus|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by bus;
+847;2;energy (final);Final Energy|Transportation|Bus|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by bus;x
+848;2;energy (final);Final Energy|Transportation|Bus|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by bus;x
+849;2;energy (final);Final Energy|Transportation|Bus|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by bus;x
+850;2;energy (final);Final Energy|Transportation|Bus|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by bus;x
 851;2;energy (final);Final Energy|Transportation|LDV|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by LDV;
 852;2;energy (final);Final Energy|Transportation|LDV|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by LDV;
 853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;;;;;;;
@@ -897,14 +897,14 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 856;2;energy (final);Final Energy|Transportation|Rail|Gases;EJ/yr;;;;;;;
 857;2;energy (final);Final Energy|Transportation|Rail|Hydrogen;EJ/yr;;;;;;;
 858;2;energy (final);Final Energy|Transportation|Rail|Liquids;EJ/yr;;;;;;;
-859;2;energy (final);Final Energy|Transportation|Truck|Electricity;EJ/yr;FE|Transport|Freight|Road|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Truck;
-860;2;energy (final);Final Energy|Transportation|Truck|Gases;EJ/yr;FE|Transport|Freight|Road|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Truck;
-861;2;energy (final);Final Energy|Transportation|Truck|Hydrogen;EJ/yr;FE|Transport|Freight|Road|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by Truck;
-862;2;energy (final);Final Energy|Transportation|Truck|Liquids;EJ/yr;FE|Transport|Freight|Road|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Truck;
+859;2;energy (final);Final Energy|Transportation|Truck|Electricity;EJ/yr;FE|Transport|Freight|Road|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Truck;x
+860;2;energy (final);Final Energy|Transportation|Truck|Gases;EJ/yr;FE|Transport|Freight|Road|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Truck;x
+861;2;energy (final);Final Energy|Transportation|Truck|Hydrogen;EJ/yr;FE|Transport|Freight|Road|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by Truck;x
+862;2;energy (final);Final Energy|Transportation|Truck|Liquids;EJ/yr;FE|Transport|Freight|Road|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Truck;x
 863;2;energy (final);Final Energy|Transportation|Domestic Aviation|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Domestic Aviation;
 864;2;energy (final);Final Energy|Transportation|Domestic Aviation|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Domestic Aviation;
-865;2;energy (final);Final Energy|Transportation|Domestic Aviation|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by Domestic Aviation;
-866;2;energy (final);Final Energy|Transportation|Domestic Aviation|Liquids;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Domestic Aviation;
+865;2;energy (final);Final Energy|Transportation|Domestic Aviation|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by Domestic Aviation;x
+866;2;energy (final);Final Energy|Transportation|Domestic Aviation|Liquids;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by Domestic Aviation;x
 867;2;energy (final);Final Energy|Transportation|Domestic Shipping|Electricity;EJ/yr;;;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by Domestic Shipping;
 868;2;energy (final);Final Energy|Transportation|Domestic Shipping|Gases;EJ/yr;;;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by Domestic Shipping;
 869;2;energy (final);Final Energy|Transportation|Domestic Shipping|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen in the transportation sector by Domestic Shipping;
@@ -912,9 +912,9 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 871;2;energy (final);Final Energy|Transportation|Bus|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the transportation sector by bus;
 872;2;energy (final);Final Energy|Transportation|Bus|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the transportation sector by bus;
 873;2;energy (final);Final Energy|Transportation|Bus|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the transportation sector by bus;
-874;2;energy (final);Final Energy|Transportation|Bus|Liquids|Fossil;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the transportation sector by bus;
-875;2;energy (final);Final Energy|Transportation|Bus|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the transportation sector by bus;
-876;2;energy (final);Final Energy|Transportation|Bus|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the transportation sector by bus;
+874;2;energy (final);Final Energy|Transportation|Bus|Liquids|Fossil;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the transportation sector by bus;x
+875;2;energy (final);Final Energy|Transportation|Bus|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the transportation sector by bus;x
+876;2;energy (final);Final Energy|Transportation|Bus|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the transportation sector by bus;x
 877;2;energy (final);Final Energy|Transportation|Bus|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the transportation sector by bus;
 878;2;energy (final);Final Energy|Transportation|Bus|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the transportation sector by bus;
 879;2;energy (final);Final Energy|Transportation|Bus|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the transportation sector by bus;
@@ -930,9 +930,9 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 889;2;energy (final);Final Energy|Transportation|Truck|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the transportation sector by Truck;
 890;2;energy (final);Final Energy|Transportation|Truck|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the transportation sector by Truck;
 891;2;energy (final);Final Energy|Transportation|Truck|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the transportation sector by Truck;
-892;2;energy (final);Final Energy|Transportation|Truck|Liquids|Fossil;EJ/yr;FE|Transport|Freight|Road|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the transportation sector by Truck;
-893;2;energy (final);Final Energy|Transportation|Truck|Liquids|Biomass;EJ/yr;FE|Transport|Freight|Road|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the transportation sector by Truck;
-894;2;energy (final);Final Energy|Transportation|Truck|Liquids|Electricity;EJ/yr;FE|Transport|Freight|Road|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the transportation sector by Truck;
+892;2;energy (final);Final Energy|Transportation|Truck|Liquids|Fossil;EJ/yr;FE|Transport|Freight|Road|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the transportation sector by Truck;x
+893;2;energy (final);Final Energy|Transportation|Truck|Liquids|Biomass;EJ/yr;FE|Transport|Freight|Road|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the transportation sector by Truck;x
+894;2;energy (final);Final Energy|Transportation|Truck|Liquids|Electricity;EJ/yr;FE|Transport|Freight|Road|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the transportation sector by Truck;x
 895;2;energy (final);Final Energy|Transportation|Truck|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the transportation sector by Truck;
 896;2;energy (final);Final Energy|Transportation|Truck|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the transportation sector by Truck;
 897;2;energy (final);Final Energy|Transportation|Truck|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the transportation sector by Truck;
@@ -992,27 +992,27 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 951;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Electricity;EJ/yr;;;;;;final energy consumption of liquid fuels in the transportation sector by Hybrid Bus;
 952;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Liquids;EJ/yr;;;;;;final energy consumption of liquid fuels in the transportation sector by Hybrid Bus;
 953;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Gases;EJ/yr;;;;;;final energy consumption of gases in the transportation sector by Hybrid Bus;
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Liquids|Oil;EJ/yr;;;;final energy consumed for passenger transportation;
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Liquids|Oil;EJ/yr;;;;final energy consumed for passenger transportation;x
 955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;;;;;;final energy consumed for freight transportation;
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;final energy consumed for passenger transportation;
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;final energy consumed for passenger transportation;
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Rail;EJ/yr;;;;final energy consumed for passenger transportation;
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy consumed for passenger transportation;
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;;;final energy consumed for freight transportation;
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Rail;EJ/yr;;;;final energy consumed for freight transportation;
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;;;;final energy consumed for freight transportation;
-956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;;;;
-956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|LDV|Electricity;EJ/yr;;;;;
-956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Rail|Electricity;EJ/yr;;;;;
-957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;;
-957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|LDV|Gases;EJ/yr;;;;;
-958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;;
-958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|LDV|Hydrogen;EJ/yr;;;;;
-958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;;;;;
-;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;;
-;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|LDV|Liquids;EJ/yr;;;;;
-;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Rail|Liquids;EJ/yr;;;;;
-959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;;;;;
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;final energy consumed for passenger transportation;x
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;final energy consumed for passenger transportation;x
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Rail;EJ/yr;;;;final energy consumed for passenger transportation;x
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy consumed for passenger transportation;x
+955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;;;final energy consumed for freight transportation;x
+955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Rail;EJ/yr;;;;final energy consumed for freight transportation;x
+955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;;;;final energy consumed for freight transportation;x
+956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;;;;x
+956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|LDV|Electricity;EJ/yr;;;;;x
+956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Rail|Electricity;EJ/yr;;;;;x
+957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;;x
+957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|LDV|Gases;EJ/yr;;;;;x
+958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;;x
+958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|LDV|Hydrogen;EJ/yr;;;;;x
+958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;;;;;x
+;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;;x
+;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|LDV|Liquids;EJ/yr;;;;;x
+;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Rail|Liquids;EJ/yr;;;;;x
+959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;;;;;x
 960;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of liquid biofuels;
 961;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of fossil based liquids (from conventional & unconventional oil, coal-to-liquids, gas-to-liquids);
 962;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of synthetic liquid efuels;
@@ -1031,10 +1031,10 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 975;3;energy (final);Final Energy|Transportation|Freight|Rail;EJ/yr;;;;;;final energy consumption by the freight transportation sector by rail;
 976;3;energy (final);Final Energy|Transportation|Freight|Truck;EJ/yr;;;;;;final energy consumption by the freight transportation sector by Truck;
 977;3;energy (final);Final Energy|Transportation|Freight|LDV;EJ/yr;;;;;;final energy consumption by the freight transportation sector by LDV;
-978;1;energy (final);Final Energy|Bunkers;EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumption in the Bunkers sector;
-978;1;energy (final);Final Energy|Bunkers;EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumption in the Bunkers sector;
-979;1;energy (final);Final Energy|Bunkers|International Shipping;EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumption in the Bunkers sector by International shipping;
-980;1;energy (final);Final Energy|Bunkers|International Aviation;EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumption in the Bunkers sector by International aviation;
+978;1;energy (final);Final Energy|Bunkers;EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumption in the Bunkers sector;x
+978;1;energy (final);Final Energy|Bunkers;EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumption in the Bunkers sector;x
+979;1;energy (final);Final Energy|Bunkers|International Shipping;EJ/yr;FE|Transport|Freight|International Shipping;EJ/yr;;;;final energy consumption in the Bunkers sector by International shipping;x
+980;1;energy (final);Final Energy|Bunkers|International Aviation;EJ/yr;FE|Transport|Pass|Aviation|International;EJ/yr;;;;final energy consumption in the Bunkers sector by International aviation;x
 981;3;energy (final);Final Energy|Bunkers|Passenger;EJ/yr;;;;;;final energy consumption by the international Passenger transportation sector;
 982;3;energy (final);Final Energy|Bunkers|Passenger|International Shipping;EJ/yr;;;;;;final energy consumption by the Passenger transportation sector by International Shipping;
 983;3;energy (final);Final Energy|Bunkers|Passenger|International Aviation;EJ/yr;;;;;;final energy consumption by the Passenger transportation sector by International Aviation;
@@ -1057,18 +1057,18 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1000;1;energy (final);Final Energy|Bunkers|International Aviation|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the Bunkers sector by International Aviation;
 1001;1;energy (final);Final Energy|Bunkers|International Aviation|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the Bunkers sector by International Aviation;
 1002;1;energy (final);Final Energy|Bunkers|International Aviation|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the Bunkers sector by International Aviation;
-1003;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Fossil;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Aviation;
-1004;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the Bunkers sector by International Aviation;
-1005;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the Bunkers sector by International Aviation;
+1003;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Fossil;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Aviation;x
+1004;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the Bunkers sector by International Aviation;x
+1005;1;energy (final);Final Energy|Bunkers|International Aviation|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Aviation|International|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the Bunkers sector by International Aviation;x
 1006;1;energy (final);Final Energy|Bunkers|International Aviation|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the Bunkers sector by International Aviation;
 1007;1;energy (final);Final Energy|Bunkers|International Aviation|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the Bunkers sector by International Aviation;
 1008;1;energy (final);Final Energy|Bunkers|International Aviation|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the Bunkers sector by International Aviation;
 1009;1;energy (final);Final Energy|Bunkers|International Shipping|Gases|Fossil;EJ/yr;;;;;;final energy consumption of fossil gases in the Bunkers sector by International Shipping;
 1010;1;energy (final);Final Energy|Bunkers|International Shipping|Gases|Biomass;EJ/yr;;;;;;final energy consumption of biogas in the Bunkers sector by International Shipping;
 1011;1;energy (final);Final Energy|Bunkers|International Shipping|Gases|Electricity;EJ/yr;;;;;;final energy consumption of gaseous efuels in the Bunkers sector by International Shipping;
-1012;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Fossil;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Shipping;
-1013;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Biomass;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the Bunkers sector by International Shipping;
-1014;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Electricity;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the Bunkers sector by International Shipping;
+1012;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Fossil;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Fossil;EJ/yr;;;;final energy consumption of fossil Liquids in the Bunkers sector by International Shipping;x
+1013;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Biomass;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Biomass;EJ/yr;;;;final energy consumption of bioliquids in the Bunkers sector by International Shipping;x
+1014;1;energy (final);Final Energy|Bunkers|International Shipping|Liquids|Electricity;EJ/yr;FE|Transport|Freight|International Shipping|Liquids|Hydrogen;EJ/yr;;;;final energy consumption of liquid efuels in the Bunkers sector by International Shipping;x
 1015;1;energy (final);Final Energy|Bunkers|International Shipping|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption of fossil Hydrogen in the Bunkers sector by International Shipping;
 1016;1;energy (final);Final Energy|Bunkers|International Shipping|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption of hydrogen from biomass in the Bunkers sector by International Shipping;
 1017;1;energy (final);Final Energy|Bunkers|International Shipping|Hydrogen|Electricity;EJ/yr;;;;;;final energy consumption of green hydrogen in the Bunkers sector by International Shipping;
@@ -1312,29 +1312,29 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1250;1;energy (service);Energy Service|Commercial|Floor Space;bn m2;;;;;;energy service demand for conditioned floor space in commercial buildings;
 1251;1;energy (service);Energy Service|Residential and Commercial|Floor Space;bn m2;Energy Service|Buildings|Floor Space;bn m2/yr;;;;energy service demand for conditioned floor space in buildings;
 1252;1;energy (service);Energy Service|Residential|Floor Space;bn m2;;;;;;energy service demand for conditioned floor space in residential buildings;
-1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport;
-1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport;
-1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport;
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport;
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport;
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport;
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;;;;energy service demand for passenger transport;
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport;x
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport;x
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport;x
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport;x
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport;x
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport;x
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;;;;energy service demand for passenger transport;x
 1255;2;energy (service);Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;energy service demand for freight transport on aircrafts;
-1256;2;energy (service);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport on domestic ships;
+1256;2;energy (service);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport on domestic ships;x
 1257;2;energy (service);Energy Service|Transportation|Freight|Other;bn tkm/yr;;;;;;energy service demand for freight transport using other modes (please provide a definition of the modes in this category in the 'comments' tab);
-1258;2;energy (service);Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport on railways;
-1259;2;energy (service);Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport on roads;
-1260;2;energy (service);Energy Service|Transportation|Passenger|Domestic Aviation;bn pkm/yr;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;;;;energy service demand for passenger transport on aircrafts;
+1258;2;energy (service);Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport on railways;x
+1259;2;energy (service);Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport on roads;x
+1260;2;energy (service);Energy Service|Transportation|Passenger|Domestic Aviation;bn pkm/yr;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;;;;energy service demand for passenger transport on aircrafts;x
 1262;2;energy (service);Energy Service|Transportation|Passenger|Domestic Navigation;bn pkm/yr;;;;;;energy service demand for passenger transport on domestic ships;
 1263;2;energy (service);Energy Service|Transportation|Passenger|Other;bn pkm/yr;;;;;;energy service demand for passenger transport using other modes (please provide a definition of the modes in this category in the 'comments' tab);
-1264;2;energy (service);Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport on railways;
-1265;2;energy (service);Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;bn pkm/yr;;;;energy service demand for passenger transport on roads;
+1264;2;energy (service);Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport on railways;x
+1265;2;energy (service);Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;bn pkm/yr;;;;energy service demand for passenger transport on roads;x
 1266;2;energy (service);Energy Service|Bunkers|Freight|International Shipping;bn tkm/yr;;;;;;energy service demand for freight transport operating on international shipping routes;
 1267;2;energy (service);Energy Service|Transportation|Passenger|Cycling;bn pkm/yr;;;;;;;
 1267;2;energy (service);Energy Service|Transportation|Passenger|Walking;bn pkm/yr;;;;;;energy service demand for passenger transport on bicycles and by foot;
-1268;2;energy (service);Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;ES|Transport|Pass|Road|LDV|Two-Wheelers;bn pkm/yr;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles);
-1269;2;energy (service);Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);
-1270;2;energy (service);Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport on roads (buses);
+1268;2;energy (service);Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;ES|Transport|Pass|Road|LDV|Two-Wheelers;bn pkm/yr;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles);x
+1269;2;energy (service);Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);x
+1270;2;energy (service);Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport on roads (buses);x
 1270;1;energy (trade);Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;;;;net exports of solid, unprocessed biomass, at the global level these should add up to the trade losses only;
 1271;1;energy (trade);Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;;;;net exports of coal, at the global level these should add up to the trade losses only;
 1272;1;energy (trade);Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;;;;net exports of natural gas, at the global level these should add up to the trade losses only;

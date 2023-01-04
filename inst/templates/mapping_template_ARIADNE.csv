@@ -235,7 +235,7 @@
 3;"emissions (air pollutants)";"Emissions|OC|Energy|Demand|Transportation";"Mt OC/yr";"OC emissions from fuel combustion in transportation sector (IPCC category 1A3), excluding pipeline emissions (IPCC category 1A3ei)";"Emi|OC|Energy Demand|Transport";"Mt OC/yr";1;;0;;
 3;"emissions (air pollutants)";"Emissions|OC|Energy|Supply";"Mt OC/yr";"OC emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g. refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei), fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C)";"Emi|OC|Energy Supply";"Mt OC/yr";1;;0;;
 3;"emissions (air pollutants)";"Emissions|OC|Other";"Mt OC/yr";"OC emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab)";;;;;0;;
-3;"emissions (GHGs)";"Emissions|PFC";"kt CF4-equiv/yr";"total emissions of perfluorocarbons (PFCs), provided as aggregate CF4-equivalents";;;;;0;;
+3;"emissions (GHGs)";"Emissions|PFC";"kt CF4-equiv/yr";"total emissions of perfluorocarbons (PFCs), provided as aggregate CF4-equivalents";"Emi|PFC";"kt CF4-equiv/yr";1;;0;;"x"
 3;"emissions (GHGs)";"Emissions|SF6";"kt SF6/yr";"total emissions of sulfur hexafluoride (SF6)";"Emi|SF6";"kt SF6/yr";1;;0;;
 3;"emissions (air pollutants)";"Emissions|Sulfur|AFOLU";"Mt SO2/yr";"Sulfur (SO2) emissions from agriculture, forestry and other land use (IPCC category 3)";"Emi|SO2|Land Use";"Mt SO2/yr";1;;0;;
 3;"emissions (air pollutants)";"Emissions|Sulfur|Energy";"Mt SO2/yr";"Sulfur (SO2) emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B)";"Emi|SO2|Energy Supply and Demand";"Mt SO2/yr";1;;0;;
@@ -304,7 +304,7 @@
 3;"energy (electricity)";"Capacity|Electricity|Non-Renewable Waste";"GW";"Total installed (available) net capacity of non renewable waste and industrial waste heat power plants , including plants held in an operating reserve";;;;;0;;
 3;"energy (electricity)";"Capacity|Electricity|Ocean";"GW";"Total installed (available) net capacity of ocean power plants";;;;;0;;
 2;"energy (electricity)";"Capacity|Electricity|Other";"GW";"Total installed (available) net capacity of all others types of operating power plants";;;;;0;;
-2;"energy (electricity)";"Capacity|Electricity|Peak Demand";"GW";"peak (maximum) electricity load";;;;;0;;
+2;"energy (electricity)";"Capacity|Electricity|Peak Demand";"GW";"peak (maximum) electricity load";"Cap|Electricity|Peak Demand|Estimated from FE x 1p4 x 1p1";"GW";1;;0;;"x"
 2;"energy (electricity)";"Capacity|Electricity|Storage Reservoir";"GWh";"Total installed net capacity of electricity storage capacity";;;;;0;;
 2;"energy (electricity)";"Capacity|Electricity|Storage Reservoir|CAES";"GWh";"Total installed net capacity of Compressed Air Energy Storage (CAES)";;;;;0;;
 2;"energy (electricity)";"Capacity|Electricity|Storage Reservoir|Hydro Dam Reservoir";"GWh";"Total installed net capacity of electricity storage of hydro dam power plants";;;;;0;;
