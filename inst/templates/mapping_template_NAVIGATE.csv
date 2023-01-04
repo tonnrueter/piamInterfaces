@@ -186,8 +186,8 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 159;1;emissions (CO2);Emissions|CO2|AFOLU|Agriculture;Mt CO2/yr;;;;;;CO2 emissions from agriculture;
 160;1;emissions (CO2);Emissions|CO2|AFOLU|Land;Mt CO2/yr;Emi|CO2|+|Land-Use Change;Mt CO2/yr;;;;net CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF);
 161;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Positive;Mt CO2/yr;;;;;;positive CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from deforestation;
-162;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Negative;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Regrowth;Mt CO2/yr;;;;negative CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from afforestation;
-163;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Wetlands;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Peatland;Mt CO2/yr;;;;CO2 emissions from managed peatlands (drained and rewetted);
+162;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Negative;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Regrowth;Mt CO2/yr;;;;negative CO2 emissions from Land Use, Land-Use Change and Forestry (LULUCF), e.g. from afforestation;x
+163;1;emissions (CO2);Emissions|CO2|AFOLU|Land|Wetlands;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Peatland;Mt CO2/yr;;;;CO2 emissions from managed peatlands (drained and rewetted);x
 164;1;emissions (CO2);Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;;;CO2 emissions from industrial processes (IPCC categories 2A, B, C, E);
 165;1;emissions (CO2);Gross Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;;;Gross CO2 emissions from industrial processes (IPCC categories 2A, B, C, E), not accounting for negative emissions from BECCS;
 166;2;emissions (CO2);Emissions|CO2|Industrial Processes|Iron and Steel;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from iron & steel;
