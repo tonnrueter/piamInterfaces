@@ -1471,7 +1471,7 @@
 3;"energy (transport)";"Sales|Transportation|LDV|FCEV|Compact Car";"million";"Sales of compact fuel cell electric cars (US EPA)";"Sales|Transport|LDV|Compact Car|FCEV";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|FCEV|Midsize Car";"million";"Sales of midsize fuel cell electric cars (US EPA)";"Sales|Transport|LDV|Midsize Car|FCEV";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|FCEV|Large Car and SUV";"million";"Sales of large fuel cell electric cars and SUVs (US EPA)";"Sales|Transport|LDV|Large Car and SUV|FCEV";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Sales|Transportation|LDV|PHEV";"million";"Sales of light duty plug-in hybrid electric cars";;;;;0;;
+3;"energy (transport)";"Sales|Transportation|LDV|PHEV";"million";"Sales of light duty plug-in hybrid electric cars";"Sales|Transport|LDV|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|PHEV|Subcompact Car";"million";"Sales of subcompact plug-in hybrid electric cars (US EPA)";"Sales|Transport|LDV|Subcompact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|PHEV|Compact Car";"million";"Sales of compact plug-in hybrid electric cars (US EPA)";"Sales|Transport|LDV|Compact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|PHEV|Midsize Car";"million";"Sales of midsize plug-in hybrid electric cars (US EPA)";"Sales|Transport|LDV|Midsize Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
