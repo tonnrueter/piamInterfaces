@@ -1337,6 +1337,7 @@
 2;"energy (transport)";"Energy Service|Transportation|Passenger|Other";"bn pkm/yr";"energy service demand for passenger transport using other modes (please provide a definition of the modes in this category in the 'comments' tab)";;;;;0;;
 2;"energy (transport)";"Energy Service|Transportation|Passenger|Rail";"bn pkm/yr";"energy service demand for passenger transport on railways";"ES|Transport|Pass|Rail";"bn pkm/yr";1;;0;;"x"
 2;"energy (transport)";"Energy Service|Transportation|Passenger|Road";"bn pkm/yr";"energy service demand for passenger transport on roads";"ES|Transport|Pass|Road";"bn pkm/yr";1;;0;;"x"
+2;"energy (transport)";"Energy Service|Transportation|Passenger|Road";"bn pkm/yr";"energy service demand for passenger transport on roads";"ES|Transport|Pass|Road|Non-Motorized";"bn pkm/yr";-1;;0;;"x"
 3;"energy (transport)";"Energy Service|Transportation|Freight|International Shipping";"bn tkm/yr";"energy service demand for freight transport operating on international shipping routes";"ES|Transport|Freight|International Shipping";"bn tkm/yr";1;;0;;"x"
 2;"energy (transport)";"Energy Service|Transportation|Passenger|Bicycling and Walking";"bn pkm/yr";"energy service demand for passenger transport on bicycles and by foot";"ES|Transport|Pass|Road|Non-Motorized";"bn pkm/yr";1;;0;;"x"
 2;"energy (transport)";"Energy Service|Transportation|Passenger|Road|2W and 3W";"bn pkm/yr";"energy service demand for passenger transport on roads (two- and three-wheel vehicles)";"ES|Transport|Pass|Road|LDV|Two-Wheelers";"bn pkm/yr";1;;0;;"x"
