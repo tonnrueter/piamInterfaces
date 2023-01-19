@@ -12,3 +12,4 @@
 ^.*\.zenodo.json$
 ^output$
 ^Makefile$
+tutorial.md
