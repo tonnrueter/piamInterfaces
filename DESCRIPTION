@@ -19,7 +19,7 @@ Imports:
     mip,
     readxl,
     rmndt,
-    quitte,
+    quitte (>= 0.3109.0),
     rlang,
     stringr,
     tibble,

@@ -38,7 +38,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2023). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.0.51, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2023). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.0.51, <URL: https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
