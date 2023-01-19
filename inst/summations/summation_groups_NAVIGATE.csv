@@ -1,0 +1,104 @@
+parent;child;factor
+Final Energy|Industry;Final Energy|Industry|Electricity;1
+Final Energy|Industry;Final Energy|Industry|Gases;1
+Final Energy|Industry;Final Energy|Industry|Heat;1
+Final Energy|Industry;Final Energy|Industry|Hydrogen;1
+Final Energy|Industry;Final Energy|Industry|Liquids;1
+Final Energy|Industry;Final Energy|Industry|Other;1
+Final Energy|Industry;Final Energy|Industry|Solids;1
+Final Energy|Industry;Final Energy|Industry|Waste;1
+Final Energy|Industry;Final Energy|Industry|Geothermal;1
+Final Energy|Industry 2;Final Energy|Industry|Non-Metallic Minerals;1
+Final Energy|Industry 2;Final Energy|Industry|Chemicals;1
+Final Energy|Industry 2;Final Energy|Industry|Iron and Steel;1
+Final Energy|Industry 2;Final Energy|Industry|Other Sector;1
+Final Energy|Industry 2;Final Energy|Industry|Pulp and Paper;1
+Final Energy|Industry 2;Final Energy|Industry|Non-Ferrous Metals;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Biomass;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Fossil;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Biomass;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Electricity;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Fossil;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Biomass;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Electricity;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Fossil;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Electricity;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Gases;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Hydrogen;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Liquids;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Solids;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Heat;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Solar;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Geothermal;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Waste;1
+Final Energy|Industry|Non-Metallic Minerals;Final Energy|Industry|Non-Metallic Minerals|Other;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Electricity;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Gases;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Hydrogen;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Liquids;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Solids;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Heat;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Solar;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Geothermal;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Waste;1
+Final Energy|Industry|Chemicals;Final Energy|Industry|Chemicals|Other;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Electricity;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Gases;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Hydrogen;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Liquids;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Solids;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Heat;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Solar;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Geothermal;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Waste;1
+Final Energy|Industry|Iron and Steel;Final Energy|Industry|Iron and Steel|Other;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Electricity;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Gases;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Hydrogen;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Liquids;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Solids;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Heat;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Solar;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Geothermal;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Waste;1
+Final Energy|Industry|Other Sector;Final Energy|Industry|Other Sector|Other;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Electricity;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Gases;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Hydrogen;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Liquids;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Solids;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Heat;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Solar;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Geothermal;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Waste;1
+Final Energy|Industry|Pulp and Paper;Final Energy|Industry|Pulp and Paper|Other;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Electricity;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Gases;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Hydrogen;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Liquids;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Solids;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Heat;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Solar;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Geothermal;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Waste;1
+Final Energy|Industry|Non-Ferrous Metals;Final Energy|Industry|Non-Ferrous Metals|Other;1
+Emissions|CO2|Industry and Industrial Processes;Emissions|CO2|Industrial Processes;1
+Emissions|CO2|Industry and Industrial Processes;Emissions|CO2|Energy|Demand|Industry;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Chemicals;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Non-Ferrous Metals;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Non-Metallic Minerals;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Other Sector;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Pulp and Paper;1
+Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Steel;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Chemicals;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Iron and Steel;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Non-Ferrous Metals;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Non-Metallic Minerals;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Non-Metallic Minerals|Cement;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Other Sector;1
+Emissions|CO2|Industrial Processes;Emissions|CO2|Industrial Processes|Pulp and Paper;1
+Carbon Capture|Industry;Carbon Capture|Industry|Biomass;1
+Carbon Capture|Industry;Carbon Capture|Industry|Fossil;1
+Carbon Capture|Industry;Carbon Capture|Industrial Processes;1
+Carbon Capture|Usage;Carbon Capture|Usage|Liquids;1
+Carbon Capture|Usage;Carbon Capture|Usage|Gases;1
