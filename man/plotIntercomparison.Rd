@@ -2,7 +2,8 @@
 % Please edit documentation in R/plotIntercomparison.R
 \name{plotIntercomparison}
 \alias{plotIntercomparison}
-\title{Model intercomparison plot}
+\title{Model intercomparison plots: area plots based on summation groups, line plots for further
+variables. Creates a PDF for each model and scenario in the outputDirectory}
 \usage{
 plotIntercomparison(
   mifFile,
@@ -15,7 +16,7 @@ plotIntercomparison(
 \arguments{
 \item{mifFile}{path to the mif or xlsx file to apply summation checks to, or quitte object}
 
-\item{outputDirectory}{path to directory to place logFile and dataDumpFile}
+\item{outputDirectory}{path to directory to place one PDF for each model and scenario}
 
 \item{summationsFile}{in inst/summations folder that describes the required summation groups}
 
@@ -24,7 +25,8 @@ plotIntercomparison(
 \item{lineplotVariables}{vector with variable names for additional lineplots}
 }
 \description{
-Model intercomparison plot
+Model intercomparison plots: area plots based on summation groups, line plots for further
+variables. Creates a PDF for each model and scenario in the outputDirectory
 }
 \examples{
 
