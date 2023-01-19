@@ -2,7 +2,8 @@ for (summationFile in names(summationsNames())) {
   test_that(paste("test summationFile without errors using", summationFile), {
     vars <- NULL
     data <- magclass::new.magpie(cells_and_regions = "GLO", years = c(2030, 2050), fill = c(2, 4, 1, 2, 1, 2),
-                          names = c("Final Energy (EJ)", "Final Energy|Electricity (EJ)", "Final Energy|Liquids (EJ)"))
+                          names = c("Final Energy|Industry (EJ)", "Final Energy|Industry|Electricity (EJ)",
+                                    "Final Energy|Industry|Liquids (EJ)"))
     magclass::getSets(data)[3] <- "variable"
     data <- magclass::add_dimension(data, dim = 3.1, add = "model", nm = "REMIND")
     data <- magclass::add_dimension(data, dim = 3.1, add = "scenario", nm = "default")
@@ -21,7 +22,8 @@ for (summationFile in names(summationsNames())) {
     vars <- NULL
     data <- magclass::new.magpie(cells_and_regions = c("CAZ", "World"), years = c(2030, 2050),
                           fill = c(3, 5, 1, 2, 1, 2, 3, 5, 1, 2, 1, 2),
-                          names = c("Final Energy (EJ)", "Final Energy|Electricity (EJ)", "Final Energy|Liquids (EJ)"))
+                          names = c("Final Energy|Industry (EJ)", "Final Energy|Industry|Electricity (EJ)",
+                                    "Final Energy|Industry|Liquids (EJ)"))
     magclass::getSets(data)[3] <- "variable"
     data <- magclass::add_dimension(data, dim = 3.1, add = "model", nm = "REMIND")
     data <- magclass::add_dimension(data, dim = 3.1, add = "scenario", nm = "default")
