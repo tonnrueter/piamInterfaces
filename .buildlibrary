@@ -1,3 +1,4 @@
-ValidationKey: '1007552'
+ValidationKey: '1026928'
 AutocreateReadme: yes
 allowLinterWarnings: no
+AddInReadme: tutorial.md
