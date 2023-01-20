@@ -94,8 +94,8 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
         missing_log = logFile,
       )
       unlink(tmpfile)
-      message("# Restore PM2.5 and poverty w.r.t. median income dots in variable names")
-      command <- paste("sed -i 's/wrt median income/w\\.r\\.t\\. median income/g;s/PM2\\_5/PM2\\.5/g'", outputMif)
+      message("# Restore PM2.5 dot in variable names for consistency with DB template")
+      command <- paste("sed -i 's/PM2\\_5/PM2\\.5/g'", outputMif)
       system(command)
 
       message("# Replace N/A for missing years with blanks as recommended by Ed Byers")
