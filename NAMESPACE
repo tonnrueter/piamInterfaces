@@ -2,6 +2,7 @@
 
 export(checkIIASASubmission)
 export(checkSummations)
+export(checkSummationsRegional)
 export(generateIIASASubmission)
 export(generateMappingfile)
 export(getREMINDTemplateVariables)
