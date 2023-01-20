@@ -274,7 +274,7 @@ Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;FE|Buildings|Liquid
 Final Energy|Residential and Commercial|Other;EJ/yr;;;;;;;
 Final Energy|Residential and Commercial|Solids;EJ/yr;FE|Buildings|+|Solids;EJ/yr;1;;;;
 Final Energy|Residential and Commercial|Solids|Biomass;EJ/yr;FE|Buildings|Solids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Solids|Biomass|Traditional;EJ/yr;FE|Buildings|Solids|Biomass|Traditional;EJ/yr;1;;;;
+Final Energy|Residential and Commercial|Solids|Biomass|Traditional;EJ/yr;FE|Buildings|Solids|Biomass|+|Traditional;EJ/yr;1;;;;
 Final Energy|Residential and Commercial|Solids|Fossil;EJ/yr;FE|Buildings|Solids|+|Fossil;EJ/yr;1;;;;
 Final Energy|Residential and Commercial|Space Heating;EJ/yr;;;;;;;
 Final Energy|Residential|Electricity;EJ/yr;;;;;;;
@@ -661,7 +661,7 @@ Secondary Energy|Solids|Biomass;EJ/yr;SE|Solids|+|Biomass;EJ/yr;1;;;;
 Secondary Energy|Solids|Biomass|Traditional;EJ/yr;;;;;;;
 Secondary Energy|Solids|Coal;EJ/yr;SE|Solids|+|Coal;EJ/yr;1;;;;
 Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids|+|Coal;EJ/yr;1;;;;
-Temperature|Global Mean;<b0>C;Temperature|Global Mean;K;1;;;;
+Temperature|Global Mean;<b0>C;Temperature|Global Mean;K;1;;;;x
 Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;1;;;;
 Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;1;;;;
 Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;1;;;;
