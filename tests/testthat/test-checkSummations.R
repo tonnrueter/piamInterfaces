@@ -37,9 +37,9 @@ for (summationFile in names(summationsNames())) {
                              template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
                              dataDumpFile = "checkSummations.csv"),
                      "Final Energy")
-      capture.output(expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "testerror.mif"), logFile = "log.txt",
-                             template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
-                             dataDumpFile = "checkSummations.csv", generatePlots = TRUE),
+      capture.output(expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "testerror.mif"),
+                             logFile = "log.txt", template = summationFile, summationsFile = summationFile,
+                             outputDirectory = tempdir(), dataDumpFile = "checkSummations.csv", generatePlots = TRUE),
                      "1 equations are not satisfied"))
       expect_true(file.exists(file.path(tempdir(), "checkSummations_REMIND.pdf")))
       expect_true(file.info(file.path(tempdir(), "checkSummations_REMIND.pdf"))$size > 0)

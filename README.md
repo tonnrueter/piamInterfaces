@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.0.53**
+R package **piamInterfaces**, version **0.0.54**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces)  [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/ui#builds)
 
@@ -10,26 +10,26 @@ Project specific interfaces to REMIND / MAgPIE.
 
 ## Tutorials
 
-To understand how to submit to the IIASA database, read this [REMIND tutorial](https://github.com/remindmodel/remind/blob/develop/tutorials/13_Submit_to_IIASA_database.md).
+- To understand how to submit to the IIASA database, read this [REMIND tutorial](https://github.com/remindmodel/remind/blob/develop/tutorials/13_Submit_to_IIASA_database.md).
 
-To edit a template in `R`, use:
-```
-templatedata <- getTemplate("AR6")
-...
-write.csv2(templatedata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
-```
+- To edit a template in `R`, use:
+  ```
+  templatedata <- getTemplate("AR6")
+  ...
+  write.csv2(templatedata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
+  ```
 
-The github diff on a large semicolon-separated file is often unreadable.
+- The github diff on a large semicolon-separated file is often unreadable.
 For a human-readable output, save the old version of the mapping and run:
-```
-remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL)
-```
+  ```
+  remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL)
+  ```
 
-To compare the results of different models as saved in `modeldata` ([quitte](https://github.com/pik-piam/quitte/) object or csv/xlsx file) that is appropriately filtered such that model regions are not too different, run:
-```
-piamInterfaces::plotIntercomparison(modeldata, summationsFile = "AR6", lineplotVariables = c("Temperature|Global Mean", "Population"))
-```
-and you get a PDF document for each scenario and each model with area plots for all the summation groups in `AR6` (or `NAVIGATE`) [summation files](https://github.com/pik-piam/piamInterfaces/tree/master/inst/summations) plus line plots for each variable in the vector you supplied. It takes some time, better use a `slurm` job.
+- To compare the results of different models, filter `modeldata` ([quitte](https://github.com/pik-piam/quitte/) object or csv/xlsx file) appropriately such that model regions are not too different. You get a PDF document for each scenario and each model with area plots for all the summation groups in `AR6` (or `NAVIGATE`) [summation files](https://github.com/pik-piam/piamInterfaces/tree/master/inst/summations) plus line plots for each variable in the `lineplotVariables` vector you supplied. It takes some time, better use a `slurm` job for:
+  ```
+  plotIntercomparison(modeldata, summationsFile = "AR6", lineplotVariables = c("Temperature|Global Mean", "Population"))
+  ```
+
 
 ## Installation
 
@@ -60,7 +60,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2023). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.0.53, <URL: https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2023). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.0.54, <URL: https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -69,7 +69,7 @@ A BibTeX entry for LaTeX users is
   title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
   year = {2023},
-  note = {R package version 0.0.53},
+  note = {R package version 0.0.54},
   url = {https://github.com/pik-piam/piamInterfaces},
 }
 ```
