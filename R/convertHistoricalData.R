@@ -1,9 +1,9 @@
 #' Converts data in historical.mif to match project-specific variables and
-#' regions so that it can be used for comparison in an intermodel comparios project
+#' regions so that it can be used for comparison in an intermodel comparison project
 #'
 #' @md
 #' @author Falk Benke
-#' @param mif path to historical.mif to be converted
+#' @param mif quitte object with historical data or path to historical.mif
 #' @param project name of the project, determines the mapping template to be loaded
 #' @param regionMapping (optional) csv file with mapping of REMIND regions to
 #'  project regions, must contain two columns 'REMIND' and 'project_region'
@@ -13,14 +13,14 @@
 #' @examples
 #' \dontrun{
 #'data <- convertHistoricalData(
-#'   mif = "path/to/histrical.mif",
+#'   mif = "path/to/historical.mif",
 #'   project = "NAVIGATE",
 #'   regionMapping = "path/to/region_mapping_NAVIGATE.csv"
 #')
 #'}
 #' @export
 convertHistoricalData <- function(mif, project, regionMapping = NULL) {
-  hist <- suppressWarnings(read.quitte(file = mif))
+  hist <- suppressWarnings(as.quitte(mif))
 
   varmap <- getTemplate(project) %>%
     filter(!is.na(!!sym("piam_variable"))) %>%

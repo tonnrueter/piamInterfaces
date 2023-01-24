@@ -8,7 +8,7 @@ regions so that it can be used for comparison in an intermodel comparios project
 convertHistoricalData(mif, project, regionMapping = NULL)
 }
 \arguments{
-\item{mif}{path to historical.mif to be converted}
+\item{mif}{quitte object with historical data or path to historical.mif}
 
 \item{project}{name of the project, determines the mapping template to be loaded}
 
@@ -22,7 +22,7 @@ regions so that it can be used for comparison in an intermodel comparios project
 \examples{
 \dontrun{
 data <- convertHistoricalData(
-  mif = "path/to/histrical.mif",
+  mif = "path/to/historical.mif",
   project = "NAVIGATE",
   regionMapping = "path/to/region_mapping_NAVIGATE.csv"
 )
