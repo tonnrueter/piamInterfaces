@@ -6,8 +6,8 @@ test_that("plotComparison works", {
       plotIntercomparison(data,
                           outputDirectory = tmpdir,
                           lineplotVariables = lPV)))
-    expect_match(m, "Add area plot for Final Energy", all = FALSE)
-    expect_match(m, "Add line plot for Temperature", all = FALSE)
+    expect_match(m, "Add plot for Final Energy", all = FALSE)
+    expect_match(m, "Add plot for Temperature", all = FALSE)
     expect_true(file.exists(file.path(tmpdir, "compare_models_Delayed_transition.pdf")))
     expect_true(file.exists(file.path(tmpdir, "compare_models_Current_Policies.pdf")))
     expect_true(file.exists(file.path(tmpdir, "compare_scenarios_REMIND.pdf")))

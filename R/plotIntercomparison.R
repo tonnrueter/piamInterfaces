@@ -6,7 +6,8 @@
 #' @param outputDirectory path to directory to place one PDF for each model and scenario
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #' @param renameModels vector with oldname = newname
-#' @param lineplotVariables vector with variable names for additional lineplots
+#' @param lineplotVariables vector with variable names for additional lineplots or filenames
+#'        of files containing a 'Variable' column (or both)
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
 #' @importFrom rlang sym syms
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
@@ -19,17 +20,26 @@
 #' }
 #'
 #' @export
-plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile = "AR6", renameModels = NULL,
-                                lineplotVariables = c("Temperature|Global Mean")) {
-  .data <- NULL
-  if (!is.null(outputDirectory) && !dir.exists(outputDirectory)) {
+plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile = "AR6", # nolint: cyclocomp_linter.
+                                renameModels = NULL, lineplotVariables = c("Temperature|Global Mean")) {
+  .data <- NULL # avoid binding lintr error
+
+  if (!is.null(outputDirectory) && ! dir.exists(outputDirectory)) {
     dir.create(outputDirectory, recursive = TRUE)
   }
 
-  summationGroups <- piamInterfaces::getSummations(summationsFile)
-  if (summationsFile %in% names(piamInterfaces::summationsNames())) {
-    summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", piamInterfaces::summationsNames(summationsFile))
+  summationGroups <- getSummations(summationsFile)
+  if (summationsFile %in% names(summationsNames())) {
+    summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
   }
+
+  templatefiles <- lineplotVariables[lineplotVariables %in% names(templateNames()) || file.exists(lineplotVariables)]
+  tmpLpv <- setdiff(lineplotVariables, templatefiles)
+  for (template in templatefiles) {
+    templatedata <- getTemplate(template)
+    tmpLpv <- c(tmpLpv, setdiff(templatedata$Variable, c(summationGroups$parent, summationGroups$child)))
+  }
+  lineplotVariables <- unique(tmpLpv)
 
   # load data and filter part that is in summation file
   data <- quitte::as.quitte(mifFile, na.rm = TRUE) %>%
@@ -43,13 +53,11 @@ plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile =
   }
   data <- filter(data, .data$region %in% regs) %>% droplevels()
   message("The filtered data contains ", length(unique(data$variable)), " variables.")
-  if (! is.null(renameModels)) {
-    newModelNames <- levels(data$model)
-    for (n in names(renameModels)) {
-      newModelNames <- gsub(n, renameModels[n], newModelNames, fixed = TRUE)
-    }
-    levels(data$model) <- newModelNames
+  newModelNames <- levels(data$model)
+  for (n in names(renameModels)) {
+    newModelNames <- gsub(n, renameModels[n], newModelNames, fixed = TRUE)
   }
+  levels(data$model) <- newModelNames
 
   checkVariables <- list()
   for (i in intersect(unique(summationGroups$parent), unique(data$variable))) {
@@ -66,23 +74,21 @@ plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile =
     pdf(pdfFilename,
         width = max(12, length(quitte::getRegs(plotdata)),
                     length(quitte::getModels(plotdata)) * length(quitte::getScenarios(plotdata)) * 2))
-    plotvariables <- sort(intersect(names(checkVariables), unique(plotdata$variable)))
+    plotvariables <- sort(intersect(c(names(checkVariables), lineplotVariables), unique(plotdata$variable)))
     for (p in plotvariables) {
-      childs <- intersect(checkVariables[[p]], unique(plotdata$variable))
-      if (length(getModels(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1 ||
-          length(getScenarios(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1) {
-        message(which(p == plotvariables), "/", length(plotvariables), ": Add area plot for ",
-                p, " with childs ", paste(gsub(p, "", childs, fixed = TRUE), collapse = ", "))
-        mip::showAreaAndBarPlots(plotdata, if (length(childs) > 0) childs else p, tot = p, mainReg = "World",
-                                 yearsBarPlot = c(2030, 2050), scales = "fixed")
-      } else {
-        message("For ", p, ", only one model has data. Skipping.")
+      message(which(p == plotvariables), "/", length(plotvariables), ": Add plot for ", p)
+      if (p %in% names(checkVariables)) {
+        childs <- intersect(checkVariables[[p]], unique(plotdata$variable))
+        if (length(getModels(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1 ||
+            length(getScenarios(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1) {
+          message("Childs: ", paste(gsub(p, "", childs, fixed = TRUE), collapse = ", "))
+          mip::showAreaAndBarPlots(plotdata, if (length(childs) > 0) childs else p, tot = p, mainReg = "World",
+                                   yearsBarPlot = c(2030, 2050), scales = "fixed")
+          next
+        }
       }
-    }
-    actualLineplots <- intersect(lineplotVariables, unique(plotdata$variable))
-    for (v in actualLineplots) {
-      message(which(v == actualLineplots), "/", length(actualLineplots), ": Add line plot for ", v)
-      mip::showLinePlots(plotdata, v, mainReg = "World")
+      # if no childs exist
+      mip::showLinePlots(plotdata, p, mainReg = "World")
     }
     dev.off()
   }
