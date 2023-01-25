@@ -3,7 +3,7 @@
 \name{convertHistoricalData}
 \alias{convertHistoricalData}
 \title{Converts data in historical.mif to match project-specific variables and
-regions so that it can be used for comparison in an intermodel comparios project}
+regions so that it can be used for comparison in an intermodel comparison project}
 \usage{
 convertHistoricalData(mif, project, regionMapping = NULL)
 }
@@ -17,7 +17,7 @@ project regions, must contain two columns 'REMIND' and 'project_region'}
 }
 \description{
 Converts data in historical.mif to match project-specific variables and
-regions so that it can be used for comparison in an intermodel comparios project
+regions so that it can be used for comparison in an intermodel comparison project
 }
 \examples{
 \dontrun{
