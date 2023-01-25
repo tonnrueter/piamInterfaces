@@ -1300,9 +1300,9 @@
 1;"energy (supply)";"Secondary Energy|Solids";"PJ/yr";"solid secondary energy carriers (e.g., briquettes, coke, wood chips, wood pellets)";"SE|Solids";"EJ/yr";1000;;0;;
 1;"energy (supply)";"Secondary Energy|Solids|Biomass";"PJ/yr";"solid secondary energy carriers produced from biomass (e.g., commercial charcoal, wood chips, wood pellets). Tradional bioenergy use is excluded.";"SE|Solids|+|Biomass";"EJ/yr";1000;;0;;
 1;"energy (supply)";"Secondary Energy|Solids|Coal";"PJ/yr";"Solid secondary energy derived from coal (e.g., briquettes, coke) for the usage in the buildings, transport and industry sector. This does not include the usage of coal for energy conversion into other (non-solid) secondary energy.";"SE|Solids|+|Coal";"EJ/yr";1000;;0;;
-2;"energy (buildings)";"Energy Service|Commercial|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in commercial buildings";;;;;0;;
-2;"energy (buildings)";"Energy Service|Residential and Commercial|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in buildings";"Energy Service|Buildings|Floor Space";"bn m2/yr";1;;0;;
-2;"energy (buildings)";"Energy Service|Residential|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in residential buildings";;;;;0;;
+2;"energy (buildings)";"Energy Service|Commercial|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in commercial buildings";"ES|Buildings|Commercial|Floor Space";"bn m2";1;;0;;
+2;"energy (buildings)";"Energy Service|Residential and Commercial|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in buildings";"ES|Buildings|Floor Space";"bn m2";1;;0;;
+2;"energy (buildings)";"Energy Service|Residential|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in residential buildings";"ES|Buildings|Residential|Floor Space";"bn m2";1;;0;;
 2;"energy (industry)";"Production|Non-Metallic Minerals";"Mt/yr";"Production of non-metallic minerals";;;;;0;;
 2;"energy (industry)";"Production|Non-Metallic Minerals|Cement";"Mt/yr";"Production of cement";"Production|Industry|Cement";"Mt/yr";1;;0;;
 2;"energy (industry)";"Production|Non-Ferrous Metals";"Mt/yr";"production of non-ferrous metals (e.g., aluminum)";;;;;0;;
