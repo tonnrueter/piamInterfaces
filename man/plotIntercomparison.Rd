@@ -22,7 +22,8 @@ plotIntercomparison(
 
 \item{renameModels}{vector with oldname = newname}
 
-\item{lineplotVariables}{vector with variable names for additional lineplots}
+\item{lineplotVariables}{vector with variable names for additional lineplots or filenames
+of files containing a 'Variable' column (or both)}
 }
 \description{
 Model intercomparison plots: area plots based on summation groups, line plots for further
