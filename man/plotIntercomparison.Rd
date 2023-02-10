@@ -10,7 +10,9 @@ plotIntercomparison(
   outputDirectory = ".",
   summationsFile = "AR6",
   renameModels = NULL,
-  lineplotVariables = c("Temperature|Global Mean")
+  lineplotVariables = "AR6",
+  interactive = FALSE,
+  mainReg = "World"
 )
 }
 \arguments{
@@ -24,6 +26,10 @@ plotIntercomparison(
 
 \item{lineplotVariables}{vector with variable names for additional lineplots or filenames
 of files containing a 'Variable' column (or both)}
+
+\item{interactive}{boolean whether you want to select variables, regions and models to be plotted}
+
+\item{mainReg}{region name of main region to be passed to mip}
 }
 \description{
 Model intercomparison plots: area plots based on summation groups, line plots for further
