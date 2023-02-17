@@ -7,7 +7,7 @@ variables. Creates a PDF for each model and scenario in the outputDirectory}
 \usage{
 plotIntercomparison(
   mifFile,
-  outputDirectory = ".",
+  outputDirectory = "output",
   summationsFile = "AR6",
   renameModels = NULL,
   lineplotVariables = "AR6",
