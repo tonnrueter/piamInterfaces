@@ -22,7 +22,7 @@
 #' }
 #'
 #' @export
-plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile = "AR6", # nolint: cyclocomp_linter.
+plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsFile = "AR6", # nolint: cyclocomp_linter.
                                 renameModels = NULL, lineplotVariables = "AR6", interactive = FALSE,
                                 mainReg = "World") {
   .data <- NULL # avoid binding lintr error
@@ -55,10 +55,19 @@ plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile =
     regs <- intersect(regs, regscen)
   }
   if (interactive) {
-    regs <- c(mainReg, gms::chooseFromList(setdiff(regs, mainReg), type = "regions to be plotted"))
-    models <- gms::chooseFromList(levels(data$model), type = "models to be plotted")
-    scenarios <- gms::chooseFromList(levels(data$scenario), type = "scenarios to be plotted")
-    data <- filter(data, .data$model %in% models & .data$scenario %in% scenarios) %>% droplevels()
+    regoptions <- setdiff(regs, mainReg)
+    if (length(regoptions) > 0) {
+      regs <- c(mainReg, gms::chooseFromList(regoptions,
+                type = paste("regions to be plotted additional to", mainReg)))
+    }
+    if (length(levels(data$model)) > 1) {
+      models <- gms::chooseFromList(levels(data$model), type = "models to be plotted")
+      data <- filter(data, .data$model %in% models)
+    }
+    if (length(levels(data$scenario)) > 1) {
+      scenarios <- gms::chooseFromList(levels(data$scenario), type = "scenarios to be plotted")
+      data <- filter(data, .data$scenario %in% scenarios)
+    }
   }
   data <- filter(data, .data$region %in% regs) %>% droplevels()
 
@@ -79,10 +88,6 @@ plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile =
   }
 
   names(checkVariables) <- gsub(" [1-9]$", "", names(checkVariables))
-
-  message("### ", length(c(quitte::getScenarios(data), quitte::getModels(data))),
-          " documents will be generated, each with at most ",
-          length(checkVariables), " area plots + ", length(lineplotVariables), " line plots. Enjoy waiting.\n")
 
   makepdf <- function(pdfFilename, plotdata, plotvariables) {
     if (nrow(plotdata) == 0) {
@@ -113,6 +118,9 @@ plotIntercomparison <- function(mifFile, outputDirectory = ".", summationsFile =
 
   plotvariables <- sort(intersect(c(names(checkVariables), lineplotVariables), unique(data$variable)))
   if (interactive) plotvariables <- gms::chooseFromList(plotvariables, type = "variables to be plotted")
+
+  message("### ", length(c(quitte::getScenarios(data), quitte::getModels(data))),
+          " documents will be generated, each with max. ", length(plotvariables), " plots. Enjoy waiting.\n")
 
   if (length(quitte::getModels(data)) > 1) {
     for (thisscenario in quitte::getScenarios(data)) {
