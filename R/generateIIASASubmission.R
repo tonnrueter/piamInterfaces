@@ -107,15 +107,6 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
         message("# iiasatemplate ", iiasatemplate, " does not exist, returning full list of variables.")
       }
 
-      # check whether all scenarios have same number of variables
-      scenarios <- unique(mifdata$variable)
-      for (i in seq_along(scenarios)) {
-        if (length(filter(mifdata, !!sym("variable") %in% scenarios[[1]])) !=
-            length(filter(mifdata, !!sym("variable") %in% scenarios[[i]]))) {
-          warning(scenarios[1], " has a different number of variables than ", scenarios[i])
-        }
-      }
-
       unlink(outputMif)
 
       message("# Restore PM2.5 dot in variable names for consistency with DB template")
