@@ -78,10 +78,6 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   }
   levels(data$model) <- newModelNames
 
-  # temporary fix until https://github.com/pik-piam/mip/issues/56 is fixed
-  levels(data$model) <- gsub("\\)", "", gsub("\\(", "", levels(data$model)))
-  levels(data$scenario) <- gsub("\\)", "", gsub("\\(", "", levels(data$scenario)))
-
   checkVariables <- list()
   for (i in intersect(unique(summationGroups$parent), unique(data$variable))) {
     checkVariables[[i]] <- summationGroups[which(summationGroups[, "parent"] == i), "child"]

@@ -22,7 +22,6 @@
 #' @importFrom data.table :=
 #' @importFrom iamc write.reportProject
 #' @importFrom magclass getNames getNames<- mbind read.report write.report
-#' @importFrom rmndt readMIF writeMIF
 #' @importFrom quitte write.mif read.quitte write.IAMCxlsx
 #' @importFrom stringr str_sub
 #' @importFrom tidyr pivot_wider
@@ -69,7 +68,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
           addToScen, "' will be prepended, '", removeFromScen, "' will be removed.")
   message("# Apply mapping from ", mappingFile)
 
-  tmpfile <- file.path(outputDirectory, "tmp_reporting.tmp")
+  tmpfile <- file.path(outputDirectory, "tmp_reporting.mif")
   outputMif <- file.path(outputDirectory, paste0(gsub("\\.mif$|\\.xlsx$", "", outputFilename), ".mif"))
 
   allmifdata <- NULL
@@ -79,24 +78,27 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       allmifdata <- NULL
     }
     message("# read ", flist[fl])
-    mifdata <- read.report(flist[fl], as.list = FALSE)
+    mifdata <- quitte::as.quitte(flist[fl])
     # remove -rem-xx and mag-xx from scenario names
-    getNames(mifdata, dim = 1) <- gsub("-(rem|mag)-[0-9]{1,2}", "", getNames(mifdata, dim = 1))
-    allmifdata <- mbind(allmifdata, mifdata)
+    mifdata$scenario <- gsub("-(rem|mag)-[0-9]{1,2}", "", mifdata$scenario)
+    allmifdata <- rbind(allmifdata, mifdata)
     if (!generateSingleOutput || fl == length(flist)) {
-      message("# Write ", tmpfile)
-      write.report(allmifdata, file = tmpfile)
       message("# Convert to ", outputMif)
-      .setModelAndScenario(tmpfile, model, removeFromScen, addToScen)
+      mifdata <- .setModelAndScenario(allmifdata, model, removeFromScen, addToScen)
+      quitte::write.mif(mifdata, tmpfile)
       iamc::write.reportProject(
-        tmpfile, mappingFile,
-        file = outputMif,
-        missing_log = logFile,
+          tmpfile,
+          mappingFile,
+          file = tmpfile,
+          missing_log = logFile
       )
-      unlink(tmpfile)
+      message("# Restore PM2.5 dot in variable names for consistency with DB template")
+      mifdata <- quitte::as.quitte(tmpfile) %>% mutate(variable = gsub("PM2_5", "PM2.5", !!sym("variable")))
 
-      message("# Read data again")
-      mifdata <- read.quitte(outputMif, factors = TRUE) %>%
+      message("# Replace N/A for missing years with blanks as recommended by Ed Byers")
+      write.mif(mifdata %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value"))), outputMif)
+
+      mifdata <- mifdata %>%
         mutate(value = ifelse(!is.finite(!!sym("value")) | is.na(!!sym("value")), NA, !!sym("value"))) %>%
         mutate(scenario = as.factor(gsub("^NA$", "", !!sym("scenario")))) %>%
         filter(!!sym("period") %in% timesteps)
@@ -119,17 +121,12 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
         )
       }
 
-      unlink(outputMif)
-
-      message("# Restore PM2.5 dot in variable names for consistency with DB template")
-      mifdata <- mifdata %>% mutate(variable = gsub("PM2_5", "PM2.5", !!sym("variable")))
-
-      message("# Replace N/A for missing years with blanks as recommended by Ed Byers")
+      message("# In mif file, replace N/A for missing years with blanks as recommended by Ed Byers")
       write.mif(mifdata %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value"))), outputMif)
 
       # perform summation checks
       for (sumFile in intersect(mapping, names(summationsNames()))) {
-        invisible(checkSummations(outputMif, template = mappingFile, summationsFile = sumFile,
+        invisible(checkSummations(mifdata, template = mappingFile, summationsFile = sumFile,
                                 logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
                                 generatePlots = generatePlots))
       }
@@ -141,26 +138,24 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   }
 }
 
-.setModelAndScenario <- function(mif, model, scenRemove = NULL, scenAdd = NULL) {
-    Scenario <- NULL # nolint, added to avoid no visible binding error
-    Model <- NULL    # nolint
-    dt <- readMIF(mif)
-    scenarioNames <- unique(dt$Scenario)
-    if (!is.null(model)) dt[, Model := model]
-    if (!is.null(scenRemove)) dt[, Scenario := gsub(scenRemove, "", Scenario)]
+.setModelAndScenario <- function(mif, modelname, scenRemove = NULL, scenAdd = NULL) {
+    dt <- quitte::as.quitte(mif)
+    scenarioNames <- unique(dt$scenario)
+    if (!is.null(modelname)) dt$model <- modelname
+    if (!is.null(scenRemove)) dt$scenario <- gsub(scenRemove, "", dt$scenario)
     if (!is.null(scenAdd)) {
-      if (all(grepl(scenAdd, unique(dt$Scenario), fixed = TRUE))) {
+      if (all(grepl(scenAdd, unique(dt$scenario), fixed = TRUE))) {
         message(sprintf("Prefix %s already found in all scenario name in %s. Skipping.", scenAdd, mif))
       } else {
-        dt[, Scenario := paste0(scenAdd, Scenario)]
+        dt$scenario <- paste0(scenAdd, dt$scenario)
       }
     }
-    if (length(unique(dt$Scenario)) < length(scenarioNames)) {
+    if (length(unique(dt$scenario)) < length(scenarioNames)) {
       message(length(scenarioNames), " scenario names before changes: ", paste(scenarioNames, collapse = ", "))
-      message(length(unique(dt$Scenario)), " scenario names after changes:  ",
-              paste(unique(dt$Scenario), collapse = ", "))
+      message(length(unique(dt$scenario)), " scenario names after changes:  ",
+              paste(unique(dt$scenario), collapse = ", "))
       stop("Changes to scenario names lead to duplicates. Adapt scenRemove='",
            scenRemove, "' and scenAdd='", scenAdd, "'!")
     }
-    writeMIF(dt, mif)
+    return(dt)
 }
