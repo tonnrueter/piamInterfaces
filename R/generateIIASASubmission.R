@@ -96,9 +96,9 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       unlink(tmpfile)
 
       message("# Read data again")
-      mifdata <- read.quitte(outputMif, factors = FALSE) %>%
+      mifdata <- read.quitte(outputMif, factors = TRUE) %>%
         mutate(value = ifelse(!is.finite(!!sym("value")) | is.na(!!sym("value")), NA, !!sym("value"))) %>%
-        mutate(scenario = gsub("^NA$", "", !!sym("scenario"))) %>%
+        mutate(scenario = as.factor(gsub("^NA$", "", !!sym("scenario")))) %>%
         filter(!!sym("period") %in% timesteps)
 
       if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
@@ -108,12 +108,15 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       }
 
       # check whether all scenarios have same number of variables
-      scenarios <- unique(mifdata$variable)
-      for (i in seq_along(scenarios)) {
-        if (length(filter(mifdata, !!sym("variable") %in% scenarios[[1]])) !=
-            length(filter(mifdata, !!sym("variable") %in% scenarios[[i]]))) {
-          warning(scenarios[1], " has a different number of variables than ", scenarios[i])
-        }
+      countDataPoints <- seq_along(levels(mifdata$scenario))
+      for (i in countDataPoints) {
+        countDataPoints[i] <- sum(mifdata$scenario == levels(mifdata$scenario)[[i]])
+      }
+      if (length(unique(countDataPoints)) != 1) {
+        message(
+          "Not all scenarios have the same data points: ",
+          paste0(levels(mifdata$scenario), ": ", countDataPoints, ".", collapse = " ")
+        )
       }
 
       unlink(outputMif)
