@@ -9,12 +9,8 @@
 #' @param removeFromScen string to be removed from scenario name (optional)
 #' @param addToScen string to be added as prefix to scenario name (optional)
 #' @param outputDirectory path to directory for the generated submission (default: output)
-#' @param outputPrefix gets prepended to the file name of the generated file(s)
 #' @param logFile path to the logfile with warnings (default: output/missing.log)
-#' @param generateSingleOutput indicates whether the submission should be generated
-#'        into a single output file
 #' @param outputFilename filename of the generated submission file,
-#'        if `generateSingleOutput` is set to TRUE (default: submission.mif)
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
@@ -31,18 +27,16 @@
 #' generateIIASASubmission(
 #'   mifs = "/path/to/REMIMD/mifs",
 #'   model = "REMIND-MAgPIE 2.1-4.2",
-#'   mappingFile = "output/template_navigate.csv",
-#'   generateSingleOutput = TRUE
+#'   mappingFile = "output/template_navigate.csv"
 #' )
 #' }
 #' @export
-generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.0", # nolint: cyclocomp_linter.
+generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.0",
                                     mappingFile = NULL,
                                     removeFromScen = NULL, addToScen = NULL,
-                                    outputDirectory = "output", outputPrefix = "",
+                                    outputDirectory = "output",
                                     logFile = "output/missing.log",
-                                    generateSingleOutput = TRUE,
-                                    outputFilename = "submission.mif",
+                                    outputFilename = "submission.xlsx",
                                     iiasatemplate = NULL, generatePlots = FALSE,
                                     timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10))) {
 
@@ -73,69 +67,57 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
 
   allmifdata <- NULL
   for (fl in seq_along(flist)) {
-    if (!generateSingleOutput) {
-      outputMif <- file.path(outputDirectory, paste0(outputPrefix, basename(flist[fl])))
-      allmifdata <- NULL
-    }
     message("# read ", flist[fl])
     mifdata <- quitte::as.quitte(flist[fl])
-    # remove -rem-xx and mag-xx from scenario names
-    mifdata$scenario <- gsub("-(rem|mag)-[0-9]{1,2}", "", mifdata$scenario)
     allmifdata <- rbind(allmifdata, mifdata)
-    if (!generateSingleOutput || fl == length(flist)) {
-      message("# Convert to ", outputMif)
-      mifdata <- .setModelAndScenario(allmifdata, model, removeFromScen, addToScen)
-      quitte::write.mif(mifdata, tmpfile)
-      iamc::write.reportProject(
-          tmpfile,
-          mappingFile,
-          file = tmpfile,
-          missing_log = logFile
-      )
-      message("# Restore PM2.5 dot in variable names for consistency with DB template")
-      mifdata <- quitte::as.quitte(tmpfile) %>% mutate(variable = gsub("PM2_5", "PM2.5", !!sym("variable")))
-
-      message("# Replace N/A for missing years with blanks as recommended by Ed Byers")
-      write.mif(mifdata %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value"))), outputMif)
-
-      mifdata <- mifdata %>%
-        mutate(value = ifelse(!is.finite(!!sym("value")) | is.na(!!sym("value")), NA, !!sym("value"))) %>%
-        mutate(scenario = as.factor(gsub("^NA$", "", !!sym("scenario")))) %>%
-        filter(!!sym("period") %in% timesteps)
-
-      if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
-        mifdata <- checkIIASASubmission(mifdata, iiasatemplate, logFile)
-      } else {
-        message("# iiasatemplate ", iiasatemplate, " does not exist, returning full list of variables.")
-      }
-
-      # check whether all scenarios have same number of variables
-      countDataPoints <- seq_along(levels(mifdata$scenario))
-      for (i in countDataPoints) {
-        countDataPoints[i] <- sum(mifdata$scenario == levels(mifdata$scenario)[[i]])
-      }
-      if (length(unique(countDataPoints)) != 1) {
-        message(
-          "Not all scenarios have the same data points: ",
-          paste0(levels(mifdata$scenario), ": ", countDataPoints, ".", collapse = " ")
-        )
-      }
-
-      message("# In mif file, replace N/A for missing years with blanks as recommended by Ed Byers")
-      write.mif(mifdata %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value"))), outputMif)
-
-      # perform summation checks
-      for (sumFile in intersect(mapping, names(summationsNames()))) {
-        invisible(checkSummations(mifdata, template = mappingFile, summationsFile = sumFile,
-                                logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
-                                generatePlots = generatePlots))
-      }
-
-      outputXlsx <- paste0(gsub("\\.mif$", "", outputMif), ".xlsx")
-      quitte::write.IAMCxlsx(mifdata, outputXlsx)
-      message("\n### Output files written:\n- ", outputMif, "\n- ", outputXlsx, "\n")
-    }
   }
+
+  message("# Convert to ", outputMif)
+  mifdata <- .setModelAndScenario(allmifdata, model, removeFromScen, addToScen)
+  quitte::write.mif(mifdata, tmpfile)
+
+  iamc::write.reportProject(
+      tmpfile,
+      mappingFile,
+      file = tmpfile,
+      missing_log = logFile
+  )
+  message("# Restore PM2.5 dot in variable names for consistency with DB template")
+  mifdata <- quitte::as.quitte(tmpfile) %>% mutate(variable = gsub("PM2_5", "PM2.5", !!sym("variable")))
+
+  mifdata <- mifdata %>%
+    mutate(value = ifelse(!is.finite(!!sym("value")) | is.na(!!sym("value")), NA, !!sym("value"))) %>%
+    mutate(scenario = as.factor(gsub("^NA$", "", !!sym("scenario")))) %>%
+    filter(!!sym("period") %in% timesteps)
+
+  if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
+    mifdata <- checkIIASASubmission(mifdata, iiasatemplate, logFile)
+  } else {
+    message("# iiasatemplate ", iiasatemplate, " does not exist, returning full list of variables.")
+  }
+
+  # check whether all scenarios have same number of variables
+  countDataPoints <- seq_along(levels(mifdata$scenario))
+  for (i in countDataPoints) {
+    countDataPoints[i] <- sum(mifdata$scenario == levels(mifdata$scenario)[[i]])
+  }
+  if (length(unique(countDataPoints)) != 1) {
+    message(
+      "Not all scenarios have the same data points: ",
+      paste0(levels(mifdata$scenario), ": ", countDataPoints, ".", collapse = " ")
+    )
+  }
+
+  # perform summation checks
+  for (sumFile in intersect(mapping, names(summationsNames()))) {
+    invisible(checkSummations(mifdata, template = mappingFile, summationsFile = sumFile,
+                            logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
+                            generatePlots = generatePlots))
+  }
+
+  quitte::write.IAMCxlsx(mifdata, file.path(outputDirectory, outputFilename))
+  message("\n### Output file written: ", outputFilename)
+
 }
 
 .setModelAndScenario <- function(mif, modelname, scenRemove = NULL, scenAdd = NULL) {

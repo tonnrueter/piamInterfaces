@@ -21,17 +21,17 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
                                              mappingFile = mappingFile,
                                              outputDirectory = file.path(tempdir(), "output"),
                                              logFile = file.path(tempdir(), "missing.log"),
-                                             outputFilename = "submission.mif", generateSingleOutput = TRUE),
+                                             outputFilename = "submission.xlsx"),
                    regexp = NA)
     } else {
       expect_warning(generateIIASASubmission(tempdir(), model = "REMIND", mapping = unlist(template),
                                              outputDirectory = file.path(tempdir(), "output"),
                                              logFile = file.path(tempdir(), "missing.log"),
-                                             outputFilename = "submission.mif", generateSingleOutput = TRUE),
+                                             outputFilename = "submission.xlsx"),
                    regexp = NA)
     }
     expectedFiles <- c(mappingFile, file.path(tempdir(), c("missing.log", "test.mif",
-                 file.path("output", c("submission.mif", "submission.xlsx")))))
+                 file.path("output", "submission.xlsx"))))
     for (f in expectedFiles) expect_true(file.exists(f))
     unlink(expectedFiles)
   })
