@@ -30,10 +30,7 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
                                              outputFilename = "submission.xlsx"),
                    regexp = NA)
     }
-    expectedFiles <- c(
-      mappingFile,
-      file.path(tempdir(), c(file.path("output", "submission.xlsx")))
-    )
+    expectedFiles <- file.path(tempdir(), c(file.path("output", "submission.xlsx")))
 
     for (f in expectedFiles) expect_true(file.exists(f))
     unlink(expectedFiles)

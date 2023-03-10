@@ -18,6 +18,7 @@
 #' @importFrom data.table :=
 #' @importFrom quitte as.quitte write.IAMCxlsx
 #' @importFrom dplyr filter mutate distinct inner_join
+#' @importFrom magclass unitsplit
 #' @examples
 #' \dontrun{
 #' # Simple use. Generates submission file in output folder:
@@ -46,24 +47,23 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
 
   # generate mapping file, if it doesn't exist yet
   if (length(mapping) > 0 || is.null(mappingFile) || !file.exists(mappingFile)) {
-    if (is.null(mappingFile)) {
-      mappingFile <- file.path(outputDirectory, paste0(paste0(c("mapping", mapping), collapse = "_"), ".csv"))
-    }
-    invisible(generateMappingfile(templates = mapping, outputDirectory = NULL,
-                              fileName = mappingFile, model = model, logFile = logFile,
-                              iiasatemplate = iiasatemplate))
+    mapData <- generateMappingfile(templates = mapping, outputDirectory = NULL,
+                                   fileName = NULL, model = model, logFile = logFile,
+                                   iiasatemplate = iiasatemplate)[["mappings"]]
+  } else {
+    mapData <- read.csv2(mappingFile)
   }
 
-  m <- read.csv2(mappingFile) %>%
+  mapData <- mapData %>%
     mutate(
       !!sym("factor") := as.numeric(!!sym("factor")),
       # this is not optimal and error-prone: we must dissect variable into variable and unit again
       # could be avoided, if we expect mappings with variable and unit fields
       # instead of having the unit as part of the variable name
-      !!sym("piam_unit") := gsub("^\\(|\\)$", "", regmatches(!!sym("piam_variable"), regexpr("\\(([^)]*)\\)[^(]*$", !!sym("piam_variable")))), # nolint
-      !!sym("piam_variable") := gsub(" \\(([^)]*)\\)[^(]*$", "", !!sym("piam_variable")), # nolint
-      !!sym("Unit") := gsub("^\\(|\\)$", "", regmatches(!!sym("Variable"), regexpr("\\(([^)]*)\\)[^(]*$", !!sym("Variable")))), # nolint
-      !!sym("Variable") := gsub(" \\(([^)]*)\\)[^(]*$", "", !!sym("Variable")) # nolint
+      !!sym("piam_unit") := unitsplit(!!sym("piam_variable"))$unit,
+      !!sym("piam_variable") :=  unitsplit(!!sym("piam_variable"))$variable,
+      !!sym("Unit") := unitsplit(!!sym("Variable"))$unit,
+      !!sym("Variable") := unitsplit(!!sym("Variable"))$variable
     )
 
   message("\n### Generating .xlsx file using mapping ", mappingFile, ".")
@@ -77,7 +77,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   submission <- mifdata %>%
     filter(!!sym("period") %in% timesteps) %>%
     distinct() %>%
-    inner_join(m, by = c("variable" = "piam_variable", "unit" = "piam_unit"), multiple = "all") %>%
+    inner_join(mapData, by = c("variable" = "piam_variable", "unit" = "piam_unit"), multiple = "all") %>%
     mutate(
       !!sym("value") := ifelse(is.na(!!sym("factor")), !!sym("value"), !!sym("factor") * !!sym("value"))
     ) %>%
