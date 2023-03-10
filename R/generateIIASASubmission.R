@@ -10,13 +10,13 @@
 #' @param addToScen string to be added as prefix to scenario name (optional)
 #' @param outputDirectory path to directory for the generated submission (default: output)
 #' @param logFile path to the logfile with warnings (default: output/missing.log)
-#' @param outputFilename filename of the generated submission file,
+#' @param outputFilename filename of the generated submission mif or xlsx file.
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
 #' @param timesteps timesteps that are accepted in final submission
 #' @importFrom data.table :=
-#' @importFrom quitte as.quitte write.IAMCxlsx
+#' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join
 #' @importFrom magclass unitsplit
 #' @examples
@@ -60,13 +60,13 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       # this is not optimal and error-prone: we must dissect variable into variable and unit again
       # could be avoided, if we expect mappings with variable and unit fields
       # instead of having the unit as part of the variable name
-      !!sym("piam_unit") := unitsplit(!!sym("piam_variable"))$unit,
-      !!sym("piam_variable") :=  unitsplit(!!sym("piam_variable"))$variable,
-      !!sym("Unit") := unitsplit(!!sym("Variable"))$unit,
-      !!sym("Variable") := unitsplit(!!sym("Variable"))$variable
+      !!sym("piam_unit") := unitsplit(!!sym("piam_variable"))$unit, # nolint
+      !!sym("piam_variable") :=  unitsplit(!!sym("piam_variable"))$variable, # nolint
+      !!sym("Unit") := unitsplit(!!sym("Variable"))$unit, # nolint
+      !!sym("Variable") := unitsplit(!!sym("Variable"))$variable # nolint
     )
 
-  message("\n### Generating .xlsx file using mapping ", mappingFile, ".")
+  message("\n### Generating submission file using mapping ", mappingFile, ".")
   if (!is.null(model)) message("# Correct model name to '", model, "'.")
   message("# Adapt scenario names: '",
           addToScen, "' will be prepended, '", removeFromScen, "' will be removed.")
@@ -111,7 +111,12 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
                             generatePlots = generatePlots))
   }
 
-  quitte::write.IAMCxlsx(submission, file.path(outputDirectory, outputFilename))
+  if (grepl("\\.xlsx?$", outputFilename)) {
+    quitte::write.IAMCxlsx(submission, file.path(outputDirectory, outputFilename))
+  } else {
+    submission <- submission %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value")))
+    quitte::write.mif(submission, file.path(outputDirectory, outputFilename))
+  }
   message("\n### Output file written: ", outputFilename)
 
 }
@@ -122,7 +127,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
     if (!is.null(scenRemove)) dt$scenario <- gsub(scenRemove, "", dt$scenario)
     if (!is.null(scenAdd)) {
       if (all(grepl(scenAdd, unique(dt$scenario), fixed = TRUE))) {
-        message(sprintf("Prefix %s already found in all scenario names. Skipping.", scenAdd))
+        message("Prefix ", scenAdd, " already found in all scenario names. Skipping.")
       } else {
         dt$scenario <- paste0(scenAdd, dt$scenario)
       }
