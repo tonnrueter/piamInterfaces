@@ -12,10 +12,8 @@ generateIIASASubmission(
   removeFromScen = NULL,
   addToScen = NULL,
   outputDirectory = "output",
-  outputPrefix = "",
   logFile = "output/missing.log",
-  generateSingleOutput = TRUE,
-  outputFilename = "submission.mif",
+  outputFilename = "submission.xlsx",
   iiasatemplate = NULL,
   generatePlots = FALSE,
   timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10))
@@ -36,15 +34,9 @@ generateIIASASubmission(
 
 \item{outputDirectory}{path to directory for the generated submission (default: output)}
 
-\item{outputPrefix}{gets prepended to the file name of the generated file(s)}
-
 \item{logFile}{path to the logfile with warnings (default: output/missing.log)}
 
-\item{generateSingleOutput}{indicates whether the submission should be generated
-into a single output file}
-
-\item{outputFilename}{filename of the generated submission file,
-if \code{generateSingleOutput} is set to TRUE (default: submission.mif)}
+\item{outputFilename}{filename of the generated submission mif or xlsx file.}
 
 \item{iiasatemplate}{optional filename of xlsx or yaml file provided by IIASA
 used to delete superfluous variables and adapt units}
@@ -62,8 +54,7 @@ Generates an IIASA submission from REMIND runs by applying a project-specific ma
 generateIIASASubmission(
   mifs = "/path/to/REMIMD/mifs",
   model = "REMIND-MAgPIE 2.1-4.2",
-  mappingFile = "output/template_navigate.csv",
-  generateSingleOutput = TRUE
+  mappingFile = "output/template_navigate.csv"
 )
 }
 }
