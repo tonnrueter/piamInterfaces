@@ -14,6 +14,7 @@
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
+#' @param generateSingleOutput has no effect and is only kept for backwards-compatibility
 #' @param timesteps timesteps that are accepted in final submission
 #' @importFrom data.table :=
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
@@ -36,7 +37,8 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
                                     logFile = "output/missing.log",
                                     outputFilename = "submission.xlsx",
                                     iiasatemplate = NULL, generatePlots = FALSE,
-                                    timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10))) {
+                                    timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+                                    generateSingleOutput = TRUE) {
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
   dir.create(outputDirectory, showWarnings = FALSE)
