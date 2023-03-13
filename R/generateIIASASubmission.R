@@ -20,6 +20,7 @@
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join
 #' @importFrom magclass unitsplit
+#' @importFrom stringr str_trim
 #' @examples
 #' \dontrun{
 #' # Simple use. Generates submission file in output folder:
@@ -78,6 +79,10 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
 
   submission <- mifdata %>%
     filter(!!sym("period") %in% timesteps) %>%
+    mutate(
+      !!sym("variable") := str_trim(!!sym("variable")),
+      !!sym("unit") := str_trim(!!sym("unit"))
+      ) %>%
     distinct() %>%
     inner_join(mapData, by = c("variable" = "piam_variable", "unit" = "piam_unit"), multiple = "all") %>%
     mutate(
