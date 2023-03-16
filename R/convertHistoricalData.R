@@ -22,13 +22,9 @@
 convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   hist <- suppressWarnings(as.quitte(mif))
 
-  if (length(project) > 1) {
-    m <- NULL
-    for (i in project) {
-      m <- rbind(m, getTemplate(i))
-    }
-  } else {
-    m <- getTemplate(project)
+  m <- NULL
+  for (i in project) {
+    m <- rbind(m, getTemplate(i))
   }
 
   varmap <- m %>%
