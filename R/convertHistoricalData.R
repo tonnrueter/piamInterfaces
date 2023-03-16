@@ -12,17 +12,22 @@
 #' @importFrom stats aggregate
 #' @examples
 #' \dontrun{
-#'data <- convertHistoricalData(
+#' data <- convertHistoricalData(
 #'   mif = "path/to/historical.mif",
 #'   project = "NAVIGATE",
 #'   regionMapping = "path/to/region_mapping_NAVIGATE.csv"
-#')
-#'}
+#' )
+#' }
 #' @export
 convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   hist <- suppressWarnings(as.quitte(mif))
 
-  varmap <- getTemplate(project) %>%
+  m <- NULL
+  for (i in project) {
+    m <- rbind(m, getTemplate(i))
+  }
+
+  varmap <- m %>%
     filter(!is.na(!!sym("piam_variable"))) %>%
     mutate(
       !!sym("piam_factor") := ifelse(is.na(!!sym("piam_factor")), 1, as.numeric(!!sym("piam_factor"))), # nolint
