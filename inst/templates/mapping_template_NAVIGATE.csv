@@ -1489,6 +1489,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1412;2;land cover;Land Cover|Forest|Forestry|Harvested Area;million ha;;;;;;Forest area harvested;
 1413;2;land cover;Land Cover|Forest|Managed;million ha;Resources|Land Cover|Forest|Managed Forest|+|Plantations;million ha;;;;"managed forests producing commercial wood supply for timber or energy (note: woody energy crops reported under ""energy crops"")";x
 1414;2;land cover;Land Cover|Forest|Natural Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;;Undisturbed natural forests and modified natural forests;x
+1414;2;land cover;Land Cover|Forest|Natural Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;;Undisturbed natural forests and modified natural forests;x
 1415;2;land cover;Land Cover|Other Arable Land;million ha;;;;;;other arable land that is unmanaged (e.g., grassland, savannah, shrubland), excluding unmanaged forests that are arable;
 1416;2;land cover;Land Cover|Other Land;million ha;Resources|Land Cover|+|Other Land;million ha;;;;other land cover that does not fit into any other category (please provide a definition of the sources in this category in the 'comments' tab);x
 1417;1;policy;Price|Carbon;US$2010/t CO2;Price|Carbon;US$2005/t CO2;1.10774;;;price of carbon (for regional aggregrates the weighted price of carbon by subregion should be used);
