@@ -1687,10 +1687,10 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1606;2;water (agriculture);Land Cover|Water Ecosystems|Glaciers;million ha;;;;;;Land-use coverage of water-related ecosystem: glaciers;
 1607;2;water (agriculture);Land Cover|Water Ecosystems|Lakes;million ha;;;;;;Land-use coverage of water-related ecosystem: lakes;
 1608;2;water (agriculture);Land Cover|Water Ecosystems|Mountains;million ha;;;;;;Land-use coverage of water-related ecosystem: mountains;
-1609;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands;million ha;;;;;;Land-use coverage of water-related ecosystem: wetlands;
-1610;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands|Peatlands|Intact;million ha;;;;;;Land-use coverage of water-related ecosystem: wetlands with organic soils: intact peatland area;
-1611;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands|Peatlands|Drained;million ha;;;;;;Land-use coverage of water-related ecosystem: wetlands with organic soils: drained or degraded peatland area;
-1612;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands|Peatlands|Rewetted;million ha;;;;;;Land-use coverage of water-related ecosystem: wetlands with organic soils: rewetted or restored peatland area;
+1609;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands;million ha;Resources|Peatland;million ha;;;;Land-use coverage of water-related ecosystem: wetlands;
+1610;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands|Peatlands|Intact;million ha;Resources|Peatland|+|Intact;million ha;;;;Land-use coverage of water-related ecosystem: wetlands with organic soils: intact peatland area;
+1611;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands|Peatlands|Drained;million ha;Resources|Peatland|+|Degraded;million ha;;;;Land-use coverage of water-related ecosystem: wetlands with organic soils: drained or degraded peatland area;
+1612;2;water (agriculture);Land Cover|Water Ecosystems|Wetlands|Peatlands|Rewetted;million ha;Resources|Peatland|+|Rewetted;million ha;;;;Land-use coverage of water-related ecosystem: wetlands with organic soils: rewetted or restored peatland area;
 1613;1;water (energy);Water Consumption|Electricity;km3/yr;Water Consumption|Electricity;km3/yr;;;;total water consumption for net electricity production;x
 1614;1;water (energy);Water Consumption|Electricity|Biomass;km3/yr;Water Consumption|Electricity|Biomass;km3/yr;;;;water consumption for net electricity production from municipal solid waste, purpose-grown biomass, crop residues, forest industry waste, biogas;x
 1615;1;water (energy);Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;;;;water consumption for net electricity production from municipal solid waste, purpose-grown biomass, crop residues, forest industry waste with a CO2 capture component;x
