@@ -1310,11 +1310,16 @@
 2;"energy (industry)";"Production|Non-Ferrous Metals";"Mt/yr";"production of non-ferrous metals (e.g., aluminum)";;;;;0;;
 2;"energy (industry)";"Production|Steel";"Mt/yr";"production of steel";"Production|Industry|Steel";"Mt/yr";1;;0;;
 2;"energy (industry)";"Production|Steel|Primary";"Mt/yr";"Production of primary / virgin steel";"Production|Industry|Steel|Primary";"Mt/yr";1;;0;;
+2;"energy (industry)";"Production|Steel|Primary|Oxygen";"Mt/yr";"Production of primary / virgin steel via basic oxygen process in an oxygen furnace route";;;;;0;;
+2;"energy (industry)";"Production|Steel|Primary|Direct Reduction Natural Gas";"Mt/yr";"Production of primary / virgin steel via direct reduction in an electric-arc furnace using natural gas";;;;;0;;
+2;"energy (industry)";"Production|Steel|Primary|Direct Reduction Hydrogen";"Mt/yr";"Production of primary / virgin steel via direct reduction in an electric-arc furnace based on hydrogen (renewable)";;;;;0;;
 2;"energy (industry)";"Production|Steel|Secondary";"Mt/yr";"Production of secondary steel from recycling of scrap";"Production|Industry|Steel|Secondary";"Mt/yr";1;;0;;
 2;"energy (industry)";"Production|Chemicals";"Mt/yr";"production of chemicals (e.g. sulfuric acid)";;;;;0;;
 3;"energy (industry)";"Production|Chemicals|Ammonia";"Mt/yr";"Production of ammonia";;;;;0;;
 3;"energy (industry)";"Production|Chemicals|Methanol";"Mt/yr";"Production of methanol";;;;;0;;
-3;"energy (industry)";"Production|Chemicals|Ethylene";"Mt/yr";"Production of ethylene";;;;;0;;
+2;"energy (industry)";"Production|Chemicals|Ethylene";"Mt/yr";"Production of ethylene";;;;;0;;
+2;"energy (industry)";"Production|Chemicals|Ethylene|Fossil";"Mt/yr";"Production of ethylene using fossil fuels";;;;;0;;
+2;"energy (industry)";"Production|Chemicals|Ethylene|Low-Carbon";"Mt/yr";"Production of ethylene with new low carbon /carbon-free methods";;;;;0;;
 2;"energy (industry)";"Production|Pulp and Paper";"Mt/yr";"production of pulp and paper";;;;;0;;
 2;"energy (transport)";"Energy Service|Transportation|Freight";"bn tkm/yr";"energy service demand for domestic freight transport";"ES|Transport|Freight|Rail";"bn tkm/yr";1;;0;;"x"
 2;"energy (transport)";"Energy Service|Transportation|Freight";"bn tkm/yr";"energy service demand for domestic freight transport";"ES|Transport|Freight|Road";"bn tkm/yr";1;;0;;"x"
