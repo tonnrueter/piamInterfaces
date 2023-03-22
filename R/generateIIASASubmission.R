@@ -2,7 +2,8 @@
 #'
 #' @md
 #' @author Falk Benke, Oliver Richters
-#' @param mifs path to mif files or directories with mif files of a REMIND run
+#' @param mifs path to mif files or directories with mif files of a REMIND run,
+#'             or quitte object
 #' @param model name of model registered with IIASA
 #' @param mapping mapping template names such as c("AR6", "AR6_NGFS"). If NULL, user is asked
 #' @param mappingFile path to mapping. If NULL, mapping is generated based on param mapping
@@ -45,8 +46,12 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   dir.create(outputDirectory, showWarnings = FALSE)
 
   # for each directory, include all mif files
-  flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
-  mifdata <- as.quitte(flist)
+  if (is.character(mifs)) {
+    flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
+    mifdata <- as.quitte(flist)
+  } else {
+    mifdata <- as.quitte(mifs)
+  }
 
   # generate mapping file, if it doesn't exist yet
   if (length(mapping) > 0 || is.null(mappingFile) || !file.exists(mappingFile)) {

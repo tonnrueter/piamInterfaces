@@ -21,7 +21,8 @@ generateIIASASubmission(
 )
 }
 \arguments{
-\item{mifs}{path to mif files or directories with mif files of a REMIND run}
+\item{mifs}{path to mif files or directories with mif files of a REMIND run,
+or quitte object}
 
 \item{mapping}{mapping template names such as c("AR6", "AR6_NGFS"). If NULL, user is asked}
 
