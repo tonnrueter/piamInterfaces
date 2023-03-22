@@ -96,7 +96,7 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
   }
   if (! is.null(mif)) {
     mifdata <- quitte::as.quitte(mif)
-    message("\n### Variables found in file ", basename(mif))
+    message("\n### Variables found in mif file")
     mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)))
     for (ch in mifchilds) {
       message("- ", ch)
