@@ -89,7 +89,8 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       !!sym("unit") := str_trim(!!sym("unit"))
       ) %>%
     distinct() %>%
-    inner_join(mapData, by = c("variable" = "piam_variable", "unit" = "piam_unit"), multiple = "all") %>%
+    inner_join(mapData, by = c("variable" = "piam_variable", "unit" = "piam_unit"),
+               relationship = "many-to-many") %>%
     mutate(
       !!sym("value") := ifelse(is.na(!!sym("factor")), !!sym("value"), !!sym("factor") * !!sym("value"))
     ) %>%
