@@ -13,3 +13,4 @@
 ^output$
 ^Makefile$
 tutorial.md
+^.*CITATION.cff$
