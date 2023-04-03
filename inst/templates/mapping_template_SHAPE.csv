@@ -40,7 +40,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 34;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM;x
 ;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.;x
 40;Land Cover|Forest|Natural Forest|Primary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;;;Undisturbed primary natural forests;x
-41;Land Cover|Forest|Natural Forest|Secondary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;;;Undisturbed primary natural forests;x
+41;Land Cover|Forest|Natural Forest|Secondary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;;;Modified natural forests and secondary forests from natural succession;x
 42;Terrestrial Biodiversity|BII|Cropland Landscapes;%;Biodiversity|Cropland Landscapes BII;unitless;;;;;Terrestrial biodiversity in landscapes containing cropland measured with Biodiversity Intactness Index (BII);x
 43;Terrestrial Biodiversity|BII|Biodiversity Hotspots;%;Biodiversity|Biodiversity Hotspot BII;unitless;;;;;Terrestrial biodiversity in biodiversity hotspot landscapes measured with Biodiversity Intactness Index (BII);x
 44;Terrestrial Biodiversity|BII|Key Conservation Landscapes;%;Biodiversity|Biodiversity Hotspot and Intact Forest Landscapes BII;unitless;;;;;Terrestrial biodiversity in biodiversity hotspot and intact forest landscapes measured with Biodiversity Intactness Index (BII);x
