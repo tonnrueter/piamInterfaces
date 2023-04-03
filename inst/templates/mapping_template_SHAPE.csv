@@ -35,3 +35,5 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 30;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A);x
 34;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM;x
 ;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.;x
+40;Land Cover|Forest|Natural Forest|Primary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;;;Undisturbed primary natural forests;x
+41;Land Cover|Forest|Natural Forest|Secondary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;;;Undisturbed primary natural forests;x
