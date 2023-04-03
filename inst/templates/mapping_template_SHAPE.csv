@@ -30,6 +30,9 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 24;Food Waste|Per capita;kcal/cap/day;SDG|SDG12|Food waste;kcal/cap/day;;;;;Amount of food (agriculture and livestock) per capita that is disposed and not consumed;x
 25;Expenditure Share|Food;%;SDG|SDG02|Food expenditure share;income;100;;;;Share of food expenditure in total income;x
 26;Agricultural Material Footprint;tDM/cap/yr;SDG|SDG12|Material footprint;tDM/capita/yr;;;;;Biomass usage per capita (excluding pasture + forestry);x
+27;Food|Intake;kcal/cap/day;Nutrition|Calorie Intake;kcal/capita/day;;;;;Food calorie intake per capita;x
+;Food|Intake|Crops;kcal/cap/day;Nutrition|Calorie Intake|+|Crops;kcal/capita/day;;;;;Calorie intake from food crops per capita;x
+;Food|Intake|Livestock;kcal/cap/day;Nutrition|Calorie Intake|+|Livestock products;kcal/capita/day;;;;;Calorie intake from livestock products per capita;x
 28;Ocean|pH value;-;Ocean|pH value;-;;;;;Ocean acidification: pH value;x
 29;Ocean|Carbonate Saturation|Calcite;-;Ocean|Carbonate Saturation|Calcite;-;;;;;Saturation state of calcite (Omega_C);x
 30;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A);x
