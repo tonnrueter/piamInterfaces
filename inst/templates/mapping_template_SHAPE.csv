@@ -36,6 +36,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 28;Ocean|pH value;-;Ocean|pH value;-;;;;;Ocean acidification: pH value;x
 29;Ocean|Carbonate Saturation|Calcite;-;Ocean|Carbonate Saturation|Calcite;-;;;;;Saturation state of calcite (Omega_C);x
 30;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A);x
+31;Freshwater|Environmental Flow Violations;km3/yr;Water|Environmental flow violation volume;km3;;;;;Water withdrawals at the expense of environmental flow requirements;x
 34;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM;x
 ;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.;x
 40;Land Cover|Forest|Natural Forest|Primary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;;;Undisturbed primary natural forests;x
