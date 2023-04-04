@@ -152,7 +152,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 133;Export;billion US$2010/yr;;;;;;total exports measured in monetary quantities.
 134;GDP|MER;billion US$2010/yr;;;;;;GDP at market exchange rate
 135;GDP|PPP;billion US$2010/yr;Total income;million US$05 PPP/yr;0.00000111;;;GDP at purchasing power parity
-136;GINI;0;;;;;;GINI income ineqaulity index
+136;GINI;0;;;;;;GINI income inequality index
 137;Import;billion US$2010/yr;;;;;;total imports measured in monetary quantities.
 138;Interest Rate|Real;%;;;;;time preference rate as component of the interest rate is exogenous;Real interest rate or return on capital that is relevant for energy system investments
 139;Policy Cost|Additional Total Energy System Cost;billion US$2010/yr;;;;;;additional energy system cost associated with the policy
