@@ -100,7 +100,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   submission <- aggregate(value ~ model + region + scenario + period + variable + unit, data = submission, FUN = "sum")
 
   if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
-    submission <- checkIIASASubmission(submission, iiasatemplate, logFile)
+    submission <- checkIIASASubmission(submission, iiasatemplate, logFile, failOnUnitMismatch = FALSE)
   } else {
     message("# iiasatemplate ", iiasatemplate, " does not exist, returning full list of variables.")
   }

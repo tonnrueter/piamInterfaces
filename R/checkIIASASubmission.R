@@ -33,6 +33,8 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
                       "Mt/yr" = "Mt/year",
                       # for backwards compatibility with AR6 and SHAPE templates (using old incorrect unit)
                       # should only affect template variable 'Energy Service|Residential and Commercial|Floor Space'
+                      "billion m2/yr" = "bn m2",
+                      "billion m2" = "bn m2/yr",
                       "bn m2/yr" = "bn m2",
                       "bn m2" = "bn m2/yr",
                  NULL)
