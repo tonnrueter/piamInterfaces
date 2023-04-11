@@ -32,7 +32,7 @@
 #' )
 #' }
 #' @export
-generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.0",
+generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.1",
                                     mappingFile = NULL,
                                     removeFromScen = NULL, addToScen = NULL,
                                     outputDirectory = "output",
@@ -78,7 +78,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   if (!is.null(model)) message("# Correct model name to '", model, "'.")
   message("# Adapt scenario names: '",
           addToScen, "' will be prepended, '", removeFromScen, "' will be removed.")
-  message("# Apply mapping from ", mappingFile)
+  message("# Apply mapping ", mappingFile)
 
   mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
 
@@ -100,21 +100,10 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   submission <- aggregate(value ~ model + region + scenario + period + variable + unit, data = submission, FUN = "sum")
 
   if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
+    submission <- priceIndicesIIASA(submission, iiasatemplate, scenBase = NULL)
     submission <- checkIIASASubmission(submission, iiasatemplate, logFile, failOnUnitMismatch = FALSE)
   } else {
     message("# iiasatemplate ", iiasatemplate, " does not exist, returning full list of variables.")
-  }
-
-  # check whether all scenarios have same number of variables
-  countDataPoints <- seq_along(levels(submission$scenario))
-  for (i in countDataPoints) {
-    countDataPoints[i] <- sum(submission$scenario == levels(submission$scenario)[[i]])
-  }
-  if (length(unique(countDataPoints)) != 1) {
-    message(
-      "Not all scenarios have the same data points: ",
-      paste0(levels(submission$scenario), ": ", countDataPoints, ".", collapse = " ")
-    )
   }
 
   # perform summation checks
@@ -130,7 +119,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
     submission <- submission %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value")))
     quitte::write.mif(submission, file.path(outputDirectory, outputFilename))
   }
-  message("\n### Output file written: ", outputFilename)
+  message("\n\n### Output file written: ", outputFilename)
 
 }
 
