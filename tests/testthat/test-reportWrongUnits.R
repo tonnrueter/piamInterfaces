@@ -1,0 +1,11 @@
+test_that("reportWrongUnits works", {
+  wrongUnits <- data.frame(variable = character(), templateunit = character(), mifunit = character())
+  wrongUnits[nrow(wrongUnits) + 1, ] <- c("Population", "Million", "Zillion")
+  cats <- capture.output(logtext <- reportWrongUnits(wrongUnits))
+  expect_true(any(grepl("1 unit mismatches", logtext)))
+  expect_true(any(grepl("Population", logtext)))
+  expect_true(any(grepl("Million", logtext)))
+  expect_true(any(grepl("Zillion", logtext)))
+  expect_true(any(grepl("identicalUnits", cats)))
+  expect_true(any(grepl("checkFixUnits", cats)))
+})

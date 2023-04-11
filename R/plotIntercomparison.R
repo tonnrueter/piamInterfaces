@@ -78,12 +78,18 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   }
   levels(data$model) <- newModelNames
 
-  checkVariables <- list()
+  areaplotVariables <- list()
   for (i in intersect(unique(summationGroups$parent), unique(data$variable))) {
-    checkVariables[[i]] <- summationGroups[which(summationGroups[, "parent"] == i), "child"]
+    childVariables <- intersect(summationGroups[which(summationGroups[, "parent"] == i), "child"],
+                                unique(data$variable))
+    if (length(childVariables) > 0) {
+      areaplotVariables[[i]] <- childVariables
+    }
   }
 
-  names(checkVariables) <- gsub(" [1-9]$", "", names(checkVariables))
+  names(areaplotVariables) <- gsub(" [1-9]$", "", names(areaplotVariables))
+
+  print(areaplotVariables)
 
   makepdf <- function(pdfFilename, plotdata, plotvariables) {
     if (nrow(plotdata) == 0) {
@@ -96,8 +102,8 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     plotvariables <- sort(intersect(plotvariables, unique(plotdata$variable)))
     for (p in plotvariables) {
       message(which(p == plotvariables), "/", length(plotvariables), ": Add plot for ", p)
-      if (p %in% names(checkVariables)) {
-        childs <- intersect(checkVariables[[p]], unique(plotdata$variable))
+      if (p %in% names(areaplotVariables)) {
+        childs <- intersect(areaplotVariables[[p]], unique(plotdata$variable))
         if (length(getModels(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1 ||
             length(getScenarios(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1) {
           message("Childs: ", paste(gsub(p, "", childs, fixed = TRUE), collapse = ", "))
@@ -112,7 +118,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     dev.off()
   }
 
-  plotvariables <- sort(intersect(c(names(checkVariables), lineplotVariables), unique(data$variable)))
+  plotvariables <- sort(intersect(c(names(areaplotVariables), lineplotVariables), unique(data$variable)))
   if (interactive) plotvariables <- gms::chooseFromList(plotvariables, type = "variables to be plotted")
 
   message("### ", length(c(quitte::getScenarios(data), quitte::getModels(data))),

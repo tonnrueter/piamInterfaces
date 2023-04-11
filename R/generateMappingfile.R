@@ -57,14 +57,14 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
     dir.create(outputDirectory, recursive = TRUE, showWarnings = FALSE)
     if (! is.null(logFile)) logFile <- file.path(outputDirectory, logFile)
   }
-  message("### Generating mapping ", if (!is.null(fileName)) basename(fileName),
-          " based on templates ", paste(templates, collapse = ", "))
+  message(paste("### Generating mapping", if (!is.null(fileName)) basename(fileName),
+          "based on templates", paste(templates, collapse = ", ")))
   if (length(targetVar) == 1) targetVar <- rep.int(targetVar, length(templates))
   mapping <- NULL
   comments <- NULL
 
   for (i in seq_along(templates)) {
-    message("# Read ", templates[i])
+    message("\n# Read ", templates[i])
     dt <- as.data.table(getTemplate(templates[i]))
     names(dt) <- tolower(names(dt))
 
@@ -129,7 +129,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
     fwrite(mapping, file = fileName, sep = ";")
   }
   if (!is.null(comments) && !is.null(logFile)) {
-    write("Comments from generateMappingfile():", file = logFile, append = TRUE)
+    write("\n\n### Comments from generateMappingfile():", file = logFile, append = TRUE)
     fwrite(comments, file = logFile, sep = ";", append = TRUE)
   }
   return(invisible(list(mappings = mapping, comments = comments)))

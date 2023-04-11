@@ -7,7 +7,7 @@
 generateIIASASubmission(
   mifs = ".",
   mapping = NULL,
-  model = "REMIND 3.0",
+  model = "REMIND 3.1",
   mappingFile = NULL,
   removeFromScen = NULL,
   addToScen = NULL,
