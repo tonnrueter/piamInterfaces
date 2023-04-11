@@ -427,11 +427,9 @@ Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Coal;1
 Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Fossil synfuel;1
 Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Natural Gas;1
 Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Oil;1
-Final Energy|Industry|Gases;Final Energy|Industry|Gases|  (EK ???);1
-Final Energy|Industry|Gases;Final Energy|Industry|Gases|Bioenergy     (EK Use Biomass instead of bioenerg. applies to any use of bioenergy);1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Bioenergy;1
 Final Energy|Industry|Gases;Final Energy|Industry|Gases|Fossil;1
-Final Energy|Industry|Gases;Final Energy|Industry|Gases|Hydrogen synfuel   (EK Mixing of SE and PE here. H2 is listed separately as carrier. Remove? Same applies to names below);1
-Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|   (EK ???);1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Hydrogen synfuel;1
 Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Bioenergy;1
 Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Fossil;1
 Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Hydrogen synfuel;1
