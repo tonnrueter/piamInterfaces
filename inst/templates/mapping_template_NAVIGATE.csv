@@ -1312,9 +1312,9 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1247;2;energy (secondary);Conversion Input|Electricity|Heat;EJ/yr;;;;;;secondary energy consumption of electricity for the production of heat (large-scale heat pumps);
 1248;3;energy (secondary);Conversion Input|Electricity|Hydrogen|Autoproduction;EJ/yr;;;;;;secondary energy consumption of electricity for the autoproduction of hydrogen;
 1249;3;energy (secondary);Conversion Input|Hydrogen|Liquids|Autoproduction;EJ/yr;;;;;;secondary energy consumption of hydrogen for the autoproduction of liquids, incl. hydrocarbon inputs for olefine production;
-1250;1;energy (service);Energy Service|Commercial|Floor Space;bn m2;ES|Buildings|Commercial|Floor Space;bn m2;;;;energy service demand for conditioned floor space in commercial buildings;
+1250;1;energy (service);Energy Service|Commercial|Floor Space;bn m2;ES|Buildings|Commercial|Floor Space;bn m2;;;;energy service demand for conditioned floor space in commercial buildings;x
 1251;1;energy (service);Energy Service|Residential and Commercial|Floor Space;bn m2;ES|Buildings|Floor Space;bn m2;;;;energy service demand for conditioned floor space in buildings;
-1252;1;energy (service);Energy Service|Residential|Floor Space;bn m2;ES|Buildings|Residential|Floor Space;bn m2;;;;energy service demand for conditioned floor space in residential buildings;
+1252;1;energy (service);Energy Service|Residential|Floor Space;bn m2;ES|Buildings|Residential|Floor Space;bn m2;;;;energy service demand for conditioned floor space in residential buildings;x
 1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport;x
 1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport;x
 1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Navigation;bn tkm/yr;;;;energy service demand for freight transport;x
