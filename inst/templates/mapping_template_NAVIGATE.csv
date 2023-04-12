@@ -23,8 +23,8 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 13;1;agriculture;Price|Agriculture|Corn|Index;Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Plant-based|Maize;1;;;;price index of corn;x
 14;1;agriculture;Price|Agriculture|Non-Energy Crops and Livestock|Index;Index (2020 = 1);Prices|Index2020|Agriculture|Food products;1;;;;weighted average price index of non-energy crops and livestock products;x
 15;1;agriculture;Price|Agriculture|Non-Energy Crops|Index;Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Plant-based;1;;;;weighted average price index of non-energy crops;x
-16;1;agriculture;Price|Agriculture|Soybean|Index;Index (2020 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Soybean;1;;;;price index of soybean;x
-17;1;agriculture;Price|Agriculture|Wheat|Index;Index (2020 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Temperate cereals;1;;;;price index of wheat;x
+16;1;agriculture;Price|Agriculture|Soybean|Index;Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Plant-based|Soybean;1;;;;price index of soybean;x
+17;1;agriculture;Price|Agriculture|Wheat|Index;Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Plant-based|Temperate cereals;1;;;;price index of wheat;x
 18;1;agriculture;Fertilizer|Nitrogen|Intensity;t N/ha/yr;;;;;;nitrogen fertilizer inputs in tonnes per hectare per year (or similar);
 19;1;agriculture;Fertilizer|Phosphorus|Intensity;t P/ha/yr;;;;;;phosphorus fertilizer inputs in tonnes per hectare per year (or similar);
 20;2;agriculture;Agricultural Demand|Energy|Crops|1st generation;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;;demand for modern primary 1st generation energy crops;x
