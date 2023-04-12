@@ -10,6 +10,7 @@
 #'        of files containing a 'Variable' column (or both)
 #' @param interactive boolean whether you want to select variables, regions and models to be plotted
 #' @param mainReg region name of main region to be passed to mip
+#' @param plotby whether you would like to have everything plotted by scenario, model and/or onefile
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
 #' @importFrom rlang sym syms
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
@@ -24,7 +25,7 @@
 #' @export
 plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsFile = "AR6", # nolint: cyclocomp_linter.
                                 renameModels = NULL, lineplotVariables = "AR6", interactive = FALSE,
-                                mainReg = "World") {
+                                mainReg = "World", plotby = c("model", "scenario")) {
   .data <- NULL # avoid binding lintr error
 
   if (!is.null(outputDirectory) && ! dir.exists(outputDirectory)) {
@@ -57,17 +58,26 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   if (interactive) {
     regoptions <- setdiff(regs, mainReg)
     if (length(regoptions) > 0) {
-      regs <- c(mainReg, gms::chooseFromList(regoptions,
-                type = paste("regions to be plotted additional to", mainReg)))
+      userregs <- gms::chooseFromList(regoptions, userinfo = "Press Enter for all regions.",
+                       type = paste("regions to be plotted additional to", mainReg))
+      regs <- if (length(userregs) == 0) regs else c(mainReg, userregs)
     }
     if (length(levels(data$model)) > 1) {
-      models <- gms::chooseFromList(levels(data$model), type = "models to be plotted")
-      data <- filter(data, .data$model %in% models)
+      usermodels <- gms::chooseFromList(levels(data$model), userinfo = "Press Enter for all models.",
+                         type = "models to be plotted")
+      if (length(usermodels) > 0) {
+        data <- filter(data, .data$model %in% usermodels)
+      }
     }
     if (length(levels(data$scenario)) > 1) {
-      scenarios <- gms::chooseFromList(levels(data$scenario), type = "scenarios to be plotted")
-      data <- filter(data, .data$scenario %in% scenarios)
+      userscenarios <- gms::chooseFromList(levels(data$scenario), userinfo = "Press Enter for all scenarios.",
+                            type = "scenarios to be plotted")
+      if (length(userscenarios) > 0) {
+        data <- filter(data, .data$scenario %in% userscenarios)
+      }
     }
+    plotby <- gms::chooseFromList(c("onefile", "model", "scenario"), "pdfs to be generated",
+                     userinfo = "all in one file, and/or one file per model, scenario")
   }
   data <- filter(data, .data$region %in% regs) %>% droplevels()
 
@@ -88,8 +98,6 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   }
 
   names(areaplotVariables) <- gsub(" [1-9]$", "", names(areaplotVariables))
-
-  print(areaplotVariables)
 
   makepdf <- function(pdfFilename, plotdata, plotvariables) {
     if (nrow(plotdata) == 0) {
@@ -119,12 +127,20 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   }
 
   plotvariables <- sort(intersect(c(names(areaplotVariables), lineplotVariables), unique(data$variable)))
-  if (interactive) plotvariables <- gms::chooseFromList(plotvariables, type = "variables to be plotted")
+  if (interactive) {
+    userplotvariables <- gms::chooseFromList(plotvariables, userinfo = "Enter to select all variables",
+                                             type = "variables to be plotted")
+    if (length(userplotvariables) > 0) plotvariables <- userplotvariables
+  }
 
-  message("### ", length(c(quitte::getScenarios(data), quitte::getModels(data))),
-          " documents will be generated, each with max. ", length(plotvariables), " plots. Enjoy waiting.\n")
+  countpdfs <- length(c(if ("scenario" %in% plotby) quitte::getScenarios(data),
+                        if ("model" %in% plotby) quitte::getModels(data),
+                        if ("onefile" %in% plotby) "onefile"))
 
-  if (length(quitte::getModels(data)) > 1) {
+  message("### ", countpdfs, " documents will be generated, each with max. ",
+          length(plotvariables), " plots. Enjoy waiting.\n")
+
+  if ("scenario" %in% plotby && length(quitte::getModels(data)) > 1) {
     for (thisscenario in quitte::getScenarios(data)) {
       pdfFilename <- file.path(outputDirectory, paste0("compare_models_", gsub(" ", "_", thisscenario), ".pdf"))
       message("\n## Writing ", pdfFilename, " for scenario '", thisscenario, "'.\n")
@@ -132,13 +148,18 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
       makepdf(pdfFilename, plotdata, plotvariables)
     }
   }
-  if (length(quitte::getScenarios(data)) > 1 || length(quitte::getModels(data)) == 1) {
+  if ("model" %in% plotby && length(quitte::getScenarios(data)) > 1) {
     for (thismodel in quitte::getModels(data)) {
       pdfFilename <- file.path(outputDirectory, paste0("compare_scenarios_", gsub(" ", "_", thismodel), ".pdf"))
       message("\n## Writing ", pdfFilename, " for model '", thismodel, "'.\n")
       plotdata <- filter(data, !!sym("model") == thismodel) %>% droplevels()
       makepdf(pdfFilename, plotdata, plotvariables)
     }
+  }
+  if ("onefile" %in% plotby || (length(quitte::getModels(data)) == 1 && length(quitte::getScenarios(data)) == 1)) {
+    pdfFilename <- file.path(outputDirectory, "compare_scenarios_all.pdf")
+    message("\n## Writing ", pdfFilename, " with all data.\n")
+    makepdf(pdfFilename, droplevels(data), plotvariables)
   }
   message("Done. See results in ", normalizePath(outputDirectory), ".")
 }
