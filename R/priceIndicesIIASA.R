@@ -14,7 +14,7 @@ priceIndicesIIASA <- function(mifdata, iiasatemplate, scenBase = NULL) {
   missingPriceIndices <- setdiff(expectedPriceIndices, levels(mifdata$variable))
   for (mpi in missingPriceIndices) {
     templateunit <- unique(template$unit[template$variable == mpi])
-    referenceYear <- extractReferenceYear(templateunit)
+    referenceYear <- extractReferenceYear(templateunit, mpi)
     mifdata <- priceIndicesAdd(mifdata, mpi, scenBase = scenBase, referenceYear = referenceYear)
   }
   return(mifdata)

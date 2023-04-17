@@ -4,10 +4,12 @@
 \alias{extractReferenceYear}
 \title{Extract reference year for price indices from unit}
 \usage{
-extractReferenceYear(unit)
+extractReferenceYear(unit, var = NULL)
 }
 \arguments{
 \item{unit}{vector or string of units such as 'Index (2020 = 1)'}
+
+\item{var}{optional string of variable name to facilitate debugging}
 }
 \value{
 vector or string of reference years such as '2020'
