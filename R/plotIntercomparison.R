@@ -32,16 +32,18 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     dir.create(outputDirectory, recursive = TRUE)
   }
 
-  summationGroups <- getSummations(summationsFile)
-  if (summationsFile %in% names(summationsNames())) {
-    summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
+  summationGroups <- data.frame(list(variable = "", child = ""))
+  if (! is.null(summationsFile)) {
+    summationGroups <- getSummations(summationsFile)
+    if (isTRUE(summationsFile %in% names(summationsNames()))) {
+      summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
+    }
   }
 
   templatefiles <- lineplotVariables[lineplotVariables %in% names(templateNames()) || file.exists(lineplotVariables)]
   tmpLpv <- setdiff(lineplotVariables, templatefiles)
   for (template in templatefiles) {
-    templatedata <- getTemplate(template)
-    tmpLpv <- c(tmpLpv, setdiff(templatedata$Variable, c(summationGroups$parent, summationGroups$child)))
+    tmpLpv <- c(tmpLpv, getTemplate(template)$Variable)
   }
   lineplotVariables <- unique(tmpLpv)
 
