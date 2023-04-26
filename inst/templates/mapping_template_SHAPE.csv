@@ -30,8 +30,19 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 24;Food Waste|Per capita;kcal/cap/day;SDG|SDG12|Food waste;kcal/cap/day;;;;;Amount of food (agriculture and livestock) per capita that is disposed and not consumed;x
 25;Expenditure Share|Food;%;SDG|SDG02|Food expenditure share;income;100;;;;Share of food expenditure in total income;x
 26;Agricultural Material Footprint;tDM/cap/yr;SDG|SDG12|Material footprint;tDM/capita/yr;;;;;Biomass usage per capita (excluding pasture + forestry);x
+27;Food|Intake;kcal/cap/day;Nutrition|Calorie Intake;kcal/capita/day;;;;;Food calorie intake per capita;x
+;Food|Intake|Crops;kcal/cap/day;Nutrition|Calorie Intake|+|Crops;kcal/capita/day;;;;;Calorie intake from food crops per capita;x
+;Food|Intake|Livestock;kcal/cap/day;Nutrition|Calorie Intake|+|Livestock products;kcal/capita/day;;;;;Calorie intake from livestock products per capita;x
 28;Ocean|pH value;-;Ocean|pH value;-;;;;;Ocean acidification: pH value;x
 29;Ocean|Carbonate Saturation|Calcite;-;Ocean|Carbonate Saturation|Calcite;-;;;;;Saturation state of calcite (Omega_C);x
 30;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A);x
+31;Freshwater|Environmental Flow Violations;km3/yr;Water|Environmental flow violation volume;km3;;;;;Water withdrawals at the expense of environmental flow requirements;x
 34;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM;x
 ;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.;x
+40;Land Cover|Forest|Natural Forest|Primary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;;;Undisturbed primary natural forests;x
+41;Land Cover|Forest|Natural Forest|Secondary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;;;Modified natural forests and secondary forests from natural succession;x
+42;Terrestrial Biodiversity|BII|Cropland Landscapes;%;Biodiversity|Cropland Landscapes BII;unitless;;;;;Terrestrial biodiversity in landscapes containing cropland measured with Biodiversity Intactness Index (BII);x
+43;Terrestrial Biodiversity|BII|Biodiversity Hotspots;%;Biodiversity|Biodiversity Hotspot BII;unitless;;;;;Terrestrial biodiversity in biodiversity hotspot landscapes measured with Biodiversity Intactness Index (BII);x
+44;Terrestrial Biodiversity|BII|Key Conservation Landscapes;%;Biodiversity|Biodiversity Hotspot and Intact Forest Landscapes BII;unitless;;;;;Terrestrial biodiversity in biodiversity hotspot and intact forest landscapes measured with Biodiversity Intactness Index (BII);x
+45;Terrestrial Biodiversity|BII|Areas Outside Key Conservation and Cropland Landscapes;%;Biodiversity|BII in areas outside Biodiversity Hotspots, Intact Forest & Cropland Landscapes;unitless;;;;;Terrestrial biodiversity in areas outside biodiversity hotspot, intact forest & cropland landscapes measured with Biodiversity Intactness Index (BII);x
+46;Terrestrial Biodiversity|Shannon Crop Diversity Index;index;Biodiversity|Shannon crop area diversity index;unitless;;;;;Crop diversity measured by the Shannon index accounting for crop richness and abundance;x
