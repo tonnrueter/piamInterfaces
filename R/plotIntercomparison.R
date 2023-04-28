@@ -106,6 +106,10 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
       message("plotdata empty, skipping.")
       return()
     }
+    plotdata$identifier <- mip::identifierModelScen(plotdata)
+    ps <- mip::plotstyle(levels(plotdata$identifier))
+    output <- try(mip::plotstyle.add(names(ps), names(ps), ps, replace = TRUE))
+    if (inherits(output, "try-error")) message("Error running mip::plotstyle.add, you may have inconsistent coloring.")
     pdf(pdfFilename,
         width = max(12, length(quitte::getRegs(plotdata)),
                     length(quitte::getModels(plotdata)) * length(quitte::getScenarios(plotdata)) * 2))
