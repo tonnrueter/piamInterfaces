@@ -11,6 +11,7 @@
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #' @param template mapping template to be loaded
 #' @param remindVar REMIND/MAgPIE variable column name in template
+#' @param plotprefix added before filename
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
 #' @importFrom magclass unitsplit
 #' @importFrom mip showAreaAndBarPlots
@@ -23,7 +24,7 @@
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", summationsFile = "AR6",
                             logFile = NULL, logAppend = FALSE, generatePlots = FALSE,
-                            dataDumpFile = "checkSummations.csv", remindVar = "piam_variable") {
+                            dataDumpFile = "checkSummations.csv", remindVar = "piam_variable", plotprefix = NULL) {
   if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
     dir.create(outputDirectory, recursive = TRUE)
   }
@@ -78,13 +79,13 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
   }
   # generate human-readable summary of larger differences
   .checkSummationsSummary(mifFile, data, tmp, template, summationsFile, summationGroups,
-                   generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar)
+                   generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix)
 
   return(invisible(tmp))
 }
 
 .checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups,
-                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar) {
+                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix) {
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
   summarytext <- NULL
@@ -99,10 +100,11 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
     fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= 1, abs(!!sym("diff")) >= 0.001, !!sym("model") == thismodel)
-    problematic <- unique(c(fileLarge$variable))
+    problematic <- sort(unique(c(fileLarge$variable)))
     if (length(problematic) > 0) {
       if (generatePlots) {
-        pdfFilename <- file.path(outputDirectory, paste0("checkSummations_", gsub(" ", "_", thismodel), ".pdf"))
+        pdfFilename <- file.path(outputDirectory,
+                                 paste0(plotprefix, "checkSummations_", gsub(" ", "_", thismodel), ".pdf"))
         pdf(pdfFilename,
             width = max(12, length(quitte::getRegs(fileLarge)), length(quitte::getScenarios(fileLarge)) * 2))
         plotdata <- filter(data, !!sym("model") == thismodel)

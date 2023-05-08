@@ -13,7 +13,8 @@ checkSummations(
   logAppend = FALSE,
   generatePlots = FALSE,
   dataDumpFile = "checkSummations.csv",
-  remindVar = "piam_variable"
+  remindVar = "piam_variable",
+  plotprefix = NULL
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ checkSummations(
 \item{dataDumpFile}{file where data.frame with the data analysis is saved. If NULL, result is returned}
 
 \item{remindVar}{REMIND/MAgPIE variable column name in template}
+
+\item{plotprefix}{added before filename}
 }
 \description{
 Checks for a run if the variables sum up as expected and logs spotted gaps
