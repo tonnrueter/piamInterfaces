@@ -21,36 +21,42 @@ for (summationFile in names(summationsNames())) {
     if (summationFile == "AR6") {
       expect_message(tmp <- checkSummations(data, logFile = NULL,
                              template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
-                             dataDumpFile = "checkSummations.csv"),
+                             dataDumpFile = "checkSummations1.csv"),
                      "All summation checks were fine")
+      expect_true(file.exists(file.path(tempdir(), "checkSummations1.csv")))
     } else {
       expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "test.mif"), logFile = NULL,
                              template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
-                             dataDumpFile = "checkSummations.csv"),
+                             dataDumpFile = "checkSummations2.csv"),
                      "All summation checks were fine")
+      expect_true(file.exists(file.path(tempdir(), "checkSummations2.csv")))
     }
     expect_true(all(tmp$diff == 0))
   })
-  test_that(paste("test summationFile with errors using ", summationFile), {
+  test_that(paste("test summationFile with errors using", summationFile), {
     if (summationFile == "AR6") {
       expect_message(tmp <- checkSummations(mifFile = dataerror, logFile = NULL,
                              template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
-                             dataDumpFile = "checkSummations.csv"),
+                             dataDumpFile = "checkSummations3.csv"),
                      "Final Energy")
+      expect_true(file.exists(file.path(tempdir(), "checkSummations3.csv")))
       capture.output(expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "testerror.mif"),
-                             logFile = "log.txt", template = summationFile, summationsFile = summationFile,
-                             outputDirectory = tempdir(), dataDumpFile = "checkSummations.csv", generatePlots = TRUE),
+                             logFile = "log4.txt", template = summationFile, summationsFile = summationFile,
+                             outputDirectory = tempdir(), dataDumpFile = "checkSummations4.csv", generatePlots = TRUE,
+                             plotprefix = "TESTTHAT_"),
                      "1 equations are not satisfied"))
-      expect_true(file.exists(file.path(tempdir(), "checkSummations_REMIND.pdf")))
-      expect_true(file.info(file.path(tempdir(), "checkSummations_REMIND.pdf"))$size > 0)
+      expect_true(file.exists(file.path(tempdir(), "TESTTHAT_checkSummations_REMIND.pdf")))
+      expect_true(file.info(file.path(tempdir(), "TESTTHAT_checkSummations_REMIND.pdf"))$size > 0)
+      expect_true(file.exists(file.path(tempdir(), "log4.txt")))
+      expect_true(file.exists(file.path(tempdir(), "checkSummations4.csv")))
     } else {
       expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "testerror.mif"), logFile = NULL,
                              template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
-                             dataDumpFile = "checkSummations.csv"),
+                             dataDumpFile = "checkSummations3.csv"),
                      "Final Energy")
+      expect_true(file.exists(file.path(tempdir(), "checkSummations3.csv")))
     }
     expect_false(all(tmp$diff == 0))
-    expect_true(all(file.exists(file.path(tempdir(), c("log.txt", "checkSummations.csv")))))
   })
 }
 unlink(file.path(tempdir(), c("test.mif", "testerror.mif", "log.txt", "checkSummations.csv")))

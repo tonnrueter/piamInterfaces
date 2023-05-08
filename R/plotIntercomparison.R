@@ -15,6 +15,8 @@
 #' @importFrom rlang sym syms
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
 #' @importFrom grDevices pdf dev.off
+#' @importFrom mip plotstyle plotstyle.add
+#' @importFrom stats runif
 #' @examples
 #'
 #' \dontrun{
@@ -59,7 +61,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   data <- filter(data, .data$region %in% regs) %>% droplevels()
   if (interactive) {
     data <- quitte::chooseFilter(data, types = c("model", "scenario", "region", "period"),
-                                 keep <- list(region = mainReg))
+                                 keep = list(region = mainReg))
     plotby <- gms::chooseFromList(c("onefile", "model", "scenario"), "pdfs to be generated",
                           userinfo = "all in one file, and/or one file per model, scenario")
   }
@@ -86,6 +88,11 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
                                              type = "variables to be plotted")
     if (length(userplotvariables) > 0) plotvariables <- userplotvariables
   }
+
+  identifiernames <- unique(c(levels(data$model), levels(data$scenario)))
+  ps <- mip::plotstyle(as.character(runif(length(identifiernames))))
+  output <- try(mip::plotstyle.add(identifiernames, identifiernames, ps, replace = TRUE))
+  if (inherits(output, "try-error")) message("Error running mip::plotstyle.add, you may have inconsistent coloring.")
 
   countpdfs <- length(c(if ("scenario" %in% plotby) quitte::getScenarios(data),
                         if ("model" %in% plotby) quitte::getModels(data),
@@ -125,9 +132,10 @@ makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mai
   }
   plotdata$identifier <- mip::identifierModelScen(plotdata)
   legendTitle <- c(attr(plotdata$identifier, "deletedinfo"), "Model output")[[1]]
-  ps <- mip::plotstyle(levels(plotdata$identifier))
-  output <- try(mip::plotstyle.add(names(ps), names(ps), ps, replace = TRUE))
-  if (inherits(output, "try-error")) message("Error running mip::plotstyle.add, you may have inconsistent coloring.")
+  if (! all(levels(plotdata$identifier) %in% names(mip::plotstyle()))) {
+    ps <- mip::plotstyle(as.character(runif(length(levels(plotdata$identifier)))))
+    try(mip::plotstyle.add(levels(plotdata$identifier), levels(plotdata$identifier), ps, replace = TRUE))
+  }
   pdf(pdfFilename,
       width = 1.1 * max(12, length(quitte::getRegs(plotdata)),
                   length(quitte::getModels(plotdata)) * length(quitte::getScenarios(plotdata)) * 2),
@@ -150,4 +158,3 @@ makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mai
   }
   dev.off()
 }
-

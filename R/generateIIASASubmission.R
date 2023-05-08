@@ -74,7 +74,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       !!sym("Variable") := unitsplit(!!sym("Variable"))$variable # nolint
     )
 
-  message("\n### Generating submission file using mapping ", mappingFile, ".")
+  message("\n### Generating submission file using mapping ", paste(c(mapping, mappingFile), collapse = ", "), ".")
   if (!is.null(model)) message("# Correct model name to '", model, "'.")
   message("# Adapt scenario names: '",
           addToScen, "' will be prepended, '", removeFromScen, "' will be removed.")
@@ -107,10 +107,12 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   }
 
   # perform summation checks
+  prefix <- gsub("\\.[A-Za-z]+$", "", basename(outputFilename))
   for (sumFile in intersect(mapping, names(summationsNames()))) {
     invisible(checkSummations(submission, template = mappingFile, summationsFile = sumFile,
                             logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
-                            generatePlots = generatePlots))
+                            generatePlots = generatePlots, dataDumpFile = paste0(prefix, "_checkSummations.csv"),
+                            plotprefix = paste0(prefix, "_")))
   }
 
   if (grepl("\\.xlsx?$", outputFilename)) {
