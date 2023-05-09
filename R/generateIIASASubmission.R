@@ -2,162 +2,148 @@
 #'
 #' @md
 #' @author Falk Benke, Oliver Richters
-#' @param mifs path to mif files or directories with mif files of a REMIND run
+#' @param mifs path to mif files or directories with mif files of a REMIND run,
+#'             or quitte object
 #' @param model name of model registered with IIASA
 #' @param mapping mapping template names such as c("AR6", "AR6_NGFS"). If NULL, user is asked
 #' @param mappingFile path to mapping. If NULL, mapping is generated based on param mapping
 #' @param removeFromScen string to be removed from scenario name (optional)
 #' @param addToScen string to be added as prefix to scenario name (optional)
 #' @param outputDirectory path to directory for the generated submission (default: output)
-#' @param outputPrefix gets prepended to the file name of the generated file(s)
 #' @param logFile path to the logfile with warnings (default: output/missing.log)
-#' @param generateSingleOutput indicates whether the submission should be generated
-#'        into a single output file
-#' @param outputFilename filename of the generated submission file,
-#'        if `generateSingleOutput` is set to TRUE (default: submission.mif)
+#' @param outputFilename filename of the generated submission mif or xlsx file.
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
+#' @param generateSingleOutput has no effect and is only kept for backwards-compatibility
 #' @param timesteps timesteps that are accepted in final submission
 #' @importFrom data.table :=
-#' @importFrom iamc write.reportProject
-#' @importFrom magclass getNames getNames<- mbind read.report write.report
-#' @importFrom rmndt readMIF writeMIF
-#' @importFrom quitte write.mif read.quitte write.IAMCxlsx
-#' @importFrom stringr str_sub
-#' @importFrom tidyr pivot_wider
+#' @importFrom quitte as.quitte write.IAMCxlsx write.mif
+#' @importFrom dplyr filter mutate distinct inner_join
+#' @importFrom magclass unitsplit
+#' @importFrom stringr str_trim
 #' @examples
 #' \dontrun{
 #' # Simple use. Generates submission file in output folder:
 #' generateIIASASubmission(
 #'   mifs = "/path/to/REMIMD/mifs",
 #'   model = "REMIND-MAgPIE 2.1-4.2",
-#'   mappingFile = "output/template_navigate.csv",
-#'   generateSingleOutput = TRUE
+#'   mappingFile = "output/template_navigate.csv"
 #' )
 #' }
 #' @export
-generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.0", # nolint: cyclocomp_linter.
+generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.1",
                                     mappingFile = NULL,
                                     removeFromScen = NULL, addToScen = NULL,
-                                    outputDirectory = "output", outputPrefix = "",
+                                    outputDirectory = "output",
                                     logFile = "output/missing.log",
-                                    generateSingleOutput = TRUE,
-                                    outputFilename = "submission.mif",
+                                    outputFilename = "submission.xlsx",
                                     iiasatemplate = NULL, generatePlots = FALSE,
-                                    timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10))) {
+                                    timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+                                    generateSingleOutput = TRUE) {
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
   dir.create(outputDirectory, showWarnings = FALSE)
 
   # for each directory, include all mif files
-  flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
-
-  # generate mapping file, if they don't yet exist
-  if (length(mapping) > 0 || is.null(mappingFile) || !file.exists(mappingFile)) {
-    if (is.null(mappingFile)) {
-      mappingFile <- file.path(outputDirectory, paste0(paste0(c("mapping", mapping), collapse = "_"), ".csv"))
-    }
-    invisible(generateMappingfile(templates = mapping, outputDirectory = NULL,
-                              fileName = mappingFile, model = model, logFile = logFile,
-                              iiasatemplate = iiasatemplate))
+  if (is.character(mifs)) {
+    flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
+    mifdata <- as.quitte(flist)
+  } else {
+    mifdata <- as.quitte(mifs)
   }
 
-  message("\n### Generating .mif and .xlsx files using mapping ", mappingFile, ".")
+  # generate mapping file, if it doesn't exist yet
+  if (length(mapping) > 0 || is.null(mappingFile) || !file.exists(mappingFile)) {
+    mapData <- generateMappingfile(templates = mapping, outputDirectory = NULL,
+                                   fileName = NULL, model = model, logFile = logFile,
+                                   iiasatemplate = iiasatemplate)[["mappings"]]
+  } else {
+    mapData <- read.csv2(mappingFile)
+  }
+
+  mapData <- mapData %>%
+    mutate(
+      !!sym("factor") := as.numeric(!!sym("factor")),
+      # this is not optimal and error-prone: we must dissect variable into variable and unit again
+      # could be avoided, if we expect mappings with variable and unit fields
+      # instead of having the unit as part of the variable name
+      !!sym("piam_unit") := unitsplit(!!sym("piam_variable"))$unit, # nolint
+      !!sym("piam_variable") :=  unitsplit(!!sym("piam_variable"))$variable, # nolint
+      !!sym("Unit") := unitsplit(!!sym("Variable"))$unit, # nolint
+      !!sym("Variable") := unitsplit(!!sym("Variable"))$variable # nolint
+    )
+
+  message("\n### Generating submission file using mapping ", paste(c(mapping, mappingFile), collapse = ", "), ".")
   if (!is.null(model)) message("# Correct model name to '", model, "'.")
   message("# Adapt scenario names: '",
           addToScen, "' will be prepended, '", removeFromScen, "' will be removed.")
-  message("# Apply mapping from ", mappingFile)
+  message("# Apply mapping ", mappingFile)
 
-  tmpfile <- file.path(outputDirectory, "tmp_reporting.tmp")
-  outputMif <- file.path(outputDirectory, paste0(gsub("\\.mif$|\\.xlsx$", "", outputFilename), ".mif"))
+  mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
 
-  allmifdata <- NULL
-  for (fl in seq_along(flist)) {
-    if (!generateSingleOutput) {
-      outputMif <- file.path(outputDirectory, paste0(outputPrefix, basename(flist[fl])))
-      allmifdata <- NULL
-    }
-    message("# read ", flist[fl])
-    mifdata <- read.report(flist[fl], as.list = FALSE)
-    # remove -rem-xx and mag-xx from scenario names
-    getNames(mifdata, dim = 1) <- gsub("-(rem|mag)-[0-9]{1,2}", "", getNames(mifdata, dim = 1))
-    allmifdata <- mbind(allmifdata, mifdata)
-    if (!generateSingleOutput || fl == length(flist)) {
-      message("# Write ", tmpfile)
-      write.report(allmifdata, file = tmpfile)
-      message("# Convert to ", outputMif)
-      .setModelAndScenario(tmpfile, model, removeFromScen, addToScen)
-      iamc::write.reportProject(
-        tmpfile, mappingFile,
-        file = outputMif,
-        missing_log = logFile,
-      )
-      unlink(tmpfile)
+  submission <- mifdata %>%
+    filter(!!sym("period") %in% timesteps) %>%
+    mutate(
+      !!sym("variable") := str_trim(!!sym("variable")),
+      !!sym("unit") := str_trim(!!sym("unit"))
+      ) %>%
+    distinct() %>%
+    inner_join(mapData, by = c("variable" = "piam_variable", "unit" = "piam_unit"),
+               relationship = "many-to-many") %>%
+    mutate(
+      !!sym("value") := ifelse(is.na(!!sym("factor")), !!sym("value"), !!sym("factor") * !!sym("value"))
+    ) %>%
+    select("model", "scenario", "region", "period", "variable" = "Variable", "unit" = "Unit", "value")
 
-      message("# Read data again")
-      mifdata <- read.quitte(outputMif, factors = FALSE) %>%
-        mutate(value = ifelse(!is.finite(!!sym("value")) | is.na(!!sym("value")), NA, !!sym("value"))) %>%
-        mutate(scenario = gsub("^NA$", "", !!sym("scenario"))) %>%
-        filter(!!sym("period") %in% timesteps)
 
-      if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
-        mifdata <- checkIIASASubmission(mifdata, iiasatemplate, logFile)
-      } else {
-        message("# iiasatemplate ", iiasatemplate, " does not exist, returning full list of variables.")
-      }
+  submission <- aggregate(value ~ model + region + scenario + period + variable + unit, data = submission, FUN = "sum")
 
-      # check whether all scenarios have same number of variables
-      scenarios <- unique(mifdata$variable)
-      for (i in seq_along(scenarios)) {
-        if (length(filter(mifdata, !!sym("variable") %in% scenarios[[1]])) !=
-            length(filter(mifdata, !!sym("variable") %in% scenarios[[i]]))) {
-          warning(scenarios[1], " has a different number of variables than ", scenarios[i])
-        }
-      }
-
-      unlink(outputMif)
-
-      message("# Restore PM2.5 dot in variable names for consistency with DB template")
-      mifdata <- mifdata %>% mutate(variable = gsub("PM2_5", "PM2.5", !!sym("variable")))
-
-      message("# Replace N/A for missing years with blanks as recommended by Ed Byers")
-      write.mif(mifdata %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value"))), outputMif)
-
-      # perform summation checks
-      for (sumFile in intersect(mapping, names(summationsNames()))) {
-        invisible(checkSummations(outputMif, template = mappingFile, summationsFile = sumFile,
-                                logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
-                                generatePlots = generatePlots))
-      }
-
-      outputXlsx <- paste0(gsub("\\.mif$", "", outputMif), ".xlsx")
-      quitte::write.IAMCxlsx(mifdata, outputXlsx)
-      message("\n### Output files written:\n- ", outputMif, "\n- ", outputXlsx, "\n")
-    }
+  if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
+    submission <- priceIndicesIIASA(submission, iiasatemplate, scenBase = NULL)
+    submission <- checkIIASASubmission(submission, iiasatemplate, logFile, failOnUnitMismatch = FALSE)
+  } else {
+    message("# iiasatemplate ", iiasatemplate, " does not exist, returning full list of variables.")
   }
+
+  # perform summation checks
+  prefix <- gsub("\\.[A-Za-z]+$", "", basename(outputFilename))
+  for (sumFile in intersect(mapping, names(summationsNames()))) {
+    invisible(checkSummations(submission, template = mappingFile, summationsFile = sumFile,
+                            logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
+                            generatePlots = generatePlots, dataDumpFile = paste0(prefix, "_checkSummations.csv"),
+                            plotprefix = paste0(prefix, "_")))
+  }
+
+  if (grepl("\\.xlsx?$", outputFilename)) {
+    quitte::write.IAMCxlsx(submission, file.path(outputDirectory, outputFilename))
+  } else {
+    submission <- submission %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value")))
+    quitte::write.mif(submission, file.path(outputDirectory, outputFilename))
+  }
+  message("\n\n### Output file written: ", outputFilename)
+
 }
 
-.setModelAndScenario <- function(mif, model, scenRemove = NULL, scenAdd = NULL) {
-    Scenario <- NULL # nolint, added to avoid no visible binding error
-    Model <- NULL    # nolint
-    dt <- readMIF(mif)
-    scenarioNames <- unique(dt$Scenario)
-    if (!is.null(model)) dt[, Model := model]
-    if (!is.null(scenRemove)) dt[, Scenario := gsub(scenRemove, "", Scenario)]
+.setModelAndScenario <- function(dt, modelname, scenRemove = NULL, scenAdd = NULL) {
+    scenarioNames <- unique(dt$scenario)
+    if (!is.null(modelname)) dt$model <- modelname
+    if (!is.null(scenRemove)) dt$scenario <- gsub(scenRemove, "", dt$scenario)
     if (!is.null(scenAdd)) {
-      if (all(grepl(scenAdd, unique(dt$Scenario), fixed = TRUE))) {
-        message(sprintf("Prefix %s already found in all scenario name in %s. Skipping.", scenAdd, mif))
+      if (all(grepl(scenAdd, unique(dt$scenario), fixed = TRUE))) {
+        message("Prefix ", scenAdd, " already found in all scenario names. Skipping.")
       } else {
-        dt[, Scenario := paste0(scenAdd, Scenario)]
+        dt$scenario <- paste0(scenAdd, dt$scenario)
       }
     }
-    if (length(unique(dt$Scenario)) < length(scenarioNames)) {
+    if (length(unique(dt$scenario)) < length(scenarioNames)) {
       message(length(scenarioNames), " scenario names before changes: ", paste(scenarioNames, collapse = ", "))
-      message(length(unique(dt$Scenario)), " scenario names after changes:  ",
-              paste(unique(dt$Scenario), collapse = ", "))
+      message(length(unique(dt$scenario)), " scenario names after changes:  ",
+              paste(unique(dt$scenario), collapse = ", "))
       stop("Changes to scenario names lead to duplicates. Adapt scenRemove='",
            scenRemove, "' and scenAdd='", scenAdd, "'!")
     }
-    writeMIF(dt, mif)
+
+    dt$scenario <- as.factor(dt$scenario)
+    return(dt)
 }

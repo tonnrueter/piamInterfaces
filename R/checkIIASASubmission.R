@@ -23,19 +23,6 @@
 #' @export
 checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnUnitMismatch = TRUE) {
   variable <- NULL # to avoid global binding note
-  # use template units as names and map it to remind2 unit with identical meaning
-  identicalUnits <- c("billion m2/yr" = "bn m2/yr",
-                      "billion pkm/yr" = "bn pkm/yr",
-                      "billion tkm/yr" = "bn tkm/yr",
-                      "billion vkm/yr" = "bn vkm/yr",
-                      "kt CF4/yr" = "kt CF4-equiv/yr",
-                      "Million" = "million",
-                      "Mt/yr" = "Mt/year",
-                      # for backwards compatibility with AR6 and SHAPE templates (using old incorrect unit)
-                      # should only affect template variable 'Energy Service|Residential and Commercial|Floor Space'
-                      "bn m2/yr" = "bn m2",
-                      "bn m2" = "bn m2/yr",
-                 NULL)
 
   if (length(mifdata) == 1 && file.exists(mifdata)) {
     mifdata <- read.quitte(mifdata, factors = FALSE)
@@ -44,55 +31,54 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
   if (is.null(logFile)) {
     logFile <- stdout()
   } else {
-    cat(paste0("# Find info on deleted variables and unit mismatches in ", logFile, ".\n"))
+    cat(paste0("# Find info on deleted variables, unit and data mismatches in ", logFile, ".\n"))
   }
   template <- loadIIASATemplate(iiasatemplate)
 
   varsNotInTemplate <- sort(unique(mifdata$variable[! mifdata$variable %in% template$variable]))
 
   cat(paste0("# ", length(varsNotInTemplate), " variables not in IIASA template are deleted.\n"))
-  write(paste0("\n\n#--- ", length(varsNotInTemplate), " variables not in IIASAtemplate ", iiasatemplate,
+  write(paste0("\n\n#--- ", length(varsNotInTemplate), " variables not in IIASA template ", iiasatemplate,
                " are deleted ---#"), file = logFile, append = TRUE)
   write(paste0("  - ", paste(varsNotInTemplate, collapse = "\n  - ")), file = logFile, append = TRUE)
   mifdata <- filter(mifdata, variable %in% template$variable)
 
-  wrongUnits <- data.frame(variable = character(), templateunit = character(), mifunit = character())
-  logtext <- NULL
-  for (mifvar in unique(mifdata$variable)) {
-    templateunit <- unique(template$unit[template$variable == mifvar])
-    mifunit <- unique(mifdata$unit[mifdata$variable == mifvar])
-    if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
-      if (length(identicalUnits) > 0 && templateunit %in% names(identicalUnits)
-          && all(identicalUnits[[templateunit]] == mifunit)) {
-        logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, "."))
-        mifdata$unit[mifdata$variable == mifvar] <- templateunit
-      } else {
-        wrongUnits[nrow(wrongUnits) + 1, ] <- c(mifvar, paste(templateunit, collapse = ","),
-                                                       paste(mifunit, collapse = ","))
-      }
-    }
+  mifdata <- checkFixUnits(mifdata, template, logFile)
+
+  # if data is suppled (not while generating mapping file), check whether scenarios have same number of variables
+  if ("value" %in% names(mifdata)) {
+    checkDataLength(mifdata, logFile)
   }
-  if (length(logtext) > 0) {
-    write(paste0("\n\n#--- ", length(logtext), " units were corrected: ---#\n",
-          paste0(logtext, collapse = "\n")), file = logFile, append = TRUE)
-    cat(paste0("# ", length(logtext), " units were corrected.\n"))
-  }
-  if (nrow(wrongUnits) > 0) {
-    cat(paste0("# ", nrow(wrongUnits), " unit mismatches between template and reporting.\n"))
-    logtext <- paste0("\n\n#--- ", nrow(wrongUnits), " unit mismatches ---#")
-    for (wno in seq_along(rownames(wrongUnits))) {
-      w <- wrongUnits[wno, ]
-      logtext <- c(logtext, paste0("  - '", w[[1]], "' uses '", w[[3]], "', but template requires '", w[[2]], "'."))
-    }
-    cat(paste0("If they are identical apart from spelling, ",
-               "add them to vector 'identicalUnits' in piamInterfaces::checkIIASASubmission() as:\n"))
-    unitsOnly <- unique(wrongUnits[c(2, 3)])
-    for (wno in seq_along(rownames(unitsOnly))) {
-      cat(paste0('                      "', unitsOnly[wno, 1], '" = "', unitsOnly[wno, 2], '",\n'))
-    }
-    write(logtext, file = logFile, append = TRUE)
-    cat("\n")
-    if (failOnUnitMismatch) stop("Unit mismatches!")
-  }
+
   return(mifdata)
+}
+
+
+
+
+checkDataLength <- function(mifdata, logFile =  NULL) {
+  differingdatalength <- 0
+  logtext <- "\n\n### Check whether all scenarios have same number of variables"
+  for (vari in levels(mifdata$variable)) {
+    countDataPoints <- seq_along(levels(mifdata$scenario))
+    for (i in countDataPoints) {
+      countDataPoints[i] <- sum(droplevels(filter(mifdata, !!sym("variable") == vari))$scenario
+                             == levels(mifdata$scenario)[[i]])
+    }
+    if (length(unique(countDataPoints)) != 1) {
+      logtext <- c(logtext,
+        paste0("- For ", vari, ", data points per scenario differ: ",
+        paste0(levels(mifdata$scenario), ": ", countDataPoints, ".", collapse = " "))
+      )
+      differingdatalength <- differingdatalength + 1
+    }
+  }
+  if (differingdatalength == 0) {
+    logtext <- c(logtext, "- Everything seems fine")
+  } else {
+    cat(paste0("# ", differingdatalength, " variables found whose data points differ between scenarios"))
+  }
+  if (length(logtext) > 0 && ! is.null(logFile)) {
+    write(logtext, file = logFile, append = TRUE)
+  }
 }

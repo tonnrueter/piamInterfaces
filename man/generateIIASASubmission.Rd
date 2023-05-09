@@ -7,22 +7,22 @@
 generateIIASASubmission(
   mifs = ".",
   mapping = NULL,
-  model = "REMIND 3.0",
+  model = "REMIND 3.1",
   mappingFile = NULL,
   removeFromScen = NULL,
   addToScen = NULL,
   outputDirectory = "output",
-  outputPrefix = "",
   logFile = "output/missing.log",
-  generateSingleOutput = TRUE,
-  outputFilename = "submission.mif",
+  outputFilename = "submission.xlsx",
   iiasatemplate = NULL,
   generatePlots = FALSE,
-  timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10))
+  timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+  generateSingleOutput = TRUE
 )
 }
 \arguments{
-\item{mifs}{path to mif files or directories with mif files of a REMIND run}
+\item{mifs}{path to mif files or directories with mif files of a REMIND run,
+or quitte object}
 
 \item{mapping}{mapping template names such as c("AR6", "AR6_NGFS"). If NULL, user is asked}
 
@@ -36,15 +36,9 @@ generateIIASASubmission(
 
 \item{outputDirectory}{path to directory for the generated submission (default: output)}
 
-\item{outputPrefix}{gets prepended to the file name of the generated file(s)}
-
 \item{logFile}{path to the logfile with warnings (default: output/missing.log)}
 
-\item{generateSingleOutput}{indicates whether the submission should be generated
-into a single output file}
-
-\item{outputFilename}{filename of the generated submission file,
-if \code{generateSingleOutput} is set to TRUE (default: submission.mif)}
+\item{outputFilename}{filename of the generated submission mif or xlsx file.}
 
 \item{iiasatemplate}{optional filename of xlsx or yaml file provided by IIASA
 used to delete superfluous variables and adapt units}
@@ -52,6 +46,8 @@ used to delete superfluous variables and adapt units}
 \item{generatePlots}{boolean, whether to generate plots of failing summation checks}
 
 \item{timesteps}{timesteps that are accepted in final submission}
+
+\item{generateSingleOutput}{has no effect and is only kept for backwards-compatibility}
 }
 \description{
 Generates an IIASA submission from REMIND runs by applying a project-specific mapping
@@ -62,8 +58,7 @@ Generates an IIASA submission from REMIND runs by applying a project-specific ma
 generateIIASASubmission(
   mifs = "/path/to/REMIMD/mifs",
   model = "REMIND-MAgPIE 2.1-4.2",
-  mappingFile = "output/template_navigate.csv",
-  generateSingleOutput = TRUE
+  mappingFile = "output/template_navigate.csv"
 )
 }
 }

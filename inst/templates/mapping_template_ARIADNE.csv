@@ -1302,19 +1302,24 @@
 1;"energy (supply)";"Secondary Energy|Solids";"PJ/yr";"solid secondary energy carriers (e.g., briquettes, coke, wood chips, wood pellets)";"SE|Solids";"EJ/yr";1000;;0;;
 1;"energy (supply)";"Secondary Energy|Solids|Biomass";"PJ/yr";"solid secondary energy carriers produced from biomass (e.g., commercial charcoal, wood chips, wood pellets). Tradional bioenergy use is excluded.";"SE|Solids|+|Biomass";"EJ/yr";1000;;0;;
 1;"energy (supply)";"Secondary Energy|Solids|Coal";"PJ/yr";"Solid secondary energy derived from coal (e.g., briquettes, coke) for the usage in the buildings, transport and industry sector. This does not include the usage of coal for energy conversion into other (non-solid) secondary energy.";"SE|Solids|+|Coal";"EJ/yr";1000;;0;;
-2;"energy (buildings)";"Energy Service|Commercial|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in commercial buildings";"ES|Buildings|Commercial|Floor Space";"bn m2";1;;0;;
+2;"energy (buildings)";"Energy Service|Commercial|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in commercial buildings";"ES|Buildings|Commercial|Floor Space";"bn m2";1;;0;;x
 2;"energy (buildings)";"Energy Service|Residential and Commercial|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in buildings";"ES|Buildings|Floor Space";"bn m2";1;;0;;
-2;"energy (buildings)";"Energy Service|Residential|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in residential buildings";"ES|Buildings|Residential|Floor Space";"bn m2";1;;0;;
+2;"energy (buildings)";"Energy Service|Residential|Floor Space";"bn m2/yr";"energy service demand for conditioned floor space in residential buildings";"ES|Buildings|Residential|Floor Space";"bn m2";1;;0;;x
 2;"energy (industry)";"Production|Non-Metallic Minerals";"Mt/yr";"Production of non-metallic minerals";;;;;0;;
 2;"energy (industry)";"Production|Non-Metallic Minerals|Cement";"Mt/yr";"Production of cement";"Production|Industry|Cement";"Mt/yr";1;;0;;
 2;"energy (industry)";"Production|Non-Ferrous Metals";"Mt/yr";"production of non-ferrous metals (e.g., aluminum)";;;;;0;;
 2;"energy (industry)";"Production|Steel";"Mt/yr";"production of steel";"Production|Industry|Steel";"Mt/yr";1;;0;;
 2;"energy (industry)";"Production|Steel|Primary";"Mt/yr";"Production of primary / virgin steel";"Production|Industry|Steel|Primary";"Mt/yr";1;;0;;
+2;"energy (industry)";"Production|Steel|Primary|Oxygen";"Mt/yr";"Production of primary / virgin steel via basic oxygen process in an oxygen furnace route";;;;;0;;
+2;"energy (industry)";"Production|Steel|Primary|Direct Reduction Natural Gas";"Mt/yr";"Production of primary / virgin steel via direct reduction in an electric-arc furnace using natural gas";;;;;0;;
+2;"energy (industry)";"Production|Steel|Primary|Direct Reduction Hydrogen";"Mt/yr";"Production of primary / virgin steel via direct reduction in an electric-arc furnace based on hydrogen (renewable)";;;;;0;;
 2;"energy (industry)";"Production|Steel|Secondary";"Mt/yr";"Production of secondary steel from recycling of scrap";"Production|Industry|Steel|Secondary";"Mt/yr";1;;0;;
 2;"energy (industry)";"Production|Chemicals";"Mt/yr";"production of chemicals (e.g. sulfuric acid)";;;;;0;;
 3;"energy (industry)";"Production|Chemicals|Ammonia";"Mt/yr";"Production of ammonia";;;;;0;;
 3;"energy (industry)";"Production|Chemicals|Methanol";"Mt/yr";"Production of methanol";;;;;0;;
-3;"energy (industry)";"Production|Chemicals|Ethylene";"Mt/yr";"Production of ethylene";;;;;0;;
+2;"energy (industry)";"Production|Chemicals|Ethylene";"Mt/yr";"Production of ethylene";;;;;0;;
+2;"energy (industry)";"Production|Chemicals|Ethylene|Fossil";"Mt/yr";"Production of ethylene using fossil fuels";;;;;0;;
+2;"energy (industry)";"Production|Chemicals|Ethylene|Low-Carbon";"Mt/yr";"Production of ethylene with new low carbon /carbon-free methods";;;;;0;;
 2;"energy (industry)";"Production|Pulp and Paper";"Mt/yr";"production of pulp and paper";;;;;0;;
 2;"energy (transport)";"Energy Service|Transportation|Freight";"bn tkm/yr";"energy service demand for domestic freight transport";"ES|Transport|Freight|Rail";"bn tkm/yr";1;;0;;"x"
 2;"energy (transport)";"Energy Service|Transportation|Freight";"bn tkm/yr";"energy service demand for domestic freight transport";"ES|Transport|Freight|Road";"bn tkm/yr";1;;0;;"x"
@@ -1368,10 +1373,6 @@
 3;"energy (transport)";"Stock|Transportation|LDV|ICE";"million";"Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Stock|Transport|LDV|Compact Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|ICE";"million";"Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Stock|Transport|LDV|Midsize Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|ICE";"million";"Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Stock|Transport|LDV|Large Car and SUV|Liquids";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Stock|Transportation|LDV|ICE";"million";"Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Stock|Transport|LDV|Subcompact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Stock|Transportation|LDV|ICE";"million";"Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Stock|Transport|LDV|Compact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Stock|Transportation|LDV|ICE";"million";"Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Stock|Transport|LDV|Midsize Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Stock|Transportation|LDV|ICE";"million";"Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Stock|Transport|LDV|Large Car and SUV|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|ICE|Subcompact Car";"million";"Stock of subcompact internal combustion engine cars (US EPA)";"Stock|Transport|LDV|Subcompact Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|ICE|Compact Car";"million";"Stock of compact internal combustion engine cars (US EPA)";"Stock|Transport|LDV|Compact Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|ICE|Two-Wheelers";"million";"Stock of internal combustion engine two-wheelers";;;;;0;;
@@ -1394,7 +1395,10 @@
 3;"energy (transport)";"Stock|Transportation|LDV|FCEV|Compact Car";"million";"Stock of compact fuel cell electric cars (US EPA)";"Stock|Transport|LDV|Compact Car|FCEV";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|FCEV|Midsize Car";"million";"Stock of midsize fuel cell electric cars (US EPA)";"Stock|Transport|LDV|Midsize Car|FCEV";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|FCEV|Large Car and SUV";"million";"Stock of large fuel cell electric cars and SUVs (US EPA)";"Stock|Transport|LDV|Large Car and SUV|FCEV";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Stock|Transportation|LDV|PHEV";"million";"Stock of light duty plug-in hybrid electric cars";;;;;0;;
+3;"energy (transport)";"Stock|Transportation|LDV|PHEV";"million";"Stock of light duty plug-in hybrid electric cars";"Stock|Transport|LDV|Subcompact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
+3;"energy (transport)";"Stock|Transportation|LDV|PHEV";"million";"Stock of light duty plug-in hybrid electric cars";"Stock|Transport|LDV|Compact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
+3;"energy (transport)";"Stock|Transportation|LDV|PHEV";"million";"Stock of light duty plug-in hybrid electric cars";"Stock|Transport|LDV|Midsize Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
+3;"energy (transport)";"Stock|Transportation|LDV|PHEV";"million";"Stock of light duty plug-in hybrid electric cars";"Stock|Transport|LDV|Large Car and SUV|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|PHEV|Subcompact Car";"million";"Stock of subcompact plug-in hybrid electric cars (US EPA)";"Stock|Transport|LDV|Subcompact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|PHEV|Compact Car";"million";"Stock of compact plug-in hybrid electric cars (US EPA)";"Stock|Transport|LDV|Compact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Stock|Transportation|LDV|PHEV|Midsize Car";"million";"Stock of midsize plug-in hybrid electric cars (US EPA)";"Stock|Transport|LDV|Midsize Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
@@ -1448,10 +1452,6 @@
 3;"energy (transport)";"Sales|Transportation|LDV|ICE";"million";"Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Sales|Transport|LDV|Compact Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|ICE";"million";"Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Sales|Transport|LDV|Midsize Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|ICE";"million";"Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Sales|Transport|LDV|Large Car and SUV|Liquids";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Sales|Transportation|LDV|ICE";"million";"Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Sales|Transport|LDV|Subcompact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Sales|Transportation|LDV|ICE";"million";"Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Sales|Transport|LDV|Compact Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Sales|Transportation|LDV|ICE";"million";"Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Sales|Transport|LDV|Midsize Car|Hybrid Electric";"Million vehicles";1;;0;;"x"
-3;"energy (transport)";"Sales|Transportation|LDV|ICE";"million";"Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids";"Sales|Transport|LDV|Large Car and SUV|Hybrid Electric";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|ICE|Subcompact Car";"million";"Sales of subcompact internal combustion engine cars (US EPA)";"Sales|Transport|LDV|Subcompact Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|ICE|Compact Car";"million";"Sales of compact internal combustion engine cars (US EPA)";"Sales|Transport|LDV|Compact Car|Liquids";"Million vehicles";1;;0;;"x"
 3;"energy (transport)";"Sales|Transportation|LDV|ICE|Two-Wheelers";"million";"Sales of internal combustion engine two-wheelers";;;;;0;;

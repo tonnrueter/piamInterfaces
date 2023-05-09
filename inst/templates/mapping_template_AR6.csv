@@ -152,7 +152,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 133;Export;billion US$2010/yr;TODO;billion US$2005/yr;1.10774;;;;total exports measured in monetary quantities.;x
 134;GDP|MER;billion US$2010/yr;GDP|MER;billion US$2005/yr;1.10774;;;;GDP at market exchange rate;
 135;GDP|PPP;billion US$2010/yr;GDP|PPP;billion US$2005/yr;1.10774;;;;GDP at purchasing power parity;
-136;GINI;0;;;;;;;GINI income ineqaulity index;x
+136;GINI;0;;;;;;;GINI income inequality index;x
 137;Import;billion US$2010/yr;TODO;billion US$2005/yr;1.10774;;;;total imports measured in monetary quantities.;x
 138;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;unitless;100;;;time preference rate as component of the interest rate is exogenous;Real interest rate or return on capital that is relevant for energy system investments;
 139;Policy Cost|Additional Total Energy System Cost;billion US$2010/yr;Policy Cost|Additional Total Energy System Cost;billion US$2005/yr;1.10774;;;;additional energy system cost associated with the policy;x
@@ -947,14 +947,12 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 877;Final Energy|Industry|Chemicals|Solids|Fossil;EJ/yr;;;;;;;final energy consumption by the industrial chemicals sector of solids|fossil,excluding transmission/distribution losses;x
 878;Final Energy|Industry|Electricity;EJ/yr;FE|Industry|+|Electricity;EJ/yr;;;;;final energy consumption by the industrial sector of electricity (including on-site solar PV),excluding transmission/distribution losses;
 879;Final Energy|Industry|Gases;EJ/yr;FE|Industry|+|Gases;EJ/yr;;;;;final energy consumption by the industrial sector of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses;
-880;Final Energy|Industry|Gases|;EJ/yr;;;;;;;Final energy consumption by the industrial sector of natural and synthetic gases,excluding transmission/distribution losses;x
 881;Final Energy|Industry|Gases|Bioenergy;EJ/yr;FE|Industry|Gases|+|Biomass;EJ/yr;;;;;Final energy consumption by the industrial sector of bioenergy gases (biogas),excluding transmission/distribution losses;
 882;Final Energy|Industry|Gases|Fossil;EJ/yr;;;;;;;Final energy consumption by the industrial sector of fossil-derived natural and synthetic gases (natural gas,coal gas),excluding transmission/distribution losses;x
 883;Final Energy|Industry|Gases|Hydrogen synfuel;EJ/yr;;;;;;;Final energy consumption by the industrial sector of hydrogen-derived syngases (e-fuels),excluding transmission/distribution losses;x
 884;Final Energy|Industry|Heat;EJ/yr;FE|Industry|+|Heat;EJ/yr;;;;;final energy consumption by the industrial sector of heat (e.g.,district heat,process heat,solar heating and warm water),excluding transmission/distribution losses;
 885;Final Energy|Industry|Hydrogen;EJ/yr;FE|Industry|+|Hydrogen;EJ/yr;;;;;final energy consumption by the industrial sector of hydrogen;
 886;Final Energy|Industry|Liquids;EJ/yr;FE|Industry|+|Liquids;EJ/yr;;;;;final energy consumption by the industrial sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids);
-887;Final Energy|Industry|Liquids|;EJ/yr;;;;;;;Final energy consumption by the industrial sector of natural and synthetic liquids,excluding transmission/distribution losses;x
 888;Final Energy|Industry|Liquids|Bioenergy;EJ/yr;;;;;;;Final energy consumption by the industrial sector of bioenergy liquids (biodiesel,ethanol),excluding transmission/distribution losses;x
 889;Final Energy|Industry|Liquids|Fossil;EJ/yr;;;;;;;Final energy consumption by the industrial sector of synthetic fossil-derived liquids (coal to liquids),excluding transmission/distribution losses;x
 890;Final Energy|Industry|Liquids|Hydrogen synfuel;EJ/yr;;;;;;;Final energy consumption by the industrial sector of hydrogen-derived liquid synfuels (e-fuels),excluding transmission/distribution losses;x
@@ -1955,7 +1953,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1820;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact;x
 1821;Useful Energy|Per Capita|Industry;GJ/cap/yr;;;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.;x
 1822;Useful Energy|Per Capita|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings;
-1823;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;1.10774;;;;Final energy / GDP PPP;
+1823;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;0.00090274;;;;Final energy / GDP PPP;
 1824;Final Energy|Industry|Electricity|Share;%;FE|Industry|Electricity|Share;%;;;;;Share of electrified FE in industry;
 1826;Air pollution concentration|PM2_5|Urban population;ug/m3;Air pollution concentration|PM2_5|Urban population;ug/m3;;;;;Urban population weighted annual average PM2.5 concentrations.;x
 ;Population|Poverty|LMIC poverty line;million;Population|Poverty|LMIC poverty line;million;;;;;population living in poverty with income <US$3.20 2011 PPP per day (World Bank LMIC definition);x
