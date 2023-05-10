@@ -74,6 +74,15 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       !!sym("Variable") := unitsplit(!!sym("Variable"))$variable # nolint
     )
 
+  # reflecting the change in https://github.com/pik-piam/remind2/pull/402
+  # if postfix '|Rawdata' is present, don't use '|Moving Avg' but the variable without any postfix
+  movingavg <- grep("\\|Moving Avg$", mapData$piam_variable, value = TRUE)
+  for (m in movingavg) {
+    if (gsub("\\|Moving Avg$", "\\|Rawdata", m) %in% levels(mifdata$variable)) {
+      mapData$piam_variable[mapData$piam_variable == m] <- gsub("\\|Moving Avg$", "", m)
+    }
+  }
+
   message("\n### Generating submission file using mapping ", paste(c(mapping, mappingFile), collapse = ", "), ".")
   if (!is.null(model)) message("# Correct model name to '", model, "'.")
   message("# Adapt scenario names: '",
