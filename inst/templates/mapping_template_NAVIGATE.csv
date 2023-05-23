@@ -894,7 +894,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 850;2;energy (final);Final Energy|Transportation|Bus|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by bus;x
 851;2;energy (final);Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by LDV;
 852;2;energy (final);Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by LDV;
-853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;E|Transport|LDV|Hydrogen;EJ/yr;;;;;
+853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|Hydrogen;EJ/yr;;;;;
 854;2;energy (final);Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|Liquids;EJ/yr;;;;;
 855;2;energy (final);Final Energy|Transportation|Rail|Electricity;EJ/yr;;;;;;;
 856;2;energy (final);Final Energy|Transportation|Rail|Gases;EJ/yr;;;;;;;
