@@ -76,11 +76,13 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
 
   # reflecting the change in https://github.com/pik-piam/remind2/pull/402
   # if postfix '|Rawdata' is present, don't use '|Moving Avg' but the variable without any postfix
-  movingavg <- grep("\\|Moving Avg$", mapData$piam_variable, value = TRUE)
-  for (m in movingavg) {
-    if (gsub("\\|Moving Avg$", "\\|Rawdata", m) %in% levels(mifdata$variable)) {
-      mapData$piam_variable[mapData$piam_variable == m] <- gsub("\\|Moving Avg$", "", m)
-    }
+  # if Price|Marginal| not found, use the one without
+  if (! any(grepl("^Price\\|Marginal", levels(mifdata$variable)))) {
+    mapData$piam_variable <- gsub("^Price\\|Marginal", "Price|", mapData$piam_variable)
+  }
+  if (any(grepl("^Price\\|.*\\Rawdata", levels(mifdata$variable))) && any(grepl("^Price\\|", mapData$piam_variable))) {
+    mapData$piam_variable[grepl("^Price\\|", mapData$piam_variable)] <-
+      gsub("\\|Moving Avg", "", grep("^Price\\|", mapData$piam_variable, value = TRUE))
   }
 
   message("\n### Generating submission file using mapping ", paste(c(mapping, mappingFile), collapse = ", "), ".")
