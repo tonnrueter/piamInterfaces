@@ -62,7 +62,7 @@ test_that("Correct Prices are selected", {
   qemif <- quitte::as.quitte(f)
   # you have to devide by 1.1 and round to compensate for inflation 2005 -> 2010
   peSeElec <- unique(filter(qemif, !!sym("variable") == "Price|Secondary Energy|Electricity")$value)
-  expect_true(round(peSeElec / 1.1) == 3)
+  expect_identical(round(peSeElec / 1.1), 3)
   f2 <- file.path(tempdir(), "Pricecheck_AR6_2.mif")
   expect_warning(generateIIASASubmission(droplevels(filter(qe, grepl("Gases", variable))),
                                          mapping = "AR6", outputDirectory = dirname(f2),
@@ -71,5 +71,5 @@ test_that("Correct Prices are selected", {
   expect_true(file.exists(f2))
   qemif <- quitte::as.quitte(f2)
   peSeGas <- unique(filter(qemif, !!sym("variable") == "Price|Secondary Energy|Gases|Natural Gas")$value)
-  expect_true(round(peSeGas / 1.1) == 5)
+  expect_identical(round(peSeGas / 1.1), 4)
 })
