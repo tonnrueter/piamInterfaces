@@ -28,7 +28,6 @@
 plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsFile = "AR6", # nolint: cyclocomp_linter.
                                 renameModels = NULL, lineplotVariables = "AR6", interactive = FALSE,
                                 mainReg = "World", plotby = c("model", "scenario")) {
-  .data <- NULL # avoid binding lintr error
 
   if (!is.null(outputDirectory) && ! dir.exists(outputDirectory)) {
     dir.create(outputDirectory, recursive = TRUE)
