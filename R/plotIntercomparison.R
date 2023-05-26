@@ -89,9 +89,10 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     if (length(userplotvariables) > 0) plotvariables <- userplotvariables
   }
 
-  identifiernames <- unique(c(levels(data$model), levels(data$scenario)))
-  ps <- mip::plotstyle(as.character(runif(length(identifiernames))))
-  output <- try(mip::plotstyle.add(identifiernames, identifiernames, ps, replace = TRUE))
+  ps <- mip::plotstyle(as.character(runif(length(levels(data$model)))))
+  output <- try(mip::plotstyle.add(levels(data$model), levels(data$model), ps, replace = TRUE))
+  ps <- mip::plotstyle(as.character(runif(length(levels(data$scenario)))))
+  output <- try(mip::plotstyle.add(levels(data$scenario), levels(data$scenario), ps, replace = TRUE))
   if (inherits(output, "try-error")) message("Error running mip::plotstyle.add, you may have inconsistent coloring.")
 
   countpdfs <- length(c(if ("scenario" %in% plotby) quitte::getScenarios(data),
@@ -157,4 +158,5 @@ makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mai
     mip::showLinePlots(plotdata, p, mainReg = mainReg, color.dim.name = legendTitle)
   }
   dev.off()
+  message("\n## Writing ", pdfFilename, " successful.\n")
 }
