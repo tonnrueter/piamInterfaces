@@ -52,13 +52,8 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   # load data and filter part that is in summation file
   data <- quitte::as.quitte(mifFile, na.rm = TRUE) %>%
     filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent, lineplotVariables))) %>%
-    left_join(summationGroups, by = c("variable" = "child"))
-  # use only regions that exist in all models
-  regs <- getRegs(data)
-  for (thismodel in quitte::getModels(data)) {
-    regs <- intersect(regs, getRegs(filter(data, .data$model == thismodel) %>% droplevels()))
-  }
-  data <- filter(data, .data$region %in% regs) %>% droplevels()
+    left_join(summationGroups, by = c("variable" = "child")) %>%
+    droplevels()
   if (interactive) {
     data <- quitte::chooseFilter(data, types = c("model", "scenario", "region", "period"),
                                  keep = list(region = mainReg))

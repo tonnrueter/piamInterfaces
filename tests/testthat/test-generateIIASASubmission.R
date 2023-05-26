@@ -37,3 +37,31 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
     unlink(expectedFiles)
   })
 }
+
+test_that("Correct Prices are selected", {
+  library(piamInterfaces)
+  qe <- quitte::quitte_example_dataAR6
+  # if Rawdata is present, use the value without anything. If not, use Moving Avg.
+  vars <- c("Price|Secondary Energy|Electricity|Rawdata",
+            "Price|Secondary Energy|Electricity|Moving Avg",
+            "Price|Secondary Energy|Electricity",
+            "Price|Secondary Energy|Gases",
+            "Price|Secondary Energy|Gases|Moving Avg")
+  levels(qe$variable)[seq_along(vars)] <- vars
+  qe <- droplevels(dplyr::filter(qe, .data$variable %in% vars))
+  levels(qe$unit) <- rep("US$2005/GJ", length(levels(qe$unit)))
+  for (v in seq_along(vars)) {
+    qe$value[qe$variable == vars[[v]]] <- v
+  }
+  f <- file.path(tempdir(), "Pricecheck_AR6.mif")
+  expect_warning(generateIIASASubmission(qe, mapping = "AR6", outputDirectory = dirname(f),
+                                         outputFilename = basename(f), logFile = file.path(tempdir(), "price.log")),
+                                         regexp = NA)
+  expect_true(file.exists(f))
+  qemif <- quitte::as.quitte(f)
+  # you have to devide by 1.1 and round to compensate for inflation 2005 -> 2010
+  peSeElec <- unique(filter(qemif, !!sym("variable") == "Price|Secondary Energy|Electricity")$value)
+  expect_true(round(peSeElec / 1.1) == 3)
+  peSeGas <- unique(filter(qemif, !!sym("variable") == "Price|Secondary Energy|Gases|Natural Gas")$value)
+  expect_true(round(peSeGas / 1.1) == 5)
+})
