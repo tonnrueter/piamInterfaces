@@ -2045,7 +2045,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1964;2;economy;Consumption Share|Food|D10;%;;;;;;"COICOP code: CP01 ""Food""";
 1965;2;economy;Consumption Share|Energy|Transportation|D10;%;;;;;;"COICOP code: CP07 ""Transport""";
 1966;2;economy;Consumption Share|Energy|Energy Use|D10;%;;;;;;"COICOP code: CP045 ""Electricity, gas and other fuels""";
-1967;2;food;Food Waste;kcal/cap/day;SDG|SDG12|Food waste;kcal/cap/day;;;;Amount of food (agriculture and livestock) that is disposed and not consumed;x
+1967;2;food;Food Waste;million t DM/yr;SDG|SDG12|Food waste total;Mt DM/yr;;;;Amount of food (agriculture and livestock) that is disposed and not consumed;x
 1968;2;water;Price|Drinking Water;US$2010/m3;;;;;;price for m3 of drinking water distributed to the users;
 1969;1;demography;Population|Electricity Access;million;;;;;;Population with access to electricity;
 1970;1;demography;Population|Relying on Solid Fuels;million;;;;;;Population without access to electricity and relying on solid fuels for heating-cooking;
