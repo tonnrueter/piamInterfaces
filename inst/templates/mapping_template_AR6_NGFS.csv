@@ -15,3 +15,9 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Revenue|Government|Tax|Carbon|Demand|Industry;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Industry;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing on industry sector emissions (carbon price by region multiplied by GHG emissions);
 ;Revenue|Government|Tax|Carbon|Demand|Transportation;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Transport;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing on transport sector emissions (carbon price by region multiplied by GHG emissions);
 ;Revenue|Government|Tax|Carbon|Supply;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Supply;billion US$2005/yr;1.10774;;;;Total government revenue from carbon pricing on the supply sector emissions (carbon price by region multiplied by GHG emissions);
+;GDP|PPP|including medium chronic physical risk damage estimate;billion US$2010/yr;GDP|PPP|including medium chronic physical risk damage estimate;billion US$2005/yr;1.10774;;;;;
+;GDP|PPP|including high chronic physical risk damage estimate;billion US$2010/yr;GDP|PPP|including high chronic physical risk damage estimate;billion US$2005/yr;1.10774;;;;;
+;GDP|PPP|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|PPP|w/ Macro-Economic Climate Damage;billion US$2005/yr;1.10774;;;;;
+;GDP|MER|including medium chronic physical risk damage estimate;billion US$2010/yr;GDP|MER|including medium chronic physical risk damage estimate;billion US$2005/yr;1.10774;;;;;
+;GDP|MER|including high chronic physical risk damage estimate;billion US$2010/yr;GDP|MER|including high chronic physical risk damage estimate;billion US$2005/yr;1.10774;;;;;
+;GDP|MER|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|MER|w/ Macro-Economic Climate Damage;billion US$2005/yr;1.10774;;;;;
