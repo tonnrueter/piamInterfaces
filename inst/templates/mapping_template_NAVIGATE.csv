@@ -253,7 +253,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 219;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by buses;
 220;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Aviation;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by domestic aviation;
 221;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Shipping;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by domestic shipping;
-222;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;Emi|CO2|Transport|Pass|Road|LDV|Demand;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by light duty vehicles;
+222;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;Emi|CO2|Transport|Pass|Road|LDV|Demand;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by light duty vehicles;x
 223;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Emi|CO2|Transport|Rail|Demand;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by trains;x
 224;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Truck;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by trucks;
 225;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus|Liquids;Mt CO2/yr;;;;;;Fossil CO2 emissions from Liquids use in the transportation sector by buses;
@@ -892,10 +892,10 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 848;2;energy (final);Final Energy|Transportation|Bus|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by bus;x
 849;2;energy (final);Final Energy|Transportation|Bus|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by bus;x
 850;2;energy (final);Final Energy|Transportation|Bus|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by bus;x
-851;2;energy (final);Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by LDV;
-852;2;energy (final);Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by LDV;
-853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|Hydrogen;EJ/yr;;;;;
-854;2;energy (final);Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|Liquids;EJ/yr;;;;;
+851;2;energy (final);Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by LDV;x
+852;2;energy (final);Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by LDV;x
+853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|Hydrogen;EJ/yr;;;;;x
+854;2;energy (final);Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|Liquids;EJ/yr;;;;;x
 855;2;energy (final);Final Energy|Transportation|Rail|Electricity;EJ/yr;;;;;;;
 856;2;energy (final);Final Energy|Transportation|Rail|Gases;EJ/yr;;;;;;;
 857;2;energy (final);Final Energy|Transportation|Rail|Hydrogen;EJ/yr;;;;;;;
