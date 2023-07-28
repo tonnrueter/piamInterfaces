@@ -1184,13 +1184,11 @@ Tier;Category;Variable;Unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (electricity);Secondary Energy|Electricity|Fossil;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil;SE|Electricity|+|Coal;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Fossil;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil;SE|Electricity|+|Gas;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Fossil;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil;SE|Electricity|+|Oil;EJ/yr;1000;;0;;
-1;energy (electricity);Secondary Energy|Electricity|Fossil;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil;SE|Electricity|Other Fossil|Other Fossil Adjusted;EJ/yr;1000;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Fossil|w/ CCS;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil used in combination with CCS;SE|Electricity|Coal|+|w/ CC;EJ/yr;1000;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Fossil|w/ CCS;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil used in combination with CCS;SE|Electricity|Gas|+|w/ CC;EJ/yr;1000;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Fossil|w/o CCS;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil without CCS;SE|Electricity|Coal|+|w/o CC;EJ/yr;1000;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Fossil|w/o CCS;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil without CCS;SE|Electricity|Oil|w/o CC;EJ/yr;1000;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Fossil|w/o CCS;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil without CCS;SE|Electricity|Gas|+|w/o CC;EJ/yr;1000;;0;;
-2;energy (electricity);Secondary Energy|Electricity|Fossil|w/o CCS;PJ/yr;net electricity production from coal, gas, conventional and unconventional oil without CCS;SE|Electricity|Other Fossil|Other Fossil Adjusted;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Gas;PJ/yr;net electricity production from gas;SE|Electricity|+|Gas;EJ/yr;1000;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Gas|Efuel;PJ/yr;net electricity production from synthetic gas;;;;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Gas|Natural Gas;PJ/yr;net electricity production from natural gas;;;;;0;;
