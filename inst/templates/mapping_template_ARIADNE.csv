@@ -1174,7 +1174,7 @@ Tier;Category;Variable;Unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (electricity);Secondary Energy|Electricity|Biomass|Gaseous and Liquid;PJ/yr;net electricity production from biogas and biofuels;;;;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Coal;PJ/yr;net electricity production from coal;SE|Electricity|Coal|Other Fossil Adjusted;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Coal|w/ CCS;PJ/yr;net electricity production from coal with a CO2 capture component;SE|Electricity|Coal|+|w/ CC;EJ/yr;1000;;0;;
-1;energy (electricity);Secondary Energy|Electricity|Coal|w/o CCS;PJ/yr;net electricity production from coal with freely vented CO2 emissions;SE|Electricity|Coal|+|w/o CC;EJ/yr;1000;;0;;
+1;energy (electricity);Secondary Energy|Electricity|Coal|w/o CCS;PJ/yr;net electricity production from coal with freely vented CO2 emissions;SE|Electricity|Coal|w/o CC|Other Fossil Adjusted;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Coal|Hard Coal;PJ/yr;Net electricity production from hard coal;;;;;0;;
 3;energy (electricity);Secondary Energy|Electricity|Coal|Hard Coal|w/ CCS;PJ/yr;net electricity production from hard coal with a CO2 capture component;;;;;0;;
 3;energy (electricity);Secondary Energy|Electricity|Coal|Hard Coal|w/o CCS;PJ/yr;net electricity production from hard coal with freely vented CO2 emissions;;;;;0;;
@@ -1221,7 +1221,7 @@ Tier;Category;Variable;Unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (electricity);Secondary Energy|Electricity|Hydrogen|OC;PJ/yr;Net electricity production from hydrogen Open Cycle (OC) units. Includes low capital intensity existent technologies (steam turbines, combustion turbines and internal combustion);;;;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Curtailment;PJ/yr;curtailment of electricity production due to oversupply from variable renewable sources (typically from wind and solar);SE|Electricity|Curtailment;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Ocean;PJ/yr;net electricity production from all sources of ocean energy (e.g., tidal, wave, ocean thermal electricity generation);;;;;0;;
-1;energy (electricity);Secondary Energy|Electricity|Other;PJ/yr;net electricity production from sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);;;;;0;;
+1;energy (electricity);Secondary Energy|Electricity|Other;PJ/yr;net electricity production from sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);SE|Electricity|Other Fossil|Other Fossil Adjusted;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Storage Losses;PJ/yr;losses from electricity storage;;;;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Transmission Losses;PJ/yr;electricity losses from long-range high-voltage transmission;SE|Electricity|Transmission Losses;EJ/yr;1000;;0;;
 1;energy (electricity);Secondary Energy|Electricity|Storage;PJ/yr;Electricity production from storage;;;;;0;;
