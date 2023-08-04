@@ -29,49 +29,65 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
     dir.create(outputDirectory, recursive = TRUE)
   }
 
-  .calculateCheckSum <- function(name, x) {
-    tmp <- x %>%
-      group_by(!!!syms(c("model", "scenario", "region", "period"))) %>%
-      summarise(checkSum = sum(!!sym("value") * !!sym("factor")), .groups = "drop") %>%
-      ungroup()
-    tmp$variable <- name
-    return(tmp)
-  }
+  data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
   summationGroups <- getSummations(summationsFile)
+
   if (summationsFile %in% names(summationsNames())) {
     summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
   }
 
-  data <- quitte::as.quitte(mifFile, na.rm = TRUE) %>%
-    filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent))) %>%
-    left_join(summationGroups, by = c("variable" = "child"))
-  message("The filtered data contains ", length(unique(data$variable)), " variables.")
   checkVariables <- list()
 
   for (i in unique(summationGroups$parent)) {
     checkVariables[[i]] <- summationGroups[which(summationGroups[, "parent"] == i), "child"]
   }
 
-  names(checkVariables) <- gsub(" [1-9]$", "", names(checkVariables))
+  parentVariables <- gsub(" [1-9]$", "", names(checkVariables))
 
+  data <- data %>%
+    filter(!!sym("variable") %in% unique(c(parentVariables, unlist(checkVariables, use.names = FALSE))))
+  message("The filtered data contains ", length(unique(data$variable)), " variables.")
+
+  if (nrow(data) == 0) {
+    return(NULL)
+  }
   tmp <- NULL
-  for (i in names(checkVariables)) {
-    tmp <- rbind(tmp, .calculateCheckSum(
-      i,
-      filter(data, !!sym("parent") == i, !!sym("variable") %in% checkVariables[[i]])
-    ))
+
+  # iterate over summation rules
+  for (i in seq(1, length(checkVariables))) {
+    parentVar <- gsub(" [1-9]$", "", names(checkVariables[i]))
+
+    # skip summation rules that are not part of the data
+    if (!(parentVar %in% unique(data$variable)) || !any(checkVariables[[i]] %in% unique(data$variable))) next
+
+    # create comparison for a summation rule
+    parent <- filter(data, !!sym("variable") == parentVar) %>%
+      mutate(variable = names(checkVariables[i]))
+    children <- filter(data, !!sym("variable") %in% checkVariables[[i]]) %>%
+      rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
+    comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period"))
+
+    if (exists("summationGroups")) {
+      comp <- left_join(comp, select(summationGroups, c("child", "factor")), by = c("child"))
+    } else {
+      comp$factor <- 1
+    }
+
+    comp <- comp %>%
+      group_by(!!!syms(c("model", "scenario", "region", "period", "unit", "variable", "value"))) %>%
+      summarise(checkSum = sum(!!sym("childVal") * !!sym("factor")), .groups = "drop") %>%
+      ungroup() %>%
+      mutate(
+        diff = !!sym("checkSum") - !!sym("value"),
+        reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value")
+      )
+
+    tmp <- rbind(tmp, comp)
   }
 
-  tmp <- left_join(tmp, data, c("scenario", "region", "variable", "period", "model")) %>%
-    mutate(
-      diff = !!sym("checkSum") - !!sym("value"),
-      reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value")
-    ) %>%
-    select(-c("factor", "parent"))
-
   # write data to dataDumpFile
-  if (length(dataDumpFile) > 0) {
+  if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
     write.table(
       arrange(tmp, desc(abs(!!sym("reldiff")))), sep = ";",
