@@ -12,7 +12,8 @@
 #' @param template mapping template to be loaded
 #' @param remindVar REMIND/MAgPIE variable column name in template
 #' @param plotprefix added before filename
-#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
+#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
+#'             filter select desc
 #' @importFrom magclass unitsplit
 #' @importFrom mip showAreaAndBarPlots
 #' @importFrom rlang sym syms
@@ -39,6 +40,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
 
   checkVariables <- list()
 
+  # generate list of summation rules from summations file
   for (i in unique(summationGroups$parent)) {
     checkVariables[[i]] <- summationGroups[which(summationGroups[, "parent"] == i), "child"]
   }
@@ -61,21 +63,23 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
     # skip summation rules that are not part of the data
     if (!(parentVar %in% unique(data$variable)) || !any(checkVariables[[i]] %in% unique(data$variable))) next
 
-    # create comparison for a summation rule
+    # create comparison for summation rule
     parent <- filter(data, !!sym("variable") == parentVar) %>%
       mutate(variable = names(checkVariables[i]))
     children <- filter(data, !!sym("variable") %in% checkVariables[[i]]) %>%
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
     comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period"))
 
+    # for summation groups the factor column can be used
     if (exists("summationGroups")) {
       comp <- left_join(comp, select(summationGroups, c("child", "factor")), by = c("child"))
     } else {
       comp$factor <- 1
     }
 
+    # calculate differences for comparison
     comp <- comp %>%
-      group_by(!!!syms(c("model", "scenario", "region", "period", "unit", "variable", "value"))) %>%
+      group_by(!!!syms(c("model", "scenario", "region", "period", "variable", "unit", "value"))) %>%
       summarise(checkSum = sum(!!sym("childVal") * !!sym("factor")), .groups = "drop") %>%
       ungroup() %>%
       mutate(
