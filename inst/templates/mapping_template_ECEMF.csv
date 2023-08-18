@@ -13,11 +13,12 @@ Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Car
 Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;
 Carbon Capture|Storage;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;1;;;;
 Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;
+Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;
 Carbon Capture|Storage|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;1;;;;
 Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;
 Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;
 Carbon Capture|Storage|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|+|Industry Process;Mt CO2/yr;1;;;;
+Carbon Capture|Storage|Other;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;
 Carbon Capture|Usage;Mt CO2/yr;Carbon Management|Usage;Mt CO2/yr;1;;;;
 Carbon Capture|Usage|Gases;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Gases;Mt CO2/yr;1;;;;
 Carbon Capture|Usage|Liquids;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Liquids;Mt CO2/yr;1;;;;
