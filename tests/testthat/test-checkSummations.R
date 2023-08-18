@@ -1,6 +1,8 @@
+varnames <- paste(c("Final Energy|Industry", "Final Energy|Industry|Electricity", "Final Energy|Industry|Liquids"),
+                  "(EJ/yr)")
+
 data <- magclass::new.magpie(cells_and_regions = "GLO", years = c(2030, 2050), fill = c(2, 4, 1, 2, 1, 2),
-                      names = c("Final Energy|Industry (EJ)", "Final Energy|Industry|Electricity (EJ)",
-                                "Final Energy|Industry|Liquids (EJ)"))
+                      names = varnames)
 magclass::getSets(data)[3] <- "variable"
 data <- magclass::add_dimension(data, dim = 3.1, add = "model", nm = "REMIND")
 data <- magclass::add_dimension(data, dim = 3.1, add = "scenario", nm = "default")
@@ -8,8 +10,7 @@ magclass::write.report(data, file = file.path(tempdir(), "test.mif"), ndigit = 0
 
 dataerror <- magclass::new.magpie(cells_and_regions = c("CAZ", "World"), years = c(2030, 2050),
                            fill = c(3, 5, 1, 2, 1, 2, 3, 5, 1, 2, 1, 2),
-                           names = c("Final Energy|Industry (EJ)", "Final Energy|Industry|Electricity (EJ)",
-                                     "Final Energy|Industry|Liquids (EJ)"))
+                           names = varnames)
 magclass::getSets(dataerror)[3] <- "variable"
 dataerror <- magclass::add_dimension(dataerror, dim = 3.1, add = "model", nm = "REMIND")
 dataerror <- magclass::add_dimension(dataerror, dim = 3.1, add = "scenario", nm = "default")
@@ -31,14 +32,17 @@ for (summationFile in names(summationsNames())) {
                      "All summation checks were fine")
       expect_true(file.exists(file.path(tempdir(), "checkSummations2.csv")))
     }
+    tmp <- droplevels(filter(tmp, !is.na(tmp$value)))
     expect_true(all(tmp$diff == 0))
+    expect_true(length(tmp$diff) > 0)
+    expect_true("Final Energy|Industry" %in% unique(tmp$variable))
   })
   test_that(paste("test summationFile with errors using", summationFile), {
     if (summationFile == "AR6") {
       expect_message(tmp <- checkSummations(mifFile = dataerror, logFile = NULL,
                              template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
                              dataDumpFile = "checkSummations3.csv"),
-                     "Final Energy")
+                     "Final Energy|Industry", fixed = TRUE)
       expect_true(file.exists(file.path(tempdir(), "checkSummations3.csv")))
       capture.output(expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "testerror.mif"),
                              logFile = "log4.txt", template = summationFile, summationsFile = summationFile,
@@ -53,7 +57,7 @@ for (summationFile in names(summationsNames())) {
       expect_message(tmp <- checkSummations(mifFile = file.path(tempdir(), "testerror.mif"), logFile = NULL,
                              template = summationFile, summationsFile = summationFile, outputDirectory = tempdir(),
                              dataDumpFile = "checkSummations3.csv"),
-                     "Final Energy")
+                     "Final Energy|Industry", fixed = TRUE)
       expect_true(file.exists(file.path(tempdir(), "checkSummations3.csv")))
     }
     expect_false(all(tmp$diff == 0))
