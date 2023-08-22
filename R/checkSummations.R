@@ -72,7 +72,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
 
     # for summation groups the factor column can be used
     if (exists("summationGroups")) {
-      comp <- left_join(comp, select(summationGroups, c("child", "factor")), by = c("child"))
+      comp <- left_join(comp, select(summationGroups, c("child", "factor")), by = c("child"), relationship = "many-to-many")
     } else {
       comp$factor <- 1
     }
