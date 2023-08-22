@@ -57,8 +57,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
   tmp <- NULL
 
   # iterate over summation rules
-  for (i in seq(1, length(checkVariables))) {
-    parentVar <- gsub(" [1-9]$", "", names(checkVariables[i]))
+  for (i in seq_along(checkVariables)) {
+    parentVar <- parentVariables[i]
 
     # skip summation rules that are not part of the data
     if (!(parentVar %in% unique(data$variable)) || !any(checkVariables[[i]] %in% unique(data$variable))) next
@@ -68,14 +68,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       mutate(variable = names(checkVariables[i]))
     children <- filter(data, !!sym("variable") %in% checkVariables[[i]]) %>%
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
-    comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period"))
-
-    # for summation groups the factor column can be used
-    if (exists("summationGroups")) {
-      comp <- left_join(comp, select(summationGroups, c("child", "factor")), by = c("child"), relationship = "many-to-many")
-    } else {
-      comp$factor <- 1
-    }
+    comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period")) %>%
+      left_join(select(summationGroups, c("child", "factor")), by = c("child"), relationship = "many-to-many")
 
     # calculate differences for comparison
     comp <- comp %>%
