@@ -35,7 +35,7 @@ for (summationFile in names(summationsNames())) {
     tmp <- droplevels(filter(tmp, !is.na(tmp$value)))
     expect_true(all(tmp$diff == 0))
     expect_true(length(tmp$diff) > 0)
-    expect_true("Final Energy|Industry" %in% unique(tmp$variable))
+    expect_true(any(grepl("^Final Energy\\|Industry( [0-9]+)?$", unique(tmp$variable))))
   })
   test_that(paste("test summationFile with errors using", summationFile), {
     if (summationFile == "AR6") {
