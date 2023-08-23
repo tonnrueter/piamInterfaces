@@ -9,7 +9,7 @@
 #' @param logAppend boolean whether to append or overwrite logFile
 #' @param generatePlots boolean whether pdfs to compare data are generated
 #' @param summationsFile in inst/summations folder that describes the required summation groups
-#'        if set to NULL, tries to extract summations from variables with + notation
+#'        if set to 'extractVariableGroups', tries to extract summations from variables with + notation
 #' @param template mapping template to be loaded
 #' @param remindVar REMIND/MAgPIE variable column name in template
 #' @param plotprefix added before filename
@@ -33,7 +33,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
 
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
-  if (is.null(summationsFile)) {
+  if (summationsFile == "extractVariableGroups") {
     checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
   } else {
     summationGroups <- getSummations(summationsFile)
@@ -74,12 +74,11 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
     comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period"))
 
-    # for summation groups the factor column can be used
-    if (exists("summationGroups")) {
+    if (summationsFile == "extractVariableGroups") {
+      comp$factor <- 1
+    } else {
       comp <- left_join(comp, select(summationGroups, c("child", "factor")),
                         by = c("child"), relationship = "many-to-many")
-    } else {
-      comp$factor <- 1
     }
 
     # calculate differences for comparison
@@ -102,20 +101,24 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       arrange(tmp, desc(abs(!!sym("reldiff")))), sep = ";",
       file = dataDumpFile, quote = FALSE, row.names = FALSE)
   }
-  # generate human-readable summary of larger differences, only works for
-  # usage with summations file, not for extraction of summations from variables
-  if (!is.null(summationsFile)) {
-    .checkSummationsSummary(
-      mifFile, data, tmp, template, summationsFile, summationGroups,
-      generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
-    )
-  }
+
+  # generate human-readable summary of larger differences
+  .checkSummationsSummary(
+    mifFile, data, tmp, template, summationsFile, summationGroups,
+    generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
+  )
 
   return(invisible(tmp))
 }
 
-.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups,
-                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix) {
+.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups, # nolint: cyclocomp_linter
+                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile,
+                             remindVar, plotprefix) {
+
+  # does not work for extraction of summations from variables
+  if (summationsFile == "extractVariableGroups") {
+    return()
+  }
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
