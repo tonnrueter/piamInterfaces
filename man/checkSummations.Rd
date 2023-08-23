@@ -24,7 +24,8 @@ checkSummations(
 
 \item{template}{mapping template to be loaded}
 
-\item{summationsFile}{in inst/summations folder that describes the required summation groups}
+\item{summationsFile}{in inst/summations folder that describes the required summation groups
+if set to NULL, tries to extract summations from variables with + notation}
 
 \item{logFile}{file where human-readable summary is saved. If NULL, write to stdout}
 
