@@ -9,13 +9,14 @@
 #' @param logAppend boolean whether to append or overwrite logFile
 #' @param generatePlots boolean whether pdfs to compare data are generated
 #' @param summationsFile in inst/summations folder that describes the required summation groups
+#'        if set to 'extractVariableGroups', tries to extract summations from variables with + notation
 #' @param template mapping template to be loaded
 #' @param remindVar REMIND/MAgPIE variable column name in template
 #' @param plotprefix added before filename
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc
 #' @importFrom magclass unitsplit
-#' @importFrom mip showAreaAndBarPlots
+#' @importFrom mip showAreaAndBarPlots extractVariableGroups
 #' @importFrom rlang sym syms
 #' @importFrom utils write.table
 #' @importFrom stringr str_pad
@@ -32,17 +33,20 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
 
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
-  summationGroups <- getSummations(summationsFile)
+  if (isTRUE(summationsFile == "extractVariableGroups")) {
+    checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
+  } else {
+    summationGroups <- getSummations(summationsFile)
+    if (summationsFile %in% names(summationsNames())) {
+      summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
+    }
 
-  if (summationsFile %in% names(summationsNames())) {
-    summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
-  }
+    checkVariables <- list()
 
-  checkVariables <- list()
-
-  # generate list of summation rules from summations file
-  for (i in unique(summationGroups$parent)) {
-    checkVariables[[i]] <- summationGroups[which(summationGroups[, "parent"] == i), "child"]
+    # generate list of summation rules from summations file
+    for (i in unique(summationGroups$parent)) {
+      checkVariables[[i]] <- summationGroups[which(summationGroups[, "parent"] == i), "child"]
+    }
   }
 
   parentVariables <- gsub(" [1-9]$", "", names(checkVariables))
@@ -68,8 +72,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       mutate(variable = names(checkVariables[i]))
     children <- filter(data, !!sym("variable") %in% checkVariables[[i]]) %>%
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
-    comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period")) %>%
-      left_join(select(summationGroups, c("child", "factor")), by = c("child"), relationship = "many-to-many")
+    comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period"))
+
+    if (isTRUE(summationsFile == "extractVariableGroups")) {
+      comp$factor <- 1
+    } else {
+      comp <- left_join(comp, select(summationGroups, c("child", "factor")),
+                        by = c("child"), relationship = "many-to-many")
+    }
 
     # calculate differences for comparison
     comp <- comp %>%
@@ -91,15 +101,20 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       arrange(tmp, desc(abs(!!sym("reldiff")))), sep = ";",
       file = dataDumpFile, quote = FALSE, row.names = FALSE)
   }
+
   # generate human-readable summary of larger differences
-  .checkSummationsSummary(mifFile, data, tmp, template, summationsFile, summationGroups,
-                   generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix)
+  .checkSummationsSummary(
+    mifFile, data, tmp, template, summationsFile, checkVariables,
+    generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
+  )
 
   return(invisible(tmp))
 }
 
-.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups,
-                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix) {
+.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, checkVariables,
+                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile,
+                             remindVar, plotprefix) {
+
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
   summarytext <- NULL
@@ -132,7 +147,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       for (p in problematic) {
         signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
                              ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
-        childs <- summationGroups$child[summationGroups$parent == p]
+
+        childs <- checkVariables[[p]]
         remindchilds <- if (is.null(template)) NULL else
                         unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
