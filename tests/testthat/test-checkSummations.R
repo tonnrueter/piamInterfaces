@@ -69,4 +69,23 @@ for (summationFile in names(summationsNames())) {
     expect_false(all(tmp$diff == 0))
   })
 }
+
 unlink(file.path(tempdir(), c("test.mif", "testerror.mif", "log.txt", "checkSummations.csv")))
+
+
+# test extractVariableGroups option ----
+varnames <- paste(c("FE|Industry|Steel", "FE|Industry|Steel|+|Primary", "FE|Industry|Steel|+|Secondary"),
+                  "(EJ/yr)")
+data <- magclass::new.magpie(cells_and_regions = "GLO", years = c(2030, 2050), fill = c(2, 4, 1, 2, 1, 2),
+                             names = varnames)
+magclass::getSets(data)[3] <- "variable"
+sumChecks <- checkSummations(mifFile = data, outputDirectory = NULL, summationsFile = "extractVariableGroups") %>%
+  filter(diff != 0)
+expect_true(nrow(sumChecks) == 0)
+
+dataerror <- magclass::new.magpie(cells_and_regions = "GLO", years = c(2030, 2050), fill = c(2, 4, 1, 1, 1, 1),
+                                  names = varnames)
+magclass::getSets(dataerror)[3] <- "variable"
+sumChecks <- checkSummations(mifFile = dataerror, outputDirectory = NULL, summationsFile = "extractVariableGroups") %>%
+  filter(diff != 0)
+expect_true(nrow(sumChecks) == 1)
