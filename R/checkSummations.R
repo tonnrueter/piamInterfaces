@@ -102,18 +102,16 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       file = dataDumpFile, quote = FALSE, row.names = FALSE)
   }
 
-  if (exists("summationGroups")) {
-    # generate human-readable summary of larger differences
-    .checkSummationsSummary(
-      mifFile, data, tmp, template, summationsFile, summationGroups,
-      generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
-    )
-  }
+  # generate human-readable summary of larger differences
+  .checkSummationsSummary(
+    mifFile, data, tmp, template, summationsFile, checkVariables,
+    generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
+  )
 
   return(invisible(tmp))
 }
 
-.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups,
+.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, checkVariables,
                              generatePlots, outputDirectory, logFile, logAppend, dataDumpFile,
                              remindVar, plotprefix) {
 
@@ -149,7 +147,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       for (p in problematic) {
         signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
                              ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
-        childs <- summationGroups$child[summationGroups$parent == p]
+
+        childs <- checkVariables[[p]]
         remindchilds <- if (is.null(template)) NULL else
                         unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
