@@ -33,7 +33,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
 
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
-  if (summationsFile == "extractVariableGroups") {
+  if (isTRUE(summationsFile == "extractVariableGroups")) {
     checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
   } else {
     summationGroups <- getSummations(summationsFile)
@@ -74,7 +74,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
     comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period"))
 
-    if (summationsFile == "extractVariableGroups") {
+    if (isTRUE(summationsFile == "extractVariableGroups")) {
       comp$factor <- 1
     } else {
       comp <- left_join(comp, select(summationGroups, c("child", "factor")),
@@ -102,23 +102,20 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
       file = dataDumpFile, quote = FALSE, row.names = FALSE)
   }
 
-  # generate human-readable summary of larger differences
-  .checkSummationsSummary(
-    mifFile, data, tmp, template, summationsFile, summationGroups,
-    generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
-  )
+  if (exists("summationGroups")) {
+    # generate human-readable summary of larger differences
+    .checkSummationsSummary(
+      mifFile, data, tmp, template, summationsFile, summationGroups,
+      generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
+    )
+  }
 
   return(invisible(tmp))
 }
 
-.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups, # nolint: cyclocomp_linter
+.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, summationGroups,
                              generatePlots, outputDirectory, logFile, logAppend, dataDumpFile,
                              remindVar, plotprefix) {
-
-  # does not work for extraction of summations from variables
-  if (summationsFile == "extractVariableGroups") {
-    return()
-  }
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
