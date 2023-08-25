@@ -10,7 +10,7 @@
 #' @param generatePlots boolean whether pdfs to compare data are generated
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #'        if set to 'extractVariableGroups', tries to extract summations from variables with + notation
-#' @param template mapping template to be loaded
+#' @param template mapping template to be loaded, used to print the remindVar corresponding to the data variables
 #' @param remindVar REMIND/MAgPIE variable column name in template
 #' @param plotprefix added before filename
 #' @param absDiff threshold for absolute difference between parent variable and summation
@@ -30,7 +30,7 @@
 #' @importFrom grDevices pdf dev.off
 #'
 #' @export
-checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", summationsFile = "AR6",
+checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, summationsFile = NULL,
                             logFile = NULL, logAppend = FALSE, generatePlots = FALSE,
                             dataDumpFile = "checkSummations.csv", remindVar = "piam_variable",
                             plotprefix = NULL, absDiff = 0.001, relDiff = 1, roundDiff = TRUE) {

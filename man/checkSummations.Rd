@@ -7,8 +7,8 @@
 checkSummations(
   mifFile,
   outputDirectory = ".",
-  template = "AR6",
-  summationsFile = "AR6",
+  template = NULL,
+  summationsFile = NULL,
   logFile = NULL,
   logAppend = FALSE,
   generatePlots = FALSE,
@@ -22,7 +22,7 @@ checkSummations(
 
 \item{outputDirectory}{path to directory to place logFile and dataDumpFile}
 
-\item{template}{mapping template to be loaded}
+\item{template}{mapping template to be loaded, used to print the remindVar corresponding to the data variables}
 
 \item{summationsFile}{in inst/summations folder that describes the required summation groups
 if set to 'extractVariableGroups', tries to extract summations from variables with + notation}
