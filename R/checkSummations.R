@@ -13,6 +13,12 @@
 #' @param template mapping template to be loaded
 #' @param remindVar REMIND/MAgPIE variable column name in template
 #' @param plotprefix added before filename
+#' @param absDiff threshold for absolute difference between parent variable and summation
+#'                to be listed in human-readable summary
+#' @param refDiff threshold for relative difference between parent variable and summation
+#'                to be listed in human-readable summary
+#' @param roundDiff should the absolute and relative differences in human-readable summary
+#'                  be rounded?
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc
 #' @importFrom magclass unitsplit
@@ -26,7 +32,8 @@
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", summationsFile = "AR6",
                             logFile = NULL, logAppend = FALSE, generatePlots = FALSE,
-                            dataDumpFile = "checkSummations.csv", remindVar = "piam_variable", plotprefix = NULL) {
+                            dataDumpFile = "checkSummations.csv", remindVar = "piam_variable",
+                            plotprefix = NULL, absDiff = 0.001, relDiff = 1, roundDiff = TRUE) {
   if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
     dir.create(outputDirectory, recursive = TRUE)
   }
@@ -105,7 +112,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
   # generate human-readable summary of larger differences
   .checkSummationsSummary(
     mifFile, data, tmp, template, summationsFile, checkVariables,
-    generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar, plotprefix
+    generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
+    plotprefix, absDiff, relDiff, roundDiff
   )
 
   return(invisible(tmp))
@@ -113,7 +121,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
 
 .checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, checkVariables,
                              generatePlots, outputDirectory, logFile, logAppend, dataDumpFile,
-                             remindVar, plotprefix) {
+                             remindVar, plotprefix, absDiff, relDiff, roundDiff) {
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
@@ -128,7 +136,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
   }
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
-    fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= 1, abs(!!sym("diff")) >= 0.001, !!sym("model") == thismodel)
+    fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= relDiff,
+                        abs(!!sym("diff")) >= absDiff, !!sym("model") == thismodel)
     problematic <- sort(unique(c(fileLarge$variable)))
     if (length(problematic) > 0) {
       if (generatePlots) {
@@ -160,11 +169,22 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = "AR6", su
           text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
                     if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
         }
+
+        reldDiffMax <- max(-fileLarge$reldiff[fileLarge$variable == p])
+        relDiffMin <- min(-fileLarge$reldiff[fileLarge$variable == p])
+        absDiffMax <- max(abs(fileLarge$diff[fileLarge$variable == p]))
+
+        if (roundDiff) {
+          reldDiffMax <- round(reldDiffMax, digits = 1)
+          relDiffMin <- round(relDiffMin, digits = 1)
+          absDiffMax <- round(absDiffMax, digits = 2)
+        }
+
         text <- c(text, paste0("Relative difference between ",
-                          round(min(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "% and ",
-                          round(max(-fileLarge$reldiff[fileLarge$variable == p]), digits = 1), "%, ",
+                          relDiffMin, "% and ",
+                          reldDiffMax, "%, ",
                           "absolute difference up to ",
-                          round(max(abs(fileLarge$diff[fileLarge$variable == p])), digits = 2), " ",
+                          absDiffMax, " ",
                           paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
         )
         if (generatePlots) {
