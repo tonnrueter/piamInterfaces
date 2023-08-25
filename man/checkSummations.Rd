@@ -14,7 +14,10 @@ checkSummations(
   generatePlots = FALSE,
   dataDumpFile = "checkSummations.csv",
   remindVar = "piam_variable",
-  plotprefix = NULL
+  plotprefix = NULL,
+  absDiff = 0.001,
+  relDiff = 1,
+  roundDiff = TRUE
 )
 }
 \arguments{
@@ -38,6 +41,15 @@ if set to 'extractVariableGroups', tries to extract summations from variables wi
 \item{remindVar}{REMIND/MAgPIE variable column name in template}
 
 \item{plotprefix}{added before filename}
+
+\item{absDiff}{threshold for absolute difference between parent variable and summation
+to be listed in human-readable summary}
+
+\item{relDiff}{threshold for relative difference between parent variable and summation
+to be listed in human-readable summary}
+
+\item{roundDiff}{should the absolute and relative differences in human-readable summary
+be rounded?}
 }
 \description{
 Checks for a run if the variables sum up as expected and logs spotted gaps

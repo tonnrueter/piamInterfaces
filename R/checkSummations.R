@@ -15,7 +15,7 @@
 #' @param plotprefix added before filename
 #' @param absDiff threshold for absolute difference between parent variable and summation
 #'                to be listed in human-readable summary
-#' @param refDiff threshold for relative difference between parent variable and summation
+#' @param relDiff threshold for relative difference between parent variable and summation
 #'                to be listed in human-readable summary
 #' @param roundDiff should the absolute and relative differences in human-readable summary
 #'                  be rounded?
