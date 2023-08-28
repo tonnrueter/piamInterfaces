@@ -119,20 +119,22 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   return(invisible(tmp))
 }
 
-.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, checkVariables,
-                             generatePlots, outputDirectory, logFile, logAppend, dataDumpFile,
-                             remindVar, plotprefix, absDiff, relDiff, roundDiff) {
+.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, # nolint: cyclocomp_linter.
+                             checkVariables, generatePlots, outputDirectory, logFile, logAppend,
+                             dataDumpFile, remindVar, plotprefix, absDiff, relDiff, roundDiff) {
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
   summarytext <- NULL
   if (! is.null(template)) {
-    templateData <- getTemplate(template)
-    templateName <- template
-    if (template %in% names(templateNames())) {
+    if (length(template) == 1 && is.character(template) && template %in% names(templateNames())) {
+      templateData <- getTemplate(template)
       templateName <- gsub(".*piamInterfaces", "piamInterfaces", templateNames(template))
+      text <- c(text, paste0("# Derive mapping from ", templateName))
+    } else {
+      templateName <- "supplied template"
+      templateData <- data.frame(template)
     }
-    text <- c(text, paste0("# Derive mapping from ", templateName))
   }
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
@@ -151,7 +153,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       width <- 70
       text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
                              basename(summationsFile)), width + 8, "right"),
-           if (! is.null(template)) paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(template))
+        if (! is.null(template)) paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(templateName))
          ))
       for (p in problematic) {
         signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
