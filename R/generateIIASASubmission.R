@@ -120,10 +120,10 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   # perform summation checks
   prefix <- gsub("\\.[A-Za-z]+$", "", basename(outputFilename))
   for (sumFile in intersect(mapping, names(summationsNames()))) {
-    invisible(checkSummations(submission, template = mappingFile, summationsFile = sumFile,
-                            logFile = basename(logFile), logAppend = TRUE, outputDirectory = outputDirectory,
-                            generatePlots = generatePlots, dataDumpFile = paste0(prefix, "_checkSummations.csv"),
-                            plotprefix = paste0(prefix, "_")))
+    invisible(checkSummations(submission, template = mapData,
+                            summationsFile = sumFile, logFile = basename(logFile), logAppend = TRUE,
+                            outputDirectory = outputDirectory, generatePlots = generatePlots,
+                            dataDumpFile = paste0(prefix, "_checkSummations.csv"), plotprefix = paste0(prefix, "_")))
   }
 
   if (grepl("\\.xlsx?$", outputFilename)) {
