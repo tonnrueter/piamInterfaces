@@ -15,7 +15,7 @@
 #' @param plotprefix added before filename
 #' @param absDiff threshold for absolute difference between parent variable and summation
 #'                to be listed in human-readable summary
-#' @param relDiff threshold for relative difference between parent variable and summation
+#' @param relDiff threshold (in percent) for relative difference between parent variable and summation
 #'                to be listed in human-readable summary
 #' @param roundDiff should the absolute and relative differences in human-readable summary
 #'                  be rounded?
@@ -84,8 +84,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     if (isTRUE(summationsFile == "extractVariableGroups")) {
       comp$factor <- 1
     } else {
-      comp <- left_join(comp, select(summationGroups, c("child", "factor")),
-                        by = c("child"), relationship = "many-to-many")
+      summations <- filter(summationGroups, parent == names(checkVariables[i]))
+      comp <- left_join(comp, summations, by = c("child", "variable" = "parent"),
+                        relationship = "many-to-many")
     }
 
     # calculate differences for comparison
