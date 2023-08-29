@@ -35,8 +35,8 @@ Emissions|Kyoto Gases|AFOLU;Emissions|Kyoto Gases|AFOLU|Land;1
 Emissions|Kyoto Gases|Energy and Industrial Processes;Emissions|Kyoto Gases|Industrial Processes;1
 Emissions|Kyoto Gases|Energy and Industrial Processes;Emissions|Kyoto Gases|Energy;1
 Emissions|Kyoto Gases 2;Emissions|F-Gases;1
-Emissions|Kyoto Gases 2;Emissions|Kyoto Gases|N2O;1
-Emissions|Kyoto Gases 2;Emissions|Kyoto Gases|CH4;1
+Emissions|Kyoto Gases 2;Emissions|Kyoto Gases|N2O;0.265
+Emissions|Kyoto Gases 2;Emissions|Kyoto Gases|CH4;28
 Emissions|Kyoto Gases 2;Emissions|CO2;1
 Carbon Capture;Carbon Capture|Biomass;1
 Carbon Capture;Carbon Capture|Direct Air Capture;1
@@ -309,8 +309,6 @@ Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|
 Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Liquids;1
 Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Other;1
 Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Solids;1
-Final Energy|Residential and Commercial 2;Final Energy|Residential and Commercial|Space and Water Heating;1
-Final Energy|Residential and Commercial 2;Final Energy|Residential and Commercial|Space Heating;1
 Final Energy|Residential and Commercial|Gases;Final Energy|Residential and Commercial|Gases|Biomass;1
 Final Energy|Residential and Commercial|Gases;Final Energy|Residential and Commercial|Gases|Electricity;1
 Final Energy|Residential and Commercial|Gases;Final Energy|Residential and Commercial|Gases|Fossil;1
