@@ -85,8 +85,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       comp$factor <- 1
     } else {
       summation <- filter(summationGroups, parent == names(checkVariables[i]))
-      comp <- left_join(comp, summation, by = c("child", "variable" = "parent"),
-                        relationship = "many-to-many")
+      comp <- left_join(comp, summation, by = c("child", "variable" = "parent"))
     }
 
     # calculate differences for comparison
