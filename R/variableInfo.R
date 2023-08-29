@@ -8,8 +8,9 @@
 #' @param remindVar column name of variable in templates (default: piam_variable)
 #' @param remindUnit column name of unit in templates (default: piam_unit)
 #' @importFrom quitte read.quitte as.quitte
-#' @importFrom stringr str_split str_pad
 #' @importFrom magclass unitsplit
+#' @importFrom stringr str_split str_pad
+#' @importFrom utils head
 #' @return prints human-readable summary to the user
 #' @examples
 #' # Simple use. prints human-readable summary to the reader on Emi|CO2:
@@ -24,17 +25,19 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
   nc    <- "\033[0m"   # No Color
   width <- 60
 
+  .deletePlus <- function(x) return(gsub("\\|\\++\\|", "|", x))
+
   .getChilds <- function(v, c) {
-    tobefound <- paste0("^", gsub("|", "\\|", gsub("\\|\\++\\|", "|", v), fixed = TRUE), "\\|[^\\|]*$")
-    c[which(grepl(tobefound, gsub("\\|\\++\\|", "|", c)))]
+    tobefound <- paste0("^", gsub("|", "\\|", .deletePlus(v), fixed = TRUE), "\\|[^\\|]*$")
+    c[which(grepl(tobefound, .deletePlus(c)))]
   }
 
   message("\n##### Search for information on ", green, varname, nc, " in mapping templates")
   for (t in template) {
     templateData <- getTemplate(t)
     templateName <- basename(t)
-    remindno <- which(varname == templateData[, remindVar])
-    exportno <- which(varname == templateData$Variable)
+    remindno <- which(.deletePlus(varname) == .deletePlus(templateData[, remindVar]))
+    exportno <- head(which(.deletePlus(varname) == .deletePlus(templateData$Variable)), n = 1)
     if (length(remindno) + length(exportno) == 0) {
       message("\n### Nothing found in template: ", blue, templateName, nc)
       next
