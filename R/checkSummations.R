@@ -84,8 +84,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     if (isTRUE(summationsFile == "extractVariableGroups")) {
       comp$factor <- 1
     } else {
-      summations <- filter(summationGroups, parent == names(checkVariables[i]))
-      comp <- left_join(comp, summations, by = c("child", "variable" = "parent"),
+      summation <- filter(summationGroups, parent == names(checkVariables[i]))
+      comp <- left_join(comp, summation, by = c("child", "variable" = "parent"),
                         relationship = "many-to-many")
     }
 

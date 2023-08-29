@@ -72,7 +72,7 @@ for (summationFile in names(summationsNames())) {
 
 unlink(file.path(tempdir(), c("test.mif", "testerror.mif", "log.txt", "checkSummations.csv")))
 
-# test usage same variables multiple times as a child in summation groups ----
+# test usage of same variables multiple times as a child in summation groups ----
 # Capacity|Electricity|Oil = Capacity|Electricity|Oil|w/o CCS + Capacity|Electricity|Oil|w/ CCS
 # Capacity|Electricity" = ... + Capacity|Electricity|Nuclear, Capacity|Electricity|Oil|w/o CCS
 varnames <- paste(c("Capacity|Electricity|Oil", "Capacity|Electricity|Oil|w/o CCS", "Capacity|Electricity|Oil|w/ CCS",
