@@ -79,7 +79,10 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       mutate(variable = names(checkVariables[i]))
     children <- filter(data, !!sym("variable") %in% checkVariables[[i]]) %>%
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
-    comp <- left_join(parent, children, by = c("model", "scenario", "region", "unit", "period"))
+    comp <- left_join(parent, children, by = c("model", "scenario", "region", "period")) %>%
+      # adapt unit of parent variable
+      mutate(!!sym("unit") := !!sym("unit.x")) %>%
+      select(-c("unit.x", "unit.y"))
 
     if (isTRUE(summationsFile == "extractVariableGroups")) {
       comp$factor <- 1
