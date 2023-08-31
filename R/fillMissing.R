@@ -25,6 +25,7 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
   # variables missing from data that can be calculated from summationGroups
   missingParentVars <- setdiff(summationGroups$parentVar, unique(data$variable))
 
+  # summations don't contain any variables not in the data
   if (length(missingParentVars) == 0) {
     return(mifFile)
   }
@@ -55,15 +56,10 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
     }
   }
 
+  # no new variables could be added based on the summations file
   if (is.null(out)) {
     return(mifFile)
   }
-
-  # look at variables that could be calculated using two or more summations
-  alternativeVars <- select(out, c("variable", "sum_id")) %>%
-    distinct() %>%
-    dplyr::count(!!sym("variable")) %>%
-    filter(!!sym("n") > 1)
 
   # if there is more than one summation for the same variable, pick the best one
   .pickSummation <- function(df) {
@@ -101,6 +97,13 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
     }
   }
 
+  # look at variables that could be calculated using two or more summations
+  alternativeVars <- select(out, c("variable", "sum_id")) %>%
+    distinct() %>%
+    dplyr::count(!!sym("variable")) %>%
+    filter(!!sym("n") > 1)
+
+
   # eliminate all but one of the alternative calculations
   for (var in unique(alternativeVars$variable)) {
     ref <- filter(out, !!sym("variable") == var)
@@ -112,6 +115,8 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
     out <- filter(out, !!sym("variable") != var | !!sym("sum_id") == keepSumId)
   }
 
+  # merge newly calculated data with input mif and make sure that structure
+  # remains unchanged
   newMifFile <- out %>%
     select(-"sum_id") %>%
     mutate(!!sym("variable") := paste0(!!sym("variable"), " (", !!sym("unit"), ")")) %>%
@@ -122,5 +127,6 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
   newVars <- paste0(unique(out$variable), collapse = ", ")
   message(paste0("Newly added vars in iteration ", iteration, ": ", newVars))
 
+  # recursion: try running fillMissing again with the newly calculated variables
   return(fillMissing(newMifFile, summationsFile, iteration = iteration + 1))
 }
