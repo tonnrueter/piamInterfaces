@@ -1,4 +1,5 @@
-#' Recursively calculate additional variables based on given summations
+#' Recursively calculate additional variables based on given summations and add
+#' them to the given mif file
 #'
 #' @md
 #' @author Falk Benke, Renato Rodrigues
@@ -81,11 +82,9 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
 
     # some values differ, we must pick the best calculation using some heuristics
     if (nrow(differences) > 0) {
-      if (2020 %in% unique(differences$period) && "EUR" %in% unique(differences$period)) {
+      if (nrow(filter(differences, !!sym("region") == "EUR", !!sym("period") == 2020)) > 0) {
         # if EUR 2020 has different values, this is the point of reference
-        refPeriod <- 2020
-        refRegion <- "EUR"
-        d <- filter(differences, !!sym("region") == refRegion, !!sym("period") == refPeriod)
+        d <- filter(differences, !!sym("region") == "EUR", !!sym("period") == 2020)
       } else {
         # otherwise, use first period and region combo in the data
         d <- differences %>%
