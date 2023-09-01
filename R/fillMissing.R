@@ -78,11 +78,12 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
 
     # some values differ, we must pick the best calculation using some heuristics
     if (nrow(differences) > 0) {
-      if (nrow(filter(differences, !!sym("region") == "EUR", !!sym("period") == 2020)) > 0) {
-        # if EUR 2020 has different values, this is the point of reference
-        d <- filter(differences, !!sym("region") == "EUR", !!sym("period") == 2020)
-      } else {
-        # otherwise, use first period and region combo in the data
+
+      # if EUR 2020 has different values, this is the point of reference
+      d <- filter(differences, !!sym("region") == "EUR", !!sym("period") == 2020)
+
+      # otherwise, use first period and region combo in the data
+      if (nrow(d) == 0) {
         d <- differences %>%
           filter(!!sym("period") == min(!!sym("period")))
         d <- d %>%
