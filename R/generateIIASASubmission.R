@@ -43,7 +43,9 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
                                     generateSingleOutput = TRUE) {
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
-  dir.create(outputDirectory, showWarnings = FALSE)
+  if (! is.null(outputDirectory)) {
+    dir.create(outputDirectory, showWarnings = FALSE)
+  }
 
   # for each directory, include all mif files
   if (is.character(mifs)) {
@@ -69,7 +71,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       # could be avoided, if we expect mappings with variable and unit fields
       # instead of having the unit as part of the variable name
       !!sym("piam_unit") := unitsplit(!!sym("piam_variable"))$unit, # nolint
-      !!sym("piam_variable") :=  unitsplit(!!sym("piam_variable"))$variable, # nolint
+      !!sym("piam_variable") := removePlus(unitsplit(!!sym("piam_variable"))$variable), # nolint
       !!sym("Unit") := unitsplit(!!sym("Variable"))$unit, # nolint
       !!sym("Variable") := unitsplit(!!sym("Variable"))$variable # nolint
     )
@@ -96,7 +98,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   submission <- mifdata %>%
     filter(!!sym("period") %in% timesteps) %>%
     mutate(
-      !!sym("variable") := str_trim(!!sym("variable")),
+      !!sym("variable") := removePlus(str_trim(!!sym("variable"))),
       !!sym("unit") := str_trim(!!sym("unit"))
       ) %>%
     distinct() %>%
@@ -118,7 +120,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   }
 
   # perform summation checks
-  prefix <- gsub("\\.[A-Za-z]+$", "", basename(outputFilename))
+  prefix <- gsub("\\.[A-Za-z]+$", "", if (is.null(outputFilename)) "output" else basename(outputFilename))
   for (sumFile in intersect(mapping, names(summationsNames()))) {
     invisible(checkSummations(submission, template = mapData,
                             summationsFile = sumFile, logFile = basename(logFile), logAppend = TRUE,
@@ -126,14 +128,17 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
                             dataDumpFile = paste0(prefix, "_checkSummations.csv"), plotprefix = paste0(prefix, "_")))
   }
 
-  if (grepl("\\.xlsx?$", outputFilename)) {
-    quitte::write.IAMCxlsx(submission, file.path(outputDirectory, outputFilename))
+  if (is.null(outputFilename)) {
+    return(submission)
   } else {
-    submission <- submission %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value")))
-    quitte::write.mif(submission, file.path(outputDirectory, outputFilename))
+    if (grepl("\\.xlsx?$", outputFilename)) {
+      quitte::write.IAMCxlsx(submission, file.path(outputDirectory, outputFilename))
+    } else {
+      submission <- submission %>% mutate(value = ifelse(is.na(!!sym("value")), "", !!sym("value")))
+      quitte::write.mif(submission, file.path(outputDirectory, outputFilename))
+    }
+    message("\n\n### Output file written: ", outputFilename)
   }
-  message("\n\n### Output file written: ", outputFilename)
-
 }
 
 .setModelAndScenario <- function(dt, modelname, scenRemove = NULL, scenAdd = NULL) {
