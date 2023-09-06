@@ -67,6 +67,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
     message("\n# Read ", templates[i])
     dt <- as.data.table(getTemplate(templates[i]))
     names(dt) <- tolower(names(dt))
+    dt <- mutate(dt, !!sym(remindVar) := removePlus(!!sym(remindVar)))
 
     ## remove to dos and empty mappings
     dt[get(remindVar) == "TODO", (remindVar) := ""]
