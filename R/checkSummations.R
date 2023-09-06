@@ -42,6 +42,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   if (isTRUE(summationsFile == "extractVariableGroups")) {
     checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
+    names(checkVariables) <- make.unique(names(checkVariables), sep = " ")
   } else {
     summationGroups <- getSummations(summationsFile)
     if (summationsFile %in% names(summationsNames())) {
