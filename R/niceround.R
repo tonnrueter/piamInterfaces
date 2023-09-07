@@ -3,6 +3,7 @@
 #' @param x some number
 #' @export
 niceround <- function(x) {
+  x <- as.numeric(x)
   digits <- pmax(3, 2 + ceiling(log10(abs(x))))
   return(format(signif(x, digits), scientific = FALSE))
 }

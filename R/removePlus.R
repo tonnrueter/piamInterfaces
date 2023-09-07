@@ -8,5 +8,10 @@
 #' #' removePlus(c("FE|+|CDR", "FE|CDR|DACCS"))
 #' @export
 removePlus <- function(x) {
-  return(gsub("\\|\\++\\|", "|", x))
+  new <- gsub("\\|\\++\\|", "|", x)
+  if (any(grepl("\\|\\++\\|", new))) {
+    return(removePlus(new))
+  } else {
+    return(new)
+  }
 }
