@@ -12,4 +12,6 @@ test_that("niceround works", {
   expect_identical(niceround(0), "0")
   expect_identical(niceround(0000), "0")
   expect_identical(niceround(.000), "0")
+  expect_identical(niceround("4.4"), "4.4")
+  expect_identical(niceround("1e-3"), "0.001")
 })
