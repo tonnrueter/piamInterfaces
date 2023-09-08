@@ -3,15 +3,15 @@
 #'
 #' @md
 #' @author Falk Benke, Renato Rodrigues
-#' @param mifFile path to mif file
+#' @param mifFile path to mif file or a quitte object
 #' @param summationsFile in inst/summations folder that describes the required summation groups,
 #'        or path to summations file
 #' @param iteration keeps track of number of recursive calls, leave to default
 #' @importFrom dplyr select mutate filter count
-#' @importFrom magclass as.magpie mbind
+#' @importFrom magclass as.magpie mbind is.magpie
 #'
 #' @export
-fillMissing <- function(mifFile, summationsFile, iteration = 1) {
+fillMissingSummations <- function(mifFile, summationsFile, iteration = 1) {
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
   if (length(levels(data$model)) > 1) {
@@ -78,7 +78,6 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
 
     # some values differ, we must pick the best calculation using some heuristics
     if (nrow(differences) > 0) {
-
       # if EUR 2020 has different values, this is the point of reference
       d <- filter(differences, !!sym("region") == "EUR", !!sym("period") == 2020)
 
@@ -116,18 +115,25 @@ fillMissing <- function(mifFile, summationsFile, iteration = 1) {
     out <- filter(out, !!sym("variable") != var | !!sym("sum_id") == keepSumId)
   }
 
-  # merge newly calculated data with input mif and make sure that structure
-  # remains unchanged
-  newMifFile <- out %>%
-    select(-"sum_id") %>%
-    mutate(!!sym("variable") := paste0(!!sym("variable"), " (", !!sym("unit"), ")")) %>%
-    select(c("scenario", "model", "region", "variable", "year" = "period", "value")) %>%
-    as.magpie(spatial = "region", temporal = "year", data = "value", tidy = TRUE) %>%
-    mbind(mifFile)
+
+  if (is.magpie(mifFile)) {
+    # merge newly calculated data with input mif and make sure that structure
+    # remains unchanged
+    newMifFile <- out %>%
+      select(-"sum_id") %>%
+      mutate(!!sym("variable") := paste0(!!sym("variable"), " (", !!sym("unit"), ")")) %>%
+      select(c("scenario", "model", "region", "variable", "year" = "period", "value")) %>%
+      as.magpie(spatial = "region", temporal = "year", data = "value", tidy = TRUE) %>%
+      mbind(mifFile)
+  } else {
+    newMifFile <- out %>%
+      select(-"sum_id") %>%
+      rbind(mifFile)
+  }
 
   newVars <- paste0(unique(out$variable), collapse = ", ")
   message(paste0("Newly added vars in iteration ", iteration, ": ", newVars))
 
-  # recursion: try running fillMissing again with the newly calculated variables
-  return(fillMissing(newMifFile, summationsFile, iteration = iteration + 1))
+  # recursion: try running fillMissingSummations again with the newly calculated variables
+  return(fillMissingSummations(newMifFile, summationsFile, iteration = iteration + 1))
 }
