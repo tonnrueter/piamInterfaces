@@ -113,9 +113,9 @@ Emissions|Kyoto Gases|AFOLU|Land;Mt CO2e/yr;Emi|GHG|Land-Use Change|LULUCF natio
 Emissions|Kyoto Gases|Energy;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2eq/yr;1;;;;
 Emissions|Kyoto Gases|Energy;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
 Emissions|Kyoto Gases|Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2e/yr;1;;;;
-Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2e/yr;1;;;;
-Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2/yr;1;;;;
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2eq/yr;1;;;;
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;;;;
 Emissions|Kyoto Gases|Industry and Industrial Processes;Mt CO2e/yr;;;;;;;
 Emissions|Kyoto Gases|Other;Mt CO2e/yr;Emi|GHG|+++|non-BECCS CDR;Mt CO2eq/yr;1;;;;
 Emissions|Kyoto Gases|Waste;Mt CO2e/yr;Emi|GHG|+++|Waste;Mt CO2eq/yr;1;;;;
@@ -150,7 +150,7 @@ Energy Service|Transportation|Passenger|Truck;Gpkm/yr;;;;;;;
 Final Energy;EJ/yr;FE;EJ/yr;1;;;;
 Final Energy|Bunkers;EJ/yr;FE|Transport|Bunkers;EJ/yr;1;;;;
 Final Energy|Bunkers|Electricity;EJ/yr;FE|Transport|Bunkers|+|Electricity;EJ/yr;1;;;;
-Final Energy|Bunkers|Freight;EJ/yr;FE|Transport|Freight|Bunkers;EJ/yr;1;;;;
+Final Energy|Bunkers|Freight;EJ/yr;FE|Transport|Freight|Bunkers;EJ/yr;1;;;;x
 Final Energy|Bunkers|International Aviation|Freight;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Shipping|Freight;EJ/yr;;;;;;;
 Final Energy|Bunkers|Gases;EJ/yr;FE|Transport|Bunkers|+|Gases;EJ/yr;1;;;;
@@ -380,14 +380,14 @@ Final Energy|Transportation|Domestic Shipping|Liquids|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Fossil;EJ/yr;;;;;;;
 Final Energy|Transportation|Electricity;EJ/yr;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;1;;;;
-Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|w/o Bunkers;EJ/yr;1;;;;
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|w/o Bunkers;EJ/yr;1;;;;x
 Final Energy|Transportation|Freight|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Freight|Gases;EJ/yr;;;;;;;
 Final Energy|Transportation|Freight|Hydrogen;EJ/yr;;;;;;;
-Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|w/o Bunkers|+|Liquids;EJ/yr;1;;;;
-Final Energy|Transportation|Freight|Liquids|Biomass;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Transportation|Freight|Liquids|Electricity;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Transportation|Freight|Liquids|Fossil;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|w/o Bunkers|+|Liquids;EJ/yr;1;;;;x
+Final Energy|Transportation|Freight|Liquids|Biomass;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;x
+Final Energy|Transportation|Freight|Liquids|Electricity;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;x
+Final Energy|Transportation|Freight|Liquids|Fossil;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;x
 Final Energy|Transportation|Freight|Other;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Freight;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Freight|Electricity;EJ/yr;;;;;;;
@@ -401,11 +401,11 @@ Final Energy|Transportation|Hydrogen;EJ/yr;FE|Transport|w/o Bunkers|+|Hydrogen;E
 Final Energy|Transportation|Hydrogen|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|Hydrogen|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Hydrogen|Fossil;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV;EJ/yr;FE|Transport|LDV;EJ/yr;1;;;;
+Final Energy|Transportation|LDV;EJ/yr;FE|Transport|LDV;EJ/yr;1;;;;x
 Final Energy|Transportation|LDV|BEV;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|+|Electricity;EJ/yr;1;;;;
+Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|+|Electricity;EJ/yr;1;;;;x
 Final Energy|Transportation|LDV|FCEV;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|+|Gases;EJ/yr;1;;;;
+Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|+|Gases;EJ/yr;1;;;;x
 Final Energy|Transportation|LDV|Gases|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Gases|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Gases|Fossil;EJ/yr;;;;;;;
@@ -413,14 +413,14 @@ Final Energy|Transportation|LDV|Hybrid;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hybrid|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hybrid|Gases;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hybrid|Liquids;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|+|Hydrogen;EJ/yr;1;;;;
+Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|+|Hydrogen;EJ/yr;1;;;;x
 Final Energy|Transportation|LDV|Hydrogen|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hydrogen|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hydrogen|Fossil;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE|Gases;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE|Liquids;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|+|Liquids;EJ/yr;1;;;;
+Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|+|Liquids;EJ/yr;1;;;;x
 Final Energy|Transportation|LDV|Liquids|Biomass;EJ/yr;FE|Transport|LDV|Liquids|+|Biomass;EJ/yr;1;;;;
 Final Energy|Transportation|LDV|Liquids|Electricity;EJ/yr;FE|Transport|LDV|Liquids|+|Fossil;EJ/yr;1;;;;
 Final Energy|Transportation|LDV|Liquids|Fossil;EJ/yr;FE|Transport|LDV|Liquids|+|Hydrogen;EJ/yr;1;;;;
@@ -429,14 +429,14 @@ Final Energy|Transportation|Liquids|Biomass;EJ/yr;FE|Transport|w/o Bunkers|Liqui
 Final Energy|Transportation|Liquids|Electricity;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;
 Final Energy|Transportation|Liquids|Fossil;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;
 Final Energy|Transportation|Other;EJ/yr;;;;;;;
-Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|w/o Bunkers;EJ/yr;1;;;;
-Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Electricity;EJ/yr;1;;;;
-Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Gases;EJ/yr;1;;;;
-Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Liquids;EJ/yr;1;;;;
-Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Transportation|Passenger|Liquids|Fossil;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|w/o Bunkers;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Electricity;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Gases;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Hydrogen;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Liquids;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger|Liquids|Fossil;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;x
 Final Energy|Transportation|Passenger|Other;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Passenger;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Passenger|Electricity;EJ/yr;;;;;;;
