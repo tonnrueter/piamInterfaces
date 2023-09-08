@@ -25,19 +25,17 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
   nc    <- "\033[0m"   # No Color
   width <- 60
 
-  .deletePlus <- function(x) return(gsub("\\|\\++\\|", "|", x))
-
   .getChilds <- function(v, c) {
-    tobefound <- paste0("^", gsub("|", "\\|", .deletePlus(v), fixed = TRUE), "\\|[^\\|]*$")
-    c[which(grepl(tobefound, .deletePlus(c)))]
+    tobefound <- paste0("^", gsub("|", "\\|", removePlus(v), fixed = TRUE), "\\|[^\\|]*$")
+    c[which(grepl(tobefound, removePlus(c)))]
   }
 
   message("\n##### Search for information on ", green, varname, nc, " in mapping templates")
   for (t in template) {
     templateData <- getTemplate(t)
     templateName <- basename(t)
-    remindno <- which(.deletePlus(varname) == .deletePlus(templateData[, remindVar]))
-    exportno <- head(which(.deletePlus(varname) == .deletePlus(templateData$Variable)), n = 1)
+    remindno <- which(removePlus(varname) == removePlus(templateData[, remindVar]))
+    exportno <- head(which(removePlus(varname) == removePlus(templateData$Variable)), n = 1)
     if (length(remindno) + length(exportno) == 0) {
       message("\n### Nothing found in template: ", blue, templateName, nc)
       next

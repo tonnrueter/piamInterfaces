@@ -42,6 +42,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   if (isTRUE(summationsFile == "extractVariableGroups")) {
     checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
+    names(checkVariables) <- make.unique(names(checkVariables), sep = " ")
   } else {
     summationGroups <- getSummations(summationsFile)
     if (summationsFile %in% names(summationsNames())) {
@@ -180,9 +181,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         absDiffMax <- max(abs(fileLarge$diff[fileLarge$variable == p]))
 
         if (roundDiff) {
-          reldDiffMax <- round(reldDiffMax, digits = 1)
-          relDiffMin <- round(relDiffMin, digits = 1)
-          absDiffMax <- round(absDiffMax, digits = 2)
+          reldDiffMax <- niceround(reldDiffMax)
+          relDiffMin <- niceround(relDiffMin)
+          absDiffMax <- niceround(absDiffMax)
         }
 
         text <- c(text, paste0("Relative difference between ",
