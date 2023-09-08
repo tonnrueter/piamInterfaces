@@ -1236,7 +1236,7 @@ Tier;Category;Variable;Unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (supply);Secondary Energy|Gases|Coal;PJ/yr;total production of coal gas from coal gasification;SE|Gases|Fossil|+|Coal;EJ/yr;1000;;0;;
 1;energy (supply);Secondary Energy|Gases|Natural Gas;PJ/yr;Secondary energy gases derived from natural gas (excluding pure hydrogen) for the usage in the buildings, transport and industry sector. This does not include the usage of natural gas for energy conversion into secondary energy other than gases.;SE|Gases|Fossil|+|Natural Gas;EJ/yr;1000;;0;;
 1;energy (supply);Secondary Energy|Gases|Hydrogen;PJ/yr;Total production of gases from hydrogen and CO2;SE|Gases|+|Hydrogen;EJ/yr;1000;;0;;
-1;energy (supply);Secondary Energy|Gases;PJ/yr;total production of gases from sources that do not fit any other category;SE|Gases|Biomass|Waste;EJ/yr;-1000;;0;;
+1;energy (supply);Secondary Energy|Gases;PJ/yr;total production of gases from sources that do not fit any other category;SE|Gases|+|Waste;EJ/yr;-1000;;0;;x
 1;energy (supply);Secondary Energy|Heat;PJ/yr;total district heat generation;SE|Heat;EJ/yr;1000;;0;;
 1;energy (supply);Secondary Energy|Heat|Biomass;PJ/yr;district heat generation from biomass;SE|Heat|+|Biomass;EJ/yr;1000;;0;;
 2;energy (supply);Secondary Energy|Heat|Biomass|w/ CCS;PJ/yr;district heat generation from biomass with CCS;;;;;0;;

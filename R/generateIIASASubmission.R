@@ -55,15 +55,6 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
     mifdata <- droplevels(as.quitte(mifs, na.rm = TRUE))
   }
 
-  renameVars <- c( # old = new
-    "SE|Gases|+|Waste" = "SE|Gases|Biomass|Waste",
-  NULL )
-  for (old in intersect(names(renameVars), levels(mifdata$variable))) {
-    if (! renameVars[[old]] %in% levels(mifdata$variable)) {
-      levels(mifdata$variable)[levels(mifdata$variable) == old] <- renameVars[[old]]
-    }
-  }
-
   # generate mapping file, if it doesn't exist yet
   if (length(mapping) > 0 || is.null(mappingFile) || !file.exists(mappingFile)) {
     mapData <- generateMappingfile(templates = mapping, outputDirectory = NULL,
