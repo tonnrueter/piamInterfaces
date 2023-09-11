@@ -14,3 +14,4 @@
 ^Makefile$
 tutorial.md
 ^.*CITATION.cff$
+^\.git$

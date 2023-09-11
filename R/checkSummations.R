@@ -53,7 +53,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
     # generate list of summation rules from summations file
     for (i in unique(summationGroups$parent)) {
-      checkVariables[[i]] <- summationGroups[which(summationGroups[, "parent"] == i), "child"]
+      checkVariables[[i]] <- summationGroups[summationGroups[, "parent"] == i, "child"]
     }
   }
 
