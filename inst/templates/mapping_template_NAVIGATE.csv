@@ -1303,7 +1303,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1239;2;energy (secondary);Secondary Energy|Solids;EJ/yr;SE|Solids;EJ/yr;;;;solid secondary energy carriers (e.g., briquettes, coke, wood chips, wood pellets);
 1240;2;energy (secondary);Secondary Energy|Solids|Biomass;EJ/yr;SE|Solids|+|Biomass;EJ/yr;;;;solid secondary energy carriers produced from biomass (e.g., commercial charcoal, wood chips, wood pellets). Tradional bioenergy use is excluded.;
 1240;2;energy (secondary);Secondary Energy|Solids|Biomass;EJ/yr;SE|Solids|+|Traditional Biomass;EJ/yr;;;;solid secondary energy carriers produced from biomass (e.g., commercial charcoal, wood chips, wood pellets). Tradional bioenergy use is excluded.;
-1241;2;energy (secondary);Secondary Energy|Solids|Fossil;EJ/yr;;;;;;solid secondary energy carriers produced from fossils (e.g., briquettes, coke);
+1241;2;energy (secondary);Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids|+|Coal;EJ/yr;;;;solid secondary energy carriers produced from fossils (e.g., briquettes, coke);
 1242;2;energy (secondary);Conversion Input|Liquids|Electricity;EJ/yr;;;;;;secondary energy consumption of efuels for the production of electricity;
 1243;2;energy (secondary);Conversion Input|Hydrogen|Electricity;EJ/yr;;;;;;secondary energy consumption of hydrogen for the production of electricity;
 1244;2;energy (secondary);Conversion Input|Hydrogen|Liquids;EJ/yr;;;;;;secondary energy consumption of hydrogen for the production of liquids (synfuels);
