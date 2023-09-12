@@ -1253,8 +1253,8 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1189;2;energy (secondary);Secondary Energy|Gases|Biomass;EJ/yr;SE|Gases|+|Biomass;EJ/yr;;;;total production of biogas;
 1190;2;energy (secondary);Secondary Energy|Gases|Coal;EJ/yr;SE|Gases|Fossil|+|Coal;EJ/yr;;;;total production of coal gas from coal gasification;
 1191;2;energy (secondary);Secondary Energy|Gases|Fossil;EJ/yr;;;;;;total production of gas from fossils;
-1192;2;energy (secondary);Secondary Energy|Gases|Electricity;EJ/yr;;;;;;total production of gas from electricity (power to gas);
-1193;2;energy (secondary);Secondary Energy|Gases|Other;EJ/yr;SE|Gases|+|Hydrogen;EJ/yr;;;;total production of gases from sources that do not fit any other category;
+1192;2;energy (secondary);Secondary Energy|Gases|Electricity;EJ/yr;SE|Gases|+|Hydrogen;EJ/yr;;;;total production of gas from electricity (power to gas);
+1193;2;energy (secondary);Secondary Energy|Gases|Other;EJ/yr;;;;;;total production of gases from sources that do not fit any other category;
 1194;2;energy (secondary);Secondary Energy|Heat|Biomass;EJ/yr;SE|Heat|+|Biomass;EJ/yr;;;;centralized heat generation from biomass;
 1195;2;energy (secondary);Secondary Energy|Heat|Coal;EJ/yr;SE|Heat|+|Coal;EJ/yr;;;;centralized heat generation from coal;
 1196;2;energy (secondary);Secondary Energy|Heat|Gas;EJ/yr;SE|Heat|+|Gas;EJ/yr;;;;centralized heat generation from gases;
