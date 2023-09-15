@@ -21,13 +21,14 @@
 #'                  be rounded?
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc
+#' @importFrom grDevices pdf dev.off
 #' @importFrom magclass unitsplit
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
-#' @importFrom rlang sym syms
-#' @importFrom utils write.table
-#' @importFrom stringr str_pad
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
-#' @importFrom grDevices pdf dev.off
+#' @importFrom rlang sym syms
+#' @importFrom stringr str_pad
+#' @importFrom tibble tibble
+#' @importFrom utils write.table
 #'
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, summationsFile = NULL,
@@ -66,7 +67,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   if (nrow(data) == 0) {
     return(NULL)
   }
-  tmp <- NULL
+
+  # start with an empty tibble, such that return values always have the same
+  # structure
+  tmp <- tibble(model = factor(), scenario = factor(),
+                          region = factor(), period = integer(),
+                          variable = character(), unit = factor(),
+                          value = numeric(), checkSum = numeric(),
+                          diff = numeric(), reldiff = numeric())
 
   # iterate over summation rules
   for (i in seq_along(checkVariables)) {
