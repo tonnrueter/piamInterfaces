@@ -12,6 +12,7 @@ checkSummations(
   logFile = NULL,
   logAppend = FALSE,
   generatePlots = FALSE,
+  mainReg = "World",
   dataDumpFile = "checkSummations.csv",
   remindVar = "piam_variable",
   plotprefix = NULL,
@@ -35,6 +36,8 @@ if set to 'extractVariableGroups', tries to extract summations from variables wi
 \item{logAppend}{boolean whether to append or overwrite logFile}
 
 \item{generatePlots}{boolean whether pdfs to compare data are generated}
+
+\item{mainReg}{main region for the plot generation}
 
 \item{dataDumpFile}{file where data.frame with the data analysis is saved. If NULL, result is returned}
 
