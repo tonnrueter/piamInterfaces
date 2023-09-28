@@ -50,9 +50,9 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   # for each directory, include all mif files
   if (is.character(mifs)) {
     flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
-    mifdata <- as.quitte(flist)
+    mifdata <- droplevels(as.quitte(flist), na.rm = TRUE)
   } else {
-    mifdata <- as.quitte(mifs)
+    mifdata <- droplevels(as.quitte(mifs, na.rm = TRUE))
   }
 
   # generate mapping file, if it doesn't exist yet

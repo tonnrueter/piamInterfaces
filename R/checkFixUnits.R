@@ -63,11 +63,14 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
 
   if (nrow(wrongUnits) > 0) {
     logtext <- c(logtext, reportWrongUnits(wrongUnits))
-    if (failOnUnitMismatch) stop("Unit mismatches!")
   }
 
   if (length(logtext) > 0 && ! is.null(logFile)) {
     write(logtext, file = logFile, append = TRUE)
+  }
+
+  if (failOnUnitMismatch && nrow(wrongUnits) > 0) {
+    stop("Unit mismatches!")
   }
 
   return(mifdata)
