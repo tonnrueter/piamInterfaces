@@ -8,6 +8,7 @@
 #' @param logFile file where human-readable summary is saved. If NULL, write to stdout
 #' @param logAppend boolean whether to append or overwrite logFile
 #' @param generatePlots boolean whether pdfs to compare data are generated
+#' @param mainReg main region for the plot generation
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #'        if set to 'extractVariableGroups', tries to extract summations from variables with + notation
 #' @param template mapping template to be loaded, used to print the remindVar corresponding to the data variables
@@ -32,7 +33,7 @@
 #'
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, summationsFile = NULL,
-                            logFile = NULL, logAppend = FALSE, generatePlots = FALSE,
+                            logFile = NULL, logAppend = FALSE, generatePlots = FALSE, mainReg = "World",
                             dataDumpFile = "checkSummations.csv", remindVar = "piam_variable",
                             plotprefix = NULL, absDiff = 0.001, relDiff = 1, roundDiff = TRUE) {
   if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
@@ -124,7 +125,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   # generate human-readable summary of larger differences
   .checkSummationsSummary(
     mifFile, data, tmp, template, summationsFile, checkVariables,
-    generatePlots, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
+    generatePlots, mainReg, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
     plotprefix, absDiff, relDiff, roundDiff
   )
 
@@ -132,7 +133,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 }
 
 .checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, # nolint: cyclocomp_linter.
-                             checkVariables, generatePlots, outputDirectory, logFile, logAppend,
+                             checkVariables, generatePlots, mainReg, outputDirectory, logFile, logAppend,
                              dataDumpFile, remindVar, plotprefix, absDiff, relDiff, roundDiff) {
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
@@ -204,7 +205,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         if (generatePlots) {
           message("Add plot for ", p)
           mip::showAreaAndBarPlots(plotdata, intersect(childs, unique(plotdata$variable)), tot = p,
-                                   mainReg = "World", yearsBarPlot = c(2030, 2050), scales = "fixed")
+                                   mainReg = mainReg, yearsBarPlot = c(2030, 2050), scales = "fixed")
         }
       }
       # print to log or stdout
