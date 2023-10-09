@@ -169,7 +169,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         if (! is.null(template)) paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(templateName))
          ))
       for (p in problematic) {
-                signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
+        signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
                              ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
 
         childs <- checkVariables[[p]]
