@@ -2,94 +2,129 @@
 #'
 #' @md
 #' @author Oliver Richters
-#' @param mif data or path to mif file of single scenario
-#' @param mifRef data or path to mif file of reference scenario
-#' @param startyear first time step for each mif and mifRef are expected to differ
-#' @param ret "boolean", "fixed" or "fails", depending on what you want to get
-#' @param failfile csv file to which failing check are written to
-#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
+#' @param data quitte object or mif file
+#' @param refscen scenario name of reference scenario, or file or quitte object with reference data
+#' @param startyear first time step for which scenarios and reference scenario are expected to differ
+#' @param ret "boolean": just return TRUE/FALSE if check was successful
+#'            "fails": data frame with mismatches between scenario and reference data
+#'            "fixed": quitte object with data correctly fixed on reference data
+#' @param failfile csv file to which mismatches are written to
+#' @importFrom dplyr case_when first group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc n
-#' @importFrom gms getLine
-#' @importFrom quitte as.quitte
+#' @importFrom quitte as.quitte quitteSort
 #' @importFrom tidyr pivot_wider
 #' @importFrom utils write.csv
-#'
+#' @return see parameter 'ret'
 #' @export
 
-
-fixOnRef <- function(mif, mifRef, startyear, ret = "boolean", failfile = NULL) {
-  scenario <- variable <- period <- value <- ref <- reldiff <- group <- NULL
-  mif <- droplevels(as.quitte(mif, na.rm = TRUE))
-  mifRef <- droplevels(as.quitte(mifRef, na.rm = TRUE))
+fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL) {
+  scenario <- variable <- period <- value <- ref <- reldiff <- NULL
+  data <- droplevels(as.quitte(data, na.rm = TRUE))
   startyear <- suppressWarnings(as.numeric(startyear))
+  # check whether refscen is just the scenario name, or rather data
+  if (is.character(refscen) && ! file.exists(refscen) && all(refscen %in% levels(data$scenario))) {
+    refdata <- droplevels(filter(data, scenario == refscen))
+  } else {
+    refdata <- droplevels(as.quitte(refscen, na.rm = TRUE))
+  }
+  refscen <- levels(refdata$scenario)
   stopifnot(
-    `'mif' must contain data from one scenario only` = length(levels(mif$scenario)) == 1,
-    `'mifRef' must contain data from one scenario only` = length(levels(mifRef$scenario)) == 1,
+    `'refscen' must be a single scenario only` = length(refscen) == 1,
     `'startyear' must be a single numeric value` = (length(startyear) == 1 && ! is.na(startyear)),
     `'ret' must be 'boolean', 'fails' or 'fixed'` = (length(ret) == 1 && ret %in% c("boolean", "fails", "fixed"))
   )
 
-  title <- levels(mif$scenario)
-  titleRef <- levels(mifRef$scenario)
-
-  if (identical(levels(mif$scenario), levels(mifRef$scenario))) {
-    levels(mifRef$scenario) <- paste0(levels(mifRef$scenario), "_ref")
+  returnhelper <- function(ret, boolean, fails, fixed) {
+    messages <- c(boolean = "Returning a boolean.",
+                  fails   = "Returning failing data.",
+                  fixed   = "Returning fixed data.")
+    message(messages[[ret]])
+    if (ret == "boolean") return(boolean)
+    if (ret == "fails") return(fails)
+    if (ret == "fixed") return(fixed)
   }
 
-  falsepositives <- grep("Moving Avg$", levels(mif$variable), value = TRUE)
-
-  message("Comparing ", title, " with reference run ", titleRef, " for t < ", startyear)
-
-  if (startyear <= min(mif$period)) {
-    message("No data before startyear found, so no fixing happened")
-    return(if (ret == "fails") NULL else if (ret == "fixed") mif else TRUE)
+  message("Comparing with reference run ", refscen, " for t < ", startyear)
+  if (startyear <= min(data$period)) {
+    message("No data before startyear found, so no fixing happened.")
+    return(returnhelper(ret, boolean = TRUE, fails = NULL, fixed = data))
   }
-  comp <- rbind(mutate(mif, scenario = "value"), mutate(mifRef, scenario = "ref")) %>%
+
+  # define false-positives that necessarily differ
+  falsepositives <- c(grep("Moving Avg$", levels(data$variable), value = TRUE),
+                      grep("Interest Rate (t+1)/(t-1)", levels(data$variable), value = TRUE, fixed = TRUE)
+                     )
+  # prepare reference data to left_join it to data
+  refcomp <- refdata %>%
+    select(-scenario) %>%
+    rename(ref = value) %>%
+    droplevels()
+  # left_join data with reference run and select everything with bigger differences
+  comp <- data %>%
+    left_join(refcomp, by = c("model", "region", "variable", "unit", "period")) %>%
     filter(! variable %in% falsepositives, period < startyear) %>%
-    arrange(variable) %>%
-    pivot_wider(names_from = scenario) %>%
     mutate(reldiff = abs(value - ref) / pmax(1E-14, abs(value), abs(ref), na.rm = TRUE)) %>%
     filter(abs(reldiff) > 1E-14) %>%
-    mutate(scenario = factor(title)) %>%
-    droplevels()
+    droplevels() %>%
+    quitteSort()
   if (nrow(comp) == 0) {
-    message("# Run is perfectly fixed on reference run!")
-    return(if (ret == "fails") NULL else if (ret == "fixed") mif else TRUE)
+    message("\n### All runs are perfectly fixed on reference run!")
+    return(returnhelper(ret, boolean = TRUE, fails = NULL, fixed = data))
   }
-  mismatches <- comp %>%
-    mutate(model = NULL, scenario = NULL, variable = factor(removePlus(variable))) %>%
-    arrange(variable) %>%
-    summarise(period = paste(sort(unique(period)), collapse = ","),
-              reldiff = max(reldiff),
-              .by = variable) %>%
-    mutate(group = factor(gsub("(\\|.*?)\\|.*$", "\\1", variable))) %>%
-    # mutate(group = factor(gsub("\\|.*", "", variable))) %>% # to group more coarsely
-    summarise(variable = if (length(unique(variable)) == 1) unique(variable) else unique(group),
-              variables = n(),
-              period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ", "),
-              reldiff = max(reldiff),
-              .by = group) %>%
-    mutate(reldiff = niceround(reldiff), group = variable, variable = NULL) %>%
-    droplevels()
-
-  showrows <- 250
-  rlang::with_options(width = 160, print(mismatches, n = showrows))
-  if (showrows < nrow(mismatches)) {
-    message("Further ", (nrow(mismatches) - showrows), " variable groups differ.")
-  }
+  # print human-readbable summary
+  .printRefDiff(data, comp)
+  # save mismatches to file, if requested
   if (! is.null(failfile) && nrow(comp) > 0) {
     message("Find failing variables in '", failfile, "'.")
     write.csv(comp, failfile, quote = FALSE, row.names = FALSE)
   }
-  if (ret %in% c("fails", "boolean")) {
-    return(if (ret == "boolean") FALSE else comp)
+  # fix correctly on ref
+  fixeddata <- data %>%
+    left_join(refcomp, by = c("model", "region", "variable", "unit", "period")) %>%
+    mutate(value = case_when(
+      period >= startyear ~ value,
+      variable %in% falsepositives ~ value,
+      .default = ref
+    )) %>%
+    select(-ref) %>%
+    quitteSort()
+  return(returnhelper(ret, boolean = FALSE, fails = comp, fixed = fixeddata))
+}
+
+.printRefDiff <- function(data, comp) {
+  model <- scenario <- variable <- period <- reldiff <- group <- NULL
+  for (m in levels(data$model)) {
+    for (s in levels(data$scenario)) {
+      mismatches <- comp %>%
+        filter(model == m, scenario == s) %>%
+        select(-model, -scenario)
+      if (nrow(mismatches) == 0) {
+        message("\n### Everything fine for model=", m, " and scenario=", s)
+      } else {
+        groupdepth <- 3
+        groupgrep <- paste(c(rep("(\\|.*?)", groupdepth - 1), "\\|.*$"), collapse = "")
+        groupreplace <- paste0("\\", seq(groupdepth - 1), collapse = "")
+        mismatches <- mismatches %>%
+          mutate(variable = factor(removePlus(variable))) %>%
+          arrange(variable) %>%
+          summarise(period = paste(sort(unique(period)), collapse = ","),
+                    reldiff = max(reldiff),
+                    .by = variable) %>%
+          mutate(group = factor(gsub(groupgrep, groupreplace, variable))) %>%
+          summarise(variable = if (length(unique(variable)) == 1) unique(variable) else unique(group),
+                    variables = n(),
+                    period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ", "),
+                    reldiff = max(reldiff),
+                    .by = group) %>%
+          mutate(reldiff = niceround(reldiff), group = variable, variable = NULL) %>%
+          droplevels()
+        message("\n### Incorrect fixing for these variable groups for model=", m, " and scenario=", s)
+        showrows <- 250
+        rlang::with_options(width = 160, print(mismatches, n = showrows))
+        if (showrows < nrow(mismatches)) {
+          message("Further ", (nrow(mismatches) - showrows), " variable groups differ.")
+        }
+      }
+    }
   }
-  message("Returning corrected data for ", title, ".")
-  di <- rbind(
-            filter(mif, period >= startyear | ! variable %in% levels(mifRef$variable) | variable %in% falsepositives),
-            filter(mifRef, period < startyear, variable %in% setdiff(levels(mif$variable), falsepositives))
-           ) %>%
-        mutate(scenario = factor(title)) %>%
-        quitteSort()
-  return(di)
 }

@@ -4,18 +4,23 @@
 \alias{fixOnRef}
 \title{Checks for a run if it is correctly fixed on the reference run for t < startyear}
 \usage{
-fixOnRef(mif, mifRef, startyear, ret = "boolean", failfile = NULL)
+fixOnRef(data, refscen, startyear, ret = "boolean", failfile = NULL)
 }
 \arguments{
-\item{mif}{data or path to mif file of single scenario}
+\item{data}{quitte object or mif file}
 
-\item{mifRef}{data or path to mif file of reference scenario}
+\item{refscen}{scenario name of reference scenario, or file or quitte object with reference data}
 
-\item{startyear}{first time step for each mif and mifRef are expected to differ}
+\item{startyear}{first time step for which scenarios and reference scenario are expected to differ}
 
-\item{ret}{"boolean", "fixed" or "fails", depending on what you want to get}
+\item{ret}{"boolean": just return TRUE/FALSE if check was successful
+"fails": data frame with mismatches between scenario and reference data
+"fixed": quitte object with data correctly fixed on reference data}
 
-\item{failfile}{csv file to which failing check are written to}
+\item{failfile}{csv file to which mismatches are written to}
+}
+\value{
+see parameter 'ret'
 }
 \description{
 Checks for a run if it is correctly fixed on the reference run for t < startyear
