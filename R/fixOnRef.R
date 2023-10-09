@@ -91,7 +91,10 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
   return(returnhelper(ret, boolean = FALSE, fails = comp, fixed = fixeddata))
 }
 
-.printRefDiff <- function(data, comp) {
+.printRefDiff <- function(data, comp, groupdepth = 3) {
+  .extractvargroup <- function(x, depth) {
+    return(unlist(lapply(lapply(str_split(x, "\\|"), head, depth), paste, collapse = "|")))
+  }
   model <- scenario <- variable <- period <- reldiff <- group <- NULL
   for (m in levels(data$model)) {
     for (s in levels(data$scenario)) {
@@ -101,16 +104,13 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
       if (nrow(mismatches) == 0) {
         message("\n### Everything fine for model=", m, " and scenario=", s)
       } else {
-        groupdepth <- 3
-        groupgrep <- paste(c(rep("(\\|.*?)", groupdepth - 1), "\\|.*$"), collapse = "")
-        groupreplace <- paste0("\\", seq(groupdepth - 1), collapse = "")
         mismatches <- mismatches %>%
           mutate(variable = factor(removePlus(variable))) %>%
           arrange(variable) %>%
           summarise(period = paste(sort(unique(period)), collapse = ","),
                     reldiff = max(reldiff),
                     .by = variable) %>%
-          mutate(group = factor(gsub(groupgrep, groupreplace, variable))) %>%
+          mutate(group = factor(.extractvargroup(variable, groupdepth))) %>%
           summarise(variable = if (length(unique(variable)) == 1) unique(variable) else unique(group),
                     variables = n(),
                     period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ", "),
