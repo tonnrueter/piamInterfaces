@@ -5,7 +5,7 @@
 \title{Recursively calculate additional variables based on given summations and add
 them to the given mif file}
 \usage{
-fillMissingSummations(mifFile, summationsFile, iteration = 1)
+fillMissingSummations(mifFile, summationsFile, iteration = 1, logFile = NULL)
 }
 \arguments{
 \item{mifFile}{path to mif file or a quitte object}
@@ -14,6 +14,8 @@ fillMissingSummations(mifFile, summationsFile, iteration = 1)
 or path to summations file}
 
 \item{iteration}{keeps track of number of recursive calls, leave to default}
+
+\item{logFile}{path to logFile. if NULL, write to stdout}
 }
 \description{
 Recursively calculate additional variables based on given summations and add

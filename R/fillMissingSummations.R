@@ -12,7 +12,7 @@
 #' @importFrom magclass as.magpie mbind is.magpie
 #'
 #' @export
-fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFile = NULL) {
+fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFile = NULL) { #nolint: cyclocomp_linter
   .log <- function(msg, logFile) {
     if (!is.null(logFile)) {
       write(msg, file = logFile, append = TRUE)
@@ -20,7 +20,7 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFil
     message(msg)
   }
 
-  if (!is.null(logFile) && file.exists(logFile)) {
+  if (!is.null(logFile) && file.exists(logFile) && iteration == 1) {
     unlink(logFile)
   }
 
