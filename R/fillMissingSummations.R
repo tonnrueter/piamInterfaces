@@ -7,15 +7,27 @@
 #' @param summationsFile in inst/summations folder that describes the required summation groups,
 #'        or path to summations file
 #' @param iteration keeps track of number of recursive calls, leave to default
+#' @param logFile path to logFile. if NULL, write to stdout
 #' @importFrom dplyr select mutate filter count
 #' @importFrom magclass as.magpie mbind is.magpie
 #'
 #' @export
-fillMissingSummations <- function(mifFile, summationsFile, iteration = 1) {
+fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFile = NULL) { #nolint: cyclocomp_linter
+  .log <- function(msg, logFile) {
+    if (!is.null(logFile)) {
+      write(msg, file = logFile, append = TRUE)
+    }
+    message(msg)
+  }
+
+  if (!is.null(logFile) && file.exists(logFile) && iteration == 1) {
+    unlink(logFile)
+  }
+
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
   if (length(levels(data$model)) > 1) {
-    message("This function cannot handle more than one model in the data yet.")
+    .log("This function cannot handle more than one model in the data yet.", logFile)
     return()
   }
 
@@ -40,10 +52,10 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1) {
       children <- unique(summation$child)
       # any children are sufficient for a suitable summation
       if (any(children %in% unique(data$variable))) {
-        message(paste0(
+        .log(paste0(
           "summation for '", sumId, "' found:\n ",
           paste0(intersect(children, unique(data$variable)), collapse = " + ")
-        ))
+        ), logFile)
 
         tmp <- filter(data, !!sym("variable") %in% children) %>%
           group_by(!!!syms(c("model", "scenario", "region", "period", "unit"))) %>%
@@ -108,10 +120,10 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1) {
   for (var in unique(alternativeVars$variable)) {
     ref <- filter(out, !!sym("variable") == var)
     keepSumId <- .pickSummation(ref)
-    message(paste0(
+    .log(paste0(
       "keep summation '", keepSumId, "' for '", var, "', removing ",
       paste0(setdiff(unique(ref$sum_id), keepSumId), collapse = " , ")
-    ))
+    ), logFile)
     out <- filter(out, !!sym("variable") != var | !!sym("sum_id") == keepSumId)
   }
 
@@ -132,7 +144,7 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1) {
   }
 
   newVars <- paste0(unique(out$variable), collapse = ", ")
-  message(paste0("Newly added vars in iteration ", iteration, ": ", newVars))
+  .log(paste0("Newly added vars in iteration ", iteration, ": ", newVars), logFile)
 
   # recursion: try running fillMissingSummations again with the newly calculated variables
   return(fillMissingSummations(newMifFile, summationsFile, iteration = iteration + 1))
