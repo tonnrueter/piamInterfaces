@@ -173,6 +173,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                              ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
 
         childs <- checkVariables[[p]]
+
         remindchilds <- if (is.null(template)) NULL else
                         unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
@@ -202,9 +203,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                           absDiffMax, " ",
                           paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
         )
+        childMissing <- childs[!childs %in% data$variable]
+        if (length(childMissing) > 0) {
+          text <- c(text, paste0("Variables not found in the data: ", toString(childMissing)))
+        }
         if (generatePlots) {
           message("Add plot for ", p)
-          mip::showAreaAndBarPlots(plotdata, intersect(childs, unique(plotdata$variable)), tot = p,
+          mip::showAreaAndBarPlots(plotdata, intersect(childs, unique(plotdata$variable)),
+                                   tot = gsub(" [1-9]$", "", p),
                                    mainReg = mainReg, yearsBarPlot = c(2030, 2050), scales = "fixed")
         }
       }
