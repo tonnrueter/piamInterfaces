@@ -84,6 +84,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
     mutate(value = case_when(
       period >= startyear ~ value,
       variable %in% falsepositives ~ value,
+      is.na(ref) ~ value,
       .default = ref
     )) %>%
     select(-ref) %>%
