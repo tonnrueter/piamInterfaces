@@ -114,7 +114,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
           mutate(group = factor(.extractvargroup(variable, groupdepth))) %>%
           summarise(variable = if (length(unique(variable)) == 1) unique(variable) else unique(group),
                     variables = n(),
-                    period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ", "),
+                    period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ","),
                     reldiff = max(reldiff),
                     .by = group) %>%
           mutate(reldiff = niceround(reldiff), group = variable, variable = NULL) %>%
