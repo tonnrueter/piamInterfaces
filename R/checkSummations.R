@@ -98,7 +98,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     comp <- merge(comp,
       comp %>%
       group_by(!!!syms(c("model", "scenario", "region", "period", "variable", "unit", "value"))) %>%
-      reframe(child = summationGroups %>% filter(parent == names(checkVariables[i])) %>% pull(!!sym("child"))),
+      reframe(child = checkVariables[[i]]),
       by = c("model", "scenario", "region", "variable", "period", "value", "child", "unit"), all.y = TRUE)
 
     if (isTRUE(summationsFile == "extractVariableGroups")) {
