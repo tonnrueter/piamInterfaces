@@ -21,7 +21,7 @@
 #' @param roundDiff should the absolute and relative differences in human-readable summary
 #'                  be rounded?
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
-#'             filter select desc reframe
+#'             filter select desc reframe last_col
 #' @importFrom grDevices pdf dev.off
 #' @importFrom magclass unitsplit
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
@@ -112,14 +112,24 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     comp <- comp %>%
       group_by(!!!syms(c("model", "scenario", "region", "period", "variable", "unit", "value"))) %>%
       summarise(checkSum = sum(!!sym("childVal") * !!sym("factor"), na.rm = TRUE),
-        summation = paste(ifelse(is.na(!!sym("child")),"",ifelse(!!sym("factor") == 1, paste0(!!sym("child"), " (", !!sym("childVal"), ")"), paste0(!!sym("factor"), " * ", !!sym("child"), " (", !!sym("childVal"), ")"))) , collapse = " + "),
+        summation = paste(
+          ifelse(
+            is.na(!!sym("child")),
+            "",
+            ifelse(
+              !!sym("factor") == 1,
+              paste0(!!sym("child"), " (", !!sym("childVal"), ")"),
+              paste0(!!sym("factor"), " * ", !!sym("child"), " (", !!sym("childVal"), ")")
+              )
+            ),
+          collapse = " + "),
         .groups = "drop") %>%
       ungroup() %>%
       mutate(
         diff = !!sym("checkSum") - !!sym("value"),
         reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"),
         summation = gsub("\\+ \\-", "-", !!sym("summation"))
-      ) %>% 
+      ) %>%
       relocate(!!sym("summation"), .after = last_col())
 
     tmp <- rbind(tmp, comp)
