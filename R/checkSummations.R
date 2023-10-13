@@ -20,6 +20,7 @@
 #'                to be listed in human-readable summary
 #' @param roundDiff should the absolute and relative differences in human-readable summary
 #'                  be rounded?
+#' @param csvSeparator separator for dataDumpFile, defaults to semicolon
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc
 #' @importFrom grDevices pdf dev.off
@@ -35,7 +36,7 @@
 checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, summationsFile = NULL,
                             logFile = NULL, logAppend = FALSE, generatePlots = FALSE, mainReg = "World",
                             dataDumpFile = "checkSummations.csv", remindVar = "piam_variable",
-                            plotprefix = NULL, absDiff = 0.001, relDiff = 1, roundDiff = TRUE) {
+                            plotprefix = NULL, absDiff = 0.001, relDiff = 1, roundDiff = TRUE, csvSeparator = ";") {
   if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
     dir.create(outputDirectory, recursive = TRUE)
   }
@@ -118,8 +119,12 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
     write.table(
-      arrange(tmp, desc(abs(!!sym("reldiff")))), sep = ";",
-      file = dataDumpFile, quote = FALSE, row.names = FALSE)
+      arrange(tmp, desc(abs(!!sym("reldiff")))),
+      file = dataDumpFile,
+      sep = csvSeparator,
+      quote = FALSE,
+      row.names = FALSE
+    )
   }
 
   # generate human-readable summary of larger differences
