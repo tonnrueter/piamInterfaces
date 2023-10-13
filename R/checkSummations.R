@@ -140,7 +140,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
     write.table(
-      arrange(tmp %>% mutate(reldiff = round(!!sym("reldiff"), 2)), desc(abs(!!sym("reldiff")))),
+      arrange(tmp, desc(abs(!!sym("reldiff")))) %>% mutate(reldiff = niceround(!!sym("reldiff"))),
       file = dataDumpFile,
       sep = csvSeparator,
       quote = FALSE,
