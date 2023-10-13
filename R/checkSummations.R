@@ -128,7 +128,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       ungroup() %>%
       mutate(
         diff = !!sym("checkSum") - !!sym("value"),
-        reldiff = round(100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"), 2),
+        reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"),
         summation = gsub("\\+ \\-", "-", !!sym("summation"))
       ) %>%
       relocate(!!sym("summation"), .after = last_col())
@@ -140,7 +140,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
     write.table(
-      arrange(tmp, desc(abs(!!sym("reldiff")))),
+      arrange(tmp %>% mutate(reldiff = round(!!sym("reldiff"), 2)), desc(abs(!!sym("reldiff")))),
       file = dataDumpFile,
       sep = csvSeparator,
       quote = FALSE,
