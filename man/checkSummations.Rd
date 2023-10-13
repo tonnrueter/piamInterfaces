@@ -18,7 +18,8 @@ checkSummations(
   plotprefix = NULL,
   absDiff = 0.001,
   relDiff = 1,
-  roundDiff = TRUE
+  roundDiff = TRUE,
+  csvSeparator = ";"
 )
 }
 \arguments{
@@ -53,6 +54,8 @@ to be listed in human-readable summary}
 
 \item{roundDiff}{should the absolute and relative differences in human-readable summary
 be rounded?}
+
+\item{csvSeparator}{separator for dataDumpFile, defaults to semicolon}
 }
 \description{
 Checks for a run if the variables sum up as expected and logs spotted gaps
