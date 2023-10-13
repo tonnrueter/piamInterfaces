@@ -113,7 +113,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     comp <- comp %>%
       group_by(!!!syms(c("model", "scenario", "region", "period", "variable", "unit", "value"))) %>%
       summarise(checkSum = sum(!!sym("childVal") * !!sym("factor"), na.rm = TRUE),
-        summation = paste(
+        details = paste(
           ifelse(
             is.na(!!sym("child")),
             "",
@@ -129,9 +129,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       mutate(
         diff = !!sym("checkSum") - !!sym("value"),
         reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"),
-        summation = gsub("\\+ \\-", "-", !!sym("summation"))
+        details = gsub("\\+ \\-", "-", !!sym("details"))
       ) %>%
-      relocate(!!sym("summation"), .after = last_col())
+      relocate(!!sym("details"), .after = last_col())
 
     tmp <- rbind(tmp, comp)
   }
