@@ -115,14 +115,10 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       summarise(checkSum = sum(!!sym("childVal") * !!sym("factor"), na.rm = TRUE),
         details = paste(
           ifelse(
-            is.na(!!sym("child")),
-            "",
-            ifelse(
-              !!sym("factor") == 1,
-              paste0(!!sym("child"), " (", !!sym("childVal"), ")"),
-              paste0(!!sym("factor"), " * ", !!sym("child"), " (", !!sym("childVal"), ")")
-              )
-            ),
+            !!sym("factor") == 1,
+            paste0(!!sym("child"), " (", !!sym("childVal"), ")"),
+            paste0(!!sym("factor"), " * ", !!sym("child"), " (", !!sym("childVal"), ")")
+          ),
           collapse = " + "),
         .groups = "drop") %>%
       ungroup() %>%
