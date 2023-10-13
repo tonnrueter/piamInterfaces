@@ -3,14 +3,16 @@
 \name{niceround}
 \alias{niceround}
 \title{niceround returns human-readable string for big and small numbers
-If abs(x) > 1, show everything before the dot plus 2 digits after. For abs(x) < 1, show 3 digits}
+Show everything before the dot and at least 'digits' significant digits}
 \usage{
-niceround(x)
+niceround(x, digits = 3)
 }
 \arguments{
 \item{x}{some number}
+
+\item{digits}{number of significant digits that are definitely kept}
 }
 \description{
 niceround returns human-readable string for big and small numbers
-If abs(x) > 1, show everything before the dot plus 2 digits after. For abs(x) < 1, show 3 digits
+Show everything before the dot and at least 'digits' significant digits
 }

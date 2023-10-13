@@ -96,6 +96,15 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
   .extractvargroup <- function(x, depth) {
     return(unlist(lapply(lapply(str_split(x, "\\|"), head, depth), paste, collapse = "|")))
   }
+  summarizePeriods <- function(x) {
+    years <- sort(unique(c(unlist(lapply(x, strsplit, ",")))))
+    summarize <- try(suppressWarnings(seq(min(as.numeric(years)), max(as.numeric(years)))))
+    if (! inherits(summarize, "try-error") && length(years) > 1 && isTRUE(all.equal(years, paste(summarize)))) {
+      return(paste0(min(summarize), "-", max(summarize)))
+    } else {
+      return(paste(years, collapse = ","))
+    }
+  }
   model <- scenario <- variable <- period <- reldiff <- group <- NULL
   for (m in levels(data$model)) {
     for (s in levels(data$scenario)) {
@@ -114,12 +123,13 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
           mutate(group = factor(.extractvargroup(variable, groupdepth))) %>%
           summarise(variable = if (length(unique(variable)) == 1) unique(variable) else unique(group),
                     variables = n(),
-                    period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ","),
+                    period = summarizePeriods(period),
                     reldiff = max(reldiff),
                     .by = group) %>%
           mutate(reldiff = niceround(reldiff), group = variable, variable = NULL) %>%
           droplevels()
-        message("\n### Incorrect fixing for ", length(levels(comp$variable)), " variables (grouped below) for model=", m, " and scenario=", s)
+        message("\n### Incorrect fixing for ", length(levels(comp$variable)),
+                " variables (grouped below) for model=", m, " and scenario=", s)
         showrows <- 250
         rlang::with_options(width = 160, print(mismatches, n = showrows))
         if (showrows < nrow(mismatches)) {
