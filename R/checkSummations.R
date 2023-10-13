@@ -95,12 +95,12 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       mutate(!!sym("unit") := !!sym("unit.x")) %>%
       select(-c("unit.x", "unit.y"))
 
-    # filling missing childs
+    # add NA entries for children in summation rule not found in data
     comp <- merge(comp,
       comp %>%
       group_by(!!!syms(c("model", "scenario", "region", "period", "variable", "unit", "value"))) %>%
       reframe(child = checkVariables[[i]]),
-      by = c("model", "scenario", "region", "variable", "period", "value", "child", "unit"), all.y = TRUE)
+      by = c("model", "scenario", "region", "period", "variable", "unit", "value", "child"), all.y = TRUE)
 
     if (isTRUE(summationsFile == "extractVariableGroups")) {
       comp$factor <- 1
@@ -139,8 +139,15 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   # write data to dataDumpFile
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
+
+    out <- arrange(tmp, desc(abs(!!sym("reldiff"))))
+
+    if (roundDiff) {
+      out <- tmp %>% mutate(reldiff = niceround(!!sym("reldiff")))
+    }
+
     write.table(
-      arrange(tmp, desc(abs(!!sym("reldiff")))) %>% mutate(reldiff = niceround(!!sym("reldiff"))),
+      out,
       file = dataDumpFile,
       sep = csvSeparator,
       quote = FALSE,
