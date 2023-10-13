@@ -75,7 +75,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
   .printRefDiff(data, comp)
   # save mismatches to file, if requested
   if (! is.null(failfile) && nrow(comp) > 0) {
-    message("Find failing variables in '", failfile, "'.")
+    message("Find ", length(levels(comp$variable)), " failing variables in '", failfile, "'.")
     write.csv(comp, failfile, quote = FALSE, row.names = FALSE)
   }
   # fix correctly on ref
@@ -114,12 +114,12 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
           mutate(group = factor(.extractvargroup(variable, groupdepth))) %>%
           summarise(variable = if (length(unique(variable)) == 1) unique(variable) else unique(group),
                     variables = n(),
-                    period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ", "),
+                    period = paste(sort(unique(strsplit(period, ",")[[1]])), collapse = ","),
                     reldiff = max(reldiff),
                     .by = group) %>%
           mutate(reldiff = niceround(reldiff), group = variable, variable = NULL) %>%
           droplevels()
-        message("\n### Incorrect fixing for these variable groups for model=", m, " and scenario=", s)
+        message("\n### Incorrect fixing for ", length(levels(comp$variable)), " variables (grouped below) for model=", m, " and scenario=", s)
         showrows <- 250
         rlang::with_options(width = 160, print(mismatches, n = showrows))
         if (showrows < nrow(mismatches)) {
