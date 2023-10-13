@@ -128,7 +128,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       ungroup() %>%
       mutate(
         diff = !!sym("checkSum") - !!sym("value"),
-        reldiff = round(100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"),2),
+        reldiff = round(100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"), 2),
         summation = gsub("\\+ \\-", "-", !!sym("summation"))
       ) %>%
       relocate(!!sym("summation"), .after = last_col())
