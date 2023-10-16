@@ -29,4 +29,9 @@ test_that("niceround works", {
   expect_identical(niceround(.000, digits = 1), "0")
   expect_identical(niceround("4.4", digits = 1), "4")
   expect_identical(niceround("1e-3", digits = 1), "0.001")
+  test <- c(1234, 0.000312340897, "-112.1234")
+  for (d in seq_along(10)) {
+    expect_identical(niceround(test, digits = d),
+                     sapply(test, niceround, digits = d, USE.NAMES = FALSE))
+  }
 })
