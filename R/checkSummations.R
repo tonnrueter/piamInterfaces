@@ -22,7 +22,7 @@
 #'                  be rounded?
 #' @param csvSeparator separator for dataDumpFile, defaults to semicolon
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
-#'             filter select desc
+#'             filter select desc reframe last_col
 #' @importFrom grDevices pdf dev.off
 #' @importFrom magclass unitsplit
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
@@ -95,6 +95,13 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       mutate(!!sym("unit") := !!sym("unit.x")) %>%
       select(-c("unit.x", "unit.y"))
 
+    # add NA entries for children in summation rule not found in data
+    comp <- merge(comp,
+      comp %>%
+      group_by(!!!syms(c("model", "scenario", "region", "period", "variable", "unit", "value"))) %>%
+      reframe(child = checkVariables[[i]]),
+      by = c("model", "scenario", "region", "period", "variable", "unit", "value", "child"), all.y = TRUE)
+
     if (isTRUE(summationsFile == "extractVariableGroups")) {
       comp$factor <- 1
     } else {
@@ -105,12 +112,22 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     # calculate differences for comparison
     comp <- comp %>%
       group_by(!!!syms(c("model", "scenario", "region", "period", "variable", "unit", "value"))) %>%
-      summarise(checkSum = sum(!!sym("childVal") * !!sym("factor")), .groups = "drop") %>%
+      summarise(checkSum = sum(!!sym("childVal") * !!sym("factor"), na.rm = TRUE),
+        details = paste(
+          ifelse(
+            !!sym("factor") == 1,
+            paste0(!!sym("child"), " (", !!sym("childVal"), ")"),
+            paste0(!!sym("factor"), " * ", !!sym("child"), " (", !!sym("childVal"), ")")
+          ),
+          collapse = " + "),
+        .groups = "drop") %>%
       ungroup() %>%
       mutate(
         diff = !!sym("checkSum") - !!sym("value"),
-        reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value")
-      )
+        reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"),
+        details = gsub("\\+ \\-", "-", !!sym("details"))
+      ) %>%
+      relocate(!!sym("details"), .after = last_col())
 
     tmp <- rbind(tmp, comp)
   }
@@ -118,8 +135,15 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   # write data to dataDumpFile
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
+
+    out <- arrange(tmp, desc(abs(!!sym("reldiff"))))
+
+    if (roundDiff) {
+      out <- tmp %>% mutate(reldiff = niceround(!!sym("reldiff"), digits = 1))
+    }
+
     write.table(
-      arrange(tmp, desc(abs(!!sym("reldiff")))),
+      out,
       file = dataDumpFile,
       sep = csvSeparator,
       quote = FALSE,
