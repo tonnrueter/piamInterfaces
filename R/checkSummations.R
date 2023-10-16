@@ -139,7 +139,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     out <- arrange(tmp, desc(abs(!!sym("reldiff"))))
 
     if (roundDiff) {
-      out <- tmp %>% mutate(reldiff = niceround(!!sym("reldiff")))
+      out <- tmp %>% mutate(reldiff = niceround(!!sym("reldiff", digits = 1)))
     }
 
     write.table(
