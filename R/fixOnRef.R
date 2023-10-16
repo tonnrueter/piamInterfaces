@@ -126,7 +126,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
                     period = summarizePeriods(period),
                     reldiff = max(reldiff),
                     .by = group) %>%
-          mutate(reldiff = niceround(reldiff), group = variable, variable = NULL) %>%
+          mutate(reldiff = paste(niceround(100 * reldiff), "%"), group = variable, variable = NULL) %>%
           droplevels()
         message("\n### Incorrect fixing for ", length(levels(comp$variable)),
                 " variables (grouped below) for model=", m, " and scenario=", s)
