@@ -20,7 +20,9 @@
 #' }
 #' @export
 convertHistoricalData <- function(mif, project, regionMapping = NULL) {
-  hist <- suppressWarnings(as.quitte(mif))
+
+  hist <- suppressWarnings(as.quitte(mif)) %>%
+    filter(!is.na(!!sym("value")))
 
   m <- NULL
   for (i in project) {
@@ -34,12 +36,27 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
       !!sym("piam_variable") := sub("\\|\\++\\|", "|", !!sym("piam_variable")) # nolint
     )
 
+  # count REMIND variables mapping to each project variables
+  varmap <- left_join(varmap, count(varmap, !!sym("Variable"), name = "countRemindVar"),
+                      by = c("Variable"))
+
   out <- hist %>%
     left_join(varmap, by = c("variable" = "piam_variable", "unit" = "piam_unit")) %>%
     mutate(!!sym("value") := !!sym("piam_factor") * !!sym("value")) %>%
-    select("model", "scenario", "region", "variable" = "Variable", "unit" = "Unit", "period", "value") %>%
+    select("model", "scenario", "region", "variable" = "Variable", "unit" = "Unit",
+           "period", "value", "countRemindVar") %>%
     filter(!is.na(!!sym("value")))
 
+  # filter entries where all REMIND variables used for calculating project variables
+  # were found in historical.mif
+  complete <- count(out,
+                    !!!syms(c("model", "scenario", "region", "variable", "unit", "period", "countRemindVar")),
+                    name = "actualRemindVar") %>%
+    filter(!!sym("actualRemindVar") == !!sym("countRemindVar"))
+
+  out <- left_join(complete, out,
+                   by = c("model", "scenario", "region", "variable", "unit", "period", "countRemindVar")) %>%
+    select(-c("actualRemindVar", "countRemindVar"))
 
   if (!is.null(regionMapping)) {
     regmap <- read.csv2(regionMapping, header = TRUE)
