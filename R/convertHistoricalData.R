@@ -21,8 +21,7 @@
 #' @export
 convertHistoricalData <- function(mif, project, regionMapping = NULL) {
 
-  hist <- suppressWarnings(as.quitte(mif)) %>%
-    filter(!is.na(!!sym("value")))
+  hist <- suppressWarnings(as.quitte(mif, na.rm = TRUE))
 
   m <- NULL
   for (i in project) {
