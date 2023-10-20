@@ -9,6 +9,7 @@
 #'            "fails": data frame with mismatches between scenario and reference data
 #'            "fixed": quitte object with data correctly fixed on reference data
 #' @param failfile csv file to which mismatches are written to
+#' @param relDiff threshold for acceptable relative difference
 #' @importFrom dplyr case_when first group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc n
 #' @importFrom quitte as.quitte quitteSort
@@ -17,7 +18,7 @@
 #' @return see parameter 'ret'
 #' @export
 
-fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL) {
+fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL, relDiff = 1E-12) {
   scenario <- variable <- period <- value <- ref <- reldiff <- NULL
   data <- droplevels(as.quitte(data, na.rm = TRUE))
   startyear <- suppressWarnings(as.numeric(startyear))
@@ -63,8 +64,8 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
   comp <- data %>%
     left_join(refcomp, by = c("model", "region", "variable", "unit", "period")) %>%
     filter(! variable %in% falsepositives, period < startyear) %>%
-    mutate(reldiff = abs(value - ref) / pmax(1E-14, abs(value), abs(ref), na.rm = TRUE)) %>%
-    filter(abs(reldiff) > 1E-14) %>%
+    mutate(reldiff = 100 * abs(value - ref) / pmax(1E-14, abs(value), abs(ref), na.rm = TRUE)) %>%
+    filter(abs(reldiff) > relDiff) %>%
     droplevels() %>%
     quitteSort()
   if (nrow(comp) == 0) {
@@ -126,7 +127,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL)
                     period = summarizePeriods(period),
                     reldiff = max(reldiff),
                     .by = group) %>%
-          mutate(reldiff = paste(niceround(100 * reldiff), "%"), group = variable, variable = NULL) %>%
+          mutate(reldiff = paste(niceround(reldiff), "%"), group = variable, variable = NULL) %>%
           droplevels()
         message("\n### Incorrect fixing for ", length(levels(comp$variable)),
                 " variables (grouped below) for model=", m, " and scenario=", s)
