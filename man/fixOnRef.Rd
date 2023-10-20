@@ -4,7 +4,14 @@
 \alias{fixOnRef}
 \title{Checks for a run if it is correctly fixed on the reference run for t < startyear}
 \usage{
-fixOnRef(data, refscen, startyear, ret = "boolean", failfile = NULL)
+fixOnRef(
+  data,
+  refscen,
+  startyear,
+  ret = "boolean",
+  failfile = NULL,
+  relDiff = 1e-12
+)
 }
 \arguments{
 \item{data}{quitte object or mif file}
@@ -18,6 +25,8 @@ fixOnRef(data, refscen, startyear, ret = "boolean", failfile = NULL)
 "fixed": quitte object with data correctly fixed on reference data}
 
 \item{failfile}{csv file to which mismatches are written to}
+
+\item{relDiff}{threshold for acceptable relative difference}
 }
 \value{
 see parameter 'ret'
