@@ -3,16 +3,18 @@
 \name{niceround}
 \alias{niceround}
 \title{niceround returns human-readable string for big and small numbers
-Show everything before the dot and at least 'digits' significant digits}
+Show everything before the dot and at least 'digits' significant digits
+For a data.frame, convert all numeric columns}
 \usage{
 niceround(x, digits = 3)
 }
 \arguments{
-\item{x}{some number}
+\item{x}{either a vector or list of numbers, or a dateframe}
 
 \item{digits}{number of significant digits that are definitely kept}
 }
 \description{
 niceround returns human-readable string for big and small numbers
 Show everything before the dot and at least 'digits' significant digits
+For a data.frame, convert all numeric columns
 }
