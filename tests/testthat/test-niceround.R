@@ -34,4 +34,9 @@ test_that("niceround works", {
     expect_identical(niceround(test, digits = d),
                      sapply(test, niceround, digits = d, USE.NAMES = FALSE))
   }
+  qe <- quitte::quitte_example_dataAR6
+  qenr <- niceround(qe)
+  expect_equal(colnames(qe), colnames(qenr))
+  expect_equal(nrow(qe), nrow(qenr))
+  expect_equal(niceround(qe$value), qenr$value)
 })
