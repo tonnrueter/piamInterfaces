@@ -2091,3 +2091,13 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1992;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Freight;Mt CO2/yr;Emi|CO2|Transport|Freight|w/o bunkers|Demand;Mt CO2/yr;;;;CO2 emissions from burning fossil liquids in freight transport without bunkers
 1993;2;energy (service);Energy Service|Bunkers|Passenger|International Aviation;bn pkm/yr;ES|Transport|Pass|Aviation|International;bn pkm/yr;;;;energy service demand for passenger international aviation
 1994;2;energy (final);Final Energy|Transportation|Passenger|Domestic Aviation;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy demand for passenger domestic aviation
+1995;2;energy (final);Final Energy|Transportation|Passenger|Rail|Electricity;EJ/yr;FE|Transport|Pass|Rail|Electricity;EJ/yr;;;;final energy demand for passenger rail (including HSR) running on electricity;
+1996;2;energy (final);Final Energy|Transportation|Passenger|Bus|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;final energy demand for passenger busses running on hydrogen;
+1997;2;energy (final);Final Energy|Transportation|Passenger|LDV|Electricity;EJ/yr;FE|Transport|Pass|Road|LDV|Electricity;EJ/yr;;;;final energy demand for passenger LDV (4W+2W) running on electricity;
+1998;2;energy (final);Final Energy|Bunkers|Passenger|International Aviation|Electricity;EJ/yr;;;;;;;
+1999;2;energy (final);Final Energy|Transportation|Passenger|Rail|Hydrogen;EJ/yr;;;;;;;
+2000;2;energy (final);Final Energy|Transportation|Passenger|LDV|Hydrogen;EJ/yr;FE|Transport|Pass|Road|LDV|Hydrogen;EJ/yr;;;;final energy demand for passenger LDV (4W+2W) running on hydrogen;
+2001;2;energy (final);Final Energy|Transportation|Passenger|Domestic Aviation|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;;;;final energy demand for passenger domestic aviation running on hydrogen;
+2002;2;energy (final);Final Energy|Transportation|Passenger|Bus|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;;;final energy demand for passenger busses running on electricity;
+2003;2;energy (final);Final Energy|Bunkers|Passenger|International Aviation|Hydrogen;EJ/yr;;;;;;;
+2004;2;energy (final);Final Energy|Transportation|Passenger|Domestic Aviation|Electricity;EJ/yr;;;;;;;
