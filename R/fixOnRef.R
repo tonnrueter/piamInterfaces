@@ -112,10 +112,12 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
     for (s in levels(data$scenario)) {
       mismatches <- comp %>%
         filter(model == m, scenario == s) %>%
-        select(-model, -scenario)
+        select(-model, -scenario) %>%
+        droplevels()
       if (nrow(mismatches) == 0) {
         message("\n### Everything fine for model=", m, " and scenario=", s)
       } else {
+        wrongvars <- length(levels(mismatches$variable))
         mismatches <- mismatches %>%
           mutate(variable = factor(removePlus(variable))) %>%
           arrange(variable) %>%
@@ -130,7 +132,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
                     .by = group) %>%
           mutate(reldiff = paste(niceround(reldiff), "%"), group = variable, variable = NULL) %>%
           droplevels()
-        message("\n### Incorrect fixing for ", length(levels(comp$variable)),
+        message("\n### Incorrect fixing for ", wrongvars,
                 " variables (grouped below) for model=", m, " and scenario=", s)
         showrows <- 250
         rlang::with_options(width = 160, print(mismatches, n = showrows))
