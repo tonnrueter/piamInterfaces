@@ -77,6 +77,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
   # save mismatches to file, if requested
   if (! is.null(failfile) && nrow(comp) > 0) {
     message("Find ", length(levels(comp$variable)), " failing variables in '", failfile, "'.")
+    message("You can read it with `quitte::as.quitte(readr::read_csv('", basename(failfile), "'))`")
     write.csv(comp, failfile, quote = FALSE, row.names = FALSE)
   }
   # fix correctly on ref
