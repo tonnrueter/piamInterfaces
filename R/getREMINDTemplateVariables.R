@@ -19,7 +19,5 @@ getREMINDTemplateVariables <- function(project) {
     stop("Template ", project, " does not support remind2 validation. \n
           Add a column `exclude_remind2_validation`!")
   }
-  remindVars <- gsub("^Price\\|Marginal\\|", "Price|", unique(remindVars))
-  remindVars <- gsub("\\|Moving Avg", "", remindVars)
   return(unique(remindVars))
 }

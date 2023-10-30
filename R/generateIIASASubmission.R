@@ -55,6 +55,12 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
     mifdata <- droplevels(as.quitte(mifs, na.rm = TRUE))
   }
 
+  if (any(grepl("^Price\\|.*\\|Moving Avg$", levels(mifdata$variable))) &&
+      ! any(grepl("^Price\\|.*\\|Rawdata$", levels(mifdata$variable)))) {
+   warning("Your data contains no Price|*|Rawdata variables. If it is based on a remind2 version",
+           " before 1.111.0 on 2023-05-26, please use piamInterfaces version 0.9.0 or earlier, see PR #128.")
+  }
+
   # generate mapping file, if it doesn't exist yet
   if (length(mapping) > 0 || is.null(mappingFile) || !file.exists(mappingFile)) {
     mapData <- generateMappingfile(templates = mapping, outputDirectory = NULL,
@@ -75,17 +81,6 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
       !!sym("Unit") := unitsplit(!!sym("Variable"))$unit, # nolint
       !!sym("Variable") := unitsplit(!!sym("Variable"))$variable # nolint
     )
-
-  # reflecting the change in https://github.com/pik-piam/remind2/pull/402
-  # if postfix '|Rawdata' is present, don't use '|Moving Avg' but the variable without any postfix
-  # if Price|Marginal| not found, use the one without
-  if (! any(grepl("^Price\\|Marginal", levels(mifdata$variable)))) {
-    mapData$piam_variable <- gsub("^Price\\|Marginal", "Price|", mapData$piam_variable)
-  }
-  if (any(grepl("^Price\\|.*\\Rawdata", levels(mifdata$variable))) && any(grepl("^Price\\|", mapData$piam_variable))) {
-    mapData$piam_variable[grepl("^Price\\|", mapData$piam_variable)] <-
-      gsub("\\|Moving Avg", "", grep("^Price\\|", mapData$piam_variable, value = TRUE))
-  }
 
   message("\n### Generating submission file using mapping ", paste(c(mapping, mappingFile), collapse = ", "), ".")
   if (!is.null(model)) message("# Correct model name to '", model, "'.")
