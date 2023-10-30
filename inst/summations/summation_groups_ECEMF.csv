@@ -1,0 +1,522 @@
+parent;child;factor
+Emissions|CO2;Emissions|CO2|Energy and Industrial Processes;1
+Emissions|CO2;Emissions|CO2|Other;1
+Emissions|CO2;Emissions|CO2|Waste;1
+Emissions|CO2;Emissions|CO2|AFOLU;1
+Emissions|CO2;Emissions|CO2|Other Removal;1
+Emissions|CO2|Energy and Industrial Processes;Emissions|CO2|Industrial Processes;1
+Emissions|CO2|Energy and Industrial Processes;Emissions|CO2|Energy;1
+Emissions|CO2|Energy;Emissions|CO2|Energy|Demand;1
+Emissions|CO2|Energy;Emissions|CO2|Energy|Supply;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Industry;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Residential and Commercial;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Transportation;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Bunkers;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|AFOFI;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Other Sector;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Fuels;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Electricity and Heat;1
+Emissions|CO2|Energy|Supply|Fuels;Emissions|CO2|Energy|Supply|Hydrogen;1
+Emissions|CO2|Energy|Supply|Fuels;Emissions|CO2|Energy|Supply|Liquids;1
+Emissions|CO2|Energy|Supply|Fuels;Emissions|CO2|Energy|Supply|Gases;1
+Emissions|CO2|Energy|Supply|Fuels;Emissions|CO2|Energy|Supply|Solids;1
+Emissions|CO2|Energy|Supply|Fuels;Emissions|CO2|Energy|Supply|Other;1
+Emissions|CO2|Energy|Supply|Electricity and Heat;Emissions|CO2|Energy|Supply|Heat;1
+Emissions|CO2|Energy|Supply|Electricity and Heat;Emissions|CO2|Energy|Supply|Electricity;1
+Emissions|CO2|AFOLU;Emissions|CO2|AFOLU|Agriculture;1
+Emissions|CO2|AFOLU;Emissions|CO2|AFOLU|Land;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Industrial Processes;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Energy;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Waste;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Other;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|AFOLU;1
+Emissions|Kyoto Gases|AFOLU;Emissions|Kyoto Gases|AFOLU|Agriculture;1
+Emissions|Kyoto Gases|AFOLU;Emissions|Kyoto Gases|AFOLU|Land;1
+Emissions|Kyoto Gases|Energy and Industrial Processes;Emissions|Kyoto Gases|Industrial Processes;1
+Emissions|Kyoto Gases|Energy and Industrial Processes;Emissions|Kyoto Gases|Energy;1
+Emissions|Kyoto Gases 2;Emissions|F-Gases;1
+Emissions|Kyoto Gases 2;Emissions|N2O;0.265
+Emissions|Kyoto Gases 2;Emissions|CH4;28
+Emissions|Kyoto Gases 2;Emissions|CO2;1
+Carbon Capture;Carbon Capture|Biomass;1
+Carbon Capture;Carbon Capture|Direct Air Capture;1
+Carbon Capture;Carbon Capture|Fossil;1
+Carbon Capture;Carbon Capture|Industrial Processes;1
+Carbon Capture;Carbon Capture|Other;1
+Carbon Capture|Storage;Carbon Capture|Storage|Biomass;1
+Carbon Capture|Storage;Carbon Capture|Storage|Direct Air Capture;1
+Carbon Capture|Storage;Carbon Capture|Storage|Fossil;1
+Carbon Capture|Storage;Carbon Capture|Storage|Industrial Processes;1
+Carbon Capture|Storage;Carbon Capture|Storage|Other;1
+Carbon Capture|Usage;Carbon Capture|Usage|Gases;1
+Carbon Capture|Usage;Carbon Capture|Usage|Liquids;1
+Carbon Capture|Usage;Carbon Capture|Usage|Materials;1
+Carbon Capture|Usage;Carbon Capture|Usage|Other;1
+Carbon Removal;Carbon Removal|Enhanced Weathering;1
+Carbon Removal;Carbon Removal|Geological Storage;1
+Carbon Removal;Carbon Removal|Land Use;1
+Carbon Removal;Carbon Removal|Materials;1
+Carbon Removal;Carbon Removal|Ocean;1
+Carbon Removal;Carbon Removal|Other;1
+Carbon Removal|Land Use;Carbon Removal|Land Use|Afforestation;1
+Carbon Removal|Land Use;Carbon Removal|Land Use|Biochar;1
+Carbon Removal|Land Use;Carbon Removal|Land Use|Soil Carbon Management;1
+Primary Energy;Primary Energy|Biomass;1
+Primary Energy;Primary Energy|Coal;1
+Primary Energy;Primary Energy|Gas;1
+Primary Energy;Primary Energy|Geothermal;1
+Primary Energy;Primary Energy|Hydro;1
+Primary Energy;Primary Energy|Nuclear;1
+Primary Energy;Primary Energy|Ocean;1
+Primary Energy;Primary Energy|Oil;1
+Primary Energy;Primary Energy|Other;1
+Primary Energy;Primary Energy|Solar;1
+Primary Energy;Primary Energy|Wind;1
+Primary Energy 2;Primary Energy|Biomass;1
+Primary Energy 2;Primary Energy|Fossil;1
+Primary Energy 2;Primary Energy|Geothermal;1
+Primary Energy 2;Primary Energy|Hydro;1
+Primary Energy 2;Primary Energy|Nuclear;1
+Primary Energy 2;Primary Energy|Ocean;1
+Primary Energy 2;Primary Energy|Other;1
+Primary Energy 2;Primary Energy|Solar;1
+Primary Energy 2;Primary Energy|Wind;1
+Primary Energy|Biomass;Primary Energy|Biomass|w/ CCS;1
+Primary Energy|Biomass;Primary Energy|Biomass|w/o CCS;1
+Primary Energy|Coal;Primary Energy|Coal|w/ CCS;1
+Primary Energy|Coal;Primary Energy|Coal|w/o CCS;1
+Primary Energy|Gas;Primary Energy|Gas|w/ CCS;1
+Primary Energy|Gas;Primary Energy|Gas|w/o CCS;1
+Primary Energy|Oil;Primary Energy|Oil|w/ CCS;1
+Primary Energy|Oil;Primary Energy|Oil|w/o CCS;1
+Primary Energy|Fossil;Primary Energy|Coal;1
+Primary Energy|Fossil;Primary Energy|Gas;1
+Primary Energy|Fossil;Primary Energy|Oil;1
+Primary Energy|Biomass|Electricity;Primary Energy|Biomass|Electricity|w/ CCS;1
+Primary Energy|Biomass|Electricity;Primary Energy|Biomass|Electricity|w/o CCS;1
+Primary Energy|Coal|Electricity;Primary Energy|Coal|Electricity|w/ CCS;1
+Primary Energy|Coal|Electricity;Primary Energy|Coal|Electricity|w/o CCS;1
+Primary Energy|Gas|Electricity;Primary Energy|Gas|Electricity|w/ CCS;1
+Primary Energy|Gas|Electricity;Primary Energy|Gas|Electricity|w/o CCS;1
+Primary Energy|Oil|Electricity;Primary Energy|Oil|Electricity|w/ CCS;1
+Primary Energy|Oil|Electricity;Primary Energy|Oil|Electricity|w/o CCS;1
+Primary Energy|Biomass 2;Primary Energy|Biomass|Modern;1
+Primary Energy|Biomass 2;Primary Energy|Biomass|Traditional;1
+Secondary Energy|Electricity|Biomass;Secondary Energy|Electricity|Biomass|w/ CCS;1
+Secondary Energy|Electricity|Biomass;Secondary Energy|Electricity|Biomass|w/o CCS;1
+Secondary Energy|Electricity|Coal;Secondary Energy|Electricity|Coal|w/ CCS;1
+Secondary Energy|Electricity|Coal;Secondary Energy|Electricity|Coal|w/o CCS;1
+Secondary Energy|Electricity|Fossil 2;Secondary Energy|Electricity|Fossil|w/ CCS;1
+Secondary Energy|Electricity|Fossil 2;Secondary Energy|Electricity|Fossil|w/o CCS;1
+Secondary Energy|Electricity|Gas;Secondary Energy|Electricity|Gas|w/ CCS;1
+Secondary Energy|Electricity|Gas;Secondary Energy|Electricity|Gas|w/o CCS;1
+Secondary Energy|Electricity|Fossil;Secondary Energy|Electricity|Coal;1
+Secondary Energy|Electricity|Fossil;Secondary Energy|Electricity|Gas;1
+Secondary Energy|Electricity|Fossil;Secondary Energy|Electricity|Oil;1
+Secondary Energy|Electricity|Fossil;Secondary Energy|Electricity|Other|Fossil;1
+Secondary Energy|Electricity|Oil;Secondary Energy|Electricity|Oil|w/ CCS;1
+Secondary Energy|Electricity|Oil;Secondary Energy|Electricity|Oil|w/o CCS;1
+Secondary Energy|Electricity|Solar;Secondary Energy|Electricity|Solar|CSP;1
+Secondary Energy|Electricity|Solar;Secondary Energy|Electricity|Solar|PV;1
+Secondary Energy|Electricity|Wind;Secondary Energy|Electricity|Wind|Offshore;1
+Secondary Energy|Electricity|Wind;Secondary Energy|Electricity|Wind|Onshore;1
+Secondary Energy;Secondary Energy|Electricity;1
+Secondary Energy;Secondary Energy|Gases;1
+Secondary Energy;Secondary Energy|Heat;1
+Secondary Energy;Secondary Energy|Hydrogen;1
+Secondary Energy;Secondary Energy|Liquids;1
+Secondary Energy;Secondary Energy|Solids;1
+Secondary Energy;Secondary Energy|Other;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Biomass;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Coal;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Gas;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Geothermal;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Hydro;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Hydrogen;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Nuclear;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Ocean;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Oil;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Other;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Solar;1
+Secondary Energy|Electricity;Secondary Energy|Electricity|Wind;1
+Secondary Energy|Electricity;Trade|Secondary Energy|Electricity|Volume;1
+Secondary Energy|Gases 2;Secondary Energy|Gases|Electricity;1
+Secondary Energy|Gases 2;Secondary Energy|Gases|Biomass;1
+Secondary Energy|Gases 2;Secondary Energy|Gases|Fossil;1
+Secondary Energy|Gases|Fossil;Secondary Energy|Gases|Coal;1
+Secondary Energy|Gases|Fossil;Secondary Energy|Gases|Gas;1
+Secondary Energy|Heat;Secondary Energy|Heat|Biomass;1
+Secondary Energy|Heat;Secondary Energy|Heat|Fossil;1
+Secondary Energy|Heat;Secondary Energy|Heat|Electricity;1
+Secondary Energy|Heat;Secondary Energy|Heat|Geothermal;1
+Secondary Energy|Heat;Secondary Energy|Heat|Solar;1
+Secondary Energy|Heat|Fossil;Secondary Energy|Heat|Coal;1
+Secondary Energy|Heat|Fossil;Secondary Energy|Heat|Gas;1
+Secondary Energy|Heat|Fossil;Secondary Energy|Heat|Oil;1
+Secondary Energy|Hydrogen;Secondary Energy|Hydrogen|Electricity;1
+Secondary Energy|Hydrogen;Secondary Energy|Hydrogen|Biomass;1
+Secondary Energy|Hydrogen;Secondary Energy|Hydrogen|Fossil;1
+Secondary Energy|Hydrogen|Fossil;Secondary Energy|Hydrogen|Coal;1
+Secondary Energy|Hydrogen|Fossil;Secondary Energy|Hydrogen|Gas;1
+Secondary Energy|Hydrogen|Fossil;Secondary Energy|Hydrogen|Oil;1
+Secondary Energy|Hydrogen|Biomass;Secondary Energy|Hydrogen|Biomass|w/ CCS;1
+Secondary Energy|Hydrogen|Biomass;Secondary Energy|Hydrogen|Biomass|w/o CCS;1
+Secondary Energy|Hydrogen|Fossil 2;Secondary Energy|Hydrogen|Fossil|w/ CCS;1
+Secondary Energy|Hydrogen|Fossil 2;Secondary Energy|Hydrogen|Fossil|w/o CCS;1
+Secondary Energy|Hydrogen|Coal;Secondary Energy|Hydrogen|Coal|w/ CCS;1
+Secondary Energy|Hydrogen|Coal;Secondary Energy|Hydrogen|Coal|w/o CCS;1
+Secondary Energy|Hydrogen|Gas;Secondary Energy|Hydrogen|Gas|w/ CCS;1
+Secondary Energy|Hydrogen|Gas;Secondary Energy|Hydrogen|Gas|w/o CCS;1
+Secondary Energy|Hydrogen|Oil;Secondary Energy|Hydrogen|Oil|w/ CCS;1
+Secondary Energy|Hydrogen|Oil;Secondary Energy|Hydrogen|Oil|w/o CCS;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Electricity;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Biomass;1
+Secondary Energy|Liquids;Secondary Energy|Liquids|Fossil;1
+Secondary Energy|Liquids|Biomass;Secondary Energy|Liquids|Biomass|w/ CCS;1
+Secondary Energy|Liquids|Biomass;Secondary Energy|Liquids|Biomass|w/o CCS;1
+Secondary Energy|Liquids|Fossil;Secondary Energy|Liquids|Fossil|w/ CCS;1
+Secondary Energy|Liquids|Fossil;Secondary Energy|Liquids|Fossil|w/o CCS;1
+Secondary Energy|Liquids|Coal;Secondary Energy|Liquids|Coal|w/ CCS;1
+Secondary Energy|Liquids|Coal;Secondary Energy|Liquids|Coal|w/o CCS;1
+Secondary Energy|Liquids|Gas;Secondary Energy|Liquids|Gas|w/ CCS;1
+Secondary Energy|Liquids|Gas;Secondary Energy|Liquids|Gas|w/o CCS;1
+Secondary Energy|Liquids|Fossil;Secondary Energy|Liquids|Coal;1
+Secondary Energy|Liquids|Fossil;Secondary Energy|Liquids|Gas;1
+Secondary Energy|Liquids|Fossil;Secondary Energy|Liquids|Oil;1
+Secondary Energy|Solids;Secondary Energy|Solids|Biomass;1
+Secondary Energy|Solids;Secondary Energy|Solids|Fossil;1
+Final Energy;Final Energy|Bunkers;1
+Final Energy;Final Energy|Non-Energy Use;1
+Final Energy;Final Energy|Industry;1
+Final Energy;Final Energy|Other Sector;1
+Final Energy;Final Energy|Residential and Commercial;1
+Final Energy;Final Energy|Transportation;1
+Final Energy|Bunkers;Final Energy|Bunkers|Electricity;1
+Final Energy|Bunkers;Final Energy|Bunkers|Gases;1
+Final Energy|Bunkers;Final Energy|Bunkers|Hydrogen;1
+Final Energy|Bunkers;Final Energy|Bunkers|Liquids;1
+Final Energy|Bunkers;Final Energy|Bunkers|Other;1
+Final Energy|Bunkers|Gases;Final Energy|Bunkers|Gases|Biomass;1
+Final Energy|Bunkers|Gases;Final Energy|Bunkers|Gases|Electricity;1
+Final Energy|Bunkers|Gases;Final Energy|Bunkers|Gases|Fossil;1
+Final Energy|Bunkers|Liquids;Final Energy|Bunkers|Liquids|Biomass;1
+Final Energy|Bunkers|Liquids;Final Energy|Bunkers|Liquids|Electricity;1
+Final Energy|Bunkers|Liquids;Final Energy|Bunkers|Liquids|Fossil;1
+Final Energy|Bunkers|International Aviation;Final Energy|Bunkers|International Aviation|Electricity;1
+Final Energy|Bunkers|International Aviation;Final Energy|Bunkers|International Aviation|Gases;1
+Final Energy|Bunkers|International Aviation;Final Energy|Bunkers|International Aviation|Hydrogen;1
+Final Energy|Bunkers|International Aviation;Final Energy|Bunkers|International Aviation|Liquids;1
+Final Energy|Bunkers|International Aviation|Gases;Final Energy|Bunkers|International Aviation|Gases|Biomass;1
+Final Energy|Bunkers|International Aviation|Gases;Final Energy|Bunkers|International Aviation|Gases|Electricity;1
+Final Energy|Bunkers|International Aviation|Gases;Final Energy|Bunkers|International Aviation|Gases|Fossil;1
+Final Energy|Bunkers|International Aviation|Hydrogen;Final Energy|Bunkers|International Aviation|Hydrogen|Biomass;1
+Final Energy|Bunkers|International Aviation|Hydrogen;Final Energy|Bunkers|International Aviation|Hydrogen|Electricity;1
+Final Energy|Bunkers|International Aviation|Hydrogen;Final Energy|Bunkers|International Aviation|Hydrogen|Fossil;1
+Final Energy|Bunkers|International Aviation|Liquids;Final Energy|Bunkers|International Aviation|Liquids|Biomass;1
+Final Energy|Bunkers|International Aviation|Liquids;Final Energy|Bunkers|International Aviation|Liquids|Electricity;1
+Final Energy|Bunkers|International Aviation|Liquids;Final Energy|Bunkers|International Aviation|Liquids|Fossil;1
+Final Energy|Bunkers|International Shipping;Final Energy|Bunkers|International Shipping|Electricity;1
+Final Energy|Bunkers|International Shipping;Final Energy|Bunkers|International Shipping|Gases;1
+Final Energy|Bunkers|International Shipping;Final Energy|Bunkers|International Shipping|Hydrogen;1
+Final Energy|Bunkers|International Shipping;Final Energy|Bunkers|International Shipping|Liquids;1
+Final Energy|Bunkers|International Shipping|Gases;Final Energy|Bunkers|International Shipping|Gases|Biomass;1
+Final Energy|Bunkers|International Shipping|Gases;Final Energy|Bunkers|International Shipping|Gases|Electricity;1
+Final Energy|Bunkers|International Shipping|Gases;Final Energy|Bunkers|International Shipping|Gases|Fossil;1
+Final Energy|Bunkers|International Shipping|Hydrogen;Final Energy|Bunkers|International Shipping|Hydrogen|Biomass;1
+Final Energy|Bunkers|International Shipping|Hydrogen;Final Energy|Bunkers|International Shipping|Hydrogen|Electricity;1
+Final Energy|Bunkers|International Shipping|Hydrogen;Final Energy|Bunkers|International Shipping|Hydrogen|Fossil;1
+Final Energy|Bunkers|International Shipping|Liquids;Final Energy|Bunkers|International Shipping|Liquids|Biomass;1
+Final Energy|Bunkers|International Shipping|Liquids;Final Energy|Bunkers|International Shipping|Liquids|Electricity;1
+Final Energy|Bunkers|International Shipping|Liquids;Final Energy|Bunkers|International Shipping|Liquids|Fossil;1
+Final Energy|Bunkers|Passenger;Final Energy|Bunkers|International Aviation|Passenger;1
+Final Energy|Bunkers|Passenger;Final Energy|Bunkers|International Shipping|Passenger;1
+Final Energy 2;Final Energy|Electricity;1
+Final Energy 2;Final Energy|Gases;1
+Final Energy 2;Final Energy|Geothermal;1
+Final Energy 2;Final Energy|Heat;1
+Final Energy 2;Final Energy|Hydrogen;1
+Final Energy 2;Final Energy|Liquids;1
+Final Energy 2;Final Energy|Other;1
+Final Energy 2;Final Energy|Solar;1
+Final Energy 2;Final Energy|Solids;1
+Final Energy|Gases;Final Energy|Gases|Biomass;1
+Final Energy|Gases;Final Energy|Gases|Electricity;1
+Final Energy|Gases;Final Energy|Gases|Fossil;1
+Final Energy|Liquids;Final Energy|Liquids|Biomass;1
+Final Energy|Liquids;Final Energy|Liquids|Electricity;1
+Final Energy|Liquids;Final Energy|Liquids|Fossil;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Gases;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Hydrogen;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Liquids;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Other;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Solids;1
+Final Energy|Non-Energy Use;Final Energy|Non-Energy Use|Waste;1
+Final Energy|Non-Energy Use|Gases;Final Energy|Non-Energy Use|Gases|Biomass;1
+Final Energy|Non-Energy Use|Gases;Final Energy|Non-Energy Use|Gases|Electricity;1
+Final Energy|Non-Energy Use|Gases;Final Energy|Non-Energy Use|Gases|Fossil;1
+Final Energy|Non-Energy Use|Liquids;Final Energy|Non-Energy Use|Liquids|Biomass;1
+Final Energy|Non-Energy Use|Liquids;Final Energy|Non-Energy Use|Liquids|Electricity;1
+Final Energy|Non-Energy Use|Liquids;Final Energy|Non-Energy Use|Liquids|Fossil;1
+Final Energy|Non-Energy Use|Solids;Final Energy|Non-Energy Use|Solids|Biomass;1
+Final Energy|Non-Energy Use|Solids;Final Energy|Non-Energy Use|Solids|Fossil;1
+Final Energy|Industry;Final Energy|Industry|Chemicals;1
+Final Energy|Industry;Final Energy|Industry|Iron and Steel;1
+Final Energy|Industry;Final Energy|Industry|Non-Ferrous Metals;1
+Final Energy|Industry;Final Energy|Industry|Non-Metallic Minerals;1
+Final Energy|Industry;Final Energy|Industry|Other Sector;1
+Final Energy|Industry;Final Energy|Industry|Pulp and Paper;1
+Final Energy|Industry 2;Final Energy|Industry|Electricity;1
+Final Energy|Industry 2;Final Energy|Industry|Gases;1
+Final Energy|Industry 2;Final Energy|Industry|Geothermal;1
+Final Energy|Industry 2;Final Energy|Industry|Heat;1
+Final Energy|Industry 2;Final Energy|Industry|Hydrogen;1
+Final Energy|Industry 2;Final Energy|Industry|Liquids;1
+Final Energy|Industry 2;Final Energy|Industry|Other;1
+Final Energy|Industry 2;Final Energy|Industry|Solar;1
+Final Energy|Industry 2;Final Energy|Industry|Solids;1
+Final Energy|Industry 2;Final Energy|Industry|Waste;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Biomass;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Electricity;1
+Final Energy|Industry|Gases;Final Energy|Industry|Gases|Fossil;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Biomass;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Electricity;1
+Final Energy|Industry|Liquids;Final Energy|Industry|Liquids|Fossil;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Biomass;1
+Final Energy|Industry|Solids;Final Energy|Industry|Solids|Fossil;1
+Final Energy|Other Sector;Final Energy|Other Sector|Electricity;1
+Final Energy|Other Sector;Final Energy|Other Sector|Gases;1
+Final Energy|Other Sector;Final Energy|Other Sector|Heat;1
+Final Energy|Other Sector;Final Energy|Other Sector|Hydrogen;1
+Final Energy|Other Sector;Final Energy|Other Sector|Liquids;1
+Final Energy|Other Sector;Final Energy|Other Sector|Solids;1
+Final Energy|Other Sector;Final Energy|Other Sector|Other;1
+Final Energy|Other Sector|Gases;Final Energy|Other Sector|Gases|Biomass;1
+Final Energy|Other Sector|Gases;Final Energy|Other Sector|Gases|Electricity;1
+Final Energy|Other Sector|Gases;Final Energy|Other Sector|Gases|Fossil;1
+Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Biomass;1
+Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Electricity;1
+Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Fossil;1
+Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Biomass;1
+Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Fossil;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Electricity;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Gases;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Heat;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Hydrogen;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Liquids;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Other;1
+Final Energy|Residential and Commercial;Final Energy|Residential and Commercial|Solids;1
+Final Energy|Residential and Commercial|Gases;Final Energy|Residential and Commercial|Gases|Biomass;1
+Final Energy|Residential and Commercial|Gases;Final Energy|Residential and Commercial|Gases|Electricity;1
+Final Energy|Residential and Commercial|Gases;Final Energy|Residential and Commercial|Gases|Fossil;1
+Final Energy|Residential and Commercial|Liquids;Final Energy|Residential and Commercial|Liquids|Biomass;1
+Final Energy|Residential and Commercial|Liquids;Final Energy|Residential and Commercial|Liquids|Electricity;1
+Final Energy|Residential and Commercial|Liquids;Final Energy|Residential and Commercial|Liquids|Fossil;1
+Final Energy|Residential and Commercial|Solids;Final Energy|Residential and Commercial|Solids|Biomass;1
+Final Energy|Residential and Commercial|Solids;Final Energy|Residential and Commercial|Solids|Fossil;1
+Final Energy|Residential and Commercial|Space and Water Heating;Final Energy|Residential and Commercial|Space and Water Heating|Electricity;1
+Final Energy|Residential and Commercial|Space and Water Heating;Final Energy|Residential and Commercial|Space and Water Heating|Gases;1
+Final Energy|Residential and Commercial|Space and Water Heating;Final Energy|Residential and Commercial|Space and Water Heating|Heat;1
+Final Energy|Residential and Commercial|Space and Water Heating;Final Energy|Residential and Commercial|Space and Water Heating|Hydrogen;1
+Final Energy|Residential and Commercial|Space and Water Heating;Final Energy|Residential and Commercial|Space and Water Heating|Liquids;1
+Final Energy|Residential and Commercial|Space and Water Heating;Final Energy|Residential and Commercial|Space and Water Heating|Solids;1
+Final Energy|Solids;Final Energy|Solids|Biomass;1
+Final Energy|Solids;Final Energy|Solids|Fossil;1
+Final Energy|Transportation;Final Energy|Transportation|Bus;1
+Final Energy|Transportation;Final Energy|Transportation|Domestic Aviation;1
+Final Energy|Transportation;Final Energy|Transportation|Domestic Shipping;1
+Final Energy|Transportation;Final Energy|Transportation|LDV;1
+Final Energy|Transportation;Final Energy|Transportation|Truck;1
+Final Energy|Transportation 2;Final Energy|Transportation|Electricity;1
+Final Energy|Transportation 2;Final Energy|Transportation|Gases;1
+Final Energy|Transportation 2;Final Energy|Transportation|Hydrogen;1
+Final Energy|Transportation 2;Final Energy|Transportation|Liquids;1
+Final Energy|Transportation 2;Final Energy|Transportation|Other;1
+Final Energy|Transportation 3;Final Energy|Transportation|Passenger;1
+Final Energy|Transportation 3;Final Energy|Transportation|Freight;1
+Final Energy|Transportation|Bus;Final Energy|Transportation|Bus|BEV;1
+Final Energy|Transportation|Bus;Final Energy|Transportation|Bus|Catenary;1
+Final Energy|Transportation|Bus;Final Energy|Transportation|Bus|FCEV;1
+Final Energy|Transportation|Bus;Final Energy|Transportation|Bus|ICE;1
+Final Energy|Transportation|Bus 2;Final Energy|Transportation|Bus|Gases;1
+Final Energy|Transportation|Bus 2;Final Energy|Transportation|Bus|Hybrid;1
+Final Energy|Transportation|Bus 2;Final Energy|Transportation|Bus|Liquids;1
+Final Energy|Transportation|Bus 2;Final Energy|Transportation|Bus|Hydrogen;1
+Final Energy|Transportation|Bus 2;Final Energy|Transportation|Bus|Electricity;1
+Final Energy|Transportation|Bus|Gases;Final Energy|Transportation|Bus|Gases|Biomass;1
+Final Energy|Transportation|Bus|Gases;Final Energy|Transportation|Bus|Gases|Electricity;1
+Final Energy|Transportation|Bus|Gases;Final Energy|Transportation|Bus|Gases|Fossil;1
+Final Energy|Transportation|Bus|Hybrid;Final Energy|Transportation|Bus|Hybrid|Electricity;1
+Final Energy|Transportation|Bus|Hybrid;Final Energy|Transportation|Bus|Hybrid|Gases;1
+Final Energy|Transportation|Bus|Hybrid;Final Energy|Transportation|Bus|Hybrid|Liquids;1
+Final Energy|Transportation|Bus|Hydrogen;Final Energy|Transportation|Bus|Hydrogen|Biomass;1
+Final Energy|Transportation|Bus|Hydrogen;Final Energy|Transportation|Bus|Hydrogen|Electricity;1
+Final Energy|Transportation|Bus|Hydrogen;Final Energy|Transportation|Bus|Hydrogen|Fossil;1
+Final Energy|Transportation|Bus|ICE;Final Energy|Transportation|Bus|ICE|Gases;1
+Final Energy|Transportation|Bus|ICE;Final Energy|Transportation|Bus|ICE|Liquids;1
+Final Energy|Transportation|Bus|Liquids;Final Energy|Transportation|Bus|Liquids|Biomass;1
+Final Energy|Transportation|Bus|Liquids;Final Energy|Transportation|Bus|Liquids|Electricity;1
+Final Energy|Transportation|Bus|Liquids;Final Energy|Transportation|Bus|Liquids|Fossil;1
+Final Energy|Transportation|Domestic Aviation;Final Energy|Transportation|Domestic Aviation|Electricity;1
+Final Energy|Transportation|Domestic Aviation;Final Energy|Transportation|Domestic Aviation|Gases;1
+Final Energy|Transportation|Domestic Aviation;Final Energy|Transportation|Domestic Aviation|Hydrogen;1
+Final Energy|Transportation|Domestic Aviation;Final Energy|Transportation|Domestic Aviation|Liquids;1
+Final Energy|Transportation|Domestic Aviation|Gases;Final Energy|Transportation|Domestic Aviation|Gases|Biomass;1
+Final Energy|Transportation|Domestic Aviation|Gases;Final Energy|Transportation|Domestic Aviation|Gases|Electricity;1
+Final Energy|Transportation|Domestic Aviation|Gases;Final Energy|Transportation|Domestic Aviation|Gases|Fossil;1
+Final Energy|Transportation|Domestic Aviation|Hydrogen;Final Energy|Transportation|Domestic Aviation|Hydrogen|Biomass;1
+Final Energy|Transportation|Domestic Aviation|Hydrogen;Final Energy|Transportation|Domestic Aviation|Hydrogen|Electricity;1
+Final Energy|Transportation|Domestic Aviation|Hydrogen;Final Energy|Transportation|Domestic Aviation|Hydrogen|Fossil;1
+Final Energy|Transportation|Domestic Aviation|Liquids;Final Energy|Transportation|Domestic Aviation|Liquids|Biomass;1
+Final Energy|Transportation|Domestic Aviation|Liquids;Final Energy|Transportation|Domestic Aviation|Liquids|Electricity;1
+Final Energy|Transportation|Domestic Aviation|Liquids;Final Energy|Transportation|Domestic Aviation|Liquids|Fossil;1
+Final Energy|Transportation|Domestic Shipping;Final Energy|Transportation|Domestic Shipping|Electricity;1
+Final Energy|Transportation|Domestic Shipping;Final Energy|Transportation|Domestic Shipping|Gases;1
+Final Energy|Transportation|Domestic Shipping;Final Energy|Transportation|Domestic Shipping|Hydrogen;1
+Final Energy|Transportation|Domestic Shipping;Final Energy|Transportation|Domestic Shipping|Liquids;1
+Final Energy|Transportation|Domestic Shipping|Gases;Final Energy|Transportation|Domestic Shipping|Gases|Biomass;1
+Final Energy|Transportation|Domestic Shipping|Gases;Final Energy|Transportation|Domestic Shipping|Gases|Electricity;1
+Final Energy|Transportation|Domestic Shipping|Gases;Final Energy|Transportation|Domestic Shipping|Gases|Fossil;1
+Final Energy|Transportation|Domestic Shipping|Hydrogen;Final Energy|Transportation|Domestic Shipping|Hydrogen|Biomass;1
+Final Energy|Transportation|Domestic Shipping|Hydrogen;Final Energy|Transportation|Domestic Shipping|Hydrogen|Electricity;1
+Final Energy|Transportation|Domestic Shipping|Hydrogen;Final Energy|Transportation|Domestic Shipping|Hydrogen|Fossil;1
+Final Energy|Transportation|Domestic Shipping|Liquids;Final Energy|Transportation|Domestic Shipping|Liquids|Biomass;1
+Final Energy|Transportation|Domestic Shipping|Liquids;Final Energy|Transportation|Domestic Shipping|Liquids|Electricity;1
+Final Energy|Transportation|Domestic Shipping|Liquids;Final Energy|Transportation|Domestic Shipping|Liquids|Fossil;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Electricity;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Gases;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Hydrogen;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Liquids;1
+Final Energy|Transportation|Freight;Final Energy|Transportation|Freight|Other;1
+Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Biomass;1
+Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Electricity;1
+Final Energy|Transportation|Freight|Liquids;Final Energy|Transportation|Freight|Liquids|Fossil;1
+Final Energy|Transportation|Rail|Freight;Final Energy|Transportation|Rail|Freight|Electricity;1
+Final Energy|Transportation|Rail|Freight;Final Energy|Transportation|Rail|Freight|Hydrogen;1
+Final Energy|Transportation|Rail|Freight;Final Energy|Transportation|Rail|Freight|Liquids;1
+Final Energy|Transportation|Gases;Final Energy|Transportation|Gases|Biomass;1
+Final Energy|Transportation|Gases;Final Energy|Transportation|Gases|Electricity;1
+Final Energy|Transportation|Gases;Final Energy|Transportation|Gases|Fossil;1
+Final Energy|Transportation|Hydrogen;Final Energy|Transportation|Hydrogen|Biomass;1
+Final Energy|Transportation|Hydrogen;Final Energy|Transportation|Hydrogen|Electricity;1
+Final Energy|Transportation|Hydrogen;Final Energy|Transportation|Hydrogen|Fossil;1
+Final Energy|Transportation|LDV;Final Energy|Transportation|LDV|BEV;1
+Final Energy|Transportation|LDV;Final Energy|Transportation|LDV|FCEV;1
+Final Energy|Transportation|LDV;Final Energy|Transportation|LDV|Hybrid;1
+Final Energy|Transportation|LDV;Final Energy|Transportation|LDV|ICE;1
+Final Energy|Transportation|LDV 2;Final Energy|Transportation|LDV|Electricity;1
+Final Energy|Transportation|LDV 2;Final Energy|Transportation|LDV|Gases;1
+Final Energy|Transportation|LDV 2;Final Energy|Transportation|LDV|Hydrogen;1
+Final Energy|Transportation|LDV 2;Final Energy|Transportation|LDV|Liquids;1
+Final Energy|Transportation|LDV|Gases;Final Energy|Transportation|LDV|Gases|Biomass;1
+Final Energy|Transportation|LDV|Gases;Final Energy|Transportation|LDV|Gases|Electricity;1
+Final Energy|Transportation|LDV|Gases;Final Energy|Transportation|LDV|Gases|Fossil;1
+Final Energy|Transportation|LDV|Hybrid;Final Energy|Transportation|LDV|Hybrid|Electricity;1
+Final Energy|Transportation|LDV|Hybrid;Final Energy|Transportation|LDV|Hybrid|Gases;1
+Final Energy|Transportation|LDV|Hybrid;Final Energy|Transportation|LDV|Hybrid|Liquids;1
+Final Energy|Transportation|LDV|Hydrogen;Final Energy|Transportation|LDV|Hydrogen|Biomass;1
+Final Energy|Transportation|LDV|Hydrogen;Final Energy|Transportation|LDV|Hydrogen|Electricity;1
+Final Energy|Transportation|LDV|Hydrogen;Final Energy|Transportation|LDV|Hydrogen|Fossil;1
+Final Energy|Transportation|LDV|ICE;Final Energy|Transportation|LDV|ICE|Gases;1
+Final Energy|Transportation|LDV|ICE;Final Energy|Transportation|LDV|ICE|Liquids;1
+Final Energy|Transportation|LDV|Liquids;Final Energy|Transportation|LDV|Liquids|Biomass;1
+Final Energy|Transportation|LDV|Liquids;Final Energy|Transportation|LDV|Liquids|Electricity;1
+Final Energy|Transportation|LDV|Liquids;Final Energy|Transportation|LDV|Liquids|Fossil;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Biomass;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Electricity;1
+Final Energy|Transportation|Liquids;Final Energy|Transportation|Liquids|Fossil;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Electricity;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Gases;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Hydrogen;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Liquids;1
+Final Energy|Transportation|Passenger;Final Energy|Transportation|Passenger|Other;1
+Final Energy|Transportation|Passenger|Liquids;Final Energy|Transportation|Passenger|Liquids|Biomass;1
+Final Energy|Transportation|Passenger|Liquids;Final Energy|Transportation|Passenger|Liquids|Electricity;1
+Final Energy|Transportation|Passenger|Liquids;Final Energy|Transportation|Passenger|Liquids|Fossil;1
+Final Energy|Transportation|Rail|Passenger;Final Energy|Transportation|Rail|Passenger|Electricity;1
+Final Energy|Transportation|Rail|Passenger;Final Energy|Transportation|Rail|Passenger|Hydrogen;1
+Final Energy|Transportation|Rail|Passenger;Final Energy|Transportation|Rail|Passenger|Liquids;1
+Final Energy|Transportation|Rail;Final Energy|Transportation|Rail|Electricity;1
+Final Energy|Transportation|Rail;Final Energy|Transportation|Rail|Gases;1
+Final Energy|Transportation|Rail;Final Energy|Transportation|Rail|Hydrogen;1
+Final Energy|Transportation|Rail;Final Energy|Transportation|Rail|Liquids;1
+Final Energy|Transportation|Rail|Gases;Final Energy|Transportation|Rail|Gases|Biomass;1
+Final Energy|Transportation|Rail|Gases;Final Energy|Transportation|Rail|Gases|Electricity;1
+Final Energy|Transportation|Rail|Gases;Final Energy|Transportation|Rail|Gases|Fossil;1
+Final Energy|Transportation|Rail|Hydrogen;Final Energy|Transportation|Rail|Hydrogen|Biomass;1
+Final Energy|Transportation|Rail|Hydrogen;Final Energy|Transportation|Rail|Hydrogen|Electricity;1
+Final Energy|Transportation|Rail|Hydrogen;Final Energy|Transportation|Rail|Hydrogen|Fossil;1
+Final Energy|Transportation|Rail|Liquids;Final Energy|Transportation|Rail|Liquids|Biomass;1
+Final Energy|Transportation|Rail|Liquids;Final Energy|Transportation|Rail|Liquids|Electricity;1
+Final Energy|Transportation|Rail|Liquids;Final Energy|Transportation|Rail|Liquids|Fossil;1
+Final Energy|Transportation|Truck;Final Energy|Transportation|Truck|BEV;1
+Final Energy|Transportation|Truck;Final Energy|Transportation|Truck|Catenary;1
+Final Energy|Transportation|Truck;Final Energy|Transportation|Truck|FCEV;1
+Final Energy|Transportation|Truck;Final Energy|Transportation|Truck|Hybrid;1
+Final Energy|Transportation|Truck;Final Energy|Transportation|Truck|ICE;1
+Final Energy|Transportation|Truck 2;Final Energy|Transportation|Truck|Electricity;1
+Final Energy|Transportation|Truck 2;Final Energy|Transportation|Truck|Gases;1
+Final Energy|Transportation|Truck 2;Final Energy|Transportation|Truck|Liquids;1
+Final Energy|Transportation|Truck 2;Final Energy|Transportation|Truck|Hydrogen;1
+Final Energy|Transportation|Truck|Gases;Final Energy|Transportation|Truck|Gases|Biomass;1
+Final Energy|Transportation|Truck|Gases;Final Energy|Transportation|Truck|Gases|Electricity;1
+Final Energy|Transportation|Truck|Gases;Final Energy|Transportation|Truck|Gases|Fossil;1
+Final Energy|Transportation|Truck|Hybrid;Final Energy|Transportation|Truck|Hybrid|Electricity;1
+Final Energy|Transportation|Truck|Hybrid;Final Energy|Transportation|Truck|Hybrid|Gases;1
+Final Energy|Transportation|Truck|Hybrid;Final Energy|Transportation|Truck|Hybrid|Liquids;1
+Final Energy|Transportation|Truck|Hydrogen;Final Energy|Transportation|Truck|Hydrogen|Biomass;1
+Final Energy|Transportation|Truck|Hydrogen;Final Energy|Transportation|Truck|Hydrogen|Electricity;1
+Final Energy|Transportation|Truck|Hydrogen;Final Energy|Transportation|Truck|Hydrogen|Fossil;1
+Final Energy|Transportation|Truck|ICE;Final Energy|Transportation|Truck|ICE|Gases;1
+Final Energy|Transportation|Truck|ICE;Final Energy|Transportation|Truck|ICE|Liquids;1
+Final Energy|Transportation|Truck|Liquids;Final Energy|Transportation|Truck|Liquids|Biomass;1
+Final Energy|Transportation|Truck|Liquids;Final Energy|Transportation|Truck|Liquids|Electricity;1
+Final Energy|Transportation|Truck|Liquids;Final Energy|Transportation|Truck|Liquids|Fossil;1
+Capacity|Electricity;Capacity|Electricity|Hydro;1
+Capacity|Electricity;Capacity|Electricity|Hydrogen;1
+Capacity|Electricity;Capacity|Electricity|Nuclear;1
+Capacity|Electricity;Capacity|Electricity|Wind;1
+Capacity|Electricity;Capacity|Electricity|Solar;1
+Capacity|Electricity;Capacity|Electricity|Biomass;1
+Capacity|Electricity;Capacity|Electricity|Coal;1
+Capacity|Electricity;Capacity|Electricity|Gas;1
+Capacity|Electricity;Capacity|Electricity|Geothermal;1
+Capacity|Electricity;Capacity|Electricity|Oil;1
+Capacity|Electricity;Capacity|Electricity|Other;1
+Capacity|Electricity|Biomass;Capacity|Electricity|Biomass|w/ CCS;1
+Capacity|Electricity|Biomass;Capacity|Electricity|Biomass|w/o CCS;1
+Capacity|Electricity|Coal;Capacity|Electricity|Coal|w/ CCS;1
+Capacity|Electricity|Coal;Capacity|Electricity|Coal|w/o CCS;1
+Capacity|Electricity|Gas;Capacity|Electricity|Gas|w/ CCS;1
+Capacity|Electricity|Gas;Capacity|Electricity|Gas|w/o CCS;1
+Capacity|Electricity|Oil;Capacity|Electricity|Oil|w/ CCS;1
+Capacity|Electricity|Oil;Capacity|Electricity|Oil|w/o CCS;1
+Capacity|Electricity|Solar;Capacity|Electricity|Solar|CSP;1
+Capacity|Electricity|Solar;Capacity|Electricity|Solar|PV;1
+Capacity|Electricity|Wind;Capacity|Electricity|Wind|Offshore;1
+Capacity|Electricity|Wind;Capacity|Electricity|Wind|Onshore;1
+Capacity|Gases;Capacity|Gases|Biomass;1
+Capacity|Gases;Capacity|Gases|Coal;1
+Capacity|Gases|Biomass;Capacity|Gases|Biomass|w/ CCS;1
+Capacity|Gases|Biomass;Capacity|Gases|Biomass|w/o CCS;1
+Capacity|Gases|Coal;Capacity|Gases|Coal|w/ CCS;1
+Capacity|Gases|Coal;Capacity|Gases|Coal|w/o CCS;1
+Capacity|Hydrogen;Capacity|Hydrogen|Biomass;1
+Capacity|Hydrogen;Capacity|Hydrogen|Coal;1
+Capacity|Hydrogen;Capacity|Hydrogen|Gas;1
+Capacity|Hydrogen;Capacity|Hydrogen|Electricity;1
+Capacity|Hydrogen|Biomass;Capacity|Hydrogen|Biomass|w/ CCS;1
+Capacity|Hydrogen|Biomass;Capacity|Hydrogen|Biomass|w/o CCS;1
+Capacity|Hydrogen|Coal;Capacity|Hydrogen|Coal|w/ CCS;1
+Capacity|Hydrogen|Coal;Capacity|Hydrogen|Coal|w/o CCS;1
+Capacity|Hydrogen|Gas;Capacity|Hydrogen|Gas|w/ CCS;1
+Capacity|Hydrogen|Gas;Capacity|Hydrogen|Gas|w/o CCS;1
+Capacity|Liquids;Capacity|Liquids|Biomass;1
+Capacity|Liquids;Capacity|Liquids|Coal;1
+Capacity|Liquids;Capacity|Liquids|Gas;1
+Capacity|Liquids;Capacity|Liquids|Oil;1
+Capacity|Liquids|Biomass;Capacity|Liquids|Biomass|w/ CCS;1
+Capacity|Liquids|Biomass;Capacity|Liquids|Biomass|w/o CCS;1
+Capacity|Liquids|Coal;Capacity|Liquids|Coal|w/ CCS;1
+Capacity|Liquids|Coal;Capacity|Liquids|Coal|w/o CCS;1
+Capacity|Liquids|Gas;Capacity|Liquids|Gas|w/ CCS;1
+Capacity|Liquids|Gas;Capacity|Liquids|Gas|w/o CCS;1

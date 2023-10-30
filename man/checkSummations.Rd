@@ -7,14 +7,19 @@
 checkSummations(
   mifFile,
   outputDirectory = ".",
-  template = "AR6",
-  summationsFile = "AR6",
+  template = NULL,
+  summationsFile = NULL,
   logFile = NULL,
   logAppend = FALSE,
   generatePlots = FALSE,
+  mainReg = "World",
   dataDumpFile = "checkSummations.csv",
   remindVar = "piam_variable",
-  plotprefix = NULL
+  plotprefix = NULL,
+  absDiff = 0.001,
+  relDiff = 1,
+  roundDiff = TRUE,
+  csvSeparator = ";"
 )
 }
 \arguments{
@@ -22,9 +27,10 @@ checkSummations(
 
 \item{outputDirectory}{path to directory to place logFile and dataDumpFile}
 
-\item{template}{mapping template to be loaded}
+\item{template}{mapping template to be loaded, used to print the remindVar corresponding to the data variables}
 
-\item{summationsFile}{in inst/summations folder that describes the required summation groups}
+\item{summationsFile}{in inst/summations folder that describes the required summation groups
+if set to 'extractVariableGroups', tries to extract summations from variables with + notation}
 
 \item{logFile}{file where human-readable summary is saved. If NULL, write to stdout}
 
@@ -32,11 +38,24 @@ checkSummations(
 
 \item{generatePlots}{boolean whether pdfs to compare data are generated}
 
+\item{mainReg}{main region for the plot generation}
+
 \item{dataDumpFile}{file where data.frame with the data analysis is saved. If NULL, result is returned}
 
 \item{remindVar}{REMIND/MAgPIE variable column name in template}
 
 \item{plotprefix}{added before filename}
+
+\item{absDiff}{threshold for absolute difference between parent variable and summation
+to be listed in human-readable summary}
+
+\item{relDiff}{threshold (in percent) for relative difference between parent variable and summation
+to be listed in human-readable summary}
+
+\item{roundDiff}{should the absolute and relative differences in human-readable summary
+be rounded?}
+
+\item{csvSeparator}{separator for dataDumpFile, defaults to semicolon}
 }
 \description{
 Checks for a run if the variables sum up as expected and logs spotted gaps
