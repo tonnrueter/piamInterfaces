@@ -13,7 +13,8 @@ plotIntercomparison(
   lineplotVariables = "AR6",
   interactive = FALSE,
   mainReg = "World",
-  plotby = c("model", "scenario")
+  plotby = c("model", "scenario"),
+  diffto = NULL
 )
 }
 \arguments{
@@ -33,6 +34,8 @@ of files containing a 'Variable' column (or both)}
 \item{mainReg}{region name of main region to be passed to mip}
 
 \item{plotby}{whether you would like to have everything plotted by scenario, model and/or onefile}
+
+\item{diffto}{if specified, the difference to this scenario is calculated and plotted}
 }
 \description{
 Model intercomparison plots: area plots based on summation groups, line plots for further

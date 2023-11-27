@@ -11,8 +11,9 @@
 #' @param interactive boolean whether you want to select variables, regions and models to be plotted
 #' @param mainReg region name of main region to be passed to mip
 #' @param plotby whether you would like to have everything plotted by scenario, model and/or onefile
+#' @param diffto if specified, the difference to this scenario is calculated and plotted
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
-#' @importFrom rlang sym syms
+#' @importFrom rlang sym syms .data
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
 #' @importFrom grDevices pdf dev.off
 #' @importFrom mip plotstyle plotstyle.add
@@ -27,7 +28,7 @@
 #' @export
 plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsFile = "AR6", # nolint: cyclocomp_linter.
                                 renameModels = NULL, lineplotVariables = "AR6", interactive = FALSE,
-                                mainReg = "World", plotby = c("model", "scenario")) {
+                                mainReg = "World", plotby = c("model", "scenario"), diffto = NULL) {
 
   if (!is.null(outputDirectory) && ! dir.exists(outputDirectory)) {
     dir.create(outputDirectory, recursive = TRUE)
@@ -50,7 +51,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
 
   # load data and filter part that is in summation file
   data <- quitte::as.quitte(mifFile, na.rm = TRUE) %>%
-    filter(!!sym("variable") %in% unique(c(summationGroups$child, summationGroups$parent, lineplotVariables))) %>%
+    filter(.data$variable %in% unique(c(summationGroups$child, summationGroups$parent, lineplotVariables))) %>%
     left_join(summationGroups, by = c("variable" = "child")) %>%
     droplevels()
   if (interactive) {
@@ -58,6 +59,21 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
                                  keep = list(region = mainReg))
     plotby <- gms::chooseFromList(c("onefile", "model", "scenario"), "pdfs to be generated",
                           userinfo = "all in one file, and/or one file per model, scenario")
+  }
+
+  if (! is.null(diffto)) {
+    stopifnot(
+      `diffto has to have length 1` = length(diffto) == 1,
+      `diffto has to be a scenario name present in the data` = diffto %in% levels(data$scenario)
+    )
+    dref <- data %>%
+      filter(.data$scenario == diffto) %>%
+      select(-"scenario") %>%
+      rename("ref" = "value")
+    data <- data %>%
+      left_join(dref, by = c("model", "region", "variable", "unit", "period")) %>%
+      mutate("value" = !!sym("value") - !!sym("ref")) %>%
+      filter(.data$scenario != diffto)
   }
 
   message("The filtered data contains ", length(unique(data$variable)), " variables.")
@@ -100,33 +116,34 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     for (thisscenario in quitte::getScenarios(data)) {
       pdfFilename <- file.path(outputDirectory, paste0("compare_models_", gsub(" ", "_", thisscenario), ".pdf"))
       message("\n## Writing ", pdfFilename, " for scenario '", thisscenario, "'.\n")
-      plotdata <- filter(data, !!sym("scenario") == thisscenario) %>% droplevels()
-      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg)
+      plotdata <- filter(data, .data$scenario == thisscenario) %>% droplevels()
+      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto)
     }
   }
   if ("model" %in% plotby && length(quitte::getScenarios(data)) > 1) {
     for (thismodel in quitte::getModels(data)) {
       pdfFilename <- file.path(outputDirectory, paste0("compare_scenarios_", gsub(" ", "_", thismodel), ".pdf"))
       message("\n## Writing ", pdfFilename, " for model '", thismodel, "'.\n")
-      plotdata <- filter(data, !!sym("model") == thismodel) %>% droplevels()
-      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg)
+      plotdata <- filter(data, .data$model == thismodel) %>% droplevels()
+      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto)
     }
   }
   if ("onefile" %in% plotby || (length(quitte::getModels(data)) == 1 && length(quitte::getScenarios(data)) == 1)) {
     pdfFilename <- file.path(outputDirectory, "compare_scenarios_all.pdf")
     message("\n## Writing ", pdfFilename, " with all data.\n")
-    makepdf(pdfFilename, droplevels(data), plotvariables, areaplotVariables, mainReg)
+    makepdf(pdfFilename, droplevels(data), plotvariables, areaplotVariables, mainReg, diffto)
   }
   message("Done. See results in ", normalizePath(outputDirectory), ".")
 }
 
-makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg) {
+makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto = NULL) {
   if (nrow(plotdata) == 0) {
     message("plotdata empty, skipping.")
     return()
   }
   plotdata$identifier <- mip::identifierModelScen(plotdata)
-  legendTitle <- c(attr(plotdata$identifier, "deletedinfo"), "Model output")[[1]]
+  legendTitle <- paste(c(attr(plotdata$identifier, "deletedinfo"), "Model output")[[1]],
+                       if (! is.null(diffto)) paste("difference to", diffto))
   if (! all(levels(plotdata$identifier) %in% names(mip::plotstyle()))) {
     ps <- mip::plotstyle(as.character(runif(length(levels(plotdata$identifier)))))
     try(mip::plotstyle.add(levels(plotdata$identifier), levels(plotdata$identifier), ps, replace = TRUE))
@@ -140,8 +157,8 @@ makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mai
     message(which(p == plotvariables), "/", length(plotvariables), ": Add plot for ", p)
     if (p %in% names(areaplotVariables)) {
       childs <- intersect(areaplotVariables[[p]], unique(plotdata$variable))
-      if (length(getModels(droplevels(filter(plotdata, !!sym("variable") %in% childs)))) > 1 ||
-          length(getScenarios(droplevels(filter(plotdata, !!sym("variable") %in% childs)))) > 1) {
+      if (length(getModels(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1 ||
+          length(getScenarios(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1) {
         message("Childs: ", paste(gsub(p, "", childs, fixed = TRUE), collapse = ", "))
         mip::showAreaAndBarPlots(plotdata, if (length(childs) > 0) childs else p, tot = p, mainReg = mainReg,
                                  yearsBarPlot = c(2030, 2050), scales = "fixed")
