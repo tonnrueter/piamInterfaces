@@ -2079,7 +2079,7 @@ idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_com
 1980;2;investment;Investment|Forestry;billion US$2010/yr;;;;;;Investment into growing forests;
 1981;2;SDG;Terrestrial Biodiversity|MSA|Vertebrates;%;;;;;;Terrestrial biodiversity of vertebrate species measured in Mean Species Abundance (MSA);
 1982;2;SDG;Terrestrial Biodiversity|MSA|Plants;%;;;;;;Terrestrial biodiversity of plant species measured in Mean Species Abundance (MSA);
-1983;2;SDG;Terrestrial Biodiversity|BII;%;Biodiversity|BII;unitless;;;;Terrestrial biodiversity measured with Biodiversity Intactness Index (BII);x
+1983;2;SDG;Terrestrial Biodiversity|BII;%;Biodiversity|BII;unitless;100;;;Terrestrial biodiversity measured with Biodiversity Intactness Index (BII);x
 1984;2;land cover;Land Cover|Protected Area;million ha;;;;;;Land-use coverage of officially protected area;
 1985;2;land cover;Land Cover|Other Natural Land;million ha;;;;;;Other natural land cover that does not fit into any other category;
 1986;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|Passenger|International Aviation;Mt CO2/yr;Emi|CO2|Transport|Pass|Aviation|International|Demand;Mt CO2/yr;;;;CO2 emissions from burning fossil liquids in passenger international aviation;x

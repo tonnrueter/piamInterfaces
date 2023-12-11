@@ -1,9 +1,9 @@
 idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;exclude_remind2_validation
-1;Useful Energy|Per Capita|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport.;x
+1;Useful Energy|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport.;x
 2;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact;x
-3;Useful Energy|Industry;GJ/cap/yr;UE|per capita|Industry;GJ/cap/yr;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.;
+3;Useful Energy|Industry;GJ/cap/yr;;;;;;;Useful energy per capita for industry.;
 4;Useful Energy|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings;
-5;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;0.00090274;;;;Final energy / GDP PPP;
+5;Intensity|Final Energy;EJ/billion US$2010;;;;;;;Final energy / GDP PPP;
 6;Final Energy|Industry|Electricity|Share;%;FE|Industry|Electricity|Share;%;;;;;Share of electrified FE in industry;
 7;Air pollution concentration|PM2_5|Urban population;ug/m3;Air pollution concentration|PM2_5|Urban population;ug/m3;;;;;Urban population weighted annual average PM2.5 concentrations.;x
 ;Population|Extreme Poverty|International poverty line;million;Population|Extreme Poverty|International poverty line;million;;;;;population living in extreme poverty with income <US$1.90 2011 PPP per day (World Bank definition);x
@@ -41,10 +41,10 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Useful Energy|Transportation;GJ/cap/yr;UE|per capita|Transport;GJ/cap/yr;;;;;Useful energy per capita for transport.;x
 40;Land Cover|Forest|Natural Forest|Primary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;;;Undisturbed primary natural forests;x
 41;Land Cover|Forest|Natural Forest|Secondary Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;;;Modified natural forests and secondary forests from natural succession;x
-42;Terrestrial Biodiversity|BII|Cropland Landscapes;%;Biodiversity|Cropland Landscapes BII;unitless;;;;;Terrestrial biodiversity in landscapes containing cropland measured with Biodiversity Intactness Index (BII);x
-43;Terrestrial Biodiversity|BII|Biodiversity Hotspots;%;Biodiversity|Biodiversity Hotspot BII;unitless;;;;;Terrestrial biodiversity in biodiversity hotspot landscapes measured with Biodiversity Intactness Index (BII);x
-44;Terrestrial Biodiversity|BII|Key Conservation Landscapes;%;Biodiversity|Biodiversity Hotspot and Intact Forest Landscapes BII;unitless;;;;;Terrestrial biodiversity in biodiversity hotspot and intact forest landscapes measured with Biodiversity Intactness Index (BII);x
-45;Terrestrial Biodiversity|BII|Areas Outside Key Conservation and Cropland Landscapes;%;Biodiversity|BII in areas outside Biodiversity Hotspots, Intact Forest & Cropland Landscapes;unitless;;;;;Terrestrial biodiversity in areas outside biodiversity hotspot, intact forest & cropland landscapes measured with Biodiversity Intactness Index (BII);x
+42;Terrestrial Biodiversity|BII|Cropland Landscapes;%;Biodiversity|Cropland Landscapes BII;unitless;100;;;;Terrestrial biodiversity in landscapes containing cropland measured with Biodiversity Intactness Index (BII);x
+43;Terrestrial Biodiversity|BII|Biodiversity Hotspots;%;Biodiversity|Biodiversity Hotspot BII;unitless;100;;;;Terrestrial biodiversity in biodiversity hotspot landscapes measured with Biodiversity Intactness Index (BII);x
+44;Terrestrial Biodiversity|BII|Key Conservation Landscapes;%;Biodiversity|Biodiversity Hotspot and Intact Forest Landscapes BII;unitless;100;;;;Terrestrial biodiversity in biodiversity hotspot and intact forest landscapes measured with Biodiversity Intactness Index (BII);x
+45;Terrestrial Biodiversity|BII|Areas Outside Key Conservation and Cropland Landscapes;%;Biodiversity|BII in areas outside Biodiversity Hotspots, Intact Forest & Cropland Landscapes;unitless;100;;;;Terrestrial biodiversity in areas outside biodiversity hotspot, intact forest & cropland landscapes measured with Biodiversity Intactness Index (BII);x
 46;Terrestrial Biodiversity|Shannon Crop Diversity Index;index;Biodiversity|Shannon crop area diversity index;unitless;;;;;Crop diversity measured by the Shannon index accounting for crop richness and abundance;x
 50;Nitrogen|Pollution|Surplus|Animal Waste Management;Tg N/yr;Resources|Nitrogen|Pollution|Surplus|+|Animal Waste Management;Mt Nr/yr;;;;;Nitrogen surplus in animal waste management;x
 51;Nitrogen|Pollution|Surplus|Cropland;Tg N/yr;Resources|Nitrogen|Pollution|Surplus|+|Cropland;Mt Nr/yr;;;;;Nitrogen surplus of soil inputs over soil withdrawals in cropland;x
