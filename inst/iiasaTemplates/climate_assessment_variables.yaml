@@ -1,0 +1,118 @@
+- Carbon Sequestration|CCS:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass|Energy:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass|Energy|Supply:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass|Energy|Supply|Electricity:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass|Energy|Supply|Gases:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass|Energy|Supply|Hydrogen:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Biomass|Energy|Supply|Liquids:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil|Energy|Supply:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil|Energy|Supply|Gases:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil|Energy|Supply|Hydrogen:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil|Energy|Supply|Liquids:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Fossil|Industrial Processes:
+    unit: Mt CO2/yr
+- Carbon Sequestration|CCS|Industrial Processes:
+    unit: Mt CO2/yr
+- Carbon Sequestration|Direct Air Capture:
+    unit: Mt CO2/yr
+- Carbon Sequestration|Enhanced Weathering:
+    unit: Mt CO2/yr
+- Carbon Utilization|CCS|Industry:
+    unit: Mt CO2/yr
+- Emissions|C2F6:
+    unit: kt C2F6/yr
+- Emissions|C6F14:
+    unit: kt C6F14/yr
+- Emissions|CF4:
+    unit: kt CF4-equiv/yr
+- Emissions|CH4:
+    unit: Mt CH4/yr
+- Emissions|CH4|AFOLU|Land:
+    unit: Mt CH4/yr
+- Emissions|CH4|Energy|Supply:
+    unit: Mt CH4/yr
+- Emissions|CH4|Waste:
+    unit: Mt CH4/yr
+- Emissions|CO2:
+    unit: Mt CO2/yr
+- Emissions|CO2|AFOLU:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy and Industrial Processes:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand|Industry:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand|Industry|Cement:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand|Industry|Chemicals:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand|Industry|Other:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand|Industry|Steel:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand|Residential and Commercial:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Demand|Transportation:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Supply:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Supply|Electricity:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Supply|Gases:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Supply|Heat:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Supply|Liquids:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Supply|Other Sector:
+    unit: Mt CO2/yr
+- Emissions|CO2|Energy|Supply|Solids:
+    unit: Mt CO2/yr
+- Emissions|CO2|Industrial Processes:
+    unit: Mt CO2/yr
+- Emissions|CO2|Industrial Processes|Cement:
+    unit: Mt CO2/yr
+- Emissions|CO2|Other:
+    unit: Mt CO2/yr
+- Emissions|F-Gases:
+    unit: Mt CO2-equiv/yr
+- Emissions|HFC:
+    unit: kt HFC134a-equiv/yr
+- Emissions|Kyoto Gases:
+    unit: Mt CO2-equiv/yr
+- Emissions|N2O:
+    unit: kt N2O/yr
+- Emissions|N2O|AFOLU|Land:
+    unit: kt N2O/yr
+- Emissions|N2O|Energy|Demand|Transportation:
+    unit: kt N2O/yr
+- Emissions|N2O|Industrial Processes:
+    unit: kt N2O/yr
+- Emissions|N2O|Waste:
+    unit: kt N2O/yr
+- Emissions|SF6:
+    unit: kt SF6/yr
