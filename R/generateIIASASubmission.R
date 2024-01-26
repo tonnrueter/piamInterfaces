@@ -50,6 +50,9 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
   # for each directory, include all mif files
   if (is.character(mifs)) {
     flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
+    if (length(flist) == 0) {
+      stop("Could not find any mifs to read in. Please check the parameter 'mifs'.")
+    }
     mifdata <- droplevels(as.quitte(flist), na.rm = TRUE)
   } else {
     mifdata <- droplevels(as.quitte(mifs, na.rm = TRUE))
