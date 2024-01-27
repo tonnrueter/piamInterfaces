@@ -53,7 +53,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
 
     if (length(invalidElements) > 0) {
       stop(paste0("Invalid argument 'mifs'. Element(s) that are neither files nor paths: ",
-                  paste(invalidElements, collapse = ", ")))
+                  paste0(invalidElements, collapse = ", ")))
     }
 
     for (m in mifs[dir.exists(mifs)]) {
@@ -63,6 +63,7 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
     }
 
     flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
+    message(paste0("# Reading in mifs ", paste0(flist, collapse = ", ")))
     mifdata <- droplevels(as.quitte(flist), na.rm = TRUE)
   } else {
     mifdata <- droplevels(as.quitte(mifs, na.rm = TRUE))
