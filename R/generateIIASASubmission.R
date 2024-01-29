@@ -32,7 +32,7 @@
 #' )
 #' }
 #' @export
-generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.1",
+generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 3.1", # nolint cyclocomp_linter
                                     mappingFile = NULL,
                                     removeFromScen = NULL, addToScen = NULL,
                                     outputDirectory = "output",
@@ -43,13 +43,27 @@ generateIIASASubmission <- function(mifs = ".", mapping = NULL, model = "REMIND 
                                     generateSingleOutput = TRUE) {
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
-  if (! is.null(outputDirectory)) {
+  if (!is.null(outputDirectory)) {
     dir.create(outputDirectory, showWarnings = FALSE)
   }
 
   # for each directory, include all mif files
   if (is.character(mifs)) {
+    invalidElements <- intersect(mifs[!dir.exists(mifs)], mifs[!file.exists(mifs)])
+
+    if (length(invalidElements) > 0) {
+      stop(paste0("Invalid argument 'mifs'. Element(s) that are neither files nor paths: ",
+                  paste0(invalidElements, collapse = ", ")))
+    }
+
+    for (m in mifs[dir.exists(mifs)]) {
+      if (length(list.files(m, "*.mif")) == 0) {
+        stop(paste0("No mif files found in folder ", m))
+      }
+    }
+
     flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
+    message(paste0("# Reading in mifs ", paste0(flist, collapse = ", ")))
     mifdata <- droplevels(as.quitte(flist), na.rm = TRUE)
   } else {
     mifdata <- droplevels(as.quitte(mifs, na.rm = TRUE))
