@@ -1000,26 +1000,11 @@ NA;;;Useful Energy|Residential and Commercial|Heating;EJ/yr;UE|Buildings|Heating
 952;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Liquids;EJ/yr;;;;;;final energy consumption of liquid fuels in the transportation sector by Hybrid Bus;
 953;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Gases;EJ/yr;;;;;;final energy consumption of gases in the transportation sector by Hybrid Bus;
 954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Pass|w/o Bunkers;EJ/yr;1;;;final energy consumed for passenger transportation;x
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|w/o Bunkers;EJ/yr;1;;;final energy consumed for freight transportation;
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;1;;;final energy consumed for passenger transportation;x
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;1;;;final energy consumed for passenger transportation;x
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Rail;EJ/yr;1;;;final energy consumed for passenger transportation;x
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;1;;;final energy consumed for passenger transportation;x
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Road;EJ/yr;1;;;final energy consumed for freight transportation;x
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Rail;EJ/yr;1;;;final energy consumed for freight transportation;x
-955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;1;;;final energy consumed for freight transportation;x
-956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;1;;;;x
-956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Road|LDV|Electricity;EJ/yr;1;;;;x
-956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|Rail|Electricity;EJ/yr;1;;;;x
-957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;;x
-957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|Road|LDV|Gases;EJ/yr;;;;;x
-958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;1;;;;x
-958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Road|LDV|Hydrogen;EJ/yr;1;;;;x
-958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;1;;;;x
-959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;;x
-959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Road|LDV|Liquids;EJ/yr;;;;;x
-959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Rail|Liquids;EJ/yr;;;;;x
-959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;;;;;x
+955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|w/o Bunkers;EJ/yr;1;;;final energy consumed for freight transportation;x
+956;2;energy (final);Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|Electricity;EJ/yr;1;;;;x
+957;2;energy (final);Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|w/o Bunkers|Gases;EJ/yr;;;;;x
+958;2;energy (final);Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|w/o Bunkers|Hydrogen;EJ/yr;1;;;;x
+959;2;energy (final);Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids;EJ/yr;;;;;x
 960;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Road|LDV|Liquids|Biomass;EJ/yr;;;;final energy consumption by the passenger transportation sector of liquid biofuels;x
 960;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids|Biomass;EJ/yr;;;;final energy consumption by the passenger transportation sector of liquid biofuels;x
 960;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;FE|Transport|Pass|Rail|Liquids|Biomass;EJ/yr;;;;final energy consumption by the passenger transportation sector of liquid biofuels;x
@@ -1033,10 +1018,10 @@ NA;;;Useful Energy|Residential and Commercial|Heating;EJ/yr;UE|Buildings|Heating
 962;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Rail|Liquids|Hydrogen;EJ/yr;;;;final energy consumption by the passenger transportation sector of synthetic liquid efuels;x
 962;2;energy (final);Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;FE|Transport|Pass|Aviation|Domestic|Liquids|Hydrogen;EJ/yr;;;;final energy consumption by the passenger transportation sector of synthetic liquid efuels;x
 963;2;energy (final);Final Energy|Transportation|Passenger|Other;EJ/yr;;;;;;final energy consumption by the passenger transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);
-964;2;energy (final);Final Energy|Transportation|Freight|Electricity;EJ/yr;FE|Transport|Freight|Electricity;EJ/yr;1;;;final energy consumption by the freight transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses;
-965;2;energy (final);Final Energy|Transportation|Freight|Gases;EJ/yr;FE|Transport|Freight|Gases;EJ/yr;;;;final energy consumption by the freight transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;
-966;2;energy (final);Final Energy|Transportation|Freight|Hydrogen;EJ/yr;FE|Transport|Freight|Hydrogen;EJ/yr;1;;;final energy consumption by the freight transportation sector of hydrogen;
-967;2;energy (final);Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|Liquids;EJ/yr;;;;final energy consumption by the freight transportation sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);
+964;2;energy (final);Final Energy|Transportation|Freight|Electricity;EJ/yr;FE|Transport|Freight|w/o Bunkers|Electricity;EJ/yr;1;;;final energy consumption by the freight transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses;
+965;2;energy (final);Final Energy|Transportation|Freight|Gases;EJ/yr;FE|Transport|Freight|w/o Bunkers|Gases;EJ/yr;;;;final energy consumption by the freight transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;
+966;2;energy (final);Final Energy|Transportation|Freight|Hydrogen;EJ/yr;FE|Transport|Freight|w/o Bunkers|Hydrogen;EJ/yr;1;;;final energy consumption by the freight transportation sector of hydrogen;
+967;2;energy (final);Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids;EJ/yr;;;;final energy consumption by the freight transportation sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);
 968;2;energy (final);Final Energy|Transportation|Freight|Liquids|Biomass;EJ/yr;FE|Transport|Freight|Navigation|Liquids|Biomass;EJ/yr;;;;final energy consumption by the freight transportation sector of liquid biofuels;x
 968;2;energy (final);Final Energy|Transportation|Freight|Liquids|Biomass;EJ/yr;FE|Transport|Freight|Road|Liquids|Biomass;EJ/yr;;;;final energy consumption by the freight transportation sector of liquid biofuels;x
 968;2;energy (final);Final Energy|Transportation|Freight|Liquids|Biomass;EJ/yr;FE|Transport|Freight|Rail|Liquids|Biomass;EJ/yr;;;;final energy consumption by the freight transportation sector of liquid biofuels;x
