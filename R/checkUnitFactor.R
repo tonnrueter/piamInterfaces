@@ -20,25 +20,29 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   # the first line checks that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
   scaleConversion <- list(
                           c("1000", "million", "billion"),
-                          c("1000", "MJ", "GJ"),
-                          c("1000", "kt", "Mt")
+                          c("1000", "P", "E"),
+                          c("1000", "T", "P"),
+                          c("1000", "G", "T"),
+                          c("1000", "M", "G"),
+                          c("1000", "k", "M")
                          )
-  wrongScale <- NULL
+  firsterror <- TRUE
   for (sc in scaleConversion) {
     wrongScale <- template %>%
-                    filter(grepl(sc[[2]], .data$unit)) %>%
+                    filter(grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
+                    filter(! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
                     filter(.data$piam_unit %in% gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
-                    filter(! .data$piam_factor == sc[[1]]) %>%
-                    rbind(wrongScale)
-  }
-
-  if (nrow(wrongScale) > 0) {
-    errortext <- c(errortext,
-                   paste0("The following variables have the wrong factor as scale correction:\n- ",
-                          paste0(wrongScale$variable, ": ", wrongScale$piam_factor, collapse = "\n- ")),
-                   paste0("The following is expected:",
-                          lapply(scaleConversion, function(x) paste0("\n- ", x[[1]], " ", x[[2]], " = 1 ", x[[3]])))
-                   )
+                    filter(! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
+    if (nrow(wrongScale) > 0) {
+      if (isTRUE(firsterror)) {
+        errortext <- c(errortext, "The following variables have the wrong factor as scale correction:")
+        firsterror <- FALSE
+      }
+      errortext <- c(errortext,
+        paste0("\n- ", paste0(wrongScale$variable, ": ", wrongScale$piam_factor, collapse = "\n- "),
+               "\n  Expected: ", sc[[1]], " ", sc[[2]], " = 1 ", sc[[3]])
+      )
+    }
   }
 
   # check whether US$2005 values are correctly transformed in US$2010
@@ -46,15 +50,15 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
     filter(grepl("US$2010", .data$unit, fixed = TRUE)) %>%
     filter(! grepl("/US$2010", .data$unit, fixed = TRUE)) %>%
     filter(.data$piam_unit %in% gsub("US$2010", "US$2005", .data$unit, fixed = TRUE)) %>%
-    filter(! (.data$piam_factor == "1.10774" | (.data$piam_factor == "-1.10774" & grepl("Loss|Policy Cost", .data$variable))))
+    filter(! (.data$piam_factor %in% "1.10774" | (.data$piam_factor %in% "-1.10774" & grepl("Loss|Policy Cost", .data$variable))))
   if (nrow(wrongInflation) > 0) {
     errortext <- c(errortext,
-                   paste0("Those variables should use 1.10774 as inflation correction US$2005 -> US$2010:\n- ",
+                   paste0("\nThose variables should use 1.10774 as inflation correction US$2005 -> US$2010:\n- ",
                           paste0(wrongInflation$variable, ": ", wrongInflation$piam_factor, collapse = "\n- ")))
   }
 
   if (! is.null(logFile)) {
-    if (! dir.exists(dirname(logFile))) dir.create(dirname(logFile), recurse = TRUE)
+    dir.create(dirname(logFile), recursive = TRUE, showWarnings = FALSE)
     if (length(errortext) > 0) {
       write(c("\n### checkUnitFactor\n", errortext), file = logFile, append = TRUE)
     } else {
