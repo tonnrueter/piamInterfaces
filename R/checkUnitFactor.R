@@ -25,7 +25,9 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1000", "G", "T"),
                           c("1000", "M", "G"),
                           c("1000", "k", "M"),
-                          c("1.10774", "US$2010", "US$2005"),
+                          # conversion factors taken from ECEMF Model Comparison Protocol, DOI:10.5281/zenodo.6811317
+                          c("1.12", "US$2010", "US$2005"),
+                          c("1.33", "US$2020", "US$2005"),
                           c("1.17", "EUR_2020", "US$2005")
                          )
   firsterror <- TRUE

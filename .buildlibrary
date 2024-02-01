@@ -1,7 +1,8 @@
-ValidationKey: '2528512'
+ValidationKey: '2548266'
 AutocreateReadme: yes
 allowLinterWarnings: no
 AddInReadme: tutorial.md
 AcceptedWarnings:
 - .*was deprecated in.*
 - .*cannot open file.*Permission denied.*
+- .*checking installed package size.*
