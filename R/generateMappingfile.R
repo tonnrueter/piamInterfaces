@@ -83,6 +83,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
 
     ## factor defaults to 1
     dt[is.na(get(factorCol)), (factorCol) := 1]
+    checkUnitFactor(dt, logFile = logFile, failOnUnitMismatch = FALSE)
 
     # remove empty spatial column, as it is interpreted as logical column
     if (spatialCol %in% colnames(dt) && typeof(dt[, get(spatialCol)]) == "logical") {

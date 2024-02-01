@@ -24,18 +24,6 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
                                                 logFile = file.path(tempdir(), "missing.log"),
                                                 outputFilename = "submission.xlsx")
       )
-    } else if (any(template == "CAMPAIGNers")) {
-      expect_no_error(
-        suppressWarnings( # CAMPAIGNers template has Moving Avg prices, but no Price|*|Rawdata variables
-          generateIIASASubmission(
-            tempdir(),
-            model = "REMIND", mapping = unlist(template),
-            outputDirectory = file.path(tempdir(), "output"),
-            logFile = file.path(tempdir(), "missing.log"),
-            outputFilename = "submission.mif"
-          )
-        )
-      )
     } else {
       expect_no_warning(generateIIASASubmission(tempdir(), model = "REMIND", mapping = unlist(template),
                                                 outputDirectory = file.path(tempdir(), "output"),

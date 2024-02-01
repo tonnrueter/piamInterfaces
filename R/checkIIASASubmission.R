@@ -43,7 +43,7 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
   write(paste0("  - ", paste(varsNotInTemplate, collapse = "\n  - ")), file = logFile, append = TRUE)
   mifdata <- filter(mifdata, variable %in% template$variable)
 
-  mifdata <- checkFixUnits(mifdata, template, logFile)
+  mifdata <- checkFixUnits(mifdata, template, logFile, failOnUnitMismatch = failOnUnitMismatch)
 
   # if data is suppled (not while generating mapping file), check whether scenarios have same number of variables
   if ("value" %in% names(mifdata)) {
