@@ -1,5 +1,5 @@
 
-## Tutorials
+## Tutorial
 
 - To understand how to submit to the IIASA database, read this [REMIND tutorial](https://github.com/remindmodel/remind/blob/develop/tutorials/13_Submit_to_IIASA_database.md).
 
@@ -9,6 +9,16 @@
   ...
   write.csv2(templatedata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
   ```
+
+- Opening the csv files in Excel can be problematic, as it sometimes changes values and quotation marks.
+  You can edit the files in LibreOffice Calc using these settings in the Text Import dialog:
+  - Text Import with:
+    - Character set: Unicode (UTF-8)
+    - Separated by: Semicolon.
+  - Save with:
+    - Character set: Unicode (UTF-8)
+    - Field Delimiter: ;
+    - String Delimiter: (none)
 
 - The github diff on a large semicolon-separated file is often unreadable.
 For a human-readable output, save the old version of the mapping and run:
