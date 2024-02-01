@@ -24,7 +24,9 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1000", "T", "P"),
                           c("1000", "G", "T"),
                           c("1000", "M", "G"),
-                          c("1000", "k", "M")
+                          c("1000", "k", "M"),
+                          c("1.10774", "US$2010", "US$2005"),
+                          c("1.17", "EUR_2020", "US$2005")
                          )
   firsterror <- TRUE
   for (sc in scaleConversion) {
@@ -35,7 +37,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                     filter(! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
     if (nrow(wrongScale) > 0) {
       if (isTRUE(firsterror)) {
-        errortext <- c(errortext, "The following variables have the wrong factor as scale correction:")
+        errortext <- c(errortext, "According to checkUnitFactor(), the following variables use the wrong piam_factor:")
         firsterror <- FALSE
       }
       errortext <- c(errortext,
@@ -43,18 +45,6 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                "\n  Expected: ", sc[[1]], " ", sc[[2]], " = 1 ", sc[[3]])
       )
     }
-  }
-
-  # check whether US$2005 values are correctly transformed in US$2010
-  wrongInflation <- template %>%
-    filter(grepl("US$2010", .data$unit, fixed = TRUE)) %>%
-    filter(! grepl("/US$2010", .data$unit, fixed = TRUE)) %>%
-    filter(.data$piam_unit %in% gsub("US$2010", "US$2005", .data$unit, fixed = TRUE)) %>%
-    filter(! (.data$piam_factor %in% "1.10774" | (.data$piam_factor %in% "-1.10774" & grepl("Loss|Policy Cost", .data$variable))))
-  if (nrow(wrongInflation) > 0) {
-    errortext <- c(errortext,
-                   paste0("\nThose variables should use 1.10774 as inflation correction US$2005 -> US$2010:\n- ",
-                          paste0(wrongInflation$variable, ": ", wrongInflation$piam_factor, collapse = "\n- ")))
   }
 
   if (! is.null(logFile)) {
