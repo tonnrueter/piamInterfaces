@@ -6,6 +6,7 @@ test_that("checkUnitFactor works", {
     c("Population", "million", "billion", "100"),
     c("Emissions|N2O", "kt N2O/yr", "Mt N2O/yr", "100"),
     c("GDP", "US$2010", "US$2005", "110.774"),
+    c("GDP", "US$2010", "US$2005", "112"),
     c("Trade", "US$2010", "US$2005", NA),
     c("Trade", "EUR_2020", "US$2005", NA),
     c("Trade", "EUR_2020", "US$2005", "1.10")
@@ -14,7 +15,7 @@ test_that("checkUnitFactor works", {
     c("Population", "million", "billion", "1000"),
     c("Emissions|N2O", "kt N2O/yr", "Mt N2O/yr", "1000"),
     c("FE", "MJ", "GJ", "1000"),
-    c("GDP", "US$2010", "US$2005", "1.10774"),
+    c("GDP", "US$2010", "US$2005", "1.12"),
     c("Trade", "EUR_2020", "US$2005", "1.17")
   )
   for (w in wrong) {

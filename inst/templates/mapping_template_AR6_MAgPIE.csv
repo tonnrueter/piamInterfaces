@@ -90,7 +90,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 57;Capital Cost|Electricity|Nuclear;US$2010/kW;;;;;;capital cost of a new nuclear power plants. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
 56;Capital Cost|Electricity|Hydro;US$2010/kW;;;;;;capital cost of a new hydropower plant. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
 55;Capital Cost|Electricity|Geothermal;US$2010/kW;;;;;;capital cost of a new geothermal power plant. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
-54;Capital Cost|Electricity|Gas|w/o CCS;US$2010/kW;;;;;Other techs: combined heat and power, gas turbines ;capital cost of a new gas power plant w/o CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
+54;Capital Cost|Electricity|Gas|w/o CCS;US$2010/kW;;;;;Other techs: combined heat and power, gas turbines;capital cost of a new gas power plant w/o CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
 53;Capital Cost|Electricity|Gas|w/ CCS;US$2010/kW;;;;;;capital cost of a new gas power plant with CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
 52;Capital Cost|Electricity|Coal|w/o CCS;US$2010/kW;;;;;Other tech: internal gasification combined cycle power plants;capital cost of a new coal power plant w/o CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
 51;Capital Cost|Electricity|Coal|w/ CCS;US$2010/kW;;;;;;capital cost of a new coal power plant with CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most
@@ -170,7 +170,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 150;Price|Agriculture|Rice|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Rice;1;;;;price index of rice
 151;Price|Agriculture|Soybean|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Soybean;1;;;;price index of soybean
 152;Price|Agriculture|Wheat|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Temperate cereals;1;;;;price index of wheat
-153;Price|Carbon;US$2010/t CO2;Prices|GHG Emission|CO2;US$2005/tCO2;1.10774;;;price of carbon (for regional aggregrates the weighted price of carbon by subregion should be used)
+153;Price|Carbon;US$2010/t CO2;Prices|GHG Emission|CO2;US$2005/tCO2;1.12;;;price of carbon (for regional aggregrates the weighted price of carbon by subregion should be used)
 ;Price|Carbon|Demand|Industry;US$2010/t CO2;;;;;;price of carbon for the industry sector
 ;Price|Carbon|Demand|Residential and Commercial;US$2010/t CO2;;;;;;price of carbon for the residential and commerical sector
 ;Price|Carbon|Demand|Transportation;US$2010/t CO2;;;;;;price of carbon for the transportation sector
@@ -202,7 +202,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 168;Price|Industry|Plastics;US$2010/Mt;;;;;;Plastics producer price
 169;Price|Industry|Pulp and Paper;US$2010/Mt;;;;;;Pulp and Paper producer price
 170;Price|Industry|Steel;US$2010/Mt;;;;;;Steel producer price
-171;Price|Primary Energy|Biomass;US$2010/GJ;Prices|Bioenergy;US$05/GJ;1.10774;;;biomass producer price
+171;Price|Primary Energy|Biomass;US$2010/GJ;Prices|Bioenergy;US$05/GJ;1.12;;;biomass producer price
 172;Price|Primary Energy|Coal;US$2010/GJ;;;;;;coal price at the primary level (i.e. the spot price at the global or regional market)
 173;Price|Primary Energy|Gas;US$2010/GJ;;;;;;natural gas price at the primary level (i.e. the spot price at the global or regional market)
 174;Price|Primary Energy|Oil;US$2010/GJ;;;;;;crude oil price at the primary level (i.e. the spot price at the global or regional market)
@@ -357,7 +357,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 315;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|2W&3W;Mt CO2/yr;;;;;;
 316;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|Bus;Mt CO2/yr;;;;;;carbon dioxide emissions from road transport passenger Buses
 317;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|LDV;Mt CO2/yr;;;;;;carbon dioxide emissions from road transport passenger LDVs
-318;Emissions|CO2|Energy|Supply;Mt CO2/yr;;;;;!!! warning - the sum only works with Emi|CO2|Fossil Fuels and Industry|Energy Supply, Indirect is not identical to Supply ;CO2 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a),other energy conversion (e.g. refineries,synfuel production,solid fuel processing,IPCC category 1Ab,1Ac),incl. pipeline transportation (IPCC category 1A3ei),fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C)
+318;Emissions|CO2|Energy|Supply;Mt CO2/yr;;;;;!!! warning - the sum only works with Emi|CO2|Fossil Fuels and Industry|Energy Supply, Indirect is not identical to Supply;CO2 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a),other energy conversion (e.g. refineries,synfuel production,solid fuel processing,IPCC category 1Ab,1Ac),incl. pipeline transportation (IPCC category 1A3ei),fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C)
 ;Emissions|CO2|Energy|Supply;Mt CO2/yr;;;;;;
 ;Emissions|CO2|Energy|Supply;Mt CO2/yr;;;-1;;;
 319;Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;;;;;;CO2 emissions from electricity and CHP production and distribution (IPCC category 1A1ai and 1A1aii)
@@ -850,7 +850,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 785;Final Energy|Heat;EJ/yr;;;;;;final energy consumption of heat (e.g.,district heat,process heat,warm water),excluding transmission/distribution losses,excluding direct geothermal and solar heating
 786;Final Energy|Hydrogen;EJ/yr;;;;;;final energy consumption of hydrogen,excluding transmission/distribution losses
 787;Final Energy|Industry;EJ/yr;;;;;;final energy consumed by the industrial sector,including feedstocks,including agriculture and fishing
-;Final Energy|Industry|Cement;EJ/yr;;;;;;final energy consumption by the industrial cement sector 
+;Final Energy|Industry|Cement;EJ/yr;;;;;;final energy consumption by the industrial cement sector
 788;Final Energy|Industry|Cement|Electricity;EJ/yr;;;;;;final energy consumption by the industrial cement sector of electricity,excluding transmission/distribution losses
 789;Final Energy|Industry|Cement|Gases;EJ/yr;;;;;;final energy consumption by the industrial cement sector of gases,excluding transmission/distribution losses
 790;Final Energy|Industry|Cement|Gases|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial cement sector of gases|bioenergy,excluding transmission/distribution losses
@@ -867,7 +867,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 801;Final Energy|Industry|Cement|Solids|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial cement sector of solids|bioenergy,excluding transmission/distribution losses
 802;Final Energy|Industry|Cement|Solids|Fossil;EJ/yr;;;;;;final energy consumption by the industrial cement sector of solids|fossil,excluding transmission/distribution losses
 ;Final Energy|Industry|Chemicals;EJ/yr;;;;;;final energy consumption by the industrial chemicals
-;Final Energy|Industry|Chemicals|Ammonia;EJ/yr;;;;;;final energy consumption by the industrial chemicals|ammonia sector 
+;Final Energy|Industry|Chemicals|Ammonia;EJ/yr;;;;;;final energy consumption by the industrial chemicals|ammonia sector
 803;Final Energy|Industry|Chemicals|Ammonia|Electricity;EJ/yr;;;;;;final energy consumption by the industrial chemicals|ammonia sector of electricity,excluding transmission/distribution losses
 804;Final Energy|Industry|Chemicals|Ammonia|Gases;EJ/yr;;;;;;final energy consumption by the industrial chemicals|ammonia sector of gases,excluding transmission/distribution losses
 805;Final Energy|Industry|Chemicals|Ammonia|Gases|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial chemicals|ammonia sector of gases|bioenergy,excluding transmission/distribution losses
@@ -889,7 +889,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 821;Final Energy|Industry|Chemicals|Gases|Fossil;EJ/yr;;;;;;final energy consumption by the industrial chemicals sector of gases|fossil,excluding transmission/distribution losses
 822;Final Energy|Industry|Chemicals|Gases|Hydrogen synfuel;EJ/yr;;;;;;final energy consumption by the industrial chemicals sector of gases|hydrogen synfuel,excluding transmission/distribution losses
 823;Final Energy|Industry|Chemicals|Heat;EJ/yr;;;;;;final energy consumption by the industrial chemicals sector of heat,excluding transmission/distribution losses
-;Final Energy|Industry|Chemicals|High value chemicals;EJ/yr;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector 
+;Final Energy|Industry|Chemicals|High value chemicals;EJ/yr;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector
 824;Final Energy|Industry|Chemicals|High value chemicals|Electricity;EJ/yr;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector of electricity,excluding transmission/distribution losses
 825;Final Energy|Industry|Chemicals|High value chemicals|Gases;EJ/yr;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector of gases,excluding transmission/distribution losses
 826;Final Energy|Industry|Chemicals|High value chemicals|Gases|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector of gases|bioenergy,excluding transmission/distribution losses
@@ -910,7 +910,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 841;Final Energy|Industry|Chemicals|Liquids|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial chemicals sector of liquids|bioenergy,excluding transmission/distribution losses
 842;Final Energy|Industry|Chemicals|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the industrial chemicals sector of liquids|fossil,excluding transmission/distribution losses
 843;Final Energy|Industry|Chemicals|Liquids|Hydrogen synfuel;EJ/yr;;;;;;final energy consumption by the industrial chemicals sector of liquids|hydrogen synfuel,excluding transmission/distribution losses
-;Final Energy|Industry|Chemicals|Methanol;EJ/yr;;;;;;final energy consumption by the industrial chemicals|methanol sector 
+;Final Energy|Industry|Chemicals|Methanol;EJ/yr;;;;;;final energy consumption by the industrial chemicals|methanol sector
 844;Final Energy|Industry|Chemicals|Methanol|Electricity;EJ/yr;;;;;;final energy consumption by the industrial chemicals|methanol sector of electricity,excluding transmission/distribution losses
 845;Final Energy|Industry|Chemicals|Methanol|Gases;EJ/yr;;;;;;final energy consumption by the industrial chemicals|methanol sector of gases,excluding transmission/distribution losses
 846;Final Energy|Industry|Chemicals|Methanol|Gases|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial chemicals|methanol sector of gases|bioenergy,excluding transmission/distribution losses
@@ -991,7 +991,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 920;Final Energy|Industry|Other|Solids;EJ/yr;;;;;Everything except cement steel and chemicals;final energy consumption by the industrial other sector of solids, excluding transmission/distribution losses
 921;Final Energy|Industry|Other|Solids|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial other sector of solids|bioenergy,excluding transmission/distribution losses
 922;Final Energy|Industry|Other|Solids|Fossil;EJ/yr;;;;;;final energy consumption by the industrial other sector of solids|fossil,excluding transmission/distribution losses
-;Final Energy|Industry|Plastics;EJ/yr;;;;;;final energy consumption by the industrial plastics sector 
+;Final Energy|Industry|Plastics;EJ/yr;;;;;;final energy consumption by the industrial plastics sector
 923;Final Energy|Industry|Plastics|Electricity;EJ/yr;;;;;;final energy consumption by the industrial plastics sector of electricity,excluding transmission/distribution losses
 924;Final Energy|Industry|Plastics|Gases;EJ/yr;;;;;;final energy consumption by the industrial plastics sector of gases,excluding transmission/distribution losses
 925;Final Energy|Industry|Plastics|Gases|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial plastics sector of gases|bioenergy,excluding transmission/distribution losses
@@ -1007,7 +1007,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 935;Final Energy|Industry|Plastics|Solids;EJ/yr;;;;;;final energy consumption by the industrial plastics sector of solids,excluding transmission/distribution losses
 936;Final Energy|Industry|Plastics|Solids|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial plastics sector of solids|bioenergy,excluding transmission/distribution losses
 937;Final Energy|Industry|Plastics|Solids|Fossil;EJ/yr;;;;;;final energy consumption by the industrial plastics sector of solids|fossil,excluding transmission/distribution losses
-;Final Energy|Industry|Pulp and Paper;EJ/yr;;;;;;final energy consumption by the industrial pulp and paper sector 
+;Final Energy|Industry|Pulp and Paper;EJ/yr;;;;;;final energy consumption by the industrial pulp and paper sector
 938;Final Energy|Industry|Pulp and Paper|Electricity;EJ/yr;;;;;;final energy consumption by the industrial pulp and paper sector of electricity,excluding transmission/distribution losses
 939;Final Energy|Industry|Pulp and Paper|Gases;EJ/yr;;;;;;final energy consumption by the industrial pulp and paper sector of gases,excluding transmission/distribution losses
 940;Final Energy|Industry|Pulp and Paper|Gases|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial pulp and paper sector of gases|bioenergy,excluding transmission/distribution losses
@@ -1026,7 +1026,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 953;Final Energy|Industry|Solids;EJ/yr;;;;;;final energy solid fuel consumption by the industrial sector (including coal and solid biomass)
 954;Final Energy|Industry|Solids|Biomass;EJ/yr;;;;;;final energy consumption by the industry sector of solid biomass
 955;Final Energy|Industry|Solids|Coal;EJ/yr;;;;;;final energy consumption by the industry sector of coal
-;Final Energy|Industry|Steel;EJ/yr;;;;;;final energy consumption by the industrial steel sector 
+;Final Energy|Industry|Steel;EJ/yr;;;;;;final energy consumption by the industrial steel sector
 956;Final Energy|Industry|Steel|Electricity;EJ/yr;;;;;;final energy consumption by the industrial steel sector of electricity,excluding transmission/distribution losses
 957;Final Energy|Industry|Steel|Gases;EJ/yr;;;;;;final energy consumption by the industrial steel sector of gases,excluding transmission/distribution losses
 958;Final Energy|Industry|Steel|Gases|Bioenergy;EJ/yr;;;;;;final energy consumption by the industrial steel sector of gases|bioenergy,excluding transmission/distribution losses
@@ -1295,7 +1295,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 1201;Secondary Energy|Other Carrier;EJ/yr;;;;;;generation of other secondary energy carriers that do not fit any other category (please provide a definition of other energy carrier in this category in the 'comments' tab)
 1202;Secondary Energy|Solids;EJ/yr;;;;;;solid secondary energy carriers (e.g.,briquettes,coke,wood chips,wood pellets)
 1203;Secondary Energy|Solids|Biomass;EJ/yr;;;;;;solid secondary energy carriers produced from biomass (e.g.,commercial charcoal,wood chips,wood pellets). Tradional bioenergy use is excluded.
-;Secondary Energy|Solids|Biomass;EJ/yr;;;;;;Tradional bioenergy use 
+;Secondary Energy|Solids|Biomass;EJ/yr;;;;;;Tradional bioenergy use
 1204;Secondary Energy|Solids|Coal;EJ/yr;;;;;;solid secondary energy carriers produced from coal (e.g.,briquettes,coke)
 1205;Trade|Primary Energy|Biomass|Volume;EJ/yr;;;;;;net exports of solid,unprocessed biomass,at the global level these should add up to the trade losses only
 1206;Trade|Primary Energy|Coal|Volume;EJ/yr;;;;;;net exports of coal,at the global level these should add up to the trade losses only
@@ -1330,7 +1330,7 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 1228;Tariffs|Average|Imports;%;;;;;;Average tariffs for imports (most relevant for developed countries)
 1229;Expenditure|Medical System|Incremental;billion US$2010/yr;;;;;;Incremental expenditure for the medical system
 1230;Investment|Medical System;billion US$2010/yr;;;;;;investment to medical system
-;Energy Expenditures|Industry|Cement;USD2010/yr;;;;;;total expenditures on energy in the cement industry (energy input x price) 
+;Energy Expenditures|Industry|Cement;USD2010/yr;;;;;;total expenditures on energy in the cement industry (energy input x price)
 ;Energy Expenditures|Industry|Steel;USD2010/yr;;;;;;total expenditures on energy in the steel industry (energy input x price)
 ;Energy Expenditures|Residential and Commercial|Cooling;USD2010/yr;;;;;;total expenditures on energy for cooling services (energy input x price)
 ;Energy Expenditures|Residential and Commercial|Heating;USD2010/yr;;;;;;total expenditures on energy for heating services (energy input x price)
