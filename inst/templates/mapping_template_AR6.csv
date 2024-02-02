@@ -298,8 +298,6 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 257;Emissions|CO2|AFOLU|Land;Mt CO2/yr;;;;;;;CO2|AFOL emissions from forestry and other land use;x
 ;Emissions|CO2|AFOLU|Wetlands|Peatlands;Mt CO2/yr;;;;;;;;x
 258;Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|+|Energy;Mt CO2/yr;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B);
-;Emissions|CO2|Energy;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;;;;;;
-;Emissions|CO2|Energy;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;-1;;;;;
 259;Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy and Industrial Processes;Mt CO2/yr;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B) and from industrial processes (IPCC categories 2A,B,C,E);
 260;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Demand;Mt CO2/yr;;;;;CO2 emissions from fuel combustion in industry (IPCC category 1A2),residential,commercial,institutional sectors and agriculture,forestry,fishing (AFOFI) (IPCC category 1A4a,1A4b,1A4c),and transportation sector (IPCC category 1A3),excluding pipeline emissions (IPCC category 1A3ei);
 261;Emissions|CO2|Energy|Demand|AFOFI;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion in agriculture,forestry,fishing (AFOFI) (IPCC category 1A4c);x
@@ -357,15 +355,11 @@ idx;Variable;Unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 315;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|2W&3W;Mt CO2/yr;;;;;;;;x
 316;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|Bus;Mt CO2/yr;Emi|CO2|Transport|Pass|Road|Bus|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from road transport passenger Buses;x
 317;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|LDV;Mt CO2/yr;Emi|CO2|Transport|Pass|Road|LDV|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from road transport passenger LDVs;x
-318;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Supply;Mt CO2/yr;;;;!!! warning - the sum only works with Emi|CO2|Fossil Fuels and Industry|Energy Supply, Indirect is not identical to Supply;CO2 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a),other energy conversion (e.g. refineries,synfuel production,solid fuel processing,IPCC category 1Ab,1Ac),incl. pipeline transportation (IPCC category 1A3ei),fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C);
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;;;;;;
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;-1;;;;;
+318;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Supply;Mt CO2/yr;;;;;CO2 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a),other energy conversion (e.g. refineries,synfuel production,solid fuel processing,IPCC category 1Ab,1Ac),incl. pipeline transportation (IPCC category 1A3ei),fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C);
 319;Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Electricity w/ couple prod;Mt CO2/yr;;;;;CO2 emissions from electricity and CHP production and distribution (IPCC category 1A1ai and 1A1aii);
 320;Emissions|CO2|Energy|Supply|Gases;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Gases w/ couple prod;Mt CO2/yr;;;;;CO2 emissions from fuel combustion and fugitive emissions from fuels: gaseous fuel extraction and processing (e.g. natural gas extraction production,IPCC category 1B2b,parts of 1A1cii);
 321;Emissions|CO2|Energy|Supply|Heat;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Heat w/ couple prod;Mt CO2/yr;;;;;CO2 emissions from heat production and distribution (IPCC category 1A1aiii);
 322;Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Liquids w/ couple prod;Mt CO2/yr;;;;;CO2 emissions from fuel combustion and fugitive emissions from fuels: liquid fuel extraction and processing (e.g. oil production,refineries,synfuel production,IPCC category 1A1b,parts of 1A1cii,1B2a);
-;Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;;;;;;
-;Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;-1;;;;;
 323;Emissions|CO2|Energy|Supply|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Hydrogen w/ couple prod;Mt CO2/yr;;;;;CO2 emissions from fuel combustion in other energy supply sectors (please provide a definition of other sources in this category in the 'comments' tab);
 324;Emissions|CO2|Energy|Supply|Solids;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Solids w/ couple prod;Mt CO2/yr;;;;;CO2 emissions from fuel combustion and fugitive emissions from fuels: solid fuel extraction and processing (IPCC category 1A1ci,parts of 1A1cii,1B1);
 325;Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;;;;CO2 emissions from industrial processes (IPCC categories 2A,B,C,E);
