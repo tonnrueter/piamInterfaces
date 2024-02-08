@@ -3,11 +3,12 @@
 #' @md
 #' @author Falk Benke, Oliver Richters
 #' @param mifFile path to the mif file to apply summation checks to, or quitte object
-#' @param dataDumpFile file where data.frame with the data analysis is saved. If NULL, result is returned
+#' @param dataDumpFile file where data.frame with the data analysis is saved. Requires outputDirectory.
+#'        If NULL, result is returned.
 #' @param outputDirectory path to directory to place logFile and dataDumpFile
-#' @param logFile file where human-readable summary is saved. If NULL, write to stdout
+#' @param logFile file where human-readable summary is saved. If NULL, write to stdout. If FALSE, don't log.
 #' @param logAppend boolean whether to append or overwrite logFile
-#' @param generatePlots boolean whether pdfs to compare data are generated
+#' @param generatePlots boolean whether pdfs to compare data are generated. Requires outputDirectory.
 #' @param mainReg main region for the plot generation
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #'        if set to 'extractVariableGroups', tries to extract summations from variables with + notation
@@ -23,6 +24,7 @@
 #' @param csvSeparator separator for dataDumpFile, defaults to semicolon
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc reframe last_col
+#' @importFrom gms chooseFromList
 #' @importFrom grDevices pdf dev.off
 #' @importFrom magclass unitsplit
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
@@ -37,8 +39,12 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                             logFile = NULL, logAppend = FALSE, generatePlots = FALSE, mainReg = "World",
                             dataDumpFile = "checkSummations.csv", remindVar = "piam_variable",
                             plotprefix = NULL, absDiff = 0.001, relDiff = 1, roundDiff = TRUE, csvSeparator = ";") {
-  if (!is.null(outputDirectory) && !dir.exists(outputDirectory) && ! is.null(c(logFile, dataDumpFile))) {
-    dir.create(outputDirectory, recursive = TRUE)
+  if (is.null(outputDirectory)) {
+    dataDumpFile <- NULL
+    generatePlots <- FALSE
+  } else {
+    dir.create(outputDirectory, recursive = TRUE, showWarnings = FALSE)
+    if (is.character(logFile) && basename(logFile) == logFile) logFile <- file.path(outputDirectory, logFile)
   }
 
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
@@ -47,6 +53,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
     names(checkVariables) <- make.unique(names(checkVariables), sep = " ")
   } else {
+    if (is.null(summationsFile)) summationsFile <- chooseFromList(names(summationsNames()), multiple = FALSE)
     summationGroups <- getSummations(summationsFile)
     if (summationsFile %in% names(summationsNames())) {
       summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
@@ -73,10 +80,10 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   # start with an empty tibble, such that return values always have the same
   # structure
   tmp <- tibble(model = factor(), scenario = factor(),
-                          region = factor(), period = integer(),
-                          variable = character(), unit = factor(),
-                          value = numeric(), checkSum = numeric(),
-                          diff = numeric(), reldiff = numeric())
+                region = factor(), period = integer(),
+                variable = character(), unit = factor(),
+                value = numeric(), checkSum = numeric(),
+                diff = numeric(), reldiff = numeric())
 
   # iterate over summation rules
   for (i in seq_along(checkVariables)) {
@@ -263,8 +270,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   summarytext <- c(summarytext, "\n# As generatePlots=FALSE, no plot comparison was produced."[! generatePlots])
   if (is.null(logFile)) {
     message(paste(c(text, summarytext, ""), collapse = "\n"))
-  } else {
-    if (! is.null(outputDirectory)) logFile <- file.path(outputDirectory, logFile)
+  } else if (! isFALSE(logFile)) {
     message(paste(c(text[1], summarytext,
             paste0("# Find log with human-readable information appended to ", logFile)), "", collapse = "\n"))
     write(c(text, summarytext, ""), file = logFile, append = logAppend)
