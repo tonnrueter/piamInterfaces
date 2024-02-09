@@ -160,7 +160,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   # generate human-readable summary of larger differences
   .checkSummationsSummary(
-    mifFile, data, tmp, template, summationsFile, checkVariables,
+    mifFile, data, tmp, template, summationsFile, summationGroups, checkVariables,
     generatePlots, mainReg, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
     plotprefix, absDiff, relDiff, roundDiff
   )
@@ -169,8 +169,10 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 }
 
 .checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, # nolint: cyclocomp_linter.
-                             checkVariables, generatePlots, mainReg, outputDirectory, logFile, logAppend,
-                             dataDumpFile, remindVar, plotprefix, absDiff, relDiff, roundDiff) {
+                                    summationGroups, checkVariables, generatePlots,
+                                    mainReg, outputDirectory, logFile, logAppend,
+                                    dataDumpFile, remindVar, plotprefix, absDiff,
+                                    relDiff, roundDiff) {
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
@@ -185,6 +187,17 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       templateData <- data.frame(template)
     }
   }
+
+  if (generatePlots) {
+    # apply factors from summation groups to data for accurate plots
+    data <- data %>%
+      left_join(
+        select(summationGroups, c("child", "factor")) %>% distinct(),
+        by = c("variable" = "child")) %>%
+      mutate("value" := ifelse(is.na(.data$factor), 1, .data$value * .data$factor)) %>%
+      select(-"factor")
+  }
+
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
     fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= relDiff,
@@ -196,7 +209,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                                  paste0(plotprefix, "checkSummations_", gsub(" ", "_", thismodel), ".pdf"))
         pdf(pdfFilename,
             width = max(12, length(quitte::getRegs(fileLarge)), length(quitte::getScenarios(fileLarge)) * 2))
-        plotdata <- filter(data, !!sym("model") == thismodel)
+        plotdata <- filter(data, .data$model == thismodel)
         message(length(problematic), " plots will be generated for ", thismodel, ", this will take some time.")
       }
       width <- 70
