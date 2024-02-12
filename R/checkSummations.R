@@ -79,7 +79,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   # start with an empty tibble, such that return values always have the same
   # structure
-  tmp <- tibble(model = factor(), scenario = factor(),
+  comparison <- tibble(model = factor(), scenario = factor(),
                 region = factor(), period = integer(),
                 variable = character(), unit = factor(),
                 value = numeric(), checkSum = numeric(),
@@ -136,17 +136,17 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       ) %>%
       relocate(!!sym("details"), .after = last_col())
 
-    tmp <- rbind(tmp, comp)
+    comparison <- rbind(comparison, comp)
   }
 
   # write data to dataDumpFile
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
 
-    out <- arrange(tmp, desc(abs(!!sym("reldiff"))))
+    out <- arrange(comparison, desc(abs(!!sym("reldiff"))))
 
     if (roundDiff) {
-      out <- tmp %>% mutate(reldiff = niceround(!!sym("reldiff"), digits = 1))
+      out <- comparison %>% mutate(reldiff = niceround(!!sym("reldiff"), digits = 1))
     }
 
     write.table(
@@ -160,15 +160,15 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   # generate human-readable summary of larger differences
   .checkSummationsSummary(
-    mifFile, data, tmp, template, summationsFile, summationGroups, checkVariables,
+    mifFile, data, comparison, template, summationsFile, summationGroups, checkVariables,
     generatePlots, mainReg, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
     plotprefix, absDiff, relDiff, roundDiff
   )
 
-  return(invisible(tmp))
+  return(invisible(comparison))
 }
 
-.checkSummationsSummary <- function(mifFile, data, tmp, template, summationsFile, # nolint: cyclocomp_linter.
+.checkSummationsSummary <- function(mifFile, data, comparison, template, summationsFile, # nolint: cyclocomp_linter.
                                     summationGroups, checkVariables, generatePlots,
                                     mainReg, outputDirectory, logFile, logAppend,
                                     dataDumpFile, remindVar, plotprefix, absDiff,
@@ -194,13 +194,13 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       left_join(
         select(summationGroups, c("child", "factor")) %>% distinct(),
         by = c("variable" = "child")) %>%
-      mutate("value" := ifelse(is.na(.data$factor), 1, .data$value * .data$factor)) %>%
+      mutate("value" := ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor)) %>%
       select(-"factor")
   }
 
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
-    fileLarge <- filter(tmp, abs(!!sym("reldiff")) >= relDiff,
+    fileLarge <- filter(comparison, abs(!!sym("reldiff")) >= relDiff,
                         abs(!!sym("diff")) >= absDiff, !!sym("model") == thismodel)
     problematic <- sort(unique(c(fileLarge$variable)))
     if (length(problematic) > 0) {
