@@ -32,6 +32,14 @@ getTemplate <- function(project = NULL) {
         data$piam_unit <- varunit$unit
       }
     }
+
+    if (!all(c(
+      "Variable", "Unit", "piam_variable", "piam_unit", "piam_factor",
+      "Comment"
+    ) %in% colnames(data))) {
+      stop("Failed to read in ", filename, ". Are you using quotes around characters?")
+    }
+
     return(data)
   } else {
     stop("Mapping file ", filename, " not found.")
