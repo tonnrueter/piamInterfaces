@@ -188,16 +188,6 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     }
   }
 
-  if (generatePlots) {
-    # apply factors from summation groups to data for accurate plots
-    data <- data %>%
-      left_join(
-        select(summationGroups, c("child", "factor")) %>% distinct(),
-        by = c("variable" = "child")) %>%
-      mutate("value" := ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor)) %>%
-      select(-"factor")
-  }
-
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
     fileLarge <- filter(comparison, abs(!!sym("reldiff")) >= relDiff,
@@ -258,9 +248,20 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         }
         if (generatePlots) {
           message("Add plot for ", p)
-          mip::showAreaAndBarPlots(plotdata, intersect(childs, unique(plotdata$variable)),
-                                   tot = gsub(" [1-9]$", "", p),
-                                   mainReg = mainReg, yearsBarPlot = c(2030, 2050), scales = "fixed")
+          s <- summationGroups %>%
+            filter(.data$parent == p) %>%
+            select(c("child", "factor"))
+
+          df <- data %>%
+            left_join(s, by = c("variable" = "child")) %>%
+            mutate("value" := ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor),
+                   "unit" := filter(plotdata, .data$variable == gsub(" [1-9]$", "", p))$unit[[1]]) %>%
+            select(-"factor")
+
+          mip::showAreaAndBarPlots(df, intersect(childs, unique(plotdata$variable)),
+            tot = gsub(" [1-9]$", "", p),
+            mainReg = mainReg, yearsBarPlot = c(2030, 2050), scales = "fixed"
+          )
         }
       }
       # print to log or stdout
