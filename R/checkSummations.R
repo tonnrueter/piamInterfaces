@@ -248,14 +248,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         }
         if (generatePlots) {
           message("Add plot for ", p)
-
           s <- summationGroups %>%
             filter(.data$parent == p) %>%
             select(c("child", "factor"))
 
           df <- data %>%
             left_join(s, by = c("variable" = "child")) %>%
-            mutate("value" := ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor)) %>%
+            mutate("value" := ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor),
+                   "unit" := filter(plotdata, .data$variable == gsub(" [1-9]$", "", p))$unit[[1]]) %>%
             select(-"factor")
 
           mip::showAreaAndBarPlots(df, intersect(childs, unique(plotdata$variable)),
