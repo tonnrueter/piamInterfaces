@@ -174,8 +174,8 @@ Secondary Energy|Liquids;Secondary Energy|Liquids|Biomass;1
 Secondary Energy|Liquids;Secondary Energy|Liquids|Fossil;1
 Secondary Energy|Liquids|Biomass;Secondary Energy|Liquids|Biomass|w/ CCS;1
 Secondary Energy|Liquids|Biomass;Secondary Energy|Liquids|Biomass|w/o CCS;1
-Secondary Energy|Liquids|Fossil;Secondary Energy|Liquids|Fossil|w/ CCS;1
-Secondary Energy|Liquids|Fossil;Secondary Energy|Liquids|Fossil|w/o CCS;1
+Secondary Energy|Liquids|Fossil 2;Secondary Energy|Liquids|Fossil|w/ CCS;1
+Secondary Energy|Liquids|Fossil 2;Secondary Energy|Liquids|Fossil|w/o CCS;1
 Secondary Energy|Liquids|Coal;Secondary Energy|Liquids|Coal|w/ CCS;1
 Secondary Energy|Liquids|Coal;Secondary Energy|Liquids|Coal|w/o CCS;1
 Secondary Energy|Liquids|Gas;Secondary Energy|Liquids|Gas|w/ CCS;1
