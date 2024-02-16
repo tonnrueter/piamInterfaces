@@ -16,7 +16,7 @@ checkIIASASubmission(
 
 \item{iiasatemplate}{filename of xlsx or yaml file provided by IIASA}
 
-\item{logFile}{filename of file for logging}
+\item{logFile}{filename of file for logging. Set to NULL for stdout, set to FALSE for none.}
 
 \item{failOnUnitMismatch}{boolean whether to fail in case of unit mismatches
 recommended for submission, not used for generating templates}

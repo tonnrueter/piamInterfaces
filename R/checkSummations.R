@@ -44,7 +44,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     generatePlots <- FALSE
   } else {
     dir.create(outputDirectory, recursive = TRUE, showWarnings = FALSE)
-    if (is.character(logFile) && basename(logFile) == logFile) logFile <- file.path(outputDirectory, logFile)
+    logFile <- setLogFile(outputDirectory, logFile)
   }
 
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)

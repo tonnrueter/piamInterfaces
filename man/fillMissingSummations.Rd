@@ -15,7 +15,7 @@ or path to summations file}
 
 \item{iteration}{keeps track of number of recursive calls, leave to default}
 
-\item{logFile}{path to logFile. if NULL, write to stdout}
+\item{logFile}{path to logFile. if NULL, write to stdout, if FALSE don't write}
 }
 \description{
 Recursively calculate additional variables based on given summations and add
