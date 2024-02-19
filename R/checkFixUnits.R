@@ -12,7 +12,7 @@
 #' @return quitte object with adapted mif data
 #' @export
 
-checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) {
+checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) { # nolint cyclocomp_linter
   # use template units as names and map it to remind2 unit with identical meaning
   identicalUnits <- c("billion m2/yr" = "bn m2/yr",
                       "billion pkm/yr" = "bn pkm/yr",
@@ -65,7 +65,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
     logtext <- c(logtext, reportWrongUnits(wrongUnits))
   }
 
-  if (length(logtext) > 0 && ! is.null(logFile)) {
+  if (length(logtext) > 0 && ! is.null(logFile) && ! isFALSE(logFile)) {
     write(logtext, file = logFile, append = TRUE)
   }
 

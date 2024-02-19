@@ -36,7 +36,7 @@
 #' )
 #' }
 #' @export
-generateMappingfile <- function(templates = NULL, outputDirectory = "output",
+generateMappingfile <- function(templates = NULL, outputDirectory = "output",  # nolint cyclocomp_linter
                                 fileName = NULL, logFile = NULL,
                                 iiasatemplate = NULL,
                                 targetVar = "variable", targetUnit = "unit",
@@ -44,6 +44,8 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
                                 factorCol = "piam_factor", weightCol = NULL, spatialCol = "spatial",
                                 model = "REMIND-MAgPIE"
                                 ) {
+  logFile <- setLogFile(outputDirectory, logFile)
+
   if (is.null(model)) model <- "Model"
   if (is.null(templates)) {
     templates <- chooseFromList(names(templateNames()), type = "templates",
@@ -52,10 +54,6 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
   }
   for (v in c("targetVar", "targetUnit", "remindVar", "remindUnit", "factorCol", "weightCol", "spatialCol")) {
     assign(v, tolower(get(v)))
-  }
-  if (! is.null(outputDirectory)) {
-    dir.create(outputDirectory, recursive = TRUE, showWarnings = FALSE)
-    if (! is.null(logFile)) logFile <- file.path(outputDirectory, logFile)
   }
   message(paste("### Generating mapping", if (!is.null(fileName)) basename(fileName),
           "based on templates", paste(templates, collapse = ", ")))
@@ -130,7 +128,7 @@ generateMappingfile <- function(templates = NULL, outputDirectory = "output",
     message("# Write mapping to ", fileName)
     fwrite(mapping, file = fileName, sep = ";")
   }
-  if (!is.null(comments) && !is.null(logFile)) {
+  if (!is.null(comments) && !is.null(logFile) && !isFALSE(logFile)) {
     write("\n\n### Comments from generateMappingfile():", file = logFile, append = TRUE)
     fwrite(comments, file = logFile, sep = ";", append = TRUE)
   }

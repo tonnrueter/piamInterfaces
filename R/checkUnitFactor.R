@@ -49,7 +49,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
     }
   }
 
-  if (! is.null(logFile)) {
+  if (! is.null(logFile) && ! isFALSE(logFile)) {
     dir.create(dirname(logFile), recursive = TRUE, showWarnings = FALSE)
     if (length(errortext) > 0) {
       write(c("\n### checkUnitFactor\n", errortext), file = logFile, append = TRUE)
