@@ -74,6 +74,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
                                     mappingFile = NULL) {
 
+  # process input parameters ----
+
   if (! is.null(mappingFile)) {
     warning("mappingFile is deprecated and ignored. If you got here via output.R -> export -> xlsx_IIASA,
             please pick a newer xlsx_IIASA.R file from remindmodel/develop")
@@ -94,11 +96,12 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
       paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename))
   }
 
-
   logFile <- setLogFile(outputDirectory, logFile)
 
   # renaming to a more accurate name while maintaining backwards-compatibility
   templates <- mapping
+
+  # read in data from mifs ----
 
   # for each directory, include all mif files
   if (is.character(mifs)) {
@@ -128,7 +131,12 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
            " before 1.111.0 on 2023-05-26, please use piamInterfaces version 0.9.0 or earlier, see PR #128.")
   }
 
+  mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
+
+  # generate mapping from templates ----
+
   mapData <- NULL
+
   for (i in seq_along(templates)) {
     t <- getTemplate(templates[i]) %>%
       filter(.data$piam_variable != "", !is.na(.data$piam_variable), .data$piam_variable != "TODO") %>%
@@ -141,7 +149,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     mapData <- rbind(mapData, t)
   }
 
-  mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
+
+  # apply mapping to data ----
 
   submission <- mifdata %>%
     filter(.data$period %in% timesteps) %>%
@@ -157,6 +166,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   submission <- aggregate(value ~ model + region + scenario + period + variable + unit, data = submission, FUN = "sum")
 
+  # apply corrections using IIASA template ----
+
   if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
     submission <- priceIndicesIIASA(submission, iiasatemplate, scenBase = NULL)
     submission <- checkIIASASubmission(submission, iiasatemplate, logFile, failOnUnitMismatch = FALSE)
@@ -164,14 +175,19 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     message("# iiasatemplate ", iiasatemplate, " not found, returning full list of variables.")
   }
 
-  # perform summation checks
+  # perform summation checks ----
+
   prefix <- gsub("\\.[A-Za-z]+$", "", if (is.null(outputFilename)) "output" else basename(outputFilename))
+
   for (sumFile in intersect(mapping, names(summationsNames()))) {
     invisible(checkSummations(submission, template = mapData,
                             summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
                             outputDirectory = outputDirectory, generatePlots = generatePlots,
-                            dataDumpFile = paste0(prefix, "_checkSummations.csv"), plotprefix = paste0(prefix, "_")))
+                            dataDumpFile = paste0(prefix, "_checkSummations.csv"),
+                            plotprefix = paste0(prefix, "_")))
   }
+
+  # write or return data ----
 
   if (is.null(outputFilename)) {
     return(submission)

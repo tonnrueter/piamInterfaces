@@ -5,7 +5,7 @@
 #' @param mifFile path to the mif file to apply summation checks to, or quitte object
 #' @param dataDumpFile file where data.frame with the data analysis is saved. Requires outputDirectory.
 #'        If NULL, result is returned.
-#' @param outputDirectory path to directory to place logFile and dataDumpFile
+#' @param outputDirectory path to directory to place logFile and dataDumpFile.
 #' @param logFile file where human-readable summary is saved. If NULL, write to stdout. If FALSE, don't log.
 #' @param logAppend boolean whether to append or overwrite logFile
 #' @param generatePlots boolean whether pdfs to compare data are generated. Requires outputDirectory.
