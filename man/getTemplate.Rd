@@ -16,6 +16,12 @@ Templates must contain the columns "Variable", "Unit", "piam_variable",
 Templates are csv files with semicolon as a separator and no quotation marks
 around fields.
 }
+\examples{
+\dontrun{
+getTemplate("ECEMF")
+getTemplate("/path/to/template/file")
+}
+}
 \author{
 Falk Benke, Oliver Richters
 }

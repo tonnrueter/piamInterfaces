@@ -11,6 +11,11 @@
 #' @param project name of requested template, or file name pointing to a template
 #' @importFrom utils read.csv2
 #' @importFrom gms chooseFromList
+#' @examples
+#' \dontrun{
+#' getTemplate("ECEMF")
+#' getTemplate("/path/to/template/file")
+#' }
 #' @export
 getTemplate <- function(project = NULL) {
   templates <- templateNames()
@@ -27,8 +32,13 @@ getTemplate <- function(project = NULL) {
     data <- read.csv2(filename, header = TRUE, sep = ";", na.strings = list(""), strip.white = TRUE, quote = "")
 
     requiredCols <- c("Variable", "Unit", "piam_variable", "piam_unit", "piam_factor")
+
+    if (length(data) == 1) {
+      stop(paste0("Failed to read in ", filename, ". Is source file separated by semicolons?"))
+    }
+
     if (!all(requiredCols %in% colnames(data))) {
-      stop(paste0("Failed to read in ", filename, ". Required columns is missing: ",
+      stop(paste0("Failed to read in ", filename, ". Required columns not found: ",
                   paste0(setdiff(requiredCols, colnames(data)), collapse = ", ")))
       }
 
