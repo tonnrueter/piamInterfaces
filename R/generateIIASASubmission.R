@@ -68,8 +68,9 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     addToScen = NULL,
                                     outputDirectory = "output",
                                     outputFilename = "submission.xlsx",
-                                    logFile = paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename)),
-                                    iiasatemplate = NULL, generatePlots = FALSE,
+                                    logFile = NULL,
+                                    iiasatemplate = NULL,
+                                    generatePlots = FALSE,
                                     timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
                                     mappingFile = NULL,
                                     generateSingleOutput = TRUE) {
@@ -85,6 +86,11 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     logFile <- FALSE
     outputFilename <- NULL
     message("\n# Param `outputDirectory` set to NULL. No files will be written.")
+  }
+
+  if (is.null(logFile)) {
+    logFile <- if (is.null(outputFilename)) "log.txt" else
+      paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename))
   }
 
   logFile <- setLogFile(outputDirectory, logFile)
