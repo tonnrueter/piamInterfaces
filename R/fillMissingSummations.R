@@ -59,7 +59,7 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFil
 
         tmp <- filter(data, !!sym("variable") %in% children) %>%
           group_by(!!!syms(c("model", "scenario", "region", "period", "unit"))) %>%
-          summarise(!!sym("value") := sum(!!sym("value")), .groups = "drop") %>%
+          summarise(value = sum(.data$value), .groups = "drop") %>%
           ungroup() %>%
           mutate(variable = var, sum_id = sumId)
 
@@ -76,7 +76,7 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFil
   # if there is more than one summation for the same variable, pick the best one
   .pickSummation <- function(df) {
     # tolerance: 1e-3
-    df <- df %>% mutate(!!sym("value") := round(!!sym("value"), 3))
+    df <- df %>% mutate("value" = round(!!sym("value"), 3))
 
     # check if the alternative summations yield the same results
     differences <- df %>%
@@ -133,7 +133,7 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFil
     # remains unchanged
     newMifFile <- out %>%
       select(-"sum_id") %>%
-      mutate(!!sym("variable") := paste0(!!sym("variable"), " (", !!sym("unit"), ")")) %>%
+      mutate("variable" = paste0(!!sym("variable"), " (", !!sym("unit"), ")")) %>%
       select(c("scenario", "model", "region", "variable", "year" = "period", "value")) %>%
       as.magpie(spatial = "region", temporal = "year", data = "value", tidy = TRUE) %>%
       mbind(mifFile)

@@ -14,23 +14,13 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
     data <- tidyr::crossing(data, year = seq(2005, 2030, 5))
     quitte::write.mif(x = as.quitte(data), path = file.path(tempdir(), "test.mif"))
 
-    mappingFile <- file.path(tempdir(), "output", paste0("mapping_", paste0(template, collapse = "_"), ".csv"))
-    if (any(template == "AR6")) {
-      generateMappingfile(templates = unlist(template), outputDirectory = NULL,
-                          fileName = mappingFile)
-      expect_no_warning(generateIIASASubmission(file.path(tempdir(), "test.mif"), model = "MAgPIE",
-                                                mappingFile = mappingFile,
-                                                outputDirectory = file.path(tempdir(), "output"),
-                                                logFile = file.path(tempdir(), "missing.log"),
-                                                outputFilename = "submission.xlsx")
-      )
-    } else {
-      expect_no_warning(generateIIASASubmission(tempdir(), model = "REMIND", mapping = unlist(template),
-                                                outputDirectory = file.path(tempdir(), "output"),
-                                                logFile = file.path(tempdir(), "missing.log"),
-                                                outputFilename = "submission.mif")
-      )
-    }
+    outputFilename <- if (any(template == "AR6")) "submission.xlsx" else "submission.mif"
+
+    expect_no_warning(generateIIASASubmission(tempdir(), model = "REMIND", mapping = unlist(template),
+                                              outputDirectory = file.path(tempdir(), "output"),
+                                              logFile = file.path(tempdir(), "missing.log"),
+                                              outputFilename = outputFilename)
+    )
     expectedFiles <- file.path(
       tempdir(), c(file.path("output", if (any(template == "AR6")) "submission.xlsx" else "submission.mif"))
     )

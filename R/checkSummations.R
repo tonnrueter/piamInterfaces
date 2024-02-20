@@ -99,7 +99,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
     comp <- left_join(parent, children, by = c("model", "scenario", "region", "period")) %>%
       # adapt unit of parent variable
-      mutate(!!sym("unit") := !!sym("unit.x")) %>%
+      mutate("unit" = .data$unit.x) %>%
       select(-c("unit.x", "unit.y"))
 
     # add NA entries for children in summation rule not found in data
@@ -254,8 +254,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
           df <- data %>%
             left_join(s, by = c("variable" = "child")) %>%
-            mutate("value" := ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor),
-                   "unit" := filter(plotdata, .data$variable == gsub(" [1-9]$", "", p))$unit[[1]]) %>%
+            mutate("value" = ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor),
+                   "unit" = filter(plotdata, .data$variable == gsub(" [1-9]$", "", p))$unit[[1]]) %>%
             select(-"factor")
 
           mip::showAreaAndBarPlots(df, intersect(childs, unique(plotdata$variable)),

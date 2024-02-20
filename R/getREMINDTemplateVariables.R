@@ -13,7 +13,7 @@ getREMINDTemplateVariables <- function(project) {
   if ("exclude_remind2_validation" %in% names(template)) {
     template <- template %>%
       filter(is.na(!!sym("exclude_remind2_validation")), !is.na(!!sym("piam_variable"))) %>%
-      mutate(!!sym("variable") := paste0(!!sym("piam_variable"), " (", !!sym("piam_unit"), ")"))
+      mutate("variable" = paste0(.data$piam_variable, " (", .data$piam_unit, ")"))
     remindVars <- c(remindVars, as.character(template[, "variable"]))
   } else {
     stop("Template ", project, " does not support remind2 validation. \n

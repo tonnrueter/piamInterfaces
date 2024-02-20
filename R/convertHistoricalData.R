@@ -31,8 +31,8 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   varmap <- m %>%
     filter(!is.na(!!sym("piam_variable"))) %>%
     mutate(
-      !!sym("piam_factor") := ifelse(is.na(!!sym("piam_factor")), 1, as.numeric(!!sym("piam_factor"))), # nolint
-      !!sym("piam_variable") := sub("\\|\\++\\|", "|", !!sym("piam_variable")) # nolint
+      "piam_factor" = ifelse(is.na(!!sym("piam_factor")), 1, as.numeric(!!sym("piam_factor"))), # nolint
+      "piam_variable" = sub("\\|\\++\\|", "|", !!sym("piam_variable")) # nolint
     )
 
   # for each project variable count number REMIND variables mapping to it
@@ -41,7 +41,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
 
   out <- hist %>%
     left_join(varmap, by = c("variable" = "piam_variable", "unit" = "piam_unit")) %>%
-    mutate(!!sym("value") := !!sym("piam_factor") * !!sym("value")) %>%
+    mutate("value" = !!sym("piam_factor") * !!sym("value")) %>%
     select("model", "scenario", "region", "variable" = "Variable", "unit" = "Unit",
            "period", "value", "countRemindVar")
 
