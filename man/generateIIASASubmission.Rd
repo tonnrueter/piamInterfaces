@@ -16,8 +16,7 @@ generateIIASASubmission(
   iiasatemplate = NULL,
   generatePlots = FALSE,
   timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
-  mappingFile = NULL,
-  generateSingleOutput = TRUE
+  mappingFile = NULL
 )
 }
 \arguments{
@@ -34,14 +33,14 @@ If NULL, the user is asked. Multiple templates are concatenated.}
 \item{addToScen}{string to be added as prefix to scenario name (optional)}
 
 \item{outputDirectory}{path to directory for the generated submission (default: output).
-If NULL, no files are produced and \code{logFile} and \code{outputFilename} have no effect.}
+If NULL, no files are written and \code{logFile} and \code{outputFilename} have no effect.}
 
 \item{outputFilename}{filename of the generated submission. Must be mif or xlsx file.
 If NULL, submission data is returned.
 If \code{outputDirectory} is set to NULL, this parameter has no effect.}
 
 \item{logFile}{path to the logfile with warnings as passed to generateMappingfile, checkIIASASubmission
-(default: outputDirectory/submission_missing.log). Set to FALSE for none.
+(default: outputDirectory/submission_log.txt). Set to FALSE for none.
 If \code{outputDirectory} is set to NULL, this parameter has no effect.}
 
 \item{iiasatemplate}{optional filename of xlsx or yaml file provided by IIASA
@@ -52,8 +51,6 @@ used to delete superfluous variables and adapt units}
 \item{timesteps}{timesteps that are accepted in final submission}
 
 \item{mappingFile}{has no effect and is only kept for backwards-compatibility}
-
-\item{generateSingleOutput}{has no effect and is only kept for backwards-compatibility}
 }
 \description{
 Generates an IIASA submission from REMIND or MAgPIE runs by applying a project-specific mapping.
@@ -67,9 +64,10 @@ To provide the mapping, two options exist:
 set mapping = c("AR6", "AR6_NGFS") or so.
 \item Alternatively, you can provide a path or a vector of paths to template files. If you provide your own template
 files, make sure they follow the standard format (see \code{getTemplate} for more information)
+\item It is also possible, to mix both options, e.g. c("AR6", "/path/to/template_file.csv")
 }
 
-Multiple template files will be concatenated.
+In any case, multiple template files will be concatenated.
 
 iiasatemplate is a xlsx or yaml file provided by IIASA with the variable + unit definitions that are
 accepted in the database. The function 'priceIndicesIIASA' will be called to calculate price indices

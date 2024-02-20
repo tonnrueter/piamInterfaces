@@ -9,8 +9,9 @@
 #'   set mapping = c("AR6", "AR6_NGFS") or so.
 #' - Alternatively, you can provide a path or a vector of paths to template files. If you provide your own template
 #'   files, make sure they follow the standard format (see `getTemplate` for more information)
+#' - It is also possible, to mix both options, e.g. c("AR6", "/path/to/template_file.csv")
 #'
-#' Multiple template files will be concatenated.
+#' In any case, multiple template files will be concatenated.
 #'
 #' iiasatemplate is a xlsx or yaml file provided by IIASA with the variable + unit definitions that are
 #' accepted in the database. The function 'priceIndicesIIASA' will be called to calculate price indices
@@ -35,9 +36,9 @@
 #' @param removeFromScen regular expression to be removed from scenario name (optional). Example: '_d50|d95'
 #' @param addToScen string to be added as prefix to scenario name (optional)
 #' @param outputDirectory path to directory for the generated submission (default: output).
-#'        If NULL, no files are produced and `logFile` and `outputFilename` have no effect.
+#'        If NULL, no files are written and `logFile` and `outputFilename` have no effect.
 #' @param logFile path to the logfile with warnings as passed to generateMappingfile, checkIIASASubmission
-#'        (default: outputDirectory/submission_missing.log). Set to FALSE for none.
+#'        (default: outputDirectory/submission_log.txt). Set to FALSE for none.
 #'        If `outputDirectory` is set to NULL, this parameter has no effect.
 #' @param outputFilename filename of the generated submission. Must be mif or xlsx file.
 #'        If NULL, submission data is returned.
@@ -46,7 +47,6 @@
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
 #' @param timesteps timesteps that are accepted in final submission
-#' @param generateSingleOutput has no effect and is only kept for backwards-compatibility
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join
@@ -72,8 +72,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     iiasatemplate = NULL,
                                     generatePlots = FALSE,
                                     timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
-                                    mappingFile = NULL,
-                                    generateSingleOutput = TRUE) {
+                                    mappingFile = NULL) {
 
   if (! is.null(mappingFile)) {
     warning("mappingFile is deprecated and ignored. If you got here via output.R -> export -> xlsx_IIASA,
@@ -82,16 +81,19 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
 
+
+  # if output directory is not set, do not write a log file or output file
   if (is.null(outputDirectory)) {
     logFile <- FALSE
     outputFilename <- NULL
-    message("\n# Param `outputDirectory` set to NULL. No files will be written.")
   }
 
+  # derive log file name from output file name, if possible
   if (is.null(logFile)) {
     logFile <- if (is.null(outputFilename)) "log.txt" else
       paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename))
   }
+
 
   logFile <- setLogFile(outputDirectory, logFile)
 
