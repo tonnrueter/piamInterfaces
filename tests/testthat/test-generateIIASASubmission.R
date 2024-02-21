@@ -21,9 +21,7 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
                                               logFile = file.path(tempdir(), "missing.log"),
                                               outputFilename = outputFilename)
     )
-    expectedFiles <- file.path(
-      tempdir(), c(file.path("output", if (any(template == "AR6")) "submission.xlsx" else "submission.mif"))
-    )
+    expectedFiles <- file.path(tempdir(), "output", outputFilename)
 
     for (f in expectedFiles) expect_true(file.exists(f))
     unlink(expectedFiles)

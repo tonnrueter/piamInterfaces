@@ -101,6 +101,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   # renaming to a more accurate name while maintaining backwards-compatibility
   templates <- mapping
+  message("# Generate mapping from ", paste(mapping, collapse = ", "))
 
   mapData <- NULL
 
@@ -150,6 +151,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   # apply mapping to data ----
 
+  message("# Apply generated mapping to data")
+
   submission <- mifdata %>%
     filter(.data$period %in% timesteps) %>%
     mutate(
@@ -175,6 +178,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   }
 
   # perform summation checks ----
+
+  message("# Apply summation checks")
 
   prefix <- gsub("\\.[A-Za-z]+$", "", if (is.null(outputFilename)) "output" else basename(outputFilename))
 
