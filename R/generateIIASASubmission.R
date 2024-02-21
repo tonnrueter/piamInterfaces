@@ -83,7 +83,6 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
 
-
   # if output directory is not set, do not write a log file or output file
   if (is.null(outputDirectory)) {
     logFile <- FALSE
@@ -98,8 +97,24 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   logFile <- setLogFile(outputDirectory, logFile)
 
+  # generate mapping from templates ----
+
   # renaming to a more accurate name while maintaining backwards-compatibility
   templates <- mapping
+
+  mapData <- NULL
+
+  for (i in seq_along(templates)) {
+    t <- getTemplate(templates[i]) %>%
+      filter(.data$piam_variable != "", !is.na(.data$piam_variable), .data$piam_variable != "TODO") %>%
+      mutate(
+        "piam_variable" = removePlus(.data$piam_variable),
+        "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor))
+      ) %>%
+      select("variable", "unit", "piam_variable", "piam_unit", "piam_factor")
+    checkUnitFactor(t, logFile = logFile, failOnUnitMismatch = FALSE)
+    mapData <- rbind(mapData, t)
+  }
 
   # read in data from mifs ----
 
@@ -133,36 +148,20 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
 
-  # generate mapping from templates ----
-
-  mapData <- NULL
-
-  for (i in seq_along(templates)) {
-    t <- getTemplate(templates[i]) %>%
-      filter(.data$piam_variable != "", !is.na(.data$piam_variable), .data$piam_variable != "TODO") %>%
-      mutate(
-        "piam_variable" = removePlus(.data$piam_variable),
-        "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor))
-      ) %>%
-      select("Variable", "Unit", "piam_variable", "piam_unit", "piam_factor")
-    checkUnitFactor(t, logFile = logFile, failOnUnitMismatch = FALSE)
-    mapData <- rbind(mapData, t)
-  }
-
-
   # apply mapping to data ----
 
   submission <- mifdata %>%
     filter(.data$period %in% timesteps) %>%
     mutate(
-      "variable" = removePlus(str_trim(.data$variable)),
-      "unit" = str_trim(.data$unit)
+      "piam_variable" = removePlus(str_trim(.data$variable)),
+      "piam_unit" = str_trim(.data$unit)
       ) %>%
+    select(-c("variable", "unit")) %>%
     distinct() %>%
-    inner_join(mapData, by = c("variable" = "piam_variable", "unit" = "piam_unit"),
+    inner_join(mapData, by = c("piam_variable", "piam_unit"),
                relationship = "many-to-many") %>%
     mutate("value" = .data$piam_factor * .data$value) %>%
-    select("model", "scenario", "region", "period", "variable" = "Variable", "unit" = "Unit", "value")
+    select("model", "scenario", "region", "period", "variable", "unit", "value")
 
   submission <- aggregate(value ~ model + region + scenario + period + variable + unit, data = submission, FUN = "sum")
 

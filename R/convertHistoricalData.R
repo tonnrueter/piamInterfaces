@@ -29,20 +29,19 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   }
 
   varmap <- m %>%
-    filter(!is.na(!!sym("piam_variable"))) %>%
+    filter(!is.na(.data$piam_variable)) %>%
     mutate(
-      "piam_factor" = ifelse(is.na(!!sym("piam_factor")), 1, as.numeric(!!sym("piam_factor"))), # nolint
-      "piam_variable" = sub("\\|\\++\\|", "|", !!sym("piam_variable")) # nolint
+      "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor)), # nolint
+      "piam_variable" = sub("\\|\\++\\|", "|", .data$piam_variable) # nolint
     )
 
   # for each project variable count number REMIND variables mapping to it
-  varmap <- left_join(varmap, count(varmap, !!sym("Variable"), name = "countRemindVar"),
-                      by = c("Variable"))
+  varmap <- left_join(varmap, count(varmap, .data$variable, name = "countRemindVar"), by = c("variable"))
 
   out <- hist %>%
     left_join(varmap, by = c("variable" = "piam_variable", "unit" = "piam_unit")) %>%
-    mutate("value" = !!sym("piam_factor") * !!sym("value")) %>%
-    select("model", "scenario", "region", "variable" = "Variable", "unit" = "Unit",
+    mutate("value" = .data$piam_factor * .data$value) %>%
+    select("model", "scenario", "region", "variable", "unit",
            "period", "value", "countRemindVar")
 
   # filter entries where all REMIND variables used for calculating project variables
@@ -50,7 +49,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   complete <- count(out, !!!syms(c("model", "scenario", "region", "variable",
                                    "unit", "period", "countRemindVar")),
                     name = "actualRemindVar") %>%
-    filter(!!sym("actualRemindVar") == !!sym("countRemindVar"))
+    filter(.data$actualRemindVar == .data$countRemindVar)
 
   out <- left_join(complete, out, by = c("model", "scenario", "region", "variable",
                                          "unit", "period", "countRemindVar")) %>%
@@ -64,7 +63,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
     }
 
     out <- left_join(out, regmap, by = c("region" = "REMIND")) %>%
-      filter(!is.na(!!sym("project_region"))) %>%
+      filter(!is.na(.data$project_region)) %>%
       select("model", "scenario", "region" = "project_region", "variable", "unit", "period", "value")
   }
 

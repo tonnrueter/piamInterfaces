@@ -1,7 +1,7 @@
 #' getTemplate
 #'
 #' Retrieves latest template for a given project.
-#' Templates must contain the columns "Variable", "Unit", "piam_variable",
+#' Templates must contain the columns "variable", "unit", "piam_variable",
 #' "piam_unit", "piam_factor".
 #' Templates are csv files with semicolon as a separator and no quotation marks
 #' around fields.
@@ -31,7 +31,7 @@ getTemplate <- function(project = NULL) {
   if (file.exists(filename)) {
     data <- read.csv2(filename, header = TRUE, sep = ";", na.strings = list(""), strip.white = TRUE, quote = "")
 
-    requiredCols <- c("Variable", "Unit", "piam_variable", "piam_unit", "piam_factor")
+    requiredCols <- c("variable", "unit", "piam_variable", "piam_unit", "piam_factor")
 
     if (length(data) == 1) {
       stop(paste0("Failed to read in ", filename, ". Is source file separated by semicolons?"))

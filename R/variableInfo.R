@@ -35,7 +35,7 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
     templateData <- getTemplate(t)
     templateName <- basename(t)
     remindno <- which(removePlus(varname) == removePlus(templateData[, remindVar]))
-    exportno <- head(which(removePlus(varname) == removePlus(templateData$Variable)), n = 1)
+    exportno <- head(which(removePlus(varname) == removePlus(templateData$variable)), n = 1)
     if (length(remindno) + length(exportno) == 0) {
       message("\n### Nothing found in template: ", blue, templateName, nc)
       next
@@ -56,42 +56,42 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
             "# Corresponding ", remindVar, " variables")
     }
     for (no in unique(c(remindno, exportno))) {
-      exportname <- templateData$Variable[no]
+      exportname <- templateData$variable[no]
       remindname <- templateData[no, remindVar]
-      allexportchilds <- unique(.getChilds(exportname, templateData$Variable))
+      allexportchilds <- unique(.getChilds(exportname, templateData$variable))
       allremindchilds <- unique(.getChilds(varname, templateData[, remindVar]))
       if (exportname %in% summationGroups$parent) {
         exportchilds <- summationGroups$child[summationGroups$parent == exportname]
         # print summation parents
         message(". ", str_pad(paste(exportname, "="), width + 3, "right"), "   . ",
-                paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable
+                paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable
                                                            == exportname])$variable, collapse = " + "), " =")
         # print summation childs
         for (ch in exportchilds) {
-          remindchilds <- unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable
+          remindchilds <- unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == ch])$variable
           message("  + ", str_pad(ch, width + 2, "right"), "    + ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         allexportchilds <- setdiff(allexportchilds, exportchilds)
       } else {
-        message(". ", str_pad(paste0(exportname, " (", templateData$Unit[no], ")"), width + 3, "right"),
+        message(". ", str_pad(paste0(exportname, " (", templateData$unit[no], ")"), width + 3, "right"),
                 "   . ", remindname, " (", templateData[, remindUnit][no], ")")
       }
       if (length(allexportchilds) + length(allremindchilds) > 0) {
         message("\n# Child variables", if (t %in% names(summationsNames())) " not in summation group")
         for (ch in allexportchilds) {
-          remindchilds <- unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable
+          remindchilds <- unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == ch])$variable
           message("  . ", str_pad(ch, width + 1, "right"), "     . ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         for (ch in allremindchilds) {
           exportchild <- unique(unitsplit(
-                         templateData$Variable[unitsplit(templateData[, remindVar])$variable == ch])$variable)
+                         templateData$variable[unitsplit(templateData[, remindVar])$variable == ch])$variable)
           exportchild <- exportchild[! is.na(exportchild)]
           message("   . ", str_pad(paste(exportchild, collapse = ", "), width, "right"), "     . ", ch)
         }
       }
-      message("Units: ", str_pad(paste0(unique(templateData$Unit[no]), collapse = ", "), width, "right"),
+      message("Units: ", str_pad(paste0(unique(templateData$unit[no]), collapse = ", "), width, "right"),
               " Units: ", paste0(unique(templateData[, remindUnit][no]), collapse = ", "))
     }
   }

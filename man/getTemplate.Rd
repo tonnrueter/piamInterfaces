@@ -11,7 +11,7 @@ getTemplate(project = NULL)
 }
 \description{
 Retrieves latest template for a given project.
-Templates must contain the columns "Variable", "Unit", "piam_variable",
+Templates must contain the columns "variable", "unit", "piam_variable",
 "piam_unit", "piam_factor".
 Templates are csv files with semicolon as a separator and no quotation marks
 around fields.

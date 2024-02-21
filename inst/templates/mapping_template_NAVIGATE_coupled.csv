@@ -1,4 +1,4 @@
-idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;Definition;exclude_remind2_validation
+idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;Definition;exclude_remind2_validation
 96;1;carbon management;Carbon Removal|Land Use;Mt CO2/yr;Emi|CO2|CDR|Land-Use Change;Mt CO2/yr;1;;;total carbon dioxide sequestered through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);
 96;1;carbon management;Carbon Removal|Land Use;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|CO2-price AR;Mt CO2/yr;-1;;;total carbon dioxide sequestered through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);
 96;1;carbon management;Carbon Removal|Land Use;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|NPI_NDC AR;Mt CO2/yr;-1;;;total carbon dioxide sequestered through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);
