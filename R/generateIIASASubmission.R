@@ -47,6 +47,7 @@
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
 #' @param timesteps timesteps that are accepted in final submission
+#' @param checkSummation either TRUE to identify summation files from mapping, or filename
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join
@@ -73,6 +74,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     iiasatemplate = NULL,
                                     generatePlots = FALSE,
                                     timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+                                    checkSummation = TRUE,
                                     mappingFile = NULL) {
 
   # process input parameters ----
@@ -167,7 +169,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   prefix <- gsub("\\.[A-Za-z]+$", "", if (is.null(outputFilename)) "output" else basename(outputFilename))
 
-  for (sumFile in intersect(mapping, names(summationsNames()))) {
+  sumfiles <- if (isTRUE(checkSummation)) intersect(mapping, names(summationsNames())) else setdiff(checkSummation, FALSE)
+  for (sumFile in sumfiles) {
     invisible(checkSummations(submission, template = mapData,
                             summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
                             outputDirectory = outputDirectory, generatePlots = generatePlots,

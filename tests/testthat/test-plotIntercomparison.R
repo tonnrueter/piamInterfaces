@@ -1,7 +1,7 @@
 test_that("plotComparison works", {
     lPV <- c("Temperature|Global Mean")
     tmpdir <- tempdir()
-    data <- dplyr::filter(quitte::quitte_example_dataAR6,
+    data <- dplyr::filter(qeAR6,
                           .data$model != "GCAM",
                           ! .data$variable %in% c("Population", "Final Energy|Industry|Liquids"))
     capture.output(m <- capture_messages(
