@@ -2,15 +2,25 @@
 % Please edit documentation in R/getTemplate.R
 \name{getTemplate}
 \alias{getTemplate}
-\title{Retrieves latest template for a given project or mapping file}
+\title{getTemplate}
 \usage{
 getTemplate(project = NULL)
 }
 \arguments{
-\item{project}{name of the project of requested template, or filename of mapping or template}
+\item{project}{name of requested template, or file name pointing to a template}
 }
 \description{
-Retrieves latest template for a given project or mapping file
+Retrieves latest template for a given project.
+Templates must contain the columns "variable", "unit", "piam_variable",
+"piam_unit", "piam_factor".
+Templates are csv files with semicolon as a separator and no quotation marks
+around fields.
+}
+\examples{
+\dontrun{
+getTemplate("ECEMF")
+getTemplate("/path/to/template/file")
+}
 }
 \author{
 Falk Benke, Oliver Richters

@@ -5,7 +5,7 @@
 #' @param mifFile path to the mif file to apply summation checks to, or quitte object
 #' @param dataDumpFile file where data.frame with the data analysis is saved. Requires outputDirectory.
 #'        If NULL, result is returned.
-#' @param outputDirectory path to directory to place logFile and dataDumpFile
+#' @param outputDirectory path to directory to place logFile and dataDumpFile.
 #' @param logFile file where human-readable summary is saved. If NULL, write to stdout. If FALSE, don't log.
 #' @param logAppend boolean whether to append or overwrite logFile
 #' @param generatePlots boolean whether pdfs to compare data are generated. Requires outputDirectory.
@@ -71,7 +71,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   data <- data %>%
     filter(!!sym("variable") %in% unique(c(parentVariables, unlist(checkVariables, use.names = FALSE))))
-  message("The filtered data contains ", length(unique(data$variable)), " variables.")
+  message("# The filtered data contains ", length(unique(data$variable)), " variables.")
 
   if (nrow(data) == 0) {
     return(NULL)
@@ -99,7 +99,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       rename("child" = !!sym("variable"), "childVal" = !!sym("value"))
     comp <- left_join(parent, children, by = c("model", "scenario", "region", "period")) %>%
       # adapt unit of parent variable
-      mutate(!!sym("unit") := !!sym("unit.x")) %>%
+      mutate("unit" = .data$unit.x) %>%
       select(-c("unit.x", "unit.y"))
 
     # add NA entries for children in summation rule not found in data
@@ -214,13 +214,13 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         childs <- checkVariables[[p]]
 
         remindchilds <- if (is.null(template)) NULL else
-                        unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == p])$variable
+                        unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == p])$variable
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                   paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff)[! is.null(remindchilds)]
                   ))
         for (ch in childs) {
           remindch <- if (is.null(template)) NULL else
-                      unitsplit(templateData[, remindVar][unitsplit(templateData$Variable)$variable == ch])$variable
+                      unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == ch])$variable
           text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
                     if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
         }
@@ -254,8 +254,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
           df <- data %>%
             left_join(s, by = c("variable" = "child")) %>%
-            mutate("value" := ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor),
-                   "unit" := filter(plotdata, .data$variable == gsub(" [1-9]$", "", p))$unit[[1]]) %>%
+            mutate("value" = ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor),
+                   "unit" = filter(plotdata, .data$variable == gsub(" [1-9]$", "", p))$unit[[1]]) %>%
             select(-"factor")
 
           mip::showAreaAndBarPlots(df, intersect(childs, unique(plotdata$variable)),

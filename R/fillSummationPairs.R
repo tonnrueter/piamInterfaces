@@ -22,7 +22,7 @@ fillSummationPairs <- function(mifFile, summationsFile) {
     filter(!!sym("parent") %in%
              (summationGroups %>% count(!!sym("parent")) %>% filter(!!sym("n") == 2) %>% pull(!!sym("parent"))),
            !!sym("parent") %in% unique(data$variable)) %>%
-    mutate(!!sym("childData") := ifelse(!!sym("child") %in% unique(data$variable), 1, 0)) %>%
+    mutate("childData" = ifelse(!!sym("child") %in% unique(data$variable), 1, 0)) %>%
     group_by(!!sym("parent")) %>%
     filter(sum(!!sym("childData")) == 1)
 
@@ -36,10 +36,10 @@ fillSummationPairs <- function(mifFile, summationsFile) {
       pull(!!sym("child"))
     tmp <- data %>%
       filter(!!sym("variable") %in% c(currParent, childWithValue)) %>%
-      mutate(!!sym("value") := ifelse(!!sym("variable") == childWithValue, - !!sym("value"), !!sym("value"))) %>%
+      mutate("value" = ifelse(!!sym("variable") == childWithValue, - !!sym("value"), !!sym("value"))) %>%
       group_by(!!!syms(c("model", "scenario", "region", "unit", "period"))) %>%
-      summarize(!!sym("value") := sum(!!sym("value")), .groups = "drop") %>%
-      mutate(!!sym("variable") := childWithoutValue) %>%
+      summarize(value = sum(.data$value), .groups = "drop") %>%
+      mutate("variable" = childWithoutValue) %>%
       group_by(!!!syms(c("model", "scenario", "region", "unit", "period"))) %>%
       relocate(!!!syms(c("model", "scenario", "region", "variable", "unit", "period", "value")))
     if (all(tmp %>% pull(!!sym("value")) == 0)) {

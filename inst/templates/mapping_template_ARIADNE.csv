@@ -1,4 +1,4 @@
-Tier;Category;Variable;Unit;Definition;piam_variable;piam_unit;piam_factor;Comment;idx;internal_comment;exclude_remind2_validation
+Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comment;idx;internal_comment;exclude_remind2_validation
 1;demography;Population;million;Total population;Population;million;1;;0;;
 3;demography;Population|Rural;million;Total population living in rural areas;;;;;0;;
 3;demography;Population|Urban;million;Total population living in urban areas;;;;;0;;

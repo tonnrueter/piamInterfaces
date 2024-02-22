@@ -25,7 +25,7 @@ checkSummations(
 \arguments{
 \item{mifFile}{path to the mif file to apply summation checks to, or quitte object}
 
-\item{outputDirectory}{path to directory to place logFile and dataDumpFile}
+\item{outputDirectory}{path to directory to place logFile and dataDumpFile.}
 
 \item{template}{mapping template to be loaded, used to print the remindVar corresponding to the data variables}
 

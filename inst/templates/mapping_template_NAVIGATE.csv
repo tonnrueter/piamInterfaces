@@ -1,4 +1,4 @@
-idx;Tier;Category;Variable;Unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;Definition;exclude_remind2_validation
+idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;Definition;exclude_remind2_validation
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);x
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);x
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);x
