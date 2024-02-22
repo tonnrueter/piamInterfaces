@@ -68,7 +68,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     addToScen = NULL,
                                     outputDirectory = "output",
                                     outputFilename = "submission.xlsx",
-                                    logFile = NULL,
+                                    logFile = if (is.null(outputFilename)) NULL else
+                                      paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename)),
                                     iiasatemplate = NULL,
                                     generatePlots = FALSE,
                                     timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
@@ -83,16 +84,9 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
 
-  # if output directory is not set, do not write a log file or output file
   if (is.null(outputDirectory)) {
-    logFile <- FALSE
     outputFilename <- NULL
-  }
-
-  # derive log file name from output file name, if possible
-  if (is.null(logFile)) {
-    logFile <- if (is.null(outputFilename)) "log.txt" else
-      paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename))
+    logFile <- NULL
   }
 
   logFile <- setLogFile(outputDirectory, logFile)
@@ -164,7 +158,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     inner_join(mapData, by = c("piam_variable", "piam_unit"),
                relationship = "many-to-many") %>%
     mutate("value" = .data$piam_factor * .data$value) %>%
-    select("model", "scenario", "region", "period", "variable", "unit", "value")
+    select("model", "scenario", "region", "period", "variable", "unit", "value") %>%
+    quitteSort()
 
   submission <- aggregate(value ~ model + region + scenario + period + variable + unit, data = submission, FUN = "sum")
 
