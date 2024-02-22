@@ -114,25 +114,14 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   # read in data from mifs ----
 
   # for each directory, include all mif files
-  if (is.character(mifs)) {
-    invalidElements <- intersect(mifs[!dir.exists(mifs)], mifs[!file.exists(mifs)])
+  mifdata <- readMifs(mifs)
 
-    if (length(invalidElements) > 0) {
-      stop(paste0("Invalid argument 'mifs'. Element(s) that are neither files nor paths: ",
-                  paste0(invalidElements, collapse = ", ")))
-    }
-
-    for (m in mifs[dir.exists(mifs)]) {
-      if (length(list.files(m, "*.mif")) == 0) {
-        stop(paste0("No mif files found in folder ", m))
-      }
-    }
-
-    flist <- unique(c(mifs[!dir.exists(mifs)], list.files(mifs[dir.exists(mifs)], "*.mif", full.names = TRUE)))
-    message(paste0("# Reading in mifs ", paste0(flist, collapse = ", ")))
-    mifdata <- droplevels(as.quitte(flist), na.rm = TRUE)
-  } else {
-    mifdata <- droplevels(as.quitte(mifs, na.rm = TRUE))
+  dupl <- mifdata %>% select(-"value") %>% filter(duplicated(mifdata)) %>% droplevels()
+  if (nrow(dupl) > 0) {
+    stop("Duplicated data found: ",
+         "\n  - Models: ", paste(levels(dupl$model), collapse = ", "),
+         "\n  - Scenarios: ", paste(levels(dupl$scenario), collapse = ", ")
+        )
   }
 
   if (any(grepl("^Price\\|.*\\|Moving Avg$", levels(mifdata$variable))) &&

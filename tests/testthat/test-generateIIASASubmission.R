@@ -76,3 +76,18 @@ test_that("Correct Prices are selected and plusses ignored", {
   peSeGas <- unique(filter(qemif2, !!sym("variable") == "Price|Secondary Energy|Gases|Natural Gas")$value)
   expect_identical(round(peSeGas / 1.1), 4)
 })
+
+test_that("fail on duplicated data", {
+  d <- quitte::as.quitte(data.frame(
+    "model" = "REMIND",
+    "scenario" = c("Base", "Base", "NDC", "NDC"),
+    "variable" = "Price|Energy",
+    "value" = c(2., 6., 5., 8.),
+    "period" = c(2005, 2010, 2005, 2010),
+    "region" = "GLO",
+    "unit" = "US$2010/GJ"
+  ))
+  dupl <- rbind(d, d)
+  expect_error(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
+               "Duplicated data found")
+})
