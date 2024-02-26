@@ -1,5 +1,5 @@
 test_that("checkDataLength works", {
-  mifdata <- quitte::quitte_example_dataAR6
+  mifdata <- qeAR6
   expect_silent(checkDataLength(mifdata))
 
   mifdata <- filter(mifdata, !!sym("variable") == "Population" & !!sym("scenario") == "Current Policies")

@@ -1,5 +1,5 @@
 test_that("fixOnRef works", {
-  qe <- quitte::quitte_example_dataAR6
+  qe <- qeAR6
   d <- droplevels(dplyr::filter(qe,
                                 scenario == first(scenario),
                                 model == first(model)))

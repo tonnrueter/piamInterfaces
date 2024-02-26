@@ -2,20 +2,20 @@ test_that("checkIIASATemplate works", {
 
   # check that quitte_example_dataAR6 runs through without a problem
   iiasaxlsx <- file.path(tempdir(), "iiasatemplate.xlsx")
-  writexl::write_xlsx(x = quitte::quitte_example_dataAR6, path = iiasaxlsx)
+  writexl::write_xlsx(x = qeAR6, path = iiasaxlsx)
 
-  mifdata <- quitte::quitte_example_dataAR6
+  mifdata <- qeAR6
   capture.output(miftest <- checkIIASASubmission(mifdata, iiasaxlsx, failOnUnitMismatch = TRUE))
   expect_identical(mifdata, miftest)
 
   # generate unit mismatch fail
-  mifdata <- quitte::quitte_example_dataAR6
+  mifdata <- qeAR6
   levels(mifdata$unit)[4] <- "zillion"
   expect_error(capture.output(checkIIASASubmission(mifdata, iiasaxlsx, failOnUnitMismatch = TRUE)),
                "Unit mismatches")
 
   # generate data length warning message
-  mifdata <- quitte::quitte_example_dataAR6
+  mifdata <- qeAR6
   mifdata <- filter(mifdata, !!sym("variable") == "Population" & !!sym("scenario") == "Current Policies")
   capture.output(expect_output(checkIIASASubmission(mifdata, iiasaxlsx, failOnUnitMismatch = FALSE),
                                "variables found whose data points differ between scenarios"))

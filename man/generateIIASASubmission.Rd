@@ -17,6 +17,7 @@ generateIIASASubmission(
   iiasatemplate = NULL,
   generatePlots = FALSE,
   timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+  checkSummation = TRUE,
   mappingFile = NULL
 )
 }
@@ -50,6 +51,8 @@ used to delete superfluous variables and adapt units}
 \item{generatePlots}{boolean, whether to generate plots of failing summation checks}
 
 \item{timesteps}{timesteps that are accepted in final submission}
+
+\item{checkSummation}{either TRUE to identify summation files from mapping, or filename}
 
 \item{mappingFile}{has no effect and is only kept for backwards-compatibility}
 }
