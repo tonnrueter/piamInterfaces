@@ -169,8 +169,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   prefix <- gsub("\\.[A-Za-z]+$", "", if (is.null(outputFilename)) "output" else basename(outputFilename))
 
-  sumfiles <- if (isTRUE(checkSummation)) intersect(mapping, names(summationsNames())) else setdiff(checkSummation, FALSE)
-  for (sumFile in sumfiles) {
+  sumFiles <- if (isTRUE(checkSummation)) intersect(mapping, names(summationsNames())) else checkSummation
+  for (sumFile in setdiff(sumFiles, FALSE)) {
     invisible(checkSummations(submission, template = mapData,
                             summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
                             outputDirectory = outputDirectory, generatePlots = generatePlots,
