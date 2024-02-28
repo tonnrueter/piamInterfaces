@@ -52,7 +52,7 @@ used to delete superfluous variables and adapt units}
 
 \item{timesteps}{timesteps that are accepted in final submission}
 
-\item{checkSummation}{either TRUE to identify summation files from mapping, or filename}
+\item{checkSummation}{either TRUE to identify summation files from mapping, or filename, or FALSE}
 
 \item{mappingFile}{has no effect and is only kept for backwards-compatibility}
 }

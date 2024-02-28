@@ -129,9 +129,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
           collapse = " + "),
         .groups = "drop") %>%
       ungroup() %>%
+      mutate(diff = !!sym("checkSum") - !!sym("value")) %>%
       mutate(
-        diff = !!sym("checkSum") - !!sym("value"),
-        reldiff = 100 * (!!sym("checkSum") - !!sym("value")) / !!sym("value"),
+        reldiff = ifelse(abs(!!sym("checkSum")) + abs(!!sym("value")) == 0, 0, 100 * !!sym("diff") / !!sym("value")),
         details = gsub("\\+ \\-", "-", !!sym("details"))
       ) %>%
       relocate(!!sym("details"), .after = last_col())
@@ -271,7 +271,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         paste0("# All deviations can be found in the returned object",
                paste0(" and in ", dataDumpFile)[! is.null(dataDumpFile)], "."),
         paste0("# To get more detailed information on '", problematic[1], "', run piamInterfaces::variableInfo('",
-               problematic[1], "').")
+               gsub(" [1-9]$", "", problematic[1]), "').")
         )
       if (generatePlots) {
         dev.off()
