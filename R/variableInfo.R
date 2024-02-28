@@ -30,6 +30,8 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
     c[which(grepl(tobefound, removePlus(c)))]
   }
 
+  varname <- trimws(varname)
+
   message("\n##### Search for information on ", green, varname, nc, " in mapping templates")
   for (t in template) {
     templateData <- getTemplate(t)

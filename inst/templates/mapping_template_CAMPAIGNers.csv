@@ -197,9 +197,9 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 167;2;emissions (CO2);Emissions|CO2|Industrial Processes|Non-Metallic Minerals;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from non-metallic minerals;
 168;2;emissions (CO2);Emissions|CO2|Industrial Processes|Non-Metallic Minerals|Cement;Mt CO2/yr;Emi|CO2|Industrial Processes|+|Cement;Mt CO2/yr;;;;CO2 emissions from industrial processes from cement;
 169;2;emissions (CO2);Emissions|CO2|Industrial Processes|Non-Ferrous Metals;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from non-ferrous minerals;
-170;2;emissions (CO2);Emissions|CO2|Industrial Processes|Chemicals;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from chemicals;
-171;2;emissions (CO2);Emissions|CO2|Industrial Processes|Pulp and Paper;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from chemicals;
-172;2;emissions (CO2);Emissions|CO2|Industrial Processes|Other Sector;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from chemicals;
+170;2;emissions (CO2);Emissions|CO2|Industrial Processes|Chemicals;Mt CO2/yr;Emi|CO2|Industrial Processes|+|Chemicals;Mt CO2/yr;;;;CO2 emissions from industrial processes from chemicals;
+171;2;emissions (CO2);Emissions|CO2|Industrial Processes|Pulp and Paper;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from pulp and paper;
+172;2;emissions (CO2);Emissions|CO2|Industrial Processes|Other Sector;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from other sectors;
 173;1;emissions (CO2);Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|w/ Bunkers|Energy;Mt CO2/yr;;;;Fossil CO2 emissions from energy use on supply and demand side (IPCC category 1A, 1B), net of negative emissions from Bioenergy with CCS (BECCS), including emissions from international bunkers;
 174;2;emissions (CO2);Gross Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross|Energy;Mt CO2/yr;;;;Gross Fossil CO2 emissions from energy use on supply and demand side (IPCC category 1A, 1B), not accounting for negative emissions from BECCS;
 175;1;emissions (CO2);Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|w/ Bunkers|Energy and Industrial Processes;Mt CO2/yr;;;;Fossil CO2 emissions from energy use on supply and demand side (IPCC category 1A, 1B) and from industrial processes (IPCC categories 2A, B, C, E), including emissions from international bunkers, net of negative emissions from Bioenergy with CCS (BECCS);
