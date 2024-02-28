@@ -47,7 +47,7 @@
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks
 #' @param timesteps timesteps that are accepted in final submission
-#' @param checkSummation either TRUE to identify summation files from mapping, or filename
+#' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join
@@ -169,13 +169,17 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   prefix <- gsub("\\.[A-Za-z]+$", "", if (is.null(outputFilename)) "output" else basename(outputFilename))
 
-  sumFiles <- if (isTRUE(checkSummation)) intersect(mapping, names(summationsNames())) else checkSummation
-  for (sumFile in setdiff(sumFiles, FALSE)) {
-    invisible(checkSummations(submission, template = mapData,
-                            summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
-                            outputDirectory = outputDirectory, generatePlots = generatePlots,
-                            dataDumpFile = paste0(prefix, "_checkSummations.csv"),
-                            plotprefix = paste0(prefix, "_")))
+  if (isTRUE(checkSummation)) checkSummation <- intersect(mapping, names(summationsNames()))
+  sumFiles <- setdiff(checkSummation, FALSE)
+  if (length(sumFiles) > 0) {
+    message("# Apply summation checks")
+    for (sumFile in setdiff(sumFiles, FALSE)) {
+      invisible(checkSummations(submission, template = mapData,
+                              summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
+                              outputDirectory = outputDirectory, generatePlots = generatePlots,
+                              dataDumpFile = paste0(prefix, "_checkSummations.csv"),
+                              plotprefix = paste0(prefix, "_")))
+    }
   }
 
   # write or return data ----
@@ -199,7 +203,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
       dt$model <- modelname
       message("# Correct model name to '", modelname, "'.")
     }
-    if (! is.null(scenRemove)) {
+    if (! is.null(scenRemove) && ! scenRemove %in% "") {
       dt$scenario <- gsub(scenRemove, "", dt$scenario)
       message("# Adapt scenario names: '", scenRemove, "' will be removed.")
     }
