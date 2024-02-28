@@ -223,8 +223,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 189;Value Added|Industry|Share of energy costs;%;;;;;;;share of energy costs to the total economic valuye added by Industry;x
 190;Emissions|BC;Mt BC/yr;Emi|BC;Mt BC/yr;;;;;total black carbon emissions;
 191;Emissions|BC|AFOLU;Mt BC/yr;Emi|BC|Land Use;Mt BC/yr;;;;;black carbon emissions from agriculture,forestry and other land use (IPCC category 3);
-192;Emissions|BC|AFOLU|Agriculture;Mt BC/yr;Emi|BC|Land Use|Agriculture;Mt BC/yr;;;;;BC|AFOLU|Agric emissions from agriculture;
-193;Emissions|BC|AFOLU|Land;Mt BC/yr;;;;;;;BC|AFOL emissions from forestry and other land use;x
+192;Emissions|BC|AFOLU|Agriculture;Mt BC/yr;Emi|BC|Land Use|Agriculture;Mt BC/yr;;;;;Black Carbon emissions from agriculture;
+192;Emissions|BC|AFOLU|Agriculture;Mt BC/yr;Emi|BC|Land Use|Agricultural Waste Burning;Mt BC/yr;;;;;Black Carbon AFOLU emissions from agriculture;
+193;Emissions|BC|AFOLU|Land;Mt BC/yr;Emi|BC|Land Use|Forest Burning;Mt BC/yr;;;;;Black Carbon AFOLU emissions from forestry and other land use;
+193;Emissions|BC|AFOLU|Land;Mt BC/yr;Emi|BC|Land Use|Savannah Burning;Mt BC/yr;;;;;Black Carbon AFOLU emissions from forestry and other land use;
 194;Emissions|BC|Energy;Mt BC/yr;Emi|BC|Energy Supply and Demand;Mt BC/yr;;;;;black carbon emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
 195;Emissions|BC|Energy|Demand|Residential and Commercial;Mt BC/yr;Emi|BC|Energy Demand|Buildings;Mt BC/yr;;;;;black carbon emissions from fuel combustion in residential,commercial,institutional sectors and agriculture (IPCC category 1A4a,1A4b);
 196;Emissions|BC|Energy|Demand|Residential and Commercial|Commercial;Mt BC/yr;;;;;;;BC emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
@@ -349,7 +351,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 309;Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Emi|CO2|Transport|Rail|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from transport by rail mode;x
 310;Emissions|CO2|Energy|Demand|Transportation|Rail|Freight;Mt CO2/yr;Emi|CO2|Transport|Freight|Rail|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from transport by freight rail mode;x
 311;Emissions|CO2|Energy|Demand|Transportation|Rail|Passenger;Mt CO2/yr;Emi|CO2|Transport|Pass|Rail|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from transport by passenger rail mode;x
-312;Emissions|CO2|Energy|Demand|Transportation|Road;Mt CO2/yr;Emi|CO2|Transport|Road|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from road transport vehicles;x
+312;Emissions|CO2|Energy|Demand|Transportation|Road;Mt CO2/yr;Emi|CO2|Transport|Freight|Road|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from road transport vehicles;x
+312;Emissions|CO2|Energy|Demand|Transportation|Road;Mt CO2/yr;Emi|CO2|Transport|Pass|Road|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from road transport vehicles;x
 313;Emissions|CO2|Energy|Demand|Transportation|Road|Freight;Mt CO2/yr;Emi|CO2|Transport|Freight|Road|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from road freight transport vehicles;x
 314;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger;Mt CO2/yr;Emi|CO2|Transport|Pass|Road|Demand;Mt CO2/yr;;;;;carbon dioxide emissions from road transport passenger vehicles;x
 315;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|2W&3W;Mt CO2/yr;;;;;;;;x
