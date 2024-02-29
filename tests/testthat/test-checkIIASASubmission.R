@@ -15,8 +15,10 @@ test_that("checkIIASATemplate works", {
                "Unit mismatches")
 
   # generate data length warning message
-  mifdata <- qeAR6
-  mifdata <- filter(mifdata, !!sym("variable") == "Population" & !!sym("scenario") == "Current Policies")
+  mifdata <- qeAR6 %>%
+    filter(.data$variable == "Population") %>%
+    filter(.data$scenario %in% c("Current Policies", "Delayed transition")) %>%
+    filter(.data$period < 2050 | .data$scenario %in% "Current Policies")
   capture.output(expect_output(checkIIASASubmission(mifdata, iiasaxlsx, failOnUnitMismatch = FALSE),
                                "variables found whose data points differ between scenarios"))
 
