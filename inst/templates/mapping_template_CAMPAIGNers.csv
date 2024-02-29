@@ -333,6 +333,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 297;2;emissions (non-CO2);Emissions|CH4|AFOLU|Land;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;;;;CH4 emissions from forestry and other land use;
 298;2;emissions (non-CO2);Emissions|CH4|AFOLU|Land|Wetlands;Mt CH4/yr;Emi|CH4|Land-Use Change|+|Peatland;Mt CH4/yr;;;;CH4 emissions from managed peatlands (drained and rewetted);
 299;2;emissions (non-CO2);Emissions|CH4|Energy;Mt CH4/yr;Emi|CH4|+|Energy Supply;Mt CH4/yr;;;;CH4 emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
+299;2;emissions (non-CO2);Emissions|CH4|Energy;Mt CH4/yr;Emi|CH4|+|Extraction;Mt CH4/yr;;;;CH4 emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
 300;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Industry;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in industry (IPCC category 1A2);
 301;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Residential and Commercial;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in residential, commercial, institutional sectors (IPCC category 1A4a,  1A4b);
 302;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Transportation;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in transportation sector (IPCC category 1A3), excluding pipeline emissions (IPCC category 1A3ei);
