@@ -164,9 +164,6 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   }
 
   # perform summation checks ----
-
-  message("# Apply summation checks")
-
   prefix <- gsub("\\.[A-Za-z]+$", "", if (is.null(outputFilename)) "output" else basename(outputFilename))
 
   if (isTRUE(checkSummation)) checkSummation <- intersect(mapping, names(summationsNames()))

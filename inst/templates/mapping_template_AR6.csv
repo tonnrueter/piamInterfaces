@@ -262,13 +262,15 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 224;Emissions|CFC|Industrial Processes;Mt CO2-equiv/yr;;;;;;;CFC emissions from industrial processes;x
 225;Emissions|CFC|Waste;Mt CO2-equiv/yr;;;;;;;;x
 226;Emissions|CH4;Mt CH4/yr;Emi|CH4;Mt CH4/yr;;;;;total CH4 emissions;
-227;Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|+|Agriculture;Mt CH4/yr;;;;;CH4 emissions from agriculture,forestry and other land use (IPCC category 3);x
-;Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;;;;;CH4 emissions from agriculture,forestry and other land use (IPCC category 3);x
-228;Emissions|CH4|AFOLU|Agriculture;Mt CH4/yr;Emi|CH4|+|Agriculture;Mt CH4/yr;;;;;CH4|AFOLU|Agric emissions from agriculture;x
-;Emissions|CH4|AFOLU|Agriculture|Livestock;Mt CH4/yr;Emi|CH4|Agriculture|+|Enteric fermentation;Mt CH4/yr;;;;;;x
-;Emissions|CH4|AFOLU|Agriculture|Livestock;Mt CH4/yr;Emi|CH4|Agriculture|+|Animal waste management;Mt CH4/yr;;;;;;x
-;Emissions|CH4|AFOLU|Agriculture|Livestock|Enteric Fermentation;Mt CH4/yr;Emi|CH4|Agriculture|+|Enteric fermentation;Mt CH4/yr;;;;;;x
-;Emissions|CH4|AFOLU|Agriculture|Livestock|Manure Management;Mt CH4/yr;Emi|CH4|Agriculture|+|Animal waste management;Mt CH4/yr;;;;;;x
+227;Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|+|Agriculture;Mt CH4/yr;;;;;CH4 emissions from agriculture,forestry and other land use (IPCC category 3);
+;Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;;;;;CH4 emissions from agriculture,forestry and other land use (IPCC category 3);
+228;Emissions|CH4|AFOLU|Agriculture;Mt CH4/yr;Emi|CH4|+|Agriculture;Mt CH4/yr;;;;;CH4|AFOLU|Agric emissions from agriculture;
+;Emissions|CH4|AFOLU|Agriculture|Livestock;Mt CH4/yr;Emi|CH4|Agriculture|+|Enteric fermentation;Mt CH4/yr;;;;;;
+;Emissions|CH4|AFOLU|Agriculture|Livestock;Mt CH4/yr;Emi|CH4|Agriculture|+|Animal waste management;Mt CH4/yr;;;;;;
+;Emissions|CH4|AFOLU|Agriculture|Livestock;Mt CH4/yr;Emi|CH4|Agriculture|+|Waste Burning;Mt CH4/yr;;;;;;
+;Emissions|CH4|AFOLU|Agriculture|Livestock|Enteric Fermentation;Mt CH4/yr;Emi|CH4|Agriculture|+|Enteric fermentation;Mt CH4/yr;;;;;;
+;Emissions|CH4|AFOLU|Agriculture|Livestock|Manure Management;Mt CH4/yr;Emi|CH4|Agriculture|+|Animal waste management;Mt CH4/yr;;;;;;
+;Emissions|CH4|AFOLU|Agriculture|Livestock|Manure Management;Mt CH4/yr;Emi|CH4|Agriculture|+|Waste Burning;Mt CH4/yr;;;;;added because own category is missing;
 ;Emissions|CH4|AFOLU|Agriculture|Rice;Mt CH4/yr;Emi|CH4|Agriculture|+|Rice;Mt CH4/yr;;;;;;x
 229;Emissions|CH4|AFOLU|Land;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;;;;;CH4|AFOL emissions from forestry and other land use;
 ;Emissions|CH4|AFOLU|Wetlands|Peatlands;Mt CH4/yr;Emi|CH4|Land-Use Change|+|Peatland;Mt CH4/yr;;;;;;x
@@ -417,19 +419,20 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 372;Emissions|HFC|Waste;Mt CO2-equiv/yr;;;;;;;;x
 373;Emissions|Kyoto Gases;Mt CO2-equiv/yr;Emi|GHG;Mt CO2eq/yr;;;;100-year GWPs from AR5 were used;total Kyoto GHG emissions,including CO2,CH4,N2O and F-gases (preferably use 100-year GWPs from AR4 for aggregation of different gases;
 374;Emissions|N2O;kt N2O/yr;Emi|N2O;kt N2O/yr;;;;;total N2O emissions;
-375;Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Agriculture;Mt N2O/yr;1000;;;;N2O emissions from agriculture,forestry and other land use (IPCC category 3);x
-;Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Land-Use Change;Mt N2O/yr;1000;;;;N2O emissions from agriculture,forestry and other land use (IPCC category 3);x
-376;Emissions|N2O|AFOLU|Agriculture;kt N2O/yr;Emi|N2O|+|Agriculture;Mt N2O/yr;1000;;;;N2O|AFOLU|Agric emissions from agriculture;x
-;Emissions|N2O|AFOLU|Agriculture|Livestock|Manure Management;kt N2O/yr;Emi|N2O|Agriculture|+|Animal Waste Management;Mt N2O/yr;1000;;;;;x
-;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Decay of Crop Residues;Mt N2O/yr;1000;;;;;
-;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Inorganic Fertilizers;Mt N2O/yr;1000;;;;;
-;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Manure applied to Croplands;Mt N2O/yr;1000;;;;;
-;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Pasture;Mt N2O/yr;1000;;;;;
-;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Soil Organic Matter Loss;Mt N2O/yr;1000;;;;;x
+375;Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Agriculture;kt N2O/yr;;;;;N2O emissions from agriculture,forestry and other land use (IPCC category 3);
+;Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;;;;;N2O emissions from agriculture,forestry and other land use (IPCC category 3);
+376;Emissions|N2O|AFOLU|Agriculture;kt N2O/yr;Emi|N2O|+|Agriculture;kt N2O/yr;;;;;N2O|AFOLU|Agric emissions from agriculture;
+;Emissions|N2O|AFOLU|Agriculture|Livestock|Manure Management;kt N2O/yr;Emi|N2O|Agriculture|+|Animal Waste Management;kt N2O/yr;;;;;;
+;Emissions|N2O|AFOLU|Agriculture|Livestock|Manure Management;kt N2O/yr;Emi|N2O|Agriculture|+|Waste Burning;kt N2O/yr;;;;;added because own category is missing;
+;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Decay of Crop Residues;kt N2O/yr;;;;;;
+;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Inorganic Fertilizers;kt N2O/yr;;;;;;
+;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Manure applied to Croplands;kt N2O/yr;;;;;;
+;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Pasture;kt N2O/yr;;;;;;
+;Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Soil Organic Matter Loss;kt N2O/yr;;;;;;
 377;Emissions|N2O|AFOLU|Land;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;;;;;N2O|AFOL emissions from forestry and other land use;
-;Emissions|N2O|AFOLU|Wetlands|Peatlands;kt N2O/yr;Emi|N2O|Land-Use Change|+|Peatland;Mt N2O/yr;1000;;;;;x
-378;Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;;;;;N2O emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);x
-;Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;;;;;N2O emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);x
+;Emissions|N2O|AFOLU|Wetlands|Peatlands;kt N2O/yr;Emi|N2O|Land-Use Change|+|Peatland;kt N2O/yr;;;;;;
+378;Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;;;;;N2O emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
+;Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;;;;;N2O emissions from energy use on supply and demand side,including fugitive emissions from fuels (IPCC category 1A,1B);
 379;Emissions|N2O|Energy|Demand|Residential and Commercial|Commercial;kt N2O/yr;;;;;;;N2O emissions from fuel combustion in commercial sector (IPCC category 1A4a,1A4b);x
 380;Emissions|N2O|Energy|Demand|Residential and Commercial|Residential;kt N2O/yr;;;;;;;N2O emissions from fuel combustion in residential sector (IPCC category 1A4a,1A4b);x
 382;Emissions|N2O|Energy|Demand|Transportation;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;;;;;N2O emissions from fuel combustion in the transportation sector (part of IPCC category 1A3),excluding pipeline emissions (IPCC category 1A3ei);
