@@ -9,8 +9,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Population|Extreme Poverty|International poverty line;million;Population|Extreme Poverty|International poverty line;million;;;;;population living in extreme poverty with income <US$1.90 2011 PPP per day (World Bank definition);x
 8;Population|Poverty|LMIC poverty line;million;Population|Poverty|LMIC poverty line;million;;;;;population living in poverty with income <US$3.20 2011 PPP per day (World Bank LMIC definition);x
 9;Population|Poverty|UMIC poverty line;million;Population|Poverty|UMIC poverty line;million;;;;;population living in poverty with income <US$5.50 2011 PPP per day (World Bank LMIC definition);x
-10;Population|Gender education gap|Primary;percentage points;;;;;;from SSP;difference between genders in primary education completion rate (age 15+);x
-11;Population|Gender education gap|Secondary;percentage points;;;;;;from SSP;difference between genders in secondary education completion rate (age 20+);x
+10;Population|Gender education gap|Primary;percentage points;;;;;;from SSP;difference between genders in primary education completion rate (age 15+);
+11;Population|Gender education gap|Secondary;percentage points;;;;;;from SSP;difference between genders in secondary education completion rate (age 20+);
 12;GDPpcap|PPP|Growth rate;%;GDP|PPP|Per capita growth rate;percent;;;;;GDP/cap (PPP) growth rate;x
 13;GDPpcap|PPP|Ratio to OECD;%;GDP|PPP|Per capita ratio to OECD;percent;;;;;Ratio of GDP/cap (PPP) of developing regions to OECD average;x
 14;Population|Relative poverty|wrt median income|Share;%;Population|Relative poverty|wrt median income|Share;percent;;;;;Share of population below 50% of national median income;x
