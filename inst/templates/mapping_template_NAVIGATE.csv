@@ -333,6 +333,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 297;2;emissions (non-CO2);Emissions|CH4|AFOLU|Land;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;;;;CH4 emissions from forestry and other land use;
 298;2;emissions (non-CO2);Emissions|CH4|AFOLU|Land|Wetlands;Mt CH4/yr;Emi|CH4|Land-Use Change|+|Peatland;Mt CH4/yr;;;;CH4 emissions from managed peatlands (drained and rewetted);
 299;2;emissions (non-CO2);Emissions|CH4|Energy;Mt CH4/yr;Emi|CH4|+|Energy Supply;Mt CH4/yr;;;;CH4 emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
+299;2;emissions (non-CO2);Emissions|CH4|Energy;Mt CH4/yr;Emi|CH4|+|Extraction;Mt CH4/yr;;;;CH4 emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
 300;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Industry;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in industry (IPCC category 1A2);
 301;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Residential and Commercial;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in residential, commercial, institutional sectors (IPCC category 1A4a,  1A4b);
 302;2;emissions (non-CO2);Emissions|CH4|Energy|Demand|Transportation;Mt CH4/yr;;;;;;CH4 emissions from fuel combustion in transportation sector (IPCC category 1A3), excluding pipeline emissions (IPCC category 1A3ei);
@@ -368,9 +369,11 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 327;2;emissions (non-CO2);Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;Emi|N2O|Agriculture|+|Pasture;kt N2O/yr;;;;N2O  emissions from soil management practices in the agriculture sector;
 328;2;emissions (non-CO2);Emissions|N2O|AFOLU|Land;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;;;;N2O emissions from forestry and other land use;
 329;2;emissions (non-CO2);Emissions|N2O|AFOLU|Land|Wetlands;kt N2O/yr;Emi|N2O|Land-Use Change|+|Peatland;kt N2O/yr;;;;N2O emissions from managed peatlands (drained and rewetted);
-330;2;emissions (non-CO2);Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|Energy Supply and Demand;kt N2O/yr;;;;N2O emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);x
+330;2;emissions (non-CO2);Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;;;;N2O emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
+330;2;emissions (non-CO2);Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;;;;N2O emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
+330;2;emissions (non-CO2);Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;;;;N2O emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
 331;2;emissions (non-CO2);Emissions|N2O|Waste;kt N2O/yr;Emi|N2O|+|Waste;kt N2O/yr;;;;N2O emissions from waste (IPCC category 6);
-332;2;emissions (non-CO2);Emissions|N2O|Other;kt N2O/yr;Emi|N2O|Other;kt N2O/yr;;;;N2O emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);x
+332;2;emissions (non-CO2);Emissions|N2O|Other;kt N2O/yr;;kt N2O/yr;;;;N2O emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);
 333;2;emissions (non-CO2);Emissions|NH3;Mt NH3/yr;Emi|NH3;Mt NH3/yr;;;;total ammonium emissions;
 334;2;emissions (non-CO2);Emissions|NH3|AFOLU;Mt NH3/yr;Emi|NH3|Land Use;Mt NH3/yr;;;;Land Use based Ammonia Emissions;
 335;2;emissions (non-CO2);Emissions|NH3|Energy;Mt NH3/yr;Emi|NH3|Energy Supply and Demand;Mt NH3/yr;;;;Ammonia emissions from energy use on supply and demand side, including fugitive emissions from fuels (IPCC category 1A, 1B);
