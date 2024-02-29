@@ -143,14 +143,16 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
 
-    out <- arrange(comparison, desc(abs(!!sym("reldiff"))))
+    fileLarge <- comparison %>%
+      filter(abs(!!sym("reldiff")) >= relDiff, abs(!!sym("diff")) >= absDiff) %>%
+      arrange(desc(abs(!!sym("reldiff"))))
 
-    if (roundDiff) {
-      out <- comparison %>% mutate(reldiff = niceround(!!sym("reldiff"), digits = 1))
+    if (isTRUE(roundDiff)) {
+      fileLarge <- fileLarge %>% mutate(reldiff = niceround(!!sym("reldiff"), digits = 2))
     }
 
     write.table(
-      out,
+      fileLarge,
       file = dataDumpFile,
       sep = csvSeparator,
       quote = FALSE,

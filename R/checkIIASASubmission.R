@@ -22,11 +22,7 @@
 #' }
 #' @export
 checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnUnitMismatch = TRUE) {
-  variable <- NULL # to avoid global binding note
-
-  if (length(mifdata) == 1 && file.exists(mifdata)) {
-    mifdata <- read.quitte(mifdata, factors = FALSE)
-  }
+  mifdata <- droplevels(as.quitte(mifdata, na.rm = TRUE))
   cat(paste0("\n### Load IIASA template file ", iiasatemplate, ".\n"))
   if (! isFALSE(logFile)) {
     if (is.null(logFile)) {
@@ -37,7 +33,12 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
   }
   template <- loadIIASATemplate(iiasatemplate)
 
-  varsNotInTemplate <- sort(unique(mifdata$variable[! mifdata$variable %in% template$variable]))
+  varsNotInTemplate <- mifdata %>%
+    filter(! .data$variable %in% unique(template$variable)) %>%
+    droplevels() %>%
+    pull(.data$variable) %>%
+    levels() %>%
+    sort()
 
   cat(paste0("# ", length(varsNotInTemplate), " variables not in IIASA template are deleted.\n"))
   if (! isFALSE(logFile)) {
@@ -45,11 +46,11 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
                  " are deleted ---#"), file = logFile, append = TRUE)
     write(paste0("  - ", paste(varsNotInTemplate, collapse = "\n  - ")), file = logFile, append = TRUE)
   }
-  mifdata <- filter(mifdata, variable %in% template$variable)
+  mifdata <- filter(mifdata, .data$variable %in% template$variable)
 
   mifdata <- checkFixUnits(mifdata, template, logFile, failOnUnitMismatch = failOnUnitMismatch)
 
-  # if data is suppled (not while generating mapping file), check whether scenarios have same number of variables
+  # if data is supplied (not while generating mapping file), check whether scenarios have same number of variables
   if ("value" %in% names(mifdata)) {
     checkDataLength(mifdata, logFile)
   }
@@ -61,13 +62,14 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
 
 
 checkDataLength <- function(mifdata, logFile =  NULL) {
+  mifdata <- as.quitte(mifdata)
   differingdatalength <- 0
   logtext <- "\n\n### Check whether all scenarios have same number of variables"
   for (vari in levels(mifdata$variable)) {
     countDataPoints <- seq_along(levels(mifdata$scenario))
     for (i in countDataPoints) {
       countDataPoints[i] <- sum(droplevels(filter(mifdata, !!sym("variable") == vari))$scenario
-                             == levels(mifdata$scenario)[[i]])
+                                == levels(mifdata$scenario)[[i]])
     }
     if (length(unique(countDataPoints)) != 1) {
       logtext <- c(logtext,
