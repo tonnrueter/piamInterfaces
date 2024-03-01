@@ -210,13 +210,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         if (! is.null(template)) paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(templateName))
          ))
       for (p in problematic) {
+        pn <- gsub(" [1-9]$", "", p)
         signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
                              ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
 
         childs <- checkVariables[[p]]
 
         remindchilds <- if (is.null(template)) NULL else
-                        unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == p])$variable
+                        unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == pn])$variable
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                   paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff)[! is.null(remindchilds)]
                   ))
@@ -257,11 +258,11 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
           df <- data %>%
             left_join(s, by = c("variable" = "child")) %>%
             mutate("value" = ifelse(is.na(.data$factor), .data$value, .data$value * .data$factor),
-                   "unit" = filter(plotdata, .data$variable == gsub(" [1-9]$", "", p))$unit[[1]]) %>%
+                   "unit" = filter(plotdata, .data$variable == pn)$unit[[1]]) %>%
             select(-"factor")
 
           mip::showAreaAndBarPlots(df, intersect(childs, unique(plotdata$variable)),
-            tot = gsub(" [1-9]$", "", p),
+            tot = pn,
             mainReg = mainReg, yearsBarPlot = c(2030, 2050), scales = "fixed"
           )
         }
@@ -273,7 +274,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         paste0("# All deviations can be found in the returned object",
                paste0(" and in ", dataDumpFile)[! is.null(dataDumpFile)], "."),
         paste0("# To get more detailed information on '", problematic[1], "', run piamInterfaces::variableInfo('",
-               gsub(" [1-9]$", "", problematic[1]), "').")
+               pn, "').")
         )
       if (generatePlots) {
         dev.off()
