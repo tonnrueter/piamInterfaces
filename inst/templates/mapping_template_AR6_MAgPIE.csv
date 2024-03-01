@@ -947,14 +947,12 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 877;Final Energy|Industry|Chemicals|Solids|Fossil;EJ/yr;;;;;;final energy consumption by the industrial chemicals sector of solids|fossil,excluding transmission/distribution losses
 878;Final Energy|Industry|Electricity;EJ/yr;;;;;;final energy consumption by the industrial sector of electricity (including on-site solar PV),excluding transmission/distribution losses
 879;Final Energy|Industry|Gases;EJ/yr;;;;;;final energy consumption by the industrial sector of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses
-880;Final Energy|Industry|Gases|;EJ/yr;;;;;;Final energy consumption by the industrial sector of natural and synthetic gases,excluding transmission/distribution losses
 881;Final Energy|Industry|Gases|Bioenergy;EJ/yr;;;;;;Final energy consumption by the industrial sector of bioenergy gases (biogas),excluding transmission/distribution losses
 882;Final Energy|Industry|Gases|Fossil;EJ/yr;;;;;;Final energy consumption by the industrial sector of fossil-derived natural and synthetic gases (natural gas,coal gas),excluding transmission/distribution losses
 883;Final Energy|Industry|Gases|Hydrogen synfuel;EJ/yr;;;;;;Final energy consumption by the industrial sector of hydrogen-derived syngases (e-fuels),excluding transmission/distribution losses
 884;Final Energy|Industry|Heat;EJ/yr;;;;;;final energy consumption by the industrial sector of heat (e.g.,district heat,process heat,solar heating and warm water),excluding transmission/distribution losses
 885;Final Energy|Industry|Hydrogen;EJ/yr;;;;;;final energy consumption by the industrial sector of hydrogen
 886;Final Energy|Industry|Liquids;EJ/yr;;;;;;final energy consumption by the industrial sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids)
-887;Final Energy|Industry|Liquids|;EJ/yr;;;;;;Final energy consumption by the industrial sector of natural and synthetic liquids,excluding transmission/distribution losses
 888;Final Energy|Industry|Liquids|Bioenergy;EJ/yr;;;;;;Final energy consumption by the industrial sector of bioenergy liquids (biodiesel,ethanol),excluding transmission/distribution losses
 889;Final Energy|Industry|Liquids|Fossil;EJ/yr;;;;;;Final energy consumption by the industrial sector of synthetic fossil-derived liquids (coal to liquids),excluding transmission/distribution losses
 890;Final Energy|Industry|Liquids|Hydrogen synfuel;EJ/yr;;;;;;Final energy consumption by the industrial sector of hydrogen-derived liquid synfuels (e-fuels),excluding transmission/distribution losses
