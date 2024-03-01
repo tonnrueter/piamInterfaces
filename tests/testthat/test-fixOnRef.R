@@ -7,6 +7,7 @@ test_that("fixOnRef works", {
   expect_true(fixOnRef(d, d, startyear = 2020, ret = "boolean"))
   # somehow, only MESSAGEix results are correct in the dataset above
   expect_true(fixOnRef(filter(qe, model == "MESSAGEix"), "Current Policies", startyear = 2020, ret = "boolean"))
+  expect_true(fixOnRef(filter(qe, model == "MESSAGEix"), "Current Policies", startyear = 2020, ret = "TRUE_or_fixed"))
   qefixed <- fixOnRef(qe, "Current Policies", startyear = 2020, ret = "fixed")
   expect_true(fixOnRef(qefixed, "Current Policies", startyear = 2020, ret = "boolean"))
   expect_identical(fixOnRef(d, d, startyear = 2020, ret = "fixed"), d)
@@ -15,6 +16,7 @@ test_that("fixOnRef works", {
   dwrong <- mutate(d, value = ifelse(period == 2020, 2 * value, value))
   expect_true(fixOnRef(dwrong, d, startyear = 2020, ret = "boolean"))
   expect_false(fixOnRef(dwrong, d, startyear = 2025, ret = "boolean"))
+  expect_false(isTRUE(fixOnRef(dwrong, d, startyear = 2025, ret = "TRUE_or_fixed")))
   # adjust only one variable
   dwrong <- mutate(d, value = ifelse(period == 2020 & variable == "Population", 0, value))
   expect_true(is.null(fixOnRef(dwrong, d, startyear = 2020, ret = "fails")))

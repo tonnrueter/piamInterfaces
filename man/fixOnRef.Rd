@@ -22,7 +22,8 @@ fixOnRef(
 
 \item{ret}{"boolean": just return TRUE/FALSE if check was successful
 "fails": data frame with mismatches between scenario and reference data
-"fixed": quitte object with data correctly fixed on reference data}
+"fixed": quitte object with data correctly fixed on reference data
+"TRUE_or_fixed": TRUE if check was successful, fixed object otherwise}
 
 \item{failfile}{csv file to which mismatches are written to}
 

@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: If you use this software, please cite it using the metadata from this file.
 type: software
 title: 'piamInterfaces: Project specific interfaces to REMIND / MAgPIE'
-version: 0.13.7
-date-released: '2024-02-29'
+version: 0.13.8
+date-released: '2024-03-01'
 abstract: Project specific interfaces to REMIND / MAgPIE.
 authors:
 - family-names: Benke
