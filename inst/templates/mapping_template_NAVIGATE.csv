@@ -1928,7 +1928,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1828;2;materials (industry);Production|Non-Ferrous Metals|Aluminium|Primary|Volume;Mt/yr;;;;;;production of primary aluminum;
 1829;2;materials (industry);Production|Non-Ferrous Metals|Aluminium|Secondary|Volume;Mt/yr;;;;;;production of secondary aluminum;
 1830;2;materials (industry);Production|Chemicals|Naphtha|Volume;Mt/yr;;;;;;production of naphtha (raw material for the production of high value chemicals, e.g. olefins);
-1831;2;materials (industry);Production|Chemicals|Ethane |Volume;Mt/yr;;;;;;production of ethane (raw material for the production of high value chemicals, e.g. olefins);
+1831;2;materials (industry);Production|Chemicals|Ethane|Volume;Mt/yr;;;;;;production of ethane (raw material for the production of high value chemicals, e.g. olefins);
 1832;2;materials (industry);Production|Chemicals|High Value Chemicals|Volume;Mt/yr;;;;;;production of high value chemicals (intermediate material for the production of plastics, high value chemicals include ethylene);
 1833;2;materials (industry);Production|Chemicals|Plastics|Volume;Mt/yr;;;;;;production of plastics;
 1834;2;materials (industry);Production|Chemicals|Plastics|Primary Plastics|Volume;Mt/yr;;;;;;production of primary plastics;
