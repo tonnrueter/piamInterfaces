@@ -8,6 +8,7 @@
 #' @param ret "boolean": just return TRUE/FALSE if check was successful
 #'            "fails": data frame with mismatches between scenario and reference data
 #'            "fixed": quitte object with data correctly fixed on reference data
+#'            "TRUE_or_fixed": TRUE if check was successful, fixed object otherwise
 #' @param failfile csv file to which mismatches are written to
 #' @param relDiff threshold for acceptable relative difference
 #' @importFrom dplyr case_when first group_by summarise ungroup left_join mutate arrange %>%
@@ -20,22 +21,24 @@
 
 fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL, relDiff = 1E-12) {
   scenario <- variable <- period <- value <- ref <- reldiff <- NULL
-  data <- droplevels(as.quitte(data, na.rm = TRUE))
+  data <- droplevels(as.quitte(data))
   startyear <- suppressWarnings(as.numeric(startyear))
   # check whether refscen is just the scenario name, or rather data
   if (is.character(refscen) && ! file.exists(refscen) && all(refscen %in% levels(data$scenario))) {
     refdata <- droplevels(filter(data, scenario == refscen))
   } else {
-    refdata <- droplevels(as.quitte(refscen, na.rm = TRUE))
+    refdata <- droplevels(as.quitte(refscen))
   }
   refscen <- levels(refdata$scenario)
+  retoptions <- c("boolean", "fails", "fixed", "TRUE_or_fixed")
   stopifnot(
     `'refscen' must be a single scenario only` = length(refscen) == 1,
     `'startyear' must be a single numeric value` = (length(startyear) == 1 && ! is.na(startyear)),
-    `'ret' must be 'boolean', 'fails' or 'fixed'` = (length(ret) == 1 && ret %in% c("boolean", "fails", "fixed"))
+    `'ret' must be 'boolean', 'fails', 'fixed' or 'TRUE_or_fixed'` = (length(ret) == 1 && ret %in% retoptions)
   )
 
   returnhelper <- function(ret, boolean, fails, fixed) {
+    if (ret == "TRUE_or_fixed") ret <- if (isTRUE(boolean)) "boolean" else "fixed"
     messages <- c(boolean = "Returning a boolean.",
                   fails   = "Returning failing data.",
                   fixed   = "Returning fixed data.")
