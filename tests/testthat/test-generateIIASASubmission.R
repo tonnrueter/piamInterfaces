@@ -19,7 +19,8 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
                                               outputDirectory = file.path(tempdir(), "output"),
                                               logFile = file.path(tempdir(), "missing.log"),
                                               outputFilename = outputFilename,
-                                              checkSummation = any(template == "NAVIGATE"))
+                                              checkSummation = any(template == "NAVIGATE")),
+      message = paste0("warnings for template(s)", paste(template, collapse = ","))
     )
     expectedFiles <- file.path(tempdir(), "output", outputFilename)
 

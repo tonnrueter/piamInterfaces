@@ -146,9 +146,21 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
       ) %>%
     select(-c("variable", "unit")) %>%
     distinct() %>%
-    inner_join(mapData, by = c("piam_variable", "piam_unit"),
-               relationship = "many-to-many") %>%
-    mutate("value" = .data$piam_factor * .data$value) %>%
+    inner_join(mapData, by = "piam_variable", relationship = "many-to-many") %>%
+    mutate("value" = .data$piam_factor * .data$value)
+
+  # check for unit mismatches in data and templates
+  unitMismatches <- submission %>%
+    select("variable" = "piam_variable", "mifs" = "piam_unit.x", "mappings" = "piam_unit.y") %>%
+    filter(.data$mifs != .data$mappings) %>%
+    distinct()
+
+  if (nrow(unitMismatches) > 0) {
+    warning("Unit mismatches between data and mapping templates found for some variables: \n",
+            paste0(utils::capture.output(unitMismatches), collapse = "\n"))
+  }
+
+  submission <- submission %>%
     select("model", "scenario", "region", "period", "variable", "unit", "value") %>%
     quitteSort()
 
