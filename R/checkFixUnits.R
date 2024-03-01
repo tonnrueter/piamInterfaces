@@ -22,6 +22,8 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
                       "kt CF4/yr" = "kt CF4-equiv/yr",
                       "Million" = "million",
                       "Mt/yr" = "Mt/year",
+                      "unitless" = "",
+                      "million vehicles" = "Million vehicles",
                       # for backwards compatibility with AR6 and SHAPE templates (using old incorrect unit)
                       # should only affect template variable 'Energy Service|Residential and Commercial|Floor Space'
                       "billion m2/yr" = "bn m2",
@@ -30,13 +32,17 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
                       "bn m2" = "bn m2/yr",
                  NULL)
 
+  haspiam <- all(c("piam_variable", "piam_unit") %in% colnames(template))
+  unitcol <- if (haspiam) "piam_unit" else "unit"
+  varcol <- if (haspiam) "piam_variable" else "variable"
+
   mifdata <- droplevels(as.quitte(mifdata))
   # try to identify and fix wrong units
   wrongUnits <- data.frame(variable = character(), templateunit = character(), mifunit = character())
   logtext <- NULL
-  for (mifvar in levels(mifdata$variable)) {
-    templateunit <- unique(template$unit[template$variable == mifvar])
-    mifunit <- levels(droplevels(filter(mifdata, .data$variable == mifvar))$unit)
+  for (mifvar in intersect(levels(mifdata$variable), unique(template[[varcol]]))) {
+    templateunit <- unique(template[[unitcol]][template[[varcol]] %in% mifvar])
+    mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
     # find unit mismatches
     if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
       if (length(identicalUnits) > 0 && templateunit %in% names(identicalUnits)

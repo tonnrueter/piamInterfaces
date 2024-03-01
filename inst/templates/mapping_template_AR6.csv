@@ -1744,8 +1744,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1603;Transport|Stock|Road|Freight;million vehicles;TODO;;;;;;The stock of road transport freight vehicles at the reported year;x
 1604;Transport|Stock|Road|Passenger;million vehicles;TODO;;;;;;The stock of road transport passenger vehicles at the reported year;x
 1605;Transport|Stock|Road|Passenger|2W&3W;million vehicles;TODO;;;;;;The stock of road transport passenger 2W &3W vehicles at the reported year;x
-1606;Transport|Stock|Road|Passenger|Bus;million vehicles;Stock|Transport|Bus;million vehicles;;;;;The stock of road transport passenger buses at the reported year;x
-1607;Transport|Stock|Road|Passenger|LDV;million vehicles;Stock|Transport|LDV;million vehicles;;;;;The stock of road transport passenger LDVs at the reported year;x
+1606;Transport|Stock|Road|Passenger|Bus;million vehicles;Stock|Transport|Bus;Million vehicles;;;;;The stock of road transport passenger buses at the reported year;x
+1607;Transport|Stock|Road|Passenger|LDV;million vehicles;Stock|Transport|LDV;Million vehicles;;;;;The stock of road transport passenger LDVs at the reported year;x
 1608;Final Energy|Residential and Commercial|Commercial|Water|Desalination;EJ/yr;;;;;;;Energy consumption for desalination water;
 1609;Final Energy|Residential and Commercial|Commercial|Water|Groundwater Extraction;EJ/yr;;;;;;;Energy consumption for groundwater extraction;
 1610;Final Energy|Residential and Commercial|Commercial|Water|Surface Water Extraction;EJ/yr;;;;;;;Energy consumption for surface water extraction;
