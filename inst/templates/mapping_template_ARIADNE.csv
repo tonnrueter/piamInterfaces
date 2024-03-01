@@ -1344,7 +1344,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (transport);Energy Service|Transportation|Passenger;bn pkm/yr;energy service demand for domestic passenger transport;ES|Transport|Pass|Road;bn pkm/yr;1;;0;;x
 2;energy (transport);Energy Service|Transportation|Passenger;bn pkm/yr;energy service demand for domestic passenger transport;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;1;;0;;x
 2;energy (transport);Energy Service|Transportation|Freight|Domestic Aviation;bn tkm/yr;energy service demand for freight transport on domestic aircrafts;;;;;0;;
-2;energy (transport);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;energy service demand for freight transport on domestic navigation;ES|Transport|Freight|Navigation;bn pkm/yr;1;;0;;x
+2;energy (transport);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;energy service demand for freight transport on domestic navigation;ES|Transport|Freight|Navigation;bn tkm/yr;1;;0;;x
 2;energy (transport);Energy Service|Transportation|Freight|Other;bn tkm/yr;energy service demand for freight transport using other modes (please provide a definition of the modes in this category in the 'comments' tab);;;;;0;;
 2;energy (transport);Energy Service|Transportation|Freight|Rail;bn tkm/yr;energy service demand for freight transport on railways;ES|Transport|Freight|Rail;bn tkm/yr;1;;0;;x
 2;energy (transport);Energy Service|Transportation|Freight|Road;bn tkm/yr;energy service demand for freight transport on roads;ES|Transport|Freight|Road;bn tkm/yr;1;;0;;x
