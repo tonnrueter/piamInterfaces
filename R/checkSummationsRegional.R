@@ -3,11 +3,11 @@
 #' @md
 #' @author Falk Benke
 #' @param mifFile path to the mif file to apply summation checks to, or quitte object
-#' @param parentRegion region to sum up to
-#' @param childRegions regions that should sum up to `parentRegion`
-#' @param variables list of variables to check
+#' @param parentRegion region to sum up to. Defaults to World or GLO
+#' @param childRegions regions that should sum up to `parentRegion`. Default to all except parentRegion
+#' @param variables list of variables to check. Defaults to all in mifFile
 #' @importFrom dplyr group_by summarise ungroup left_join mutate %>% filter select
-#' @importFrom rlang sym syms
+#' @importFrom rlang sym syms .data
 #' @importFrom quitte as.quitte
 #' @examples
 #' \dontrun{
@@ -19,10 +19,12 @@
 #')
 #'}
 #' @export
-checkSummationsRegional <- function(mifFile, parentRegion, childRegions, variables) {
+checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions = NULL, variables = NULL) {
 
-  data <- quitte::as.quitte(mifFile, na.rm = TRUE) %>%
-    filter(!!sym("variable") %in% variables)
+  data <- droplevels(quitte::as.quitte(mifFile, na.rm = TRUE))
+  if (! is.null(variables))  data <- filter(data, .data$variable %in% variables)
+  if (is.null(parentRegion)) parentRegion <- intersect(c("World", "GLO"), levels(data$region))[[1]]
+  if (is.null(childRegions)) childRegions <- setdiff(levels(data$region), parentRegion)
 
   sum <- filter(data, !!sym("region") %in% childRegions)  %>%
     group_by(!!!syms(c("model", "scenario", "variable", "period", "unit"))) %>%
