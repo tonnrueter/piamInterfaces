@@ -69,14 +69,16 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     dref <- data %>%
       filter(.data$scenario == diffto) %>%
       select(-"scenario") %>%
-      rename("ref" = "value")
+      rename("ref" = "value") %>%
+      droplevels()
     data <- data %>%
       left_join(dref, by = c("model", "region", "variable", "unit", "period")) %>%
       mutate("value" = !!sym("value") - !!sym("ref")) %>%
-      filter(.data$scenario != diffto)
+      filter(.data$scenario != diffto) %>%
+      droplevels()
   }
 
-  message("The filtered data contains ", length(unique(data$variable)), " variables.")
+  message("The plots will show a total of ", length(unique(data$variable)), " variables.")
   newModelNames <- levels(data$model)
   for (n in names(renameModels)) {
     newModelNames <- gsub(n, renameModels[n], newModelNames, fixed = TRUE)

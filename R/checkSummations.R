@@ -71,7 +71,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   data <- data %>%
     filter(!!sym("variable") %in% unique(c(parentVariables, unlist(checkVariables, use.names = FALSE))))
-  message("# The filtered data contains ", length(unique(data$variable)), " variables.")
+  message("# Run summation check on a total of ", length(unique(data$variable)), " variables.")
 
   if (nrow(data) == 0) {
     return(NULL)
