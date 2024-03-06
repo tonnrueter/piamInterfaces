@@ -4,16 +4,21 @@
 \alias{checkSummationsRegional}
 \title{Checks for a run if the regions for selected variables sum up as expected}
 \usage{
-checkSummationsRegional(mifFile, parentRegion, childRegions, variables)
+checkSummationsRegional(
+  mifFile,
+  parentRegion = NULL,
+  childRegions = NULL,
+  variables = NULL
+)
 }
 \arguments{
 \item{mifFile}{path to the mif file to apply summation checks to, or quitte object}
 
-\item{parentRegion}{region to sum up to}
+\item{parentRegion}{region to sum up to. Defaults to World or GLO}
 
-\item{childRegions}{regions that should sum up to \code{parentRegion}}
+\item{childRegions}{regions that should sum up to \code{parentRegion}. Default to all except parentRegion}
 
-\item{variables}{list of variables to check}
+\item{variables}{list of variables to check. Defaults to all in mifFile}
 }
 \description{
 Checks for a run if the regions for selected variables sum up as expected
