@@ -6,6 +6,5 @@ test_that("reportWrongUnits works", {
   expect_true(any(grepl("Population", logtext)))
   expect_true(any(grepl("Million", logtext)))
   expect_true(any(grepl("Zillion", logtext)))
-  expect_true(any(grepl("identicalUnits", cats)))
-  expect_true(any(grepl("checkFixUnits", cats)))
+  expect_true(any(grepl("areUnitsIdentical", cats)))
 })
