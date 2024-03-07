@@ -26,7 +26,6 @@
 #'             filter select desc reframe last_col
 #' @importFrom gms chooseFromList
 #' @importFrom grDevices pdf dev.off
-#' @importFrom magclass unitsplit
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
 #' @importFrom rlang sym syms
@@ -217,13 +216,13 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         childs <- checkVariables[[p]]
 
         remindchilds <- if (is.null(template)) NULL else
-                        unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == pn])$variable
+                        templateData[, remindVar][templateData$variable == pn]
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                   paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff)[! is.null(remindchilds)]
                   ))
         for (ch in childs) {
           remindch <- if (is.null(template)) NULL else
-                      unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == ch])$variable
+                      templateData[, remindVar][templateData$variable == ch]
           text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
                     if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
         }

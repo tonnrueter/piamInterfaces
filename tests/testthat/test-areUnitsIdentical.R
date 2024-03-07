@@ -5,4 +5,5 @@ test_that("areUnitsIdentical works", {
   expect_true(areUnitsIdentical(c("%", "percent"), "Percent"))
   expect_false(areUnitsIdentical("%", "FE/yr"))
   expect_false(areUnitsIdentical(c("%", "percent"), "FE/yr"))
+  expect_false(areUnitsIdentical("%", "percent", "FE/yr"))
 })
