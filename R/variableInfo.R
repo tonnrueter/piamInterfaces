@@ -8,7 +8,6 @@
 #' @param remindVar column name of variable in templates (default: piam_variable)
 #' @param remindUnit column name of unit in templates (default: piam_unit)
 #' @importFrom quitte read.quitte as.quitte
-#' @importFrom magclass unitsplit
 #' @importFrom stringr str_split str_pad
 #' @importFrom utils head
 #' @return prints human-readable summary to the user
@@ -66,11 +65,10 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
         exportchilds <- summationGroups$child[summationGroups$parent == exportname]
         # print summation parents
         message(". ", str_pad(paste(exportname, "="), width + 3, "right"), "   . ",
-                paste0(unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable
-                                                           == exportname])$variable, collapse = " + "), " =")
+                paste0(templateData[, remindVar][templateData$variable == exportname], collapse = " + "), " =")
         # print summation childs
         for (ch in exportchilds) {
-          remindchilds <- unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == ch])$variable
+          remindchilds <- templateData[, remindVar][templateData$variable == ch]
           message("  + ", str_pad(ch, width + 2, "right"), "    + ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
@@ -82,13 +80,12 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
       if (length(allexportchilds) + length(allremindchilds) > 0) {
         message("\n# Child variables", if (t %in% names(summationsNames())) " not in summation group")
         for (ch in allexportchilds) {
-          remindchilds <- unitsplit(templateData[, remindVar][unitsplit(templateData$variable)$variable == ch])$variable
+          remindchilds <- templateData[, remindVar][templateData$variable == ch]
           message("  . ", str_pad(ch, width + 1, "right"), "     . ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         for (ch in allremindchilds) {
-          exportchild <- unique(unitsplit(
-                         templateData$variable[unitsplit(templateData[, remindVar])$variable == ch])$variable)
+          exportchild <- unique(templateData$variable[templateData[, remindVar] == ch])
           exportchild <- exportchild[! is.na(exportchild)]
           message("   . ", str_pad(paste(exportchild, collapse = ", "), width, "right"), "     . ", ch)
         }

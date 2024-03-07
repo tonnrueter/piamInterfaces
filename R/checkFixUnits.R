@@ -13,25 +13,7 @@
 #' @return quitte object with adapted mif data
 #' @export
 
-checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) { # nolint cyclocomp_linter
-  # use template units as names and map it to remind2 unit with identical meaning
-  identicalUnits <- c("billion m2/yr" = "bn m2/yr",
-                      "billion pkm/yr" = "bn pkm/yr",
-                      "billion tkm/yr" = "bn tkm/yr",
-                      "billion vkm/yr" = "bn vkm/yr",
-                      "kt CF4/yr" = "kt CF4-equiv/yr",
-                      "Million" = "million",
-                      "Mt/yr" = "Mt/year",
-                      "unitless" = "",
-                      "million vehicles" = "Million vehicles",
-                      # for backwards compatibility with AR6 and SHAPE templates (using old incorrect unit)
-                      # should only affect template variable 'Energy Service|Residential and Commercial|Floor Space'
-                      "billion m2/yr" = "bn m2",
-                      "billion m2" = "bn m2/yr",
-                      "bn m2/yr" = "bn m2",
-                      "bn m2" = "bn m2/yr",
-                 NULL)
-
+checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) {
   haspiam <- all(c("piam_variable", "piam_unit") %in% colnames(template))
   unitcol <- if (haspiam) "piam_unit" else "unit"
   varcol <- if (haspiam) "piam_variable" else "variable"
@@ -45,8 +27,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
     mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
     # find unit mismatches
     if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
-      if (length(identicalUnits) > 0 && templateunit %in% names(identicalUnits)
-          && all(identicalUnits[[templateunit]] == mifunit)) {
+      if (areUnitsIdentical(mifunit, templateunit)) {
         # fix wrong spelling of units as allowed in identicalUnits
         logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, "."))
         mifdata <- mifdata %>%
@@ -65,8 +46,8 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
     }
   }
   if (length(logtext) > 0) {
-    cat(paste0("# ", length(logtext), " units were corrected.\n"))
-    logtext <- paste0("\n\n#--- ", length(logtext), " units were corrected: ---#\n",
+    cat(paste0("# ", length(logtext), " units were automatically corrected.\n"))
+    logtext <- paste0("\n\n#--- ", length(logtext), " units were automatically corrected: ---#\n",
           paste0(logtext, collapse = "\n"))
   }
 
@@ -95,10 +76,10 @@ reportWrongUnits <- function(wrongUnits) {
     logtext <- c(logtext, paste0("  - '", w[[1]], "' uses '", w[[3]], "', but template requires '", w[[2]], "'."))
   }
   cat(paste0("If they are identical apart from spelling, ",
-             "add them to vector 'identicalUnits' in piamInterfaces::checkFixUnits() as:\n"))
+             "add them to list in piamInterfaces::areUnitsIdentical() as:\n"))
   unitsOnly <- unique(wrongUnits[c(2, 3)])
   for (wno in seq_along(rownames(unitsOnly))) {
-    cat(paste0('                      "', unitsOnly[wno, 1], '" = "', unitsOnly[wno, 2], '",\n'))
+    cat(paste0('    c("', unitsOnly[wno, 1], '", "', unitsOnly[wno, 2], '"),\n'))
   }
   cat("\n")
   return(logtext)
