@@ -309,7 +309,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (electricity);Capacity|Electricity|Non-Renewable Waste;GW;Total installed (available) net capacity of non renewable waste and industrial waste heat power plants , including plants held in an operating reserve;;;;;0;;
 3;energy (electricity);Capacity|Electricity|Ocean;GW;Total installed (available) net capacity of ocean power plants;;;;;0;;
 2;energy (electricity);Capacity|Electricity|Other;GW;Total installed (available) net capacity of all others types of operating power plants;Cap|Electricity|Other Fossil|Other Fossil Adjusted;GW;1;;0;;
-2;energy (electricity);Capacity|Electricity|Peak Demand;GW;peak (maximum) electricity load;Cap|Electricity|Peak Demand|Estimated from FE x 1p4 x 1p1;GW;1;;0;;x
+2;energy (electricity);Capacity|Electricity|Peak Demand;GW;peak (maximum) electricity load;;GW;1;;0;;
 2;energy (electricity);Capacity|Electricity|Storage Reservoir;GWh;Total installed net capacity of electricity storage capacity;;;;;0;;
 2;energy (electricity);Capacity|Electricity|Storage Reservoir|CAES;GWh;Total installed net capacity of Compressed Air Energy Storage (CAES);;;;;0;;
 2;energy (electricity);Capacity|Electricity|Storage Reservoir|Hydro Dam Reservoir;GWh;Total installed net capacity of electricity storage of hydro dam power plants;;;;;0;;

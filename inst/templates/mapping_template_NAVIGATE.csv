@@ -481,7 +481,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 437;2;energy (capacity);Capacity|Electricity|Geothermal;GW;Cap|Electricity|Geothermal;GW;;;;Total installed (available) capacity of operating geothermal plants;
 438;2;energy (capacity);Capacity|Electricity|Oil;GW;Cap|Electricity|Oil|w/o CC;GW;;;;Total installed (available) capacity of operating oil plants;
 439;2;energy (capacity);Capacity|Electricity|Other;GW;Cap|Electricity|Hydrogen;GW;;;;Total installed (available) capacity of all others types of operating power plants;
-440;2;energy (capacity);Capacity|Electricity|Peak Demand;GW;Cap|Electricity|Peak Demand|Estimated from FE x 1p4 x 1p1;GW;;;;peak (maximum) electricity load;x
+440;2;energy (capacity);Capacity|Electricity|Peak Demand;GW;;GW;;;;peak (maximum) electricity load;
 441;2;energy (capacity);Capacity|Electricity|Solar;GW;Cap|Electricity|Solar;GW;;;;Total installed (available) capacity of all operating solar facilities (both CSP and PV);
 442;2;energy (capacity);Capacity|Electricity|Storage;GW;Cap|Electricity|Storage|Battery;GW;;;;Total installed (available) capacity of operating electricity storage;
 443;2;energy (capacity);Capacity|Gases|Biomass;GW;Cap|Gases|Biomass;GW;;;;Total installed (available) capacity of biomass to gas plants.;
