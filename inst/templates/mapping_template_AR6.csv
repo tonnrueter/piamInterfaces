@@ -1568,10 +1568,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1428;Resource|Extraction|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;;;;;;
 1429;Resource|Use|Mineral;Mt Fe-eq;;;;;;;;
 1430;Resource|Use|Mineral|Electricity;Mt Fe-eq;;;;;;;;
-1431;Ecotoxicity|Freshwater;Mt 1;4-DCB-eq;TODO;;;;;;x
-1432;Ecotoxicity|Freshwater|Electricity;Mt 1;4-DCB-eq;TODO;;;;;;x
-1433;Ecotoxicity|Marine;Mt 1;4-DCB-eq;TODO;;;;;;x
-1434;Ecotoxicity|Marine|Electricity;Mt 1;4-DCB-eq;TODO;;;;;;x
+1431;Ecotoxicity|Freshwater;Mt 1;TODO;4-DCB-eq;;;;;;x
+1432;Ecotoxicity|Freshwater|Electricity;Mt 1;TODO;4-DCB-eq;;;;;;x
+1433;Ecotoxicity|Marine;Mt 1;TODO;4-DCB-eq;;;;;;x
+1434;Ecotoxicity|Marine|Electricity;Mt 1;TODO;4-DCB-eq;;;;;;x
 1435;Emissions|PM2.5;Mt PM2.5;;;;;;Post-processing;;
 1436;Employment;million;;;;;work in progress;;number of employed inhabitants (based on ILO classification);
 1437;Employment|Agriculture;million;;;;;;;number of employed inhabitants (payrolls) in agriculture (based on ILO classification);
@@ -1584,8 +1584,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1444;Food Demand|Livestock;kcal/cap/day;Nutrition|Calorie Supply|+|Livestock products;kcal/capita/day;;;;;livestock related food demand in calories;x
 1445;Food Energy Supply;EJ/yr;TODO;;;;;;total calory food demand;x
 1446;Food Energy Supply|Livestock;EJ/yr;TODO;;;;;;calory food demand from livestock products;x
-1447;Human Toxicity;Mt 1;4-DCB-eq;TODO;;;;;;x
-1448;Human Toxicity|Electricity;Mt 1;4-DCB-eq;TODO;;;;;;x
+1447;Human Toxicity;Mt 1;TODO;4-DCB-eq;;;;;;x
+1448;Human Toxicity|Electricity;Mt 1;TODO;4-DCB-eq;;;;;;x
 1449;Population;million;Population;million;;;;exogenous;total population;
 1450;Population|Clean cooking Access;million;;;;;work in progress;;population with access to clean cooking (e.g. non-solid fuels);
 1451;Population|Democratic rights;million;;;;;;;population with democratic rights (e.g. voiting,association,etc.);
