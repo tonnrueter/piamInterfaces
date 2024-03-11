@@ -1,39 +1,39 @@
-variable;unit;piam_variable;piam_unit;piam_factor;Definition;Comment;internal_comment;exclude_remind2_validation
-Carbon Capture;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;1;;;;
-Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;
-Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;
-Carbon Capture|Direct Air Capture;Mt CO2/yr;Carbon Management|Carbon Capture|+|DAC;Mt CO2/yr;1;;;;
-Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;
-Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;
-Carbon Capture|Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;
-Carbon Capture|Other;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;
-Carbon Capture|Storage;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|+|Industry Process;Mt CO2/yr;1;;;;
-Carbon Capture|Storage|Other;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;
-Carbon Capture|Usage;Mt CO2/yr;Carbon Management|Usage;Mt CO2/yr;1;;;;
-Carbon Capture|Usage|Gases;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Gases;Mt CO2/yr;1;;;;
-Carbon Capture|Usage|Liquids;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Liquids;Mt CO2/yr;1;;;;
+variable;unit;piam_variable;piam_unit;piam_factor;Definition;Comment;internal_comment;source
+Carbon Capture;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;1;;;;R
+Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
+Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Direct Air Capture;Mt CO2/yr;Carbon Management|Carbon Capture|+|DAC;Mt CO2/yr;1;;;;R
+Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
+Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;R
+Carbon Capture|Other;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|+|Industry Process;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Other;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
+Carbon Capture|Usage;Mt CO2/yr;Carbon Management|Usage;Mt CO2/yr;1;;;;R
+Carbon Capture|Usage|Gases;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Gases;Mt CO2/yr;1;;;;R
+Carbon Capture|Usage|Liquids;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Liquids;Mt CO2/yr;1;;;;R
 Carbon Capture|Usage|Materials;Mt CO2/yr;;;;;;;
 Carbon Capture|Usage|Other;Mt CO2/yr;;;;;;;
-Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|EW;Mt CO2/yr;1;;;;
-Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|BECCS;Mt CO2/yr;1;;;;
-Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;
-Carbon Removal;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;
-Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|Industry CCS|Synthetic Fuels;Mt CO2/yr;1;;;;
-Carbon Removal|Enhanced Weathering;Mt CO2/yr;Emi|CO2|CDR|EW;Mt CO2/yr;1;;;;
-Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|BECCS;Mt CO2/yr;1;;;;
-Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;
-Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|Industry CCS|Synthetic Fuels;Mt CO2/yr;1;;;;
-Carbon Removal|Land Use;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;
+Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|EW;Mt CO2/yr;1;;;;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|BECCS;Mt CO2/yr;1;;;;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|Industry CCS|Synthetic Fuels;Mt CO2/yr;1;;;;R
+Carbon Removal|Enhanced Weathering;Mt CO2/yr;Emi|CO2|CDR|EW;Mt CO2/yr;1;;;;R
+Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|BECCS;Mt CO2/yr;1;;;;R
+Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;R
+Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|Industry CCS|Synthetic Fuels;Mt CO2/yr;1;;;;R
+Carbon Removal|Land Use;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;R
 Carbon Removal|Land Use|Afforestation;Mt CO2/yr;;;;;;;
 Carbon Removal|Land Use|Biochar;Mt CO2/yr;;;;;;;
 Carbon Removal|Land Use|Soil Carbon Management;Mt CO2/yr;;;;;;;
@@ -43,110 +43,110 @@ Carbon Removal|Materials|Plastics;Mt CO2/yr;;;;;;;
 Carbon Removal|Materials|Timber;Mt CO2/yr;;;;;;;
 Carbon Removal|Ocean;Mt CO2/yr;;;;;;;
 Carbon Removal|Other;Mt CO2/yr;;;;;;;
-Consumption;billion EUR_2020/yr;Consumption;billion US$2005/yr;1.17;;;;
-Emissions|CH4;Mt CH4/yr;Emi|CH4;Mt CH4/yr;1;;;;
+Consumption;billion EUR_2020/yr;Consumption;billion US$2005/yr;1.17;;;;R
+Emissions|CH4;Mt CH4/yr;Emi|CH4;Mt CH4/yr;1;;;;R
 Emissions|CH4|AFOLU;Mt CH4/yr;;;;;;;
-Emissions|CH4|AFOLU|Agriculture;Mt CH4/yr;Emi|CH4|+|Agriculture;Mt CH4/yr;1;;;;
-Emissions|CH4|AFOLU|Land;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;1;;;;
+Emissions|CH4|AFOLU|Agriculture;Mt CH4/yr;Emi|CH4|+|Agriculture;Mt CH4/yr;1;;;;R
+Emissions|CH4|AFOLU|Land;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;1;;;;R
 Emissions|CH4|Energy;Mt CH4/yr;;;;;;;
 Emissions|CH4|Energy|Demand|Industry;Mt CH4/yr;;;;;;;
 Emissions|CH4|Energy|Demand|Residential and Commercial;Mt CH4/yr;;;;;;;
 Emissions|CH4|Energy|Demand|Transportation;Mt CH4/yr;;;;;;;
-Emissions|CH4|Energy|Supply;Mt CH4/yr;Emi|CH4|+|Energy Supply;Mt CH4/yr;1;;;;
-Emissions|CH4|Energy|Supply;Mt CH4/yr;Emi|CH4|+|Extraction;Mt CH4/yr;1;;;;
+Emissions|CH4|Energy|Supply;Mt CH4/yr;Emi|CH4|+|Energy Supply;Mt CH4/yr;1;;;;R
+Emissions|CH4|Energy|Supply;Mt CH4/yr;Emi|CH4|+|Extraction;Mt CH4/yr;1;;;;R
 Emissions|CH4|Industrial Processes;Mt CH4/yr;;;;;;;
 Emissions|CH4|Other;Mt CH4/yr;;;;;;;
-Emissions|CH4|Waste;Mt CH4/yr;Emi|CH4|+|Waste;Mt CH4/yr;1;;;;
-Emissions|CO2;Mt CO2/yr;Emi|CO2|LULUCF national accounting;Mt CO2/yr;1;;;;
-Emissions|CO2;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
-Emissions|CO2|AFOLU;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;
+Emissions|CH4|Waste;Mt CH4/yr;Emi|CH4|+|Waste;Mt CH4/yr;1;;;;R
+Emissions|CO2;Mt CO2/yr;Emi|CO2|LULUCF national accounting;Mt CO2/yr;1;;;;R
+Emissions|CO2;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
+Emissions|CO2|AFOLU;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;R
 Emissions|CO2|AFOLU|Agriculture;Mt CO2/yr;;;;;;;
-Emissions|CO2|AFOLU|Land;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;
+Emissions|CO2|AFOLU|Land;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;R
 Emissions|CO2|AFOLU|Land|Negative;Mt CO2/yr;;;;;;;
 Emissions|CO2|AFOLU|Land|Positive;Mt CO2/yr;;;;;;;
 Emissions|CO2|AFOLU|Land|Wetlands;Mt CO2/yr;;;;;;;
-Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|+|Energy;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy and Industrial Processes;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Demand;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
+Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|+|Energy;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy and Industrial Processes;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Demand;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|AFOFI;Mt CO2/yr;;;;;;;
-Emissions|CO2|Energy|Demand|Bunkers;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
+Emissions|CO2|Energy|Demand|Bunkers;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Bunkers|International Aviation;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Bunkers|International Shipping;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Commercial;Mt CO2/yr;;;;;;;
-Emissions|CO2|Energy|Demand|Industry;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Demand|+|CDR;Mt CO2/yr;1;;;;
+Emissions|CO2|Energy|Demand|Industry;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Demand|+|CDR;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Residential;Mt CO2/yr;;;;;;;
-Emissions|CO2|Energy|Demand|Residential and Commercial;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Buildings;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Demand|Transportation;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Transport;Mt CO2/yr;1;;;;
+Emissions|CO2|Energy|Demand|Residential and Commercial;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Buildings;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Demand|Transportation;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Transport;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Transportation|Bus;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Transportation|Domestic Aviation;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Transportation|Domestic Shipping;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Transportation|Truck;Mt CO2/yr;;;;;;;
-Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Supply;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Electricity w/ couple prod;Mt CO2/yr;1;;;;
+Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Supply;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Electricity w/ couple prod;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Supply|Electricity and Heat;Mt CO2/yr;;;;;;;
-Emissions|CO2|Energy|Supply|Gases;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Gases w/ couple prod;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Supply|Heat;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Heat w/ couple prod;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Supply|Hydrogen;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Hydrogen w/ couple prod;Mt CO2/yr;1;;;;
-Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Liquids w/ couple prod;Mt CO2/yr;1;;;;
+Emissions|CO2|Energy|Supply|Gases;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Gases w/ couple prod;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Supply|Heat;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Heat w/ couple prod;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Supply|Hydrogen;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Hydrogen w/ couple prod;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Liquids w/ couple prod;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;;;;;;;
-Emissions|CO2|Energy|Supply|Solids;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Solids w/ couple prod;Mt CO2/yr;1;;;;
-Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;1;;;;
-Emissions|CO2|Industry and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;
+Emissions|CO2|Energy|Supply|Solids;Mt CO2/yr;Emi|CO2|Energy|Supply|+|Solids w/ couple prod;Mt CO2/yr;1;;;;R
+Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;1;;;;R
+Emissions|CO2|Industry and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;R
 Emissions|CO2|Other;Mt CO2/yr;;;;;;;
-Emissions|CO2|Other Removal;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;
+Emissions|CO2|Other Removal;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;R
 Emissions|CO2|Waste;Mt CO2/yr;;;;;;;
 Emissions|CO2|Waste|Biomass;Mt CO2/yr;;;;;;;
 Emissions|CO2|Waste|Fossil;Mt CO2/yr;;;;;;;
-Emissions|F-Gases;Mt CO2e/yr;Emi|GHG|+|F-Gases;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases;Mt CO2e/yr;Emi|GHG|LULUCF national accounting;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
-Emissions|Kyoto Gases|AFOLU;Mt CO2e/yr;Emi|GHG|+++|Agriculture;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|AFOLU;Mt CO2e/yr;Emi|GHG|Land-Use Change|LULUCF national accounting;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|AFOLU|Agriculture;Mt CO2e/yr;Emi|GHG|+++|Agriculture;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|AFOLU|Land;Mt CO2e/yr;Emi|GHG|Land-Use Change|LULUCF national accounting;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|Energy;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|Energy;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
-Emissions|Kyoto Gases|Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;
-Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;;;;
+Emissions|F-Gases;Mt CO2e/yr;Emi|GHG|+|F-Gases;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases;Mt CO2e/yr;Emi|GHG|LULUCF national accounting;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
+Emissions|Kyoto Gases|AFOLU;Mt CO2e/yr;Emi|GHG|+++|Agriculture;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|AFOLU;Mt CO2e/yr;Emi|GHG|Land-Use Change|LULUCF national accounting;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|AFOLU|Agriculture;Mt CO2e/yr;Emi|GHG|+++|Agriculture;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|AFOLU|Land;Mt CO2e/yr;Emi|GHG|Land-Use Change|LULUCF national accounting;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|Energy;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|Energy;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
+Emissions|Kyoto Gases|Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;;;R
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;;;;R
 Emissions|Kyoto Gases|Industry and Industrial Processes;Mt CO2e/yr;;;;;;;
-Emissions|Kyoto Gases|Other;Mt CO2e/yr;Emi|GHG|+++|non-BECCS CDR;Mt CO2eq/yr;1;;;;
-Emissions|Kyoto Gases|Waste;Mt CO2e/yr;Emi|GHG|+++|Waste;Mt CO2eq/yr;1;;;;
-Emissions|N2O;kt N2O/yr;Emi|N2O;kt N2O/yr;1;;;;
+Emissions|Kyoto Gases|Other;Mt CO2e/yr;Emi|GHG|+++|non-BECCS CDR;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|Waste;Mt CO2e/yr;Emi|GHG|+++|Waste;Mt CO2eq/yr;1;;;;R
+Emissions|N2O;kt N2O/yr;Emi|N2O;kt N2O/yr;1;;;;R
 Emissions|N2O|AFOLU;kt N2O/yr;;;;;;;
-Emissions|N2O|AFOLU|Agriculture;kt N2O/yr;Emi|N2O|+|Agriculture;kt N2O/yr;1;;;;
-Emissions|N2O|AFOLU|Land;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;1;;;;
-Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;1;;;;
-Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;1;;;;
-Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;1;;;;
-Emissions|N2O|Energy|Demand;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;1;;;;
-Emissions|N2O|Energy|Demand;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;1;;;;
-Emissions|N2O|Energy|Demand|Industry;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;1;;;;
+Emissions|N2O|AFOLU|Agriculture;kt N2O/yr;Emi|N2O|+|Agriculture;kt N2O/yr;1;;;;R
+Emissions|N2O|AFOLU|Land;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;1;;;;R
+Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;1;;;;R
+Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;1;;;;R
+Emissions|N2O|Energy;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;1;;;;R
+Emissions|N2O|Energy|Demand;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;1;;;;R
+Emissions|N2O|Energy|Demand;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;1;;;;R
+Emissions|N2O|Energy|Demand|Industry;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;1;;;;R
 Emissions|N2O|Energy|Demand|Residential and Commercial;kt N2O/yr;;;;;;;
-Emissions|N2O|Energy|Demand|Transportation;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;1;;;;
-Emissions|N2O|Energy|Supply;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;1;;;;
+Emissions|N2O|Energy|Demand|Transportation;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;1;;;;R
+Emissions|N2O|Energy|Supply;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;1;;;;R
 Emissions|N2O|Other;kt N2O/yr;;;;;;;
-Emissions|N2O|Waste;kt N2O/yr;Emi|N2O|+|Waste;kt N2O/yr;1;;;;
+Emissions|N2O|Waste;kt N2O/yr;Emi|N2O|+|Waste;kt N2O/yr;1;;;;R
 Energy Service|Bunkers|Freight|International Aviation;Gtkm/yr;;;;;;;
 Energy Service|Bunkers|Freight|International Shipping;Gtkm/yr;;;;;;;
 Energy Service|Bunkers|Passenger|International Aviation;Gpkm/yr;;;;;;;
 Energy Service|Bunkers|Passenger|International Shipping;Gpkm/yr;;;;;;;
 Energy Service|Commercial|Floor Space;bn m2/yr;;;;;;;
-Energy Service|Residential and Commercial|Floor Space;bn m2/yr;ES|Buildings|Floor Space;bn m2;1;;;;
+Energy Service|Residential and Commercial|Floor Space;bn m2/yr;ES|Buildings|Floor Space;bn m2;1;;;;R
 Energy Service|Residential|Floor Space;bn m2/yr;;;;;;;
-Energy Service|Transportation|Freight;Gtkm/yr;ES|Transport|Freight;bn tkm/yr;1;;;;
+Energy Service|Transportation|Freight;Gtkm/yr;ES|Transport|Freight;bn tkm/yr;1;;;;R
 Energy Service|Transportation|Freight|Domestic Aviation;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Domestic Shipping;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Rail;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Truck;Gtkm/yr;;;;;;;
-Energy Service|Transportation|Passenger;Gpkm/yr;ES|Transport|Pass;bn pkm/yr;1;;;;
+Energy Service|Transportation|Passenger;Gpkm/yr;ES|Transport|Pass;bn pkm/yr;1;;;;R
 Energy Service|Transportation|Passenger|2W and 3W;Gpkm/yr;;;;;;;
 Energy Service|Transportation|Passenger|Bicycling and Walking;Gpkm/yr;;;;;;;
 Energy Service|Transportation|Passenger|Bus;Gpkm/yr;;;;;;;
@@ -155,17 +155,17 @@ Energy Service|Transportation|Passenger|Domestic Shipping;Gpkm/yr;;;;;;;
 Energy Service|Transportation|Passenger|LDV;Gpkm/yr;;;;;;;
 Energy Service|Transportation|Passenger|Rail;Gpkm/yr;;;;;;;
 Energy Service|Transportation|Passenger|Truck;Gpkm/yr;;;;;;;
-Final Energy;EJ/yr;FE;EJ/yr;1;;;;
-Final Energy|Bunkers;EJ/yr;FE|Transport|Bunkers;EJ/yr;1;;;;
-Final Energy|Bunkers|Electricity;EJ/yr;FE|Transport|Bunkers|+|Electricity;EJ/yr;1;;;;
-Final Energy|Bunkers|Freight;EJ/yr;FE|Transport|Freight|Bunkers;EJ/yr;1;;;;x
+Final Energy;EJ/yr;FE;EJ/yr;1;;;;R
+Final Energy|Bunkers;EJ/yr;FE|Transport|Bunkers;EJ/yr;1;;;;R
+Final Energy|Bunkers|Electricity;EJ/yr;FE|Transport|Bunkers|+|Electricity;EJ/yr;1;;;;R
+Final Energy|Bunkers|Freight;EJ/yr;FE|Transport|Freight|Bunkers;EJ/yr;1;;;;T
 Final Energy|Bunkers|International Aviation|Freight;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Shipping|Freight;EJ/yr;;;;;;;
-Final Energy|Bunkers|Gases;EJ/yr;FE|Transport|Bunkers|+|Gases;EJ/yr;1;;;;
-Final Energy|Bunkers|Gases|Biomass;EJ/yr;FE|Transport|Bunkers|Gases|+|Biomass;EJ/yr;1;;;;
-Final Energy|Bunkers|Gases|Electricity;EJ/yr;FE|Transport|Bunkers|Gases|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Bunkers|Gases|Fossil;EJ/yr;FE|Transport|Bunkers|Gases|+|Fossil;EJ/yr;1;;;;
-Final Energy|Bunkers|Hydrogen;EJ/yr;FE|Transport|Bunkers|+|Hydrogen;EJ/yr;1;;;;
+Final Energy|Bunkers|Gases;EJ/yr;FE|Transport|Bunkers|+|Gases;EJ/yr;1;;;;R
+Final Energy|Bunkers|Gases|Biomass;EJ/yr;FE|Transport|Bunkers|Gases|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Bunkers|Gases|Electricity;EJ/yr;FE|Transport|Bunkers|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Bunkers|Gases|Fossil;EJ/yr;FE|Transport|Bunkers|Gases|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Bunkers|Hydrogen;EJ/yr;FE|Transport|Bunkers|+|Hydrogen;EJ/yr;1;;;;R
 Final Energy|Bunkers|International Aviation;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Aviation|Electricity;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Aviation|Gases;EJ/yr;;;;;;;
@@ -194,10 +194,10 @@ Final Energy|Bunkers|International Shipping|Liquids;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Shipping|Liquids|Biomass;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Shipping|Liquids|Electricity;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Shipping|Liquids|Fossil;EJ/yr;;;;;;;
-Final Energy|Bunkers|Liquids;EJ/yr;FE|Transport|Bunkers|+|Liquids;EJ/yr;1;;;;
-Final Energy|Bunkers|Liquids|Biomass;EJ/yr;FE|Transport|Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Bunkers|Liquids|Electricity;EJ/yr;FE|Transport|Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Bunkers|Liquids|Fossil;EJ/yr;FE|Transport|Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Bunkers|Liquids;EJ/yr;FE|Transport|Bunkers|+|Liquids;EJ/yr;1;;;;R
+Final Energy|Bunkers|Liquids|Biomass;EJ/yr;FE|Transport|Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Bunkers|Liquids|Electricity;EJ/yr;FE|Transport|Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Bunkers|Liquids|Fossil;EJ/yr;FE|Transport|Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Bunkers|Other;EJ/yr;;;;;;;
 Final Energy|Bunkers|Passenger;EJ/yr;;;;;;;
 Final Energy|Bunkers|International Aviation|Passenger;EJ/yr;;;;;;;
@@ -218,101 +218,101 @@ Final Energy|Commercial|Other;EJ/yr;;;;;;;
 Final Energy|Commercial|Solids;EJ/yr;;;;;;;
 Final Energy|Commercial|Solids|Biomass;EJ/yr;;;;;;;
 Final Energy|Commercial|Solids|Fossil;EJ/yr;;;;;;;
-Final Energy|Electricity;EJ/yr;FE|+|Electricity;EJ/yr;1;;;;
-Final Energy|Gases;EJ/yr;FE|+|Gases;EJ/yr;1;;;;
-Final Energy|Gases|Biomass;EJ/yr;FE|Gases|+|Biomass;EJ/yr;1;;;;
-Final Energy|Gases|Electricity;EJ/yr;FE|Gases|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Gases|Fossil;EJ/yr;FE|Gases|+|Fossil;EJ/yr;1;;;;
+Final Energy|Electricity;EJ/yr;FE|+|Electricity;EJ/yr;1;;;;R
+Final Energy|Gases;EJ/yr;FE|+|Gases;EJ/yr;1;;;;R
+Final Energy|Gases|Biomass;EJ/yr;FE|Gases|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Gases|Electricity;EJ/yr;FE|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Gases|Fossil;EJ/yr;FE|Gases|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Geothermal;EJ/yr;;;;;;;
-Final Energy|Heat;EJ/yr;FE|+|Heat;EJ/yr;1;;;;
-Final Energy|Hydrogen;EJ/yr;FE|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Industry;EJ/yr;FE|w/o Non-energy Use|Industry;EJ/yr;1;;;;
-Final Energy|Industry|Electricity;EJ/yr;FE|Industry|+|Electricity;EJ/yr;1;;;;
-Final Energy|Industry|Gases;EJ/yr;FE|w/o Non-energy Use|Industry|Gases;EJ/yr;1;;;;
-Final Energy|Industry|Gases|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Biomass;EJ/yr;1;;;;
-Final Energy|Industry|Gases|Electricity;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Industry|Gases|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Fossil;EJ/yr;1;;;;
+Final Energy|Heat;EJ/yr;FE|+|Heat;EJ/yr;1;;;;R
+Final Energy|Hydrogen;EJ/yr;FE|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Industry;EJ/yr;FE|w/o Non-energy Use|Industry;EJ/yr;1;;;;R
+Final Energy|Industry|Electricity;EJ/yr;FE|Industry|+|Electricity;EJ/yr;1;;;;R
+Final Energy|Industry|Gases;EJ/yr;FE|w/o Non-energy Use|Industry|Gases;EJ/yr;1;;;;R
+Final Energy|Industry|Gases|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Industry|Gases|Electricity;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Industry|Gases|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Industry|Geothermal;EJ/yr;;;;;;;
-Final Energy|Industry|Heat;EJ/yr;FE|Industry|+|Heat;EJ/yr;1;;;;
-Final Energy|Industry|Hydrogen;EJ/yr;FE|Industry|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Industry|Liquids;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids;EJ/yr;1;;;;
-Final Energy|Industry|Liquids|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Industry|Liquids|Electricity;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Industry|Liquids|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Industry|Heat;EJ/yr;FE|Industry|+|Heat;EJ/yr;1;;;;R
+Final Energy|Industry|Hydrogen;EJ/yr;FE|Industry|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Industry|Liquids;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids;EJ/yr;1;;;;R
+Final Energy|Industry|Liquids|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Industry|Liquids|Electricity;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Industry|Liquids|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Liquids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Industry|Other;EJ/yr;;;;;;;
-Final Energy|Industry|Chemicals;EJ/yr;FE|w/o Non-energy Use|Industry|Chemicals;EJ/yr;1;;;;
-Final Energy|Industry|Iron and Steel;EJ/yr;FE|Industry|+++|Steel;EJ/yr;1;;;;
+Final Energy|Industry|Chemicals;EJ/yr;FE|w/o Non-energy Use|Industry|Chemicals;EJ/yr;1;;;;R
+Final Energy|Industry|Iron and Steel;EJ/yr;FE|Industry|+++|Steel;EJ/yr;1;;;;R
 Final Energy|Industry|Non-Ferrous Metals;EJ/yr;;;;;;;
-Final Energy|Industry|Non-Metallic Minerals;EJ/yr;FE|Industry|+++|Cement;EJ/yr;1;;;;
+Final Energy|Industry|Non-Metallic Minerals;EJ/yr;FE|Industry|+++|Cement;EJ/yr;1;;;;R
 Final Energy|Industry|Pulp and Paper;EJ/yr;;;;;;;
-Final Energy|Industry|Other Sector;EJ/yr;FE|Industry|+++|Other Industry;EJ/yr;1;;;;
+Final Energy|Industry|Other Sector;EJ/yr;FE|Industry|+++|Other Industry;EJ/yr;1;;;;R
 Final Energy|Industry|Solar;EJ/yr;;;;;;;
-Final Energy|Industry|Solids;EJ/yr;FE|w/o Non-energy Use|Industry|Solids;EJ/yr;1;;;;
-Final Energy|Industry|Solids|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Solids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Industry|Solids|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Solids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Industry|Solids;EJ/yr;FE|w/o Non-energy Use|Industry|Solids;EJ/yr;1;;;;R
+Final Energy|Industry|Solids|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Solids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Industry|Solids|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Solids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Industry|Waste;EJ/yr;;;;;;;
-Final Energy|Liquids;EJ/yr;FE|+|Liquids;EJ/yr;1;;;;
-Final Energy|Liquids|Biomass;EJ/yr;FE|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Liquids|Electricity;EJ/yr;FE|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Liquids|Fossil;EJ/yr;FE|Liquids|+|Fossil;EJ/yr;1;;;;
-Final Energy|Non-Energy Use;EJ/yr;FE|Non-energy Use|Industry;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Gases;EJ/yr;FE|Non-energy Use|Industry|+|Gases;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Gases|Biomass;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Biomass;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Gases|Electricity;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Gases|Fossil;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Fossil;EJ/yr;1;;;;
+Final Energy|Liquids;EJ/yr;FE|+|Liquids;EJ/yr;1;;;;R
+Final Energy|Liquids|Biomass;EJ/yr;FE|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Liquids|Electricity;EJ/yr;FE|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Liquids|Fossil;EJ/yr;FE|Liquids|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use;EJ/yr;FE|Non-energy Use|Industry;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Gases;EJ/yr;FE|Non-energy Use|Industry|+|Gases;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Gases|Biomass;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Gases|Electricity;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Gases|Fossil;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Non-Energy Use|Hydrogen;EJ/yr;;;;;;;
-Final Energy|Non-Energy Use|Liquids;EJ/yr;FE|Non-energy Use|Industry|+|Liquids;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Liquids|Biomass;EJ/yr;FE|Non-energy Use|Industry|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Liquids|Electricity;EJ/yr;FE|Non-energy Use|Industry|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Liquids|Fossil;EJ/yr;FE|Non-energy Use|Industry|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Non-Energy Use|Liquids;EJ/yr;FE|Non-energy Use|Industry|+|Liquids;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Liquids|Biomass;EJ/yr;FE|Non-energy Use|Industry|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Liquids|Electricity;EJ/yr;FE|Non-energy Use|Industry|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Liquids|Fossil;EJ/yr;FE|Non-energy Use|Industry|Liquids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Non-Energy Use|Other;EJ/yr;;;;;;;
-Final Energy|Non-Energy Use|Solids;EJ/yr;FE|Non-energy Use|Industry|+|Solids;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Solids|Biomass;EJ/yr;FE|Non-energy Use|Industry|Solids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Non-Energy Use|Solids|Fossil;EJ/yr;FE|Non-energy Use|Industry|Solids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Non-Energy Use|Solids;EJ/yr;FE|Non-energy Use|Industry|+|Solids;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Solids|Biomass;EJ/yr;FE|Non-energy Use|Industry|Solids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use|Solids|Fossil;EJ/yr;FE|Non-energy Use|Industry|Solids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Non-Energy Use|Waste;EJ/yr;;;;;;;
 Final Energy|Other;EJ/yr;;;;;;;
-Final Energy|Other Sector;EJ/yr;FE|++|CDR;EJ/yr;1;;;;
-Final Energy|Other Sector|Electricity;EJ/yr;FE|CDR|+|Electricity;EJ/yr;1;;;;
-Final Energy|Other Sector|Gases;EJ/yr;FE|CDR|+|Gases;EJ/yr;1;;;;
-Final Energy|Other Sector|Gases|Biomass;EJ/yr;FE|CDR|Gases|+|Biomass;EJ/yr;1;;;;
-Final Energy|Other Sector|Gases|Electricity;EJ/yr;FE|CDR|Gases|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Other Sector|Gases|Fossil;EJ/yr;FE|CDR|Gases|+|Fossil;EJ/yr;1;;;;
-Final Energy|Other Sector|Heat;EJ/yr;FE|CDR|+|Heat;EJ/yr;1;;;;
-Final Energy|Other Sector|Hydrogen;EJ/yr;FE|CDR|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Other Sector|Liquids;EJ/yr;FE|CDR|+|Liquids;EJ/yr;1;;;;
-Final Energy|Other Sector|Liquids|Biomass;EJ/yr;FE|CDR|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Other Sector|Liquids|Electricity;EJ/yr;FE|CDR|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Other Sector|Liquids|Fossil;EJ/yr;FE|CDR|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Other Sector;EJ/yr;FE|++|CDR;EJ/yr;1;;;;R
+Final Energy|Other Sector|Electricity;EJ/yr;FE|CDR|+|Electricity;EJ/yr;1;;;;R
+Final Energy|Other Sector|Gases;EJ/yr;FE|CDR|+|Gases;EJ/yr;1;;;;R
+Final Energy|Other Sector|Gases|Biomass;EJ/yr;FE|CDR|Gases|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Other Sector|Gases|Electricity;EJ/yr;FE|CDR|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Other Sector|Gases|Fossil;EJ/yr;FE|CDR|Gases|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Other Sector|Heat;EJ/yr;FE|CDR|+|Heat;EJ/yr;1;;;;R
+Final Energy|Other Sector|Hydrogen;EJ/yr;FE|CDR|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Other Sector|Liquids;EJ/yr;FE|CDR|+|Liquids;EJ/yr;1;;;;R
+Final Energy|Other Sector|Liquids|Biomass;EJ/yr;FE|CDR|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Other Sector|Liquids|Electricity;EJ/yr;FE|CDR|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Other Sector|Liquids|Fossil;EJ/yr;FE|CDR|Liquids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Other Sector|Other;EJ/yr;;;;;;;
 Final Energy|Other Sector|Solids;EJ/yr;;;;;;;
 Final Energy|Other Sector|Solids|Biomass;EJ/yr;;;;;;;
 Final Energy|Other Sector|Solids|Fossil;EJ/yr;;;;;;;
 Final Energy|Residential;EJ/yr;;;;;;;
-Final Energy|Residential and Commercial;EJ/yr;FE|++|Buildings;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Electricity;EJ/yr;FE|Buildings|+|Electricity;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Gases;EJ/yr;FE|Buildings|+|Gases;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;FE|Buildings|Gases|+|Biomass;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Gases|Electricity;EJ/yr;FE|Buildings|Gases|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Gases|Fossil;EJ/yr;FE|Buildings|Gases|+|Fossil;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Heat;EJ/yr;FE|Buildings|+|Heat;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Hydrogen;EJ/yr;FE|Buildings|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Liquids;EJ/yr;FE|Buildings|+|Liquids;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;FE|Buildings|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Residential and Commercial;EJ/yr;FE|++|Buildings;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Electricity;EJ/yr;FE|Buildings|+|Electricity;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Gases;EJ/yr;FE|Buildings|+|Gases;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;FE|Buildings|Gases|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Gases|Electricity;EJ/yr;FE|Buildings|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Gases|Fossil;EJ/yr;FE|Buildings|Gases|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Heat;EJ/yr;FE|Buildings|+|Heat;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Hydrogen;EJ/yr;FE|Buildings|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Liquids;EJ/yr;FE|Buildings|+|Liquids;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;FE|Buildings|Liquids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Residential and Commercial|Other;EJ/yr;;;;;;;
-Final Energy|Residential and Commercial|Solids;EJ/yr;FE|Buildings|+|Solids;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Solids|Biomass;EJ/yr;FE|Buildings|Solids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Solids|Biomass|Traditional;EJ/yr;FE|Buildings|Solids|Biomass|+|Traditional;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Solids|Fossil;EJ/yr;FE|Buildings|Solids|+|Fossil;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Space and Water Heating;EJ/yr;FE|Buildings|Heating;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Space and Water Heating|Electricity;EJ/yr;FE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1;;RH: I will create a matching variable in remind2 to avoid this summation;;
-Final Energy|Residential and Commercial|Space and Water Heating|Electricity;EJ/yr;FE|Buildings|Heating|Electricity|Resistance;EJ/yr;1;;RH: I will create a matching variable in remind2 to avoid this summation;;
-Final Energy|Residential and Commercial|Space and Water Heating|Gases;EJ/yr;FE|Buildings|Heating|Gases;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Space and Water Heating|Heat;EJ/yr;FE|Buildings|Heating|District Heating;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Space and Water Heating|Hydrogen;EJ/yr;FE|Buildings|Heating|Hydrogen;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Space and Water Heating|Liquids;EJ/yr;FE|Buildings|Heating|Liquids;EJ/yr;1;;;;
-Final Energy|Residential and Commercial|Space and Water Heating|Solids;EJ/yr;FE|Buildings|Heating|Solids;EJ/yr;1;;;;
+Final Energy|Residential and Commercial|Solids;EJ/yr;FE|Buildings|+|Solids;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Solids|Biomass;EJ/yr;FE|Buildings|Solids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Solids|Biomass|Traditional;EJ/yr;FE|Buildings|Solids|Biomass|+|Traditional;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Solids|Fossil;EJ/yr;FE|Buildings|Solids|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Space and Water Heating;EJ/yr;FE|Buildings|Heating;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Space and Water Heating|Electricity;EJ/yr;FE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1;;RH: I will create a matching variable in remind2 to avoid this summation;;R
+Final Energy|Residential and Commercial|Space and Water Heating|Electricity;EJ/yr;FE|Buildings|Heating|Electricity|Resistance;EJ/yr;1;;RH: I will create a matching variable in remind2 to avoid this summation;;R
+Final Energy|Residential and Commercial|Space and Water Heating|Gases;EJ/yr;FE|Buildings|Heating|Gases;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Space and Water Heating|Heat;EJ/yr;FE|Buildings|Heating|District Heating;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Space and Water Heating|Hydrogen;EJ/yr;FE|Buildings|Heating|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Space and Water Heating|Liquids;EJ/yr;FE|Buildings|Heating|Liquids;EJ/yr;1;;;;R
+Final Energy|Residential and Commercial|Space and Water Heating|Solids;EJ/yr;FE|Buildings|Heating|Solids;EJ/yr;1;;;;R
 Final Energy|Residential and Commercial|Space Heating;EJ/yr;;;;;;;
 Final Energy|Residential|Electricity;EJ/yr;;;;;;;
 Final Energy|Residential|Gases;EJ/yr;;;;;;;
@@ -330,11 +330,11 @@ Final Energy|Residential|Solids;EJ/yr;;;;;;;
 Final Energy|Residential|Solids|Biomass;EJ/yr;;;;;;;
 Final Energy|Residential|Solids|Fossil;EJ/yr;;;;;;;
 Final Energy|Solar;EJ/yr;;;;;;;
-Final Energy|Solids;EJ/yr;FE|+|Solids;EJ/yr;1;;;;
-Final Energy|Solids|Biomass;EJ/yr;FE|Solids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Solids|Biomass|Traditional;EJ/yr;FE|Solids|Biomass|+|Traditional;EJ/yr;1;;;;
-Final Energy|Solids|Fossil;EJ/yr;FE|Solids|+|Fossil;EJ/yr;1;;;;
-Final Energy|Transportation;EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;1;;;;
+Final Energy|Solids;EJ/yr;FE|+|Solids;EJ/yr;1;;;;R
+Final Energy|Solids|Biomass;EJ/yr;FE|Solids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Solids|Biomass|Traditional;EJ/yr;FE|Solids|Biomass|+|Traditional;EJ/yr;1;;;;R
+Final Energy|Solids|Fossil;EJ/yr;FE|Solids|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Transportation;EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;1;;;;R
 Final Energy|Transportation|Bus;EJ/yr;;;;;;;
 Final Energy|Transportation|Bus|BEV;EJ/yr;;;;;;;
 Final Energy|Transportation|Bus|Catenary;EJ/yr;;;;;;;
@@ -387,33 +387,33 @@ Final Energy|Transportation|Domestic Shipping|Liquids;EJ/yr;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Fossil;EJ/yr;;;;;;;
-Final Energy|Transportation|Electricity;EJ/yr;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;1;;;;
-Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|w/o Bunkers;EJ/yr;1;;;;x
+Final Energy|Transportation|Electricity;EJ/yr;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;1;;;;R
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|w/o Bunkers;EJ/yr;1;;;;T
 Final Energy|Transportation|Freight|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Freight|Gases;EJ/yr;;;;;;;
 Final Energy|Transportation|Freight|Hydrogen;EJ/yr;;;;;;;
-Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|w/o Bunkers|+|Liquids;EJ/yr;1;;;;x
-Final Energy|Transportation|Freight|Liquids|Biomass;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;x
-Final Energy|Transportation|Freight|Liquids|Electricity;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;x
-Final Energy|Transportation|Freight|Liquids|Fossil;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;x
+Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|w/o Bunkers|+|Liquids;EJ/yr;1;;;;T
+Final Energy|Transportation|Freight|Liquids|Biomass;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;T
+Final Energy|Transportation|Freight|Liquids|Electricity;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;T
+Final Energy|Transportation|Freight|Liquids|Fossil;EJ/yr;FE|Transport|Freight|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;T
 Final Energy|Transportation|Freight|Other;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Freight;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Freight|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Freight|Hydrogen;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Freight|Liquids;EJ/yr;;;;;;;
-Final Energy|Transportation|Gases;EJ/yr;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;1;;;;
-Final Energy|Transportation|Gases|Biomass;EJ/yr;FE|Transport|w/o Bunkers|Gases|+|Biomass;EJ/yr;1;;;;
-Final Energy|Transportation|Gases|Electricity;EJ/yr;FE|Transport|w/o Bunkers|Gases|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Transportation|Gases|Fossil;EJ/yr;FE|Transport|w/o Bunkers|Gases|+|Fossil;EJ/yr;1;;;;
-Final Energy|Transportation|Hydrogen;EJ/yr;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;1;;;;
+Final Energy|Transportation|Gases;EJ/yr;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;1;;;;R
+Final Energy|Transportation|Gases|Biomass;EJ/yr;FE|Transport|w/o Bunkers|Gases|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Transportation|Gases|Electricity;EJ/yr;FE|Transport|w/o Bunkers|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Transportation|Gases|Fossil;EJ/yr;FE|Transport|w/o Bunkers|Gases|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Transportation|Hydrogen;EJ/yr;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;1;;;;R
 Final Energy|Transportation|Hydrogen|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|Hydrogen|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Hydrogen|Fossil;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV;EJ/yr;FE|Transport|LDV;EJ/yr;1;;;;x
+Final Energy|Transportation|LDV;EJ/yr;FE|Transport|LDV;EJ/yr;1;;;;T
 Final Energy|Transportation|LDV|BEV;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|+|Electricity;EJ/yr;1;;;;x
+Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|+|Electricity;EJ/yr;1;;;;T
 Final Energy|Transportation|LDV|FCEV;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|+|Gases;EJ/yr;1;;;;x
+Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|+|Gases;EJ/yr;1;;;;T
 Final Energy|Transportation|LDV|Gases|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Gases|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Gases|Fossil;EJ/yr;;;;;;;
@@ -421,30 +421,30 @@ Final Energy|Transportation|LDV|Hybrid;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hybrid|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hybrid|Gases;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hybrid|Liquids;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|+|Hydrogen;EJ/yr;1;;;;x
+Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|+|Hydrogen;EJ/yr;1;;;;T
 Final Energy|Transportation|LDV|Hydrogen|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hydrogen|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|Hydrogen|Fossil;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE|Gases;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE|Liquids;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|+|Liquids;EJ/yr;1;;;;x
-Final Energy|Transportation|LDV|Liquids|Biomass;EJ/yr;FE|Transport|LDV|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Transportation|LDV|Liquids|Electricity;EJ/yr;FE|Transport|LDV|Liquids|+|Fossil;EJ/yr;1;;;;
-Final Energy|Transportation|LDV|Liquids|Fossil;EJ/yr;FE|Transport|LDV|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Transportation|Liquids;EJ/yr;FE|Transport|w/o Bunkers|+|Liquids;EJ/yr;1;;;;
-Final Energy|Transportation|Liquids|Biomass;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;
-Final Energy|Transportation|Liquids|Electricity;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Final Energy|Transportation|Liquids|Fossil;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;
+Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|+|Liquids;EJ/yr;1;;;;T
+Final Energy|Transportation|LDV|Liquids|Biomass;EJ/yr;FE|Transport|LDV|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Transportation|LDV|Liquids|Electricity;EJ/yr;FE|Transport|LDV|Liquids|+|Fossil;EJ/yr;1;;;;R
+Final Energy|Transportation|LDV|Liquids|Fossil;EJ/yr;FE|Transport|LDV|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Transportation|Liquids;EJ/yr;FE|Transport|w/o Bunkers|+|Liquids;EJ/yr;1;;;;R
+Final Energy|Transportation|Liquids|Biomass;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;R
+Final Energy|Transportation|Liquids|Electricity;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Final Energy|Transportation|Liquids|Fossil;EJ/yr;FE|Transport|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;R
 Final Energy|Transportation|Other;EJ/yr;;;;;;;
-Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|w/o Bunkers;EJ/yr;1;;;;x
-Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Electricity;EJ/yr;1;;;;x
-Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Gases;EJ/yr;1;;;;x
-Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Hydrogen;EJ/yr;1;;;;x
-Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Liquids;EJ/yr;1;;;;x
-Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;x
-Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;x
-Final Energy|Transportation|Passenger|Liquids|Fossil;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;x
+Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|w/o Bunkers;EJ/yr;1;;;;T
+Final Energy|Transportation|Passenger|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Electricity;EJ/yr;1;;;;T
+Final Energy|Transportation|Passenger|Gases;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Gases;EJ/yr;1;;;;T
+Final Energy|Transportation|Passenger|Hydrogen;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Hydrogen;EJ/yr;1;;;;T
+Final Energy|Transportation|Passenger|Liquids;EJ/yr;FE|Transport|Pass|w/o Bunkers|+|Liquids;EJ/yr;1;;;;T
+Final Energy|Transportation|Passenger|Liquids|Biomass;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Biomass;EJ/yr;1;;;;T
+Final Energy|Transportation|Passenger|Liquids|Electricity;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Hydrogen;EJ/yr;1;;;;T
+Final Energy|Transportation|Passenger|Liquids|Fossil;EJ/yr;FE|Transport|Pass|w/o Bunkers|Liquids|+|Fossil;EJ/yr;1;;;;T
 Final Energy|Transportation|Passenger|Other;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Passenger;EJ/yr;;;;;;;
 Final Energy|Transportation|Rail|Passenger|Electricity;EJ/yr;;;;;;;
@@ -488,189 +488,189 @@ Final Energy|Transportation|Truck|Liquids;EJ/yr;;;;;;;
 Final Energy|Transportation|Truck|Liquids|Biomass;EJ/yr;;;;;;;
 Final Energy|Transportation|Truck|Liquids|Electricity;EJ/yr;;;;;;;
 Final Energy|Transportation|Truck|Liquids|Fossil;EJ/yr;;;;;;;
-GDP|MER;billion EUR_2020/yr;GDP|MER;billion US$2005/yr;1.17;;;;
-GDP|PPP;billion EUR_2020/yr;GDP|PPP;billion US$2005/yr;1.17;;;;
-Gross Emissions|CO2;Mt CO2/yr;Emi|CO2|Gross;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross|Energy;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross|Energy and Industrial Processes;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross|Energy|Demand;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy|Demand|Industry;Mt CO2/yr;Emi|CO2|Gross|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Supply;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Electricity;Mt CO2/yr;1;;;;
+GDP|MER;billion EUR_2020/yr;GDP|MER;billion US$2005/yr;1.17;;;;R
+GDP|PPP;billion EUR_2020/yr;GDP|PPP;billion US$2005/yr;1.17;;;;R
+Gross Emissions|CO2;Mt CO2/yr;Emi|CO2|Gross;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross|Energy;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross|Energy and Industrial Processes;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|w/ Bunkers|Gross|Energy|Demand;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy|Demand|Industry;Mt CO2/yr;Emi|CO2|Gross|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Supply;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Electricity;Mt CO2/yr;1;;;;R
 Gross Emissions|CO2|Energy|Supply|Electricity and Heat;Mt CO2/yr;;;;;;;
-Gross Emissions|CO2|Energy|Supply|Gases;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Gases;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy|Supply|Heat;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Heat;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy|Supply|Hydrogen;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Hydrogen;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Liquids;Mt CO2/yr;1;;;;
+Gross Emissions|CO2|Energy|Supply|Gases;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Gases;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy|Supply|Heat;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Heat;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy|Supply|Hydrogen;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Hydrogen;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Liquids;Mt CO2/yr;1;;;;R
 Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;;;;;;;
-Gross Emissions|CO2|Energy|Supply|Solids;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Solids;Mt CO2/yr;1;;;;
-Gross Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;1;;;;
+Gross Emissions|CO2|Energy|Supply|Solids;Mt CO2/yr;Emi|CO2|Gross|Energy|Supply|+|Solids;Mt CO2/yr;1;;;;R
+Gross Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;1;;;;R
 Gross Emissions|CO2|Industry and Industrial Processes;Mt CO2/yr;;;;;;;
 Policy Cost|Area under MAC Curve;billion EUR_2020/yr;;;;;;;
-Policy Cost|Consumption Loss;billion EUR_2020/yr;Policy Cost|Consumption + Current Account Loss;billion US$2005/yr;1.17;;;;
-Population;million;Population;million;1;;;;
-Price|Carbon;EUR_2020/t CO2;Price|Carbon;US$2005/t CO2;1.17;;;;
-Price|Final Energy|Industry|Electricity;EUR_2020/GJ;Price|Final Energy|Industry|Electricity;US$2005/GJ;1.17;;;;
-Price|Final Energy|Industry|Gases;EUR_2020/GJ;Price|Final Energy|Industry|Gases;US$2005/GJ;1.17;;;;
+Policy Cost|Consumption Loss;billion EUR_2020/yr;Policy Cost|Consumption + Current Account Loss;billion US$2005/yr;1.17;;;;R
+Population;million;Population;million;1;;;;R
+Price|Carbon;EUR_2020/t CO2;Price|Carbon;US$2005/t CO2;1.17;;;;R
+Price|Final Energy|Industry|Electricity;EUR_2020/GJ;Price|Final Energy|Industry|Electricity;US$2005/GJ;1.17;;;;R
+Price|Final Energy|Industry|Gases;EUR_2020/GJ;Price|Final Energy|Industry|Gases;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Industry|Gases|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Industry|Gases|Electricity;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Industry|Gases|Fossil;EUR_2020/GJ;;;;;;;
-Price|Final Energy|Industry|Heat;EUR_2020/GJ;Price|Final Energy|Industry|Heat;US$2005/GJ;1.17;;;;
-Price|Final Energy|Industry|Hydrogen;EUR_2020/GJ;Price|Final Energy|Industry|Hydrogen;US$2005/GJ;1.17;;;;
-Price|Final Energy|Industry|Liquids;EUR_2020/GJ;Price|Final Energy|Industry|Liquids;US$2005/GJ;1.17;;;;
+Price|Final Energy|Industry|Heat;EUR_2020/GJ;Price|Final Energy|Industry|Heat;US$2005/GJ;1.17;;;;R
+Price|Final Energy|Industry|Hydrogen;EUR_2020/GJ;Price|Final Energy|Industry|Hydrogen;US$2005/GJ;1.17;;;;R
+Price|Final Energy|Industry|Liquids;EUR_2020/GJ;Price|Final Energy|Industry|Liquids;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Industry|Liquids|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Industry|Liquids|Electricity;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Industry|Liquids|Fossil;EUR_2020/GJ;;;;;;;
-Price|Final Energy|Industry|Solids;EUR_2020/GJ;Price|Final Energy|Industry|Solids;US$2005/GJ;1.17;;;;
+Price|Final Energy|Industry|Solids;EUR_2020/GJ;Price|Final Energy|Industry|Solids;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Industry|Solids|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Industry|Solids|Fossil;EUR_2020/GJ;;;;;;;
-Price|Final Energy|Residential and Commercial|Electricity;EUR_2020/GJ;Price|Final Energy|Buildings|Electricity;US$2005/GJ;1.17;;;;
-Price|Final Energy|Residential and Commercial|Gases;EUR_2020/GJ;Price|Final Energy|Buildings|Gases;US$2005/GJ;1.17;;;;
+Price|Final Energy|Residential and Commercial|Electricity;EUR_2020/GJ;Price|Final Energy|Buildings|Electricity;US$2005/GJ;1.17;;;;R
+Price|Final Energy|Residential and Commercial|Gases;EUR_2020/GJ;Price|Final Energy|Buildings|Gases;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Residential and Commercial|Gases|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Residential and Commercial|Gases|Electricity;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Residential and Commercial|Gases|Fossil;EUR_2020/GJ;;;;;;;
-Price|Final Energy|Residential and Commercial|Heat;EUR_2020/GJ;Price|Final Energy|Buildings|Heat;US$2005/GJ;1.17;;;;
-Price|Final Energy|Residential and Commercial|Hydrogen;EUR_2020/GJ;Price|Final Energy|Buildings|Hydrogen;US$2005/GJ;1.17;;;;
-Price|Final Energy|Residential and Commercial|Liquids;EUR_2020/GJ;Price|Final Energy|Buildings|Liquids;US$2005/GJ;1.17;;;;
+Price|Final Energy|Residential and Commercial|Heat;EUR_2020/GJ;Price|Final Energy|Buildings|Heat;US$2005/GJ;1.17;;;;R
+Price|Final Energy|Residential and Commercial|Hydrogen;EUR_2020/GJ;Price|Final Energy|Buildings|Hydrogen;US$2005/GJ;1.17;;;;R
+Price|Final Energy|Residential and Commercial|Liquids;EUR_2020/GJ;Price|Final Energy|Buildings|Liquids;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Residential and Commercial|Liquids|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Residential and Commercial|Liquids|Electricity;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Residential and Commercial|Liquids|Fossil;EUR_2020/GJ;;;;;;;
-Price|Final Energy|Residential and Commercial|Solids;EUR_2020/GJ;Price|Final Energy|Buildings|Solids;US$2005/GJ;1.17;;;;
+Price|Final Energy|Residential and Commercial|Solids;EUR_2020/GJ;Price|Final Energy|Buildings|Solids;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Residential and Commercial|Solids|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Residential and Commercial|Solids|Fossil;EUR_2020/GJ;;;;;;;
-Price|Final Energy|Transportation|Electricity;EUR_2020/GJ;Price|Final Energy|Transport|Electricity;US$2005/GJ;1.17;;;;
+Price|Final Energy|Transportation|Electricity;EUR_2020/GJ;Price|Final Energy|Transport|Electricity;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Transportation|Gases;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Transportation|Gases|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Transportation|Gases|Electricity;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Transportation|Gases|Fossil;EUR_2020/GJ;;;;;;;
-Price|Final Energy|Transportation|Hydrogen;EUR_2020/GJ;Price|Final Energy|Transport|Hydrogen;US$2005/GJ;1.17;;;;
-Price|Final Energy|Transportation|Liquids;EUR_2020/GJ;Price|Final Energy|Transport|Liquids;US$2005/GJ;1.17;;;;
+Price|Final Energy|Transportation|Hydrogen;EUR_2020/GJ;Price|Final Energy|Transport|Hydrogen;US$2005/GJ;1.17;;;;R
+Price|Final Energy|Transportation|Liquids;EUR_2020/GJ;Price|Final Energy|Transport|Liquids;US$2005/GJ;1.17;;;;R
 Price|Final Energy|Transportation|Liquids|Biomass;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Transportation|Liquids|Electricity;EUR_2020/GJ;;;;;;;
 Price|Final Energy|Transportation|Liquids|Fossil;EUR_2020/GJ;;;;;;;
-Price|Primary Energy|Biomass;EUR_2020/GJ;Price|Biomass|World Market;US$2005/GJ;1.17;;;;
-Price|Primary Energy|Coal;EUR_2020/GJ;Price|Coal|World Market;US$2005/GJ;1.17;;;;
-Price|Primary Energy|Gas;EUR_2020/GJ;Price|Gas|World Market;US$2005/GJ;1.17;;;;
-Price|Primary Energy|Oil;EUR_2020/GJ;Price|Oil|World Market;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Electricity;EUR_2020/GJ;Price|Secondary Energy|Electricity;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Gases;EUR_2020/GJ;Price|Secondary Energy|Gases;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Gases|Biomass;EUR_2020/GJ;Price|Secondary Energy|Gases|Biomass;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Gases|Electricity;EUR_2020/GJ;Price|Secondary Energy|Gases|Hydrogen;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Gases|Fossil;EUR_2020/GJ;Price|Secondary Energy|Gases|Fossil;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Heat;EUR_2020/GJ;Price|Secondary Energy|Heat;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Hydrogen;EUR_2020/GJ;Price|Secondary Energy|Hydrogen;US$2005/GJ;1.17;;;;
+Price|Primary Energy|Biomass;EUR_2020/GJ;Price|Biomass|World Market;US$2005/GJ;1.17;;;;R
+Price|Primary Energy|Coal;EUR_2020/GJ;Price|Coal|World Market;US$2005/GJ;1.17;;;;R
+Price|Primary Energy|Gas;EUR_2020/GJ;Price|Gas|World Market;US$2005/GJ;1.17;;;;R
+Price|Primary Energy|Oil;EUR_2020/GJ;Price|Oil|World Market;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Electricity;EUR_2020/GJ;Price|Secondary Energy|Electricity;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Gases;EUR_2020/GJ;Price|Secondary Energy|Gases;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Gases|Biomass;EUR_2020/GJ;Price|Secondary Energy|Gases|Biomass;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Gases|Electricity;EUR_2020/GJ;Price|Secondary Energy|Gases|Hydrogen;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Gases|Fossil;EUR_2020/GJ;Price|Secondary Energy|Gases|Fossil;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Heat;EUR_2020/GJ;Price|Secondary Energy|Heat;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Hydrogen;EUR_2020/GJ;Price|Secondary Energy|Hydrogen;US$2005/GJ;1.17;;;;R
 Price|Secondary Energy|Hydrogen|Biomass;EUR_2020/GJ;;;;;;;
 Price|Secondary Energy|Hydrogen|Electricity;EUR_2020/GJ;;;;;;;
 Price|Secondary Energy|Hydrogen|Fossil;EUR_2020/GJ;;;;;;;
-Price|Secondary Energy|Liquids;EUR_2020/GJ;Price|Secondary Energy|Liquids;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Liquids|Biomass;EUR_2020/GJ;Price|Secondary Energy|Liquids|Biomass;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Liquids|Electricity;EUR_2020/GJ;Price|Secondary Energy|Liquids|Hydrogen;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Liquids|Fossil;EUR_2020/GJ;Price|Secondary Energy|Liquids|Fossil;US$2005/GJ;1.17;;;;
+Price|Secondary Energy|Liquids;EUR_2020/GJ;Price|Secondary Energy|Liquids;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Liquids|Biomass;EUR_2020/GJ;Price|Secondary Energy|Liquids|Biomass;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Liquids|Electricity;EUR_2020/GJ;Price|Secondary Energy|Liquids|Hydrogen;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Liquids|Fossil;EUR_2020/GJ;Price|Secondary Energy|Liquids|Fossil;US$2005/GJ;1.17;;;;R
 Price|Secondary Energy|Other;EUR_2020/GJ;;;;;;;
 Price|Secondary Energy|Solar;EUR_2020/GJ;;;;;;;
-Price|Secondary Energy|Solids;EUR_2020/GJ;Price|Secondary Energy|Solids;US$2005/GJ;1.17;;;;
-Price|Secondary Energy|Solids|Biomass;EUR_2020/GJ;Price|Secondary Energy|Solids|Biomass;US$2005/GJ;1.17;;;;
+Price|Secondary Energy|Solids;EUR_2020/GJ;Price|Secondary Energy|Solids;US$2005/GJ;1.17;;;;R
+Price|Secondary Energy|Solids|Biomass;EUR_2020/GJ;Price|Secondary Energy|Solids|Biomass;US$2005/GJ;1.17;;;;R
 Price|Secondary Energy|Solids|Biomass|Traditional;EUR_2020/GJ;;;;;;;
-Price|Secondary Energy|Solids|Fossil;EUR_2020/GJ;Price|Secondary Energy|Solids|Fossil;US$2005/GJ;1.17;;;;
-Primary Energy;EJ/yr;PE;EJ/yr;1;;;;
-Primary Energy|Biomass;EJ/yr;PE|+|Biomass;EJ/yr;1;;;;
-Primary Energy|Biomass|Electricity;EJ/yr;PE|Biomass|Electricity;EJ/yr;1;;;;
-Primary Energy|Biomass|Electricity|w/ CCS;EJ/yr;PE|Biomass|Electricity|w/ CC;EJ/yr;1;;;;
-Primary Energy|Biomass|Electricity|w/o CCS;EJ/yr;PE|Biomass|Electricity|w/o CC;EJ/yr;1;;;;
-Primary Energy|Biomass|Modern;EJ/yr;PE|Biomass|Modern;EJ/yr;1;;;;
-Primary Energy|Biomass|Traditional;EJ/yr;PE|Biomass|Traditional;EJ/yr;1;;;;
-Primary Energy|Biomass|w/ CCS;EJ/yr;PE|Biomass|w/ CC;EJ/yr;1;;;;
-Primary Energy|Biomass|w/o CCS;EJ/yr;PE|Biomass|w/o CC;EJ/yr;1;;;;
-Primary Energy|Coal;EJ/yr;PE|+|Coal;EJ/yr;1;;;;
-Primary Energy|Coal|Electricity;EJ/yr;PE|Coal|Electricity;EJ/yr;1;;;;
-Primary Energy|Coal|Electricity|w/ CCS;EJ/yr;PE|Coal|Electricity|w/ CC;EJ/yr;1;;;;
-Primary Energy|Coal|Electricity|w/o CCS;EJ/yr;PE|Coal|Electricity|w/o CC;EJ/yr;1;;;;
-Primary Energy|Coal|w/ CCS;EJ/yr;PE|Coal|w/ CC;EJ/yr;1;;;;
-Primary Energy|Coal|w/o CCS;EJ/yr;PE|Coal|w/o CC;EJ/yr;1;;;;
-Primary Energy|Fossil;EJ/yr;PE|Fossil;EJ/yr;1;;;;
-Primary Energy|Fossil|w/ CCS;EJ/yr;PE|Fossil|w/ CC;EJ/yr;1;;;;
-Primary Energy|Fossil|w/o CCS;EJ/yr;PE|Fossil|w/o CC;EJ/yr;1;;;;
-Primary Energy|Gas;EJ/yr;PE|+|Gas;EJ/yr;1;;;;
-Primary Energy|Gas|Electricity;EJ/yr;PE|Gas|Electricity;EJ/yr;1;;;;
-Primary Energy|Gas|Electricity|w/ CCS;EJ/yr;PE|Gas|Electricity|w/ CC;EJ/yr;1;;;;
-Primary Energy|Gas|Electricity|w/o CCS;EJ/yr;PE|Gas|Electricity|w/o CC;EJ/yr;1;;;;
-Primary Energy|Gas|w/ CCS;EJ/yr;PE|Gas|w/ CC;EJ/yr;1;;;;
-Primary Energy|Gas|w/o CCS;EJ/yr;PE|Gas|w/o CC;EJ/yr;1;;;;
-Primary Energy|Geothermal;EJ/yr;PE|+|Geothermal;EJ/yr;1;;;;
-Primary Energy|Hydro;EJ/yr;PE|+|Hydro;EJ/yr;1;;;;
-Primary Energy|Nuclear;EJ/yr;PE|+|Nuclear;EJ/yr;1;;;;
+Price|Secondary Energy|Solids|Fossil;EUR_2020/GJ;Price|Secondary Energy|Solids|Fossil;US$2005/GJ;1.17;;;;R
+Primary Energy;EJ/yr;PE;EJ/yr;1;;;;R
+Primary Energy|Biomass;EJ/yr;PE|+|Biomass;EJ/yr;1;;;;R
+Primary Energy|Biomass|Electricity;EJ/yr;PE|Biomass|Electricity;EJ/yr;1;;;;R
+Primary Energy|Biomass|Electricity|w/ CCS;EJ/yr;PE|Biomass|Electricity|w/ CC;EJ/yr;1;;;;R
+Primary Energy|Biomass|Electricity|w/o CCS;EJ/yr;PE|Biomass|Electricity|w/o CC;EJ/yr;1;;;;R
+Primary Energy|Biomass|Modern;EJ/yr;PE|Biomass|Modern;EJ/yr;1;;;;R
+Primary Energy|Biomass|Traditional;EJ/yr;PE|Biomass|Traditional;EJ/yr;1;;;;R
+Primary Energy|Biomass|w/ CCS;EJ/yr;PE|Biomass|w/ CC;EJ/yr;1;;;;R
+Primary Energy|Biomass|w/o CCS;EJ/yr;PE|Biomass|w/o CC;EJ/yr;1;;;;R
+Primary Energy|Coal;EJ/yr;PE|+|Coal;EJ/yr;1;;;;R
+Primary Energy|Coal|Electricity;EJ/yr;PE|Coal|Electricity;EJ/yr;1;;;;R
+Primary Energy|Coal|Electricity|w/ CCS;EJ/yr;PE|Coal|Electricity|w/ CC;EJ/yr;1;;;;R
+Primary Energy|Coal|Electricity|w/o CCS;EJ/yr;PE|Coal|Electricity|w/o CC;EJ/yr;1;;;;R
+Primary Energy|Coal|w/ CCS;EJ/yr;PE|Coal|w/ CC;EJ/yr;1;;;;R
+Primary Energy|Coal|w/o CCS;EJ/yr;PE|Coal|w/o CC;EJ/yr;1;;;;R
+Primary Energy|Fossil;EJ/yr;PE|Fossil;EJ/yr;1;;;;R
+Primary Energy|Fossil|w/ CCS;EJ/yr;PE|Fossil|w/ CC;EJ/yr;1;;;;R
+Primary Energy|Fossil|w/o CCS;EJ/yr;PE|Fossil|w/o CC;EJ/yr;1;;;;R
+Primary Energy|Gas;EJ/yr;PE|+|Gas;EJ/yr;1;;;;R
+Primary Energy|Gas|Electricity;EJ/yr;PE|Gas|Electricity;EJ/yr;1;;;;R
+Primary Energy|Gas|Electricity|w/ CCS;EJ/yr;PE|Gas|Electricity|w/ CC;EJ/yr;1;;;;R
+Primary Energy|Gas|Electricity|w/o CCS;EJ/yr;PE|Gas|Electricity|w/o CC;EJ/yr;1;;;;R
+Primary Energy|Gas|w/ CCS;EJ/yr;PE|Gas|w/ CC;EJ/yr;1;;;;R
+Primary Energy|Gas|w/o CCS;EJ/yr;PE|Gas|w/o CC;EJ/yr;1;;;;R
+Primary Energy|Geothermal;EJ/yr;PE|+|Geothermal;EJ/yr;1;;;;R
+Primary Energy|Hydro;EJ/yr;PE|+|Hydro;EJ/yr;1;;;;R
+Primary Energy|Nuclear;EJ/yr;PE|+|Nuclear;EJ/yr;1;;;;R
 Primary Energy|Ocean;EJ/yr;;;;;;;
-Primary Energy|Oil;EJ/yr;PE|+|Oil;EJ/yr;1;;;;
+Primary Energy|Oil;EJ/yr;PE|+|Oil;EJ/yr;1;;;;R
 Primary Energy|Oil|Electricity;EJ/yr;;;;;;;
 Primary Energy|Oil|Electricity|w/ CCS;EJ/yr;;;;;;;
 Primary Energy|Oil|Electricity|w/o CCS;EJ/yr;;;;;;;
 Primary Energy|Oil|w/ CCS;EJ/yr;;;;;;;
-Primary Energy|Oil|w/o CCS;EJ/yr;PE|Oil|w/o CC;EJ/yr;1;;;;
+Primary Energy|Oil|w/o CCS;EJ/yr;PE|Oil|w/o CC;EJ/yr;1;;;;R
 Primary Energy|Other;EJ/yr;;;;;;;
-Primary Energy|Solar;EJ/yr;PE|+|Solar;EJ/yr;1;;;;
-Primary Energy|Wind;EJ/yr;PE|+|Wind;EJ/yr;1;;;;
-Primary Energy|Wind|Offshore;EJ/yr;PE|Wind|+|Offshore;EJ/yr;1;;;;
-Primary Energy|Wind|Onshore;EJ/yr;PE|Wind|+|Onshore;EJ/yr;1;;;;
-Secondary Energy;EJ/yr;SE;EJ/yr;1;;;;
-Secondary Energy|Electricity;EJ/yr;SE|Electricity;EJ/yr;1;;;;
-Secondary Energy|Electricity|Biomass;EJ/yr;SE|Electricity|+|Biomass;EJ/yr;1;;;;
-Secondary Energy|Electricity|Biomass|w/ CCS;EJ/yr;SE|Electricity|Biomass|+|w/ CC;EJ/yr;1;;;;
-Secondary Energy|Electricity|Biomass|w/o CCS;EJ/yr;SE|Electricity|Biomass|+|w/o CC;EJ/yr;1;;;;
-Secondary Energy|Electricity|Coal;EJ/yr;SE|Electricity|+|Coal;EJ/yr;1;;;;
-Secondary Energy|Electricity|Coal|w/ CCS;EJ/yr;SE|Electricity|Coal|+|w/ CC;EJ/yr;1;;;;
-Secondary Energy|Electricity|Coal|w/o CCS;EJ/yr;SE|Electricity|Coal|+|w/o CC;EJ/yr;1;;;;
-Secondary Energy|Electricity|Curtailment;EJ/yr;SE|Electricity|Curtailment;EJ/yr;1;;;;
+Primary Energy|Solar;EJ/yr;PE|+|Solar;EJ/yr;1;;;;R
+Primary Energy|Wind;EJ/yr;PE|+|Wind;EJ/yr;1;;;;R
+Primary Energy|Wind|Offshore;EJ/yr;PE|Wind|+|Offshore;EJ/yr;1;;;;R
+Primary Energy|Wind|Onshore;EJ/yr;PE|Wind|+|Onshore;EJ/yr;1;;;;R
+Secondary Energy;EJ/yr;SE;EJ/yr;1;;;;R
+Secondary Energy|Electricity;EJ/yr;SE|Electricity;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Biomass;EJ/yr;SE|Electricity|+|Biomass;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Biomass|w/ CCS;EJ/yr;SE|Electricity|Biomass|+|w/ CC;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Biomass|w/o CCS;EJ/yr;SE|Electricity|Biomass|+|w/o CC;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Coal;EJ/yr;SE|Electricity|+|Coal;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Coal|w/ CCS;EJ/yr;SE|Electricity|Coal|+|w/ CC;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Coal|w/o CCS;EJ/yr;SE|Electricity|Coal|+|w/o CC;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Curtailment;EJ/yr;SE|Electricity|Curtailment;EJ/yr;1;;;;R
 Secondary Energy|Electricity|Fossil;EJ/yr;;;;;;;
 Secondary Energy|Electricity|Fossil|w/ CCS;EJ/yr;;;;;;;
 Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;;;;;;;
-Secondary Energy|Electricity|Gas;EJ/yr;SE|Electricity|+|Gas;EJ/yr;1;;;;
-Secondary Energy|Electricity|Gas|w/ CCS;EJ/yr;SE|Electricity|Gas|+|w/ CC;EJ/yr;1;;;;
-Secondary Energy|Electricity|Gas|w/o CCS;EJ/yr;SE|Electricity|Gas|+|w/o CC;EJ/yr;1;;;;
-Secondary Energy|Electricity|Geothermal;EJ/yr;SE|Electricity|+|Geothermal;EJ/yr;1;;;;
-Secondary Energy|Electricity|Hydro;EJ/yr;SE|Electricity|+|Hydro;EJ/yr;1;;;;
-Secondary Energy|Electricity|Hydrogen;EJ/yr;SE|Electricity|+|Hydrogen;EJ/yr;1;;;;
-Secondary Energy|Electricity|Non-Biomass Renewables;EJ/yr;SE|Electricity|Non-Biomass Renewables;EJ/yr;1;;;;
-Secondary Energy|Electricity|Nuclear;EJ/yr;SE|Electricity|+|Nuclear;EJ/yr;1;;;;
+Secondary Energy|Electricity|Gas;EJ/yr;SE|Electricity|+|Gas;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Gas|w/ CCS;EJ/yr;SE|Electricity|Gas|+|w/ CC;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Gas|w/o CCS;EJ/yr;SE|Electricity|Gas|+|w/o CC;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Geothermal;EJ/yr;SE|Electricity|+|Geothermal;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Hydro;EJ/yr;SE|Electricity|+|Hydro;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Hydrogen;EJ/yr;SE|Electricity|+|Hydrogen;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Non-Biomass Renewables;EJ/yr;SE|Electricity|Non-Biomass Renewables;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Nuclear;EJ/yr;SE|Electricity|+|Nuclear;EJ/yr;1;;;;R
 Secondary Energy|Electricity|Ocean;EJ/yr;;;;;;;
-Secondary Energy|Electricity|Oil;EJ/yr;SE|Electricity|Oil|DOT;EJ/yr;1;;;;
+Secondary Energy|Electricity|Oil;EJ/yr;SE|Electricity|Oil|DOT;EJ/yr;1;;;;R
 Secondary Energy|Electricity|Oil|w/ CCS;EJ/yr;;;;;;;
-Secondary Energy|Electricity|Oil|w/o CCS;EJ/yr;SE|Electricity|Oil|w/o CC;EJ/yr;1;;;;
+Secondary Energy|Electricity|Oil|w/o CCS;EJ/yr;SE|Electricity|Oil|w/o CC;EJ/yr;1;;;;R
 Secondary Energy|Electricity|Other;EJ/yr;;;;;;;
-Secondary Energy|Electricity|Solar;EJ/yr;SE|Electricity|+|Solar;EJ/yr;1;;;;
-Secondary Energy|Electricity|Solar|CSP;EJ/yr;SE|Electricity|Solar|+|CSP;EJ/yr;1;;;;
-Secondary Energy|Electricity|Solar|PV;EJ/yr;SE|Electricity|Solar|+|PV;EJ/yr;1;;;;
+Secondary Energy|Electricity|Solar;EJ/yr;SE|Electricity|+|Solar;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Solar|CSP;EJ/yr;SE|Electricity|Solar|+|CSP;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Solar|PV;EJ/yr;SE|Electricity|Solar|+|PV;EJ/yr;1;;;;R
 Secondary Energy|Electricity|Storage;EJ/yr;;;;;;;
 Secondary Energy|Electricity|Storage Losses;EJ/yr;;;;;;;
 Secondary Energy|Electricity|Transmission Losses;EJ/yr;;;;;;;
-Secondary Energy|Electricity|Wind;EJ/yr;SE|Electricity|+|Wind;EJ/yr;1;;;;
-Secondary Energy|Electricity|Wind|Offshore;EJ/yr;SE|Electricity|Wind|+|Offshore;EJ/yr;1;;;;
-Secondary Energy|Electricity|Wind|Onshore;EJ/yr;SE|Electricity|Wind|+|Onshore;EJ/yr;1;;;;
-Secondary Energy|Gases;EJ/yr;SE|Gases;EJ/yr;1;;;;
-Secondary Energy|Gases;EJ/yr;SE|Gases|Biomass|Waste;EJ/yr;-1;;only necessary to fix double accounting in results before remind2 PR456 merge;;
-Secondary Energy|Gases|Biomass;EJ/yr;SE|Gases|+|Biomass;EJ/yr;1;;;;
+Secondary Energy|Electricity|Wind;EJ/yr;SE|Electricity|+|Wind;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Wind|Offshore;EJ/yr;SE|Electricity|Wind|+|Offshore;EJ/yr;1;;;;R
+Secondary Energy|Electricity|Wind|Onshore;EJ/yr;SE|Electricity|Wind|+|Onshore;EJ/yr;1;;;;R
+Secondary Energy|Gases;EJ/yr;SE|Gases;EJ/yr;1;;;;R
+Secondary Energy|Gases;EJ/yr;SE|Gases|Biomass|Waste;EJ/yr;-1;;only necessary to fix double accounting in results before remind2 PR456 merge;;R
+Secondary Energy|Gases|Biomass;EJ/yr;SE|Gases|+|Biomass;EJ/yr;1;;;;R
 Secondary Energy|Gases|Coal;EJ/yr;;;;;;;
-Secondary Energy|Gases|Electricity;EJ/yr;SE|Gases|+|Hydrogen;EJ/yr;1;;;;
-Secondary Energy|Gases|Fossil;EJ/yr;SE|Gases|+|Fossil;EJ/yr;1;;;;
+Secondary Energy|Gases|Electricity;EJ/yr;SE|Gases|+|Hydrogen;EJ/yr;1;;;;R
+Secondary Energy|Gases|Fossil;EJ/yr;SE|Gases|+|Fossil;EJ/yr;1;;;;R
 Secondary Energy|Gases|Gas;EJ/yr;;;;;;;
-Secondary Energy|Heat;EJ/yr;SE|Heat;EJ/yr;1;;;;
-Secondary Energy|Heat|Biomass;EJ/yr;SE|Heat|+|Biomass;EJ/yr;1;;;;
+Secondary Energy|Heat;EJ/yr;SE|Heat;EJ/yr;1;;;;R
+Secondary Energy|Heat|Biomass;EJ/yr;SE|Heat|+|Biomass;EJ/yr;1;;;;R
 Secondary Energy|Heat|Coal;EJ/yr;;;;;;;
 Secondary Energy|Heat|Gas;EJ/yr;;EJ/yr;1;;;;
-Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Coal;EJ/yr;1;;;;
-Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Gas;EJ/yr;1;;;;
+Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Coal;EJ/yr;1;;;;R
+Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Gas;EJ/yr;1;;;;R
 Secondary Energy|Heat|Fossil;EJ/yr;;EJ/yr;1;;;;
-Secondary Energy|Heat|Geothermal;EJ/yr;SE|Heat|+|Geothermal;EJ/yr;1;;;;
+Secondary Energy|Heat|Geothermal;EJ/yr;SE|Heat|+|Geothermal;EJ/yr;1;;;;R
 Secondary Energy|Heat|Nuclear;EJ/yr;;;;;;;
 Secondary Energy|Heat|Oil;EJ/yr;;;;;;;
-Secondary Energy|Heat|Solar;EJ/yr;SE|Heat|+|Solar;EJ/yr;1;;;;
-Secondary Energy|Hydrogen;EJ/yr;SE|Hydrogen;EJ/yr;1;;;;
-Secondary Energy|Hydrogen|Biomass;EJ/yr;SE|Hydrogen|+|Biomass;EJ/yr;1;;;;
-Secondary Energy|Hydrogen|Biomass|w/ CCS;EJ/yr;SE|Hydrogen|Biomass|+|w/ CC;EJ/yr;1;;;;
-Secondary Energy|Hydrogen|Biomass|w/o CCS;EJ/yr;SE|Hydrogen|Biomass|+|w/o CC;EJ/yr;1;;;;
-Secondary Energy|Hydrogen|Electricity;EJ/yr;SE|Hydrogen|+|Electricity;EJ/yr;1;;;;
-Secondary Energy|Hydrogen|Fossil;EJ/yr;SE|Hydrogen|Fossil;EJ/yr;1;;;;
-Secondary Energy|Hydrogen|Fossil|w/ CCS;EJ/yr;SE|Hydrogen|Fossil|+|w/ CC;EJ/yr;1;;;;
-Secondary Energy|Hydrogen|Fossil|w/o CCS;EJ/yr;SE|Hydrogen|Fossil|+|w/o CC;EJ/yr;1;;;;
+Secondary Energy|Heat|Solar;EJ/yr;SE|Heat|+|Solar;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen;EJ/yr;SE|Hydrogen;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen|Biomass;EJ/yr;SE|Hydrogen|+|Biomass;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen|Biomass|w/ CCS;EJ/yr;SE|Hydrogen|Biomass|+|w/ CC;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen|Biomass|w/o CCS;EJ/yr;SE|Hydrogen|Biomass|+|w/o CC;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen|Electricity;EJ/yr;SE|Hydrogen|+|Electricity;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen|Fossil;EJ/yr;SE|Hydrogen|Fossil;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen|Fossil|w/ CCS;EJ/yr;SE|Hydrogen|Fossil|+|w/ CC;EJ/yr;1;;;;R
+Secondary Energy|Hydrogen|Fossil|w/o CCS;EJ/yr;SE|Hydrogen|Fossil|+|w/o CC;EJ/yr;1;;;;R
 Secondary Energy|Hydrogen|Nuclear;EJ/yr;;;;;;;
 Secondary Energy|Hydrogen|Solar;EJ/yr;;;;;;;
 Secondary Energy|Hydrogen|Coal;EJ/yr;;;;;;;
@@ -682,14 +682,14 @@ Secondary Energy|Hydrogen|Gas|w/o CCS;EJ/yr;;;;;;;
 Secondary Energy|Hydrogen|Oil;EJ/yr;;;;;;;
 Secondary Energy|Hydrogen|Oil|w/ CCS;EJ/yr;;;;;;;
 Secondary Energy|Hydrogen|Oil|w/o CCS;EJ/yr;;;;;;;
-Secondary Energy|Liquids;EJ/yr;SE|Liquids;EJ/yr;1;;;;
-Secondary Energy|Liquids|Biomass;EJ/yr;SE|Liquids|+|Biomass;EJ/yr;1;;;;
-Secondary Energy|Liquids|Biomass|w/ CCS;EJ/yr;SE|Liquids|Biomass|+|w/ CC;EJ/yr;1;;;;
-Secondary Energy|Liquids|Biomass|w/o CCS;EJ/yr;SE|Liquids|Biomass|+|w/o CC;EJ/yr;1;;;;
-Secondary Energy|Liquids|Electricity;EJ/yr;SE|Liquids|+|Hydrogen;EJ/yr;1;;;;
-Secondary Energy|Liquids|Fossil;EJ/yr;SE|Liquids|+|Fossil;EJ/yr;1;;;;
-Secondary Energy|Liquids|Fossil|w/ CCS;EJ/yr;SE|Liquids|Fossil|++|w/ CC;EJ/yr;1;;;;
-Secondary Energy|Liquids|Fossil|w/o CCS;EJ/yr;SE|Liquids|Fossil|++|w/o CC;EJ/yr;1;;;;
+Secondary Energy|Liquids;EJ/yr;SE|Liquids;EJ/yr;1;;;;R
+Secondary Energy|Liquids|Biomass;EJ/yr;SE|Liquids|+|Biomass;EJ/yr;1;;;;R
+Secondary Energy|Liquids|Biomass|w/ CCS;EJ/yr;SE|Liquids|Biomass|+|w/ CC;EJ/yr;1;;;;R
+Secondary Energy|Liquids|Biomass|w/o CCS;EJ/yr;SE|Liquids|Biomass|+|w/o CC;EJ/yr;1;;;;R
+Secondary Energy|Liquids|Electricity;EJ/yr;SE|Liquids|+|Hydrogen;EJ/yr;1;;;;R
+Secondary Energy|Liquids|Fossil;EJ/yr;SE|Liquids|+|Fossil;EJ/yr;1;;;;R
+Secondary Energy|Liquids|Fossil|w/ CCS;EJ/yr;SE|Liquids|Fossil|++|w/ CC;EJ/yr;1;;;;R
+Secondary Energy|Liquids|Fossil|w/o CCS;EJ/yr;SE|Liquids|Fossil|++|w/o CC;EJ/yr;1;;;;R
 Secondary Energy|Liquids|Coal;EJ/yr;;;;;;;
 Secondary Energy|Liquids|Coal|w/ CCS;EJ/yr;;;;;;;
 Secondary Energy|Liquids|Coal|w/o CCS;EJ/yr;;;;;;;
@@ -698,17 +698,17 @@ Secondary Energy|Liquids|Gas|w/ CCS;EJ/yr;;;;;;;
 Secondary Energy|Liquids|Gas|w/o CCS;EJ/yr;;;;;;;
 Secondary Energy|Liquids|Oil;EJ/yr;;;;;;;
 Secondary Energy|Other;EJ/yr;;;;;;;
-Secondary Energy|Solids;EJ/yr;SE|Solids;EJ/yr;1;;;;
-Secondary Energy|Solids|Biomass;EJ/yr;SE|Solids|+|Biomass;EJ/yr;1;;;;
+Secondary Energy|Solids;EJ/yr;SE|Solids;EJ/yr;1;;;;R
+Secondary Energy|Solids|Biomass;EJ/yr;SE|Solids|+|Biomass;EJ/yr;1;;;;R
 Secondary Energy|Solids|Biomass|Traditional;EJ/yr;;;;;;;
-Secondary Energy|Solids|Coal;EJ/yr;SE|Solids|+|Coal;EJ/yr;1;;;;
-Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids;EJ/yr;1;;;;
-Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids|+|Biomass;EJ/yr;-1;;;;
-Temperature|Global Mean;<b0>C;Temperature|Global Mean;K;1;;;;x
-Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;1;;;;
-Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;1;;;;
-Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;1;;;;
-Trade|Primary Energy|Oil|Volume;EJ/yr;Trade|Oil;EJ/yr;1;;;;
+Secondary Energy|Solids|Coal;EJ/yr;SE|Solids|+|Coal;EJ/yr;1;;;;R
+Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids;EJ/yr;1;;;;R
+Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids|+|Biomass;EJ/yr;-1;;;;R
+Temperature|Global Mean;<b0>C;Temperature|Global Mean;K;1;;;;C
+Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;1;;;;R
+Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;1;;;;R
+Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;1;;;;R
+Trade|Primary Energy|Oil|Volume;EJ/yr;Trade|Oil;EJ/yr;1;;;;R
 Trade|Secondary Energy|Electricity|Volume;EJ/yr;;;;;;;
 Trade|Secondary Energy|Hydrogen|Volume;EJ/yr;;;;;;;
 Trade|Secondary Energy|Liquids|Biomass|Volume;EJ/yr;;;;;;;
@@ -717,86 +717,86 @@ Trade|Secondary Energy|Liquids|Electricity|Volume;EJ/yr;;;;;;;
 Trade|Secondary Energy|Liquids|Gas|Volume;EJ/yr;;;;;;;
 Trade|Secondary Energy|Liquids|Oil|Volume;EJ/yr;;;;;;;
 Trade|Secondary Energy|Liquids|Volume;EJ/yr;;;;;;;
-Trade|Uranium|Mass;kt U/yr;Trade|Uranium|Mass;ktU/yr;1;;;;
-Capacity|Electricity;GW;Cap|Electricity;GW;1;;;;
-Capacity|Electricity|Biomass|w/ CCS;GW;Cap|Electricity|Biomass|w/ CC;GW;1;;;;
-Capacity|Electricity|Biomass|w/o CCS;GW;Cap|Electricity|Biomass|w/o CC;GW;1;;;;
-Capacity|Electricity|Coal|w/ CCS;GW;Cap|Electricity|Coal|w/ CC;GW;1;;;;
-Capacity|Electricity|Coal|w/o CCS;GW;Cap|Electricity|Coal|w/o CC;GW;1;;;;
-Capacity|Electricity|Gas|w/ CCS;GW;Cap|Electricity|Gas|w/ CC;GW;1;;;;
-Capacity|Electricity|Gas|w/o CCS;GW;Cap|Electricity|Gas|w/o CC;GW;1;;;;
-Capacity|Electricity|Hydro;GW;Cap|Electricity|Hydro;GW;1;;;;
+Trade|Uranium|Mass;kt U/yr;Trade|Uranium|Mass;ktU/yr;1;;;;R
+Capacity|Electricity;GW;Cap|Electricity;GW;1;;;;R
+Capacity|Electricity|Biomass|w/ CCS;GW;Cap|Electricity|Biomass|w/ CC;GW;1;;;;R
+Capacity|Electricity|Biomass|w/o CCS;GW;Cap|Electricity|Biomass|w/o CC;GW;1;;;;R
+Capacity|Electricity|Coal|w/ CCS;GW;Cap|Electricity|Coal|w/ CC;GW;1;;;;R
+Capacity|Electricity|Coal|w/o CCS;GW;Cap|Electricity|Coal|w/o CC;GW;1;;;;R
+Capacity|Electricity|Gas|w/ CCS;GW;Cap|Electricity|Gas|w/ CC;GW;1;;;;R
+Capacity|Electricity|Gas|w/o CCS;GW;Cap|Electricity|Gas|w/o CC;GW;1;;;;R
+Capacity|Electricity|Hydro;GW;Cap|Electricity|Hydro;GW;1;;;;R
 Capacity|Electricity|Hydrogen;GW;;;;;;;
-Capacity|Electricity|Nuclear;GW;Cap|Electricity|Nuclear;GW;1;;;;
+Capacity|Electricity|Nuclear;GW;Cap|Electricity|Nuclear;GW;1;;;;R
 Capacity|Electricity|Oil|w/ CCS;GW;;;;;;;
-Capacity|Electricity|Oil|w/o CCS;GW;Cap|Electricity|Oil|w/o CC;GW;1;;;;
-Capacity|Electricity|Solar|CSP;GW;Cap|Electricity|Solar|CSP;GW;1;;;;
-Capacity|Electricity|Solar|PV;GW;Cap|Electricity|Solar|PV;GW;1;;;;
-Capacity|Electricity|Wind;GW;Cap|Electricity|Wind;GW;1;;;;
-Capacity|Electricity|Wind|Offshore;GW;Cap|Electricity|Wind|Offshore;GW;1;;;;
-Capacity|Electricity|Wind|Onshore;GW;Cap|Electricity|Wind|Onshore;GW;1;;;;
-Capacity|Electricity|Biomass;GW;Cap|Electricity|Biomass;GW;1;;;;
-Capacity|Electricity|Coal;GW;Cap|Electricity|Coal;GW;1;;;;
-Capacity|Electricity|Gas;GW;Cap|Electricity|Gas;GW;1;;;;
-Capacity|Electricity|Geothermal;GW;Cap|Electricity|Geothermal;GW;1;;;;
-Capacity|Electricity|Oil;GW;Cap|Electricity|Oil|w/o CC;GW;1;;;;
+Capacity|Electricity|Oil|w/o CCS;GW;Cap|Electricity|Oil|w/o CC;GW;1;;;;R
+Capacity|Electricity|Solar|CSP;GW;Cap|Electricity|Solar|CSP;GW;1;;;;R
+Capacity|Electricity|Solar|PV;GW;Cap|Electricity|Solar|PV;GW;1;;;;R
+Capacity|Electricity|Wind;GW;Cap|Electricity|Wind;GW;1;;;;R
+Capacity|Electricity|Wind|Offshore;GW;Cap|Electricity|Wind|Offshore;GW;1;;;;R
+Capacity|Electricity|Wind|Onshore;GW;Cap|Electricity|Wind|Onshore;GW;1;;;;R
+Capacity|Electricity|Biomass;GW;Cap|Electricity|Biomass;GW;1;;;;R
+Capacity|Electricity|Coal;GW;Cap|Electricity|Coal;GW;1;;;;R
+Capacity|Electricity|Gas;GW;Cap|Electricity|Gas;GW;1;;;;R
+Capacity|Electricity|Geothermal;GW;Cap|Electricity|Geothermal;GW;1;;;;R
+Capacity|Electricity|Oil;GW;Cap|Electricity|Oil|w/o CC;GW;1;;;;R
 Capacity|Electricity|Ocean;GW;;;;;;;
-Capacity|Electricity|Other;GW;Cap|Electricity|Hydrogen;GW;1;;;;
-Capacity|Electricity|Solar;GW;Cap|Electricity|Solar;GW;1;;;;
+Capacity|Electricity|Other;GW;Cap|Electricity|Hydrogen;GW;1;;;;R
+Capacity|Electricity|Solar;GW;Cap|Electricity|Solar;GW;1;;;;R
 Capacity|Electricity|Storage;GW;;;;;;;
 Capacity|Electricity|Storage|Converter Capacity;GW;;;;;;;
 Capacity|Electricity|Storage|Reservoir Capacity;GWh;;;;;;;
 Capacity|Electricity|Transmissions Grid;GWkm;;;;;;;
-Capacity|Gases|Biomass;GW;Cap|Gases|Biomass;GW;1;;;;
+Capacity|Gases|Biomass;GW;Cap|Gases|Biomass;GW;1;;;;R
 Capacity|Gases|Biomass|w/ CCS;GW;;;;;;;
 Capacity|Gases|Biomass|w/o CCS;GW;;;;;;;
-Capacity|Gases|Coal;GW;Cap|Gases|Coal;GW;1;;;;
+Capacity|Gases|Coal;GW;Cap|Gases|Coal;GW;1;;;;R
 Capacity|Gases|Coal|w/ CCS;GW;;;;;;;
 Capacity|Gases|Coal|w/o CCS;GW;;;;;;;
-Capacity|Hydrogen|Biomass;GW;Cap|Hydrogen|Biomass;GW;1;;;;
-Capacity|Hydrogen|Biomass|w/ CCS;GW;Cap|Hydrogen|Biomass|w/ CC;GW;1;;;;
-Capacity|Hydrogen|Biomass|w/o CCS;GW;Cap|Hydrogen|Biomass|w/o CC;GW;1;;;;
-Capacity|Hydrogen|Coal;GW;Cap|Hydrogen|Coal;GW;1;;;;
-Capacity|Hydrogen|Coal|w/ CCS;GW;Cap|Hydrogen|Coal|w/ CC;GW;1;;;;
-Capacity|Hydrogen|Coal|w/o CCS;GW;Cap|Hydrogen|Coal|w/o CC;GW;1;;;;
-Capacity|Hydrogen|Electricity;GW;Cap|Hydrogen|Electricity;GW;1;;;;
-Capacity|Hydrogen|Gas;GW;Cap|Hydrogen|Gas;GW;1;;;;
-Capacity|Hydrogen|Gas|w/ CCS;GW;Cap|Hydrogen|Gas|w/ CC;GW;1;;;;
-Capacity|Hydrogen|Gas|w/o CCS;GW;Cap|Hydrogen|Gas|w/o CC;GW;1;;;;
-Capacity|Liquids|Biomass;GW;Cap|Liquids|Biomass;GW;1;;;;
+Capacity|Hydrogen|Biomass;GW;Cap|Hydrogen|Biomass;GW;1;;;;R
+Capacity|Hydrogen|Biomass|w/ CCS;GW;Cap|Hydrogen|Biomass|w/ CC;GW;1;;;;R
+Capacity|Hydrogen|Biomass|w/o CCS;GW;Cap|Hydrogen|Biomass|w/o CC;GW;1;;;;R
+Capacity|Hydrogen|Coal;GW;Cap|Hydrogen|Coal;GW;1;;;;R
+Capacity|Hydrogen|Coal|w/ CCS;GW;Cap|Hydrogen|Coal|w/ CC;GW;1;;;;R
+Capacity|Hydrogen|Coal|w/o CCS;GW;Cap|Hydrogen|Coal|w/o CC;GW;1;;;;R
+Capacity|Hydrogen|Electricity;GW;Cap|Hydrogen|Electricity;GW;1;;;;R
+Capacity|Hydrogen|Gas;GW;Cap|Hydrogen|Gas;GW;1;;;;R
+Capacity|Hydrogen|Gas|w/ CCS;GW;Cap|Hydrogen|Gas|w/ CC;GW;1;;;;R
+Capacity|Hydrogen|Gas|w/o CCS;GW;Cap|Hydrogen|Gas|w/o CC;GW;1;;;;R
+Capacity|Liquids|Biomass;GW;Cap|Liquids|Biomass;GW;1;;;;R
 Capacity|Liquids|Biomass|w/ CCS;GW;;;;;;;
 Capacity|Liquids|Biomass|w/o CCS;GW;;;;;;;
-Capacity|Liquids|Coal;GW;Cap|Liquids|Coal;GW;1;;;;
+Capacity|Liquids|Coal;GW;Cap|Liquids|Coal;GW;1;;;;R
 Capacity|Liquids|Coal|w/ CCS;GW;;;;;;;
 Capacity|Liquids|Coal|w/o CCS;GW;;;;;;;
 Capacity|Liquids|Gas;GW;;;;;;;
 Capacity|Liquids|Gas|w/ CCS;GW;;;;;;;
 Capacity|Liquids|Gas|w/o CCS;GW;;;;;;;
-Capacity|Liquids|Oil;GW;Cap|Liquids|Oil;GW;1;;;;
-Capacity Additions|Electricity|Biomass|w/ CCS;GW/yr;New Cap|Electricity|Biomass|w/ CC;GW/yr;1;;;;
-Capacity Additions|Electricity|Biomass|w/o CCS;GW/yr;New Cap|Electricity|Biomass|w/o CC;GW/yr;1;;;;
-Capacity Additions|Electricity|Coal|w/ CCS;GW/yr;New Cap|Electricity|Coal|w/ CC;GW/yr;1;;;;
-Capacity Additions|Electricity|Coal|w/o CCS;GW/yr;New Cap|Electricity|Coal|w/o CC;GW/yr;1;;;;
-Capacity Additions|Electricity|Gas|w/ CCS;GW/yr;New Cap|Electricity|Gas|w/ CC;GW/yr;1;;;;
-Capacity Additions|Electricity|Gas|w/o CCS;GW/yr;New Cap|Electricity|Gas|w/o CC;GW/yr;1;;;;
-Capacity Additions|Electricity|Hydro;GW/yr;New Cap|Electricity|Hydro;GW/yr;1;;;;
+Capacity|Liquids|Oil;GW;Cap|Liquids|Oil;GW;1;;;;R
+Capacity Additions|Electricity|Biomass|w/ CCS;GW/yr;New Cap|Electricity|Biomass|w/ CC;GW/yr;1;;;;R
+Capacity Additions|Electricity|Biomass|w/o CCS;GW/yr;New Cap|Electricity|Biomass|w/o CC;GW/yr;1;;;;R
+Capacity Additions|Electricity|Coal|w/ CCS;GW/yr;New Cap|Electricity|Coal|w/ CC;GW/yr;1;;;;R
+Capacity Additions|Electricity|Coal|w/o CCS;GW/yr;New Cap|Electricity|Coal|w/o CC;GW/yr;1;;;;R
+Capacity Additions|Electricity|Gas|w/ CCS;GW/yr;New Cap|Electricity|Gas|w/ CC;GW/yr;1;;;;R
+Capacity Additions|Electricity|Gas|w/o CCS;GW/yr;New Cap|Electricity|Gas|w/o CC;GW/yr;1;;;;R
+Capacity Additions|Electricity|Hydro;GW/yr;New Cap|Electricity|Hydro;GW/yr;1;;;;R
 Capacity Additions|Electricity|Hydrogen;GW/yr;;;;;;;
-Capacity Additions|Electricity|Nuclear;GW/yr;New Cap|Electricity|Nuclear;GW/yr;1;;;;
+Capacity Additions|Electricity|Nuclear;GW/yr;New Cap|Electricity|Nuclear;GW/yr;1;;;;R
 Capacity Additions|Electricity|Oil|w/ CCS;GW/yr;;;;;;;
 Capacity Additions|Electricity|Oil|w/o CCS;GW/yr;;;;;;;
-Capacity Additions|Electricity|Solar|CSP;GW/yr;New Cap|Electricity|Solar|CSP;GW/yr;1;;;;
-Capacity Additions|Electricity|Solar|PV;GW/yr;New Cap|Electricity|Solar|PV;GW/yr;1;;;;
-Capacity Additions|Electricity|Wind;GW/yr;New Cap|Electricity|Wind;GW/yr;1;;;;
-Capacity Additions|Electricity|Wind|Offshore;GW/yr;New Cap|Electricity|Wind|Offshore;GW/yr;1;;;;
-Capacity Additions|Electricity|Wind|Onshore;GW/yr;New Cap|Electricity|Wind|Onshore;GW/yr;1;;;;
-Capacity Additions|Electricity|Biomass;GW/yr;New Cap|Electricity|Biomass;GW/yr;1;;;;
-Capacity Additions|Electricity|Coal;GW/yr;New Cap|Electricity|Coal;GW/yr;1;;;;
-Capacity Additions|Electricity|Gas;GW/yr;New Cap|Electricity|Gas;GW/yr;1;;;;
-Capacity Additions|Electricity|Geothermal;GW/yr;New Cap|Electricity|Geothermal;GW/yr;1;;;;
-Capacity Additions|Electricity|Oil;GW/yr;New Cap|Electricity|Oil;GW/yr;1;;;;
+Capacity Additions|Electricity|Solar|CSP;GW/yr;New Cap|Electricity|Solar|CSP;GW/yr;1;;;;R
+Capacity Additions|Electricity|Solar|PV;GW/yr;New Cap|Electricity|Solar|PV;GW/yr;1;;;;R
+Capacity Additions|Electricity|Wind;GW/yr;New Cap|Electricity|Wind;GW/yr;1;;;;R
+Capacity Additions|Electricity|Wind|Offshore;GW/yr;New Cap|Electricity|Wind|Offshore;GW/yr;1;;;;R
+Capacity Additions|Electricity|Wind|Onshore;GW/yr;New Cap|Electricity|Wind|Onshore;GW/yr;1;;;;R
+Capacity Additions|Electricity|Biomass;GW/yr;New Cap|Electricity|Biomass;GW/yr;1;;;;R
+Capacity Additions|Electricity|Coal;GW/yr;New Cap|Electricity|Coal;GW/yr;1;;;;R
+Capacity Additions|Electricity|Gas;GW/yr;New Cap|Electricity|Gas;GW/yr;1;;;;R
+Capacity Additions|Electricity|Geothermal;GW/yr;New Cap|Electricity|Geothermal;GW/yr;1;;;;R
+Capacity Additions|Electricity|Oil;GW/yr;New Cap|Electricity|Oil;GW/yr;1;;;;R
 Capacity Additions|Electricity|Ocean;GW/yr;;;;;;;
 Capacity Additions|Electricity|Other;GW/yr;;;;;;;
-Capacity Additions|Electricity|Solar;GW/yr;New Cap|Electricity|Solar;GW/yr;1;;;;
+Capacity Additions|Electricity|Solar;GW/yr;New Cap|Electricity|Solar;GW/yr;1;;;;R
 Capacity Additions|Electricity|Storage Capacity;GWh/yr;;;;;;;
 Capacity Additions|Electricity|Storage|Converter Capacity;GW/yr;;;;;;;
 Capacity Additions|Electricity|Storage|Reservoir Capacity;GWh/yr;;;;;;;
@@ -809,15 +809,15 @@ Capital Cost|Electricity|Coal|w/o CCS;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Gas|w/ CCS;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Gas|w/o CCS;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Hydro;EUR_2020/kW;;;;;;;
-Capital Cost|Electricity|Hydrogen;EUR_2020/kW;Tech|Electricity|Hydrogen|Capital Costs;US$2005/kW;1.17;;;;
-Capital Cost|Electricity|Nuclear;EUR_2020/kW;Tech|Electricity|Nuclear|Capital Costs;US$2005/kW;1.17;;;;
+Capital Cost|Electricity|Hydrogen;EUR_2020/kW;Tech|Electricity|Hydrogen|Capital Costs;US$2005/kW;1.17;;;;R
+Capital Cost|Electricity|Nuclear;EUR_2020/kW;Tech|Electricity|Nuclear|Capital Costs;US$2005/kW;1.17;;;;R
 Capital Cost|Electricity|Oil|w/ CCS;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Oil|w/o CCS;EUR_2020/kW;;;;;;;
-Capital Cost|Electricity|Solar|CSP;EUR_2020/kW;Tech|Electricity|Solar|CSP|Capital Costs;US$2005/kW;1.17;;;;
-Capital Cost|Electricity|Solar|PV;EUR_2020/kW;Tech|Electricity|Solar|PV|Capital Costs;US$2005/kW;1.17;;;;
+Capital Cost|Electricity|Solar|CSP;EUR_2020/kW;Tech|Electricity|Solar|CSP|Capital Costs;US$2005/kW;1.17;;;;R
+Capital Cost|Electricity|Solar|PV;EUR_2020/kW;Tech|Electricity|Solar|PV|Capital Costs;US$2005/kW;1.17;;;;R
 Capital Cost|Electricity|Wind;EUR_2020/kW;;;;;;;
-Capital Cost|Electricity|Wind|Offshore;EUR_2020/kW;Tech|Electricity|Wind|Offshore|Capital Costs;US$2005/kW;1.17;;;;
-Capital Cost|Electricity|Wind|Onshore;EUR_2020/kW;Tech|Electricity|Wind|Onshore|Capital Costs;US$2005/kW;1.17;;;;
+Capital Cost|Electricity|Wind|Offshore;EUR_2020/kW;Tech|Electricity|Wind|Offshore|Capital Costs;US$2005/kW;1.17;;;;R
+Capital Cost|Electricity|Wind|Onshore;EUR_2020/kW;Tech|Electricity|Wind|Onshore|Capital Costs;US$2005/kW;1.17;;;;R
 Capital Cost|Electricity|Biomass;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Coal;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Gas;EUR_2020/kW;;;;;;;
@@ -830,5 +830,5 @@ Capital Cost|Electricity|Storage;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Storage|Converter Capacity;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Storage|Reservoir Capacity;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Transmissions Grid;EUR_2020/kW;;;;;;;
-Efficiency|Hydrogen|Electricity;%;Tech|Electricity|Hydrogen|Efficiency;%;1;;;;
-Lifetime|Electricity|Nuclear;years;Tech|Electricity|Nuclear|Lifetime;years;1;;;;
+Efficiency|Hydrogen|Electricity;%;Tech|Electricity|Hydrogen|Efficiency;%;1;;;;R
+Lifetime|Electricity|Nuclear;years;Tech|Electricity|Nuclear|Lifetime;years;1;;;;R
