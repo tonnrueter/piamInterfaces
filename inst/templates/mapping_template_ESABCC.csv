@@ -651,7 +651,7 @@ Secondary Energy|Heat|Coal;EJ/yr;;;;;;;
 Secondary Energy|Heat|Gas;EJ/yr;;EJ/yr;1;;;;
 Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Coal;EJ/yr;1;;;;
 Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Gas;EJ/yr;1;;;;
-Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Oil;EJ/yr;1;;;;x
+Secondary Energy|Heat|Fossil;EJ/yr;;EJ/yr;1;;;;
 Secondary Energy|Heat|Geothermal;EJ/yr;SE|Heat|+|Geothermal;EJ/yr;1;;;;
 Secondary Energy|Heat|Nuclear;EJ/yr;;;;;;;
 Secondary Energy|Heat|Oil;EJ/yr;;;;;;;
