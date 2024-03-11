@@ -864,7 +864,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 790;Final Energy|Industry|Cement|Gases|Bioenergy;EJ/yr;;;;;;;final energy consumption by the industrial cement sector of gases|bioenergy,excluding transmission/distribution losses;
 791;Final Energy|Industry|Cement|Gases|Fossil;EJ/yr;;;;;;;final energy consumption by the industrial cement sector of gases|fossil,excluding transmission/distribution losses;
 792;Final Energy|Industry|Cement|Gases|Hydrogen synfuel;EJ/yr;;;;;;;final energy consumption by the industrial cement sector of gases|hydrogen synfuel,excluding transmission/distribution losses;
-793;Final Energy|Industry|Cement|Heat;EJ/yr;FE|Industry|Heat|Cement;EJ/yr;;;;;final energy consumption by the industrial cement sector of heat,excluding transmission/distribution losses;x
+793;Final Energy|Industry|Cement|Heat;EJ/yr;;EJ/yr;;;;;final energy consumption by the industrial cement sector of heat,excluding transmission/distribution losses;x
 794;Final Energy|Industry|Cement|Hydrogen;EJ/yr;FE|Industry|Cement|+|Hydrogen;EJ/yr;;;;;final energy consumption by the industrial cement sector of hydrogen,excluding transmission/distribution losses;
 795;Final Energy|Industry|Cement|Liquids;EJ/yr;FE|Industry|Cement|+|Liquids;EJ/yr;;;;;final energy consumption by the industrial cement sector of liquids,excluding transmission/distribution losses;
 796;Final Energy|Industry|Cement|Liquids|Bioenergy;EJ/yr;;;;;;;final energy consumption by the industrial cement sector of liquids|bioenergy,excluding transmission/distribution losses;
@@ -896,7 +896,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 820;Final Energy|Industry|Chemicals|Gases|Bioenergy;EJ/yr;;;;;;;final energy consumption by the industrial chemicals sector of gases|bioenergy,excluding transmission/distribution losses;
 821;Final Energy|Industry|Chemicals|Gases|Fossil;EJ/yr;;;;;;;final energy consumption by the industrial chemicals sector of gases|fossil,excluding transmission/distribution losses;
 822;Final Energy|Industry|Chemicals|Gases|Hydrogen synfuel;EJ/yr;;;;;;;final energy consumption by the industrial chemicals sector of gases|hydrogen synfuel,excluding transmission/distribution losses;
-823;Final Energy|Industry|Chemicals|Heat;EJ/yr;FE|Industry|Heat|Chemicals;EJ/yr;;;;;final energy consumption by the industrial chemicals sector of heat,excluding transmission/distribution losses;x
+823;Final Energy|Industry|Chemicals|Heat;EJ/yr;;EJ/yr;;;;;final energy consumption by the industrial chemicals sector of heat,excluding transmission/distribution losses;x
 ;Final Energy|Industry|Chemicals|High value chemicals;EJ/yr;;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector;
 824;Final Energy|Industry|Chemicals|High value chemicals|Electricity;EJ/yr;;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector of electricity,excluding transmission/distribution losses;
 825;Final Energy|Industry|Chemicals|High value chemicals|Gases;EJ/yr;;;;;;;final energy consumption by the industrial chemicals|high value chemicals sector of gases,excluding transmission/distribution losses;
@@ -1038,7 +1038,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 958;Final Energy|Industry|Steel|Gases|Bioenergy;EJ/yr;;;;;;;final energy consumption by the industrial steel sector of gases|bioenergy,excluding transmission/distribution losses;
 959;Final Energy|Industry|Steel|Gases|Fossil;EJ/yr;;;;;;;final energy consumption by the industrial steel sector of gases|fossil,excluding transmission/distribution losses;
 960;Final Energy|Industry|Steel|Gases|Hydrogen synfuel;EJ/yr;;;;;;;final energy consumption by the industrial steel sector of gases|hydrogen synfuel,excluding transmission/distribution losses;
-961;Final Energy|Industry|Steel|Heat;EJ/yr;FE|Industry|Heat|Steel;EJ/yr;;;;;final energy consumption by the industrial steel sector of heat,excluding transmission/distribution losses;x
+961;Final Energy|Industry|Steel|Heat;EJ/yr;;EJ/yr;;;;;final energy consumption by the industrial steel sector of heat,excluding transmission/distribution losses;x
 962;Final Energy|Industry|Steel|Hydrogen;EJ/yr;FE|Industry|Steel|+|Hydrogen;EJ/yr;;;;;final energy consumption by the industrial steel sector of hydrogen,excluding transmission/distribution losses;
 963;Final Energy|Industry|Steel|Liquids;EJ/yr;FE|Industry|Steel|+|Liquids;EJ/yr;;;;;final energy consumption by the industrial steel sector of liquids,excluding transmission/distribution losses;
 964;Final Energy|Industry|Steel|Liquids|Bioenergy;EJ/yr;;;;;;;final energy consumption by the industrial steel sector of liquids|bioenergy,excluding transmission/distribution losses;
