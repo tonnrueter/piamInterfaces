@@ -20,7 +20,7 @@ test_that("getVariableTemplates works", {
   expect_equal(getTemplateVariables(templatefile, "R"), "FE (EJ/yr)")
   expect_equal(getTemplateVariables(templatefile, "T"), "Emi|Transport (Mt CO2/yr)")
   expect_equal(getTemplateVariables(templatefile, "RT"), allvars)
-  expect_equal(getTemplateVariables(templatefile, "TRM"), allvars)
+  expect_equal(getTemplateVariables(templatefile, "MRT"), allvars)
   expect_equal(getTemplateVariables(templatefile, TRUE), allvars)
   expect_equal(length(getTemplateVariables(templatefile, "M")), 0)
   expect_identical(getTemplateVariables(templatefile, "R"), getREMINDTemplateVariables(templatefile))

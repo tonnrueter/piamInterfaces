@@ -160,7 +160,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 141;Policy Cost|Consumption Loss;billion US$2010/yr;Policy Cost|Consumption + Current Account Loss;billion US$2005/yr;-1.12;glo;;includes current account loss;consumption loss in a policy scenario compared to the corresponding baseline (losses should be reported as negative numbers);R
 142;Policy Cost|Equivalent Variation;billion US$2010/yr;;;;;;;equivalent variation associated with the given policy;
 143;Policy Cost|GDP Loss;billion US$2010/yr;Policy Cost|GDP Loss;billion US$2005/yr;-1.12;;;;GDP loss in a policy scenario,including international transfers,compared to the corresponding baseline (losses should be reported as negative numbers). Transfers included if present;R
-;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;-1.12;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as negative numbers).;R
+;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;-1.12;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as negative numbers).;Rx
 144;Policy Cost|Other;billion US$2010/yr;;;;;;;any other indicator of policy cost (e.g.,compensated variation). (please indicate what type of policy cost is measured on the 'comments' tab);
 145;Policy Cost|Welfare Change;billion US$2010/yr;;;;;;;Policy cost for welfare change;
 146;Price|Agriculture|Corn|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Maize;1;;;;;price index of corn;M
@@ -1972,7 +1972,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;GDP|PPP|Per capita ratio to OECD;%;GDP|PPP|Per capita ratio to OECD;percent;;;;;Ratio of GDP/cap (PPP) of developing regions to OECD average;S
 ;Population|Relative poverty|wrt median income|Share;%;Population|Relative poverty|wrt median income|Share;percent;;;;;Share of population below 50% of national median income;S
 ;Inequality|Bottom 40% average income|Ratio;%;Inequality|Bottom 40% average income|Ratio;percent;;;;;Average income of bottom 40% relative to national average;S
-;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.12;;;;Net international climate finance transfers (positive for inflow,negative for payment);R
+;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.12;;;;Net international climate finance transfers (positive for inflow,negative for payment);Rx
 ;Population|Prevalence of underweight;million;SDG|SDG02|Prevalence of underweight;million;;;;;Number of adults with BMI<18.5 and children with <-1SD from reference BMI;M
 ;Population|Prevalence of underweight|Children;million;SDG|SDG02|Prevalence of underweight|Children;million;;;;;Number of underweight children (-2SD from reference BMI, aged 0--14);M
 ;Population|Prevalence of overweight;million;SDG|SDG03|Prevalence of overweight;million;;;;;Number of adults with BMI>25 and children with >1SD from reference BMI;M

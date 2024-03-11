@@ -15,8 +15,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 13;GDPpcap|PPP|Ratio to OECD;%;GDP|PPP|Per capita ratio to OECD;percent;;;;;Ratio of GDP/cap (PPP) of developing regions to OECD average;S
 14;Population|Relative poverty|wrt median income|Share;%;Population|Relative poverty|wrt median income|Share;percent;;;;;Share of population below 50% of national median income;S
 15;Inequality|Bottom 40% average income|Ratio;%;Inequality|Bottom 40% average income|Ratio;percent;;;;;Average income of bottom 40% relative to national average;S
-16;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.12;;;;Net international climate finance transfers (positive for inflow, negative for payment);R
-;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1.12;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers).;R
+16;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.12;;;;Net international climate finance transfers (positive for inflow, negative for payment);Rx
+;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1.12;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers).;Rx
 17;Population|Prevalence of Underweight;million;SDG|SDG02|Prevalence of underweight;million;;;;;Number of adults with BMI<18.5 and children with <-1SD from reference BMI;M
 18;Population|Prevalence of Underweight|Children;million;SDG|SDG02|Prevalence of underweight|Children;million;;;;;Number of underweight children (-2SD from reference BMI, aged 0–14);M
 19;Population|Prevalence of Overweight;million;SDG|SDG03|Prevalence of overweight;million;;;;;Number of adults with BMI>25 and children with >1SD from reference BMI;M
