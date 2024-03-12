@@ -31,16 +31,24 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1000", "k", "M"),
                           # conversion factors taken from ECEMF Model Comparison Protocol, DOI:10.5281/zenodo.6811317
                           c("1.12", "US$2010", "US$2005"),
+                          c("1.12", "US$2010", "US$05"),
+                          c("1.12", "US$2010/t CO2", "US$2005/tCO2"),
                           c("1.33", "US$2020", "US$2005"),
-                          c("1.17", "EUR_2020", "US$2005")
+                          c("1.17", "EUR_2020", "US$2005"),
+                          c("1.174", "EUR2020", "US$2005")
                          )
+  template$piam_factor[is.na(template$piam_factor)] <- 1
+  success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
+  success <- success | is.na(template$piam_variable) | template$piam_variable %in% "TODO"
+
   firsterror <- TRUE
   for (sc in scaleConversion) {
-    wrongScale <- template %>%
-                    filter(grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
-                    filter(! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
-                    filter(.data$piam_unit %in% gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
-                    filter(! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
+    fails <- template %>%
+               mutate(matches = .data$piam_unit %in% gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
+               mutate(failed  = ! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
+    wrongScale <- filter(fails, .data$failed & .data$matches)
     if (nrow(wrongScale) > 0) {
       if (isTRUE(firsterror)) {
         errortext <- c(errortext, "According to checkUnitFactor(), the following variables use the wrong piam_factor:")
@@ -51,6 +59,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                "\n  Expected: ", sc[[1]], " ", sc[[2]], " = 1 ", sc[[3]])
       )
     }
+    success <- success | (fails$matches & ! fails$failed)
   }
 
   if (! is.null(logFile) && ! isFALSE(logFile)) {
@@ -66,4 +75,5 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
     errortext <- c("Conversion factors do not match units!\n", errortext)
     if (failOnUnitMismatch) stop(errortext) else message(errortext)
   }
+  return(success)
 }

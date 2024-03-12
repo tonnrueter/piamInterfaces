@@ -2,15 +2,14 @@
 #'
 #' @md
 #' @author Oliver Richters
-#' @param ... units to be checked
+#' @param vec1 units to be checked against vec2, elementwise
+#' @param vec2 units to be checked against vec1, elementwise
 #' @return boolean
 #' @export
-areUnitsIdentical <- function(...) {
+areUnitsIdentical <- function(vec1, vec2) {
   # only add units that actually have the same meaning, just different spelling
-  units <- c(...)
-  if (length(units) < 2) stop("Less than two units supplied, cannot check identity.")
   identicalUnits <- list(
-    c("°C", "K"),
+    c("\u00B0C", "K"),
     c("billion m2/yr", "bn m2/yr"),
     c("billion pkm/yr", "bn pkm/yr"),
     c("billion tkm/yr", "bn tkm/yr"),
@@ -40,5 +39,9 @@ areUnitsIdentical <- function(...) {
     # for 'Productivity|Yield' and subvariables
     c("t DM/ha", "t DM/ha/yr"),
   NULL)
-  return(any(unlist(lapply(identicalUnits, function(x) all(c(...) %in% x)))))
+  areIdentical <- function(x, y) {
+    # literally identical or both found in the same list element above
+    x == y || any(unlist(lapply(identicalUnits, function(units) all(c(x, y) %in% units))))
+  }
+  return(unname(unlist(Map(Vectorize(areIdentical), vec1, vec2))))
 }
