@@ -20,6 +20,8 @@ areUnitsIdentical <- function(...) {
     c("unitless", ""),
     c("million vehicles", "Million vehicles"),
     c("Percent", "percent", "%"),
+    c("USD05", "USD2005", "US$05", "US$2005", "USD2005", "USD_2005"),
+    c("USD10", "USD2010", "US$10", "US$2010", "USD2010", "USD_2010"),
     # below, exceptionally added units that actually differ for backwards compatibility
     # with AR6 and SHAPE templates (using old incorrect unit)
     # should only affect template variable 'Energy Service|Residential and Commercial|Floor Space'

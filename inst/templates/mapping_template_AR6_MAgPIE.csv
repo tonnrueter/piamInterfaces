@@ -1328,11 +1328,11 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 1228;Tariffs|Average|Imports;%;;;;;;Average tariffs for imports (most relevant for developed countries)
 1229;Expenditure|Medical System|Incremental;billion US$2010/yr;;;;;;Incremental expenditure for the medical system
 1230;Investment|Medical System;billion US$2010/yr;;;;;;investment to medical system
-;Energy Expenditures|Industry|Cement;USD2010/yr;;;;;;total expenditures on energy in the cement industry (energy input x price)
-;Energy Expenditures|Industry|Steel;USD2010/yr;;;;;;total expenditures on energy in the steel industry (energy input x price)
-;Energy Expenditures|Residential and Commercial|Cooling;USD2010/yr;;;;;;total expenditures on energy for cooling services (energy input x price)
-;Energy Expenditures|Residential and Commercial|Heating;USD2010/yr;;;;;;total expenditures on energy for heating services (energy input x price)
-;Energy Expenditures|Transportation;USD2010/yr;;;;;;total expenditures on energy for transportation (energy input x price)
+;Energy Expenditures|Industry|Cement;US$2010/yr;;;;;;total expenditures on energy in the cement industry (energy input x price)
+;Energy Expenditures|Industry|Steel;US$2010/yr;;;;;;total expenditures on energy in the steel industry (energy input x price)
+;Energy Expenditures|Residential and Commercial|Cooling;US$2010/yr;;;;;;total expenditures on energy for cooling services (energy input x price)
+;Energy Expenditures|Residential and Commercial|Heating;US$2010/yr;;;;;;total expenditures on energy for heating services (energy input x price)
+;Energy Expenditures|Transportation;US$2010/yr;;;;;;total expenditures on energy for transportation (energy input x price)
 1231;Expenditure|household|Energy;billion US$2010/yr;;;;;;expenditure of households for energy.
 1232;Expenditure|household|Food;billion US$2010/yr;Household Expenditure|Food|Expenditure;USD/capita;;;;expenditure of households for food.
 1233;Expenditure|household|Industry;billion US$2010/yr;;;;;;expenditure of households for industrial goods.
