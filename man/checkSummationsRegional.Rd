@@ -8,7 +8,8 @@ checkSummationsRegional(
   mifFile,
   parentRegion = NULL,
   childRegions = NULL,
-  variables = NULL
+  variables = NULL,
+  skipUnits = NULL
 )
 }
 \arguments{
@@ -19,6 +20,9 @@ checkSummationsRegional(
 \item{childRegions}{regions that should sum up to \code{parentRegion}. Default to all except parentRegion}
 
 \item{variables}{list of variables to check. Defaults to all in mifFile}
+
+\item{skipUnits}{units to be skipped, because they are not expected to sum up. Set to TRUE to get
+list of units pointing towards their variable being intensive. You can also use c(TRUE, "additionalunit")}
 }
 \description{
 Checks for a run if the regions for selected variables sum up as expected
