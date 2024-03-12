@@ -697,7 +697,7 @@ Secondary Energy|Solids|Biomass|Traditional;EJ/yr;;;;;;;
 Secondary Energy|Solids|Coal;EJ/yr;SE|Solids|+|Coal;EJ/yr;1;;;;R
 Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids;EJ/yr;1;;;;R
 Secondary Energy|Solids|Fossil;EJ/yr;SE|Solids|+|Biomass;EJ/yr;-1;;;;R
-Temperature|Global Mean;<b0>C;Temperature|Global Mean;K;1;;;;C
+Temperature|Global Mean;°C;Temperature|Global Mean;K;1;;;;C
 Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;1;;;;R
 Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;1;;;;R
 Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;1;;;;R

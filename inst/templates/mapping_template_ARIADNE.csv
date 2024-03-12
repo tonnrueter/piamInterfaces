@@ -1993,7 +1993,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;Trade;Export|Energy;billion EUR2020/yr;export of energy commodities measured in monetary units.;;;;;0;;
 2;Trade;Export|Industry;billion EUR2020/yr;export of industrial (non-energy) commodities measured in monetary units.;;;;;0;;
 2;Trade;Import|Energy;billion EUR2020/yr;import of energy commodities measured in monetary units.;;;;;0;;
-2;Trade;Import|Industry;billion EUR2020/yr;import of industrial (non-energy) commodities measured in monetary units.;Tech|Liquids|Fossil|Oil|OM Cost|fixed;US$2005/kW/yr;1;;0;;R
+2;Trade;Import|Industry;billion EUR2020/yr;import of industrial (non-energy) commodities measured in monetary units.;;;;;0;;
 2;Trade;Trade;billion EUR2020/yr;net exports of all goods, at the global level these should add up to the trade losses only;Trade|All|Value;billion US$2005/yr;1.174;;0;;R
 2;Trade;Export|Industry|Energy;billion EUR2020/yr;export of energy commodities measured in monetary units.;;;;;0;;
 2;Trade;Export|Industry|Energy Intensive;billion EUR2020/yr;export of energy intensive commodities measured in monetary units.;;;;;0;;

@@ -16,9 +16,13 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   errortext <- NULL
   colnames(template) <- tolower(names(template))
 
-  # check whether scales are correctly transformed
+  # check whether scales are correctly transformed. c(piam_factor, unit, piam_unit)
   # the first line checks that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
   scaleConversion <- list(
+                          c("1", "million", "million people"),
+                          c("1", "million", "Million vehicles"),
+                          c("100", "%", "unitless"),
+                          c("100", "%", "share of total land"),
                           c("1000", "million", "billion"),
                           c("1000", "P", "E"),
                           c("1000", "T", "P"),

@@ -1990,7 +1990,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A);S
 ;Ocean|Net primary production;GtC/yr;Ocean|Net primary production;GtC/yr;;;;;Net primary production of biomass in oceans;S
 ;Ocean|New production;GtC/yr;Ocean|New production;GtC/yr;;;;;New production of biomass in oceans;S
-;Ocean|Extension of suboxic zones;km³;Ocean|Extension of suboxic zones;km3;;;;;Extension of suboxic zones in oceans;S
+;Ocean|Extension of suboxic zones;km3;Ocean|Extension of suboxic zones;km3;;;;;Extension of suboxic zones in oceans;S
 ;Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM;S
 ;Primary Energy|Biomass|Heat;EJ/yr;PE|Biomass|Heat;EJ/yr;;;;;biomass primary energy input to heat generation;R
 ;Primary Energy|Coal|Heat;EJ/yr;PE|Coal|Heat;EJ/yr;;;;;coal primary energy input to heat generation;R

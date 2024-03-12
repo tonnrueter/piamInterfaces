@@ -173,7 +173,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 144;1;economy;Export;billion US$2010/yr;;;;;;total exports measured in monetary quantities.;
 145;1;economy;Import;billion US$2010/yr;;;;;;total imports measured in monetary quantities.;
 146;2;economy;Capital Stock;billion US$2010/yr;;;;;;Macroeconomic capital stock;
-147;2;economy;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;unitless;;;;Real interest rate or return on capital that is relevant for energy system investments;R
+147;2;economy;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;unitless;100;;;Real interest rate or return on capital that is relevant for energy system investments;R
 148;2;economy;Value Added|Industry|Chemicals;billion US$2010/yr;Value Added|Industry|Chemicals;billion US$2005/yr;1.12;;;value added of the chemical industries.;R
 149;2;economy;Value Added|Industry|Iron and Steel;billion US$2010/yr;;;;;;value added of iron and steel production;
 150;2;economy;Value Added|Industry|Non-Metallic Minerals;billion US$2010/yr;;;;;;value added of non-metallic minerals industries;
