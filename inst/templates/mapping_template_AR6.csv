@@ -160,7 +160,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 141;Policy Cost|Consumption Loss;billion US$2010/yr;Policy Cost|Consumption + Current Account Loss;billion US$2005/yr;-1.12;glo;;includes current account loss;consumption loss in a policy scenario compared to the corresponding baseline (losses should be reported as negative numbers);R
 142;Policy Cost|Equivalent Variation;billion US$2010/yr;;;;;;;equivalent variation associated with the given policy;
 143;Policy Cost|GDP Loss;billion US$2010/yr;Policy Cost|GDP Loss;billion US$2005/yr;-1.12;;;;GDP loss in a policy scenario,including international transfers,compared to the corresponding baseline (losses should be reported as negative numbers). Transfers included if present;R
-;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;-1.12;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as negative numbers).;R
+;Policy Cost|GDP Loss|w/o transfers;billion US$2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;-1.12;;;;GDP loss (without international transfers) in a policy scenario compared to the corresponding baseline (losses should be reported as negative numbers).;Rx
 144;Policy Cost|Other;billion US$2010/yr;;;;;;;any other indicator of policy cost (e.g.,compensated variation). (please indicate what type of policy cost is measured on the 'comments' tab);
 145;Policy Cost|Welfare Change;billion US$2010/yr;;;;;;;Policy cost for welfare change;
 146;Price|Agriculture|Corn|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Maize;1;;;;;price index of corn;M
@@ -1619,7 +1619,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1479;Trust|In politicians;%;;;;;;;Share of people agreeing with the statement ‘politicians are trustworthy’;
 1480;Unemployment;million;;;;;;;number of unemployed inhabitants (based on ILO classification);
 1481;Unemployment|Rate;%;;;;;;;fraction of unemployed inhabitants (based on ILO classification);
-1482;Water Consumption|Electricity w/o Hydro;km3/yr;Water Consumption|Electricity w/o Hydro;km3/yr;;;;;;S
+1482;Water Consumption|Electricity w/o Hydro;km3/yr;Water Consumption|Electricity w/o Hydro;km3/yr;;;;;;Rx
 1483;Efficiency|Electricity|Biomass|w/ CCS;%;Tech|Electricity|Biomass|Gasification Combined Cycle w/ CC|Efficiency;%;;;;;Conversion efficiency (electricity produced per unit of primary energy input) of a new biomass power plant with CCS. The efficiency should refer to the plant type(s) for which capital costs have been reported. If capital cost for more than one plant type has been reported,modellers should report efficiency for the additional plant types by adding variables Efficiency|Electricity| Biomass|w/ CCS|2,... Efficiency|Electricity|Biomass|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;R
 1484;Efficiency|Electricity|Biomass|w/o CCS;%;Tech|Electricity|Biomass|Combined Heat and Power w/o CC|Efficiency;%;;;;Combined Heat and Power plants are more common than Internal-Gasification Combind-Cycle Plants;Conversion efficiency (electricity produced per unit of primary energy input) of a new biomass power plant w/o CCS. The efficiency should refer to the plant type(s) for which capital costs have been reported. If capital cost for more than one plant type has been reported,modellers should report efficiency for the additional plant types by adding variables Efficiency|Electricity|Biomass|w/o CCS|2,... Efficiency|Electricity|Biomass|w/o CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;R
 1485;Efficiency|Electricity|Coal|w/ CCS;%;;%;;;;;Conversion efficiency (electricity produced per unit of primary energy input) of a new coal power plant with CCS. The efficiency should refer to the plant type(s) for which capital costs have been reported. If capital cost for more than one plant type has been reported,modellers should report efficiency for the additional plant types by adding variables Efficiency|Electricity|Coal|w/ CCS|2,... Efficiency|Electricity|Coal|w/ CCS|N (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;
@@ -1755,36 +1755,36 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1614;Population|Drinking Water Access;million;;;;;;;population with access to improved drinking water sources (by income level);
 1615;Population|Sanitation Access;million;;;;;;;population with access to improved sanitation (by income level);
 1616;Water Consumption;km3/yr;TODO;;;;work in progress;;total water consumption;
-1617;Water Consumption|Electricity;km3/yr;Water Consumption|Electricity;km3/yr;;;;;Water consumption for electricity generation;S
-1618;Water Consumption|Electricity|Biomass;km3/yr;Water Consumption|Electricity|Biomass;km3/yr;;;work in progress;;water consumption for net electricity production from municipal solid waste;S
-1619;Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;;;;;water consumption for net electricity production from municipal solid waste;S
-1620;Water Consumption|Electricity|Biomass|w/o CCS;km3/yr;Water Consumption|Electricity|Biomass|w/o CCS;km3/yr;;;;;water consumption for net electricity production from municipal solid waste;S
-1621;Water Consumption|Electricity|Coal;km3/yr;Water Consumption|Electricity|Coal;km3/yr;;;work in progress;;water consumption for net electricity production from coal;S
-1622;Water Consumption|Electricity|Coal|w/ CCS;km3/yr;Water Consumption|Electricity|Coal|w/ CCS;km3/yr;;;;;water consumption for net electricity production from coal with a CO2 capture component;S
-1623;Water Consumption|Electricity|Coal|w/o CCS;km3/yr;Water Consumption|Electricity|Coal|w/o CCS;km3/yr;;;;;water consumption for net electricity production from coal with freely vented CO2 emissions;S
-1624;Water Consumption|Electricity|Cooling Pond;km3/yr;Water Consumption|Electricity|Cooling Pond;km3/yr;;;;;water consumption for net electricity production using pond cooling;S
-1625;Water Consumption|Electricity|Dry Cooling;km3/yr;Water Consumption|Electricity|Dry Cooling;km3/yr;;;;;water consumption for net electricity production using dry cooling;S
-1626;Water Consumption|Electricity|Fossil;km3/yr;Water Consumption|Electricity|Fossil;km3/yr;;;work in progress;;water consumption for net electricity production from coal;S
-1627;Water Consumption|Electricity|Fossil|w/ CCS;km3/yr;Water Consumption|Electricity|Fossil|w/ CCS;km3/yr;;;;;water consumption for net electricity production from coal;S
-1628;Water Consumption|Electricity|Fossil|w/o CCS;km3/yr;Water Consumption|Electricity|Fossil|w/o CCS;km3/yr;;;;;water consumption for  net electricity production from coal;S
-1629;Water Consumption|Electricity|Gas;km3/yr;Water Consumption|Electricity|Gas;km3/yr;;;work in progress;;water consumption for net electricity production from natural gas;S
-1630;Water Consumption|Electricity|Gas|w/ CCS;km3/yr;Water Consumption|Electricity|Gas|w/ CCS;km3/yr;;;;;water consumption for net electricity production from natural gas with a CO2 capture component;S
-1631;Water Consumption|Electricity|Gas|w/o CCS;km3/yr;Water Consumption|Electricity|Gas|w/o CCS;km3/yr;;;;;water consumption for net electricity production from natural gas with freely vented CO2 emissions;S
-1632;Water Consumption|Electricity|Geothermal;km3/yr;Water Consumption|Electricity|Geothermal;km3/yr;;;;;water consumption for net electricity production from all sources of geothermal energy (e.g.;S
-1633;Water Consumption|Electricity|Hydro;km3/yr;Water Consumption|Electricity|Hydro;km3/yr;;;work in progress;;water consumption for net hydroelectric production;S
-1634;Water Consumption|Electricity|Non-Biomass Renewables;km3/yr;Water Consumption|Electricity|Non-Biomass Renewables;km3/yr;;;;;water consumption for net electricity production from hydro;S
-1635;Water Consumption|Electricity|Nuclear;km3/yr;Water Consumption|Electricity|Nuclear;km3/yr;;;work in progress;;water consumption for net electricity production from nuclear energy;S
-1636;Water Consumption|Electricity|Oil;km3/yr;Water Consumption|Electricity|Oil;km3/yr;;;work in progress;;water consumption for net electricity production from refined liquids;S
+1617;Water Consumption|Electricity;km3/yr;Water Consumption|Electricity;km3/yr;;;;;Water consumption for electricity generation;Rx
+1618;Water Consumption|Electricity|Biomass;km3/yr;Water Consumption|Electricity|Biomass;km3/yr;;;work in progress;;water consumption for net electricity production from municipal solid waste;Rx
+1619;Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;;;;;water consumption for net electricity production from municipal solid waste;Rx
+1620;Water Consumption|Electricity|Biomass|w/o CCS;km3/yr;Water Consumption|Electricity|Biomass|w/o CCS;km3/yr;;;;;water consumption for net electricity production from municipal solid waste;Rx
+1621;Water Consumption|Electricity|Coal;km3/yr;Water Consumption|Electricity|Coal;km3/yr;;;work in progress;;water consumption for net electricity production from coal;Rx
+1622;Water Consumption|Electricity|Coal|w/ CCS;km3/yr;Water Consumption|Electricity|Coal|w/ CCS;km3/yr;;;;;water consumption for net electricity production from coal with a CO2 capture component;Rx
+1623;Water Consumption|Electricity|Coal|w/o CCS;km3/yr;Water Consumption|Electricity|Coal|w/o CCS;km3/yr;;;;;water consumption for net electricity production from coal with freely vented CO2 emissions;Rx
+1624;Water Consumption|Electricity|Cooling Pond;km3/yr;Water Consumption|Electricity|Cooling Pond;km3/yr;;;;;water consumption for net electricity production using pond cooling;Rx
+1625;Water Consumption|Electricity|Dry Cooling;km3/yr;Water Consumption|Electricity|Dry Cooling;km3/yr;;;;;water consumption for net electricity production using dry cooling;Rx
+1626;Water Consumption|Electricity|Fossil;km3/yr;Water Consumption|Electricity|Fossil;km3/yr;;;work in progress;;water consumption for net electricity production from coal;Rx
+1627;Water Consumption|Electricity|Fossil|w/ CCS;km3/yr;Water Consumption|Electricity|Fossil|w/ CCS;km3/yr;;;;;water consumption for net electricity production from coal;Rx
+1628;Water Consumption|Electricity|Fossil|w/o CCS;km3/yr;Water Consumption|Electricity|Fossil|w/o CCS;km3/yr;;;;;water consumption for  net electricity production from coal;Rx
+1629;Water Consumption|Electricity|Gas;km3/yr;Water Consumption|Electricity|Gas;km3/yr;;;work in progress;;water consumption for net electricity production from natural gas;Rx
+1630;Water Consumption|Electricity|Gas|w/ CCS;km3/yr;Water Consumption|Electricity|Gas|w/ CCS;km3/yr;;;;;water consumption for net electricity production from natural gas with a CO2 capture component;Rx
+1631;Water Consumption|Electricity|Gas|w/o CCS;km3/yr;Water Consumption|Electricity|Gas|w/o CCS;km3/yr;;;;;water consumption for net electricity production from natural gas with freely vented CO2 emissions;Rx
+1632;Water Consumption|Electricity|Geothermal;km3/yr;Water Consumption|Electricity|Geothermal;km3/yr;;;;;water consumption for net electricity production from all sources of geothermal energy (e.g.;Rx
+1633;Water Consumption|Electricity|Hydro;km3/yr;Water Consumption|Electricity|Hydro;km3/yr;;;work in progress;;water consumption for net hydroelectric production;Rx
+1634;Water Consumption|Electricity|Non-Biomass Renewables;km3/yr;Water Consumption|Electricity|Non-Biomass Renewables;km3/yr;;;;;water consumption for net electricity production from hydro;Rx
+1635;Water Consumption|Electricity|Nuclear;km3/yr;Water Consumption|Electricity|Nuclear;km3/yr;;;work in progress;;water consumption for net electricity production from nuclear energy;Rx
+1636;Water Consumption|Electricity|Oil;km3/yr;Water Consumption|Electricity|Oil;km3/yr;;;work in progress;;water consumption for net electricity production from refined liquids;Rx
 1637;Water Consumption|Electricity|Oil|w/ CCS;km3/yr;;;;;;;water consumption for net electricity production from refined liquids with a CO2 capture component;
-1638;Water Consumption|Electricity|Oil|w/o CCS;km3/yr;Water Consumption|Electricity|Oil|w/o CCS;km3/yr;;;;;water consumption for net electricity production from refined liquids with freely vented CO2 emissions;S
-1639;Water Consumption|Electricity|Once Through;km3/yr;Water Consumption|Electricity|Once Through;km3/yr;;;;;water consumption for net electricity production using once through cooling;S
+1638;Water Consumption|Electricity|Oil|w/o CCS;km3/yr;Water Consumption|Electricity|Oil|w/o CCS;km3/yr;;;;;water consumption for net electricity production from refined liquids with freely vented CO2 emissions;Rx
+1639;Water Consumption|Electricity|Once Through;km3/yr;Water Consumption|Electricity|Once Through;km3/yr;;;;;water consumption for net electricity production using once through cooling;Rx
 1640;Water Consumption|Electricity|Other;km3/yr;;;;;;;water consumption for net electricity production from sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);
 1641;Water Consumption|Electricity|Sea Cooling;km3/yr;;;;;;;water consumption for net electricity production using sea water cooling;
-1642;Water Consumption|Electricity|Solar;km3/yr;Water Consumption|Electricity|Solar;km3/yr;;;work in progress;;water consumption for net electricity production from all sources of solar energy (e.g.;S
-1643;Water Consumption|Electricity|Solar|CSP;km3/yr;Water Consumption|Electricity|Solar|CSP;km3/yr;;;work in progress;;water consumption for net electricity production from concentrating solar power (CSP);S
-1644;Water Consumption|Electricity|Solar|PV;km3/yr;Water Consumption|Electricity|Solar|PV;km3/yr;;;work in progress;;water consumption for net electricity production from solar photovoltaics (PV);S
-1645;Water Consumption|Electricity|Wet Tower;km3/yr;Water Consumption|Electricity|Wet Tower;km3/yr;;;;;water consumption for net electricity production using wet tower cooling;S
-1646;Water Consumption|Electricity|Wind;km3/yr;Water Consumption|Electricity|Wind;km3/yr;;;work in progress;;water consumption for net electricity production from wind energy (on- and offshore);S
+1642;Water Consumption|Electricity|Solar;km3/yr;Water Consumption|Electricity|Solar;km3/yr;;;work in progress;;water consumption for net electricity production from all sources of solar energy (e.g.;Rx
+1643;Water Consumption|Electricity|Solar|CSP;km3/yr;Water Consumption|Electricity|Solar|CSP;km3/yr;;;work in progress;;water consumption for net electricity production from concentrating solar power (CSP);Rx
+1644;Water Consumption|Electricity|Solar|PV;km3/yr;Water Consumption|Electricity|Solar|PV;km3/yr;;;work in progress;;water consumption for net electricity production from solar photovoltaics (PV);Rx
+1645;Water Consumption|Electricity|Wet Tower;km3/yr;Water Consumption|Electricity|Wet Tower;km3/yr;;;;;water consumption for net electricity production using wet tower cooling;Rx
+1646;Water Consumption|Electricity|Wind;km3/yr;Water Consumption|Electricity|Wind;km3/yr;;;work in progress;;water consumption for net electricity production from wind energy (on- and offshore);Rx
 1647;Water Consumption|Extraction;km3/yr;;;;;;;total water consumption for extraction;
 1648;Water Consumption|Extraction|Coal;km3/yr;;;;;;;water consumption for coal extraction;
 1649;Water Consumption|Extraction|Gas;km3/yr;;;;;;;water consumption for gas extraction;
@@ -1872,37 +1872,37 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1731;Water Thermal Pollution|Electricity|Solar|CSP;EJ/yr;;;;;;;thermal water pollution from net electricity production from concentrating solar power (CSP);
 1732;Water Transfer;km3/yr;;;;;;;water imported/exported using conveyance infrastructure;
 1733;Water Withdrawal;km3/yr;TODO;;;;work in progress;;total water withdrawal;
-1734;Water Withdrawal|Electricity;km3/yr;Water Withdrawal|Electricity;km3/yr;;;work in progress;;total water withdrawals for net electricity production;S
-1735;Water Withdrawal|Electricity|Biomass;km3/yr;Water Withdrawal|Electricity|Biomass;km3/yr;;;work in progress;;water withdrawals for net electricity production from municipal solid waste;S
-1736;Water Withdrawal|Electricity|Biomass|w/ CCS;km3/yr;Water Withdrawal|Electricity|Biomass|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from municipal solid waste;S
-1737;Water Withdrawal|Electricity|Biomass|w/o CCS;km3/yr;Water Withdrawal|Electricity|Biomass|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from municipal solid waste;S
-1738;Water Withdrawal|Electricity|Coal;km3/yr;Water Withdrawal|Electricity|Coal;km3/yr;;;work in progress;;water withdrawals for net electricity production from coal;S
-1739;Water Withdrawal|Electricity|Coal|w/ CCS;km3/yr;Water Withdrawal|Electricity|Coal|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from coal with a CO2 capture component;S
-1740;Water Withdrawal|Electricity|Coal|w/o CCS;km3/yr;Water Withdrawal|Electricity|Coal|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from coal with freely vented CO2 emissions;S
-1741;Water Withdrawal|Electricity|Cooling Pond;km3/yr;Water Withdrawal|Electricity|Cooling Pond;km3/yr;;;;;water withdrawals for net electricity production using pond cooling;S
-1742;Water Withdrawal|Electricity|Dry Cooling;km3/yr;Water Withdrawal|Electricity|Dry Cooling;km3/yr;;;;;water withdrawals for net electricity production using dry cooling;S
-1743;Water Withdrawal|Electricity|Fossil;km3/yr;Water Withdrawal|Electricity|Fossil;km3/yr;;;work in progress;;water withdrawals for net electricity production from coal;S
-1744;Water Withdrawal|Electricity|Fossil|w/ CCS;km3/yr;Water Withdrawal|Electricity|Fossil|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from coal;S
-1745;Water Withdrawal|Electricity|Fossil|w/o CCS;km3/yr;Water Withdrawal|Electricity|Fossil|w/o CCS;km3/yr;;;;;water withdrawals for  net electricity production from coal;S
-1746;Water Withdrawal|Electricity|Gas;km3/yr;Water Withdrawal|Electricity|Gas;km3/yr;;;work in progress;;water withdrawals for net electricity production from natural gas;S
-1747;Water Withdrawal|Electricity|Gas|w/ CCS;km3/yr;Water Withdrawal|Electricity|Gas|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from natural gas with a CO2 capture component;S
-1748;Water Withdrawal|Electricity|Gas|w/o CCS;km3/yr;Water Withdrawal|Electricity|Gas|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from natural gas with freely vented CO2 emissions;S
-1749;Water Withdrawal|Electricity|Geothermal;km3/yr;Water Withdrawal|Electricity|Geothermal;km3/yr;;;;;water withdrawals for net electricity production from all sources of geothermal energy (e.g.;S
-1750;Water Withdrawal|Electricity|Hydro;km3/yr;Water Withdrawal|Electricity|Hydro;km3/yr;;;work in progress;;water withdrawals for net hydroelectric production;S
-1751;Water Withdrawal|Electricity|Non-Biomass Renewables;km3/yr;Water Withdrawal|Electricity|Non-Biomass Renewables;km3/yr;;;;;water withdrawals for net electricity production from hydro;S
-1752;Water Withdrawal|Electricity|Nuclear;km3/yr;Water Withdrawal|Electricity|Nuclear;km3/yr;;;work in progress;;water withdrawals for net electricity production from nuclear energy;S
+1734;Water Withdrawal|Electricity;km3/yr;Water Withdrawal|Electricity;km3/yr;;;work in progress;;total water withdrawals for net electricity production;Rx
+1735;Water Withdrawal|Electricity|Biomass;km3/yr;Water Withdrawal|Electricity|Biomass;km3/yr;;;work in progress;;water withdrawals for net electricity production from municipal solid waste;Rx
+1736;Water Withdrawal|Electricity|Biomass|w/ CCS;km3/yr;Water Withdrawal|Electricity|Biomass|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from municipal solid waste;Rx
+1737;Water Withdrawal|Electricity|Biomass|w/o CCS;km3/yr;Water Withdrawal|Electricity|Biomass|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from municipal solid waste;Rx
+1738;Water Withdrawal|Electricity|Coal;km3/yr;Water Withdrawal|Electricity|Coal;km3/yr;;;work in progress;;water withdrawals for net electricity production from coal;Rx
+1739;Water Withdrawal|Electricity|Coal|w/ CCS;km3/yr;Water Withdrawal|Electricity|Coal|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from coal with a CO2 capture component;Rx
+1740;Water Withdrawal|Electricity|Coal|w/o CCS;km3/yr;Water Withdrawal|Electricity|Coal|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from coal with freely vented CO2 emissions;Rx
+1741;Water Withdrawal|Electricity|Cooling Pond;km3/yr;Water Withdrawal|Electricity|Cooling Pond;km3/yr;;;;;water withdrawals for net electricity production using pond cooling;Rx
+1742;Water Withdrawal|Electricity|Dry Cooling;km3/yr;Water Withdrawal|Electricity|Dry Cooling;km3/yr;;;;;water withdrawals for net electricity production using dry cooling;Rx
+1743;Water Withdrawal|Electricity|Fossil;km3/yr;Water Withdrawal|Electricity|Fossil;km3/yr;;;work in progress;;water withdrawals for net electricity production from coal;Rx
+1744;Water Withdrawal|Electricity|Fossil|w/ CCS;km3/yr;Water Withdrawal|Electricity|Fossil|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from coal;Rx
+1745;Water Withdrawal|Electricity|Fossil|w/o CCS;km3/yr;Water Withdrawal|Electricity|Fossil|w/o CCS;km3/yr;;;;;water withdrawals for  net electricity production from coal;Rx
+1746;Water Withdrawal|Electricity|Gas;km3/yr;Water Withdrawal|Electricity|Gas;km3/yr;;;work in progress;;water withdrawals for net electricity production from natural gas;Rx
+1747;Water Withdrawal|Electricity|Gas|w/ CCS;km3/yr;Water Withdrawal|Electricity|Gas|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from natural gas with a CO2 capture component;Rx
+1748;Water Withdrawal|Electricity|Gas|w/o CCS;km3/yr;Water Withdrawal|Electricity|Gas|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from natural gas with freely vented CO2 emissions;Rx
+1749;Water Withdrawal|Electricity|Geothermal;km3/yr;Water Withdrawal|Electricity|Geothermal;km3/yr;;;;;water withdrawals for net electricity production from all sources of geothermal energy (e.g.;Rx
+1750;Water Withdrawal|Electricity|Hydro;km3/yr;Water Withdrawal|Electricity|Hydro;km3/yr;;;work in progress;;water withdrawals for net hydroelectric production;Rx
+1751;Water Withdrawal|Electricity|Non-Biomass Renewables;km3/yr;Water Withdrawal|Electricity|Non-Biomass Renewables;km3/yr;;;;;water withdrawals for net electricity production from hydro;Rx
+1752;Water Withdrawal|Electricity|Nuclear;km3/yr;Water Withdrawal|Electricity|Nuclear;km3/yr;;;work in progress;;water withdrawals for net electricity production from nuclear energy;Rx
 1753;Water Withdrawal|Electricity|Ocean;km3/yr;;;;;;;water withdrawals for net electricity production from all sources of ocean energy (e.g.;
-1754;Water Withdrawal|Electricity|Oil;km3/yr;Water Withdrawal|Electricity|Oil;km3/yr;;;work in progress;;water withdrawals for net electricity production from refined liquids;S
-1755;Water Withdrawal|Electricity|Oil|w/ CCS;km3/yr;Water Withdrawal|Electricity|Oil|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from refined liquids with a CO2 capture component;S
+1754;Water Withdrawal|Electricity|Oil;km3/yr;Water Withdrawal|Electricity|Oil;km3/yr;;;work in progress;;water withdrawals for net electricity production from refined liquids;Rx
+1755;Water Withdrawal|Electricity|Oil|w/ CCS;km3/yr;Water Withdrawal|Electricity|Oil|w/o CCS;km3/yr;;;;;water withdrawals for net electricity production from refined liquids with a CO2 capture component;Rx
 1756;Water Withdrawal|Electricity|Oil|w/o CCS;km3/yr;;;;;;;water withdrawals for net electricity production from refined liquids with freely vented CO2 emissions;
-1757;Water Withdrawal|Electricity|Once Through;km3/yr;Water Withdrawal|Electricity|Once Through;km3/yr;;;;;water withdrawals for net electricity production using once through cooling;S
+1757;Water Withdrawal|Electricity|Once Through;km3/yr;Water Withdrawal|Electricity|Once Through;km3/yr;;;;;water withdrawals for net electricity production using once through cooling;Rx
 1758;Water Withdrawal|Electricity|Other;km3/yr;;;;;;;water withdrawals for net electricity production from sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);
 1759;Water Withdrawal|Electricity|Sea Cooling;km3/yr;;;;;;;water withdrawals for net electricity production using sea water cooling;
-1760;Water Withdrawal|Electricity|Solar;km3/yr;Water Withdrawal|Electricity|Solar;km3/yr;;;work in progress;;water withdrawals for net electricity production from all sources of solar energy (e.g.;S
-1761;Water Withdrawal|Electricity|Solar|CSP;km3/yr;Water Withdrawal|Electricity|Solar|CSP;km3/yr;;;work in progress;;water withdrawals for net electricity production from concentrating solar power (CSP);S
-1762;Water Withdrawal|Electricity|Solar|PV;km3/yr;Water Withdrawal|Electricity|Solar|PV;km3/yr;;;work in progress;;water withdrawals for net electricity production from solar photovoltaics (PV);S
-1763;Water Withdrawal|Electricity|Wet Tower;km3/yr;Water Withdrawal|Electricity|Wet Tower;km3/yr;;;work in progress;;water withdrawals for net electricity production using wet tower cooling;S
-1764;Water Withdrawal|Electricity|Wind;km3/yr;Water Withdrawal|Electricity|Wind;km3/yr;;;work in progress;;water withdrawals for net electricity production from wind energy (on- and offshore);S
+1760;Water Withdrawal|Electricity|Solar;km3/yr;Water Withdrawal|Electricity|Solar;km3/yr;;;work in progress;;water withdrawals for net electricity production from all sources of solar energy (e.g.;Rx
+1761;Water Withdrawal|Electricity|Solar|CSP;km3/yr;Water Withdrawal|Electricity|Solar|CSP;km3/yr;;;work in progress;;water withdrawals for net electricity production from concentrating solar power (CSP);Rx
+1762;Water Withdrawal|Electricity|Solar|PV;km3/yr;Water Withdrawal|Electricity|Solar|PV;km3/yr;;;work in progress;;water withdrawals for net electricity production from solar photovoltaics (PV);Rx
+1763;Water Withdrawal|Electricity|Wet Tower;km3/yr;Water Withdrawal|Electricity|Wet Tower;km3/yr;;;work in progress;;water withdrawals for net electricity production using wet tower cooling;Rx
+1764;Water Withdrawal|Electricity|Wind;km3/yr;Water Withdrawal|Electricity|Wind;km3/yr;;;work in progress;;water withdrawals for net electricity production from wind energy (on- and offshore);Rx
 1765;Water Withdrawal|Extraction;km3/yr;;;;;;;total water withdrawal for extraction;
 1766;Water Withdrawal|Extraction|Coal;km3/yr;;;;;;;water withdrawal for coal extraction;
 1767;Water Withdrawal|Extraction|Gas;km3/yr;;;;;;;water withdrawal for gas extraction;
@@ -1972,7 +1972,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;GDP|PPP|Per capita ratio to OECD;%;GDP|PPP|Per capita ratio to OECD;percent;;;;;Ratio of GDP/cap (PPP) of developing regions to OECD average;S
 ;Population|Relative poverty|wrt median income|Share;%;Population|Relative poverty|wrt median income|Share;percent;;;;;Share of population below 50% of national median income;S
 ;Inequality|Bottom 40% average income|Ratio;%;Inequality|Bottom 40% average income|Ratio;percent;;;;;Average income of bottom 40% relative to national average;S
-;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.12;;;;Net international climate finance transfers (positive for inflow,negative for payment);R
+;Policy Cost|Transfers;billion US$2010/yr;Policy Cost|Transfers;billion US$2005/yr;1.12;;;;Net international climate finance transfers (positive for inflow,negative for payment);Rx
 ;Population|Prevalence of underweight;million;SDG|SDG02|Prevalence of underweight;million;;;;;Number of adults with BMI<18.5 and children with <-1SD from reference BMI;M
 ;Population|Prevalence of underweight|Children;million;SDG|SDG02|Prevalence of underweight|Children;million;;;;;Number of underweight children (-2SD from reference BMI, aged 0--14);M
 ;Population|Prevalence of overweight;million;SDG|SDG03|Prevalence of overweight;million;;;;;Number of adults with BMI>25 and children with >1SD from reference BMI;M

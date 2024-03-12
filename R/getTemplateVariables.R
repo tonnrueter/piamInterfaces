@@ -19,7 +19,9 @@ getTemplateVariables <- function(project, sources = TRUE) {
     if (! "source" %in% names(template)) {
       stop("Template ", project, " has no column 'source', please add it.")
     }
+    # split RxMT into c("Rx", "M", "T")
     sources <- unlist(strsplit(paste0(sources), split = ""))
+    sources <- setdiff(paste0(sources, ifelse(seq_along(sources) == which(sources == "x") - 1, "x", "")), "x")
     template <- template %>%
       filter(! is.na(.data$source), .data$source %in% sources)
   }
