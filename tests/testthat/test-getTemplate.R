@@ -1,6 +1,6 @@
 minimalLength <- list("AR6" = 1900, "NAVIGATE" = 1900)
 for (template in names(templateNames())) {
-  test_that(paste("basic checks on template", template), {
+  test_that(paste("checks on template", template), {
     expect_silent(templateData <- getTemplate(template))
     expect_true(all(c("variable", "unit", "piam_variable", "piam_unit", "piam_factor") %in% names(templateData)))
     expect_true(class(templateData) == "data.frame")
@@ -25,6 +25,19 @@ for (template in names(templateNames())) {
               paste(unclearVarUnit, collapse = "\n"))
     }
     expect_true(length(unclearVarUnit) == 0, label = paste("variables and units are consistent for", template))
+
+    unitfails <- templateData %>%
+      filter(! checkUnitFactor(templateData)) %>%
+      select(c("variable", "unit", "piam_variable", "piam_unit", "piam_factor")) %>%
+      arrange(.data$variable)
+    if (nrow(unitfails) > 0) {
+      printoutput <- withr::with_options(list(width = 180), print(unitfails, n = 200, na.print = "")) %>%
+        capture.output()
+      warning("Failing units in ", template, ".\nIf that is a false positive, ",
+              "adjust areUnitsIdentical() or checkUnitFactor()\n",
+              paste(printoutput, collapse = "\n"))
+    }
+    expect_true(nrow(unitfails) == 0)
 
     # checks only if source is supplied
     if ("source" %in% colnames(templateData)) {

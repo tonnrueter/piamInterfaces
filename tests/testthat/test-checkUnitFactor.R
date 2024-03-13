@@ -28,7 +28,7 @@ test_that("checkUnitFactor works", {
     mapping <- data.frame(Variable = character(), Unit = character(),
                           piam_unit = character(), piam_factor = character())
     mapping[1, ] <- c
-    expect_no_error(checkUnitFactor(mapping, logFile = NULL))
+    expect_true(all(checkUnitFactor(mapping, logFile = NULL)))
   }
 })
 

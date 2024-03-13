@@ -151,7 +151,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 132;Expenditure|household|Services|Water & sanitation;billion US$2010/yr;;;;;;expenditure of households for Water & Sanitation services
 133;Export;billion US$2010/yr;;;;;;total exports measured in monetary quantities.
 134;GDP|MER;billion US$2010/yr;;;;;;GDP at market exchange rate
-135;GDP|PPP;billion US$2010/yr;Total income;million US$05 PPP/yr;0.00000111;;;GDP at purchasing power parity
+135;GDP|PPP;billion US$2010/yr;Total income;million US$05 PPP/yr;0.00112;;;GDP at purchasing power parity
 136;GINI;0;;;;;;GINI income inequality index
 137;Import;billion US$2010/yr;;;;;;total imports measured in monetary quantities.
 138;Interest Rate|Real;%;;;;;time preference rate as component of the interest rate is exogenous;Real interest rate or return on capital that is relevant for energy system investments
@@ -1328,13 +1328,13 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 1228;Tariffs|Average|Imports;%;;;;;;Average tariffs for imports (most relevant for developed countries)
 1229;Expenditure|Medical System|Incremental;billion US$2010/yr;;;;;;Incremental expenditure for the medical system
 1230;Investment|Medical System;billion US$2010/yr;;;;;;investment to medical system
-;Energy Expenditures|Industry|Cement;USD2010/yr;;;;;;total expenditures on energy in the cement industry (energy input x price)
-;Energy Expenditures|Industry|Steel;USD2010/yr;;;;;;total expenditures on energy in the steel industry (energy input x price)
-;Energy Expenditures|Residential and Commercial|Cooling;USD2010/yr;;;;;;total expenditures on energy for cooling services (energy input x price)
-;Energy Expenditures|Residential and Commercial|Heating;USD2010/yr;;;;;;total expenditures on energy for heating services (energy input x price)
-;Energy Expenditures|Transportation;USD2010/yr;;;;;;total expenditures on energy for transportation (energy input x price)
+;Energy Expenditures|Industry|Cement;US$2010/yr;;;;;;total expenditures on energy in the cement industry (energy input x price)
+;Energy Expenditures|Industry|Steel;US$2010/yr;;;;;;total expenditures on energy in the steel industry (energy input x price)
+;Energy Expenditures|Residential and Commercial|Cooling;US$2010/yr;;;;;;total expenditures on energy for cooling services (energy input x price)
+;Energy Expenditures|Residential and Commercial|Heating;US$2010/yr;;;;;;total expenditures on energy for heating services (energy input x price)
+;Energy Expenditures|Transportation;US$2010/yr;;;;;;total expenditures on energy for transportation (energy input x price)
 1231;Expenditure|household|Energy;billion US$2010/yr;;;;;;expenditure of households for energy.
-1232;Expenditure|household|Food;billion US$2010/yr;Household Expenditure|Food|Expenditure;USD/capita;;;;expenditure of households for food.
+1232;Expenditure|household|Food;billion US$2010/yr;;;;;;expenditure of households for food.
 1233;Expenditure|household|Industry;billion US$2010/yr;;;;;;expenditure of households for industrial goods.
 1234;Expenditure|household|Services;billion US$2010/yr;;;;;;expenditure of households for services.
 1235;Expenditure|household|Services|health;billion US$2010/yr;;;;;;expenditure of households for health services.
@@ -1987,7 +1987,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;D
 ;Ocean|Carbonate Saturation|Aragonite;-;;;;;;Saturation state of aragonite (Omega_A)
 ;Ocean|Net primary production;GtC/yr;;;;;;Net primary production of biomass in oceans
 ;Ocean|New production;GtC/yr;;;;;;New production of biomass in oceans
-;Ocean|Extension of suboxic zones;km³;;;;;;Extension of suboxic zones in oceans
+;Ocean|Extension of suboxic zones;km3;;;;;;Extension of suboxic zones in oceans
 ;Political institutions|Equality before law and individual liberty;-;;;;;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM
 ;Primary Energy|Biomass|Heat;EJ/yr;;;;;;biomass primary energy input to heat generation
 ;Primary Energy|Coal|Heat;EJ/yr;;;;;;coal primary energy input to heat generation

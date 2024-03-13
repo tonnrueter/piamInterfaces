@@ -173,7 +173,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 144;1;economy;Export;billion US$2010/yr;;;;;;total exports measured in monetary quantities.;
 145;1;economy;Import;billion US$2010/yr;;;;;;total imports measured in monetary quantities.;
 146;2;economy;Capital Stock;billion US$2010/yr;;;;;;Macroeconomic capital stock;
-147;2;economy;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;unitless;;;;Real interest rate or return on capital that is relevant for energy system investments;R
+147;2;economy;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;unitless;100;;;Real interest rate or return on capital that is relevant for energy system investments;R
 148;2;economy;Value Added|Industry|Chemicals;billion US$2010/yr;Value Added|Industry|Chemicals;billion US$2005/yr;1.12;;;value added of the chemical industries.;R
 149;2;economy;Value Added|Industry|Iron and Steel;billion US$2010/yr;;;;;;value added of iron and steel production;
 150;2;economy;Value Added|Industry|Non-Metallic Minerals;billion US$2010/yr;;;;;;value added of non-metallic minerals industries;
@@ -548,7 +548,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 504;2;energy (capacity);Capacity Additions|Electricity|Geothermal;GW/yr;New Cap|Electricity|Geothermal;GW/yr;;;;Capacity additions of geothermal power plants (yearly average additions between previos and current model time step);R
 505;2;energy (capacity);Capacity Additions|Electricity|Oil;GW/yr;New Cap|Electricity|Oil;GW/yr;;;;Capacity additions of all oil power plants (yearly average additions between previos and current model time step);R
 506;2;energy (capacity);Capacity Additions|Electricity|Solar;GW/yr;New Cap|Electricity|Solar;GW/yr;;;;Capacity additions of solar power plants (yearly average additions between previos and current model time step);R
-507;2;energy (capacity);Capacity Additions|Electricity|Storage Capacity;GWh/yr;New Cap|Electricity|Storage|Battery;GW/yr;;;;Capacity additions of electricity storage capacity (yearly average additions between previos and current model time step);R
+507;2;energy (capacity);Capacity Additions|Electricity|Storage Capacity;GWh/yr;New Cap|Electricity|Storage|Battery;GW/yr;6;;;Capacity additions of electricity storage capacity (yearly average additions between previos and current model time step);R
 508;2;energy (capacity);Capacity Additions|Electricity|Transmissions Grid;GWkm/yr;;;;;;Capacity additions of electricity storage (yearly average additions between previos and current model time step);
 509;2;energy (capacity);Capacity|Electricity|Storage Capacity;GWh;;;;;;Total installed capacity of operating electricity storage;
 510;2;energy (capacity);Capacity|Electricity|Transmissions Grid;GWkm;;;;;;Total installed capacity of operating transmission grid;
@@ -1413,7 +1413,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1323;1;health;Investment|Medical System;billion US$2010/yr;;;;;;investment to medical system;
 1324;1;household;Expenditure|household|Industry;billion US$2010/yr;;;;;;expenditure of households for industrial goods.;
 1325;1;household;Expenditure|household|Energy;billion US$2010/yr;;;;;;expenditure of households for energy.;
-1326;1;household;Expenditure|household|Food;billion US$2010/yr;Household Expenditure|Food|Expenditure;USD/capita;;;;expenditure of households for food.;M
+1326;1;household;Expenditure|household|Food;billion US$2010/yr;;;;;;expenditure of households for food.;
 1327;1;household;Expenditure|household|Services;billion US$2010/yr;;;;;;expenditure of households for services.;
 1328;1;household;Expenditure|household|Services|health;billion US$2010/yr;;;;;;expenditure of households for health services.;
 1329;1;industry;Expenditure|Energy|Fossil;billion US$2010/yr;;;;;;Fossil fuel expenditure;

@@ -1,8 +1,8 @@
 Type: Package
 Package: piamInterfaces
 Title: Project specific interfaces to REMIND / MAgPIE
-Version: 0.15.1
-Date: 2024-03-12
+Version: 0.15.2
+Date: 2024-03-13
 Authors@R: c(
     person("Falk", "Benke", , "benke@pik-potsdam.de", role = c("aut", "cre")),
     person("Oliver", "Richters", role = "aut")
@@ -25,6 +25,7 @@ Imports:
 Suggests:
     covr,
     testthat,
+    withr,
     writexl
 Encoding: UTF-8
 RoxygenNote: 7.3.1

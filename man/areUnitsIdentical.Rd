@@ -4,10 +4,12 @@
 \alias{areUnitsIdentical}
 \title{Check whether units are identical following a specified list}
 \usage{
-areUnitsIdentical(...)
+areUnitsIdentical(vec1, vec2)
 }
 \arguments{
-\item{...}{units to be checked}
+\item{vec1}{units to be checked against vec2, elementwise}
+
+\item{vec2}{units to be checked against vec1, elementwise}
 }
 \value{
 boolean

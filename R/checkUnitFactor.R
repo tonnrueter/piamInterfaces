@@ -16,9 +16,16 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   errortext <- NULL
   colnames(template) <- tolower(names(template))
 
-  # check whether scales are correctly transformed
+  # check whether scales are correctly transformed. c(piam_factor, unit, piam_unit)
   # the first line checks that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
   scaleConversion <- list(
+                          c("1", "million", "million people"),
+                          c("1", "million", "Million vehicles"),
+                          c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'
+                          c("6", "GWh", "GW"),       # for 'Cap|Electricity|Storage|Battery'
+                          c("100", "%", "unitless"),
+                          c("100", "%", "share of total land"),
+                          c("100", "%", "income"),
                           c("1000", "million", "billion"),
                           c("1000", "P", "E"),
                           c("1000", "T", "P"),
@@ -27,16 +34,28 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1000", "k", "M"),
                           # conversion factors taken from ECEMF Model Comparison Protocol, DOI:10.5281/zenodo.6811317
                           c("1.12", "US$2010", "US$2005"),
+                          c("1.12", "US$2010", "US$05"),
+                          c("1.12", "US$2010/t CO2", "US$2005/tCO2"),
+                          c("0.00112", "billion US$2010/yr", "million US$05 PPP/yr"),
+                          c("0.000892857", "EJ/billion US$2010", "MJ/US$2005"), # 0.001 divided by 1.12
                           c("1.33", "US$2020", "US$2005"),
-                          c("1.17", "EUR_2020", "US$2005")
+                          c("1.17", "EUR_2020", "US$2005"),
+                          c("1.174", "EUR2020", "US$2005"),
+                          # temporary, error in ARIADNE template for 'Capital Stock'
+                          c("1.174", "billion EUR2020/yr", "billion US$2005")
                          )
+  template$piam_factor[is.na(template$piam_factor)] <- 1
+  success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
+  success <- success | is.na(template$piam_variable) | template$piam_variable %in% "TODO"
+
   firsterror <- TRUE
   for (sc in scaleConversion) {
-    wrongScale <- template %>%
-                    filter(grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
-                    filter(! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
-                    filter(.data$piam_unit %in% gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
-                    filter(! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
+    fails <- template %>%
+               mutate(matches = .data$piam_unit %in% gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
+               mutate(failed  = ! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
+    wrongScale <- filter(fails, .data$failed & .data$matches)
     if (nrow(wrongScale) > 0) {
       if (isTRUE(firsterror)) {
         errortext <- c(errortext, "According to checkUnitFactor(), the following variables use the wrong piam_factor:")
@@ -47,6 +66,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                "\n  Expected: ", sc[[1]], " ", sc[[2]], " = 1 ", sc[[3]])
       )
     }
+    success <- success | (fails$matches & ! fails$failed)
   }
 
   if (! is.null(logFile) && ! isFALSE(logFile)) {
@@ -62,4 +82,5 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
     errortext <- c("Conversion factors do not match units!\n", errortext)
     if (failOnUnitMismatch) stop(errortext) else message(errortext)
   }
+  return(success)
 }
