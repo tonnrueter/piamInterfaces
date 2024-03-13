@@ -54,6 +54,9 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     filter(.data$variable %in% unique(c(summationGroups$child, summationGroups$parent, lineplotVariables))) %>%
     left_join(summationGroups, by = c("variable" = "child")) %>%
     droplevels()
+  hist <- filter(data,   .data$scenario %in% "historical") %>% droplevels()
+  data <- filter(data, ! .data$scenario %in% "historical") %>% droplevels()
+
   if (interactive) {
     data <- quitte::chooseFilter(data, types = c("model", "scenario", "region", "period"),
                                  keep = list(region = mainReg))
@@ -119,7 +122,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
       pdfFilename <- file.path(outputDirectory, paste0("compare_models_", gsub(" ", "_", thisscenario), ".pdf"))
       message("\n## Writing ", pdfFilename, " for scenario '", thisscenario, "'.\n")
       plotdata <- filter(data, .data$scenario == thisscenario) %>% droplevels()
-      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto)
+      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto, hist)
     }
   }
   if ("model" %in% plotby && length(quitte::getScenarios(data)) > 1) {
@@ -127,22 +130,23 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
       pdfFilename <- file.path(outputDirectory, paste0("compare_scenarios_", gsub(" ", "_", thismodel), ".pdf"))
       message("\n## Writing ", pdfFilename, " for model '", thismodel, "'.\n")
       plotdata <- filter(data, .data$model == thismodel) %>% droplevels()
-      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto)
+      makepdf(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto, hist)
     }
   }
   if ("onefile" %in% plotby || (length(quitte::getModels(data)) == 1 && length(quitte::getScenarios(data)) == 1)) {
     pdfFilename <- file.path(outputDirectory, "compare_scenarios_all.pdf")
     message("\n## Writing ", pdfFilename, " with all data.\n")
-    makepdf(pdfFilename, droplevels(data), plotvariables, areaplotVariables, mainReg, diffto)
+    makepdf(pdfFilename, droplevels(data), plotvariables, areaplotVariables, mainReg, diffto, hist)
   }
   message("Done. See results in ", normalizePath(outputDirectory), ".")
 }
 
-makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto = NULL) {
+makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mainReg, diffto = NULL, hist = NULL) {
   if (nrow(plotdata) == 0) {
     message("plotdata empty, skipping.")
     return()
   }
+  if (! is.null(hist)) hist$identifier <- NA
   plotdata$identifier <- mip::identifierModelScen(plotdata)
   legendTitle <- paste(c(attr(plotdata$identifier, "deletedinfo"), "Model output")[[1]],
                        if (! is.null(diffto)) paste("difference to", diffto))
@@ -168,7 +172,7 @@ makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mai
       }
     }
     # if no childs exist
-    mip::showLinePlots(plotdata, p, mainReg = mainReg, color.dim.name = legendTitle)
+    mip::showLinePlots(rbind(plotdata, hist), p, mainReg = mainReg, color.dim.name = legendTitle)
   }
   dev.off()
   message("\n## Writing ", pdfFilename, " successful.\n")
