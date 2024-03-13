@@ -571,7 +571,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 519;Capacity Additions|Electricity|Solar;GW/yr;New Cap|Electricity|Solar;GW/yr;;;;;Capacity additions of solar power plants (yearly average additions between previos and current model time step);R
 520;Capacity Additions|Electricity|Solar|CSP;GW/yr;New Cap|Electricity|Solar|CSP;GW/yr;;;;;Capacity additions of concentrated solar power plants (yearly average additions between previos and current model time step);R
 521;Capacity Additions|Electricity|Solar|PV;GW/yr;New Cap|Electricity|Solar|PV;GW/yr;;;;;Capacity additions of solar PV (yearly average additions between previos and current model time step);R
-522;Capacity Additions|Electricity|Storage Capacity;GWh/yr;New Cap|Electricity|Storage|Battery;GW/yr;;;;;Capacity additions of electricity storage capacity (yearly average additions between previos and current model time step);R
+522;Capacity Additions|Electricity|Storage Capacity;GWh/yr;New Cap|Electricity|Storage|Battery;GW/yr;6;;;;Capacity additions of electricity storage capacity (yearly average additions between previos and current model time step);R
 523;Capacity Additions|Electricity|Transmissions Grid;GWkm/yr;;;;;;;Capacity additions of electricity storage (yearly average additions between previos and current model time step);
 524;Capacity Additions|Electricity|Wind;GW/yr;New Cap|Electricity|Wind;GW/yr;;;;;Capacity additions of wind power plants (onshore and offshore) (yearly average additions between previos and current model time step);R
 525;Capacity Additions|Electricity|Wind|Offshore;GW/yr;New Cap|Electricity|Wind|Offshore;GW/yr;;;;;Capacity additions of wind power plants (ooffshore) (yearly average additions between previos and current model time step);R
@@ -1337,7 +1337,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Energy Expenditures|Residential and Commercial|Heating;US$2010/yr;;;;;;;total expenditures on energy for heating services (energy input x price);
 ;Energy Expenditures|Transportation;US$2010/yr;;;;;;;total expenditures on energy for transportation (energy input x price);
 1231;Expenditure|household|Energy;billion US$2010/yr;;;;;;;expenditure of households for energy.;
-1232;Expenditure|household|Food;billion US$2010/yr;Household Expenditure|Food|Expenditure;USD/capita;;;;;expenditure of households for food.;M
+1232;Expenditure|household|Food;billion US$2010/yr;;;;;;;expenditure of households for food.;
 1233;Expenditure|household|Industry;billion US$2010/yr;;;;;;;expenditure of households for industrial goods.;
 1234;Expenditure|household|Services;billion US$2010/yr;;;;;;;expenditure of households for services.;
 1235;Expenditure|household|Services|health;billion US$2010/yr;;;;;;;expenditure of households for health services.;
@@ -1961,7 +1961,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1820;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact;S
 1821;Useful Energy|Per Capita|Industry;GJ/cap/yr;;;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry.;
 1822;Useful Energy|Per Capita|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings;R
-1823;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;0.00090274;;;;Final energy / GDP PPP;R
+1823;Intensity|Final Energy;EJ/billion US$2010;Intensity|GDP|Final Energy;MJ/US$2005;0.000892857;;;;Final energy / GDP PPP;R
 1824;Final Energy|Industry|Electricity|Share;%;FE|Industry|Electricity|Share;%;;;;;Share of electrified FE in industry;R
 1826;Air pollution concentration|PM2_5|Urban population;ug/m3;Air pollution concentration|PM2_5|Urban population;ug/m3;;;;;Urban population weighted annual average PM2.5 concentrations.;S
 ;Population|Poverty|LMIC poverty line;million;Population|Poverty|LMIC poverty line;million;;;;;population living in poverty with income <US$3.20 2011 PPP per day (World Bank LMIC definition);S

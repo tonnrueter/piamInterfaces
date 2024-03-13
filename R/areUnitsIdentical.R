@@ -38,6 +38,8 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("bn m2/yr", "billion m2/yr", "bn m2", "billion m2"),
     # for 'Productivity|Yield' and subvariables
     c("t DM/ha", "t DM/ha/yr"),
+    # for 'Water|Environmental flow violation volume'
+    c("km3/yr", "km3"),
   NULL)
   areIdentical <- function(x, y) {
     # literally identical or both found in the same list element above

@@ -21,8 +21,11 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   scaleConversion <- list(
                           c("1", "million", "million people"),
                           c("1", "million", "Million vehicles"),
+                          c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'
+                          c("6", "GWh", "GW"),       # for 'Cap|Electricity|Storage|Battery'
                           c("100", "%", "unitless"),
                           c("100", "%", "share of total land"),
+                          c("100", "%", "income"),
                           c("1000", "million", "billion"),
                           c("1000", "P", "E"),
                           c("1000", "T", "P"),
@@ -33,9 +36,13 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1.12", "US$2010", "US$2005"),
                           c("1.12", "US$2010", "US$05"),
                           c("1.12", "US$2010/t CO2", "US$2005/tCO2"),
+                          c("0.00112", "billion US$2010/yr", "million US$05 PPP/yr"),
+                          c("0.000892857", "EJ/billion US$2010", "MJ/US$2005"), # 0.001 divided by 1.12
                           c("1.33", "US$2020", "US$2005"),
                           c("1.17", "EUR_2020", "US$2005"),
-                          c("1.174", "EUR2020", "US$2005")
+                          c("1.174", "EUR2020", "US$2005"),
+                          # temporary, error in ARIADNE template for 'Capital Stock'
+                          c("1.174", "billion EUR2020/yr", "billion US$2005")
                          )
   template$piam_factor[is.na(template$piam_factor)] <- 1
   success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
