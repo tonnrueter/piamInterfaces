@@ -19,7 +19,6 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   # check whether scales are correctly transformed. c(piam_factor, unit, piam_unit)
   # the first line checks that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
   scaleConversion <- list(
-                          c("1", "million", "million people"),
                           c("1", "million", "Million vehicles"),
                           c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'
                           c("6", "GWh", "GW"),       # for 'Cap|Electricity|Storage|Battery'
@@ -51,7 +50,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   firsterror <- TRUE
   for (sc in scaleConversion) {
     fails <- template %>%
-               mutate(matches = .data$piam_unit %in% gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$piam_unit == gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
                mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
                mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
                mutate(failed  = ! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))

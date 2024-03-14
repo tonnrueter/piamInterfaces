@@ -46,7 +46,7 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
   skippedUnits <- intersect(skipUnits, levels(data$unit))
   if (length(skippedUnits) > 0) {
     data <- droplevels(filter(data, ! .data$unit %in% skippedUnits))
-    message(length(skippedUnits), " skipped.")
+    message(length(skippedUnits), " units skipped, as they point to intensive variables that would not sum up anyway.")
   }
   if (is.null(parentRegion)) parentRegion <- intersect(c("World", "GLO"), levels(data$region))[[1]]
   if (is.null(childRegions)) childRegions <- setdiff(levels(data$region), parentRegion)
