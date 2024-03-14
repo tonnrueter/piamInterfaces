@@ -20,7 +20,7 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("kt CF4/yr", "kt CF4-equiv/yr"),
     c("ktU/yr", "kt U/yr"),
     c("km\u00b3", "km3"),
-    c("Million", "million"),
+    c("Million", "million", "million people"),
     c("million t DM/yr", "Mt DM/yr"),
     c("million vehicles", "Million vehicles"),
     c("Mt/yr", "Mt/year"),
