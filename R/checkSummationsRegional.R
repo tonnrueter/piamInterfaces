@@ -24,7 +24,7 @@
 checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions = NULL,
                                     variables = NULL, skipUnits = NULL) {
   if (TRUE %in% skipUnits) {
-    tmp <- c("", "%", "% of Total GDP", "% pa", "%/yr", "$/GJ", "1", "arbitrary unit/yr",
+    tmp <- c("", "%", "% of Total GDP", "% pa", "%/yr", "$/GJ", "1", "arbitrary unit", "arbitrary unit/yr",
              "billionDpktU", "billionDpTWyr", "cm/capita", "DM per live animal", "GE per GE",
              "GJ/cap/yr", "GJ/t", "hectares per capita",
              "index", "Index", "Index 2005=100", "Index 2010=100",

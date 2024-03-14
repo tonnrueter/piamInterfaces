@@ -20,8 +20,17 @@ for (template in names(templateNames())) {
     allVarUnit <- paste0(nonempty$piam_variable, " (", nonempty$piam_unit, ")")
     unclearVar <- nonempty$piam_variable[duplicated(nonempty$piam_variable) & ! duplicated(allVarUnit)]
     unclearVarUnit <- sort(unique(allVarUnit[nonempty$piam_variable %in% unclearVar]))
-    if (length(unclearVarUnit)) {
-      warning("These variables have inconsistent units:\n",
+    if (length(unclearVarUnit) > 0) {
+      warning("Inconsistent units found for piam_variable:\n",
+              paste(unclearVarUnit, collapse = "\n"))
+    }
+    expect_true(length(unclearVarUnit) == 0, label = paste("PIAM variables and units are consistent for", template))
+
+    allVarUnit <- paste0(templateData$variable, " (", templateData$unit, ")")
+    unclearVar <- templateData$variable[duplicated(templateData$variable) & ! duplicated(allVarUnit)]
+    unclearVarUnit <- sort(unique(allVarUnit[templateData$variable %in% unclearVar]))
+    if (length(unclearVarUnit) > 0) {
+      warning("Inconsistent units found for project variable:\n",
               paste(unclearVarUnit, collapse = "\n"))
     }
     expect_true(length(unclearVarUnit) == 0, label = paste("variables and units are consistent for", template))
