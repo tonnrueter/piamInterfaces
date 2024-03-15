@@ -9,7 +9,8 @@ checkSummationsRegional(
   parentRegion = NULL,
   childRegions = NULL,
   variables = NULL,
-  skipUnits = NULL
+  skipUnits = NULL,
+  skipBunkers = NULL
 )
 }
 \arguments{
@@ -23,6 +24,8 @@ checkSummationsRegional(
 
 \item{skipUnits}{units to be skipped, because they are not expected to sum up. Set to TRUE to get
 list of units pointing towards their variable being intensive. You can also use c(TRUE, "additionalunit")}
+
+\item{skipBunkers}{set to TRUE to skip AR6 variables that contain bunkers only at the global level}
 }
 \description{
 Checks for a run if the regions for selected variables sum up as expected

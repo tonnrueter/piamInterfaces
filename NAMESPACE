@@ -3,6 +3,7 @@
 export(areUnitsIdentical)
 export(checkFixUnits)
 export(checkIIASASubmission)
+export(checkNGFS)
 export(checkSummations)
 export(checkSummationsRegional)
 export(checkUnitFactor)
