@@ -1485,9 +1485,11 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1373;Investment|Infrastructure|Water|Other;billion US$2010/yr;;;;;;;investment into water-related infrastructure (other than for thermal cooling and irrigation);
 1374;Investment|RnD|Energy Supply;billion US$2010/yr;;;;;;;Investments into research and development,energy supply sector;
 1375;Agricultural Demand;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
+1375;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 1375;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 1375;Agricultural Demand;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 1376;Agricultural Demand|Crops;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;;total demand for food,non-food and feed crops and bioenergy crops (1st & 2nd generation);M
+1376;Agricultural Demand|Crops;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;;;total demand for food,non-food and feed crops and bioenergy crops (1st & 2nd generation);M
 1376;Agricultural Demand|Crops;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;;total demand for food,non-food and feed crops and bioenergy crops (1st & 2nd generation);M
 1377;Agricultural Demand|Crops|Energy;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;;;demand for modern primary energy crops (1st and 2nd generation);M
 1377;Agricultural Demand|Crops|Energy;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;;demand for modern primary energy crops (1st and 2nd generation);M
