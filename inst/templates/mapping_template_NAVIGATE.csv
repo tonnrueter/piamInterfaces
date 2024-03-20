@@ -297,14 +297,14 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 263;2;emissions (diagnostics);Emissions|C2F6;kt C2F6/yr;Emi|C2F6;kt C2F6/yr;;;;total emissions of C2F6;R
 264;2;emissions (diagnostics);Emissions|C6F14;kt C6F14/yr;Emi|C6F14;kt C6F14/yr;;;;total emissions of CF6F14;R
 265;2;emissions (diagnostics);Emissions|CF4;kt CF4/yr;Emi|CF4;kt CF4/yr;;;;total emissions of CF4;R
-266;2;emissions (diagnostics);Emissions|HFC|HFC125;kt HFC125/yr;;;;;;total emissions of HFC125;
-267;2;emissions (diagnostics);Emissions|HFC|HFC134a;kt HFC134a/yr;;;;;;total emissions of HFC134a;
-268;2;emissions (diagnostics);Emissions|HFC|HFC143a;kt HFC143a/yr;;;;;;total emissions of HFC143a;
-269;2;emissions (diagnostics);Emissions|HFC|HFC227ea;kt HFC227ea/yr;;;;;;total emissions of HFC227ea;
-270;2;emissions (diagnostics);Emissions|HFC|HFC23;kt HFC23/yr;;;;;;total emissions of HFC23;
-271;2;emissions (diagnostics);Emissions|HFC|HFC245fa;kt HFC245fa/yr;;;;;;total emissions of HFC245fa;
-272;2;emissions (diagnostics);Emissions|HFC|HFC32;kt HFC32/yr;;;;;;total emissions of HFC32;
-273;2;emissions (diagnostics);Emissions|HFC|HFC43-10;kt HFC43-10/yr;;;;;;total emissions of HFC343-10;
+266;2;emissions (diagnostics);Emissions|HFC|HFC125;kt HFC125/yr;Emi|HFC|HFC125;kt HFC125/yr;;;;total emissions of HFC125;R
+267;2;emissions (diagnostics);Emissions|HFC|HFC134a;kt HFC134a/yr;Emi|HFC|HFC134a;kt HFC134a/yr;;;;total emissions of HFC134a;R
+268;2;emissions (diagnostics);Emissions|HFC|HFC143a;kt HFC143a/yr;Emi|HFC|HFC143a;kt HFC143a/yr;;;;total emissions of HFC143a;R
+269;2;emissions (diagnostics);Emissions|HFC|HFC227ea;kt HFC227ea/yr;Emi|HFC|HFC227ea;kt HFC227ea/yr;;;;total emissions of HFC227ea;R
+270;2;emissions (diagnostics);Emissions|HFC|HFC23;kt HFC23/yr;Emi|HFC|HFC23;kt HFC23/yr;;;;total emissions of HFC23;R
+271;2;emissions (diagnostics);Emissions|HFC|HFC245fa;kt HFC245fa/yr;Emi|HFC|HFC245fa;kt HFC245fa/yr;;;;total emissions of HFC245fa;R
+272;2;emissions (diagnostics);Emissions|HFC|HFC32;kt HFC32/yr;Emi|HFC|HFC32;kt HFC32/yr;;;;total emissions of HFC32;R
+273;2;emissions (diagnostics);Emissions|HFC|HFC43-10;kt HFC43-10/yr;Emi|HFC|HFC43-10;kt HFC43-10/yr;;;;total emissions of HFC343-10;R
 274;1;emissions (non-CO2);Emissions|BC;Mt BC/yr;Emi|BC;Mt BC/yr;;;;total BC emissions;R
 275;1;emissions (non-CO2);Emissions|CH4;Mt CH4/yr;Emi|CH4;Mt CH4/yr;;;;total CH4 emissions;R
 276;1;emissions (non-CO2);Emissions|CO;Mt CO/yr;Emi|CO;Mt CO/yr;;;;total CO emissions;R
