@@ -25,8 +25,8 @@ generateIIASASubmission(
 \item{mifs}{path to mif files or directories with mif files of a REMIND run,
 or quitte object}
 
-\item{mapping}{mapping template names such as c("AR6", "AR6_NGFS") or a vector of file names with mapping templates.
-If NULL, the user is asked. Multiple templates are concatenated.}
+\item{mapping}{mapping names such as c("AR6", "AR6_NGFS") or a vector of mapping file names.
+If NULL, the user is asked. Multiple mappings are concatenated.}
 
 \item{model}{name of model as registered with IIASA}
 
@@ -64,14 +64,14 @@ quitte object. In outputDirectory/outputFilename, you will get the data in a joi
 \details{
 To provide the mapping, two options exist:
 \itemize{
-\item If you want to generate the mapping from one or more mapping templates from the inst/templates folder,
+\item If you want to generate the mapping from one or more mappings from the inst/mappings folder,
 set mapping = c("AR6", "AR6_NGFS") or so.
-\item Alternatively, you can provide a path or a vector of paths to template files. If you provide your own template
+\item Alternatively, you can provide a path or a vector of paths to mapping files. If you provide your own mapping
 files, make sure they follow the standard format (see \code{getTemplate} for more information)
-\item It is also possible, to mix both options, e.g. c("AR6", "/path/to/template_file.csv")
+\item It is also possible, to mix both options, e.g. c("AR6", "/path/to/mapping_file.csv")
 }
 
-In any case, multiple template files will be concatenated.
+In any case, multiple mapping files will be concatenated.
 
 iiasatemplate is a xlsx or yaml file provided by IIASA with the variable + unit definitions that are
 accepted in the database. The function 'priceIndicesIIASA' will be called to calculate price indices

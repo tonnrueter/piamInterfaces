@@ -1,10 +1,10 @@
-for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGFS", "SHAPE")),
-                   list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))) {
-  test_that(paste("test generateIIASASubmission with", paste(template, collapse = ",")), {
+for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS", "SHAPE")),
+                  list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))) {
+  test_that(paste("test generateIIASASubmission with", paste(mapping, collapse = ",")), {
     data <- data.frame()
-    for (i in unlist(template)) {
-      templateData <- getTemplate(i)
-      data <- rbind(data, select(templateData, c("variable" = "piam_variable", "unit" = "piam_unit")))
+    for (i in unlist(mapping)) {
+      mappingData <- getTemplate(i)
+      data <- rbind(data, select(mappingData, c("variable" = "piam_variable", "unit" = "piam_unit")))
     }
 
     data <- data %>% #[seq(min(10, nrow(data))), ] %>%
@@ -13,14 +13,14 @@ for (template in c(setdiff(names(templateNames()), c("AR6", "NAVIGATE", "AR6_NGF
 
     data <- tidyr::crossing(data, year = seq(2005, 2020, 5))
 
-    outputFilename <- if (any(template == "AR6")) "submission.xlsx" else "submission.mif"
+    outputFilename <- if (any(mapping == "AR6")) "submission.xlsx" else "submission.mif"
 
-    expect_no_warning(generateIIASASubmission(as.quitte(data), model = "REMIND", mapping = unlist(template),
+    expect_no_warning(generateIIASASubmission(as.quitte(data), model = "REMIND", mapping = unlist(mapping),
                                               outputDirectory = file.path(tempdir(), "output"),
                                               logFile = file.path(tempdir(), "missing.log"),
                                               outputFilename = outputFilename,
-                                              checkSummation = any(template == "NAVIGATE")),
-      message = paste0("warnings for template(s)", paste(template, collapse = ","))
+                                              checkSummation = any(mapping == "NAVIGATE")),
+      message = paste0("warnings for mapping(s)", paste(mapping, collapse = ","))
     )
     expectedFiles <- file.path(tempdir(), "output", outputFilename)
 

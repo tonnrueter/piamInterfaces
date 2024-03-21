@@ -1,14 +1,17 @@
 
 # Tutorial
 
-- To understand how to submit to the IIASA database, read this [REMIND tutorial](https://github.com/remindmodel/remind/blob/develop/tutorials/13_Submit_to_IIASA_database.md).
+- To understand how to submit to the IIASA database, read this
+  [REMIND tutorial](https://github.com/remindmodel/remind/blob/develop/tutorials/13_Submit_to_IIASA_database.md).
+- In the following, we differentiate templates (list of variables and corresponding units used in a project)
+  and mappings (specifying which PIAM variable will be mapped to a project variable).
 
-## mapping templates
+## Mappings
 
-Mapping template found in
-[the `inst/templates` folder](https://github.com/pik-piam/piamInterfaces/blob/master/inst/templates/mapping_template_AR6.csv)
+Mappings found in
+[the `inst/mappings` folder](https://github.com/pik-piam/piamInterfaces/tree/master/inst/mappings)
 serve to map variables from the PIAM framework to variables needed for the submission to databases.
-The mapping templates are `;`-separated files with the following mandatory columns:
+The mappings are `;`-separated files with the following mandatory columns:
 
 - `variable`: name of the variable in the project template
 - `unit`: unit corresponding to `variable`
@@ -25,17 +28,17 @@ Recommended column:
   and [coupling tests](https://github.com/remindmodel/remind/blob/develop/tests/testthat/test_20-coupled.R).
   If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped.
 
-Additionally, some templates use those columns:
+Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
 - `Tier`: importance of variable. 1 means most important
 - `Comment`: place for comments
 
 
-To edit a template in `R`, use:
+To edit a mapping in `R`, use:
 ```
-templatedata <- getTemplate("AR6")
+mappingdata <- getMapping("AR6")
 ...
-write.csv2(templatedata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
+write.csv2(mappingdata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
 ```
 
 Opening the csv files in Excel can be problematic, as it sometimes changes values and quotation marks.
@@ -61,7 +64,7 @@ remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.nam
   plotIntercomparison(modeldata, summationsFile = "AR6", lineplotVariables = c("Temperature|Global Mean", "Population"))
   ```
 
-- If your `modeldata` is not well filtered such that for example model regions are not too different, you can use `interactive = TRUE` which allows to select models, regions, scenarios and variables that you like in your PDF. As `lineplotVariables`, you can also specify template names.
+- If your `modeldata` is not well filtered such that for example model regions are not too different, you can use `interactive = TRUE` which allows to select models, regions, scenarios and variables that you like in your PDF. As `lineplotVariables`, you can also specify mapping names.
   ```
   plotIntercomparison(modeldata, summationsFile = "AR6", lineplotVariables = c("AR6", "AR6_NGFS"), interactive = TRUE)
   ```

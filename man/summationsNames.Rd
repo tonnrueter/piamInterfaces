@@ -11,7 +11,7 @@ summationsNames(project = NULL)
 all existing summation files will be returned}
 }
 \value{
-template file(s)
+summation file name(s)
 }
 \description{
 Retrieves summation group file names

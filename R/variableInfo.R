@@ -4,9 +4,9 @@
 #' @author Oliver Richters
 #' @param varname string with variable name
 #' @param mif filename of miffile
-#' @param template vector of template shortcuts (AR6, NAVIGATE) or mapping/template filenames. NULL means all
-#' @param remindVar column name of variable in templates (default: piam_variable)
-#' @param remindUnit column name of unit in templates (default: piam_unit)
+#' @param mapping vector of mapping shortcuts (AR6, NAVIGATE) or mapping filenames. NULL means all
+#' @param remindVar column name of variable in mapping (default: piam_variable)
+#' @param remindUnit column name of unit in mapping (default: piam_unit)
 #' @importFrom quitte read.quitte as.quitte
 #' @importFrom stringr str_split str_pad
 #' @importFrom utils head
@@ -17,8 +17,8 @@
 #'   "Emi|CO2"
 #' )
 #' @export
-variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam_variable", remindUnit = "piam_unit") {
-  if (is.null(template)) template <- names(templateNames())
+variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_variable", remindUnit = "piam_unit") {
+  if (is.null(mapping)) mapping <- names(mappingNames())
   green <- "\033[0;32m"
   blue  <- "\033[0;34m"
   nc    <- "\033[0m"   # No Color
@@ -31,67 +31,67 @@ variableInfo <- function(varname, mif = NULL, template = NULL, remindVar = "piam
 
   varname <- trimws(varname)
 
-  message("\n##### Search for information on ", green, varname, nc, " in mapping templates")
-  for (t in template) {
-    templateData <- getTemplate(t)
-    templateName <- basename(t)
-    remindno <- which(removePlus(varname) == removePlus(templateData[, remindVar]))
-    exportno <- head(which(removePlus(varname) == removePlus(templateData$variable)), n = 1)
+  message("\n##### Search for information on ", green, varname, nc, " in mapping")
+  for (m in mapping) {
+    mappingData <- getMapping(m)
+    mappingName <- basename(m)
+    remindno <- which(removePlus(varname) == removePlus(mappingData[, remindVar]))
+    exportno <- head(which(removePlus(varname) == removePlus(mappingData$variable)), n = 1)
     if (length(remindno) + length(exportno) == 0) {
-      message("\n### Nothing found in template: ", blue, templateName, nc)
+      message("\n### Nothing found in mapping: ", blue, mappingName, nc)
       next
     } else {
-      message("\n### Results from template: ", blue, templateName, nc)
+      message("\n### Results from mapping: ", blue, mappingName, nc)
     }
-    if (t %in% names(summationsNames())) {
-      summationGroups <- getSummations(t)
+    if (m %in% names(summationsNames())) {
+      summationGroups <- getSummations(m)
       # print table column names
-      summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(t))
+      summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(m))
       message(str_pad(paste0("# Export variable groups found in ",
                            basename(summationsFile)), width + 8, "right"),
             "# Corresponding ", remindVar, " variables")
     } else {
       summationGroups <- NULL
-      message("# No corresponding summation groups file found, show variables in mapping template.")
+      message("# No corresponding summation groups file found, show variables in mapping.")
       message("\n", str_pad(paste0("# Export variable"), width + 8, "right"),
             "# Corresponding ", remindVar, " variables")
     }
     for (no in unique(c(remindno, exportno))) {
-      exportname <- templateData$variable[no]
-      remindname <- templateData[no, remindVar]
-      allexportchilds <- unique(.getChilds(exportname, templateData$variable))
-      allremindchilds <- unique(.getChilds(varname, templateData[, remindVar]))
+      exportname <- mappingData$variable[no]
+      remindname <- mappingData[no, remindVar]
+      allexportchilds <- unique(.getChilds(exportname, mappingData$variable))
+      allremindchilds <- unique(.getChilds(varname, mappingData[, remindVar]))
       if (exportname %in% summationGroups$parent) {
         exportchilds <- summationGroups$child[summationGroups$parent == exportname]
         # print summation parents
         message(". ", str_pad(paste(exportname, "="), width + 3, "right"), "   . ",
-                paste0(templateData[, remindVar][templateData$variable == exportname], collapse = " + "), " =")
+                paste0(mappingData[, remindVar][mappingData$variable == exportname], collapse = " + "), " =")
         # print summation childs
         for (ch in exportchilds) {
-          remindchilds <- templateData[, remindVar][templateData$variable == ch]
+          remindchilds <- mappingData[, remindVar][mappingData$variable == ch]
           message("  + ", str_pad(ch, width + 2, "right"), "    + ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         allexportchilds <- setdiff(allexportchilds, exportchilds)
       } else {
-        message(". ", str_pad(paste0(exportname, " (", templateData$unit[no], ")"), width + 3, "right"),
-                "   . ", remindname, " (", templateData[, remindUnit][no], ")")
+        message(". ", str_pad(paste0(exportname, " (", mappingData$unit[no], ")"), width + 3, "right"),
+                "   . ", remindname, " (", mappingData[, remindUnit][no], ")")
       }
       if (length(allexportchilds) + length(allremindchilds) > 0) {
-        message("\n# Child variables", if (t %in% names(summationsNames())) " not in summation group")
+        message("\n# Child variables", if (m %in% names(summationsNames())) " not in summation group")
         for (ch in allexportchilds) {
-          remindchilds <- templateData[, remindVar][templateData$variable == ch]
+          remindchilds <- mappingData[, remindVar][mappingData$variable == ch]
           message("  . ", str_pad(ch, width + 1, "right"), "     . ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         for (ch in allremindchilds) {
-          exportchild <- unique(templateData$variable[templateData[, remindVar] == ch])
+          exportchild <- unique(mappingData$variable[mappingData[, remindVar] == ch])
           exportchild <- exportchild[! is.na(exportchild)]
           message("   . ", str_pad(paste(exportchild, collapse = ", "), width, "right"), "     . ", ch)
         }
       }
-      message("Units: ", str_pad(paste0(unique(templateData$unit[no]), collapse = ", "), width, "right"),
-              " Units: ", paste0(unique(templateData[, remindUnit][no]), collapse = ", "))
+      message("Units: ", str_pad(paste0(unique(mappingData$unit[no]), collapse = ", "), width, "right"),
+              " Units: ", paste0(unique(mappingData[, remindUnit][no]), collapse = ", "))
     }
   }
   if (! is.null(mif)) {

@@ -7,7 +7,7 @@
 variableInfo(
   varname,
   mif = NULL,
-  template = NULL,
+  mapping = NULL,
   remindVar = "piam_variable",
   remindUnit = "piam_unit"
 )
@@ -17,11 +17,11 @@ variableInfo(
 
 \item{mif}{filename of miffile}
 
-\item{template}{vector of template shortcuts (AR6, NAVIGATE) or mapping/template filenames. NULL means all}
+\item{mapping}{vector of mapping shortcuts (AR6, NAVIGATE) or mapping filenames. NULL means all}
 
-\item{remindVar}{column name of variable in templates (default: piam_variable)}
+\item{remindVar}{column name of variable in mapping (default: piam_variable)}
 
-\item{remindUnit}{column name of unit in templates (default: piam_unit)}
+\item{remindUnit}{column name of unit in mapping (default: piam_unit)}
 }
 \value{
 prints human-readable summary to the user

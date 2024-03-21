@@ -10,7 +10,7 @@ convertHistoricalData(mif, project, regionMapping = NULL)
 \arguments{
 \item{mif}{quitte object with historical data or path to historical.mif}
 
-\item{project}{name of the project, determines the mapping template to be loaded}
+\item{project}{name of the project, determines the mapping to be loaded}
 
 \item{regionMapping}{(optional) csv file with mapping of REMIND regions to
 project regions, must contain two columns 'REMIND' and 'project_region'}

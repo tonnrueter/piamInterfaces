@@ -32,8 +32,8 @@ test_that("checkUnitFactor works", {
   }
 })
 
-for (t in names(templateNames())) {
-  test_that(paste("checkUnitFactor for template", t), {
-    expect_no_error(checkUnitFactor(getTemplate(t), logFile = NULL))
+for (m in names(mappingNames())) {
+  test_that(paste("checkUnitFactor for mapping", m), {
+    expect_no_error(checkUnitFactor(getMapping(m), logFile = NULL))
   })
 }

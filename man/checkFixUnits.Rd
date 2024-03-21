@@ -2,7 +2,7 @@
 % Please edit documentation in R/checkFixUnits.R
 \name{checkFixUnits}
 \alias{checkFixUnits}
-\title{Check units in IIASA submission by comparing mifdata to a template}
+\title{Check units in IIASA submission by comparing mifdata to a project template}
 \usage{
 checkFixUnits(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE)
 }
@@ -20,7 +20,7 @@ recommended for submission, not used for generating templates}
 quitte object with adapted mif data
 }
 \description{
-Check units in IIASA submission by comparing mifdata to a template
+Check units in IIASA submission by comparing mifdata to a project template
 }
 \author{
 Oliver Richters

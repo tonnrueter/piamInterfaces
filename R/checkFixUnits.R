@@ -1,4 +1,4 @@
-#' Check units in IIASA submission by comparing mifdata to a template
+#' Check units in IIASA submission by comparing mifdata to a project template
 #'
 #' @md
 #' @author Oliver Richters
