@@ -3,9 +3,10 @@
 #' @md
 #' @author Oliver Richters
 #' @param mifdata quitte object or filename of mif file
-#' @param template object provided by loadIIASAtemplate()
+#' @param template object provided by loadIIASAtemplate() or getMapping()
+#'        interprets it as a mapping if 'piam_variable' and 'piam_unit' columns exist
 #' @param failOnUnitMismatch boolean whether to fail in case of unit mismatches
-#'        recommended for submission, not used for generating templates
+#'        recommended for submission, not used for generating mappings
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter mutate
 #' @importFrom rlang .data

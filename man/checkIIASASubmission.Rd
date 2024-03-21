@@ -19,7 +19,7 @@ checkIIASASubmission(
 \item{logFile}{filename of file for logging. Set to NULL for stdout, set to FALSE for none.}
 
 \item{failOnUnitMismatch}{boolean whether to fail in case of unit mismatches
-recommended for submission, not used for generating templates}
+recommended for submission}
 }
 \value{
 quitte object with adapted mif data

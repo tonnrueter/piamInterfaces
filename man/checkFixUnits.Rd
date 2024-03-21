@@ -9,12 +9,13 @@ checkFixUnits(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE)
 \arguments{
 \item{mifdata}{quitte object or filename of mif file}
 
-\item{template}{object provided by loadIIASAtemplate()}
+\item{template}{object provided by loadIIASAtemplate() or getMapping()
+interprets it as a mapping if 'piam_variable' and 'piam_unit' columns exist}
 
 \item{logFile}{filename of file for logging}
 
 \item{failOnUnitMismatch}{boolean whether to fail in case of unit mismatches
-recommended for submission, not used for generating templates}
+recommended for submission, not used for generating mappings}
 }
 \value{
 quitte object with adapted mif data

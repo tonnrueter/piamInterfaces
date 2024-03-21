@@ -5,7 +5,7 @@
 #' @param mifdata quitte object or filename of mif file
 #' @param iiasatemplate filename of xlsx or yaml file provided by IIASA
 #' @param failOnUnitMismatch boolean whether to fail in case of unit mismatches
-#'        recommended for submission, not used for generating templates
+#'        recommended for submission
 #' @param logFile filename of file for logging. Set to NULL for stdout, set to FALSE for none.
 #' @importFrom dplyr filter
 #' @importFrom quitte read.quitte
@@ -57,8 +57,6 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
 
   return(mifdata)
 }
-
-
 
 
 checkDataLength <- function(mifdata, logFile =  NULL) {
