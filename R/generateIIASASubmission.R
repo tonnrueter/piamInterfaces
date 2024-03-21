@@ -5,13 +5,13 @@
 #' quitte object. In outputDirectory/outputFilename, you will get the data in a joint xlsx or mif file.
 #'
 #' To provide the mapping, two options exist:
-#' - If you want to generate the mapping from one or more mapping templates from the inst/templates folder,
+#' - If you want to generate the mapping from one or more mappings from the inst/mappings folder,
 #'   set mapping = c("AR6", "AR6_NGFS") or so.
-#' - Alternatively, you can provide a path or a vector of paths to template files. If you provide your own template
+#' - Alternatively, you can provide a path or a vector of paths to mapping files. If you provide your own mapping
 #'   files, make sure they follow the standard format (see `getTemplate` for more information)
-#' - It is also possible, to mix both options, e.g. c("AR6", "/path/to/template_file.csv")
+#' - It is also possible, to mix both options, e.g. c("AR6", "/path/to/mapping_file.csv")
 #'
-#' In any case, multiple template files will be concatenated.
+#' In any case, multiple mapping files will be concatenated.
 #'
 #' iiasatemplate is a xlsx or yaml file provided by IIASA with the variable + unit definitions that are
 #' accepted in the database. The function 'priceIndicesIIASA' will be called to calculate price indices
@@ -31,8 +31,8 @@
 #' @param mifs path to mif files or directories with mif files of a REMIND run,
 #'             or quitte object
 #' @param model name of model as registered with IIASA
-#' @param mapping mapping template names such as c("AR6", "AR6_NGFS") or a vector of file names with mapping templates.
-#'        If NULL, the user is asked. Multiple templates are concatenated.
+#' @param mapping mapping names such as c("AR6", "AR6_NGFS") or a vector of mapping file names.
+#'        If NULL, the user is asked. Multiple mappings are concatenated.
 #' @param removeFromScen regular expression to be removed from scenario name (optional). Example: '_d50|d95'
 #' @param addToScen string to be added as prefix to scenario name (optional)
 #' @param outputDirectory path to directory for the generated submission (default: output).
@@ -93,16 +93,13 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   logFile <- setLogFile(outputDirectory, logFile)
 
-  # generate mapping from templates ----
-
   # renaming to a more accurate name while maintaining backwards-compatibility
-  templates <- mapping
   message("# Generate mapping from ", paste(mapping, collapse = ", "))
 
   mapData <- NULL
 
-  for (i in seq_along(templates)) {
-    t <- getTemplate(templates[i]) %>%
+  for (i in seq_along(mapping)) {
+    t <- getMapping(mapping[i]) %>%
       filter(.data$piam_variable != "", !is.na(.data$piam_variable), .data$piam_variable != "TODO") %>%
       mutate(
         "piam_variable" = removePlus(.data$piam_variable),
@@ -150,14 +147,14 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     inner_join(mapData, by = "piam_variable", relationship = "many-to-many") %>%
     mutate("value" = .data$piam_factor * .data$value)
 
-  # check for unit mismatches in data and templates
+  # check for unit mismatches in data and mapping
   unitMismatches <- submission %>%
     select("variable" = "piam_variable", "mifs" = "piam_unit.x", "mappings" = "piam_unit.y") %>%
     filter(.data$mifs != .data$mappings) %>%
     distinct()
 
   if (nrow(unitMismatches) > 0) {
-    warning("Unit mismatches between data and mapping templates found for some variables: \n",
+    warning("Unit mismatches between data and mapping found for some variables: \n",
             paste0(utils::capture.output(unitMismatches), collapse = "\n"))
   }
 

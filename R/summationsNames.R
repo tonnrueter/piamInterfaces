@@ -4,7 +4,7 @@
 #' @author Oliver Richters
 #' @param project name of the project of requested summation file. If not specified,
 #'        all existing summation files will be returned
-#' @return template file(s)
+#' @return summation file name(s)
 #' @export
 summationsNames <- function(project = NULL) {
   summation <- Sys.glob(file.path(system.file("summations", package = "piamInterfaces"), "summation_groups*.csv"))

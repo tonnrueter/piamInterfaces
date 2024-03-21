@@ -12,8 +12,8 @@
 #' @param mainReg main region for the plot generation
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #'        if set to 'extractVariableGroups', tries to extract summations from variables with + notation
-#' @param template mapping template to be loaded, used to print the remindVar corresponding to the data variables
-#' @param remindVar REMIND/MAgPIE variable column name in template
+#' @param template mapping to be loaded, used to print the remindVar corresponding to the data variables
+#' @param remindVar REMIND/MAgPIE variable column name in 'template'
 #' @param plotprefix added before filename
 #' @param absDiff threshold for absolute difference between parent variable and summation
 #'                to be listed in human-readable summary
@@ -45,6 +45,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     dir.create(outputDirectory, recursive = TRUE, showWarnings = FALSE)
     logFile <- setLogFile(outputDirectory, logFile)
   }
+  mapping <- template # did not want to change the function parameter name
 
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
@@ -161,7 +162,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   # generate human-readable summary of larger differences
   .checkSummationsSummary(
-    mifFile, data, comparison, template, summationsFile, summationGroups, checkVariables,
+    mifFile, data, comparison, mapping, summationsFile, summationGroups, checkVariables,
     generatePlots, mainReg, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
     plotprefix, absDiff, relDiff, roundDiff
   )
@@ -169,7 +170,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   return(invisible(comparison))
 }
 
-.checkSummationsSummary <- function(mifFile, data, comparison, template, summationsFile, # nolint: cyclocomp_linter.
+.checkSummationsSummary <- function(mifFile, data, comparison, mapping, summationsFile, # nolint: cyclocomp_linter.
                                     summationGroups, checkVariables, generatePlots,
                                     mainReg, outputDirectory, logFile, logAppend,
                                     dataDumpFile, remindVar, plotprefix, absDiff,
@@ -178,14 +179,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
   summarytext <- NULL
-  if (! is.null(template)) {
-    if (length(template) == 1 && is.character(template) && template %in% names(templateNames())) {
-      templateData <- getTemplate(template)
-      templateName <- gsub(".*piamInterfaces", "piamInterfaces", templateNames(template))
-      text <- c(text, paste0("# Derive mapping from ", templateName))
+  if (! is.null(mapping)) {
+    if (length(mapping) == 1 && is.character(mapping) && mapping %in% names(mappingNames())) {
+      mappingData <- getMapping(mapping)
+      mappingName <- gsub(".*piamInterfaces", "piamInterfaces", mappingNames(mapping))
+      text <- c(text, paste0("# Derive mapping from ", mappingName))
     } else {
-      templateName <- "supplied template"
-      templateData <- data.frame(template)
+      mappingName <- "supplied mapping"
+      mappingData <- data.frame(mapping)
     }
   }
 
@@ -206,7 +207,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       width <- 70
       text <- c(text, paste0("\n", str_pad(paste0("variable groups found in ",
                              basename(summationsFile)), width + 8, "right"),
-        if (! is.null(template)) paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(templateName))
+        if (! is.null(mapping)) paste0("corresponding REMIND/MAgPIE variables extracted from ", basename(mappingName))
          ))
       for (p in problematic) {
         pn <- gsub(" [1-9]$", "", p)
@@ -215,14 +216,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
         childs <- checkVariables[[p]]
 
-        remindchilds <- if (is.null(template)) NULL else
-                        templateData[, remindVar][templateData$variable == pn]
+        remindchilds <- if (is.null(mapping)) NULL else
+                        mappingData[, remindVar][mappingData$variable == pn]
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                   paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff)[! is.null(remindchilds)]
                   ))
         for (ch in childs) {
-          remindch <- if (is.null(template)) NULL else
-                      templateData[, remindVar][templateData$variable == ch]
+          remindch <- if (is.null(mapping)) NULL else
+                      mappingData[, remindVar][mappingData$variable == ch]
           text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
                     if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
         }

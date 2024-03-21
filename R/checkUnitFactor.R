@@ -4,7 +4,7 @@
 #' @author Oliver Richters
 #' @param template object provided by loadIIASAtemplate()
 #' @param failOnUnitMismatch boolean whether to fail in case of unit mismatches
-#'        recommended for submission, not used for generating templates
+#'        recommended for submission, not used for checking mapping
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter
 #' @importFrom rlang sym syms .data
@@ -40,7 +40,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1.33", "US$2020", "US$2005"),
                           c("1.17", "EUR_2020", "US$2005"),
                           c("1.174", "EUR2020", "US$2005"),
-                          # temporary, error in ARIADNE template for 'Capital Stock'
+                          # temporary, error in ARIADNE mapping for 'Capital Stock'
                           c("1.174", "billion EUR2020/yr", "billion US$2005")
                          )
   template$piam_factor[is.na(template$piam_factor)] <- 1

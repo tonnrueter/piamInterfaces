@@ -4,7 +4,7 @@
 #' @md
 #' @author Falk Benke
 #' @param mif quitte object with historical data or path to historical.mif
-#' @param project name of the project, determines the mapping template to be loaded
+#' @param project name of the project, determines the mapping to be loaded
 #' @param regionMapping (optional) csv file with mapping of REMIND regions to
 #'  project regions, must contain two columns 'REMIND' and 'project_region'
 #' @importFrom dplyr %>% mutate select right_join left_join
@@ -27,7 +27,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   m <- NULL
 
   for (i in project) {
-    m <- rbind(m, getTemplate(i))
+    m <- rbind(m, getMapping(i))
   }
 
   varmap <- m %>%

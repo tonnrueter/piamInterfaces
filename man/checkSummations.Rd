@@ -27,7 +27,7 @@ checkSummations(
 
 \item{outputDirectory}{path to directory to place logFile and dataDumpFile.}
 
-\item{template}{mapping template to be loaded, used to print the remindVar corresponding to the data variables}
+\item{template}{mapping to be loaded, used to print the remindVar corresponding to the data variables}
 
 \item{summationsFile}{in inst/summations folder that describes the required summation groups
 if set to 'extractVariableGroups', tries to extract summations from variables with + notation}
@@ -43,7 +43,7 @@ if set to 'extractVariableGroups', tries to extract summations from variables wi
 \item{dataDumpFile}{file where data.frame with the data analysis is saved. Requires outputDirectory.
 If NULL, result is returned.}
 
-\item{remindVar}{REMIND/MAgPIE variable column name in template}
+\item{remindVar}{REMIND/MAgPIE variable column name in 'template'}
 
 \item{plotprefix}{added before filename}
 

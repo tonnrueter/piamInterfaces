@@ -1,33 +1,33 @@
-#' getTemplate
+#' getMapping
 #'
-#' Retrieves latest template for a given project.
-#' Templates must contain the columns "variable", "unit", "piam_variable",
+#' Retrieves latest mapping for a given project.
+#' Mappings must contain the columns "variable", "unit", "piam_variable",
 #' "piam_unit", "piam_factor".
-#' Templates are csv files with semicolon as a separator and no quotation marks
-#' around fields.
+#' Mappings are csv files with semicolon as a separator and no quotation marks
+#' around fields, see main README.Rd file
 #'
 #' @md
 #' @author Falk Benke, Oliver Richters
-#' @param project name of requested template, or file name pointing to a template
+#' @param project name of requested mapping, or file name pointing to a mapping
 #' @importFrom utils read.csv2
 #' @importFrom gms chooseFromList
 #' @examples
 #' \dontrun{
-#' getTemplate("ECEMF")
-#' getTemplate("/path/to/template/file")
+#' getMapping("ECEMF")
+#' getMapping("/path/to/mapping/file")
 #' }
 #' @export
-getTemplate <- function(project = NULL) {
-  templates <- templateNames()
+getMapping <- function(project = NULL) {
+  mappings <- mappingNames()
   if (is.null(project)) {
-    project <- chooseFromList(names(templates), type = "templates",
+    project <- chooseFromList(names(mappings), type = "mappings",
                               returnBoolean = FALSE, multiple = FALSE)
-    if (length(project) == 0) stop("No template selected, abort.")
+    if (length(project) == 0) stop("No mapping selected, abort.")
   }
   if (! file.exists(project)) {
-    project <- gsub("\\.csv$", "", gsub("^mapping_template_", "", project))
+    project <- gsub("\\.csv$", "", gsub("^mapping_", "", project))
   }
-  filename <- if (project %in% names(templates)) templates[project] else project
+  filename <- if (project %in% names(mappings)) mappings[project] else project
   if (file.exists(filename)) {
     data <- read.csv2(filename, header = TRUE, sep = ";", na.strings = list(""), strip.white = TRUE, quote = "")
 
@@ -47,3 +47,8 @@ getTemplate <- function(project = NULL) {
     stop("Mapping file ", filename, " not found.")
   }
 }
+
+#' for backwards compatibility
+#' @inheritParams getMapping
+#' @export
+getTemplate <- function(project = NULL) return(getMapping(project))

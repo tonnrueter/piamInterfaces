@@ -11,11 +11,11 @@ test_that("checkVarNames works", {
   }
 })
 
-for (template in names(templateNames())) {
-  test_that(paste0("checkVarNames in template ", template), {
-    t <- getTemplate(template)
-    expect_no_warning(checkVarNames(paste0(t$variable, " (", t$unit, ")")))
-    tpiam <- dplyr::filter(t, ! is.na(.data$piam_variable), .data$piam_variable != "TODO")
-    expect_no_warning(checkVarNames(paste0(tpiam$piam_variable, " (", tpiam$piam_unit, ")")))
+for (mapping in names(mappingNames())) {
+  test_that(paste0("checkVarNames in mapping ", mapping), {
+    mappingData <- getMapping(mapping)
+    expect_no_warning(checkVarNames(paste0(mappingData$variable, " (", mappingData$unit, ")")))
+    mpiam <- dplyr::filter(mappingData, ! is.na(.data$piam_variable), .data$piam_variable != "TODO")
+    expect_no_warning(checkVarNames(paste0(mpiam$piam_variable, " (", mpiam$piam_unit, ")")))
   })
 }

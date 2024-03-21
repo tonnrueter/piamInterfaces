@@ -12,7 +12,7 @@ checkUnitFactor(template, logFile = NULL, failOnUnitMismatch = TRUE)
 \item{logFile}{filename of file for logging}
 
 \item{failOnUnitMismatch}{boolean whether to fail in case of unit mismatches
-recommended for submission, not used for generating templates}
+recommended for submission, not used for checking mapping}
 }
 \value{
 quitte object with adapted mif data
