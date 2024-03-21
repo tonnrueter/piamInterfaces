@@ -1485,11 +1485,9 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1373;Investment|Infrastructure|Water|Other;billion US$2010/yr;;;;;;;investment into water-related infrastructure (other than for thermal cooling and irrigation);
 1374;Investment|RnD|Energy Supply;billion US$2010/yr;;;;;;;Investments into research and development,energy supply sector;
 1375;Agricultural Demand;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
-1375;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 1375;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 1375;Agricultural Demand;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;;total demand for food,non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 1376;Agricultural Demand|Crops;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;;total demand for food,non-food and feed crops and bioenergy crops (1st & 2nd generation);M
-1376;Agricultural Demand|Crops;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;;;total demand for food,non-food and feed crops and bioenergy crops (1st & 2nd generation);M
 1376;Agricultural Demand|Crops;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;;total demand for food,non-food and feed crops and bioenergy crops (1st & 2nd generation);M
 1377;Agricultural Demand|Crops|Energy;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;;;demand for modern primary energy crops (1st and 2nd generation);M
 1377;Agricultural Demand|Crops|Energy;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;;demand for modern primary energy crops (1st and 2nd generation);M
@@ -1502,6 +1500,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Material|+|Crops;Mt DM/yr;;;;;total demand for other crops;M
 1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Processing|+|Crops;Mt DM/yr;;;;;total demand for other crops;M
 1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Seed|+|Crops;Mt DM/yr;;;;;total demand for other crops;M
+1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;-1;;substract from Demand|Crops to avoid double-counting;;total demand for other crops;M
 1383;Agricultural Demand|Livestock;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;;total demand for livestock;M
 1384;Agricultural Demand|Livestock|Food;million t DM/yr;Demand|Food|+|Livestock products;Mt DM/yr;;;;;total demand for food livestock;M
 1385;Agricultural Demand|Livestock|Other;million t DM/yr;Demand|Agricultural Supply Chain Loss|+|Livestock products;Mt DM/yr;;;;;total demand for other livestock;M
