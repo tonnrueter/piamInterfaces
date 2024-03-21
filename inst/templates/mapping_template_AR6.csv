@@ -1500,6 +1500,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Material|+|Crops;Mt DM/yr;;;;;total demand for other crops;M
 1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Processing|+|Crops;Mt DM/yr;;;;;total demand for other crops;M
 1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Seed|+|Crops;Mt DM/yr;;;;;total demand for other crops;M
+1382;Agricultural Demand|Crops|Other;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;-1;;substract from Demand|Crops to avoid double-counting;;total demand for other crops;M
 1383;Agricultural Demand|Livestock;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;;total demand for livestock;M
 1384;Agricultural Demand|Livestock|Food;million t DM/yr;Demand|Food|+|Livestock products;Mt DM/yr;;;;;total demand for food livestock;M
 1385;Agricultural Demand|Livestock|Other;million t DM/yr;Demand|Agricultural Supply Chain Loss|+|Livestock products;Mt DM/yr;;;;;total demand for other livestock;M
