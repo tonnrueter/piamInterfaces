@@ -211,7 +211,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 177;Price|Secondary Energy|Hydrogen;US$2010/GJ;Price|Secondary Energy|Hydrogen;US$2005/GJ;1.12;;;;hydrogen price at the secondary level. Prices should include the effect of carbon prices;R
 178;Price|Secondary Energy|Liquids;US$2010/GJ;Price|Secondary Energy|Liquids;US$2005/GJ;1.12;;;;liquid fuel price at the secondary level,i.e. petrol,diesel,or weighted average;R
 179;Price|Secondary Energy|Liquids|Biomass;US$2010/GJ;Price|Secondary Energy|Liquids|Biomass;US$2005/GJ;1.12;;;;biofuel price at the secondary level,i.e. for biofuel consumers;R
-180;Price|Secondary Energy|Liquids|Oil;US$2010/GJ;Price|Secondary Energy|Liquids|Oil;US$2005/GJ;1.12;;;;light fuel oil price at the secondary level,i.e. for large scale consumers (e.g. oil power plant). Prices should include the effect of carbon prices.;R
+180;Price|Secondary Energy|Liquids|Oil;US$2010/GJ;Price|Secondary Energy|Liquids|Fossil;US$2005/GJ;1.12;;;;light fuel oil price at the secondary level,i.e. for large scale consumers (e.g. oil power plant). Prices should include the effect of carbon prices.;R
 181;Price|Secondary Energy|Solids|Biomass;US$2010/GJ;Price|Secondary Energy|Solids|Biomass;US$2005/GJ;1.12;;;;biomass price at the secondary level,i.e. for large scale consumers (e.g. biomass power plant). Prices should include the effect of carbon prices.;R
 182;Price|Secondary Energy|Solids|Coal;US$2010/GJ;Price|Secondary Energy|Solids|Fossil;US$2005/GJ;1.12;;;;coal price at the secondary level,i.e. for large scale consumers (e.g. coal power plant). Prices should include the effect of carbon prices.;R
 183;Value Added|Agriculture;billion US$2010/yr;;;;;;;value added by agriculture;
