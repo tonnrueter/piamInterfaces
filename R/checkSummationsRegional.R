@@ -33,7 +33,7 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
              "kcal/cap/day", "kcal/capita/day", "kcal/kcal", "m3/ha", "MJ/t",
              "Mt CO2-equiv/EJ", "Mt CO2/EJ", "Nr per Nr", "percent",
              "Percent", "ratio", "share", "share of total land", "t DM/ha", "t DM/ha/yr",
-             "tC/ha", "tC/tC", "tDM/capita/yr", "unitless", "years")
+             "tC/ha", "tC/tC", "tDM/capita/yr", "tDM/cap/yr", "unitless", "years")
     curr <- c("USD", "USD05", "US$05", paste0("US$", years), paste0("USD_", years), paste0("EUR_", years))
     usecurr <- c("EJ/billion __", "MJ/__", "Mt CO2-equiv/__", "t/million __", "tr __/input unit", "tr__/Input",
                  "__ PPP/cap/yr", "k__/per capita", "__/capita", "__/GJ", "__/ha", "__/tDM",

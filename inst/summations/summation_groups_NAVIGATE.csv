@@ -103,3 +103,16 @@ Carbon Capture|Industry;Carbon Capture|Industrial Processes;1
 Carbon Capture|Industry;Carbon Capture|Industry|Electricity;1
 Carbon Capture|Usage;Carbon Capture|Usage|Liquids;1
 Carbon Capture|Usage;Carbon Capture|Usage|Gases;1
+Agricultural Demand;Agricultural Demand|Energy;1
+Agricultural Demand;Agricultural Demand|Non-Energy;1
+Agricultural Production;Agricultural Production|Energy;1
+Agricultural Production;Agricultural Production|Non-Energy;1
+Agricultural Demand|Energy;Agricultural Demand|Energy|Crops|1st generation;1
+Agricultural Demand|Energy;Agricultural Demand|Energy|Crops|2nd generation;1
+Agricultural Demand|Energy;Agricultural Demand|Energy|Residues;1
+Agricultural Production|Energy;Agricultural Production|Energy|Crops|1st generation;1
+Agricultural Production|Energy;Agricultural Production|Energy|Crops|2nd generation;1
+Agricultural Production|Energy;Agricultural Production|Energy|Residues;1
+Agricultural Demand|Non-Energy|Crops;Agricultural Demand|Non-Energy|Crops|Feed;1
+Agricultural Demand|Non-Energy|Crops;Agricultural Demand|Non-Energy|Crops|Food;1
+Agricultural Demand|Non-Energy|Crops;Agricultural Demand|Non-Energy|Crops|Other;1
