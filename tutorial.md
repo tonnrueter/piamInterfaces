@@ -11,7 +11,7 @@
 Mappings found in
 [the `inst/mappings` folder](https://github.com/pik-piam/piamInterfaces/tree/master/inst/mappings)
 serve to map variables from the PIAM framework to variables needed for the submission to databases.
-The mappings are `;`-separated files with the following mandatory columns:
+The mappings are `;`-separated files, using `#` as comment character, with the following mandatory columns:
 
 - `variable`: name of the variable in the project template
 - `unit`: unit corresponding to `variable`

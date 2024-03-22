@@ -45,7 +45,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                          )
   template$piam_factor[is.na(template$piam_factor)] <- 1
   success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
-  success <- success | is.na(template$piam_variable) | template$piam_variable %in% "TODO"
+  success <- success | is.na(template$piam_variable) | template$piam_variable %in% c("TODO", "Emi|CO2|Energy|+|Waste")
 
   firsterror <- TRUE
   for (sc in scaleConversion) {
