@@ -1245,7 +1245,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (electricity);Secondary Energy|Electricity|Storage Discharge|CAES;PJ/yr;net electricity discharge from CAES;;;;;0;;
 2;energy (electricity);Secondary Energy|Electricity|Storage Discharge|Vehicles;PJ/yr;net electricity discharge from vehicles storages;;;;;0;;
 1;energy (supply);Secondary Energy|Gases;PJ/yr;total production of gaseous fuels, including natural gas;SE|Gases;EJ/yr;1000;;0;;R
-1;energy (supply);Secondary Energy|Gases;PJ/yr;total production of gaseous fuels, including natural gas;SE|Gases|Biomass|Waste;EJ/yr;-1000;;0;;R
+1;energy (supply);Secondary Energy|Gases;PJ/yr;total production of gaseous fuels, including natural gas;SE|Gases|+|Waste;EJ/yr;-1000;;0;;Rx
 1;energy (supply);Secondary Energy|Gases|Biomass;PJ/yr;total production of biogas;SE|Gases|+|Biomass;EJ/yr;1000;;0;;R
 1;energy (supply);Secondary Energy|Gases|Coal;PJ/yr;total production of coal gas from coal gasification;SE|Gases|Fossil|+|Coal;EJ/yr;1000;;0;;R
 1;energy (supply);Secondary Energy|Gases|Natural Gas;PJ/yr;Secondary energy gases derived from natural gas (excluding pure hydrogen) for the usage in the buildings, transport and industry sector. This does not include the usage of natural gas for energy conversion into secondary energy other than gases.;SE|Gases|Fossil|+|Natural Gas;EJ/yr;1000;;0;;R

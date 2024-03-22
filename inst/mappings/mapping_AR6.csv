@@ -1247,7 +1247,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1148;Secondary Energy|Electricity|Wind|Offshore;EJ/yr;SE|Electricity|Wind|+|Offshore;EJ/yr;;;;;net electricity production from offshore wind energy;R
 1149;Secondary Energy|Electricity|Wind|Onshore;EJ/yr;SE|Electricity|Wind|+|Onshore;EJ/yr;;;;;net electricity production from onshore wind energy;R
 1150;Secondary Energy|Gases;EJ/yr;SE|Gases;EJ/yr;1;;;;total production of gaseous fuels,including natural gas;R
-;Secondary Energy|Gases;EJ/yr;SE|Gases|Biomass|Waste;EJ/yr;-1;;;;;R
+;Secondary Energy|Gases;EJ/yr;SE|Gases|+|Waste;EJ/yr;-1;;;;correction for data before remind2 PR 456;Rx
 1151;Secondary Energy|Gases|Biomass;EJ/yr;SE|Gases|+|Biomass;EJ/yr;;;;;total production of biogas;R
 1152;Secondary Energy|Gases|Coal;EJ/yr;SE|Gases|Fossil|+|Coal;EJ/yr;;;;;total production of coal gas from coal gasification;R
 1153;Secondary Energy|Gases|Natural Gas;EJ/yr;SE|Gases|Fossil|+|Natural Gas;EJ/yr;;;;;total production of natural gas;R
