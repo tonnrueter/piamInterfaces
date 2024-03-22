@@ -29,7 +29,8 @@ getMapping <- function(project = NULL) {
   }
   filename <- if (project %in% names(mappings)) mappings[project] else project
   if (file.exists(filename)) {
-    data <- read.csv2(filename, header = TRUE, sep = ";", na.strings = list(""), strip.white = TRUE, quote = "")
+    data <- read.csv2(filename, header = TRUE, sep = ";", na.strings = list(""),
+                      strip.white = TRUE, quote = "", comment.char = "#")
 
     requiredCols <- c("variable", "unit", "piam_variable", "piam_unit", "piam_factor")
 

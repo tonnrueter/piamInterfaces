@@ -157,7 +157,7 @@ makepdf <- function(pdfFilename, plotdata, plotvariables, areaplotVariables, mai
   pdf(pdfFilename,
       width = 1.1 * max(12, length(quitte::getRegs(plotdata)),
                   length(quitte::getModels(plotdata)) * length(quitte::getScenarios(plotdata)) * 2),
-      height = 1.1 * 7)
+      height = 1.1 * 9)
   plotvariables <- sort(intersect(plotvariables, unique(plotdata$variable)))
   for (p in plotvariables) {
     message(which(p == plotvariables), "/", length(plotvariables), ": Add plot for ", p)

@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.17.2**
+R package **piamInterfaces**, version **0.17.3**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces)  [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -20,7 +20,7 @@ Project specific interfaces to REMIND / MAgPIE.
 Mappings found in
 [the `inst/mappings` folder](https://github.com/pik-piam/piamInterfaces/tree/master/inst/mappings)
 serve to map variables from the PIAM framework to variables needed for the submission to databases.
-The mappings are `;`-separated files with the following mandatory columns:
+The mappings are `;`-separated files, using `#` as comment character, with the following mandatory columns:
 
 - `variable`: name of the variable in the project template
 - `unit`: unit corresponding to `variable`
@@ -107,7 +107,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2024). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.17.2, <URL: https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2024). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.17.3, <URL: https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -116,7 +116,7 @@ A BibTeX entry for LaTeX users is
   title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
   year = {2024},
-  note = {R package version 0.17.2},
+  note = {R package version 0.17.3},
   url = {https://github.com/pik-piam/piamInterfaces},
 }
 ```
