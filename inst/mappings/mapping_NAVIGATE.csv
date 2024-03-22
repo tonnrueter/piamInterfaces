@@ -1266,7 +1266,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1177;1;energy (secondary);Secondary Energy|Electricity|Wind|Onshore;EJ/yr;;;;;;net electricity production from onshore wind energy;
 1178;1;energy (secondary);Secondary Energy|Electricity|Hydrogen;EJ/yr;;;;;;net electricity production from hydrogen;
 1179;1;energy (secondary);Secondary Energy|Gases;EJ/yr;SE|Gases;EJ/yr;;;;total production of gaseous fuels, including natural gas;R
-1179;1;energy (secondary);Secondary Energy|Gases;EJ/yr;SE|Gases|Biomass|Waste;EJ/yr;-1;;;total production of gaseous fuels, including natural gas;R
+1179;1;energy (secondary);Secondary Energy|Gases;EJ/yr;SE|Gases|+|Waste;EJ/yr;-1;;;total production of gaseous fuels, including natural gas;R
 1180;1;energy (secondary);Secondary Energy|Heat;EJ/yr;SE|Heat;EJ/yr;;;;total centralized heat generation;R
 1181;1;energy (secondary);Secondary Energy|Hydrogen;EJ/yr;SE|Hydrogen;EJ/yr;;;;total hydrogen production;R
 1182;1;energy (secondary);Secondary Energy|Liquids;EJ/yr;SE|Liquids;EJ/yr;;;;total production of refined liquid fuels from all energy sources (incl. oil products, synthetic fossil fuels from gas and coal, biofuels);R

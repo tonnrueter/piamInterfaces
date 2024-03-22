@@ -639,7 +639,7 @@ Secondary Energy|Electricity|Wind;EJ/yr;SE|Electricity|+|Wind;EJ/yr;1;;;;R
 Secondary Energy|Electricity|Wind|Offshore;EJ/yr;SE|Electricity|Wind|+|Offshore;EJ/yr;1;;;;R
 Secondary Energy|Electricity|Wind|Onshore;EJ/yr;SE|Electricity|Wind|+|Onshore;EJ/yr;1;;;;R
 Secondary Energy|Gases;EJ/yr;SE|Gases;EJ/yr;1;;;;R
-Secondary Energy|Gases;EJ/yr;SE|Gases|Biomass|Waste;EJ/yr;-1;;only necessary to fix double accounting in results before remind2 PR456 merge;;R
+Secondary Energy|Gases;EJ/yr;SE|Gases|+|Waste;EJ/yr;-1;;only necessary to fix double accounting in results before remind2 PR456 merge;;R
 Secondary Energy|Gases|Bioenergy;EJ/yr;SE|Gases|+|Biomass;EJ/yr;1;;;;R
 Secondary Energy|Gases|Coal;EJ/yr;;;;;;;
 Secondary Energy|Gases|Hydrogen synfuel;EJ/yr;SE|Gases|+|Hydrogen;EJ/yr;1;;;;R
