@@ -25,18 +25,19 @@
 checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions = NULL,
                                     variables = NULL, skipUnits = NULL, skipBunkers = NULL) {
   if (TRUE %in% skipUnits) {
-    years <- c(2005, 2010, 2015, 2020)
+    years <- paste0(c("05", 2005, 2010, 2015, 2020))
     index <- c(paste0("Index ", years, "=100"), paste0("Index (", years, " = 1)"))
     tmp <- c("", "%", "% of Total GDP", "% pa", "%/yr", "$/GJ", "1", "arbitrary unit", "arbitrary unit/yr",
              "billionDpktU", "billionDpTWyr", "cm/capita", "DM per live animal", "GE per GE",
              "GJ/cap/yr", "GJ/t", "hectares per capita", "index", "Index",
              "kcal/cap/day", "kcal/capita/day", "kcal/kcal", "m3/ha", "MJ/t",
              "Mt CO2-equiv/EJ", "Mt CO2/EJ", "Nr per Nr", "percent",
-             "Percent", "ratio", "share", "share of total land", "t DM/ha", "t DM/ha/yr",
+             "Percent", "protein/capita/day", "ratio", "share", "share of total land", "t DM/ha", "t DM/ha/yr",
              "tC/ha", "tC/tC", "tDM/capita/yr", "tDM/cap/yr", "unitless", "years")
-    curr <- c("USD", "USD05", "US$05", paste0("US$", years), paste0("USD_", years), paste0("EUR_", years))
+    curr <- c("USD", paste0("USDMER", years), paste0("USD", years), paste0("US$", years), paste0("USD_", years),
+              paste0("EUR_", years))
     usecurr <- c("EJ/billion __", "MJ/__", "Mt CO2-equiv/__", "t/million __", "tr __/input unit", "tr__/Input",
-                 "__ PPP/cap/yr", "k__/per capita", "__/capita", "__/GJ", "__/ha", "__/tDM",
+                 "__ PPP/cap/yr", "k__/per capita", "__/capita", "__/GJ", "__/h", "__/ha", "__/tDM",
                  "__/worker", "__/GJ", "__/kW", "__/kW/yr", "__/t CH4", "__/t CO2", "__/t N2O",
                  "__/tCH4", "__/tCO2", "__/tCO2 yr", "__/tN2O", "__/__", "__/yr", "__/cap/yr")
     tmp <- unique(c(index, tmp, unlist(lapply(curr, function(x) gsub("__", x, usecurr)))))

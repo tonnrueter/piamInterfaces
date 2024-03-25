@@ -102,6 +102,22 @@
     unit: Mt CO2-equiv/yr
 - Emissions|HFC:
     unit: kt HFC134a-equiv/yr
+- Emissions|HFC|HFC125:
+    unit: kt HFC125/yr
+- Emissions|HFC|HFC134a:
+    unit: kt HFC134a/yr
+- Emissions|HFC|HFC143a:
+    unit: kt HFC143a/yr
+- Emissions|HFC|HFC227ea:
+    unit: kt HFC227ea/yr
+- Emissions|HFC|HFC23:
+    unit: kt HFC23/yr
+- Emissions|HFC|HFC245fa:
+    unit: kt HFC245fa/yr
+- Emissions|HFC|HFC32:
+    unit: kt HFC32/yr
+- Emissions|HFC|HFC43-10:
+    unit: kt HFC43-10/yr
 - Emissions|Kyoto Gases:
     unit: Mt CO2-equiv/yr
 - Emissions|N2O:
@@ -114,5 +130,7 @@
     unit: kt N2O/yr
 - Emissions|N2O|Waste:
     unit: kt N2O/yr
+- Emissions|PFC:
+    unit: kt CF4-equiv/yr
 - Emissions|SF6:
     unit: kt SF6/yr
