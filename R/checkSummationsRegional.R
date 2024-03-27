@@ -31,7 +31,7 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
              "billionDpktU", "billionDpTWyr", "cm/capita", "DM per live animal", "GE per GE",
              "GJ/cap/yr", "GJ/t", "hectares per capita", "index", "Index",
              "kcal/cap/day", "kcal/capita/day", "kcal/kcal", "m3/ha", "MJ/t",
-             "Mt CO2-equiv/EJ", "Mt CO2/EJ", "Nr per Nr", "percent",
+             "Mt CO2-equiv/EJ", "Mt CO2/EJ", "Mt Nr/Mt Nr", "Nr per Nr", "percent",
              "Percent", "protein/capita/day", "ratio", "share", "share of total land", "t DM/ha", "t DM/ha/yr",
              "tC/ha", "tC/tC", "tDM/capita/yr", "tDM/cap/yr", "unitless", "years")
     curr <- c("USD", paste0("USDMER", years), paste0("USD", years), paste0("US$", years), paste0("USD_", years),

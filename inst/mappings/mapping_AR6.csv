@@ -1991,7 +1991,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Expenditure Share|Food;%;SDG|SDG02|Food expenditure share;income;100;;;;Share of food expenditure in total income;M
 ;Material footprint;tDM/cap/yr;SDG|SDG12|Material footprint;tDM/capita/yr;;;;;Biomass usage per capita (excluding pasture + forestry);M
 ;Land Cover|Forest|Share;%;SDG|SDG15|Forest share;share of total land;100;;;;Managed and unmanaged forests as share of total terrestrial land area (excluding surface water);M
-;Terrestrial biodiversity;-;Biodiversity|BII;unitless;;;;;Biodiversity Intactness Index (BII);M
+;Terrestrial biodiversity;-;Biodiversity|BII;unitless;;;;;Biodiversity Intactness Index (BII);Mx
 ;Ocean|pH value;-;Ocean|pH value;-;;;;;Ocean acidification: pH value;S
 ;Ocean|Carbonate Saturation|Calcite;-;Ocean|Carbonate Saturation|Calcite;-;;;;;Saturation state of calcite (Omega_C);S
 ;Ocean|Carbonate Saturation|Aragonite;-;Ocean|Carbonate Saturation|Aragonite;-;;;;;Saturation state of aragonite (Omega_A);S

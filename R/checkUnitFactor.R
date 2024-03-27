@@ -20,6 +20,8 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   # the first line checks that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
   scaleConversion <- list(
                           c("1", "million", "Million vehicles"),
+                          c("1", "Index (2020 = 1)", "1"),
+                          c("1", "Index (2010 = 1)", "1"),
                           c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'
                           c("6", "GWh", "GW"),       # for 'Cap|Electricity|Storage|Battery'
                           c("100", "%", "unitless"),
