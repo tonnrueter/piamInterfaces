@@ -49,13 +49,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   data <- quitte::as.quitte(mifFile, na.rm = TRUE)
 
+  if (is.null(summationsFile)) {
+    summationsOptions <- c("extractVariableGroups", names(summationsNames()))
+    summationsFile <- chooseFromList(summationsOptions, multiple = FALSE, type = "summation file")
+  }
   if (isTRUE(summationsFile == "extractVariableGroups")) {
     checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
     names(checkVariables) <- make.unique(names(checkVariables), sep = " ")
   } else {
-    if (is.null(summationsFile)) {
-      summationsFile <- chooseFromList(names(summationsNames()), multiple = FALSE, type = "summation file")
-    }
     summationGroups <- getSummations(summationsFile)
     if (summationsFile %in% names(summationsNames())) {
       summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
