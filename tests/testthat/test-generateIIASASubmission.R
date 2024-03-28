@@ -45,7 +45,7 @@ test_that("Correct Prices are selected and plusses ignored", {
   }
   f <- file.path(tempdir(), "Pricecheck_AR6_1.mif")
   expect_no_warning(generateIIASASubmission(droplevels(filter(qe, grepl("Electricity", variable))),
-                                            mapping = "AR6", outputDirectory = dirname(f),
+                                            mapping = "AR6", outputDirectory = dirname(f), checkSummation = FALSE,
                                             outputFilename = basename(f), logFile = file.path(tempdir(), "price.log")))
   expect_true(file.exists(f))
   qemif <- quitte::as.quitte(f)
@@ -56,9 +56,9 @@ test_that("Correct Prices are selected and plusses ignored", {
   # check whether results are identical if we remove the plus and don't write to file
   qenoplus <- qe
   levels(qenoplus$variable) <- removePlus(levels(qenoplus$variable))
-  qenoplusmif <- expect_no_warning(droplevels(as.quitte(dplyr::as_tibble(
+  expect_no_warning(qenoplusmif <- droplevels(as.quitte(dplyr::as_tibble(
     generateIIASASubmission(droplevels(filter(qe, grepl("Electricity", variable))),
-      mapping = "AR6", outputDirectory = NULL, outputFilename = NULL, logFile = NULL
+      mapping = "AR6", outputDirectory = NULL, outputFilename = NULL, logFile = NULL, checkSummation = FALSE
     )
   ))))
   sortquitte <- function(d) {
@@ -69,7 +69,7 @@ test_that("Correct Prices are selected and plusses ignored", {
   f2 <- file.path(tempdir(), "Pricecheck_AR6_2.mif")
   # if Rawdata is not present, warn
   expect_warning(generateIIASASubmission(droplevels(filter(qe, grepl("Gases", variable))),
-                                         mapping = "AR6", outputDirectory = dirname(f2),
+                                         mapping = "AR6", outputDirectory = dirname(f2), checkSummation = FALSE,
                                          outputFilename = basename(f2), logFile = file.path(tempdir(), "price.log")),
                  "Your data contains no Price|*|Rawdata variables.")
   expect_true(file.exists(f2))

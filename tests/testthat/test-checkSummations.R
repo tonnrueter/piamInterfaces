@@ -124,4 +124,7 @@ test_that("checkSummations works", {
     checkSummations(outputDirectory = NULL, summationsFile = "extractVariableGroups") %>%
     filter(.data$diff != 0)
   expect_true(nrow(sumChecks) == 1)
+
+  expect_warning(checkSummations(filter(qeAR6, 0 > 1), outputDirectory = NULL, summationsFile = "AR6"),
+                 "No variable found that matches summationsFile")
 })

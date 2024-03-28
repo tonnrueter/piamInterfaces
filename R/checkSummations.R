@@ -74,9 +74,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   data <- data %>%
     filter(!!sym("variable") %in% unique(c(parentVariables, unlist(checkVariables, use.names = FALSE))))
-  message("# Run summation check on a total of ", length(unique(data$variable)), " variables.")
 
   if (nrow(data) == 0) {
+    warning("No variable found that matches summationsFile=", paste(summationsFile, collapse = ", "))
     return(NULL)
   }
 
@@ -193,10 +193,13 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
-    fileLarge <- filter(comparison, .data$model == thismodel, abs(.data$diff) > 0)
+    fileLarge <- droplevels(filter(comparison, .data$model == thismodel, abs(.data$diff) > 0))
+    text <- c(text, paste("# Run summation check on a total of", length(levels(data$variable)), "variables."))
     problematic <- sort(unique(c(fileLarge$variable)))
     if (length(problematic) == 0) {
-      summarytext <- c(summarytext, paste0("\n# All summation checks were fine for model ", thismodel, "."))
+      if (length(levels(data$variable)) > 0) {
+        summarytext <- c(summarytext, paste0("\n# All summation checks were fine for model ", thismodel, "."))
+      }
     } else {
       if (generatePlots) {
         pdfFilename <- file.path(outputDirectory,
