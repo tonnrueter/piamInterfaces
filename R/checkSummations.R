@@ -19,8 +19,8 @@
 #'                to be listed in human-readable summary
 #' @param relDiff threshold (in percent) for relative difference between parent variable and summation
 #'                to be listed in human-readable summary
-#' @param roundDiff should the absolute and relative differences in human-readable summary
-#'                  be rounded?
+#' @param roundDiff should the absolute and relative differences in human-readable summary and dataDumpFile
+#'                  be rounded? The returned object always contains unrounded values.
 #' @param csvSeparator separator for dataDumpFile, defaults to semicolon
 #' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
 #'             filter select desc reframe last_col
@@ -74,9 +74,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   data <- data %>%
     filter(!!sym("variable") %in% unique(c(parentVariables, unlist(checkVariables, use.names = FALSE))))
-  message("# Run summation check on a total of ", length(unique(data$variable)), " variables.")
 
   if (nrow(data) == 0) {
+    warning("No variable found that matches summationsFile=", paste(summationsFile, collapse = ", "))
     return(NULL)
   }
 
@@ -142,20 +142,19 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     comparison <- rbind(comparison, comp)
   }
 
+  comparison <- comparison %>%
+    filter(abs(.data$reldiff) >= relDiff, abs(.data$diff) >= absDiff) %>%
+    arrange(desc(abs(.data$reldiff)))
+
   # write data to dataDumpFile
   if (!is.null(outputDirectory) && length(dataDumpFile) > 0) {
     dataDumpFile <- file.path(outputDirectory, dataDumpFile)
-
-    fileLarge <- comparison %>%
-      filter(abs(!!sym("reldiff")) >= relDiff, abs(!!sym("diff")) >= absDiff) %>%
-      arrange(desc(abs(!!sym("reldiff"))))
-
+    filedata <- comparison
     if (isTRUE(roundDiff)) {
-      fileLarge <- fileLarge %>% mutate(reldiff = niceround(!!sym("reldiff"), digits = 2))
+      filedata <- comparison %>% mutate(reldiff = niceround(.data$reldiff, digits = 2))
     }
-
     write.table(
-      fileLarge,
+      filedata,
       file = dataDumpFile,
       sep = csvSeparator,
       quote = FALSE,
@@ -167,7 +166,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   .checkSummationsSummary(
     mifFile, data, comparison, mapping, summationsFile, summationGroups, checkVariables,
     generatePlots, mainReg, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
-    plotprefix, absDiff, relDiff, roundDiff
+    plotprefix, roundDiff
   )
 
   return(invisible(comparison))
@@ -176,8 +175,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 .checkSummationsSummary <- function(mifFile, data, comparison, mapping, summationsFile, # nolint: cyclocomp_linter.
                                     summationGroups, checkVariables, generatePlots,
                                     mainReg, outputDirectory, logFile, logAppend,
-                                    dataDumpFile, remindVar, plotprefix, absDiff,
-                                    relDiff, roundDiff) {
+                                    dataDumpFile, remindVar, plotprefix, roundDiff) {
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
@@ -195,10 +193,14 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
   for (thismodel in quitte::getModels(data)) {
     text <- c(text, paste0("# Analyzing results of model ", thismodel))
-    fileLarge <- filter(comparison, abs(!!sym("reldiff")) >= relDiff,
-                        abs(!!sym("diff")) >= absDiff, !!sym("model") == thismodel)
+    fileLarge <- droplevels(filter(comparison, .data$model == thismodel, abs(.data$diff) > 0))
+    text <- c(text, paste("# Run summation check on a total of", length(levels(data$variable)), "variables."))
     problematic <- sort(unique(c(fileLarge$variable)))
-    if (length(problematic) > 0) {
+    if (length(problematic) == 0) {
+      if (length(levels(data$variable)) > 0) {
+        summarytext <- c(summarytext, paste0("\n# All summation checks were fine for model ", thismodel, "."))
+      }
+    } else {
       if (generatePlots) {
         pdfFilename <- file.path(outputDirectory,
                                  paste0(plotprefix, "checkSummations_", gsub(" ", "_", thismodel), ".pdf"))
@@ -283,8 +285,6 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         dev.off()
         summarytext <- c(summarytext, paste0("\n# Find plot comparison of all errors in ", pdfFilename))
       }
-    } else {
-      summarytext <- c(summarytext, paste0("\n# All summation checks were fine for model ", thismodel, "."))
     }
   }
   summarytext <- c(summarytext, "\n# As generatePlots=FALSE, no plot comparison was produced."[! generatePlots])
