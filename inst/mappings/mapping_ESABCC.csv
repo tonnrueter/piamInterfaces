@@ -833,30 +833,30 @@ Emissions|CO2|Energy|Demand|Bunkers|Intra-EU;Mt CO2/yr;Emi|CO2|Energy|Demand|Tra
 Investment|Energy Supply;billion EUR_2020/yr;Energy Investments|Supply;billion US$2005/yr;1.17;;;;R
 Investment|Energy Supply|CO2 Transport and Storage;billion EUR_2020/yr;Energy Investments|CO2 Trans&Stor;billion US$2005/yr;1.17;;;;R
 Investment|Energy Supply|Electricity;billion EUR_2020/yr;Energy Investments|Electricity;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Biomass;billion EUR_2020/yr;Energy Investments|Elec|Biomass;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Biomass|w/ CCS;billion EUR_2020/yr;Energy Investments|Elec|Biomass|w/ CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Biomass|w/o CCS;billion EUR_2020/yr;Energy Investments|Elec|Biomass|w/o CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Coal;billion EUR_2020/yr;Energy Investments|Elec|Coal;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Coal|w/ CCS;billion EUR_2020/yr;Energy Investments|Elec|Coal|w/ CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Coal|w/o CCS;billion EUR_2020/yr;Energy Investments|Elec|Coal|w/o CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Electricity Storage;billion EUR_2020/yr;Energy Investments|Elec|Storage;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Fossil;billion EUR_2020/yr;Energy Investments|Elec|Fossil;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Gas;billion EUR_2020/yr;Energy Investments|Elec|Gas;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Gas|w/ CCS;billion EUR_2020/yr;Energy Investments|Elec|Gas|w/ CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Gas|w/o CCS;billion EUR_2020/yr;Energy Investments|Elec|Gas|w/o CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Geothermal;billion EUR_2020/yr;Energy Investments|Elec|Geothermal;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Hydro;billion EUR_2020/yr;Energy Investments|Elec|Hydro;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR_2020/yr;Energy Investments|Elec|Non-Bio Re;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Non-fossil;billion EUR_2020/yr;Energy Investments|Elec|Non-Fossil;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Nuclear;billion EUR_2020/yr;Energy Investments|Elec|Nuclear;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Biomass;billion EUR_2020/yr;Energy Investments|Electricity|Biomass;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Biomass|w/ CCS;billion EUR_2020/yr;Energy Investments|Electricity|Biomass|w/ CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Biomass|w/o CCS;billion EUR_2020/yr;Energy Investments|Electricity|Biomass|w/o CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Coal;billion EUR_2020/yr;Energy Investments|Electricity|Coal;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Coal|w/ CCS;billion EUR_2020/yr;Energy Investments|Electricity|Coal|w/ CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Coal|w/o CCS;billion EUR_2020/yr;Energy Investments|Electricity|Coal|w/o CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Electricity Storage;billion EUR_2020/yr;Energy Investments|Electricity|Storage;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Fossil;billion EUR_2020/yr;Energy Investments|Electricity|Fossil;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Gas;billion EUR_2020/yr;Energy Investments|Electricity|Gas;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Gas|w/ CCS;billion EUR_2020/yr;Energy Investments|Electricity|Gas|w/ CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Gas|w/o CCS;billion EUR_2020/yr;Energy Investments|Electricity|Gas|w/o CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Geothermal;billion EUR_2020/yr;Energy Investments|Electricity|Geothermal;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Hydro;billion EUR_2020/yr;Energy Investments|Electricity|Hydro;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR_2020/yr;Energy Investments|Electricity|Non-Bio Re;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Non-fossil;billion EUR_2020/yr;Energy Investments|Electricity|Non-Fossil;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Nuclear;billion EUR_2020/yr;Energy Investments|Electricity|Nuclear;billion US$2005/yr;1.17;;;;R
 Investment|Energy Supply|Electricity|Ocean;billion EUR_2020/yr;;;;;;;
-Investment|Energy Supply|Electricity|Oil;billion EUR_2020/yr;Energy Investments|Elec|Oil;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Oil|w/ CCS;billion EUR_2020/yr;Energy Investments|Elec|Oil|w/ CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Oil|w/o CCS;billion EUR_2020/yr;Energy Investments|Elec|Oil|w/o CC;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Other;billion EUR_2020/yr;Energy Investments|Elec|Hydrogen;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Solar;billion EUR_2020/yr;Energy Investments|Elec|Solar;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Transmission and Distribution;billion EUR_2020/yr;Energy Investments|Elec|Grid;billion US$2005/yr;1.17;;;;R
-Investment|Energy Supply|Electricity|Wind;billion EUR_2020/yr;Energy Investments|Elec|Wind;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Oil;billion EUR_2020/yr;Energy Investments|Electricity|Oil;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Oil|w/ CCS;billion EUR_2020/yr;Energy Investments|Electricity|Oil|w/ CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Oil|w/o CCS;billion EUR_2020/yr;Energy Investments|Electricity|Oil|w/o CC;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Other;billion EUR_2020/yr;Energy Investments|Electricity|Hydrogen;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Solar;billion EUR_2020/yr;Energy Investments|Electricity|Solar;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Transmission and Distribution;billion EUR_2020/yr;Energy Investments|Electricity|Grid;billion US$2005/yr;1.17;;;;R
+Investment|Energy Supply|Electricity|Wind;billion EUR_2020/yr;Energy Investments|Electricity|Wind;billion US$2005/yr;1.17;;;;R
 Investment|Energy Supply|Extraction|Bioenergy;billion EUR_2020/yr;;;;;;;
 Investment|Energy Supply|Extraction|Coal;billion EUR_2020/yr;;;;;;;
 Investment|Energy Supply|Extraction|Fossil;billion EUR_2020/yr;;;;;;;
