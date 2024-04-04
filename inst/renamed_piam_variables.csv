@@ -1,0 +1,24 @@
+piam_variable                                 ;old_name
+Energy Investments|Electricity|Biomass        ;Energy Investments|Elec|Biomass
+Energy Investments|Electricity|Biomass|w/ CC  ;Energy Investments|Elec|Biomass|w/ CC
+Energy Investments|Electricity|Biomass|w/o CC ;Energy Investments|Elec|Biomass|w/o CC
+Energy Investments|Electricity|Coal           ;Energy Investments|Elec|Coal
+Energy Investments|Electricity|Coal|w/ CC     ;Energy Investments|Elec|Coal|w/ CC
+Energy Investments|Electricity|Coal|w/o CC    ;Energy Investments|Elec|Coal|w/o CC
+Energy Investments|Electricity|Fossil         ;Energy Investments|Elec|Fossil
+Energy Investments|Electricity|Gas            ;Energy Investments|Elec|Gas
+Energy Investments|Electricity|Gas|w/ CC      ;Energy Investments|Elec|Gas|w/ CC
+Energy Investments|Electricity|Gas|w/o CC     ;Energy Investments|Elec|Gas|w/o CC
+Energy Investments|Electricity|Geothermal     ;Energy Investments|Elec|Geothermal
+Energy Investments|Electricity|Grid           ;Energy Investments|Elec|Grid
+Energy Investments|Electricity|Hydro          ;Energy Investments|Elec|Hydro
+Energy Investments|Electricity|Hydrogen       ;Energy Investments|Elec|Hydrogen
+Energy Investments|Electricity|Non-Bio Re     ;Energy Investments|Elec|Non-Bio Re
+Energy Investments|Electricity|Non-Fossil     ;Energy Investments|Elec|Non-Fossil
+Energy Investments|Electricity|Nuclear        ;Energy Investments|Elec|Nuclear
+Energy Investments|Electricity|Oil            ;Energy Investments|Elec|Oil
+Energy Investments|Electricity|Oil|w/ CC      ;Energy Investments|Elec|Oil|w/ CC
+Energy Investments|Electricity|Oil|w/o CC     ;Energy Investments|Elec|Oil|w/o CC
+Energy Investments|Electricity|Solar          ;Energy Investments|Elec|Solar
+Energy Investments|Electricity|Storage        ;Energy Investments|Elec|Storage
+Energy Investments|Electricity|Wind           ;Energy Investments|Elec|Wind

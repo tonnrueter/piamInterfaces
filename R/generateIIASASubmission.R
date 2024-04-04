@@ -129,6 +129,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
            " before 1.111.0 on 2023-05-26, please use piamInterfaces version 0.9.0 or earlier, see PR #128.")
   }
 
+  mifdata <- renameOldVariables(mifdata, mapData$piam_variable, logFile = logFile)
   mifdata <- checkFixUnits(mifdata, mapData, logFile = logFile, failOnUnitMismatch = FALSE)
   mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
 
