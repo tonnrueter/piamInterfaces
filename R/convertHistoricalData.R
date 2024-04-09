@@ -22,7 +22,7 @@
 convertHistoricalData <- function(mif, project, regionMapping = NULL) {
 
   hist <- suppressWarnings(as.quitte(mif, na.rm = TRUE)) %>%
-    rename("hist_variable" = "variable")
+    rename("hist_variable" = "variable", "hist_unit" = "unit")
 
   m <- NULL
 
@@ -41,7 +41,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   varmap <- left_join(varmap, count(varmap, .data$variable, name = "countRemindVar"), by = c("variable"))
 
   out <- hist %>%
-    left_join(varmap, by = c("hist_variable" = "piam_variable", "unit" = "piam_unit"),
+    left_join(varmap, by = c("hist_variable" = "piam_variable", "hist_unit" = "piam_unit"),
               relationship = "many-to-many") %>%
     mutate("value" = .data$piam_factor * .data$value) %>%
     select("model", "scenario", "region", "variable", "unit",
