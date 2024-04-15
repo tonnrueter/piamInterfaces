@@ -38,10 +38,10 @@ Carbon Sequestration|CCS|Fossil|Energy|Supply;Carbon Sequestration|CCS|Fossil|En
 Carbon Sequestration|CCS|Biomass|Energy;Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry;1
 Carbon Sequestration|CCS|Biomass|Energy;Carbon Sequestration|CCS|Biomass|Energy|Supply;1
 Carbon Sequestration|CCS|Fossil|Energy;Carbon Sequestration|CCS|Fossil|Energy|Supply;1
+Carbon Sequestration|CCS|Fossil|Energy;Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry;1
 Carbon Sequestration|CCS|Biomass;Carbon Sequestration|CCS|Biomass|Energy;1
 Carbon Sequestration|CCS|Biomass;Carbon Sequestration|CCS|Biomass|Industrial Processes;1
 Carbon Sequestration|CCS|Fossil;Carbon Sequestration|CCS|Fossil|Energy;1
-Carbon Sequestration|CCS|Fossil;Carbon Sequestration|CCS|Fossil|Industrial Processes;1
 Carbon Sequestration|CCS;Carbon Sequestration|CCS|Biomass;1
 Carbon Sequestration|CCS;Carbon Sequestration|CCS|Fossil;1
 Carbon Sequestration|CCS;Carbon Sequestration|Direct Air Capture;1
@@ -525,9 +525,6 @@ Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Electricity;
 Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Fossil;1
 Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Other;1
 Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Renewable;1
-Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Biomass;1
-Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Coal and Gas;1
-Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Oil;1
 Investment|Energy Supply;Investment|Energy Supply|CO2 Transport and Storage;1
 Investment|Energy Supply;Investment|Energy Supply|Electricity;1
 Investment|Energy Supply;Investment|Energy Supply|Heat;1
