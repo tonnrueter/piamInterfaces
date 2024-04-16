@@ -7,7 +7,7 @@ for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS"
       data <- rbind(data, select(mappingData, c("variable" = "piam_variable", "unit" = "piam_unit")))
     }
 
-    data <- data %>% #[seq(min(10, nrow(data))), ] %>%
+    data <- data %>% # [seq(min(10, nrow(data))), ] %>%
       filter(!is.na(variable)) %>%
       mutate(model = "REMIND", scenario = "default", region = "GLO", value = 1)
 
