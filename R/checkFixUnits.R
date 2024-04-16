@@ -25,6 +25,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
   logtext <- NULL
   for (mifvar in intersect(levels(mifdata$variable), unique(template[[varcol]]))) {
     templateunit <- unique(template[[unitcol]][template[[varcol]] %in% mifvar])
+    if (length(templateunit) != 1) stop(mifvar, " not mapped to unique unit: ", paste(templateunit, collapse = ", "))
     mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
     # find unit mismatches
     if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
@@ -34,10 +35,25 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
         mifdata <- mifdata %>%
           mutate(unit = factor(ifelse(.data$variable == mifvar, templateunit, as.character(.data$unit))))
       } else if (all(grepl("^Index \\([0-9]* = 1\\)$", mifunit))) {
+        # adjust different reference year for Index values
         if ("value" %in% names(mifdata)) {
-          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, ", data adapted."))
           referenceYear <- as.numeric(extractReferenceYear(templateunit))
           mifdata <- priceIndicesFix(mifdata, mifvar, referenceYear)
+          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, ", data adapted."))
+        }
+      } else if (all(gsub("US$2005", "US$2017", mifunit, fixed = TRUE) == templateunit)) {
+        # convert US$2005 to US$2017 for backwards compatibility with old REMIND setting
+        if ("value" %in% names(mifdata)) {
+          convfact <- convertGDP(gdp = tibble::tibble(iso3c = "USA", year = 2000, value = 1),
+                                 unit_in = "constant 2005 US$MER",
+                                 unit_out = "constant 2017 US$MER")$value[[1]]
+          if (grepl("/US$2005", mifunit, fixed = TRUE)) convfact <- 1/convfact
+          mifdata <- rbind(filter(mifdata, ! .data$variable %in% mifvar),
+                           filter(mifdata,   .data$variable %in% mifvar) %>%
+                             mutate(value = .data$value * convfact,
+                                    unit = factor(templateunit))) %>%
+                     droplevels()
+          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, ", data adapted."))
         }
       } else {
         # log units unable to fix
