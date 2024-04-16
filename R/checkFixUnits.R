@@ -9,6 +9,7 @@
 #'        recommended for submission, not used for generating mappings
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter mutate
+#' @importFrom GDPuc convertGDP
 #' @importFrom rlang .data
 #' @importFrom stringr str_split
 #' @return quitte object with adapted mif data
@@ -27,7 +28,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
     templateunit <- unique(template[[unitcol]][template[[varcol]] %in% mifvar])
     if (length(templateunit) != 1) stop(mifvar, " not mapped to unique unit: ", paste(templateunit, collapse = ", "))
     mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
-    # find unit mismatches
+    # find and potentially fix unit mismatches
     if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
       if (areUnitsIdentical(mifunit, templateunit)) {
         # fix wrong spelling of units as allowed in identicalUnits
@@ -44,14 +45,14 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
       } else if (all(gsub("US$2005", "US$2017", mifunit, fixed = TRUE) == templateunit)) {
         # convert US$2005 to US$2017 for backwards compatibility with old REMIND setting
         if ("value" %in% names(mifdata)) {
+          # convertSingle(x = 1, iso3c = "USA", unit_in = "constant 2005 US$MER", unit_out = "constant 2017 US$MER") # nolint
           convfact <- convertGDP(gdp = tibble::tibble(iso3c = "USA", year = 2000, value = 1),
                                  unit_in = "constant 2005 US$MER",
                                  unit_out = "constant 2017 US$MER")$value[[1]]
-          if (grepl("/US$2005", mifunit, fixed = TRUE)) convfact <- 1/convfact
-          mifdata <- rbind(filter(mifdata, ! .data$variable %in% mifvar),
-                           filter(mifdata,   .data$variable %in% mifvar) %>%
-                             mutate(value = .data$value * convfact,
-                                    unit = factor(templateunit))) %>%
+          if (grepl("/US$2005", mifunit, fixed = TRUE)) convfact <- 1 / convfact
+          mifdata <- mutate(mifdata,
+                       unit = factor(ifelse(.data$variable %in% mifvar, templateunit, as.character(.data$unit))),
+                       value = ifelse(.data$variable %in% mifvar, round(.data$value * convfact, 7), .data$value)) %>%
                      droplevels()
           logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, ", data adapted."))
         }
@@ -62,6 +63,14 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
       }
     }
   }
+
+  reportCheckFixUnits(logtext, wrongUnits, logFile, failOnUnitMismatch)
+
+  return(mifdata)
+}
+
+# collect reporting and fail if needed
+reportCheckFixUnits <- function(logtext, wrongUnits, logFile, failOnUnitMismatch) {
   if (length(logtext) > 0) {
     cat(paste0("# ", length(logtext), " units were automatically corrected.\n"))
     logtext <- paste0("\n\n#--- ", length(logtext), " units were automatically corrected: ---#\n",
@@ -79,8 +88,6 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
   if (failOnUnitMismatch && nrow(wrongUnits) > 0) {
     stop("Unit mismatches!")
   }
-
-  return(mifdata)
 }
 
 
