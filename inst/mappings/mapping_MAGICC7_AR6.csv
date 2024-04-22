@@ -1,0 +1,89 @@
+variable;unit;piam_variable;piam_unit;piam_factor;comment;source
+AR6 climate diagnostics|Atmospheric Concentrations|CH4|MAGICCv7.5.3|5.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|CH4|5.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CH4|MAGICCv7.5.3|33.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|CH4|33.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CH4|MAGICCv7.5.3|50.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|CH4|50.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CH4|MAGICCv7.5.3|67.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|CH4|67.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CH4|MAGICCv7.5.3|95.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|CH4|95.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CO2|MAGICCv7.5.3|5.0th Percentile;ppm;MAGICC7 AR6|Atmospheric Concentrations|CO2|5.0th Percentile;ppm;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CO2|MAGICCv7.5.3|33.0th Percentile;ppm;MAGICC7 AR6|Atmospheric Concentrations|CO2|33.0th Percentile;ppm;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CO2|MAGICCv7.5.3|50.0th Percentile;ppm;MAGICC7 AR6|Atmospheric Concentrations|CO2|50.0th Percentile;ppm;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CO2|MAGICCv7.5.3|67.0th Percentile;ppm;MAGICC7 AR6|Atmospheric Concentrations|CO2|67.0th Percentile;ppm;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|CO2|MAGICCv7.5.3|95.0th Percentile;ppm;MAGICC7 AR6|Atmospheric Concentrations|CO2|95.0th Percentile;ppm;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|N2O|MAGICCv7.5.3|5.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|N2O|5.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|N2O|MAGICCv7.5.3|33.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|N2O|33.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|N2O|MAGICCv7.5.3|50.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|N2O|MAGICCv7.5.3|67.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|N2O|67.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Atmospheric Concentrations|N2O|MAGICCv7.5.3|95.0th Percentile;ppb;MAGICC7 AR6|Atmospheric Concentrations|N2O|95.0th Percentile;ppb;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Aerosols|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Aerosols|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Aerosols|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Aerosols|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Aerosols|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Aerosols|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Aerosols|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Aerosols|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Aerosols|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Aerosols|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Anthropogenic|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Anthropogenic|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Anthropogenic|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Anthropogenic|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Anthropogenic|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Anthropogenic|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Anthropogenic|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Anthropogenic|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Anthropogenic|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Anthropogenic|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Greenhouse Gases|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Greenhouse Gases|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Greenhouse Gases|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Greenhouse Gases|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Greenhouse Gases|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Greenhouse Gases|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Greenhouse Gases|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Greenhouse Gases|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Greenhouse Gases|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Greenhouse Gases|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Anthropogenic|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Basket|Non-CO2 Greenhouse Gases|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CH4|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CH4|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CH4|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CH4|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CH4|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CH4|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CH4|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CH4|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CH4|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CH4|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CO2|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CO2|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CO2|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CO2|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CO2|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CO2|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CO2|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CO2|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|CO2|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|CO2|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|F-Gases|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|F-Gases|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|F-Gases|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|F-Gases|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|F-Gases|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|F-Gases|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|F-Gases|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|F-Gases|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|F-Gases|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|F-Gases|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Montreal Protocol Halogen Gases|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Montreal Protocol Halogen Gases|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Montreal Protocol Halogen Gases|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Montreal Protocol Halogen Gases|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Montreal Protocol Halogen Gases|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Montreal Protocol Halogen Gases|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Montreal Protocol Halogen Gases|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Montreal Protocol Halogen Gases|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Montreal Protocol Halogen Gases|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Montreal Protocol Halogen Gases|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|N2O|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|N2O|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|N2O|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|N2O|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|N2O|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|N2O|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|N2O|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|N2O|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|N2O|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|N2O|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Ozone|MAGICCv7.5.3|5.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Ozone|5.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Ozone|MAGICCv7.5.3|33.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Ozone|33.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Ozone|MAGICCv7.5.3|50.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Ozone|50.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Ozone|MAGICCv7.5.3|67.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Ozone|67.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Effective Radiative Forcing|Ozone|MAGICCv7.5.3|95.0th Percentile;W/m^2;MAGICC7 AR6|Effective Radiative Forcing|Ozone|95.0th Percentile;W/m^2;;;C
+AR6 climate diagnostics|Exceedance Probability 1.5C|MAGICCv7.5.3;dimensionless;MAGICC7 AR6|Exceedance Probability 1.5C;dimensionless;;;C
+AR6 climate diagnostics|Exceedance Probability 2.0C|MAGICCv7.5.3;dimensionless;MAGICC7 AR6|Exceedance Probability 2.0C;dimensionless;;;C
+AR6 climate diagnostics|Exceedance Probability 2.5C|MAGICCv7.5.3;dimensionless;MAGICC7 AR6|Exceedance Probability 2.5C;dimensionless;;;C
+AR6 climate diagnostics|Exceedance Probability 3.0C|MAGICCv7.5.3;dimensionless;MAGICC7 AR6|Exceedance Probability 3.0C;dimensionless;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|5.0th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|5.0th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|10.0th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|10.0th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|16.7th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|16.7th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|33.0th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|33.0th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|50.0th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|67.0th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|67.0th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|83.3th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|83.3th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|90.0th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|90.0th Percentile;K;;;C
+AR6 climate diagnostics|Surface Temperature (GSAT)|MAGICCv7.5.3|95.0th Percentile;K;MAGICC7 AR6|Surface Temperature (GSAT)|95.0th Percentile;K;;;C

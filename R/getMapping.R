@@ -32,17 +32,19 @@ getMapping <- function(project = NULL) {
     data <- read.csv2(filename, header = TRUE, sep = ";", na.strings = list(""),
                       strip.white = TRUE, quote = "", comment.char = "#")
 
-    requiredCols <- c("variable", "unit", "piam_variable", "piam_unit", "piam_factor")
-
+    # check if more than one column is found
     if (length(data) == 1) {
       stop(paste0("Failed to read in ", filename, ". Is source file separated by semicolons?"))
     }
 
+    # fail if required columns are missing
+    requiredCols <- c("variable", "unit", "piam_variable", "piam_unit", "piam_factor")
     if (!all(requiredCols %in% colnames(data))) {
       stop(paste0("Failed to read in ", filename, ". Required columns not found: ",
                   paste0(setdiff(requiredCols, colnames(data)), collapse = ", ")))
-      }
+    }
 
+    # return data
     return(data)
   } else {
     stop("Mapping file ", filename, " not found.")
