@@ -1,0 +1,99 @@
+- REMIND-MAgPIE 3.3-4.7:
+  - REMIND-MAgPIE 3.3-4.7|Canada, NZ, Australia:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Australia, Canada, Heard Island and McDonald Islands, New Zealand, Saint Pierre
+        and Miquelon
+  - REMIND-MAgPIE 3.3-4.7|China:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        People's Republic of China, Hong Kong, Macao, Taiwan
+  - REMIND-MAgPIE 3.3-4.7|EU 28:
+      description:
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Bulgaria, Cyprus, Denmark, Ireland, Estonia, Austria, Czech Republic, Finland,
+        France, Germany, Greece, Croatia, Hungary, Italy, Latvia, Lithuania, Slovakia,
+        Malta, Belgium, Faroe Islands, Gibraltar, Isle of Man, Luxembourg,
+        \xFD\xFD\xFDland Islands, Netherlands, Poland, Portugal, Romania, Slovenia,
+        Spain, Sweden, United Kingdom, Guernsey, Jersey
+  - REMIND-MAgPIE 3.3-4.7|India:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Republic of India
+  - REMIND-MAgPIE 3.3-4.7|Japan:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        State of Japan
+  - REMIND-MAgPIE 3.3-4.7|Latin America and the Caribbean:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Antigua and Barbuda, Argentina, Barbados, Bermuda, Bahamas, Belize, Bolivia,
+        Plurinational State of, Federative Republic of Brazil, Chile, Cayman Islands,
+        Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador,
+        French Guiana, Falkland Islands (Malvinas), Grenada, Guatemala, Guyana, Haiti,
+        Honduras, Jamaica, Martinique, Montserrat, United Mexican States, Aruba,
+        Anguilla, Antarctica, Bouvet Island, Curacao, Suriname, Nicaragua, Paraguay,
+        Peru, Panama, Puerto Rico, Saint Kitts and Nevis, Saint Lucia, Sint Marteen,
+        Trinidad and Tobago, Uruguay, Saint Vincent & the Grenadines, Venezuela,
+        Bolivarian Republic of, British Virgin Islands, United States Virgin Islands,
+        Guadeloupe, Netherlands Antilles, Turks and Caicos Islands, Saint Martin, Saint
+        Barthelemy, South Georgia South Sandwich Islands
+  - REMIND-MAgPIE 3.3-4.7|Middle East, North Africa, Central Asia:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Algeria, Bahrain, Egypt, Iran, Islamic Republic of, Israel, Iraq, Jordan,
+        Kuwait, Lebanon, Libyan Arab Jamahiriya, Morocco, Oman, Palestinian Territory,
+        Occupied, Qatar, Saudi Arabia, Sudan, Syrian Arab Republic, Tunisia, Yemen,
+        United Arab Emirates, Western Sahara
+  - REMIND-MAgPIE 3.3-4.7|Non-EU28 Europe:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Albania, Bosnia and Herzegovina, Greenland, Iceland, Liechtenstein, Macedonia,
+        the former Yugoslav Republic of, Andorra, Monaco, Montenegro, Norway,
+        Switzerland, Turkey, San Marino, Serbia, Holy See (Vatican City), Svalbard
+  - REMIND-MAgPIE 3.3-4.7|Other Asia:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        American Samoa, Bangladesh, Myanmar, Solomon Islands, Brunei Darussalam,
+        Cambodia, Sri Lanka, Afghanistan, Bhutan, Cook Islands, Fiji, Micronesia,
+        Federated States of, French Polynesia, Guam, Korea, Democratic Peoples Republic
+        of, Kiribati, Korea, Republic of, Lao People's Democratic Republic', Mongolia,
+        Maldives, Malaysia, New Caledonia, Niue, Northern Mariana Islands, Norfolk
+        Island, Cocos (Keeling) Islands, French Southern and Antarctic Lands, British
+        Indian Ocean Territory, Christmas Island, United States Minor Outlying Islands,
+        Vanuatu, Nepal, Nauru, Pakistan, Papua New Guinea, Philippines, Singapore,
+        Thailand, Tokelau, Tonga, Tuvalu, Viet Nam, Wallis and Futuna Islands, Samoa,
+        Indonesia, TimorLeste, Pitcairn Islands, Palau, Marshall Islands
+  - REMIND-MAgPIE 3.3-4.7|Countries from the Reforming Economies of the Former Soviet Union:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Azerbaijan, Armenia, Georgia, Kyrgyzstan, Kazakhstan, Belarus, Moldova, Republic
+        of, Russian Federation, Tajikistan, Turkmenistan, Ukraine, Uzbekistan
+  - REMIND-MAgPIE 3.3-4.7|Sub-saharan Africa:
+      description: |-
+
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        Angola, Benin, Congo, Congo, the Democratic Republic of the, Burundi, Cameroon,
+        Chad, Comoros, Central African Republic, Cape Verde, Djibouti, Equatorial
+        Guinea, Eritrea, Ethiopia, Gambia, Gabon, Ghana, Guinea, C\xF4te d'Ivoire',
+        Kenya, Liberia, Madagascar, Mali, Mauritius, Mauritania, Mozambique, Malawi,
+        Niger, Mayotte, Nigeria, GuineaBissau, Reunion, Rwanda, Seychelles, South
+        Africa, Lesotho, Botswana, Senegal, Sierra Leone, Somalia, South Sudan, Togo,
+        Sao Tome and Principe, Tanzania, United Republic of, Uganda, Burkina Faso,
+        Namibia, Swaziland, Zambia, Zimbabwe, Saint Helena
+  - REMIND-MAgPIE 3.3-4.7|United States of America:
+      description: |-
+        Model native region of REMIND-MAgPIE 3.3-4.7
+
+        United States of America

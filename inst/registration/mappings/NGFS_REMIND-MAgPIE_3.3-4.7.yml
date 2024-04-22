@@ -1,0 +1,46 @@
+model: REMIND-MAgPIE 3.3-4.7
+native_regions:
+- CAZ: REMIND-MAgPIE 3.3-4.7|Canada, NZ, Australia
+- CHA: REMIND-MAgPIE 3.3-4.7|China
+- EUR: REMIND-MAgPIE 3.3-4.7|EU 28
+- IND: REMIND-MAgPIE 3.3-4.7|India
+- JPN: REMIND-MAgPIE 3.3-4.7|Japan
+- LAM: REMIND-MAgPIE 3.3-4.7|Latin America and the Caribbean
+- MEA: REMIND-MAgPIE 3.3-4.7|Middle East, North Africa, Central Asia
+- NEU: REMIND-MAgPIE 3.3-4.7|Non-EU28 Europe
+- OAS: REMIND-MAgPIE 3.3-4.7|Other Asia
+- REF: REMIND-MAgPIE 3.3-4.7|Countries from the Reforming Economies of the Former
+    Soviet Union
+- SSA: REMIND-MAgPIE 3.3-4.7|Sub-saharan Africa
+- USA: REMIND-MAgPIE 3.3-4.7|United States of America
+common_regions:
+- Asia (R5):
+  - CHA
+  - IND
+  - OAS
+- Latin America (R5):
+  - LAM
+- Middle East & Africa (R5):
+  - SSA
+  - MEA
+- OECD & EU (R5):
+  - EUR
+  - JPN
+  - USA
+  - CAZ
+  - NEU
+- Reforming Economies (R5):
+  - REF
+- World:
+  - CAZ
+  - CHA
+  - EUR
+  - IND
+  - JPN
+  - LAM
+  - MEA
+  - NEU
+  - OAS
+  - REF
+  - SSA
+  - USA
