@@ -1,10 +1,10 @@
 idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
-# temporary fix until waste emissions are separated
+# temporary fix until waste emissions are separated;;;;;;;;;;
 ;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
 ;Emissions|CO2|Energy|Supply|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
 ;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
 ;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
-#
+#;;;;;;;;;;
 0;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
@@ -102,9 +102,9 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 51;Capital Cost|Electricity|Coal|w/ CCS;US$2010/kW;Tech|Electricity|Coal|Gasification Combined Cycle w/ CC|Capital Costs;US$2005/kW;1.12;;;;capital cost of a new coal power plant with CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most;R
 50;Capital Cost|Electricity|Biomass|w/o CCS;US$2010/kW;Tech|Electricity|Biomass|Combined Heat and Power w/o CC|Capital Costs;US$2005/kW;1.12;;;Other tech: internal gasification combined cycle power plants;capital cost of a new biomass power plant w/o CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most;R
 49;Capital Cost|Electricity|Biomass|w/ CCS;US$2010/kW;Tech|Electricity|Biomass|Gasification Combined Cycle w/ CC|Capital Costs;US$2005/kW;1.12;;;;capital cost of a new biomass power plant with CCS. If more than technology in this category is modelled,modellers should report capital costs for the technology that is used most;R
-80;Concentration|CH4;ppb;Concentration|CH4;ppb;;glo;;;atmospheric concentration of methane;C
-81;Concentration|CO2;ppm;Concentration|CO2;ppm;;glo;;;atmospheric concentration of carbon dioxide;C
-82;Concentration|N2O;ppb;Concentration|N2O;ppb;;glo;;;atmospheric concentration of nitrous oxide;C
+80;Concentration|CH4;ppb;MAGICC7 AR6|Atmospheric Concentrations|CH4|50.0th Percentile;ppb;;glo;;;atmospheric concentration of methane;C
+81;Concentration|CO2;ppm;MAGICC7 AR6|Atmospheric Concentrations|CO2|50.0th Percentile;ppm;;glo;;;atmospheric concentration of carbon dioxide;C
+82;Concentration|N2O;ppb;MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile;ppb;;glo;;;atmospheric concentration of nitrous oxide;C
 83;Effective Forcing;W/m2;;;;;;;effective radiative forcing from all greenhouse gases and forcing agents,including contributions from albedo change,nitrate,and mineral dust;
 84;Effective Forcing|Aerosol;W/m2;;;;;;;total effective radiative forcing from aerosols via both aerosol-cloud and aerosol-radiative effects;
 85;Effective Forcing|Aerosol|BC;W/m2;;;;;;;effective radiative forcing from black carbon via aerosol-radiative effects;
@@ -139,7 +139,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 114;Forcing|N2O;W/m2;Forcing|N2O;W/m2;;;;;total radiative forcing from N2O;C
 115;Forcing|Other;W/m2;Forcing|Other;W/m2;;;;;total radiative forcing from factors not covered in other categories (including stratospheric ozone and stratospheric water vapor);C
 116;Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;;;;total radiative forcing from tropospheric ozone;C
-117;Temperature|Global Mean;°C;Temperature|Global Mean;K;;;;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab;C
+117;Temperature|Global Mean;°C;MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile;K;;;;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab;C
 118;Capital Formation;billion US$2010/yr;Investments;billion US$2005/yr;1.12;;;might not fit completely;net additions to the physical capital stock;R
 119;Capital Stock;billion US$2010/yr;TODO;billion US$2005;1.12;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND;TODO: report yearly value,Macroeconomic capital stock;
 120;Consumption;billion US$2010/yr;Consumption;billion US$2005/yr;1.12;;;quality depends on capital market realization (switch);total consumption of all goods,by all consumers in a region;R
@@ -212,14 +212,14 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 172;Price|Primary Energy|Coal;US$2010/GJ;Price|Coal|World Market;US$2005/GJ;1.12;;;;coal price at the primary level (i.e. the spot price at the global or regional market);R
 173;Price|Primary Energy|Gas;US$2010/GJ;Price|Gas|World Market;US$2005/GJ;1.12;;;;natural gas price at the primary level (i.e. the spot price at the global or regional market);R
 174;Price|Primary Energy|Oil;US$2010/GJ;Price|Oil|World Market;US$2005/GJ;1.12;;;;crude oil price at the primary level (i.e. the spot price at the global or regional market);R
-175;Price|Secondary Energy|Electricity;US$2010/GJ;Price|Secondary Energy|Electricity;US$2005/GJ;1.12;;;;electricity price at the secondary level,i.e. for large scale consumers (e.g. aluminum production).  Prices should include the effect of carbon prices.;R
-176;Price|Secondary Energy|Gases|Natural Gas;US$2010/GJ;Price|Secondary Energy|Gases;US$2005/GJ;1.12;;;;natural gas price at the secondary level,i.e. for large scale consumers (e.g. gas power plant). Prices should include the effect of carbon prices.;R
-177;Price|Secondary Energy|Hydrogen;US$2010/GJ;Price|Secondary Energy|Hydrogen;US$2005/GJ;1.12;;;;hydrogen price at the secondary level. Prices should include the effect of carbon prices;R
-178;Price|Secondary Energy|Liquids;US$2010/GJ;Price|Secondary Energy|Liquids;US$2005/GJ;1.12;;;;liquid fuel price at the secondary level,i.e. petrol,diesel,or weighted average;R
-179;Price|Secondary Energy|Liquids|Biomass;US$2010/GJ;Price|Secondary Energy|Liquids|Biomass;US$2005/GJ;1.12;;;;biofuel price at the secondary level,i.e. for biofuel consumers;R
-180;Price|Secondary Energy|Liquids|Oil;US$2010/GJ;Price|Secondary Energy|Liquids|Fossil;US$2005/GJ;1.12;;;;light fuel oil price at the secondary level,i.e. for large scale consumers (e.g. oil power plant). Prices should include the effect of carbon prices.;R
-181;Price|Secondary Energy|Solids|Biomass;US$2010/GJ;Price|Secondary Energy|Solids|Biomass;US$2005/GJ;1.12;;;;biomass price at the secondary level,i.e. for large scale consumers (e.g. biomass power plant). Prices should include the effect of carbon prices.;R
-182;Price|Secondary Energy|Solids|Coal;US$2010/GJ;Price|Secondary Energy|Solids|Fossil;US$2005/GJ;1.12;;;;coal price at the secondary level,i.e. for large scale consumers (e.g. coal power plant). Prices should include the effect of carbon prices.;R
+175;Price|Secondary Energy|Electricity;US$2010/GJ;Price|Secondary Energy|Electricity;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;electricity price at the secondary level,i.e. for large scale consumers (e.g. aluminum production).  Prices should include the effect of carbon prices.;R
+176;Price|Secondary Energy|Gases|Natural Gas;US$2010/GJ;Price|Secondary Energy|Gases;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;natural gas price at the secondary level,i.e. for large scale consumers (e.g. gas power plant). Prices should include the effect of carbon prices.;R
+177;Price|Secondary Energy|Hydrogen;US$2010/GJ;Price|Secondary Energy|Hydrogen;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;hydrogen price at the secondary level. Prices should include the effect of carbon prices;R
+178;Price|Secondary Energy|Liquids;US$2010/GJ;Price|Secondary Energy|Liquids;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;liquid fuel price at the secondary level,i.e. petrol,diesel,or weighted average;R
+179;Price|Secondary Energy|Liquids|Biomass;US$2010/GJ;Price|Secondary Energy|Liquids|Biomass;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;biofuel price at the secondary level,i.e. for biofuel consumers;R
+180;Price|Secondary Energy|Liquids|Oil;US$2010/GJ;Price|Secondary Energy|Liquids|Fossil;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;light fuel oil price at the secondary level,i.e. for large scale consumers (e.g. oil power plant). Prices should include the effect of carbon prices.;R
+181;Price|Secondary Energy|Solids|Biomass;US$2010/GJ;Price|Secondary Energy|Solids|Biomass;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;biomass price at the secondary level,i.e. for large scale consumers (e.g. biomass power plant). Prices should include the effect of carbon prices.;R
+182;Price|Secondary Energy|Solids|Coal;US$2010/GJ;Price|Secondary Energy|Solids|Fossil;US$2005/GJ;1.12;;Our reporting does only include carbon prices on pe2se conversion emissions;;coal price at the secondary level,i.e. for large scale consumers (e.g. coal power plant). Prices should include the effect of carbon prices.;R
 183;Value Added|Agriculture;billion US$2010/yr;;;;;;;value added by agriculture;
 184;Value Added|Residential and Commercial|Commercial;billion US$2010/yr;;;;;;;value added by commercial activity;
 185;Value Added|Industry;billion US$2010/yr;;;;;;;value added by industry;
