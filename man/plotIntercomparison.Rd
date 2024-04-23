@@ -27,7 +27,7 @@ plotIntercomparison(
 \item{renameModels}{vector with oldname = newname}
 
 \item{lineplotVariables}{vector with variable names for additional lineplots or filenames
-of files containing a 'Variable' column (or both)}
+of files containing a 'variable' column (or both)}
 
 \item{interactive}{boolean whether you want to select variables, regions and models to be plotted}
 
