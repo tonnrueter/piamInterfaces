@@ -42,7 +42,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     }
   }
 
-  mappingfiles <- lineplotVariables[lineplotVariables %in% names(mappingNames()) || file.exists(lineplotVariables)]
+  mappingfiles <- lineplotVariables[lineplotVariables %in% names(mappingNames()) | file.exists(lineplotVariables)]
   tmpLpv <- setdiff(lineplotVariables, mappingfiles)
   for (mapping in mappingfiles) {
     tmpLpv <- c(tmpLpv, getMapping(mapping) %>% pull("variable"))
