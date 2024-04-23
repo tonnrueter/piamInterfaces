@@ -7,12 +7,12 @@
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #' @param renameModels vector with oldname = newname
 #' @param lineplotVariables vector with variable names for additional lineplots or filenames
-#'        of files containing a 'Variable' column (or both)
+#'        of files containing a 'variable' column (or both)
 #' @param interactive boolean whether you want to select variables, regions and models to be plotted
 #' @param mainReg region name of main region to be passed to mip
 #' @param plotby whether you would like to have everything plotted by scenario, model and/or onefile
 #' @param diffto if specified, the difference to this scenario is calculated and plotted
-#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc
+#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc pull
 #' @importFrom rlang sym syms .data
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
 #' @importFrom grDevices pdf dev.off
@@ -45,7 +45,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   mappingfiles <- lineplotVariables[lineplotVariables %in% names(mappingNames()) || file.exists(lineplotVariables)]
   tmpLpv <- setdiff(lineplotVariables, mappingfiles)
   for (mapping in mappingfiles) {
-    tmpLpv <- c(tmpLpv, getMapping(mapping)$Variable)
+    tmpLpv <- c(tmpLpv, getMapping(mapping) %>% pull("variable"))
   }
   lineplotVariables <- unique(tmpLpv)
 
