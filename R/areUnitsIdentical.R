@@ -31,6 +31,7 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("Percentage", "Percent", "percent", "%"),
     c("unitless", "", "-", "1", "index"),
     c("tDM/cap/yr", "tDM/capita/yr"),
+    c("W/m2", "W/m^2"),
     c("USD05", "USD2005", "US$05", "US$2005", "USD2005", "USD_2005"),
     c("USD10", "USD2010", "US$10", "US$2010", "USD2010", "USD_2010"),
     # below, exceptionally added units that actually differ for backwards compatibility
