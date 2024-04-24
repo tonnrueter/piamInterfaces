@@ -201,7 +201,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 164;1;emissions (CO2);Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;;;CO2 emissions from industrial processes (IPCC categories 2A, B, C, E);R
 165;1;emissions (CO2);Gross Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;;;Gross CO2 emissions from industrial processes (IPCC categories 2A, B, C, E), not accounting for negative emissions from BECCS;R
 166;2;emissions (CO2);Emissions|CO2|Industrial Processes|Iron and Steel;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from iron & steel;
-167;2;emissions (CO2);Emissions|CO2|Industrial Processes|Non-Metallic Minerals;Mt CO2/yr;Emi|CO2|Industrial Processes|+|Cement;Mt CO2/yr;;;;CO2 emissions from industrial processes from non-metallic minerals;
+167;2;emissions (CO2);Emissions|CO2|Industrial Processes|Non-Metallic Minerals;Mt CO2/yr;Emi|CO2|Industrial Processes|+|Cement;Mt CO2/yr;;;;CO2 emissions from industrial processes from non-metallic minerals;R
 168;2;emissions (CO2);Emissions|CO2|Industrial Processes|Non-Metallic Minerals|Cement;Mt CO2/yr;Emi|CO2|Industrial Processes|+|Cement;Mt CO2/yr;;;;CO2 emissions from industrial processes from cement;R
 169;2;emissions (CO2);Emissions|CO2|Industrial Processes|Non-Ferrous Metals;Mt CO2/yr;;;;;;CO2 emissions from industrial processes from non-ferrous minerals;
 170;2;emissions (CO2);Emissions|CO2|Industrial Processes|Chemicals;Mt CO2/yr;Emi|CO2|Industrial Processes|+|Chemicals;Mt CO2/yr;;;;CO2 emissions from industrial processes from chemicals;R
@@ -1278,7 +1278,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1188;2;energy (secondary);Secondary Energy|Electricity|Transmission Losses;EJ/yr;;;;;;electricity losses from long-range high-voltage transmission;
 1189;2;energy (secondary);Secondary Energy|Gases|Biomass;EJ/yr;SE|Gases|+|Biomass;EJ/yr;;;;total production of biogas;R
 1190;2;energy (secondary);Secondary Energy|Gases|Coal;EJ/yr;SE|Gases|Fossil|+|Coal;EJ/yr;;;;total production of coal gas from coal gasification;R
-1191;2;energy (secondary);Secondary Energy|Gases|Fossil;EJ/yr;SE|Gases|Fossil;EJ/yr;;;;total production of gas from fossils;
+1191;2;energy (secondary);Secondary Energy|Gases|Fossil;EJ/yr;SE|Gases|Fossil;EJ/yr;;;;total production of gas from fossils;R
 1192;2;energy (secondary);Secondary Energy|Gases|Electricity;EJ/yr;SE|Gases|+|Hydrogen;EJ/yr;;;;total production of gas from electricity (power to gas);R
 1193;2;energy (secondary);Secondary Energy|Gases|Other;EJ/yr;;;;;;total production of gases from sources that do not fit any other category;
 1194;2;energy (secondary);Secondary Energy|Heat|Biomass;EJ/yr;SE|Heat|+|Biomass;EJ/yr;;;;centralized heat generation from biomass;R
