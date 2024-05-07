@@ -10,7 +10,7 @@ removePlus(x)
 \item{x}{vector with variable names}
 }
 \value{
-varname without any plusses human-readable summary to the user
+variable names without any plus notation
 }
 \description{
 Remove |+|, |++| etc. from variable names

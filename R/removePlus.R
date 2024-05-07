@@ -3,8 +3,8 @@
 #' @md
 #' @author Oliver Richters
 #' @param x vector with variable names
-#' @return varname without any plusses human-readable summary to the user
 #' @importFrom piamutils deletePlus
+#' @return variable names without any plus notation
 #' @examples
 #' #' removePlus(c("FE|+|CDR", "FE|CDR|DACCS"))
 #' @export
