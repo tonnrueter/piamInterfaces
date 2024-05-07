@@ -23,3 +23,4 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;GDP|MER|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|MER|w/ Macro-Economic Climate Damage;billion US$2005/yr;1.12;;;;;Rx
 ;Emissions|NH3;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
 ;Emissions|NH3|AFOLU;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
+;Emissions|CO2|Energy|Supply|Extraction;Mt CO2/yr;Emi|CO2|Energy|Supply|Extraction;Mt CO2/yr;1;;;;energy-related CO2 emissions from extraction processes;R

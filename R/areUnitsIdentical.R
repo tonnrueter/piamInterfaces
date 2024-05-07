@@ -9,7 +9,7 @@
 areUnitsIdentical <- function(vec1, vec2) {
   # only add units that actually have the same meaning, just different spelling
   identicalUnits <- list(
-    c("\u00B0C", "K"),
+    c("\u00B0C", "\u00C2\u00B0C", "K"),
     c("billion m2/yr", "bn m2/yr"),
     c("billion pkm/yr", "bn pkm/yr"),
     c("billion tkm/yr", "bn tkm/yr"),
