@@ -10,6 +10,7 @@
 #' @importFrom dplyr filter
 #' @importFrom quitte read.quitte
 #' @importFrom stringr str_split
+#' @importFrom utils capture.output
 #' @return quitte object with adapted mif data
 #' @examples
 #' \dontrun{
@@ -61,8 +62,10 @@ checkIIASASubmission <- function(mifdata, iiasatemplate, logFile = NULL, failOnU
 
 checkDataLength <- function(mifdata, logFile =  NULL) {
   mifdata <- as.quitte(mifdata)
-  differingdatalength <- 0
   logtext <- "\n\n### Check whether all scenarios have same number of variables"
+  scens <- levels(mifdata$scenario)
+  differing <- data.frame(matrix(1, nrow = 0, ncol = length(scens) + 1))
+  colnames(differing) <- c("Variable", scens)
   for (vari in levels(mifdata$variable)) {
     countDataPoints <- seq_along(levels(mifdata$scenario))
     for (i in countDataPoints) {
@@ -70,17 +73,15 @@ checkDataLength <- function(mifdata, logFile =  NULL) {
                                 == levels(mifdata$scenario)[[i]])
     }
     if (length(unique(countDataPoints)) != 1) {
-      logtext <- c(logtext,
-        paste0("- For ", vari, ", data points per scenario differ: ",
-        paste0(levels(mifdata$scenario), ": ", countDataPoints, ".", collapse = " "))
-      )
-      differingdatalength <- differingdatalength + 1
+      differing[nrow(differing) + 1, ] <- c(vari, countDataPoints)
     }
   }
-  if (differingdatalength == 0) {
-    logtext <- c(logtext, "- Everything seems fine")
+  if (nrow(differing) == 0) {
+    logtext <- "\n\n### Check whether all scenarios have same number of variables is fine."
   } else {
-    cat(paste0("# ", differingdatalength, " variables found whose data points differ between scenarios"))
+    logtext <- c(paste("\n\n###", nrow(differing), "variables found whose data points differ between scenarios:"),
+                 capture.output(print.data.frame(differing, print.gap = 2, quote = FALSE, right = FALSE)))
+    cat(paste0("# ", nrow(differing), " variables found whose data points differ between scenarios."))
   }
   if (length(logtext) > 0 && ! is.null(logFile) && ! isFALSE(logFile)) {
     write(logtext, file = logFile, append = TRUE)
