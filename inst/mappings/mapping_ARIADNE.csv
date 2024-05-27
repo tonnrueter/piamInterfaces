@@ -606,7 +606,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (final);Final Energy|Electricity;PJ/yr;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses;FE|+|Electricity;EJ/yr;1000;;0;;R
 1;energy (final);Final Energy|Solids;PJ/yr;final energy solid fuel consumption (including coal and solid biomass),excl. non-energy feedstocks;FE|w/o Bunkers|w/o Non-energy Use|Solids;EJ/yr;1000;;0;;R
 1;energy (final);Final Energy|Solids|Biomass;PJ/yr;final energy consumption of solid biomass (modern and traditional, including renewable waste), excluding final energy consumption of bioliquids which are reported in the liquids category, incl. non-energy feedstocks;FE|w/o Bunkers|w/o Non-energy Use|Solids|Biomass;EJ/yr;1000;;0;;R
-2;energy (final);Final Energy|Solids|Biomass|Traditional;PJ/yr;final energy consumption of traditional biomass;;;;;0;;
+2;energy (final);Final Energy|Solids|Biomass|Traditional;PJ/yr;final energy consumption of traditional biomass;FE|Solids|Biomass|+|Traditional;EJ/yr;1000;;0;;R
 2;energy (final);Final Energy|Solids|Coal;PJ/yr;final energy coal consumption, excl. non-energy feedstocks;FE|w/o Bunkers|w/o Non-energy Use|Solids|Fossil;EJ/yr;1000;;0;;R
 1;energy (final);Final Energy|Gases;PJ/yr;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses, excl. non-energy feedstocks;FE|w/o Bunkers|w/o Non-energy Use|Gases;EJ/yr;1000;;0;;R
 2;energy (final);Final Energy|Gases|Natural Gas;PJ/yr;final energy consumption of natural gas;FE|w/o Bunkers|w/o Non-energy Use|Gases|Fossil;EJ/yr;1000;;0;;R
