@@ -83,3 +83,111 @@ test_that("fail on duplicated data", {
   expect_error(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
                "Duplicated data found")
 })
+
+
+# Unit test to ensure functionality of weighted
+# averages in the mapping. Generates a mapping file with
+# 2 piam variables which are aggregated into an output variable
+.weightedVariablesTest <- function(values, includeWeightInMap) {
+  piamVariables <- c("Var|One", "Var|Two")
+  piamWeights <- c("Area|One", "Area|Two")
+  piamUnits <- c(rep("PiamUnit", 2), rep("WeightUnit", 2))
+  outputVariables <- c("OutputVar")
+  outputUnits <- c("OutputUnit")
+  modelName <- "aModel"
+
+  .getMapping <- function(includeWeightColumn = FALSE) {
+    mapping <- data.frame(
+      variable = outputVariables,
+      unit = outputUnits,
+      piam_variable = piamVariables,
+      piam_unit = rep("PiamUnit", 2),
+      piam_factor = c("1", "1000"),
+      weight = piamWeights,
+      comment = rep("", 2)
+    )
+    if (includeWeightColumn == FALSE) mapping <- mapping %>% select(- "weight")
+    write.csv2(mapping, quote = FALSE, file = file.path(tempdir(), "test_mappings.csv"), row.names = FALSE)
+    return(file.path(tempdir(), "test_mappings.csv"))
+  }
+
+  .getMif <- function(values) {
+    scenario <- "scen1"
+    region <- "CHN"
+    names <- c("Model", "Scenario", "Region", "Variable", "Unit", "2010")
+    for (i in 1:4){
+      row <- list(modelName, scenario, region, c(piamVariables, piamWeights)[i], piamUnits[i], values[i])
+      names(row) <- names
+      if (i == 1) {
+        runOutput <- data.frame(row, check.names = FALSE)
+      } else {
+        runOutput <- rbind(runOutput, data.frame(row, check.names = FALSE))
+      }
+    }
+    write.csv2(runOutput, quote = FALSE, file = file.path(tempdir(), "test_mif.csv"), row.names = FALSE)
+    return(file.path(tempdir(), "test_mif.csv"))
+  }
+
+  # apply the mapping
+  piam <- testthat::expect_no_warning(generateIIASASubmission(
+    mifs = .getMif(values),
+    mapping = .getMapping(includeWeightColumn = includeWeightInMap),
+    model = modelName,
+    outputFilename = NULL,
+    timesteps = "all"
+  ))
+
+  return(piam$value)
+}
+
+.expectedFrame <- function(values, includeWeightColumn) {
+  if (includeWeightColumn) {
+    totalWeight <- values[3] + values[4]
+    out <- values[1] * (values[3] / totalWeight) + 1000 * values[2] * (values[4] / totalWeight)
+  } else {
+    out <- values[1] + 1000.0 * values[2]
+  }
+  outputRows <- data.frame(
+    variable = "OutputVar",
+    value = out,
+    model = "aModel",
+    scenario = "scen1",
+    region = "CHN",
+    unit = "OutputUnit"
+  )
+  return(outputRows)
+}
+
+
+test_that("Mapping handles weights as expected.", {
+  # When all values present, with either a weight column included or not
+  testthat::expect_equal(
+    .weightedVariablesTest(c(10, 10, 10, 10), includeWeightInMap = FALSE),
+    10 + 1000 * 10
+  )
+  testthat::expect_equal(
+    .weightedVariablesTest(c(10, 10, 10, 10), includeWeightInMap = TRUE),
+    10 * (10 / 20) + 1000 * 10 * (10 / 20)
+  )
+  # When a value is missing from the mif. If its a weighted variable then
+  # omit it from the weighted sum. therefore expect the total weight to 10
+  # not 20
+  testthat::expect_equal(
+    .weightedVariablesTest(c(NA, 10, 10, 10), includeWeightInMap = FALSE),
+    1000 * 10
+  )
+  testthat::expect_equal(
+    .weightedVariablesTest(c(NA, 10, 10, 10), includeWeightInMap = TRUE),
+    1000 * 10 * (10 / 10) # ignore first row.
+  )
+  # When a weight is missing drop that whole row from the weighted average.
+  testthat::expect_equal(
+    .weightedVariablesTest(c(10, 10, NA, 10), includeWeightInMap = FALSE),
+    10 + 1000 * 10
+  )
+  testthat::expect_equal(
+    .weightedVariablesTest(c(10, 10, 10, NA), includeWeightInMap = TRUE),
+    10 * (10 / 10) # if the weight is NA then ignore that from the total weight
+  )
+}
+)

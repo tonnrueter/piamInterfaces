@@ -49,8 +49,9 @@
 #' @param timesteps timesteps that are accepted in final submission
 #' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
+#' @param naAction a function which indicates what should happen when the data contain NA values.
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
-#' @importFrom dplyr filter mutate distinct inner_join
+#' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
 #' @importFrom stringr str_trim
 #' @examples
 #' \dontrun{
@@ -75,7 +76,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     generatePlots = FALSE,
                                     timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
                                     checkSummation = TRUE,
-                                    mappingFile = NULL) {
+                                    mappingFile = NULL,
+                                    naAction = "na.omit") {
 
   # process input parameters ----
 
@@ -105,7 +107,11 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
         "piam_variable" = removePlus(.data$piam_variable),
         "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor))
       ) %>%
-      select("variable", "unit", "piam_variable", "piam_unit", "piam_factor")
+      dplyr::bind_rows(tibble("weight" = "NULL")) %>% # add the optional weight column if not present
+      mutate(
+        "piam_weight" = .data$weight
+      ) %>%
+      select("variable", "unit", "piam_variable", "piam_unit", "piam_factor", "piam_weight")
     checkUnitFactor(t, logFile = logFile, failOnUnitMismatch = FALSE)
     mapData <- rbind(mapData, t)
   }
@@ -137,16 +143,17 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   message("# Apply generated mapping to data")
 
-  submission <- mifdata %>%
+  mifdata <- mifdata %>%
     filter(.data$period %in% timesteps) %>%
     mutate(
       "piam_variable" = removePlus(str_trim(.data$variable)),
       "piam_unit" = str_trim(.data$unit)
       ) %>%
     select(-c("variable", "unit")) %>%
-    distinct() %>%
-    inner_join(mapData, by = "piam_variable", relationship = "many-to-many") %>%
-    mutate("value" = .data$piam_factor * .data$value)
+    distinct()
+
+  submission <- mifdata %>%
+    inner_join(mapData, by = "piam_variable", relationship = "many-to-many")
 
   # check for unit mismatches in data and mapping
   unitMismatches <- submission %>%
@@ -158,12 +165,18 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     warning("Unit mismatches between data and mapping found for some variables: \n",
             paste0(utils::capture.output(unitMismatches), collapse = "\n"))
   }
-
   submission <- submission %>%
+    .resolveWeights(weightSource = mifdata) %>%
+    mutate("value" = .data$piam_factor * .data$value) %>%
     select("model", "scenario", "region", "period", "variable", "unit", "value") %>%
     quitteSort()
 
-  submission <- aggregate(value ~ model + region + scenario + period + variable + unit, data = submission, FUN = "sum")
+  submission <- aggregate(
+    value ~ model + region + scenario + period + variable + unit,
+    data = submission,
+    FUN = "sum",
+    na.action = naAction
+  )
 
   # apply corrections using IIASA template ----
 
@@ -233,4 +246,67 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
     dt$scenario <- as.factor(dt$scenario)
     return(dt)
+}
+
+# resolve the weight column if present else return
+.resolveWeights <- function(dataframe, weightSource) {
+  if (all(dataframe$piam_weight == "NULL") || all(is.na(dataframe$piam_weight))) {
+    message("No weights to resolve. Skipping.")
+    return(dataframe)
+  } else {
+    message("Resolving weights for weighted average variables.")
+  }
+  normalizedData <- dataframe %>%
+    mutate(
+      "piam_weight" = removePlus(.data$piam_weight)
+    )
+  normalizedWeights <- weightSource %>%
+    mutate(
+      "piam_variable" = removePlus(.data$piam_variable),
+    )
+  # ensure the source data variables are normalised in the same way
+  normalizedData %>%
+  # split on the rows whose weight column needs resolving from a point variable
+  filter(.data$piam_weight %in% unique(normalizedWeights$piam_variable)) %>%
+  # join on the weight column and replace pointer with value
+  left_join(
+    normalizedWeights,
+    by = c("model", "scenario", "region", "period", "piam_weight" = "piam_variable"),
+    relationship = "many-to-one") %>%
+  select(
+    "model",
+    "scenario",
+    "region",
+    "variable",
+    "unit",
+    "period",
+    "value" = "value.x",
+    "piam_factor",
+    "piam_weight" = "value.y") %>%
+    group_by(.data$model, .data$scenario, .data$region, .data$period, .data$variable, .data$unit) %>%
+    filter(! is.na(.data$value)) %>%
+    filter(! is.na(.data$piam_weight)) %>%
+    mutate(
+      "piam_weight" = .data$piam_weight / sum(.data$piam_weight)
+    ) %>%
+    ungroup() %>%
+    # apply the weights
+    mutate(
+      "value" = .data$value * .data$piam_weight) %>%
+    select(-c("piam_weight")) %>%
+  # recombine with the non-weighted columns
+  rbind(
+    normalizedData %>%
+      filter(! (.data$piam_weight %in%  unique(normalizedWeights$piam_variable))) %>%
+      select(
+        "model",
+        "scenario",
+        "region",
+        "variable",
+        "unit",
+        "period",
+        "value",
+        "piam_factor"
+      )
+  )
 }

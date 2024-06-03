@@ -41,6 +41,7 @@ Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
 - `Tier`: importance of variable. 1 means most important
 - `Comment`: place for comments
+- `weight`: For variables which are weighted averages. This column references the variable in the input to be used as a weight.
 
 
 To edit a mapping in `R`, use:
