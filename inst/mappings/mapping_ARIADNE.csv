@@ -1791,63 +1791,63 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (electricity);Investment|Energy Supply|Electricity|Fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Gas;billion US$2005/yr;1.174;;0;;R
 2;energy (electricity);Investment|Energy Supply|Electricity|Fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Oil;billion US$2005/yr;1.174;;0;;R
 2;energy (electricity);Investment|Energy Supply|Electricity|Coal;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Coal;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Coal|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Coal|w/ CC;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Coal|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Coal|w/o CC;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Gas;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category (for gas generation also the upgrade of existing plants to H2 plants should be included). If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Gas;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Gas|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category (for gas generation also the upgrade of existing plants to H2 plants should be included). If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Gas|w/ CC;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Gas|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category (for gas generation also the upgrade of existing plants to H2 plants should be included). If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Gas|w/o CC;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Oil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Oil;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Oil|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Oil|w/ CC;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Oil|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Oil|w/o CC;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Biomass;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Nuclear;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Hydro;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Hydrogen;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Solar;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Coal|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Coal|+|w/ CC;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Coal|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Coal|+|w/o CC;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Gas;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category (for gas generation also the upgrade of existing plants to H2 plants should be included). If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Gas;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Gas|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category (for gas generation also the upgrade of existing plants to H2 plants should be included). If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Gas|+|w/ CC;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Gas|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category (for gas generation also the upgrade of existing plants to H2 plants should be included). If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Gas|+|w/o CC;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Oil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Oil;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Oil|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Oil|+|w/ CC;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Oil|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Oil|+|w/o CC;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Biomass;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Nuclear;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Hydro;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Hydrogen;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Solar;billion US$2005/yr;1.174;;0;;R
 1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Wind;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Geothermal;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Biomass;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Biomass;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Biomass|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Biomass|w/ CC;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Biomass|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Biomass|w/o CC;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Nuclear;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Nuclear;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Hydro;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Solar;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Geothermal;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Biomass;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Biomass;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Biomass|w/ CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Biomass|+|w/ CC;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Biomass|w/o CCS;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Biomass|+|w/o CC;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Nuclear;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Nuclear;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Hydro;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Solar;billion US$2005/yr;1.174;;0;;R
 1;energy (electricity);Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Wind;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Geothermal;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Hydro;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Hydro;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Hydrogen;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Hydrogen;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Solar;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Solar;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Non-Biomass Renewables;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Geothermal;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Hydro;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Hydro;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Hydrogen;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Hydrogen;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Solar;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Solar;billion US$2005/yr;1.174;;0;;R
 1;energy (electricity);Investment|Energy Supply|Electricity|Wind;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Wind;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Wind Onshore;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Wind|Onshore;billion US$2005/yr;1.174;;0;;R
-1;energy (electricity);Investment|Energy Supply|Electricity|Wind Offshore;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Wind|Offshore;billion US$2005/yr;1.174;;0;;R
-2;energy (electricity);Investment|Energy Supply|Electricity|Geothermal;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Geothermal;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Wind Onshore;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Wind|+|Onshore;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Wind Offshore;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|Wind|+|Offshore;billion US$2005/yr;1.174;;0;;R
+2;energy (electricity);Investment|Energy Supply|Electricity|Geothermal;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Geothermal;billion US$2005/yr;1.174;;0;;R
 2;energy (electricity);Investment|Energy Supply|Electricity|Ocean;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;;;;;0;;
 2;energy (electricity);Investment|Energy Supply|Electricity|Other;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;;;;;0;;
-1;energy (electricity);Investment|Energy Supply|Electricity|Transmission and Distribution;billion EUR2020/yr;Total investment spending in transmission and distribution of power generation, including offshore wind linkage.;Energy Investments|Electricity|Grid;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Transmission and Distribution;billion EUR2020/yr;Total investment spending in transmission and distribution of power generation, including offshore wind linkage.;Energy Investments|Electricity|+|Grid;billion US$2005/yr;1.174;;0;;R
 2;energy (electricity);Investment|Energy Supply|Electricity|Transmission;billion EUR2020/yr;investments in transmission of power generation;;;;;0;;
 2;energy (electricity);Investment|Energy Supply|Electricity|Transmission|AC;billion EUR2020/yr;investments in AC transmission of power generation;;;;;0;;
 2;energy (electricity);Investment|Energy Supply|Electricity|Transmission|DC;billion EUR2020/yr;investments in DC transmission of power generation;;;;;0;;
 2;energy (electricity);Investment|Energy Supply|Electricity|Distribution;billion EUR2020/yr;investments in distribution of power generation;;;;;0;;
-1;energy (electricity);Investment|Energy Supply|Electricity|Electricity Storage;billion EUR2020/yr;Total investment spending in electricity storage technologies (e.g., batteries, compressed air storage reservoirs, etc.);Energy Investments|Electricity|Storage;billion US$2005/yr;1.174;;0;;R
+1;energy (electricity);Investment|Energy Supply|Electricity|Electricity Storage;billion EUR2020/yr;Total investment spending in electricity storage technologies (e.g., batteries, compressed air storage reservoirs, etc.);Energy Investments|Electricity|+|Storage;billion US$2005/yr;1.174;;0;;R
 2;energy (buildings);Investment|Energy Supply|Heat|Geothermal;billion EUR2020/yr;Total investment spending in new heat generation for the specified category. If the model features several sub-categories, the total investments should be reported.;;;;;0;;
-2;energy (buildings);Investment|Energy Supply|Heat|Heatpump;billion EUR2020/yr;Total investment spending in new heat generation for the specified category. If the model features several sub-categories, the total investments should be reported.;Energy Investments|Heat|Heat Pump;billion US$2005/yr;1.174;;0;;R
+2;energy (buildings);Investment|Energy Supply|Heat|Heatpump;billion EUR2020/yr;Total investment spending in new heat generation for the specified category. If the model features several sub-categories, the total investments should be reported.;Energy Investments|Heat|+|Heat Pump;billion US$2005/yr;1.174;;0;;R
 2;energy (buildings);Investment|Energy Supply|Heat|Solarthermal;billion EUR2020/yr;Total investment spending in new heat generation for the specified category. If the model features several sub-categories, the total investments should be reported.;;;;;0;;
 1;energy (buildings);Investment|Energy Supply|Heat|Transmission and Distribution;billion EUR2020/yr;Total investment spending into district heating infrastructure;Energy Investments|Heat|+|Grid;billion US$2005/yr;1.174;;0;;R
-1;energy (buildings);Investment|Energy Supply|Gases|Transmission and Distribution;billion EUR2020/yr;Total investment spending into transmission and distribution of gases (not included: investments to rededicate gas to h2 transmission and distribution);Energy Investments|Gases|Transmission and Distribution;billion US$2005/yr;1.174;;0;;R
+1;energy (buildings);Investment|Energy Supply|Gases|Transmission and Distribution;billion EUR2020/yr;Total investment spending into transmission and distribution of gases (not included: investments to rededicate gas to h2 transmission and distribution);Energy Investments|Gases|+|Transmission and Distribution;billion US$2005/yr;1.174;;0;;R
 2;energy (supply);Investment|Energy Supply|Gases|Transmission;billion EUR2020/yr;investments into transmission of gases;;;;;0;;
-1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Transmission and Distribution;billion EUR2020/yr;Total investment spending into transmission and distribution of hydrogen (new build networks should be included, as well as investments needed for rededication of natural gas networks).;Energy Investments|Hydrogen|Transmission and Distribution;billion US$2005/yr;1.174;;0;;R
+1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Transmission and Distribution;billion EUR2020/yr;Total investment spending into transmission and distribution of hydrogen (new build networks should be included, as well as investments needed for rededication of natural gas networks).;Energy Investments|Hydrogen|+|Transmission and Distribution;billion US$2005/yr;1.174;;0;;R
 2;energy (hydrogen);Investment|Energy Supply|Hydrogen|Transmission;billion EUR2020/yr;investments into transmission of hydrogen;;;;;0;;
 1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Storage;billion EUR2020/yr;Total investment spending into storage of hydrogen;;;;;0;;
-1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Fossil;billion EUR2020/yr;Total investment spending for the production of hydrogen from fossil sources. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Hydrogen|Fossil;billion US$2005/yr;1.174;;0;;R
+1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Fossil;billion EUR2020/yr;Total investment spending for the production of hydrogen from fossil sources. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Hydrogen|+|Fossil;billion US$2005/yr;1.174;;0;;R
 1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Biomass;billion EUR2020/yr;Total investment spending for the production of hydrogen from biomass. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Hydrogen|Bio;billion US$2005/yr;1.174;;0;;R
-1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Electrolysis;billion EUR2020/yr;Total investment spending for the production of hydrogen from electrolysis. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Hydrogen|Electrolysis;billion US$2005/yr;1.174;;0;;R
+1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Electrolysis;billion EUR2020/yr;Total investment spending for the production of hydrogen from electrolysis. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Hydrogen|+|Electrolysis;billion US$2005/yr;1.174;;0;;R
 2;energy (hydrogen);Investment|Energy Supply|Hydrogen|Electrolysis|Abroad;billion EUR2020/yr;Total investment spending into projects abroad for the production of hydrogen from electrolysis . For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;;;;;0;;
 1;energy (hydrogen);Investment|Energy Supply|Hydrogen|Other;billion EUR2020/yr;Total investment spending for the production of hydrogen from other sources. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;;;;;0;;
 2;energy (supply);Investment|Energy Supply|Liquids;billion EUR2020/yr;Total investment spending for the production of liquid fuels. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Liquids;billion US$2005/yr;1.174;;0;;R
 2;energy (supply);Investment|Energy Supply|Liquids|Oil;billion EUR2020/yr;Total investment spending for the production of fossil fuels from oil refineries For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Liquids|Oil Ref;billion US$2005/yr;1.174;;0;;R
 1;energy (supply);Investment|Energy Supply|Liquids|Coal and Gas;billion EUR2020/yr;Total investment spending for the production of fossil-based synfuels (coal and gas). For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Liquids|Fossil|w/o oil;billion US$2005/yr;1.174;;0;;R
-1;energy (supply);Investment|Energy Supply|Liquids|Biomass;billion EUR2020/yr;Total investment spending for the production of biofuels. These should not include the costs of the feedstock. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Liquids|Bio;billion US$2005/yr;1.174;;0;;R
-1;energy (supply);Investment|Energy Supply|Liquids|Hydrogen;billion EUR2020/yr;Total investment spending for the production of E-fuels. These should not include the costs of the feedstock.;Energy Investments|Liquids|Hydrogen;billion US$2005/yr;1.174;;0;;R
+1;energy (supply);Investment|Energy Supply|Liquids|Biomass;billion EUR2020/yr;Total investment spending for the production of biofuels. These should not include the costs of the feedstock. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Liquids|+|Bio;billion US$2005/yr;1.174;;0;;R
+1;energy (supply);Investment|Energy Supply|Liquids|Hydrogen;billion EUR2020/yr;Total investment spending for the production of E-fuels. These should not include the costs of the feedstock.;Energy Investments|Liquids|+|Hydrogen;billion US$2005/yr;1.174;;0;;R
 2;energy (supply);Investment|Energy Supply|Liquids|Hydrogen|Abroad;billion EUR2020/yr;Total investment spending into projects abroad for the production of E-fuels. These should not include the costs of the feedstock.;;;;;0;;
 1;energy (supply);Investment|Energy Supply|CO2 Transport and Storage;billion EUR2020/yr;Total investment spending in CO2 transport and storage (note that investment in the capturing equipment should be included along with the power plant technology or in the industrial sector for BECCS);Energy Investments|CO2 Trans&Stor;billion US$2005/yr;1.174;;0;;R
 1;energy (supply);Investment|Energy Supply|DACCS;billion EUR2020/yr;Total investment spending in direct air capture and storage (only the capturing equipment, storage is part of transport and storage);;;;;0;;
@@ -2285,125 +2285,3 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;policy;Subsidies|Energy Supply|Hydrogen;billion EUR2020/yr;Subsidies for energy infrastructure related to Hydrogen (generation plants, transport and storage);;;;;0;;
 2;policy;Subsidies|Energy Supply|Infrastructure|Hydrogen;billion EUR2020/yr;Subsidies for energy infrastructure related to Hydrogen (transport and storage);;;;;0;;
 2;policy;Subsidies|Energy Supply|Infrastructure|Electricity;billion EUR2020/yr;Subsidies for energy infrastructure related to Electricity (transport and storage);;;;;0;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
-;;;;;;;;;;;
