@@ -43,7 +43,16 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1.17", "EUR_2020", "US$2005"),
                           c("1.174", "EUR2020", "US$2005"),
                           # temporary, error in ARIADNE mapping for 'Capital Stock'
-                          c("1.174", "billion EUR2020/yr", "billion US$2005")
+                          c("1.174", "billion EUR2020/yr", "billion US$2005"),
+                          # AgMIP
+                          c("1000", "1000 ha", "million ha"),
+                          c("1", "MtCO2", "Mt CO2/yr"),
+                          c("1000", "MtCO2e", "Gt CO2e/yr"),
+                          c("1", "MtCO2e", "Mt CO2e/yr"),
+                          c("1000", "1000 t", "Mt Nr/yr"),
+                          c("1", "TgN/year", "Mt Nr/yr"),
+                          c("0.001", "bn USD 2005 MER", "million US$05 MER/yr"),
+                          c("1000", "1000 t dm", "Mt DM/yr")
                          )
   template$piam_factor[is.na(template$piam_factor)] <- 1
   success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
