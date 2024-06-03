@@ -16,11 +16,11 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("billion vkm/yr", "bn vkm/yr"),
     c("Gtkm/yr", "bn tkm/yr"),
     c("Gpkm/yr", "bn pkm/yr"),
-    c("kcal/cap/day", "kcal/capita/day"),
+    c("kcal/cap/day", "kcal/capita/day", "kcal/cap/d"),
     c("kt CF4/yr", "kt CF4-equiv/yr"),
     c("ktU/yr", "kt U/yr"),
     c("km\u00b3", "km3"),
-    c("Million", "million", "million people"),
+    c("Million", "million", "million people", "mio people"),
     c("million t DM/yr", "Mt DM/yr"),
     c("million vehicles", "Million vehicles"),
     c("Mt/yr", "Mt/year"),
@@ -38,9 +38,12 @@ areUnitsIdentical <- function(vec1, vec2) {
     # for 'Energy Service|Residential and Commercial|Floor Space'
     c("bn m2/yr", "billion m2/yr", "bn m2", "billion m2"),
     # for 'Productivity|Yield' and subvariables
-    c("t DM/ha", "t DM/ha/yr"),
+    c("t DM/ha", "t DM/ha/yr", "dm t/ha"),
     # for 'Water|Environmental flow violation volume'
     c("km3/yr", "km3"),
+    # AgMIP
+    c("USD05/tCO2", "US$2005/tCO2"),
+    c("Nr/Nr", "Nr per Nr"),
   NULL)
   areIdentical <- function(x, y) {
     # literally identical or both found in the same list element above

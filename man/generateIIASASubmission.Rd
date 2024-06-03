@@ -18,7 +18,8 @@ generateIIASASubmission(
   generatePlots = FALSE,
   timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
   checkSummation = TRUE,
-  mappingFile = NULL
+  mappingFile = NULL,
+  naAction = "na.omit"
 )
 }
 \arguments{
@@ -55,6 +56,8 @@ used to delete superfluous variables and adapt units}
 \item{checkSummation}{either TRUE to identify summation files from mapping, or filename, or FALSE}
 
 \item{mappingFile}{has no effect and is only kept for backwards-compatibility}
+
+\item{naAction}{a function which indicates what should happen when the data contain NA values.}
 }
 \description{
 Generates an IIASA submission from REMIND or MAgPIE runs by applying a project-specific mapping.
