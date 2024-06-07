@@ -1531,18 +1531,18 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1393;Land Cover;million ha;Resources|Land Cover;million ha;;;;;total land cover;M
 1394;Land Cover|Built-up Area;million ha;Resources|Land Cover|+|Urban Area;million ha;;;;;total built-up land associated with human settlement;M
 1395;Land Cover|Cropland;million ha;Resources|Land Cover|+|Cropland;million ha;;;;;total arable land,i.e. land in non-forest bioenergy crop,food,and feed/fodder crops,as well as other arable land (cultivated area);M
-1396;Land Cover|Cropland|Cereals;million ha;Resources|Land Cover|Cropland|Crops|+|Cereals;million ha;;;;;land dedicated to cereal crops: wheat,rice and coarse grains (maize,corn,millet,sorghum,barley,oats,rye);M
+1396;Land Cover|Cropland|Cereals;million ha;Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;million ha;;;;;land dedicated to cereal crops: wheat,rice and coarse grains (maize,corn,millet,sorghum,barley,oats,rye);M
 1397;Land Cover|Cropland|Double-cropped;million ha;;;;;;;area of land that is double-cropped (twice in a year);
-1398;Land Cover|Cropland|Energy Crops;million ha;Resources|Land Cover|Cropland|+|Bioenergy crops;million ha;;;;;land dedicated to both 1st & 2nd generation energy crops;M
+1398;Land Cover|Cropland|Energy Crops;million ha;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;million ha;;;;;land dedicated to both 1st & 2nd generation energy crops;M
 1399;Land Cover|Cropland|Energy Crops|1st generation;million ha;;;;;;;land dedicated to 1st generation energy crops;
-1400;Land Cover|Cropland|Energy Crops|2nd generation;million ha;Resources|Land Cover|Cropland|+|Bioenergy crops;million ha;;;;;land dedicated to 2nd generation energy crops (e.g.,switchgrass,miscanthus,fast-growing wood species);M
-1401;Land Cover|Cropland|Energy Crops|Irrigated;million ha;Resources|Land Cover|Cropland|Bioenergy crops|irrigated;million ha;;;;;irrigated land dedicated to energy crops (e.g.,switchgrass,miscanthus,fast-growing wood species);M
-1402;Land Cover|Cropland|Irrigated;million ha;Resources|Land Cover|Cropland|Crops|irrigated;million ha;;;;;irrigated arable land,i.e. land in non-forest bioenergy crop,food,and feed/fodder crops,as well as other arable land (cultivated area);M
-;Land Cover|Cropland|Irrigated;million ha;Resources|Land Cover|Cropland|Forage|irrigated;million ha;;;;;irrigated arable land,i.e. land in non-forest bioenergy crop,food,and feed/fodder crops,as well as other arable land (cultivated area);M
-;Land Cover|Cropland|Irrigated;million ha;Resources|Land Cover|Cropland|Bioenergy crops|irrigated;million ha;;;;;irrigated arable land,i.e. land in non-forest bioenergy crop,food,and feed/fodder crops,as well as other arable land (cultivated area);M
-1403;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Crops|rainfed;million ha;;;;;area of land that is rain-fed;M
-;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Forage|rainfed;million ha;;;;;area of land that is rain-fed;M
-;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Bioenergy crops|rainfed;million ha;;;;;area of land that is rain-fed;M
+1400;Land Cover|Cropland|Energy Crops|2nd generation;million ha;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;million ha;;;;;land dedicated to 2nd generation energy crops (e.g.,switchgrass,miscanthus,fast-growing wood species);M
+1401;Land Cover|Cropland|Energy Crops|Irrigated;million ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|irrigated;million ha;;;;;irrigated land dedicated to energy crops (e.g.,switchgrass,miscanthus,fast-growing wood species);M
+1402;Land Cover|Cropland|Irrigated;million ha;Resources|Land Cover|Cropland|Croparea|Crops|irrigated;million ha;;;;;irrigated arable land,i.e. land in non-forest bioenergy crop,food,and feed/fodder crops,as well as other arable land (cultivated area);M
+;Land Cover|Cropland|Irrigated;million ha;Resources|Land Cover|Cropland|Croparea|Forage|irrigated;million ha;;;;;irrigated arable land,i.e. land in non-forest bioenergy crop,food,and feed/fodder crops,as well as other arable land (cultivated area);M
+;Land Cover|Cropland|Irrigated;million ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|irrigated;million ha;;;;;irrigated arable land,i.e. land in non-forest bioenergy crop,food,and feed/fodder crops,as well as other arable land (cultivated area);M
+1403;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Croparea|Crops|rainfed;million ha;;;;;area of land that is rain-fed;M
+;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Croparea|Forage|rainfed;million ha;;;;;area of land that is rain-fed;M
+;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|rainfed;million ha;;;;;area of land that is rain-fed;M
 1404;Land Cover|Forest;million ha;Resources|Land Cover|+|Forest;million ha;;;;;managed and unmanaged forest area;M
 1405;Land Cover|Forest|Afforestation and Reforestation;million ha;Resources|Land Cover|Forest|Managed Forest|+|NPI/NDC;million ha;;;;;area with afforestation and reforestation;M
 ;Land Cover|Forest|Afforestation and Reforestation;million ha;Resources|Land Cover|Forest|Managed Forest|+|Afforestation;million ha;;;;;area with afforestation and reforestation;M
