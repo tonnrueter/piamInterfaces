@@ -31,7 +31,7 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
 
   varname <- trimws(varname)
 
-  message("\n##### Search for information on ", green, varname, nc, " in mapping")
+  message("\n##### Search for information on ", green, varname, nc, " in mappings")
   for (m in mapping) {
     mappingData <- getMapping(m)
     mappingName <- basename(m)
@@ -101,5 +101,14 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
     for (ch in mifchilds) {
       message("- ", ch)
     }
+  }
+
+  csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
+    read.csv2(comment.char = "#", strip.white = TRUE) %>%
+    as_tibble() %>%
+    filter(.data$piam_variable %in% varname | .data$old_name %in% varname)
+  if (nrow(csvdata) > 0) {
+    message("\n### Renaming found in renamed_piam_variables.csv:\n",
+            paste0("- ", csvdata$old_name, " -> ", csvdata$piam_variable, collapse = "\n"))
   }
 }
