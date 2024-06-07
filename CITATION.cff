@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: If you use this software, please cite it using the metadata from this file.
 type: software
 title: 'piamInterfaces: Project specific interfaces to REMIND / MAgPIE'
-version: 0.20.1
-date-released: '2024-06-03'
+version: 0.20.2
+date-released: '2024-06-07'
 abstract: Project specific interfaces to REMIND / MAgPIE.
 authors:
 - family-names: Benke
@@ -12,5 +12,6 @@ authors:
 - family-names: Richters
   given-names: Oliver
 license: LGPL-3.0
+keywords: ~
 repository-code: https://github.com/pik-piam/piamInterfaces
 

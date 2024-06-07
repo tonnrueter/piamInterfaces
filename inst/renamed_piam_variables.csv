@@ -29,3 +29,81 @@ MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile     ;Temperature|Global
 MAGICC7 AR6|Atmospheric Concentrations|CH4|50.0th Percentile ;Concentration|CH4
 MAGICC7 AR6|Atmospheric Concentrations|CO2|50.0th Percentile ;Concentration|CO2
 MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile ;Concentration|N2O
+
+# magpie4 reporting variables for cropland changed with magpie4 2.3.2
+Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;Resources|Land Cover|Cropland|+|Bioenergy crops
+Resources|Land Cover|Cropland|Croparea|+|Crops;Resources|Land Cover|Cropland|+|Crops
+Resources|Land Cover|Cropland|Croparea|+|Fallow Cropland;Resources|Land Cover|Cropland|+|Fallow Cropland
+Resources|Land Cover|Cropland|Croparea|+|Forage;Resources|Land Cover|Cropland|+|Forage
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|+|Short rotation grasses;Resources|Land Cover|Cropland|Bioenergy crops|+|Short rotation grasses
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|+|Short rotation trees;Resources|Land Cover|Cropland|Bioenergy crops|+|Short rotation trees
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|irrigated;Resources|Land Cover|Cropland|Bioenergy crops|irrigated
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|rainfed;Resources|Land Cover|Cropland|Bioenergy crops|rainfed
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation grasses|irrigated;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation grasses|irrigated
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation grasses|rainfed;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation grasses|rainfed
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation trees|irrigated;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation trees|irrigated
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation trees|rainfed;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation trees|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;Resources|Land Cover|Cropland|Crops|+|Cereals
+Resources|Land Cover|Cropland|Croparea|Crops|+|Oil crops;Resources|Land Cover|Cropland|Crops|+|Oil crops
+Resources|Land Cover|Cropland|Croparea|Crops|+|Other crops;Resources|Land Cover|Cropland|Crops|+|Other crops
+Resources|Land Cover|Cropland|Croparea|Crops|+|Sugar crops;Resources|Land Cover|Cropland|Crops|+|Sugar crops
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Maize;Resources|Land Cover|Cropland|Crops|Cereals|+|Maize
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Rice;Resources|Land Cover|Cropland|Crops|Cereals|+|Rice
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Temperate cereals;Resources|Land Cover|Cropland|Crops|Cereals|+|Temperate cereals
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Tropical cereals;Resources|Land Cover|Cropland|Crops|Cereals|+|Tropical cereals
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|irrigated;Resources|Land Cover|Cropland|Crops|Cereals|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Maize|irrigated;Resources|Land Cover|Cropland|Crops|Cereals|Maize|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Maize|rainfed;Resources|Land Cover|Cropland|Crops|Cereals|Maize|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|rainfed;Resources|Land Cover|Cropland|Crops|Cereals|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Rice|irrigated;Resources|Land Cover|Cropland|Crops|Cereals|Rice|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Rice|rainfed;Resources|Land Cover|Cropland|Crops|Cereals|Rice|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Temperate cereals|irrigated;Resources|Land Cover|Cropland|Crops|Cereals|Temperate cereals|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Temperate cereals|rainfed;Resources|Land Cover|Cropland|Crops|Cereals|Temperate cereals|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Tropical cereals|irrigated;Resources|Land Cover|Cropland|Crops|Cereals|Tropical cereals|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Tropical cereals|rainfed;Resources|Land Cover|Cropland|Crops|Cereals|Tropical cereals|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|irrigated;Resources|Land Cover|Cropland|Crops|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Cotton seed;Resources|Land Cover|Cropland|Crops|Oil crops|+|Cotton seed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Groundnuts;Resources|Land Cover|Cropland|Crops|Oil crops|+|Groundnuts
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Oilpalms;Resources|Land Cover|Cropland|Crops|Oil crops|+|Oilpalms
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Other oil crops incl rapeseed;Resources|Land Cover|Cropland|Crops|Oil crops|+|Other oil crops incl rapeseed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Soybean;Resources|Land Cover|Cropland|Crops|Oil crops|+|Soybean
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Sunflower;Resources|Land Cover|Cropland|Crops|Oil crops|+|Sunflower
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Cotton seed|irrigated;Resources|Land Cover|Cropland|Crops|Oil crops|Cotton seed|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Cotton seed|rainfed;Resources|Land Cover|Cropland|Crops|Oil crops|Cotton seed|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Groundnuts|irrigated;Resources|Land Cover|Cropland|Crops|Oil crops|Groundnuts|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Groundnuts|rainfed;Resources|Land Cover|Cropland|Crops|Oil crops|Groundnuts|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|irrigated;Resources|Land Cover|Cropland|Crops|Oil crops|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Oilpalms|irrigated;Resources|Land Cover|Cropland|Crops|Oil crops|Oilpalms|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Oilpalms|rainfed;Resources|Land Cover|Cropland|Crops|Oil crops|Oilpalms|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Other oil crops incl rapeseed|irrigated;Resources|Land Cover|Cropland|Crops|Oil crops|Other oil crops incl rapeseed|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Other oil crops incl rapeseed|rainfed;Resources|Land Cover|Cropland|Crops|Oil crops|Other oil crops incl rapeseed|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|rainfed;Resources|Land Cover|Cropland|Crops|Oil crops|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Soybean|irrigated;Resources|Land Cover|Cropland|Crops|Oil crops|Soybean|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Soybean|rainfed;Resources|Land Cover|Cropland|Crops|Oil crops|Soybean|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Sunflower|irrigated;Resources|Land Cover|Cropland|Crops|Oil crops|Sunflower|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Sunflower|rainfed;Resources|Land Cover|Cropland|Crops|Oil crops|Sunflower|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Fruits Vegetables Nuts;Resources|Land Cover|Cropland|Crops|Other crops|+|Fruits Vegetables Nuts
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Potatoes;Resources|Land Cover|Cropland|Crops|Other crops|+|Potatoes
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Pulses;Resources|Land Cover|Cropland|Crops|Other crops|+|Pulses
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Tropical roots;Resources|Land Cover|Cropland|Crops|Other crops|+|Tropical roots
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Fruits Vegetables Nuts|irrigated;Resources|Land Cover|Cropland|Crops|Other crops|Fruits Vegetables Nuts|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Fruits Vegetables Nuts|rainfed;Resources|Land Cover|Cropland|Crops|Other crops|Fruits Vegetables Nuts|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|irrigated;Resources|Land Cover|Cropland|Crops|Other crops|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Potatoes|irrigated;Resources|Land Cover|Cropland|Crops|Other crops|Potatoes|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Potatoes|rainfed;Resources|Land Cover|Cropland|Crops|Other crops|Potatoes|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Pulses|irrigated;Resources|Land Cover|Cropland|Crops|Other crops|Pulses|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Pulses|rainfed;Resources|Land Cover|Cropland|Crops|Other crops|Pulses|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|rainfed;Resources|Land Cover|Cropland|Crops|Other crops|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Tropical roots|irrigated;Resources|Land Cover|Cropland|Crops|Other crops|Tropical roots|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Tropical roots|rainfed;Resources|Land Cover|Cropland|Crops|Other crops|Tropical roots|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|rainfed;Resources|Land Cover|Cropland|Crops|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|+|Sugar beet;Resources|Land Cover|Cropland|Crops|Sugar crops|+|Sugar beet
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|+|Sugar cane;Resources|Land Cover|Cropland|Crops|Sugar crops|+|Sugar cane
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|irrigated;Resources|Land Cover|Cropland|Crops|Sugar crops|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|rainfed;Resources|Land Cover|Cropland|Crops|Sugar crops|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar beet|irrigated;Resources|Land Cover|Cropland|Crops|Sugar crops|Sugar beet|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar beet|rainfed;Resources|Land Cover|Cropland|Crops|Sugar crops|Sugar beet|rainfed
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar cane|irrigated;Resources|Land Cover|Cropland|Crops|Sugar crops|Sugar cane|irrigated
+Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar cane|rainfed;Resources|Land Cover|Cropland|Crops|Sugar crops|Sugar cane|rainfed
+Resources|Land Cover|Cropland|Croparea|Forage|irrigated;Resources|Land Cover|Cropland|Forage|irrigated
+Resources|Land Cover|Cropland|Croparea|Forage|rainfed;Resources|Land Cover|Cropland|Forage|rainfed
