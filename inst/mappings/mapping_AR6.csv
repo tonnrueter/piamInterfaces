@@ -6,7 +6,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
 #;;;;;;;;;;
 0;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
-;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
+;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Recycled Aboveground Crop Residues;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Biological Fixation Freeliving Microorganisms;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
@@ -14,7 +14,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1;Fertilizer Use|Phosphorus;Tg P/yr;;;;;;;total phosphorus fertilizer use (organic + inorganic);
 2;Fertilizer Use|Potassium;Tg K2O/yr;;;;;;;total potassium fertilizer use (organic + inorganic);
 3;Fertilizer Use|Nitrogen|Inorganic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;;;Total nitrogen inputs in inorganic fertilizer use;M
-4;Fertilizer Use|Nitrogen|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure;Mt Nr/yr;;;;;Total nitrogen inputs in organic fertilizer use;M
+4;Fertilizer Use|Nitrogen|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;;;Total nitrogen inputs in organic fertilizer use;M
 ;Fertilizer Use|Nitrogen|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;;;Total nitrogen inputs in organic fertilizer use;M
 ;Fertilizer Use|Nitrogen|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Recycled Aboveground Crop Residues;Mt Nr/yr;;;;;Total nitrogen inputs in organic fertilizer use;M
 ;Fertilizer Use|Nitrogen|Biological Fixation;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Biological Fixation Freeliving Microorganisms;Mt Nr/yr;;;;;Nitrogen inputs on cropland from biological fixation;M

@@ -30,6 +30,9 @@ MAGICC7 AR6|Atmospheric Concentrations|CH4|50.0th Percentile ;Concentration|CH4
 MAGICC7 AR6|Atmospheric Concentrations|CO2|50.0th Percentile ;Concentration|CO2
 MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile ;Concentration|N2O
 
+# changed magpie4 reporting variables
+Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Resources|Nitrogen|Cropland Budget|Inputs|Manure
+
 # magpie4 reporting variables for cropland changed with magpie4 2.3.2
 Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;Resources|Land Cover|Cropland|+|Bioenergy crops
 Resources|Land Cover|Cropland|Croparea|+|Crops;Resources|Land Cover|Cropland|+|Crops

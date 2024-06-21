@@ -56,7 +56,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 56;Nitrogen|Cropland Budget|Inputs|Biological Fixation;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Biological Fixation Freeliving Microorganisms;Mt Nr/yr;;;;;Nitrogen inputs on cropland from biological fixation (symbiotic crops and free-living bacteria);M
 56;Nitrogen|Cropland Budget|Inputs|Biological Fixation;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Biological Fixation Symbiotic Crops;Mt Nr/yr;;;;;Nitrogen inputs on cropland from biological fixation (symbiotic crops and free-living bacteria);M
 57;Nitrogen|Cropland Budget|Inputs|Biological Fixation|Symbiotic Crops;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Biological Fixation Symbiotic Crops;Mt Nr/yr;;;;;Nitrogen inputs on cropland from symbiotic fixation in plants;M
-58;Nitrogen|Cropland Budget|Inputs|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure;Mt Nr/yr;;;;;Nitrogen inputs on cropland from organic fertilizers;M
+58;Nitrogen|Cropland Budget|Inputs|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;;;Nitrogen inputs on cropland from organic fertilizers;M
 58;Nitrogen|Cropland Budget|Inputs|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;;;Nitrogen inputs on cropland from organic fertilizers;M
 59;Nitrogen|Cropland Budget|Inputs|Inorganic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;;;Nitrogen inputs on cropland from inorganic fertilizers;M
 60;Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Ash from Burned Crop Residues;Mt Nr/yr;;;;;Nitrogen inputs on cropland from other sources;M
