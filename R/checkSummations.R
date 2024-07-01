@@ -222,13 +222,13 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         childs <- checkVariables[[p]]
 
         remindchilds <- if (is.null(mapping)) NULL else
-                        mappingData[, remindVar][mappingData$variable == pn]
+                        mappingData[, remindVar][mappingData$variable %in% pn]
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                   paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff)[! is.null(remindchilds)]
                   ))
         for (ch in childs) {
           remindch <- if (is.null(mapping)) NULL else
-                      mappingData[, remindVar][mappingData$variable == ch]
+                      mappingData[, remindVar][mappingData$variable %in% ch]
           text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
                     if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
         }
