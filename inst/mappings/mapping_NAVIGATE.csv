@@ -3,7 +3,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 ;;;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
 ;;;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
 ;;;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
-;;;Emissions|CO2|Energy|Demand|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
+;;;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
 #;;;;;;;;;;;
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
@@ -732,18 +732,18 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 675;2;energy (final);Final Energy|Industry|Non-Metallic Minerals|Geothermal;EJ/yr;;;;;;Final energy consumption of geothermal heat by the non-metallic minerals sector;
 676;2;energy (final);Final Energy|Industry|Non-Metallic Minerals|Waste;EJ/yr;;;;;;Final energy consumption of non-renewable waste by the non-metallic minerals sector;
 677;2;energy (final);Final Energy|Industry|Non-Metallic Minerals|Other;EJ/yr;;;;;;Final energy consumption of other energy carriers by the non-metallic minerals sector (please provide a definition of the energy carriers in this category in the 'comments' tab);
-678;1;energy (final);Final Energy|Industry|Chemicals;EJ/yr;FE|Industry|+++|Chemicals;EJ/yr;;;;Final energy consumed by the chemicals sector, excluding feedstocks;R
+678;1;energy (final);Final Energy|Industry|Chemicals;EJ/yr;FE|w/o Non-energy Use|Industry|Chemicals;EJ/yr;;;;Final energy consumed by the chemicals sector, excluding feedstocks;R
 679;2;energy (final);Final Energy|Industry|Chemicals|Electricity;EJ/yr;FE|Industry|Chemicals|+|Electricity;EJ/yr;;;;Final energy consumption of electricity by the chemical sector;R
-680;2;energy (final);Final Energy|Industry|Chemicals|Gases;EJ/yr;FE|Industry|Chemicals|+|Gases;EJ/yr;;;;Final energy consumption of gases by the chemicals sector (natural gas, biogas, coal-gas), excluding transmission/distribution losses;R
+680;2;energy (final);Final Energy|Industry|Chemicals|Gases;EJ/yr;FE|w/o Non-energy Use|Industry|Chemicals|Gases;EJ/yr;;;;Final energy consumption of gases by the chemicals sector (natural gas, biogas, coal-gas), excluding transmission/distribution losses;R
 681;3;energy (final);Final Energy|Industry|Chemicals|Gases|Biomass;EJ/yr;;;;;;Final energy consumption of biogas by the chemicals sector;
 682;3;energy (final);Final Energy|Industry|Chemicals|Gases|Electricity;EJ/yr;;;;;;Final energy consumption of synthetic e-fuel gas (power-to-gas) by the chemicals sector;
 683;3;energy (final);Final Energy|Industry|Chemicals|Gases|Fossil;EJ/yr;;;;;;Final energy consumption of synthetic or derived gases of fossil origin by the chemicals sector;
 684;2;energy (final);Final Energy|Industry|Chemicals|Hydrogen;EJ/yr;FE|Industry|Chemicals|+|Hydrogen;EJ/yr;;;;Final energy consumption of hydrogen by the chemicals sector;R
-685;2;energy (final);Final Energy|Industry|Chemicals|Liquids;EJ/yr;FE|Industry|Chemicals|+|Liquids;EJ/yr;;;;Final energy consumption of refined liquids by the chemicals sector (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);R
+685;2;energy (final);Final Energy|Industry|Chemicals|Liquids;EJ/yr;FE|w/o Non-energy Use|Industry|Chemicals|+|Liquids;EJ/yr;;;;Final energy consumption of refined liquids by the chemicals sector (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);R
 686;3;energy (final);Final Energy|Industry|Chemicals|Liquids|Biomass;EJ/yr;;;;;;Final energy consumption of liquid biofuels by the chemicals sector;
 687;3;energy (final);Final Energy|Industry|Chemicals|Liquids|Electricity;EJ/yr;;;;;;Final energy consumption of synthetic liquid efuels (power-to-liquid) by the chemicals sector;
 688;3;energy (final);Final Energy|Industry|Chemicals|Liquids|Fossil;EJ/yr;;;;;;Final energy consumption of liquids of fossil origin by the chemicals sector;
-689;2;energy (final);Final Energy|Industry|Chemicals|Solids;EJ/yr;FE|Industry|Chemicals|+|Solids;EJ/yr;;;;Final energy solid fuel consumption by the chemicals sector (including coal and solid biomass);R
+689;2;energy (final);Final Energy|Industry|Chemicals|Solids;EJ/yr;FE|w/o Non-energy Use|Industry|Chemicals|+|Solids;EJ/yr;;;;Final energy solid fuel consumption by the chemicals sector (including coal and solid biomass);R
 690;3;energy (final);Final Energy|Industry|Chemicals|Solids|Biomass;EJ/yr;;;;;;Final energy consumption of solid biomass (modern and traditional, including renewable waste) by the chemicals sector;
 691;3;energy (final);Final Energy|Industry|Chemicals|Solids|Coal;EJ/yr;;;;;;Final energy consumption of coal by the chemicals sector;
 692;2;energy (final);Final Energy|Industry|Chemicals|Heat;EJ/yr;;;;;;Final energy consumption of centrally supplied heat by the chemicals sector;
@@ -1478,6 +1478,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1373;1;investment;Investment|Energy Supply|Hydrogen|Fossil;billion US$2010/yr;Energy Investments|Hydrogen|Fossil;billion US$2005/yr;1.12;;;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1374;1;investment;Investment|Energy Supply|Hydrogen|Renewable;billion US$2010/yr;Energy Investments|Hydrogen|RE;billion US$2005/yr;1.12;;;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1375;1;investment;Investment|Energy Supply|Hydrogen|Other;billion US$2010/yr;Energy Investments|Hydrogen|Transmission and Distribution;billion US$2005/yr;1.12;;;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
+1375;1;investment;Investment|Energy Supply|Hydrogen|Other;billion US$2010/yr;Energy Investments|Hydrogen|Electrolysis;billion US$2005/yr;1.12;;AR6 had a proper Electrolysis subgroup. See Issue 330;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1376;1;investment;Investment|Energy Supply|Liquids;billion US$2010/yr;Energy Investments|Liquids;billion US$2005/yr;1.12;;;investments for the production of liquid fuels. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1377;1;investment;Investment|Energy Supply|Liquids|Oil;billion US$2010/yr;Energy Investments|Liquids|Oil Ref;billion US$2005/yr;1.12;;;investments for the production of fossil fuels from oil refineries For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1378;1;investment;Investment|Energy Supply|Liquids|Coal and Gas;billion US$2010/yr;Energy Investments|Liquids|Fossil|w/o oil;billion US$2005/yr;1.12;;;investments for the production of fossil-based synfuels (coal and gas). For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R

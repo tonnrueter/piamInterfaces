@@ -1289,9 +1289,6 @@ Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Other;
 Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Transmission and Distribution;1
 Investment|Energy Supply|Electricity;Investment|Energy Supply|Electricity|Electricity Storage;1
 
-Investment|Energy Supply|Electricity 2;Investment|Energy Supply|Electricity|Fossil;1
-Investment|Energy Supply|Electricity 2;Investment|Energy Supply|Electricity|Non-fossil;1
-
 Investment|Energy Supply|Electricity|Biomass;Investment|Energy Supply|Electricity|Biomass|w/ CCS;1
 Investment|Energy Supply|Electricity|Biomass;Investment|Energy Supply|Electricity|Biomass|w/o CCS;1
 
@@ -1394,16 +1391,11 @@ Primary Energy|Biomass 2;Primary Energy|Biomass|1st Generation;1
 Primary Energy|Biomass 2;Primary Energy|Biomass|Energy Crops;1
 Primary Energy|Biomass 2;Primary Energy|Biomass|Residues;1
 
-Primary Energy|Biomass 3;Primary Energy|Biomass|Liquids;1
-Primary Energy|Biomass 3;Primary Energy|Biomass|Solids;1
-Primary Energy|Biomass 3;Primary Energy|Biomass|Gases;1
-Primary Energy|Biomass 3;Primary Energy|Biomass|Hydrogen;1
+Primary Energy|Biomass 3;Primary Energy|Biomass|w/ CCS;1
+Primary Energy|Biomass 3;Primary Energy|Biomass|w/o CCS;1
 
-Primary Energy|Biomass 4;Primary Energy|Biomass|w/ CCS;1
-Primary Energy|Biomass 4;Primary Energy|Biomass|w/o CCS;1
-
-Primary Energy|Biomass 5;Primary Energy|Biomass|Modern;1
-Primary Energy|Biomass 5;Primary Energy|Biomass|Traditional;1
+Primary Energy|Biomass 4;Primary Energy|Biomass|Modern;1
+Primary Energy|Biomass 4;Primary Energy|Biomass|Traditional;1
 
 Primary Energy|Biomass|Electricity;Primary Energy|Biomass|Electricity|w/ CCS;1
 Primary Energy|Biomass|Electricity;Primary Energy|Biomass|Electricity|w/o CCS;1
@@ -1464,7 +1456,7 @@ Secondary Energy|Electricity;Secondary Energy|Electricity|Fossil;1
 Secondary Energy|Electricity;Secondary Energy|Electricity|Non-Biomass Renewables;1
 Secondary Energy|Electricity;Secondary Energy|Electricity|Nuclear;1
 Secondary Energy|Electricity;Secondary Energy|Electricity|Hydrogen;1
-Secondary Energy|Electricity;Secondary Energy|Electricity|Curtailment;1
+# Secondary Energy|Electricity;Secondary Energy|Electricity|Curtailment;1 # energy that is not used
 Secondary Energy|Electricity;Secondary Energy|Electricity|Other;1
 Secondary Energy|Electricity;Secondary Energy|Electricity|Storage Losses;1
 Secondary Energy|Electricity;Secondary Energy|Electricity|Transmission Losses;1
