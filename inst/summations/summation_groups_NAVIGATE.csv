@@ -114,8 +114,8 @@ Capacity|Liquids|Gas;Capacity|Liquids|Gas|w/o CCS;1
 Carbon Capture;Carbon Capture|Biomass;1
 Carbon Capture;Carbon Capture|Fossil;1
 Carbon Capture;Carbon Capture|Electricity;1
-Carbon Capture;Carbon Capture|Industry;1
-# Carbon Capture;Carbon Capture|Industrial Processes;1 (part of Industry)
+# Carbon Capture;Carbon Capture|Industry;1 # captured in Industrial processes + Energy variables
+Carbon Capture;Carbon Capture|Industrial Processes;1
 Carbon Capture;Carbon Capture|Direct Air Capture;1
 Carbon Capture;Carbon Capture|Other;1
 
@@ -271,10 +271,9 @@ Emissions|CO;Emissions|CO|Energy;1
 Emissions|CO;Emissions|CO|Waste;1
 Emissions|CO;Emissions|CO|Other;1
 
-# fails with Relative difference between -158% and -41.4%, absolute difference up to 71558 Mt CO2/yr.
 Emissions|CO2;Emissions|CO2|AFOLU;1
 Emissions|CO2;Emissions|CO2|Energy;1
-Emissions|CO2;Emissions|CO2|Industry and Industrial Processes;1
+Emissions|CO2;Emissions|CO2|Industrial Processes;1
 Emissions|CO2;Emissions|CO2|Waste;1
 Emissions|CO2;Emissions|CO2|Other;1
 Emissions|CO2;Emissions|CO2|Other Removal;1
@@ -409,7 +408,7 @@ Emissions|CO2|Waste;Emissions|CO2|Waste|Fossil;1
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|AFOLU;1
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|Energy;1
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|Waste;1
-Emissions|Kyoto Gases;Emissions|Kyoto Gases|Industry;1
+# Emissions|Kyoto Gases;Emissions|Kyoto Gases|Industry;1 # not needed, part of Industrial Processes and Energy
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|Industrial Processes;1
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|Other;1
 

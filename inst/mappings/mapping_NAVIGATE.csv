@@ -1,9 +1,9 @@
 idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;Definition;source
 # temporary fix until waste emissions are separated;;;;;;;;;;;
 ;;;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
-;;;Emissions|CO2|Energy|Supply|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
+;;;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
 ;;;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
-;;;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
+;;;Emissions|CO2|Energy|Demand|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
 #;;;;;;;;;;;
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
@@ -301,7 +301,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 254;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;;;;Fossil CO2 emissions from international bunkers (IPCC category 1A3ai and 1A3di);R
 255;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|Gases;Mt CO2/yr;;;;;;Fossil CO2 emissions from Gases use in the Bunkers sector (IPCC category 1C);
 256;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|Liquids;Mt CO2/yr;;;;;;Fossil CO2 emissions from Liquids use in the Bunkers sector (IPCC category 1C);
-257;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|International Aviation;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by International aviation;
+257;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|International Aviation;Mt CO2/yr;Emi|CO2|Transport|Pass|Aviation|International|Demand;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by International aviation;T
 258;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|International Shipping;Mt CO2/yr;Emi|CO2|Transport|Freight|International Shipping|Demand;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by International shipping;T
 259;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|International Aviation|Liquids;Mt CO2/yr;;;;;;Fossil CO2 emissions from Liquids use in the Bunkers sector by International Aviation;
 260;2;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|International Aviation|Gases;Mt CO2/yr;;;;;;Fossil CO2 emissions from Gases use in the Bunkers sector by International Aviation;
@@ -705,8 +705,8 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 648;1;energy (final);Final Energy|Industry|Waste;EJ/yr;;;;;;final energy consumption of non-renewable waste by the industrial sector;
 649;1;energy (final);Final Energy|Industry|Other;EJ/yr;;;;;;final energy consumption by the industrial sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);
 650;1;energy (final);Final Energy|Industry|Solids;EJ/yr;FE|w/o Non-energy Use|Industry|Solids;EJ/yr;;;;final energy solid fuel consumption by the industrial sector (including coal and solid biomass), excluding fuel use for autoproduction;Rx
-651;1;energy (final);Final Energy|Industry|Solids|Biomass;EJ/yr;FE|Industry|Solids|+|Biomass;EJ/yr;;;;final energy consumption by the industrial sector of solid biomass (modern and traditional), excluding final energy consumption of bioliquids which are reported in the liquids category;R
-652;1;energy (final);Final Energy|Industry|Solids|Fossil;EJ/yr;FE|Industry|Solids|+|Fossil;EJ/yr;;;;final energy consumption of fossil solids by the industrial sector;R
+651;1;energy (final);Final Energy|Industry|Solids|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Solids|+|Biomass;EJ/yr;;;;final energy consumption by the industrial sector of solid biomass (modern and traditional), excluding final energy consumption of bioliquids which are reported in the liquids category;R
+652;1;energy (final);Final Energy|Industry|Solids|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Solids|+|Fossil;EJ/yr;;;;final energy consumption of fossil solids by the industrial sector;R
 653;1;energy (final);Final Energy|Industry|Gases|Biomass;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Biomass;EJ/yr;;;;final energy consumption by the industrial sector of biogas, excluding transmission/distribution losses;Rx
 654;1;energy (final);Final Energy|Industry|Gases|Electricity;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Hydrogen;EJ/yr;;;;final energy consumption by the industrial sector of synthetic e-fuel gas (power-to-gas), excluding transmission/distribution losses;Rx
 655;1;energy (final);Final Energy|Industry|Gases|Fossil;EJ/yr;FE|w/o Non-energy Use|Industry|Gases|+|Fossil;EJ/yr;;;;final energy consumption by the industrial sector of  synthetic or derived gases of fossil origin, excluding transmission/distribution losses;Rx
@@ -874,15 +874,15 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 815;1;energy (final);Final Energy|Residential and Commercial|Solids;EJ/yr;FE|Buildings|+|Solids;EJ/yr;;;;final energy solid fuel consumption by the residential & commercial sector (including coal and solid biomass);R
 816;1;energy (final);Final Energy|Residential and Commercial|Solids|Biomass;EJ/yr;FE|Buildings|Solids|+|Biomass;EJ/yr;;;;final energy consumption by the residential & commercial sector of solid biomass (modern and traditional), excluding final energy consumption of bioliquids which are reported in the liquids category;R
 817;1;energy (final);Final Energy|Residential and Commercial|Solids|Biomass|Traditional;EJ/yr;FE|Buildings|Solids|Biomass|+|Traditional;EJ/yr;;;;final energy consumed in the residential & commercial sector of solid biomass (traditional);R
-818;1;energy (final);Final Energy|Residential and Commercial|Solids|Fossil;EJ/yr;;;;;;final energy consumption of fossil solids by the residential & commercial sector;
-819;2;energy (final);Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of biogas, excluding transmission/distribution losses;
-820;2;energy (final);Final Energy|Residential and Commercial|Gases|Electricity;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of synthetic e-fuel gas (power-to-gas), excluding transmission/distribution losses;
-821;2;energy (final);Final Energy|Residential and Commercial|Gases|Fossil;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of  synthetic or derived gases of fossil origin, excluding transmission/distribution losses;
-822;2;energy (final);Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of liquid biofuels;
-823;2;energy (final);Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of liquid efuels (power-to-liquid);
-824;2;energy (final);Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;;;;;;final energy consumption by the residential & commercial sector of liquids from fossil origin (conventional & unconventional petroleum, coal-to-liquids, gas-to-liquids);
+818;1;energy (final);Final Energy|Residential and Commercial|Solids|Fossil;EJ/yr;FE|Buildings|Solids|+|Fossil;EJ/yr;;;;final energy consumption of fossil solids by the residential & commercial sector;R
+819;2;energy (final);Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;FE|Buildings|Gases|+|Biomass;EJ/yr;;;;final energy consumption by the residential & commercial sector of biogas, excluding transmission/distribution losses;R
+820;2;energy (final);Final Energy|Residential and Commercial|Gases|Electricity;EJ/yr;FE|Buildings|Gases|+|Hydrogen;EJ/yr;;;;final energy consumption by the residential & commercial sector of synthetic e-fuel gas (power-to-gas), excluding transmission/distribution losses;R
+821;2;energy (final);Final Energy|Residential and Commercial|Gases|Fossil;EJ/yr;FE|Buildings|Gases|+|Fossil;;;;;final energy consumption by the residential & commercial sector of  synthetic or derived gases of fossil origin, excluding transmission/distribution losses;R
+822;2;energy (final);Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquid biofuels;R
+823;2;energy (final);Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquid efuels (power-to-liquid);R
+824;2;energy (final);Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;FE|Buildings|Liquids|+|Fossil;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquids from fossil origin (conventional & unconventional petroleum, coal-to-liquids, gas-to-liquids);R
 825;1;energy (final);Final Energy|Transportation;EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;;;;final energy consumed in the transportation sector, excluding bunker fuels, excluding pipelines;R
-826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport edge;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;T
+826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;T
 827;1;energy (final);Final Energy|Transportation|Electricity;EJ/yr;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;;;;final energy consumption by the transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses;R
 828;1;energy (final);Final Energy|Transportation|Gases;EJ/yr;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;;;;final energy consumption by the transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;R
 829;1;energy (final);Final Energy|Transportation|Hydrogen;EJ/yr;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;;;;final energy consumption by the transportation sector of hydrogen;R
@@ -1250,7 +1250,9 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1156;1;energy (secondary);Secondary Energy|Electricity|Coal;EJ/yr;SE|Electricity|+|Coal;EJ/yr;;;;net electricity production from coal;R
 1157;1;energy (secondary);Secondary Energy|Electricity|Coal|w/ CCS;EJ/yr;SE|Electricity|Coal|+|w/ CC;EJ/yr;;;;net electricity production from coal with a CO2 capture component;R
 1158;1;energy (secondary);Secondary Energy|Electricity|Coal|w/o CCS;EJ/yr;SE|Electricity|Coal|+|w/o CC;EJ/yr;;;;net electricity production from coal with freely vented CO2 emissions;R
-1159;1;energy (secondary);Secondary Energy|Electricity|Fossil;EJ/yr;;;;;;net electricity production from coal, gas, conventional and unconventional oil;
+1159;1;energy (secondary);Secondary Energy|Electricity|Fossil;EJ/yr;SE|Electricity|+|Coal;EJ/yr;;;;net electricity production from coal, gas, conventional and unconventional oil;R
+1159;1;energy (secondary);Secondary Energy|Electricity|Fossil;EJ/yr;SE|Electricity|+|Gas;EJ/yr;;;;net electricity production from coal, gas, conventional and unconventional oil;R
+1159;1;energy (secondary);Secondary Energy|Electricity|Fossil;EJ/yr;SE|Electricity|+|Oil;EJ/yr;;;;net electricity production from coal, gas, conventional and unconventional oil;R
 1160;1;energy (secondary);Secondary Energy|Electricity|Fossil|w/ CCS;EJ/yr;;;;;;net electricity production from coal, gas, conventional and unconventional oil used in combination with CCS;
 1161;1;energy (secondary);Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;;;;;;net electricity production from coal, gas, conventional and unconventional oil without CCS;
 1162;1;energy (secondary);Secondary Energy|Electricity|Gas;EJ/yr;SE|Electricity|+|Gas;EJ/yr;;;;net electricity production from natural gas;R
@@ -1260,7 +1262,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1166;1;energy (secondary);Secondary Energy|Electricity|Hydro;EJ/yr;SE|Electricity|+|Hydro;EJ/yr;;;;net hydroelectric production;R
 1167;1;energy (secondary);Secondary Energy|Electricity|Non-Biomass Renewables;EJ/yr;SE|Electricity|Non-Biomass Renewables;EJ/yr;;;;net electricity production from hydro, wind, solar, geothermal, ocean, and other renewable sources (excluding bioenergy). This is a summary category for all the non-biomass renewables.;R
 1168;1;energy (secondary);Secondary Energy|Electricity|Nuclear;EJ/yr;SE|Electricity|+|Nuclear;EJ/yr;;;;net electricity production from nuclear energy;R
-1169;1;energy (secondary);Secondary Energy|Electricity|Oil;EJ/yr;SE|Electricity|Oil|DOT;EJ/yr;;;;net electricity production from refined liquid oil products;R
+1169;1;energy (secondary);Secondary Energy|Electricity|Oil;EJ/yr;SE|Electricity|+|Oil;EJ/yr;;;;net electricity production from refined liquid oil products;R
 1170;1;energy (secondary);Secondary Energy|Electricity|Oil|w/ CCS;EJ/yr;;;;;;net electricity production from refined liquids with a CO2 capture component;
 1171;1;energy (secondary);Secondary Energy|Electricity|Oil|w/o CCS;EJ/yr;SE|Electricity|Oil|w/o CC;EJ/yr;;;;net electricity production from refined liquids with freely vented CO2 emissions;R
 1172;1;energy (secondary);Secondary Energy|Electricity|Solar;EJ/yr;SE|Electricity|+|Solar;EJ/yr;;;;net electricity production from all sources of solar energy (e.g., PV and concentrating solar power);R
@@ -1474,7 +1476,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1371;1;investment;Investment|Energy Supply|Electricity|Transmission and Distribution;billion US$2010/yr;Energy Investments|Electricity|Grid;billion US$2005/yr;1.12;;;investments in transmission and distribution of power generation;R
 1372;1;investment;Investment|Energy Supply|Electricity|Electricity Storage;billion US$2010/yr;Energy Investments|Electricity|Storage;billion US$2005/yr;1.12;;;investments in electricity storage technologies (e.g., batteries, compressed air storage reservoirs, etc.);R
 1373;1;investment;Investment|Energy Supply|Hydrogen|Fossil;billion US$2010/yr;Energy Investments|Hydrogen|Fossil;billion US$2005/yr;1.12;;;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
-1374;1;investment;Investment|Energy Supply|Hydrogen|Renewable;billion US$2010/yr;;;;;;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;
+1374;1;investment;Investment|Energy Supply|Hydrogen|Renewable;billion US$2010/yr;Energy Investments|Hydrogen|RE;billion US$2005/yr;1.12;;;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1375;1;investment;Investment|Energy Supply|Hydrogen|Other;billion US$2010/yr;Energy Investments|Hydrogen|Transmission and Distribution;billion US$2005/yr;1.12;;;investments for the production of hydrogen from the specified source. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1376;1;investment;Investment|Energy Supply|Liquids;billion US$2010/yr;Energy Investments|Liquids;billion US$2005/yr;1.12;;;investments for the production of liquid fuels. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R
 1377;1;investment;Investment|Energy Supply|Liquids|Oil;billion US$2010/yr;Energy Investments|Liquids|Oil Ref;billion US$2005/yr;1.12;;;investments for the production of fossil fuels from oil refineries For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;R

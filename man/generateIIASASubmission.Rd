@@ -49,7 +49,7 @@ If \code{outputDirectory} is set to NULL, this parameter has no effect.}
 \item{iiasatemplate}{optional filename of xlsx or yaml file provided by IIASA
 used to delete superfluous variables and adapt units}
 
-\item{generatePlots}{boolean, whether to generate plots of failing summation checks}
+\item{generatePlots}{boolean, whether to generate plots of failing summation checks. Needs outputDirectory not NULL.}
 
 \item{timesteps}{timesteps that are accepted in final submission}
 

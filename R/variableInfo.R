@@ -24,8 +24,8 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
   nc    <- "\033[0m"   # No Color
   width <- 60
 
-  .getChilds <- function(v, c) {
-    tobefound <- paste0("^", gsub("|", "\\|", removePlus(v), fixed = TRUE), "\\|[^\\|]*$")
+  .getChilds <- function(v, c, keepparent = FALSE) {
+    tobefound <- paste0("^", gsub("|", "\\|", removePlus(v), fixed = TRUE), "\\|", if (keepparent) "?", "[^\\|]*$")
     c[which(grepl(tobefound, removePlus(c)))]
   }
 
@@ -62,13 +62,13 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
       allexportchilds <- unique(.getChilds(exportname, mappingData$variable))
       allremindchilds <- unique(.getChilds(varname, mappingData[, remindVar]))
       if (exportname %in% summationGroups$parent) {
-        exportchilds <- summationGroups$child[summationGroups$parent == exportname]
+        exportchilds <- summationGroups$child[summationGroups$parent %in% exportname]
         # print summation parents
         message(". ", str_pad(paste(exportname, "="), width + 3, "right"), "   . ",
-                paste0(mappingData[, remindVar][mappingData$variable == exportname], collapse = " + "), " =")
+                paste0(mappingData[, remindVar][mappingData$variable %in% exportname], collapse = " + "), " =")
         # print summation childs
         for (ch in exportchilds) {
-          remindchilds <- mappingData[, remindVar][mappingData$variable == ch]
+          remindchilds <- mappingData[, remindVar][mappingData$variable %in% ch]
           message("  + ", str_pad(ch, width + 2, "right"), "    + ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
@@ -80,12 +80,12 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
       if (length(allexportchilds) + length(allremindchilds) > 0) {
         message("\n# Child variables", if (m %in% names(summationsNames())) " not in summation group")
         for (ch in allexportchilds) {
-          remindchilds <- mappingData[, remindVar][mappingData$variable == ch]
+          remindchilds <- mappingData[, remindVar][mappingData$variable %in% ch]
           message("  . ", str_pad(ch, width + 1, "right"), "     . ", paste0(remindchilds, collapse = " + "))
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         for (ch in allremindchilds) {
-          exportchild <- unique(mappingData$variable[mappingData[, remindVar] == ch])
+          exportchild <- unique(mappingData$variable[mappingData[, remindVar] %in% ch])
           exportchild <- exportchild[! is.na(exportchild)]
           message("   . ", str_pad(paste(exportchild, collapse = ", "), width, "right"), "     . ", ch)
         }
@@ -97,7 +97,7 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
   if (! is.null(mif)) {
     mifdata <- quitte::as.quitte(mif)
     message("\n### Variables found in mif file")
-    mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)))
+    mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)), keepparent = TRUE)
     for (ch in mifchilds) {
       message("- ", ch)
     }
