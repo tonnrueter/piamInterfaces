@@ -1,7 +1,7 @@
 test_that("basic checks on summation Groups", {
   for (template in names(summationsNames())) {
     expect_silent(summationsData <- getSummations(template))
-    duplicates <- filter(summationsData, duplicated(summationsData))
+    duplicates <- select(filter(summationsData, duplicated(summationsData)), c("parent", "child"))
     if (nrow(duplicates) > 0) {
       warning("Duplicated line in ", template, ":\n", paste0(duplicates$parent, ";", duplicates$child, collapse = "\n"))
     }
