@@ -119,6 +119,7 @@ Carbon Capture;Carbon Capture|Industrial Processes;1
 Carbon Capture;Carbon Capture|Direct Air Capture;1
 Carbon Capture;Carbon Capture|Other;1
 
+Carbon Capture 2;Carbon Capture|Leakage;1
 Carbon Capture 2;Carbon Capture|Storage;1
 Carbon Capture 2;Carbon Capture|Usage;1
 
@@ -510,7 +511,6 @@ Export|Industry|Non-Metallic Minerals;Export|Industry|Non-Metallic Minerals|Volu
 
 Export|Industry|Non-Metallic Minerals|Cement;Export|Industry|Non-Metallic Minerals|Cement|Volume;1
 
-# Final Energy;Final Energy|Non-Energy Use;1 is it correct to remove it?
 Final Energy;Final Energy|Electricity;1
 Final Energy;Final Energy|Solids;1
 Final Energy;Final Energy|Liquids;1
@@ -520,7 +520,8 @@ Final Energy;Final Energy|Heat;1
 Final Energy;Final Energy|Hydrogen;1
 Final Energy;Final Energy|Solar;1
 Final Energy;Final Energy|Other;1
-;
+
+Final Energy 2;Final Energy|Non-Energy Use;1
 Final Energy 2;Final Energy|Agriculture;1
 Final Energy 2;Final Energy|Industry;1
 Final Energy 2;Final Energy|Residential and Commercial;1
@@ -1318,6 +1319,7 @@ Investment|Energy Supply|Hydrogen;Investment|Energy Supply|Hydrogen|Other;1
 Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Oil;1
 Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Coal and Gas;1
 Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Biomass;1
+Investment|Energy Supply|Liquids;Investment|Energy Supply|Liquids|Hydrogen;1
 
 Investment|Infrastructure;Investment|Infrastructure|Transport;1
 
