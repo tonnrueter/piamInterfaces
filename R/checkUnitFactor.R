@@ -72,7 +72,8 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
         firsterror <- FALSE
       }
       errortext <- c(errortext,
-        paste0("\n- ", paste0(wrongScale$variable, ": ", wrongScale$piam_factor, collapse = "\n- "),
+        paste0("\n- ", paste0(wrongScale$variable, ": ", wrongScale$piam_factor, " ",
+                              wrongScale$unit, " = 1 ", wrongScale$piam_unit, collapse = "\n- "),
                "\n  Expected: ", sc[[1]], " ", sc[[2]], " = 1 ", sc[[3]])
       )
     }
