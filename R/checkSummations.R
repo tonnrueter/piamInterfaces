@@ -233,18 +233,18 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                     if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
         }
 
-        reldDiffMin <- min(fileLarge$reldiff[fileLarge$variable == p])
+        relDiffMin <- min(fileLarge$reldiff[fileLarge$variable == p])
         relDiffMax  <- max(fileLarge$reldiff[fileLarge$variable == p])
         absDiffMax  <- max(abs(fileLarge$diff[fileLarge$variable == p]))
 
         if (roundDiff) {
-          reldDiffMin <- niceround(reldDiffMin)
+          relDiffMin <- niceround(relDiffMin)
           relDiffMax <- niceround(relDiffMax)
           absDiffMax <- niceround(absDiffMax)
         }
 
         text <- c(text, paste0("The child sum differs by ",
-                          reldDiffMin, "% to ",
+                          relDiffMin, "% to ",
                           relDiffMax, "% from the parent, ",
                           "absolute difference up to ",
                           absDiffMax, " ",
