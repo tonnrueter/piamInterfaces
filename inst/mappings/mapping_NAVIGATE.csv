@@ -4,6 +4,10 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 ;;;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
 ;;;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
 ;;;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
+;;;Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
+;;;Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
+;;;Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
+
 #;;;;;;;;;;;
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 2;1;agriculture;Agricultural Demand;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
