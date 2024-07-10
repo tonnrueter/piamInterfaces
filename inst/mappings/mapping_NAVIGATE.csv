@@ -267,7 +267,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 220;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Aviation;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by domestic aviation;
 221;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Shipping;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by domestic shipping;
 222;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Pass|Road|LDV;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by light duty vehicles;T
-223;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;;Mt CO2/yr;;;;Fossil CO2 emissions from fuel combustion by trains;T
+223;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by trains;
 224;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Truck;Mt CO2/yr;;;;;;Fossil CO2 emissions from fuel combustion by trucks;
 225;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus|Liquids;Mt CO2/yr;;;;;;Fossil CO2 emissions from Liquids use in the transportation sector by buses;
 226;2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus|Gases;Mt CO2/yr;;;;;;Fossil CO2 emissions from Gases use in the transportation sector by buses;

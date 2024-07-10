@@ -74,7 +74,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by light duty vehicles;Emi|CO2|Energy|Demand|Transport|Pass|Road|LDV;Mt CO2/yr;1;;0;;T
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Truck;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by trucks;Emi|CO2|Energy|Demand|Transport|Freight|Road;Mt CO2/yr;1;;0;;T
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by buses;Emi|CO2|Energy|Demand|Transport|Pass|Road|Bus;Mt CO2/yr;1;;0;;T
-2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by trains;;Mt CO2/yr;1;;0;;T
+2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by trains;;;;;;;
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Aviation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by domestic aviation;Emi|CO2|Energy|Demand|Transport|Pass|Domestic Aviation;Mt CO2/yr;1;;0;;T
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Other transport;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by other transport modes;;;;;0;;
 1;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers;Mt CO2/yr;Fossil CO2 emissions from fuel combustion from international bunkers (IPCC category 1A3ai and 1A3di);Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;0;;R

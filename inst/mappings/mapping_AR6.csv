@@ -358,7 +358,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 306;Emissions|CO2|Energy|Demand|Transportation|Maritime|Freight;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Freight|Domestic Shipping;Mt CO2/yr;;;;;carbon dioxide emissions from transport by freight maritime mode;T
 307;Emissions|CO2|Energy|Demand|Transportation|Maritime|Passenger;Mt CO2/yr;;Mt CO2/yr;;;;;carbon dioxide emissions from transport by passenger maritime mode;
 308;Emissions|CO2|Energy|Demand|Transportation|Passenger;Mt CO2/yr;Emi|CO2|Transport|Pass|Short-Medium Distance|Demand;Mt CO2/yr;;;;;CO2 emissions from fuel combustion in passenger transportation sector (part of IPCC category 1A3);T
-309;Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;;Mt CO2/yr;;;;;carbon dioxide emissions from transport by rail mode;T
+309;Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;;;;;;;carbon dioxide emissions from transport by rail mode;
 310;Emissions|CO2|Energy|Demand|Transportation|Rail|Freight;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Freight|Rail;Mt CO2/yr;;;;;carbon dioxide emissions from transport by freight rail mode;T
 311;Emissions|CO2|Energy|Demand|Transportation|Rail|Passenger;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Pass|Rail;Mt CO2/yr;;;;;carbon dioxide emissions from transport by passenger rail mode;T
 312;Emissions|CO2|Energy|Demand|Transportation|Road;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Freight|Road;Mt CO2/yr;;;;;carbon dioxide emissions from road transport vehicles;T
@@ -760,8 +760,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Energy Service|Residential and Commercial|Residential|Construction;bn m2/yr;;;;;;;;
 ;Energy Service|Residential and Commercial|Residential|Construction rate;%/yr;;;;;;;;
 ;Energy Service|Residential and Commercial|Residential|Renovation rate;%/yr;;;;;;;;
-687;Energy Service|Transportation|Aviation;bn vkm/yr;;bn vkm/yr;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation;T
-687;Energy Service|Transportation|Aviation;bn vkm/yr;;bn vkm/yr;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation;T
+687;Energy Service|Transportation|Aviation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation;
+687;Energy Service|Transportation|Aviation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation;
 688;Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight;bn tkm/yr;;;;;annual demand for energy services related to freight transportation;R
 689;Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in aviation;
 690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;ES|Transport|Bunkers|Freight|International Shipping;bn tkm/yr;;;;;annual demand for energy services related to freight transportation in international shipping;T
@@ -769,7 +769,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 692;Energy Service|Transportation|Freight|Other;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation (other);
 693;Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;;annual demand for energy services related to freight transportation in railways;T
 694;Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;;annual demand for energy services related to freight transportation on roads;T
-695;Energy Service|Transportation|Navigation;bn vkm/yr;;bn vkm/yr;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Navigation;T
+695;Energy Service|Transportation|Navigation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Navigation;
 696;Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass;bn pkm/yr;;;;;annual demand for energy services related to passenger transportation;R
 697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Pass|Domestic Aviation;bn pkm/yr;;;;;annual demand for energy services related to passenger transportation in aviation;T
 697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Bunkers|Pass|International Aviation;bn pkm/yr;;;;;annual demand for energy services related to passenger transportation in aviation;T
@@ -782,7 +782,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 703;Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;;;;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles);
 704;Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;;energy service demand for passenger transport on roads (buses);T
 705;Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);T
-706;Energy Service|Transportation|Rail;bn vkm/yr;;bn vkm/yr;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Rail;T
+706;Energy Service|Transportation|Rail;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Rail;
 707;Energy Service|Transportation|Road;bn vkm/yr;ES|Transport|VKM|Road;bn vkm/yr;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Road;T
 708;Final Energy;EJ/yr;FE;EJ/yr;;;;;total final energy consumption by all end-use sectors and all fuels,excluding transmission/distribution losses;R
 ;Final Energy (excl. feedstocks)|Industry;EJ/yr;;;;;;;;
