@@ -1017,11 +1017,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 951;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Electricity;EJ/yr;;;;;;final energy consumption of liquid fuels in the transportation sector by Hybrid Bus;
 952;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Liquids;EJ/yr;;;;;;final energy consumption of liquid fuels in the transportation sector by Hybrid Bus;
 953;1;energy (final);Final Energy|Transportation|Bus|Hybrid|Gases;EJ/yr;;;;;;final energy consumption of gases in the transportation sector by Hybrid Bus;
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Pass|w/o Bunkers;EJ/yr;;;;final energy consumed for passenger transportation;T
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;final energy consumed for passenger transportation;T
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;final energy consumed for passenger transportation;T
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Rail;EJ/yr;;;;final energy consumed for passenger transportation;T
-954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|Aviation|Domestic;EJ/yr;;;;final energy consumed for passenger transportation;T
+954;1;energy (final);Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass|w/o Bunkers;EJ/yr;;;;final energy consumed for passenger transportation;T
 955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;;;final energy consumed for freight transportation;T
 955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Rail;EJ/yr;;;;final energy consumed for freight transportation;T
 955;1;energy (final);Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Navigation;EJ/yr;;;;final energy consumed for freight transportation;T
