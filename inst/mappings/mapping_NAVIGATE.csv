@@ -148,11 +148,11 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 102;2;carbon management;Carbon Removal|Ocean;Mt CO2/yr;;;;;;total carbon dioxide sequestered through ocean sinks;
 103;2;carbon management;Carbon Removal|Ocean|Alkalinization;Mt CO2/yr;;;;;;total carbon dioxide sequestered through ocean alkalinization;
 104;2;carbon management;Carbon Removal|Ocean|Other;Mt CO2/yr;;;;;;total carbon dioxide sequestered through other ocean methods (please provide a definition of other sources in this category in the 'comments' tab);
-105;2;carbon management;Carbon Removal|Materials;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through long-lived materials;
+105;2;carbon management;Carbon Removal|Materials;Mt CO2/yr;Emi|CO2|CDR|Materials|+|Plastics;Mt CO2/yr;-1;;;total non-fossil carbon dioxide sequestered through long-lived materials;R
 106;2;carbon management;Carbon Removal|Materials|Timber;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through long-lived wood products;
-107;2;carbon management;Carbon Removal|Materials|Plastics;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through both short- and long-lived plastic products. Emissions from incineration of plastic should be reported under Emissions|CO2|Waste|Biomass;
+107;2;carbon management;Carbon Removal|Materials|Plastics;Mt CO2/yr;Emi|CO2|CDR|Materials|+|Plastics;Mt CO2/yr;-1;;;total non-fossil carbon dioxide sequestered through both short- and long-lived plastic products. Emissions from incineration of plastic should be reported under Emissions|CO2|Waste|Biomass;R
 108;2;carbon management;Carbon Removal|Materials|Other;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through other long-lived materials;
-109;2;carbon management;Carbon Removal|Other;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through other techniques  (please provide a definition of other sources in this category in the 'comments' tab);
+109;2;carbon management;Carbon Removal|Other;Mt CO2/yr;;;;;;total non-fossil carbon dioxide sequestered through other techniques (please provide a definition of other sources in this category in the 'comments' tab);
 110;1;climate;Forcing;W/m2;Forcing;W/m2;;;;radiative forcing from all greenhouse gases and forcing agents, including contributions from albedo change, nitrate, and mineral dust;C
 111;1;climate;Temperature|Global Mean;°C;MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile;K;;;;change in global mean temperature relative to pre-industrial;C
 112;2;climate;Concentration|CH4;ppb;MAGICC7 AR6|Atmospheric Concentrations|CH4|50.0th Percentile;ppb;;;;atmospheric concentration of methane;C
