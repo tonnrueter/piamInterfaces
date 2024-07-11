@@ -19,7 +19,8 @@ getSummations <- function(project = NULL) {
   filename <- if (project %in% names(summations)) summations[project] else project
   if (file.exists(filename)) {
     summations <- read.csv2(filename, sep = ";", stringsAsFactors = FALSE,
-                            strip.white = TRUE, comment.char = "#")
+                            strip.white = TRUE, comment.char = "#") %>%
+      filter(! .data$parent %in% "")
     if (!("factor" %in% names(summations))) {
       summations$factor <- 1
     } else {
