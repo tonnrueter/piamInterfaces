@@ -353,11 +353,11 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 301;Emissions|CO2|Energy|Demand|Transportation|Aviation;Mt CO2/yr;;;;;;;carbon dioxide emissions from transport by aviation mode;
 302;Emissions|CO2|Energy|Demand|Transportation|Aviation|Freight;Mt CO2/yr;;;;;;;carbon dioxide emissions from transport by freight aviation mode;
 303;Emissions|CO2|Energy|Demand|Transportation|Aviation|Passenger;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Pass|Domestic Aviation;Mt CO2/yr;;;;;carbon dioxide emissions from transport by passenger aviation mode;T
-304;Emissions|CO2|Energy|Demand|Transportation|Freight;Mt CO2/yr;Emi|CO2|Transport|Freight|Short-Medium Distance|Demand;Mt CO2/yr;;;;;CO2 emissions from fuel combustion in freight transportation sector (part of IPCC category 1A3),excluding pipeline emissions (IPCC category 1A3ei);T
+304;Emissions|CO2|Energy|Demand|Transportation|Freight;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion in freight transportation sector (part of IPCC category 1A3),excluding pipeline emissions (IPCC category 1A3ei);T
 305;Emissions|CO2|Energy|Demand|Transportation|Maritime;Mt CO2/yr;;;;;;;carbon dioxide emissions from transport by maritime mode;
 306;Emissions|CO2|Energy|Demand|Transportation|Maritime|Freight;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Freight|Domestic Shipping;Mt CO2/yr;;;;;carbon dioxide emissions from transport by freight maritime mode;T
 307;Emissions|CO2|Energy|Demand|Transportation|Maritime|Passenger;Mt CO2/yr;;Mt CO2/yr;;;;;carbon dioxide emissions from transport by passenger maritime mode;
-308;Emissions|CO2|Energy|Demand|Transportation|Passenger;Mt CO2/yr;Emi|CO2|Transport|Pass|Short-Medium Distance|Demand;Mt CO2/yr;;;;;CO2 emissions from fuel combustion in passenger transportation sector (part of IPCC category 1A3);T
+308;Emissions|CO2|Energy|Demand|Transportation|Passenger;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion in passenger transportation sector (part of IPCC category 1A3);T
 309;Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;;;;;;;carbon dioxide emissions from transport by rail mode;
 310;Emissions|CO2|Energy|Demand|Transportation|Rail|Freight;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Freight|Rail;Mt CO2/yr;;;;;carbon dioxide emissions from transport by freight rail mode;T
 311;Emissions|CO2|Energy|Demand|Transportation|Rail|Passenger;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|Pass|Rail;Mt CO2/yr;;;;;carbon dioxide emissions from transport by passenger rail mode;T
@@ -1964,7 +1964,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1816;Water Withdrawal|Liquids|Oil;km3/yr;;;;;;;water withdrawal for oil production;
 1817;Water Withdrawal|Livestock;km3/yr;;;;;;;water withdrawals for livestock;
 1818;Water Withdrawal|Municipal Water;km3/yr;;;;;;;water withdrawals for the municial sector (e.g.,houses,offices,municipal irrigation);
-1819;Useful Energy|Per Capita|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport;T
+1819;Useful Energy|Per Capita|Transportation|Passenger;GJ/cap/yr;;;;;;;Useful energy per capita for passenger transport;T
 1820;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact;S
 1821;Useful Energy|Per Capita|Industry;GJ/cap/yr;;;;;;weighted sum of FE with weights constant both in time and across regions;Useful energy per capita for industry;
 1822;Useful Energy|Per Capita|Residential and Commercial;GJ/cap/yr;UE|per capita|Buildings;GJ/cap/yr;;;;;Useful energy per capita for buildings;R
