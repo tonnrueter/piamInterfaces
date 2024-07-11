@@ -1,5 +1,5 @@
 idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_comment;Comment;Definition;source
-# temporary fix until waste emissions are separated;;;;;;;;;;;
+# temporary fix until waste emissions are separated;;;;;;;;;;; # https://github.com/remindmodel/development_issues/issues/261
 ;;;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
 ;;;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;Rx
 ;;;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;Rx
@@ -882,7 +882,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 818;1;energy (final);Final Energy|Residential and Commercial|Solids|Fossil;EJ/yr;FE|Buildings|Solids|+|Fossil;EJ/yr;;;;final energy consumption of fossil solids by the residential & commercial sector;R
 819;2;energy (final);Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;FE|Buildings|Gases|+|Biomass;EJ/yr;;;;final energy consumption by the residential & commercial sector of biogas, excluding transmission/distribution losses;R
 820;2;energy (final);Final Energy|Residential and Commercial|Gases|Electricity;EJ/yr;FE|Buildings|Gases|+|Hydrogen;EJ/yr;;;;final energy consumption by the residential & commercial sector of synthetic e-fuel gas (power-to-gas), excluding transmission/distribution losses;R
-821;2;energy (final);Final Energy|Residential and Commercial|Gases|Fossil;EJ/yr;FE|Buildings|Gases|+|Fossil;;;;;final energy consumption by the residential & commercial sector of  synthetic or derived gases of fossil origin, excluding transmission/distribution losses;R
+821;2;energy (final);Final Energy|Residential and Commercial|Gases|Fossil;EJ/yr;FE|Buildings|Gases|+|Fossil;EJ/yr;;;;final energy consumption by the residential & commercial sector of  synthetic or derived gases of fossil origin, excluding transmission/distribution losses;R
 822;2;energy (final);Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquid biofuels;R
 823;2;energy (final);Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquid efuels (power-to-liquid);R
 824;2;energy (final);Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;FE|Buildings|Liquids|+|Fossil;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquids from fossil origin (conventional & unconventional petroleum, coal-to-liquids, gas-to-liquids);R

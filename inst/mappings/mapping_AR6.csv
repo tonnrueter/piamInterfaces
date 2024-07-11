@@ -1,5 +1,5 @@
 idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
-# temporary fix until waste emissions are separated;;;;;;;;;;
+# temporary fix until waste emissions are separated;;;;;;;;;; # https://github.com/remindmodel/development_issues/issues/261
 ;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
 ;Emissions|CO2|Energy|Supply|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
 ;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx

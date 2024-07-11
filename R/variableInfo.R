@@ -37,12 +37,9 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
     mappingName <- basename(m)
     remindno <- which(removePlus(varname) == removePlus(mappingData[, remindVar]))
     exportno <- head(which(removePlus(varname) == removePlus(mappingData$variable)), n = 1)
-    if (length(remindno) + length(exportno) == 0) {
-      message("\n### Nothing found in mapping: ", blue, mappingName, nc)
-      next
-    } else {
-      message("\n### Results from mapping: ", blue, mappingName, nc)
-    }
+    nothingfound <- isTRUE(length(remindno) + length(exportno) == 0)
+    message("\n### ", ifelse(nothingfound, "Nothing found in", "Results from"), " mapping: ", blue, mappingName, nc)
+    if (nothingfound) next
     if (m %in% names(summationsNames())) {
       summationGroups <- getSummations(m)
       # print table column names
@@ -89,7 +86,7 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
         for (ch in allremindchilds) {
           exportchild <- unique(mappingData$variable[mappingData[, remindVar] %in% ch])
           exportchild <- exportchild[! is.na(exportchild)]
-          message("   . ", str_pad(paste(exportchild, collapse = ", "), width, "right"), "     . ", ch)
+          message("  . ", str_pad(paste(exportchild, collapse = ", "), width + 1, "right"), "     . ", ch)
         }
       }
       message("Units: ", str_pad(paste0(unique(mappingData$unit[no]), collapse = ", "), width, "right"),
@@ -100,9 +97,7 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
     mifdata <- quitte::as.quitte(mif)
     message("\n### Variables found in mif file")
     mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)), keepparent = TRUE)
-    for (ch in mifchilds) {
-      message("- ", ch)
-    }
+    message(paste0("- ", mifchilds, collapse = "\n"))
   }
 
   csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
