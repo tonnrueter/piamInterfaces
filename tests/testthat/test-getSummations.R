@@ -9,5 +9,14 @@ test_that("basic checks on summation Groups", {
     expect_equal(nrow(duplicates), 0)
     expect_true(all(c("parent", "child", "factor") %in% names(summationsData)))
     expect_true(class(summationsData) == "data.frame")
+    mappingData <- try(getMapping(template))
+    if (! inherits(mappingData, "try-error") && ! template %in% "ECEMF") {
+      notinMapping <- setdiff(c(gsub(" [1-9]$", "", summationsData$parent), summationsData$child), mappingData$variable)
+      if (length(notinMapping) > 0) {
+        warning("These elements of summation_groups_", template, " are not defined in mapping_", template, ": ",
+                paste(notinMapping, collapse = ", "))
+      }
+      expect_equal(length(notinMapping), 0)
+    }
   }
 })
