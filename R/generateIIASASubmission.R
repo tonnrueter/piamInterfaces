@@ -45,7 +45,7 @@
 #'        If `outputDirectory` is set to NULL, this parameter has no effect.
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
-#' @param generatePlots boolean, whether to generate plots of failing summation checks
+#' @param generatePlots boolean, whether to generate plots of failing summation checks. Needs outputDirectory not NULL.
 #' @param timesteps timesteps that are accepted in final submission
 #' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
@@ -88,9 +88,11 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
 
-  if (is.null(outputDirectory)) {
+  if (is.null(outputDirectory) && any(! is.null(c(outputFilename, logFile)), isTRUE(generatePlots))) {
+    message("as outputDirectory=NULL, setting outputFilename=NULL, logFile=NULL, generatePlots=FALSE")
     outputFilename <- NULL
     logFile <- NULL
+    generatePlots <- FALSE
   }
 
   logFile <- setLogFile(outputDirectory, logFile)

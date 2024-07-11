@@ -1,995 +1,995 @@
-variable;unit;piam_variable;piam_unit;piam_factor;weight;comment
-CONS.AGR;1000 t dm;Demand|Bioenergy;Mt DM/yr;1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Bioenergy;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Food;Mt DM/yr;1000;NULL;
-FOOD.AGR;1000 t dm;Demand|Food;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Material;Mt DM/yr;1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Material;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Seed;Mt DM/yr;1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Seed;Mt DM/yr;1000;NULL;
-CONS.ECP;1000 t dm;Demand|Bioenergy|Bioenergy crops;Mt DM/yr;1000;NULL;
-OTHU.ECP;1000 t dm;Demand|Bioenergy|Bioenergy crops;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Bioenergy|Crop residues;Mt DM/yr;-1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Bioenergy|Crop residues;Mt DM/yr;-1000;NULL;
-CONS.CRP;1000 t dm;Demand|Bioenergy|Crops;Mt DM/yr;1000;NULL;
-OTHU.CRP;1000 t dm;Demand|Bioenergy|Crops;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;-1000;NULL;
-CONS.FSH;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;-1000;NULL;
-OTHU.FSH;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Bioenergy|Forest products;Mt DM/yr;-1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Bioenergy|Forest products;Mt DM/yr;-1000;NULL;
-CONS.LSP;1000 t dm;Demand|Bioenergy|Livestock products;Mt DM/yr;1000;NULL;
-OTHU.LSP;1000 t dm;Demand|Bioenergy|Livestock products;Mt DM/yr;1000;NULL;
-CONS.CRP;1000 t dm;Demand|Bioenergy|Secondary products;Mt DM/yr;1000;NULL;
-OTHU.CRP;1000 t dm;Demand|Bioenergy|Secondary products;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Bioenergy|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Bioenergy|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-CONS.RIC;1000 t dm;Demand|Bioenergy|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-OTHU.RIC;1000 t dm;Demand|Bioenergy|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Bioenergy|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-OTHU.WHT;1000 t dm;Demand|Bioenergy|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-OTHU.PFB;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-CONS.VFN;1000 t dm;Demand|Bioenergy|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-OTHU.VFN;1000 t dm;Demand|Bioenergy|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-CONS.DRY;1000 t dm;Demand|Bioenergy|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-OTHU.DRY;1000 t dm;Demand|Bioenergy|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-CONS.RUM;1000 t dm;Demand|Bioenergy|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-OTHU.RUM;1000 t dm;Demand|Bioenergy|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Bioenergy|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-OTHU.WHT;1000 t dm;Demand|Bioenergy|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Brans;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Brans;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Bioenergy|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-OTHU.PFB;1000 t dm;Demand|Bioenergy|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oils;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oils;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FEED.OFD;1000 t dm;Demand|Feed|Crop residues;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Feed|Crops;Mt DM/yr;1000;NULL;
-CONS.CRP;1000 t dm;Demand|Feed|Crops;Mt DM/yr;1000;NULL;
-FEED.CRP;1000 t dm;Demand|Feed|Crops;Mt DM/yr;1000;NULL;
-CONS.FSH;1000 t dm;Demand|Feed|Fish;Mt DM/yr;1000;NULL;
-FEED.FSH;1000 t dm;Demand|Feed|Fish;Mt DM/yr;1000;NULL;
-FEED.OFD;1000 t dm;Demand|Feed|Forage;Mt DM/yr;1000;NULL;
-FEED.GRS;1000 t dm;Demand|Feed|Pasture;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Feed|Secondary products;Mt DM/yr;1000;NULL;
-CONS.CRP;1000 t dm;Demand|Feed|Secondary products;Mt DM/yr;1000;NULL;
-FEED.CRP;1000 t dm;Demand|Feed|Secondary products;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Feed|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FEED.SGC;1000 t dm;Demand|Feed|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FEED.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-CONS.RIC;1000 t dm;Demand|Feed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FEED.RIC;1000 t dm;Demand|Feed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Feed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FEED.WHT;1000 t dm;Demand|Feed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FEED.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Feed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FEED.PFB;1000 t dm;Demand|Feed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-CONS.VFN;1000 t dm;Demand|Feed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FEED.VFN;1000 t dm;Demand|Feed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FEED.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FEED.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FEED.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FFSH.OFD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crop residues;Mt DM/yr;1000;NULL;
-FFSH.CRP;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops;Mt DM/yr;1000;NULL;
-FFSH.FSH;1000 t dm;Demand|Feed|Feed for Aquaculture|Fish;Mt DM/yr;1000;NULL;
-FFSH.OFD;1000 t dm;Demand|Feed|Feed for Aquaculture|Forage;Mt DM/yr;1000;NULL;
-FFSH.GRS;1000 t dm;Demand|Feed|Feed for Aquaculture|Pasture;Mt DM/yr;1000;NULL;
-FFSH.CRP;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products;Mt DM/yr;1000;NULL;
-FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FFSH.RIC;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FFSH.WHT;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FFSH.PFB;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FFSH.VFN;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FFSH.OCR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FFSH.OCR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FFSH.OCR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FFSH.WHT;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FFSH.PFB;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FDRY.OFD;1000 t dm;Demand|Feed|Feed for Dairy|Crop residues;Mt DM/yr;1000;NULL;
-FDRY.CRP;1000 t dm;Demand|Feed|Feed for Dairy|Crops;Mt DM/yr;1000;NULL;
-FDRY.FSH;1000 t dm;Demand|Feed|Feed for Dairy|Fish;Mt DM/yr;1000;NULL;
-FDRY.OFD;1000 t dm;Demand|Feed|Feed for Dairy|Forage;Mt DM/yr;1000;NULL;
-FDRY.GRS;1000 t dm;Demand|Feed|Feed for Dairy|Pasture;Mt DM/yr;1000;NULL;
-FDRY.CRP;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products;Mt DM/yr;1000;NULL;
-FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FDRY.RIC;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FDRY.WHT;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FDRY.PFB;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FDRY.VFN;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FDRY.OCR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FDRY.OCR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FDRY.OCR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FDRY.WHT;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FDRY.PFB;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Eggs|Crop residues;Mt DM/yr;1000;NULL;
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Eggs|Crops;Mt DM/yr;1000;NULL;
-FNRM.FSH;1000 t dm;Demand|Feed|Feed for Eggs|Fish;Mt DM/yr;1000;NULL;
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Eggs|Forage;Mt DM/yr;1000;NULL;
-FNRM.GRS;1000 t dm;Demand|Feed|Feed for Eggs|Pasture;Mt DM/yr;1000;NULL;
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FNRM.RIC;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FNRM.VFN;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crop residues;Mt DM/yr;1000;NULL;
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops;Mt DM/yr;1000;NULL;
-FNRM.FSH;1000 t dm;Demand|Feed|Feed for Monogastric meat|Fish;Mt DM/yr;1000;NULL;
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Forage;Mt DM/yr;1000;NULL;
-FNRM.GRS;1000 t dm;Demand|Feed|Feed for Monogastric meat|Pasture;Mt DM/yr;1000;NULL;
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FNRM.RIC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FNRM.VFN;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crop residues;Mt DM/yr;1000;NULL;
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops;Mt DM/yr;1000;NULL;
-FNRM.FSH;1000 t dm;Demand|Feed|Feed for Poultry meat|Fish;Mt DM/yr;1000;NULL;
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Poultry meat|Forage;Mt DM/yr;1000;NULL;
-FNRM.GRS;1000 t dm;Demand|Feed|Feed for Poultry meat|Pasture;Mt DM/yr;1000;NULL;
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FNRM.RIC;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FNRM.VFN;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FRUM.OFD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crop residues;Mt DM/yr;1000;NULL;
-FRUM.CRP;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops;Mt DM/yr;1000;NULL;
-FRUM.FSH;1000 t dm;Demand|Feed|Feed for Ruminant meat|Fish;Mt DM/yr;1000;NULL;
-FRUM.OFD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Forage;Mt DM/yr;1000;NULL;
-FRUM.GRS;1000 t dm;Demand|Feed|Feed for Ruminant meat|Pasture;Mt DM/yr;1000;NULL;
-FRUM.CRP;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products;Mt DM/yr;1000;NULL;
-FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FRUM.RIC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FRUM.WHT;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FRUM.PFB;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FRUM.VFN;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FRUM.OCR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FRUM.OCR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FRUM.OCR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FRUM.WHT;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FRUM.PFB;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Feed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FEED.WHT;1000 t dm;Demand|Feed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Feed|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FEED.CGR;1000 t dm;Demand|Feed|Secondary products|Brans;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Feed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FEED.PFB;1000 t dm;Demand|Feed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Feed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FEED.CGR;1000 t dm;Demand|Feed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Feed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FEED.OSD;1000 t dm;Demand|Feed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Feed|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FEED.OSD;1000 t dm;Demand|Feed|Secondary products|Oils;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-CONS.CRP;1000 t dm;Demand|Food|Crops;Mt DM/yr;1000;NULL;
-FOOD.CRP;1000 t dm;Demand|Food|Crops;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Food|Fish;Mt DM/yr;-1000;NULL;
-CONS.FSH;1000 t dm;Demand|Food|Fish;Mt DM/yr;1000;NULL;
-FOOD.AGR;1000 t dm;Demand|Food|Fish;Mt DM/yr;-1000;NULL;
-FOOD.FSH;1000 t dm;Demand|Food|Fish;Mt DM/yr;1000;NULL;
-CONS.LSP;1000 t dm;Demand|Food|Livestock products;Mt DM/yr;1000;NULL;
-FOOD.LSP;1000 t dm;Demand|Food|Livestock products;Mt DM/yr;1000;NULL;
-CONS.CRP;1000 t dm;Demand|Food|Secondary products;Mt DM/yr;1000;NULL;
-FOOD.CRP;1000 t dm;Demand|Food|Secondary products;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Food|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-FOOD.SGC;1000 t dm;Demand|Food|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Food|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-FOOD.CGR;1000 t dm;Demand|Food|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-CONS.RIC;1000 t dm;Demand|Food|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-FOOD.RIC;1000 t dm;Demand|Food|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Food|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-FOOD.WHT;1000 t dm;Demand|Food|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Food|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-FOOD.CGR;1000 t dm;Demand|Food|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Food|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-FOOD.PFB;1000 t dm;Demand|Food|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-CONS.VFN;1000 t dm;Demand|Food|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-FOOD.VFN;1000 t dm;Demand|Food|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Food|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-FOOD.OCR;1000 t dm;Demand|Food|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Food|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-FOOD.OCR;1000 t dm;Demand|Food|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Food|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-FOOD.OCR;1000 t dm;Demand|Food|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-CONS.DRY;1000 t dm;Demand|Food|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-FOOD.DRY;1000 t dm;Demand|Food|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Food|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Food|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Food|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-CONS.RUM;1000 t dm;Demand|Food|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-FOOD.RUM;1000 t dm;Demand|Food|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Food|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-FOOD.WHT;1000 t dm;Demand|Food|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Food|Secondary products|Brans;Mt DM/yr;1000;NULL;
-FOOD.CGR;1000 t dm;Demand|Food|Secondary products|Brans;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Food|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-FOOD.PFB;1000 t dm;Demand|Food|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Food|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-FOOD.CGR;1000 t dm;Demand|Food|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Food|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Food|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Food|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Food|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-FOOD.OSD;1000 t dm;Demand|Food|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Food|Secondary products|Oils;Mt DM/yr;1000;NULL;
-FOOD.OSD;1000 t dm;Demand|Food|Secondary products|Oils;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Food|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Material|Crop residues;Mt DM/yr;-1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Material|Crop residues;Mt DM/yr;-1000;NULL;
-CONS.CRP;1000 t dm;Demand|Material|Crops;Mt DM/yr;1000;NULL;
-OTHU.CRP;1000 t dm;Demand|Material|Crops;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Material|Fish;Mt DM/yr;-1000;NULL;
-CONS.FSH;1000 t dm;Demand|Material|Fish;Mt DM/yr;1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Material|Fish;Mt DM/yr;-1000;NULL;
-OTHU.FSH;1000 t dm;Demand|Material|Fish;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Material|Forest products;Mt DM/yr;-1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Material|Forest products;Mt DM/yr;-1000;NULL;
-CONS.LSP;1000 t dm;Demand|Material|Livestock products;Mt DM/yr;1000;NULL;
-OTHU.LSP;1000 t dm;Demand|Material|Livestock products;Mt DM/yr;1000;NULL;
-CONS.CRP;1000 t dm;Demand|Material|Secondary products;Mt DM/yr;1000;NULL;
-OTHU.CRP;1000 t dm;Demand|Material|Secondary products;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Material|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Material|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Material|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Material|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-CONS.RIC;1000 t dm;Demand|Material|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-OTHU.RIC;1000 t dm;Demand|Material|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Material|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-OTHU.WHT;1000 t dm;Demand|Material|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Material|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Material|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Material|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-OTHU.PFB;1000 t dm;Demand|Material|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-CONS.VFN;1000 t dm;Demand|Material|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-OTHU.VFN;1000 t dm;Demand|Material|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Material|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Material|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Material|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Material|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Material|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Material|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-CONS.DRY;1000 t dm;Demand|Material|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-OTHU.DRY;1000 t dm;Demand|Material|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Material|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Material|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Material|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-CONS.RUM;1000 t dm;Demand|Material|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-OTHU.RUM;1000 t dm;Demand|Material|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Material|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-OTHU.WHT;1000 t dm;Demand|Material|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Material|Secondary products|Brans;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Material|Secondary products|Brans;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Material|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-OTHU.PFB;1000 t dm;Demand|Material|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Material|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Material|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Material|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Material|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Material|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Material|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Material|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Material|Secondary products|Oils;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Material|Secondary products|Oils;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Material|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Seed|Crop residues;Mt DM/yr;-1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Seed|Crop residues;Mt DM/yr;-1000;NULL;
-CONS.CRP;1000 t dm;Demand|Seed|Crops;Mt DM/yr;1000;NULL;
-OTHU.CRP;1000 t dm;Demand|Seed|Crops;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Seed|Fish;Mt DM/yr;-1000;NULL;
-CONS.FSH;1000 t dm;Demand|Seed|Fish;Mt DM/yr;1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Seed|Fish;Mt DM/yr;-1000;NULL;
-OTHU.FSH;1000 t dm;Demand|Seed|Fish;Mt DM/yr;1000;NULL;
-CONS.AGR;1000 t dm;Demand|Seed|Forest products;Mt DM/yr;-1000;NULL;
-OTHU.AGR;1000 t dm;Demand|Seed|Forest products;Mt DM/yr;-1000;NULL;
-CONS.LSP;1000 t dm;Demand|Seed|Livestock products;Mt DM/yr;1000;NULL;
-OTHU.LSP;1000 t dm;Demand|Seed|Livestock products;Mt DM/yr;1000;NULL;
-CONS.CRP;1000 t dm;Demand|Seed|Secondary products;Mt DM/yr;1000;NULL;
-OTHU.CRP;1000 t dm;Demand|Seed|Secondary products;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Seed|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Seed|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-CONS.RIC;1000 t dm;Demand|Seed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-OTHU.RIC;1000 t dm;Demand|Seed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Seed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-OTHU.WHT;1000 t dm;Demand|Seed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Seed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-OTHU.PFB;1000 t dm;Demand|Seed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-CONS.VFN;1000 t dm;Demand|Seed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-OTHU.VFN;1000 t dm;Demand|Seed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-CONS.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-OTHU.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-CONS.DRY;1000 t dm;Demand|Seed|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-OTHU.DRY;1000 t dm;Demand|Seed|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-CONS.RUM;1000 t dm;Demand|Seed|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-OTHU.RUM;1000 t dm;Demand|Seed|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-CONS.WHT;1000 t dm;Demand|Seed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-OTHU.WHT;1000 t dm;Demand|Seed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Seed|Secondary products|Brans;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Seed|Secondary products|Brans;Mt DM/yr;1000;NULL;
-CONS.PFB;1000 t dm;Demand|Seed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-OTHU.PFB;1000 t dm;Demand|Seed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-CONS.CGR;1000 t dm;Demand|Seed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-OTHU.CGR;1000 t dm;Demand|Seed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Seed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Seed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-CONS.OSD;1000 t dm;Demand|Seed|Secondary products|Oils;Mt DM/yr;1000;NULL;
-OTHU.OSD;1000 t dm;Demand|Seed|Secondary products|Oils;Mt DM/yr;1000;NULL;
-CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-ECH4.AGR;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;
-ECH4.TOT;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;
-ECH4.MMG;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Animal waste management;Mt CO2e/yr;1;NULL;
-ECH4.ENT;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Enteric fermentation;Mt CO2e/yr;1;NULL;
-ECH4.RCC;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Rice;Mt CO2e/yr;1;NULL;
-ECH4.RIC;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Rice;Mt CO2e/yr;1;NULL;
-ECO2.TOT;MtCO2;Emissions|CO2|Land|Land-use Change;Mt CO2/yr;1;NULL;
-EMIS.TOT;MtCO2e;Emissions|GWP100AR6|Land;Gt CO2e/yr;1000;NULL;
-EN2O.AGR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;
-EN2O.TOT;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;
-EN2O.MAS;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Agricultural Soils;Mt CO2e/yr;1;NULL;
-EN2O.MMG;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Animal Waste Management;Mt CO2e/yr;1;NULL;
-EN2O.GRS;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Agricultural Soils|Pasture;Mt CO2e/yr;1;NULL;
-EN2O.ECP;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Bioenergy crops;Mt CO2e/yr;1;NULL;
-EN2O.CRP;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops;Mt CO2e/yr;1;NULL;
-EN2O.CGR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Maize;Mt CO2e/yr;1;NULL;
-EN2O.RIC;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Rice;Mt CO2e/yr;1;NULL;
-EN2O.WHT;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Temperate cereals;Mt CO2e/yr;1;NULL;
-EN2O.CGR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Tropical cereals;Mt CO2e/yr;1;NULL;
-EN2O.PFB;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Cotton seed;Mt CO2e/yr;1;NULL;
-EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Groundnuts;Mt CO2e/yr;1;NULL;
-EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Oilpalms;Mt CO2e/yr;1;NULL;
-EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Other oil crops incl rapeseed;Mt CO2e/yr;1;NULL;
-EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Soybean;Mt CO2e/yr;1;NULL;
-EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Sunflower;Mt CO2e/yr;1;NULL;
-EN2O.VFN;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Fruits Vegetables Nuts;Mt CO2e/yr;1;NULL;
-EN2O.OCR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Potatoes;Mt CO2e/yr;1;NULL;
-EN2O.OCR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Pulses;Mt CO2e/yr;1;NULL;
-EN2O.OCR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Tropical roots;Mt CO2e/yr;1;NULL;
-EN2O.SGC;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Sugar crops;Mt CO2e/yr;1;NULL;
-AEMP_abs.AGR;million;Labor|Employment|Agricultural employment;mio people;1;NULL;
-AEMP_abs.CRP;million;Labor|Employment|Agricultural employment|Crop products;mio people;1;NULL;
-AEMP_abs.LSP;million;Labor|Employment|Agricultural employment|Livestock products;mio people;1;NULL;
-AEMP_prcn.AGR;%;Labor|Employment|Share of working age population employed in agriculture;%;1;NULL;
-AEMP_prcn.CRP;%;Labor|Employment|Share of working age population employed in agriculture|Crop products;%;1;NULL;
-AEMP_prcn.LSP;%;Labor|Employment|Share of working age population employed in agriculture|Livestock products;%;1;NULL;
-AWAG.AGR;USDMER05/h;Labor|Wages|Hourly labor costs;USDMER05/h;1;NULL;
-AWAG.TOT;USDMER05/h;Labor|Wages|Hourly labor costs;USDMER05/h;1;NULL;
-CALI.TOT;kcal/cap/d;Nutrition|Calorie Intake;kcal/capita/day;1;NULL;
-CALI.AGR;kcal/cap/d;Nutrition|Calorie Intake|Crops;kcal/capita/day;1;NULL;
-CALI.CRP;kcal/cap/d;Nutrition|Calorie Intake|Crops;kcal/capita/day;1;NULL;
-CALI.FSH;kcal/cap/d;Nutrition|Calorie Intake|Fish;kcal/capita/day;1;NULL;
-CALI.AGR;kcal/cap/d;Nutrition|Calorie Intake|Livestock products;kcal/capita/day;1;NULL;
-CALI.LSP;kcal/cap/d;Nutrition|Calorie Intake|Livestock products;kcal/capita/day;1;NULL;
-CALI.AGR;kcal/cap/d;Nutrition|Calorie Intake|Secondary products;kcal/capita/day;1;NULL;
-CALI.CRP;kcal/cap/d;Nutrition|Calorie Intake|Secondary products;kcal/capita/day;1;NULL;
-CALI.SGC;kcal/cap/d;Nutrition|Calorie Intake|Crops|Sugar crops;kcal/capita/day;1;NULL;
-CALI.CGR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Maize;kcal/capita/day;1;NULL;
-CALI.RIC;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Rice;kcal/capita/day;1;NULL;
-CALI.WHT;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Temperate cereals;kcal/capita/day;1;NULL;
-CALI.CGR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Tropical cereals;kcal/capita/day;1;NULL;
-CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Groundnuts;kcal/capita/day;1;NULL;
-CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Other oil crops incl rapeseed;kcal/capita/day;1;NULL;
-CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Soybean;kcal/capita/day;1;NULL;
-CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Sunflower;kcal/capita/day;1;NULL;
-CALI.VFN;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Fruits Vegetables Nuts;kcal/capita/day;1;NULL;
-CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Potatoes;kcal/capita/day;1;NULL;
-CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Pulses;kcal/capita/day;1;NULL;
-CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Tropical roots;kcal/capita/day;1;NULL;
-CALI.DRY;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Dairy;kcal/capita/day;1;NULL;
-CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Eggs;kcal/capita/day;1;NULL;
-CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Monogastric meat;kcal/capita/day;1;NULL;
-CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Poultry meat;kcal/capita/day;1;NULL;
-CALI.RUM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Ruminant meat;kcal/capita/day;1;NULL;
-CALI.WHT;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Alcoholic beverages;kcal/capita/day;1;NULL;
-CALI.CGR;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Brans;kcal/capita/day;1;NULL;
-CALI.SGC;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Molasses;kcal/capita/day;1;NULL;
-CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Oils;kcal/capita/day;1;NULL;
-CALI.SGC;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Sugar;kcal/capita/day;1;NULL;
-CALO.TOT;kcal/cap/d;Nutrition|Calorie Supply;kcal/capita/day;1;NULL;
-CALO.AGR;kcal/cap/d;Nutrition|Calorie Supply|Crops;kcal/capita/day;1;NULL;
-CALO.CRP;kcal/cap/d;Nutrition|Calorie Supply|Crops;kcal/capita/day;1;NULL;
-CALO.FSH;kcal/cap/d;Nutrition|Calorie Supply|Fish;kcal/capita/day;1;NULL;
-CALO.AGR;kcal/cap/d;Nutrition|Calorie Supply|Livestock products;kcal/capita/day;1;NULL;
-CALO.LSP;kcal/cap/d;Nutrition|Calorie Supply|Livestock products;kcal/capita/day;1;NULL;
-CALO.AGR;kcal/cap/d;Nutrition|Calorie Supply|Secondary products;kcal/capita/day;1;NULL;
-CALO.CRP;kcal/cap/d;Nutrition|Calorie Supply|Secondary products;kcal/capita/day;1;NULL;
-CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Crops|Sugar crops;kcal/capita/day;1;NULL;
-CALO.CGR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Maize;kcal/capita/day;1;NULL;
-CALO.RIC;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Rice;kcal/capita/day;1;NULL;
-CALO.WHT;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Temperate cereals;kcal/capita/day;1;NULL;
-CALO.CGR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Tropical cereals;kcal/capita/day;1;NULL;
-CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Groundnuts;kcal/capita/day;1;NULL;
-CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Other oil crops incl rapeseed;kcal/capita/day;1;NULL;
-CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Soybean;kcal/capita/day;1;NULL;
-CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Sunflower;kcal/capita/day;1;NULL;
-CALO.VFN;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Fruits Vegetables Nuts;kcal/capita/day;1;NULL;
-CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Potatoes;kcal/capita/day;1;NULL;
-CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Pulses;kcal/capita/day;1;NULL;
-CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Tropical roots;kcal/capita/day;1;NULL;
-CALO.DRY;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Dairy;kcal/capita/day;1;NULL;
-CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Eggs;kcal/capita/day;1;NULL;
-CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Monogastric meat;kcal/capita/day;1;NULL;
-CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Poultry meat;kcal/capita/day;1;NULL;
-CALO.RUM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Ruminant meat;kcal/capita/day;1;NULL;
-CALO.WHT;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Alcoholic beverages;kcal/capita/day;1;NULL;
-CALO.CGR;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Brans;kcal/capita/day;1;NULL;
-CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Molasses;kcal/capita/day;1;NULL;
-CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Oils;kcal/capita/day;1;NULL;
-CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Sugar;kcal/capita/day;1;NULL;
-POPT.TOT;million;Population;million people;1;NULL;
-CTAX.TOT;USD05/tCO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2005/tCO2;1;NULL;
-PROD.ECP;1000 t dm;Production|Bioenergy crops;Mt DM/yr;1000;NULL;
-PROD.AGR;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;
-PROD.CRP;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;
-PROD.FSH;1000 t dm;Production|Fish;Mt DM/yr;1000;NULL;
-PROD.AGR;1000 t dm;Production|Livestock products;Mt DM/yr;1000;NULL;
-PROD.LSP;1000 t dm;Production|Livestock products;Mt DM/yr;1000;NULL;
-PROD.GRS;1000 t dm;Production|Pasture;Mt DM/yr;1000;NULL;
-PROD.SGC;1000 t dm;Production|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-PROD.CGR;1000 t dm;Production|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-PROD.RIC;1000 t dm;Production|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-PROD.WHT;1000 t dm;Production|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-PROD.CGR;1000 t dm;Production|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-PROD.PFB;1000 t dm;Production|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-PROD.OSD;1000 t dm;Production|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-PROD.OSD;1000 t dm;Production|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;
-PROD.OSD;1000 t dm;Production|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-PROD.OSD;1000 t dm;Production|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-PROD.OSD;1000 t dm;Production|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-PROD.VFN;1000 t dm;Production|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-PROD.OCR;1000 t dm;Production|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-PROD.OCR;1000 t dm;Production|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-PROD.OCR;1000 t dm;Production|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-PROD.DRY;1000 t dm;Production|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-PROD.NRM;1000 t dm;Production|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-PROD.NRM;1000 t dm;Production|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-PROD.NRM;1000 t dm;Production|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-PROD.RUM;1000 t dm;Production|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-YILD_endoTC.CRP;%/yr;Productivity|Yield-increasing technological change crops;%/yr;1;NULL;
-YILD.ECP;dm t/ha;Productivity|Yield|Bioenergy crops;t DM/ha;1;Resources|Land Cover|Cropland|+|Bioenergy crops;
-YIIR.ECP;dm t/ha;Productivity|Yield|Bioenergy crops|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Bioenergy crops|+|irrigated;
-YIRF.ECP;dm t/ha;Productivity|Yield|Bioenergy crops|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Bioenergy crops|+|rainfed;
-YILD.CRP;dm t/ha;Productivity|Yield|Crops;t DM/ha;1;Resources|Land Cover|Cropland|+|Crops;
-YILD.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Maize;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|+|Maize;
-YIIR.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Maize|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Maize|+|irrigated;
-YIRF.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Maize|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Maize|+|rainfed;
-YILD.RIC;dm t/ha;Productivity|Yield|Crops|Cereals|Rice;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|+|Rice;
-YIIR.RIC;dm t/ha;Productivity|Yield|Crops|Cereals|Rice|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Rice|+|irrigated;
-YIRF.RIC;dm t/ha;Productivity|Yield|Crops|Cereals|Rice|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Rice|+|rainfed;
-YILD.WHT;dm t/ha;Productivity|Yield|Crops|Cereals|Temperate cereals;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|+|Temperate cereals;
-YIIR.WHT;dm t/ha;Productivity|Yield|Crops|Cereals|Temperate cereals|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Temperate cereals|+|irrigated;
-YIRF.WHT;dm t/ha;Productivity|Yield|Crops|Cereals|Temperate cereals|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Temperate cereals|+|rainfed;
-YILD.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Tropical cereals;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|+|Tropical cereals;
-YIIR.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Tropical cereals|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Tropical cereals|+|irrigated;
-YIRF.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Tropical cereals|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Cereals|Tropical cereals|+|rainfed;
-YIIR.CRP;dm t/ha;Productivity|Yield|Crops|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|+|irrigated;
-YILD.PFB;dm t/ha;Productivity|Yield|Crops|Oil crops|Cotton seed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|+|Cotton seed;
-YIIR.PFB;dm t/ha;Productivity|Yield|Crops|Oil crops|Cotton seed|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Cotton seed|+|irrigated;
-YIRF.PFB;dm t/ha;Productivity|Yield|Crops|Oil crops|Cotton seed|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Cotton seed|+|rainfed;
-YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Groundnuts;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|+|Groundnuts;
-YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Groundnuts|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Groundnuts|+|irrigated;
-YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Groundnuts|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Groundnuts|+|rainfed;
-YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Oilpalms;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|+|Oilpalms;
-YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Oilpalms|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Oilpalms|+|irrigated;
-YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Oilpalms|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Oilpalms|+|rainfed;
-YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Other oil crops incl rapeseed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|+|Other oil crops incl rapeseed;
-YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Other oil crops incl rapeseed|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Other oil crops incl rapeseed|+|irrigated;
-YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Other oil crops incl rapeseed|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Other oil crops incl rapeseed|+|rainfed;
-YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Soybean;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|+|Soybean;
-YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Soybean|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Soybean|+|irrigated;
-YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Soybean|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Soybean|+|rainfed;
-YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Sunflower;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|+|Sunflower;
-YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Sunflower|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Sunflower|+|irrigated;
-YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Sunflower|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Oil crops|Sunflower|+|rainfed;
-YILD.VFN;dm t/ha;Productivity|Yield|Crops|Other crops|Fruits Vegetables Nuts;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|+|Fruits Vegetables Nuts;
-YIIR.VFN;dm t/ha;Productivity|Yield|Crops|Other crops|Fruits Vegetables Nuts|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Fruits Vegetables Nuts|+|irrigated;
-YIRF.VFN;dm t/ha;Productivity|Yield|Crops|Other crops|Fruits Vegetables Nuts|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Fruits Vegetables Nuts|+|rainfed;
-YILD.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Potatoes;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|+|Potatoes;
-YIIR.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Potatoes|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Potatoes|+|irrigated;
-YIRF.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Potatoes|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Potatoes|+|rainfed;
-YILD.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Pulses;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|+|Pulses;
-YIIR.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Pulses|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Pulses|+|irrigated;
-YIRF.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Pulses|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Pulses|+|rainfed;
-YILD.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Tropical roots;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|+|Tropical roots;
-YIIR.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Tropical roots|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Tropical roots|+|irrigated;
-YIRF.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Tropical roots|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Other crops|Tropical roots|+|rainfed;
-YIRF.CRP;dm t/ha;Productivity|Yield|Crops|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|+|rainfed;
-YILD.SGC;dm t/ha;Productivity|Yield|Crops|Sugar crops;t DM/ha;1;Resources|Land Cover|Cropland|Crops|+|Sugar crops;
-YIIR.SGC;dm t/ha;Productivity|Yield|Crops|Sugar crops|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Sugar crops|+|irrigated;
-YIRF.SGC;dm t/ha;Productivity|Yield|Crops|Sugar crops|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Crops|Sugar crops|+|rainfed;
-YILD.GRS;dm t/ha;Productivity|Yield|Pasture;t DM/ha;1;Resources|Land Cover|+|Pastures and Rangelands;
-LAND.TOT;1000 ha;Resources|Land Cover;million ha;1000;NULL;
-LAND.CRP;1000 ha;Resources|Land Cover|Cropland;million ha;1000;NULL;
-LAND.FOR;1000 ha;Resources|Land Cover|Forest;million ha;1000;NULL;
-LAND.ONV;1000 ha;Resources|Land Cover|Other Land;million ha;1000;NULL;
-LAND.GRS;1000 ha;Resources|Land Cover|Pastures and Rangelands;million ha;1000;NULL;
-LAND.URB;1000 ha;Resources|Land Cover|Urban Area;million ha;1000;NULL;
-LAND.AGR;1000 ha;Resources|Land Cover|Agricultural land;million ha;1000;NULL;
-LAND.ECP;1000 ha;Resources|Land Cover|Cropland|Bioenergy crops;million ha;1000;NULL;
-AREA.CRP;1000 ha;Resources|Land Cover|Cropland|Crops;million ha;1000;NULL;
-AREA.ECP;1000 ha;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation grasses;million ha;1000;NULL;
-AREA.ECP;1000 ha;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation trees;million ha;1000;NULL;
-ARIR.ECP;1000 ha;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation grasses|irrigated;million ha;1000;NULL;
-ARRF.ECP;1000 ha;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation grasses|rainfed;million ha;1000;NULL;
-ARIR.ECP;1000 ha;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation trees|irrigated;million ha;1000;NULL;
-ARRF.ECP;1000 ha;Resources|Land Cover|Cropland|Bioenergy crops|Short rotation trees|rainfed;million ha;1000;NULL;
-ARIR.CRP;1000 ha;Resources|Land Cover|Cropland|Crops|irrigated;million ha;1000;NULL;
-ARRF.CRP;1000 ha;Resources|Land Cover|Cropland|Crops|rainfed;million ha;1000;NULL;
-AREA.SGC;1000 ha;Resources|Land Cover|Cropland|Crops|Sugar crops;million ha;1000;NULL;
-AREA.CGR;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Maize;million ha;1000;NULL;
-AREA.RIC;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Rice;million ha;1000;NULL;
-AREA.WHT;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Temperate cereals;million ha;1000;NULL;
-AREA.CGR;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Tropical cereals;million ha;1000;NULL;
-ARIR.CGR;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Maize|irrigated;million ha;1000;NULL;
-ARRF.CGR;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Maize|rainfed;million ha;1000;NULL;
-ARIR.RIC;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Rice|irrigated;million ha;1000;NULL;
-ARRF.RIC;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Rice|rainfed;million ha;1000;NULL;
-ARIR.WHT;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Temperate cereals|irrigated;million ha;1000;NULL;
-ARRF.WHT;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Temperate cereals|rainfed;million ha;1000;NULL;
-ARIR.CGR;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Tropical cereals|irrigated;million ha;1000;NULL;
-ARRF.CGR;1000 ha;Resources|Land Cover|Cropland|Crops|Cereals|Tropical cereals|rainfed;million ha;1000;NULL;
-AREA.PFB;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Cotton seed;million ha;1000;NULL;
-AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Groundnuts;million ha;1000;NULL;
-AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Oilpalms;million ha;1000;NULL;
-AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Other oil crops incl rapeseed;million ha;1000;NULL;
-AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Soybean;million ha;1000;NULL;
-AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Sunflower;million ha;1000;NULL;
-ARIR.PFB;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Cotton seed|irrigated;million ha;1000;NULL;
-ARRF.PFB;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Cotton seed|rainfed;million ha;1000;NULL;
-ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Groundnuts|irrigated;million ha;1000;NULL;
-ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Groundnuts|rainfed;million ha;1000;NULL;
-ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Oilpalms|irrigated;million ha;1000;NULL;
-ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Oilpalms|rainfed;million ha;1000;NULL;
-ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Other oil crops incl rapeseed|irrigated;million ha;1000;NULL;
-ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Other oil crops incl rapeseed|rainfed;million ha;1000;NULL;
-ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Soybean|irrigated;million ha;1000;NULL;
-ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Soybean|rainfed;million ha;1000;NULL;
-ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Sunflower|irrigated;million ha;1000;NULL;
-ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Crops|Oil crops|Sunflower|rainfed;million ha;1000;NULL;
-AREA.VFN;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Fruits Vegetables Nuts;million ha;1000;NULL;
-AREA.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Potatoes;million ha;1000;NULL;
-AREA.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Pulses;million ha;1000;NULL;
-AREA.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Tropical roots;million ha;1000;NULL;
-ARIR.VFN;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Fruits Vegetables Nuts|irrigated;million ha;1000;NULL;
-ARRF.VFN;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Fruits Vegetables Nuts|rainfed;million ha;1000;NULL;
-ARIR.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Potatoes|irrigated;million ha;1000;NULL;
-ARRF.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Potatoes|rainfed;million ha;1000;NULL;
-ARIR.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Pulses|irrigated;million ha;1000;NULL;
-ARRF.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Pulses|rainfed;million ha;1000;NULL;
-ARIR.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Tropical roots|irrigated;million ha;1000;NULL;
-ARRF.OCR;1000 ha;Resources|Land Cover|Cropland|Crops|Other crops|Tropical roots|rainfed;million ha;1000;NULL;
-ARIR.SGC;1000 ha;Resources|Land Cover|Cropland|Crops|Sugar crops|irrigated;million ha;1000;NULL;
-ARRF.SGC;1000 ha;Resources|Land Cover|Cropland|Crops|Sugar crops|rainfed;million ha;1000;NULL;
-SOCS.CRP;tC/ha;Resources|Soil Carbon|Actual|Density|SOC in top 30 cm|Cropland Soils;tC/ha;1;NULL;
-WATR.TOT;km3;Resources|Water|Withdrawal|Agriculture;km3/yr;1;NULL;
-WATR.ECP;km3;Resources|Water|Withdrawal|Agriculture|Crops|Bioenergy crops;km3/yr;1;NULL;
-WATR.CRP;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops;km3/yr;1;NULL;
-WATR.SGC;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Sugar crops;km3/yr;1;NULL;
-WATR.CGR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Maize;km3/yr;1;NULL;
-WATR.RIC;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Rice;km3/yr;1;NULL;
-WATR.WHT;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Temperate cereals;km3/yr;1;NULL;
-WATR.CGR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Tropical cereals;km3/yr;1;NULL;
-WATR.PFB;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Cotton seed;km3/yr;1;NULL;
-WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Groundnuts;km3/yr;1;NULL;
-WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Oilpalms;km3/yr;1;NULL;
-WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Other oil crops incl rapeseed;km3/yr;1;NULL;
-WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Soybean;km3/yr;1;NULL;
-WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Sunflower;km3/yr;1;NULL;
-WATR.VFN;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Fruits Vegetables Nuts;km3/yr;1;NULL;
-WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Potatoes;km3/yr;1;NULL;
-WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Pulses;km3/yr;1;NULL;
-WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Tropical roots;km3/yr;1;NULL;
-GDPT.TOT;bn USD 2005 MER;Total income;million US$05 MER/yr;0.001;NULL;
-NETT.ECP;1000 t dm;Trade|Net-Trade|Bioenergy crops;Mt DM/yr;1000;NULL;
-NETT.AGR;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;
-NETT.CRP;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;
-NETT.FSH;1000 t dm;Trade|Net-Trade|Fish;Mt DM/yr;1000;NULL;
-NETT.AGR;1000 t dm;Trade|Net-Trade|Livestock products;Mt DM/yr;1000;NULL;
-NETT.LSP;1000 t dm;Trade|Net-Trade|Livestock products;Mt DM/yr;1000;NULL;
-NETT.AGR;1000 t dm;Trade|Net-Trade|Secondary products;Mt DM/yr;1000;NULL;
-NETT.CRP;1000 t dm;Trade|Net-Trade|Secondary products;Mt DM/yr;1000;NULL;
-NETT.SGC;1000 t dm;Trade|Net-Trade|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-NETT.CGR;1000 t dm;Trade|Net-Trade|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-NETT.RIC;1000 t dm;Trade|Net-Trade|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-NETT.WHT;1000 t dm;Trade|Net-Trade|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-NETT.CGR;1000 t dm;Trade|Net-Trade|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-NETT.PFB;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-NETT.VFN;1000 t dm;Trade|Net-Trade|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-NETT.DRY;1000 t dm;Trade|Net-Trade|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-NETT.RUM;1000 t dm;Trade|Net-Trade|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-NETT.WHT;1000 t dm;Trade|Net-Trade|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-NETT.CGR;1000 t dm;Trade|Net-Trade|Secondary products|Brans;Mt DM/yr;1000;NULL;
-NETT.PFB;1000 t dm;Trade|Net-Trade|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-NETT.CGR;1000 t dm;Trade|Net-Trade|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-NETT.OSD;1000 t dm;Trade|Net-Trade|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-NETT.OSD;1000 t dm;Trade|Net-Trade|Secondary products|Oils;Mt DM/yr;1000;NULL;
-NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-IMPO.AGR;1000 t dm;Trade|Imports|Crops;Mt DM/yr;1000;NULL;
-IMPO.AGR;1000 t dm;Trade|Imports|Livestock products;Mt DM/yr;1000;NULL;
-IMPO.AGR;1000 t dm;Trade|Imports|Secondary products;Mt DM/yr;1000;NULL;
-IMPO.CGR;1000 t dm;Trade|Imports|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-IMPO.CGR;1000 t dm;Trade|Imports|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-IMPO.CGR;1000 t dm;Trade|Imports|Secondary products|Brans;Mt DM/yr;1000;NULL;
-IMPO.CGR;1000 t dm;Trade|Imports|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-IMPO.CRP;1000 t dm;Trade|Imports|Crops;Mt DM/yr;1000;NULL;
-IMPO.CRP;1000 t dm;Trade|Imports|Secondary products;Mt DM/yr;1000;NULL;
-IMPO.DRY;1000 t dm;Trade|Imports|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-IMPO.FSH;1000 t dm;Trade|Imports|Fish;Mt DM/yr;1000;NULL;
-IMPO.LSP;1000 t dm;Trade|Imports|Livestock products;Mt DM/yr;1000;NULL;
-IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-IMPO.OSD;1000 t dm;Trade|Imports|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-IMPO.OSD;1000 t dm;Trade|Imports|Secondary products|Oils;Mt DM/yr;1000;NULL;
-IMPO.PFB;1000 t dm;Trade|Imports|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-IMPO.PFB;1000 t dm;Trade|Imports|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-IMPO.RIC;1000 t dm;Trade|Imports|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-IMPO.RUM;1000 t dm;Trade|Imports|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-IMPO.SGC;1000 t dm;Trade|Imports|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-IMPO.VFN;1000 t dm;Trade|Imports|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-IMPO.WHT;1000 t dm;Trade|Imports|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-IMPO.WHT;1000 t dm;Trade|Imports|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-IMPO.ECP;1000 t dm;Trade|Imports|Bioenergy crops;Mt DM/yr;1000;NULL;
-EXPO.AGR;1000 t dm;Trade|Exports|Crops;Mt DM/yr;1000;NULL;
-EXPO.AGR;1000 t dm;Trade|Exports|Livestock products;Mt DM/yr;1000;NULL;
-EXPO.AGR;1000 t dm;Trade|Exports|Secondary products;Mt DM/yr;1000;NULL;
-EXPO.CGR;1000 t dm;Trade|Exports|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;
-EXPO.CGR;1000 t dm;Trade|Exports|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;
-EXPO.CGR;1000 t dm;Trade|Exports|Secondary products|Brans;Mt DM/yr;1000;NULL;
-EXPO.CGR;1000 t dm;Trade|Exports|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;
-EXPO.CRP;1000 t dm;Trade|Exports|Crops;Mt DM/yr;1000;NULL;
-EXPO.CRP;1000 t dm;Trade|Exports|Secondary products;Mt DM/yr;1000;NULL;
-EXPO.DRY;1000 t dm;Trade|Exports|Livestock products|Dairy;Mt DM/yr;1000;NULL;
-EXPO.FSH;1000 t dm;Trade|Exports|Fish;Mt DM/yr;1000;NULL;
-EXPO.LSP;1000 t dm;Trade|Exports|Livestock products;Mt DM/yr;1000;NULL;
-EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Eggs;Mt DM/yr;1000;NULL;
-EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;
-EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;
-EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;
-EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;
-EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;
-EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;
-EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;
-EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;
-EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;
-EXPO.OSD;1000 t dm;Trade|Exports|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;
-EXPO.OSD;1000 t dm;Trade|Exports|Secondary products|Oils;Mt DM/yr;1000;NULL;
-EXPO.PFB;1000 t dm;Trade|Exports|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;
-EXPO.PFB;1000 t dm;Trade|Exports|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;
-EXPO.RIC;1000 t dm;Trade|Exports|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;
-EXPO.RUM;1000 t dm;Trade|Exports|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;
-EXPO.SGC;1000 t dm;Trade|Exports|Crops|Sugar crops;Mt DM/yr;1000;NULL;
-EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Ethanol;Mt DM/yr;1000;NULL;
-EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;
-EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Molasses;Mt DM/yr;1000;NULL;
-EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Sugar;Mt DM/yr;1000;NULL;
-EXPO.VFN;1000 t dm;Trade|Exports|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;
-EXPO.WHT;1000 t dm;Trade|Exports|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;
-EXPO.WHT;1000 t dm;Trade|Exports|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;
-EXPO.ECP;1000 t dm;Trade|Exports|Bioenergy crops;Mt DM/yr;1000;NULL;
-NSUP_mass.CRP;TgN/year;Resources|Nitrogen|Pollution|Surplus|Cropland;Mt Nr/yr;1;NULL;
-NSUP_mass.MMG;TgN/year;Resources|Nitrogen|Pollution|Surplus|Animal Waste Management;Mt Nr/yr;1;NULL;
-NSUP_mass.GRS;TgN/year;Resources|Nitrogen|Pollution|Surplus|Pasture;Mt Nr/yr;1;NULL;
-BIOD.TOT;unitless;Biodiversity|BII;unitless;1;NULL;
-FRTN.CGR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Maize;Mt Nr/yr;1000;NULL;
-FRTN.RIC;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Rice;Mt Nr/yr;1000;NULL;
-FRTN.WHT;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Temperate cereals;Mt Nr/yr;1000;NULL;
-FRTN.CGR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Tropical cereals;Mt Nr/yr;1000;NULL;
-FRTN.PFB;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Cotton seed;Mt Nr/yr;1000;NULL;
-FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Groundnuts;Mt Nr/yr;1000;NULL;
-FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Oilpalms;Mt Nr/yr;1000;NULL;
-FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Other oil crops incl rapeseed;Mt Nr/yr;1000;NULL;
-FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Soybean;Mt Nr/yr;1000;NULL;
-FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Sunflower;Mt Nr/yr;1000;NULL;
-FRTN.SGC;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Sugar crops|Sugar beet;Mt Nr/yr;1000;NULL;
-FRTN.SGC;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Sugar crops|Sugar cane;Mt Nr/yr;1000;NULL;
-FRTN.ECP;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Bioenergy crops|Short rotation grasses;Mt Nr/yr;1000;NULL;
-FRTN.ECP;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Bioenergy crops|Short rotation trees;Mt Nr/yr;1000;NULL;
-FRTN.OCR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Tropical roots;Mt Nr/yr;1000;NULL;
-FRTN.VFN;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Fruits Vegetables Nuts;Mt Nr/yr;1000;NULL;
-FRTN.OCR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Potatoes;Mt Nr/yr;1000;NULL;
-FRTN.OCR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Pulses;Mt Nr/yr;1000;NULL;
-FRTN.CRP;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops;Mt Nr/yr;1000;NULL;
-FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Poultry meat;Nr per Nr;1;Production Nr|Livestock products|+|Poultry meat
-FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Eggs;Nr per Nr;1;Production Nr|Livestock products|+|Eggs
-FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy
-FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Monogastric meat;Nr per Nr;1;Production Nr|Livestock products|+|Monogastric meat
-FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat
-FEEF.RUM;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat
-FEEF.RUM;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy
-FEEF.DRY;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat
-FEEF.DRY;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy
-FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Poultry meat;Nr per Nr;1;Production Nr|Livestock products|+|Poultry meat
-FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Eggs;Nr per Nr;1;Production Nr|Livestock products|+|Eggs
-FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Monogastric meat;Nr per Nr;1;Production Nr|Livestock products|+|Monogastric meat
-LABS.CRP;%;Factor requirement shares|Crop products|Labor requirement share;%;1;NULL;
-CAPS.CRP;%;Factor requirement shares|Crop products|Capital requirement share;%;1;NULL;
-LABS.LSP;%;Factor requirement shares|Livestock products|Labor requirement share;%;1;NULL;
-CAPS.LSP;%;Factor requirement shares|Livestock products|Capital requirement share;%;1;NULL;
-ENH3.AGR;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;1;NULL;
-ENH3.TOT;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;1;NULL;
-FSEC_abs.TOT;million;Nutrition|Anthropometrics|People underweight;million people;1;NULL;
-XPRP.CRP;Index 2020=100;Prices|Producer Price Index|Crop products;Index 2020=100;1;NULL;
-XPRP.RIC;Index 2020=100;Prices|Producer Price Index|Rice;Index 2020=100;1;NULL;
-XPRP.WHT;Index 2020=100;Prices|Producer Price Index|Temperate cereals;Index 2020=100;1;NULL;
-XPRP.CGR;Index 2020=100;Prices|Producer Price Index|Tropical cereals;Index 2020=100;1;Production|Crops|Cereals|+|Tropical cereals;
-XPRP.CGR;Index 2020=100;Prices|Producer Price Index|Maize;Index 2020=100;1;Production|Crops|Cereals|+|Maize;
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Soybean;Index 2020=100;1;Production|Crops|Oil crops|+|Soybean;
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Groundnuts;Index 2020=100;1;Production|Crops|Oil crops|+|Groundnuts;
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Other oil crops incl rapeseed;Index 2020=100;1;Production|Crops|Oil crops|+|Other oil crops incl rapeseed;
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Oilpalms;Index 2020=100;1;Production|Crops|Oil crops|+|Oilpalms;
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Sunflower;Index 2020=100;1;Production|Crops|Oil crops|+|Sunflower;
-XPRP.SGC;Index 2020=100;Prices|Producer Price Index|Sugar cane;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar cane;
-XPRP.SGC;Index 2020=100;Prices|Producer Price Index|Sugar beet;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar beet;
-XPRP.VFN;Index 2020=100;Prices|Producer Price Index|Fruits Vegetables Nuts;Index 2020=100;1;NULL;
-XPRP.PFB;Index 2020=100;Prices|Producer Price Index|Cotton seed;Index 2020=100;1;NULL;
-XPRP.ECP;Index 2020=100;Prices|Producer Price Index|Short rotation grasses;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation grasses;
-XPRP.ECP;Index 2020=100;Prices|Producer Price Index|Short rotation trees;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation trees;
-XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Pulses;Index 2020=100;1;Production|Crops|Other crops|+|Pulses;
-XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Potatoes;Index 2020=100;1;Production|Crops|Other crops|+|Potatoes;
-XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Tropical roots;Index 2020=100;1;Production|Crops|Other crops|+|Tropical roots;
-XPRP.CRP;Index 2020=100;Prices|Producer Price Index|Crop products;Index 2020=100;1;NULL;
-XPRP.RUM;Index 2020=100;Prices|Producer Price Index|Ruminant meat;Index 2020=100;1;NULL;
-XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Monogastric meat;Index 2020=100;1;Production|Livestock products|+|Monogastric meat;
-XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Poultry meat;Index 2020=100;1;Production|Livestock products|+|Poultry meat;
-XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Eggs;Index 2020=100;1;Production|Livestock products|+|Eggs;
-XPRP.DRY;Index 2020=100;Prices|Producer Price Index|Dairy;Index 2020=100;1;Production|Livestock products|+|Dairy;
-XPRP.LSP;Index 2020=100;Prices|Producer Price Index|Livestock products;Index 2020=100;1;NULL;
-XPRP.FSH;Index 2020=100;Prices|Producer Price Index|Fish;Index 2020=100;1;NULL;
-XPRP.AGR;Index 2020=100;Prices|Producer Price Index|All products;Index 2020=100;1;NULL;
+variable;unit;piam_variable;piam_unit;piam_factor;weight;comment;source
+CONS.AGR;1000 t dm;Demand|Bioenergy;Mt DM/yr;1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Bioenergy;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Food;Mt DM/yr;1000;NULL;;M
+FOOD.AGR;1000 t dm;Demand|Food;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Material;Mt DM/yr;1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Material;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Seed;Mt DM/yr;1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Seed;Mt DM/yr;1000;NULL;;M
+CONS.ECP;1000 t dm;Demand|Bioenergy|Bioenergy crops;Mt DM/yr;1000;NULL;;M
+OTHU.ECP;1000 t dm;Demand|Bioenergy|Bioenergy crops;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Bioenergy|Crop residues;Mt DM/yr;-1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Bioenergy|Crop residues;Mt DM/yr;-1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Bioenergy|Crops;Mt DM/yr;1000;NULL;;M
+OTHU.CRP;1000 t dm;Demand|Bioenergy|Crops;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;-1000;NULL;;M
+CONS.FSH;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;-1000;NULL;;M
+OTHU.FSH;1000 t dm;Demand|Bioenergy|Fish;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Bioenergy|Forest products;Mt DM/yr;-1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Bioenergy|Forest products;Mt DM/yr;-1000;NULL;;M
+CONS.LSP;1000 t dm;Demand|Bioenergy|Livestock products;Mt DM/yr;1000;NULL;;M
+OTHU.LSP;1000 t dm;Demand|Bioenergy|Livestock products;Mt DM/yr;1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Bioenergy|Secondary products;Mt DM/yr;1000;NULL;;M
+OTHU.CRP;1000 t dm;Demand|Bioenergy|Secondary products;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Bioenergy|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Bioenergy|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+CONS.RIC;1000 t dm;Demand|Bioenergy|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+OTHU.RIC;1000 t dm;Demand|Bioenergy|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Bioenergy|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+OTHU.WHT;1000 t dm;Demand|Bioenergy|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Bioenergy|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+OTHU.PFB;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Bioenergy|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+CONS.VFN;1000 t dm;Demand|Bioenergy|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+OTHU.VFN;1000 t dm;Demand|Bioenergy|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Bioenergy|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+CONS.DRY;1000 t dm;Demand|Bioenergy|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+OTHU.DRY;1000 t dm;Demand|Bioenergy|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+CONS.RUM;1000 t dm;Demand|Bioenergy|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+OTHU.RUM;1000 t dm;Demand|Bioenergy|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Bioenergy|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+OTHU.WHT;1000 t dm;Demand|Bioenergy|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Bioenergy|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+OTHU.PFB;1000 t dm;Demand|Bioenergy|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Bioenergy|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Bioenergy|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Bioenergy|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FEED.OFD;1000 t dm;Demand|Feed|Crop residues;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Feed|Crops;Mt DM/yr;1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Feed|Crops;Mt DM/yr;1000;NULL;;M
+FEED.CRP;1000 t dm;Demand|Feed|Crops;Mt DM/yr;1000;NULL;;M
+CONS.FSH;1000 t dm;Demand|Feed|Fish;Mt DM/yr;1000;NULL;;M
+FEED.FSH;1000 t dm;Demand|Feed|Fish;Mt DM/yr;1000;NULL;;M
+FEED.OFD;1000 t dm;Demand|Feed|Forage;Mt DM/yr;1000;NULL;;M
+FEED.GRS;1000 t dm;Demand|Feed|Pasture;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Feed|Secondary products;Mt DM/yr;1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Feed|Secondary products;Mt DM/yr;1000;NULL;;M
+FEED.CRP;1000 t dm;Demand|Feed|Secondary products;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Feed|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FEED.SGC;1000 t dm;Demand|Feed|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FEED.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+CONS.RIC;1000 t dm;Demand|Feed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FEED.RIC;1000 t dm;Demand|Feed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Feed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FEED.WHT;1000 t dm;Demand|Feed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FEED.CGR;1000 t dm;Demand|Feed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Feed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FEED.PFB;1000 t dm;Demand|Feed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FEED.OSD;1000 t dm;Demand|Feed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+CONS.VFN;1000 t dm;Demand|Feed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FEED.VFN;1000 t dm;Demand|Feed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FEED.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FEED.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FEED.OCR;1000 t dm;Demand|Feed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FFSH.OFD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crop residues;Mt DM/yr;1000;NULL;;M
+FFSH.CRP;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops;Mt DM/yr;1000;NULL;;M
+FFSH.FSH;1000 t dm;Demand|Feed|Feed for Aquaculture|Fish;Mt DM/yr;1000;NULL;;M
+FFSH.OFD;1000 t dm;Demand|Feed|Feed for Aquaculture|Forage;Mt DM/yr;1000;NULL;;M
+FFSH.GRS;1000 t dm;Demand|Feed|Feed for Aquaculture|Pasture;Mt DM/yr;1000;NULL;;M
+FFSH.CRP;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products;Mt DM/yr;1000;NULL;;M
+FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FFSH.RIC;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FFSH.WHT;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FFSH.PFB;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FFSH.VFN;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FFSH.OCR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FFSH.OCR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FFSH.OCR;1000 t dm;Demand|Feed|Feed for Aquaculture|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FFSH.WHT;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FFSH.PFB;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FFSH.CGR;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FFSH.OSD;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FFSH.SGC;1000 t dm;Demand|Feed|Feed for Aquaculture|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FDRY.OFD;1000 t dm;Demand|Feed|Feed for Dairy|Crop residues;Mt DM/yr;1000;NULL;;M
+FDRY.CRP;1000 t dm;Demand|Feed|Feed for Dairy|Crops;Mt DM/yr;1000;NULL;;M
+FDRY.FSH;1000 t dm;Demand|Feed|Feed for Dairy|Fish;Mt DM/yr;1000;NULL;;M
+FDRY.OFD;1000 t dm;Demand|Feed|Feed for Dairy|Forage;Mt DM/yr;1000;NULL;;M
+FDRY.GRS;1000 t dm;Demand|Feed|Feed for Dairy|Pasture;Mt DM/yr;1000;NULL;;M
+FDRY.CRP;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products;Mt DM/yr;1000;NULL;;M
+FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FDRY.RIC;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FDRY.WHT;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FDRY.PFB;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FDRY.VFN;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FDRY.OCR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FDRY.OCR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FDRY.OCR;1000 t dm;Demand|Feed|Feed for Dairy|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FDRY.WHT;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FDRY.PFB;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FDRY.CGR;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FDRY.OSD;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FDRY.SGC;1000 t dm;Demand|Feed|Feed for Dairy|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Eggs|Crop residues;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Eggs|Crops;Mt DM/yr;1000;NULL;;M
+FNRM.FSH;1000 t dm;Demand|Feed|Feed for Eggs|Fish;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Eggs|Forage;Mt DM/yr;1000;NULL;;M
+FNRM.GRS;1000 t dm;Demand|Feed|Feed for Eggs|Pasture;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FNRM.RIC;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FNRM.VFN;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Eggs|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crop residues;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops;Mt DM/yr;1000;NULL;;M
+FNRM.FSH;1000 t dm;Demand|Feed|Feed for Monogastric meat|Fish;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Forage;Mt DM/yr;1000;NULL;;M
+FNRM.GRS;1000 t dm;Demand|Feed|Feed for Monogastric meat|Pasture;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FNRM.RIC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FNRM.VFN;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crop residues;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops;Mt DM/yr;1000;NULL;;M
+FNRM.FSH;1000 t dm;Demand|Feed|Feed for Poultry meat|Fish;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Poultry meat|Forage;Mt DM/yr;1000;NULL;;M
+FNRM.GRS;1000 t dm;Demand|Feed|Feed for Poultry meat|Pasture;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FNRM.RIC;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FNRM.VFN;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Poultry meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FRUM.OFD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crop residues;Mt DM/yr;1000;NULL;;M
+FRUM.CRP;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops;Mt DM/yr;1000;NULL;;M
+FRUM.FSH;1000 t dm;Demand|Feed|Feed for Ruminant meat|Fish;Mt DM/yr;1000;NULL;;M
+FRUM.OFD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Forage;Mt DM/yr;1000;NULL;;M
+FRUM.GRS;1000 t dm;Demand|Feed|Feed for Ruminant meat|Pasture;Mt DM/yr;1000;NULL;;M
+FRUM.CRP;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products;Mt DM/yr;1000;NULL;;M
+FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FRUM.RIC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FRUM.WHT;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FRUM.PFB;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FRUM.VFN;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FRUM.OCR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FRUM.OCR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FRUM.OCR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FRUM.WHT;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FRUM.PFB;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FRUM.CGR;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FRUM.OSD;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FRUM.SGC;1000 t dm;Demand|Feed|Feed for Ruminant meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Feed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FEED.WHT;1000 t dm;Demand|Feed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Feed|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FEED.CGR;1000 t dm;Demand|Feed|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Feed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FEED.PFB;1000 t dm;Demand|Feed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Feed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FEED.CGR;1000 t dm;Demand|Feed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Feed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FEED.OSD;1000 t dm;Demand|Feed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Feed|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FEED.OSD;1000 t dm;Demand|Feed|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Feed|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FEED.SGC;1000 t dm;Demand|Feed|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Food|Crops;Mt DM/yr;1000;NULL;;M
+FOOD.CRP;1000 t dm;Demand|Food|Crops;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Food|Fish;Mt DM/yr;-1000;NULL;;M
+CONS.FSH;1000 t dm;Demand|Food|Fish;Mt DM/yr;1000;NULL;;M
+FOOD.AGR;1000 t dm;Demand|Food|Fish;Mt DM/yr;-1000;NULL;;M
+FOOD.FSH;1000 t dm;Demand|Food|Fish;Mt DM/yr;1000;NULL;;M
+CONS.LSP;1000 t dm;Demand|Food|Livestock products;Mt DM/yr;1000;NULL;;M
+FOOD.LSP;1000 t dm;Demand|Food|Livestock products;Mt DM/yr;1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Food|Secondary products;Mt DM/yr;1000;NULL;;M
+FOOD.CRP;1000 t dm;Demand|Food|Secondary products;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Food|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FOOD.SGC;1000 t dm;Demand|Food|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Food|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FOOD.CGR;1000 t dm;Demand|Food|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+CONS.RIC;1000 t dm;Demand|Food|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FOOD.RIC;1000 t dm;Demand|Food|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Food|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FOOD.WHT;1000 t dm;Demand|Food|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Food|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FOOD.CGR;1000 t dm;Demand|Food|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Food|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FOOD.PFB;1000 t dm;Demand|Food|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FOOD.OSD;1000 t dm;Demand|Food|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+CONS.VFN;1000 t dm;Demand|Food|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FOOD.VFN;1000 t dm;Demand|Food|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Food|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FOOD.OCR;1000 t dm;Demand|Food|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Food|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FOOD.OCR;1000 t dm;Demand|Food|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Food|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FOOD.OCR;1000 t dm;Demand|Food|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+CONS.DRY;1000 t dm;Demand|Food|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+FOOD.DRY;1000 t dm;Demand|Food|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Food|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Food|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Food|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+CONS.RUM;1000 t dm;Demand|Food|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+FOOD.RUM;1000 t dm;Demand|Food|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Food|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FOOD.WHT;1000 t dm;Demand|Food|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Food|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FOOD.CGR;1000 t dm;Demand|Food|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Food|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FOOD.PFB;1000 t dm;Demand|Food|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Food|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FOOD.CGR;1000 t dm;Demand|Food|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Food|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Food|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Food|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Food|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FOOD.OSD;1000 t dm;Demand|Food|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Food|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FOOD.OSD;1000 t dm;Demand|Food|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Food|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FOOD.SGC;1000 t dm;Demand|Food|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Material|Crop residues;Mt DM/yr;-1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Material|Crop residues;Mt DM/yr;-1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Material|Crops;Mt DM/yr;1000;NULL;;M
+OTHU.CRP;1000 t dm;Demand|Material|Crops;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Material|Fish;Mt DM/yr;-1000;NULL;;M
+CONS.FSH;1000 t dm;Demand|Material|Fish;Mt DM/yr;1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Material|Fish;Mt DM/yr;-1000;NULL;;M
+OTHU.FSH;1000 t dm;Demand|Material|Fish;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Material|Forest products;Mt DM/yr;-1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Material|Forest products;Mt DM/yr;-1000;NULL;;M
+CONS.LSP;1000 t dm;Demand|Material|Livestock products;Mt DM/yr;1000;NULL;;M
+OTHU.LSP;1000 t dm;Demand|Material|Livestock products;Mt DM/yr;1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Material|Secondary products;Mt DM/yr;1000;NULL;;M
+OTHU.CRP;1000 t dm;Demand|Material|Secondary products;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Material|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Material|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Material|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Material|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+CONS.RIC;1000 t dm;Demand|Material|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+OTHU.RIC;1000 t dm;Demand|Material|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Material|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+OTHU.WHT;1000 t dm;Demand|Material|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Material|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Material|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Material|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+OTHU.PFB;1000 t dm;Demand|Material|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Material|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+CONS.VFN;1000 t dm;Demand|Material|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+OTHU.VFN;1000 t dm;Demand|Material|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Material|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Material|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Material|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Material|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Material|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Material|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+CONS.DRY;1000 t dm;Demand|Material|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+OTHU.DRY;1000 t dm;Demand|Material|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Material|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Material|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Material|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+CONS.RUM;1000 t dm;Demand|Material|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+OTHU.RUM;1000 t dm;Demand|Material|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Material|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+OTHU.WHT;1000 t dm;Demand|Material|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Material|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Material|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Material|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+OTHU.PFB;1000 t dm;Demand|Material|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Material|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Material|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Material|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Material|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Material|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Material|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Material|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Material|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Material|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Material|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Material|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Seed|Crop residues;Mt DM/yr;-1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Seed|Crop residues;Mt DM/yr;-1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Seed|Crops;Mt DM/yr;1000;NULL;;M
+OTHU.CRP;1000 t dm;Demand|Seed|Crops;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Seed|Fish;Mt DM/yr;-1000;NULL;;M
+CONS.FSH;1000 t dm;Demand|Seed|Fish;Mt DM/yr;1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Seed|Fish;Mt DM/yr;-1000;NULL;;M
+OTHU.FSH;1000 t dm;Demand|Seed|Fish;Mt DM/yr;1000;NULL;;M
+CONS.AGR;1000 t dm;Demand|Seed|Forest products;Mt DM/yr;-1000;NULL;;M
+OTHU.AGR;1000 t dm;Demand|Seed|Forest products;Mt DM/yr;-1000;NULL;;M
+CONS.LSP;1000 t dm;Demand|Seed|Livestock products;Mt DM/yr;1000;NULL;;M
+OTHU.LSP;1000 t dm;Demand|Seed|Livestock products;Mt DM/yr;1000;NULL;;M
+CONS.CRP;1000 t dm;Demand|Seed|Secondary products;Mt DM/yr;1000;NULL;;M
+OTHU.CRP;1000 t dm;Demand|Seed|Secondary products;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Seed|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Seed|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+CONS.RIC;1000 t dm;Demand|Seed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+OTHU.RIC;1000 t dm;Demand|Seed|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Seed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+OTHU.WHT;1000 t dm;Demand|Seed|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Seed|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Seed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+OTHU.PFB;1000 t dm;Demand|Seed|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Seed|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+CONS.VFN;1000 t dm;Demand|Seed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+OTHU.VFN;1000 t dm;Demand|Seed|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+CONS.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+OTHU.OCR;1000 t dm;Demand|Seed|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+CONS.DRY;1000 t dm;Demand|Seed|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+OTHU.DRY;1000 t dm;Demand|Seed|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+CONS.RUM;1000 t dm;Demand|Seed|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+OTHU.RUM;1000 t dm;Demand|Seed|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+CONS.WHT;1000 t dm;Demand|Seed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+OTHU.WHT;1000 t dm;Demand|Seed|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Seed|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Seed|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+CONS.PFB;1000 t dm;Demand|Seed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+OTHU.PFB;1000 t dm;Demand|Seed|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+CONS.CGR;1000 t dm;Demand|Seed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+OTHU.CGR;1000 t dm;Demand|Seed|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Seed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Seed|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+CONS.OSD;1000 t dm;Demand|Seed|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+OTHU.OSD;1000 t dm;Demand|Seed|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+CONS.SGC;1000 t dm;Demand|Seed|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+OTHU.SGC;1000 t dm;Demand|Seed|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+ECH4.AGR;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;;M
+ECH4.TOT;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;;M
+ECH4.MMG;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Animal waste management;Mt CO2e/yr;1;NULL;;M
+ECH4.ENT;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Enteric fermentation;Mt CO2e/yr;1;NULL;;M
+ECH4.RCC;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Rice;Mt CO2e/yr;1;NULL;;M
+ECH4.RIC;MtCO2e;Emissions|CH4_GWP100AR6|Land|Agriculture|Rice;Mt CO2e/yr;1;NULL;;M
+ECO2.TOT;MtCO2;Emissions|CO2|Land|Land-use Change;Mt CO2/yr;1;NULL;;M
+EMIS.TOT;MtCO2e;Emissions|GWP100AR6|Land;Gt CO2e/yr;1000;NULL;;M
+EN2O.AGR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;;M
+EN2O.TOT;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture;Mt CO2e/yr;1;NULL;;M
+EN2O.MAS;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Agricultural Soils;Mt CO2e/yr;1;NULL;;M
+EN2O.MMG;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Animal Waste Management;Mt CO2e/yr;1;NULL;;M
+EN2O.GRS;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Agricultural Soils|Pasture;Mt CO2e/yr;1;NULL;;M
+EN2O.ECP;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Bioenergy crops;Mt CO2e/yr;1;NULL;;M
+EN2O.CRP;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops;Mt CO2e/yr;1;NULL;;M
+EN2O.CGR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Maize;Mt CO2e/yr;1;NULL;;M
+EN2O.RIC;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Rice;Mt CO2e/yr;1;NULL;;M
+EN2O.WHT;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Temperate cereals;Mt CO2e/yr;1;NULL;;M
+EN2O.CGR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Cereals|Tropical cereals;Mt CO2e/yr;1;NULL;;M
+EN2O.PFB;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Cotton seed;Mt CO2e/yr;1;NULL;;M
+EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Groundnuts;Mt CO2e/yr;1;NULL;;M
+EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Oilpalms;Mt CO2e/yr;1;NULL;;M
+EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Other oil crops incl rapeseed;Mt CO2e/yr;1;NULL;;M
+EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Soybean;Mt CO2e/yr;1;NULL;;M
+EN2O.OSD;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Oil crops|Sunflower;Mt CO2e/yr;1;NULL;;M
+EN2O.VFN;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Fruits Vegetables Nuts;Mt CO2e/yr;1;NULL;;M
+EN2O.OCR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Potatoes;Mt CO2e/yr;1;NULL;;M
+EN2O.OCR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Pulses;Mt CO2e/yr;1;NULL;;M
+EN2O.OCR;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Other crops|Tropical roots;Mt CO2e/yr;1;NULL;;M
+EN2O.SGC;MtCO2e;Emissions|N2O_GWP100AR6|Land|Agriculture|Croparea|Crops|Sugar crops;Mt CO2e/yr;1;NULL;;M
+AEMP_abs.AGR;million;Labor|Employment|Agricultural employment;mio people;1;NULL;;M
+AEMP_abs.CRP;million;Labor|Employment|Agricultural employment|Crop products;mio people;1;NULL;;M
+AEMP_abs.LSP;million;Labor|Employment|Agricultural employment|Livestock products;mio people;1;NULL;;M
+AEMP_prcn.AGR;%;Labor|Employment|Share of working age population employed in agriculture;%;1;NULL;;M
+AEMP_prcn.CRP;%;Labor|Employment|Share of working age population employed in agriculture|Crop products;%;1;NULL;;M
+AEMP_prcn.LSP;%;Labor|Employment|Share of working age population employed in agriculture|Livestock products;%;1;NULL;;M
+AWAG.AGR;USDMER05/h;Labor|Wages|Hourly labor costs;USDMER05/h;1;NULL;;M
+AWAG.TOT;USDMER05/h;Labor|Wages|Hourly labor costs;USDMER05/h;1;NULL;;M
+CALI.TOT;kcal/cap/d;Nutrition|Calorie Intake;kcal/capita/day;1;NULL;;M
+CALI.AGR;kcal/cap/d;Nutrition|Calorie Intake|Crops;kcal/capita/day;1;NULL;;M
+CALI.CRP;kcal/cap/d;Nutrition|Calorie Intake|Crops;kcal/capita/day;1;NULL;;M
+CALI.FSH;kcal/cap/d;Nutrition|Calorie Intake|Fish;kcal/capita/day;1;NULL;;M
+CALI.AGR;kcal/cap/d;Nutrition|Calorie Intake|Livestock products;kcal/capita/day;1;NULL;;M
+CALI.LSP;kcal/cap/d;Nutrition|Calorie Intake|Livestock products;kcal/capita/day;1;NULL;;M
+CALI.AGR;kcal/cap/d;Nutrition|Calorie Intake|Secondary products;kcal/capita/day;1;NULL;;M
+CALI.CRP;kcal/cap/d;Nutrition|Calorie Intake|Secondary products;kcal/capita/day;1;NULL;;M
+CALI.SGC;kcal/cap/d;Nutrition|Calorie Intake|Crops|Sugar crops;kcal/capita/day;1;NULL;;M
+CALI.CGR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Maize;kcal/capita/day;1;NULL;;M
+CALI.RIC;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Rice;kcal/capita/day;1;NULL;;M
+CALI.WHT;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Temperate cereals;kcal/capita/day;1;NULL;;M
+CALI.CGR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Cereals|Tropical cereals;kcal/capita/day;1;NULL;;M
+CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Groundnuts;kcal/capita/day;1;NULL;;M
+CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Other oil crops incl rapeseed;kcal/capita/day;1;NULL;;M
+CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Soybean;kcal/capita/day;1;NULL;;M
+CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Crops|Oil crops|Sunflower;kcal/capita/day;1;NULL;;M
+CALI.VFN;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Fruits Vegetables Nuts;kcal/capita/day;1;NULL;;M
+CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Potatoes;kcal/capita/day;1;NULL;;M
+CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Pulses;kcal/capita/day;1;NULL;;M
+CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Tropical roots;kcal/capita/day;1;NULL;;M
+CALI.DRY;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Dairy;kcal/capita/day;1;NULL;;M
+CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Eggs;kcal/capita/day;1;NULL;;M
+CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Monogastric meat;kcal/capita/day;1;NULL;;M
+CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Poultry meat;kcal/capita/day;1;NULL;;M
+CALI.RUM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Ruminant meat;kcal/capita/day;1;NULL;;M
+CALI.WHT;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Alcoholic beverages;kcal/capita/day;1;NULL;;M
+CALI.CGR;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Brans;kcal/capita/day;1;NULL;;M
+CALI.SGC;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Molasses;kcal/capita/day;1;NULL;;M
+CALI.OSD;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Oils;kcal/capita/day;1;NULL;;M
+CALI.SGC;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Sugar;kcal/capita/day;1;NULL;;M
+CALO.TOT;kcal/cap/d;Nutrition|Calorie Supply;kcal/capita/day;1;NULL;;M
+CALO.AGR;kcal/cap/d;Nutrition|Calorie Supply|Crops;kcal/capita/day;1;NULL;;M
+CALO.CRP;kcal/cap/d;Nutrition|Calorie Supply|Crops;kcal/capita/day;1;NULL;;M
+CALO.FSH;kcal/cap/d;Nutrition|Calorie Supply|Fish;kcal/capita/day;1;NULL;;M
+CALO.AGR;kcal/cap/d;Nutrition|Calorie Supply|Livestock products;kcal/capita/day;1;NULL;;M
+CALO.LSP;kcal/cap/d;Nutrition|Calorie Supply|Livestock products;kcal/capita/day;1;NULL;;M
+CALO.AGR;kcal/cap/d;Nutrition|Calorie Supply|Secondary products;kcal/capita/day;1;NULL;;M
+CALO.CRP;kcal/cap/d;Nutrition|Calorie Supply|Secondary products;kcal/capita/day;1;NULL;;M
+CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Crops|Sugar crops;kcal/capita/day;1;NULL;;M
+CALO.CGR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Maize;kcal/capita/day;1;NULL;;M
+CALO.RIC;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Rice;kcal/capita/day;1;NULL;;M
+CALO.WHT;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Temperate cereals;kcal/capita/day;1;NULL;;M
+CALO.CGR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Cereals|Tropical cereals;kcal/capita/day;1;NULL;;M
+CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Groundnuts;kcal/capita/day;1;NULL;;M
+CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Other oil crops incl rapeseed;kcal/capita/day;1;NULL;;M
+CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Soybean;kcal/capita/day;1;NULL;;M
+CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Crops|Oil crops|Sunflower;kcal/capita/day;1;NULL;;M
+CALO.VFN;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Fruits Vegetables Nuts;kcal/capita/day;1;NULL;;M
+CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Potatoes;kcal/capita/day;1;NULL;;M
+CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Pulses;kcal/capita/day;1;NULL;;M
+CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Tropical roots;kcal/capita/day;1;NULL;;M
+CALO.DRY;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Dairy;kcal/capita/day;1;NULL;;M
+CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Eggs;kcal/capita/day;1;NULL;;M
+CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Monogastric meat;kcal/capita/day;1;NULL;;M
+CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Poultry meat;kcal/capita/day;1;NULL;;M
+CALO.RUM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Ruminant meat;kcal/capita/day;1;NULL;;M
+CALO.WHT;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Alcoholic beverages;kcal/capita/day;1;NULL;;M
+CALO.CGR;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Brans;kcal/capita/day;1;NULL;;M
+CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Molasses;kcal/capita/day;1;NULL;;M
+CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Oils;kcal/capita/day;1;NULL;;M
+CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Sugar;kcal/capita/day;1;NULL;;M
+POPT.TOT;million;Population;million people;1;NULL;;M
+CTAX.TOT;USD05/tCO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2005/tCO2;1;NULL;;M
+PROD.ECP;1000 t dm;Production|Bioenergy crops;Mt DM/yr;1000;NULL;;M
+PROD.AGR;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;;M
+PROD.CRP;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;;M
+PROD.FSH;1000 t dm;Production|Fish;Mt DM/yr;1000;NULL;;M
+PROD.AGR;1000 t dm;Production|Livestock products;Mt DM/yr;1000;NULL;;M
+PROD.LSP;1000 t dm;Production|Livestock products;Mt DM/yr;1000;NULL;;M
+PROD.GRS;1000 t dm;Production|Pasture;Mt DM/yr;1000;NULL;;M
+PROD.SGC;1000 t dm;Production|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+PROD.CGR;1000 t dm;Production|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+PROD.RIC;1000 t dm;Production|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+PROD.WHT;1000 t dm;Production|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+PROD.CGR;1000 t dm;Production|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+PROD.PFB;1000 t dm;Production|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+PROD.OSD;1000 t dm;Production|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+PROD.OSD;1000 t dm;Production|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+PROD.OSD;1000 t dm;Production|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+PROD.OSD;1000 t dm;Production|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+PROD.OSD;1000 t dm;Production|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+PROD.VFN;1000 t dm;Production|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+PROD.OCR;1000 t dm;Production|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+PROD.OCR;1000 t dm;Production|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+PROD.OCR;1000 t dm;Production|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+PROD.DRY;1000 t dm;Production|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+PROD.NRM;1000 t dm;Production|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+PROD.NRM;1000 t dm;Production|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+PROD.NRM;1000 t dm;Production|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+PROD.RUM;1000 t dm;Production|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+YILD_endoTC.CRP;%/yr;Productivity|Yield-increasing technological change crops;%/yr;1;NULL;;M
+YILD.ECP;dm t/ha;Productivity|Yield|Bioenergy crops;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;;M
+YIIR.ECP;dm t/ha;Productivity|Yield|Bioenergy crops|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|+|irrigated;;M
+YIRF.ECP;dm t/ha;Productivity|Yield|Bioenergy crops|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|+|rainfed;;M
+YILD.CRP;dm t/ha;Productivity|Yield|Crops;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|+|Crops;;M
+YILD.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Maize;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Maize;;M
+YIIR.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Maize|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Maize|+|irrigated;;M
+YIRF.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Maize|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Maize|+|rainfed;;M
+YILD.RIC;dm t/ha;Productivity|Yield|Crops|Cereals|Rice;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Rice;;M
+YIIR.RIC;dm t/ha;Productivity|Yield|Crops|Cereals|Rice|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Rice|+|irrigated;;M
+YIRF.RIC;dm t/ha;Productivity|Yield|Crops|Cereals|Rice|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Rice|+|rainfed;;M
+YILD.WHT;dm t/ha;Productivity|Yield|Crops|Cereals|Temperate cereals;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Temperate cereals;;M
+YIIR.WHT;dm t/ha;Productivity|Yield|Crops|Cereals|Temperate cereals|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Temperate cereals|+|irrigated;;M
+YIRF.WHT;dm t/ha;Productivity|Yield|Crops|Cereals|Temperate cereals|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Temperate cereals|+|rainfed;;M
+YILD.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Tropical cereals;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|+|Tropical cereals;;M
+YIIR.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Tropical cereals|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Tropical cereals|+|irrigated;;M
+YIRF.CGR;dm t/ha;Productivity|Yield|Crops|Cereals|Tropical cereals|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Tropical cereals|+|rainfed;;M
+YIIR.CRP;dm t/ha;Productivity|Yield|Crops|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|+|irrigated;;M
+YILD.PFB;dm t/ha;Productivity|Yield|Crops|Oil crops|Cotton seed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Cotton seed;;M
+YIIR.PFB;dm t/ha;Productivity|Yield|Crops|Oil crops|Cotton seed|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Cotton seed|+|irrigated;;M
+YIRF.PFB;dm t/ha;Productivity|Yield|Crops|Oil crops|Cotton seed|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Cotton seed|+|rainfed;;M
+YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Groundnuts;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Groundnuts;;M
+YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Groundnuts|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Groundnuts|+|irrigated;;M
+YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Groundnuts|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Groundnuts|+|rainfed;;M
+YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Oilpalms;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Oilpalms;;M
+YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Oilpalms|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Oilpalms|+|irrigated;;M
+YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Oilpalms|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Oilpalms|+|rainfed;;M
+YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Other oil crops incl rapeseed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Other oil crops incl rapeseed;;M
+YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Other oil crops incl rapeseed|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Other oil crops incl rapeseed|+|irrigated;;M
+YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Other oil crops incl rapeseed|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Other oil crops incl rapeseed|+|rainfed;;M
+YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Soybean;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Soybean;;M
+YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Soybean|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Soybean|+|irrigated;;M
+YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Soybean|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Soybean|+|rainfed;;M
+YILD.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Sunflower;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|+|Sunflower;;M
+YIIR.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Sunflower|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Sunflower|+|irrigated;;M
+YIRF.OSD;dm t/ha;Productivity|Yield|Crops|Oil crops|Sunflower|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Sunflower|+|rainfed;;M
+YILD.VFN;dm t/ha;Productivity|Yield|Crops|Other crops|Fruits Vegetables Nuts;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Fruits Vegetables Nuts;;M
+YIIR.VFN;dm t/ha;Productivity|Yield|Crops|Other crops|Fruits Vegetables Nuts|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Fruits Vegetables Nuts|+|irrigated;;M
+YIRF.VFN;dm t/ha;Productivity|Yield|Crops|Other crops|Fruits Vegetables Nuts|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Fruits Vegetables Nuts|+|rainfed;;M
+YILD.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Potatoes;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Potatoes;;M
+YIIR.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Potatoes|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Potatoes|+|irrigated;;M
+YIRF.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Potatoes|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Potatoes|+|rainfed;;M
+YILD.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Pulses;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Pulses;;M
+YIIR.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Pulses|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Pulses|+|irrigated;;M
+YIRF.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Pulses|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Pulses|+|rainfed;;M
+YILD.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Tropical roots;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|+|Tropical roots;;M
+YIIR.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Tropical roots|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Tropical roots|+|irrigated;;M
+YIRF.OCR;dm t/ha;Productivity|Yield|Crops|Other crops|Tropical roots|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Tropical roots|+|rainfed;;M
+YIRF.CRP;dm t/ha;Productivity|Yield|Crops|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|+|rainfed;;M
+YILD.SGC;dm t/ha;Productivity|Yield|Crops|Sugar crops;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|+|Sugar crops;;M
+YIIR.SGC;dm t/ha;Productivity|Yield|Crops|Sugar crops|irrigated;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|+|irrigated;;M
+YIRF.SGC;dm t/ha;Productivity|Yield|Crops|Sugar crops|rainfed;t DM/ha;1;Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|+|rainfed;;M
+YILD.GRS;dm t/ha;Productivity|Yield|Pasture;t DM/ha;1;Resources|Land Cover|+|Pastures and Rangelands;;M
+LAND.TOT;1000 ha;Resources|Land Cover;million ha;1000;NULL;;M
+LAND.CRP;1000 ha;Resources|Land Cover|Cropland;million ha;1000;NULL;;M
+LAND.FOR;1000 ha;Resources|Land Cover|Forest;million ha;1000;NULL;;M
+LAND.ONV;1000 ha;Resources|Land Cover|Other Land;million ha;1000;NULL;;M
+LAND.GRS;1000 ha;Resources|Land Cover|Pastures and Rangelands;million ha;1000;NULL;;M
+LAND.URB;1000 ha;Resources|Land Cover|Urban Area;million ha;1000;NULL;;M
+LAND.AGR;1000 ha;Resources|Land Cover|Agricultural land;million ha;1000;NULL;;M
+LAND.ECP;1000 ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops;million ha;1000;NULL;;M
+AREA.CRP;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops;million ha;1000;NULL;;M
+AREA.ECP;1000 ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation grasses;million ha;1000;NULL;;M
+AREA.ECP;1000 ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation trees;million ha;1000;NULL;;M
+ARIR.ECP;1000 ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation grasses|irrigated;million ha;1000;NULL;;M
+ARRF.ECP;1000 ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation grasses|rainfed;million ha;1000;NULL;;M
+ARIR.ECP;1000 ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation trees|irrigated;million ha;1000;NULL;;M
+ARRF.ECP;1000 ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|Short rotation trees|rainfed;million ha;1000;NULL;;M
+ARIR.CRP;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|irrigated;million ha;1000;NULL;;M
+ARRF.CRP;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|rainfed;million ha;1000;NULL;;M
+AREA.SGC;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops;million ha;1000;NULL;;M
+AREA.CGR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Maize;million ha;1000;NULL;;M
+AREA.RIC;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Rice;million ha;1000;NULL;;M
+AREA.WHT;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Temperate cereals;million ha;1000;NULL;;M
+AREA.CGR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Tropical cereals;million ha;1000;NULL;;M
+ARIR.CGR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Maize|irrigated;million ha;1000;NULL;;M
+ARRF.CGR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Maize|rainfed;million ha;1000;NULL;;M
+ARIR.RIC;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Rice|irrigated;million ha;1000;NULL;;M
+ARRF.RIC;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Rice|rainfed;million ha;1000;NULL;;M
+ARIR.WHT;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Temperate cereals|irrigated;million ha;1000;NULL;;M
+ARRF.WHT;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Temperate cereals|rainfed;million ha;1000;NULL;;M
+ARIR.CGR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Tropical cereals|irrigated;million ha;1000;NULL;;M
+ARRF.CGR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|Tropical cereals|rainfed;million ha;1000;NULL;;M
+AREA.PFB;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Cotton seed;million ha;1000;NULL;;M
+AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Groundnuts;million ha;1000;NULL;;M
+AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Oilpalms;million ha;1000;NULL;;M
+AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Other oil crops incl rapeseed;million ha;1000;NULL;;M
+AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Soybean;million ha;1000;NULL;;M
+AREA.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Sunflower;million ha;1000;NULL;;M
+ARIR.PFB;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Cotton seed|irrigated;million ha;1000;NULL;;M
+ARRF.PFB;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Cotton seed|rainfed;million ha;1000;NULL;;M
+ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Groundnuts|irrigated;million ha;1000;NULL;;M
+ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Groundnuts|rainfed;million ha;1000;NULL;;M
+ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Oilpalms|irrigated;million ha;1000;NULL;;M
+ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Oilpalms|rainfed;million ha;1000;NULL;;M
+ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Other oil crops incl rapeseed|irrigated;million ha;1000;NULL;;M
+ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Other oil crops incl rapeseed|rainfed;million ha;1000;NULL;;M
+ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Soybean|irrigated;million ha;1000;NULL;;M
+ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Soybean|rainfed;million ha;1000;NULL;;M
+ARIR.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Sunflower|irrigated;million ha;1000;NULL;;M
+ARRF.OSD;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|Sunflower|rainfed;million ha;1000;NULL;;M
+AREA.VFN;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Fruits Vegetables Nuts;million ha;1000;NULL;;M
+AREA.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Potatoes;million ha;1000;NULL;;M
+AREA.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Pulses;million ha;1000;NULL;;M
+AREA.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Tropical roots;million ha;1000;NULL;;M
+ARIR.VFN;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Fruits Vegetables Nuts|irrigated;million ha;1000;NULL;;M
+ARRF.VFN;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Fruits Vegetables Nuts|rainfed;million ha;1000;NULL;;M
+ARIR.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Potatoes|irrigated;million ha;1000;NULL;;M
+ARRF.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Potatoes|rainfed;million ha;1000;NULL;;M
+ARIR.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Pulses|irrigated;million ha;1000;NULL;;M
+ARRF.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Pulses|rainfed;million ha;1000;NULL;;M
+ARIR.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Tropical roots|irrigated;million ha;1000;NULL;;M
+ARRF.OCR;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|Tropical roots|rainfed;million ha;1000;NULL;;M
+ARIR.SGC;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|irrigated;million ha;1000;NULL;;M
+ARRF.SGC;1000 ha;Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|rainfed;million ha;1000;NULL;;M
+SOCS.CRP;tC/ha;Resources|Soil Carbon|Actual|Density|SOC in top 30 cm|Cropland Soils;tC/ha;1;NULL;;M
+WATR.TOT;km3;Resources|Water|Withdrawal|Agriculture;km3/yr;1;NULL;;M
+WATR.ECP;km3;Resources|Water|Withdrawal|Agriculture|Crops|Bioenergy crops;km3/yr;1;NULL;;M
+WATR.CRP;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops;km3/yr;1;NULL;;M
+WATR.SGC;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Sugar crops;km3/yr;1;NULL;;M
+WATR.CGR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Maize;km3/yr;1;NULL;;M
+WATR.RIC;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Rice;km3/yr;1;NULL;;M
+WATR.WHT;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Temperate cereals;km3/yr;1;NULL;;M
+WATR.CGR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Cereals|Tropical cereals;km3/yr;1;NULL;;M
+WATR.PFB;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Cotton seed;km3/yr;1;NULL;;M
+WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Groundnuts;km3/yr;1;NULL;;M
+WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Oilpalms;km3/yr;1;NULL;;M
+WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Other oil crops incl rapeseed;km3/yr;1;NULL;;M
+WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Soybean;km3/yr;1;NULL;;M
+WATR.OSD;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Oil crops|Sunflower;km3/yr;1;NULL;;M
+WATR.VFN;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Fruits Vegetables Nuts;km3/yr;1;NULL;;M
+WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Potatoes;km3/yr;1;NULL;;M
+WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Pulses;km3/yr;1;NULL;;M
+WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Tropical roots;km3/yr;1;NULL;;M
+GDPT.TOT;bn USD 2005 MER;Total income;million US$05 MER/yr;0.001;NULL;;M
+NETT.ECP;1000 t dm;Trade|Net-Trade|Bioenergy crops;Mt DM/yr;1000;NULL;;M
+NETT.AGR;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
+NETT.CRP;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
+NETT.FSH;1000 t dm;Trade|Net-Trade|Fish;Mt DM/yr;1000;NULL;;M
+NETT.AGR;1000 t dm;Trade|Net-Trade|Livestock products;Mt DM/yr;1000;NULL;;M
+NETT.LSP;1000 t dm;Trade|Net-Trade|Livestock products;Mt DM/yr;1000;NULL;;M
+NETT.AGR;1000 t dm;Trade|Net-Trade|Secondary products;Mt DM/yr;1000;NULL;;M
+NETT.CRP;1000 t dm;Trade|Net-Trade|Secondary products;Mt DM/yr;1000;NULL;;M
+NETT.SGC;1000 t dm;Trade|Net-Trade|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+NETT.CGR;1000 t dm;Trade|Net-Trade|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+NETT.RIC;1000 t dm;Trade|Net-Trade|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+NETT.WHT;1000 t dm;Trade|Net-Trade|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+NETT.CGR;1000 t dm;Trade|Net-Trade|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+NETT.PFB;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+NETT.OSD;1000 t dm;Trade|Net-Trade|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+NETT.VFN;1000 t dm;Trade|Net-Trade|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+NETT.DRY;1000 t dm;Trade|Net-Trade|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+NETT.RUM;1000 t dm;Trade|Net-Trade|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+NETT.WHT;1000 t dm;Trade|Net-Trade|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+NETT.CGR;1000 t dm;Trade|Net-Trade|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+NETT.PFB;1000 t dm;Trade|Net-Trade|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+NETT.CGR;1000 t dm;Trade|Net-Trade|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+NETT.OSD;1000 t dm;Trade|Net-Trade|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+NETT.OSD;1000 t dm;Trade|Net-Trade|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+NETT.SGC;1000 t dm;Trade|Net-Trade|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+IMPO.AGR;1000 t dm;Trade|Imports|Crops;Mt DM/yr;1000;NULL;;M
+IMPO.AGR;1000 t dm;Trade|Imports|Livestock products;Mt DM/yr;1000;NULL;;M
+IMPO.AGR;1000 t dm;Trade|Imports|Secondary products;Mt DM/yr;1000;NULL;;M
+IMPO.CGR;1000 t dm;Trade|Imports|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+IMPO.CGR;1000 t dm;Trade|Imports|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+IMPO.CGR;1000 t dm;Trade|Imports|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+IMPO.CGR;1000 t dm;Trade|Imports|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+IMPO.CRP;1000 t dm;Trade|Imports|Crops;Mt DM/yr;1000;NULL;;M
+IMPO.CRP;1000 t dm;Trade|Imports|Secondary products;Mt DM/yr;1000;NULL;;M
+IMPO.DRY;1000 t dm;Trade|Imports|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+IMPO.FSH;1000 t dm;Trade|Imports|Fish;Mt DM/yr;1000;NULL;;M
+IMPO.LSP;1000 t dm;Trade|Imports|Livestock products;Mt DM/yr;1000;NULL;;M
+IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+IMPO.OSD;1000 t dm;Trade|Imports|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+IMPO.OSD;1000 t dm;Trade|Imports|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+IMPO.OSD;1000 t dm;Trade|Imports|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+IMPO.PFB;1000 t dm;Trade|Imports|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+IMPO.PFB;1000 t dm;Trade|Imports|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+IMPO.RIC;1000 t dm;Trade|Imports|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+IMPO.RUM;1000 t dm;Trade|Imports|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+IMPO.SGC;1000 t dm;Trade|Imports|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+IMPO.SGC;1000 t dm;Trade|Imports|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+IMPO.VFN;1000 t dm;Trade|Imports|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+IMPO.WHT;1000 t dm;Trade|Imports|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+IMPO.WHT;1000 t dm;Trade|Imports|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+IMPO.ECP;1000 t dm;Trade|Imports|Bioenergy crops;Mt DM/yr;1000;NULL;;M
+EXPO.AGR;1000 t dm;Trade|Exports|Crops;Mt DM/yr;1000;NULL;;M
+EXPO.AGR;1000 t dm;Trade|Exports|Livestock products;Mt DM/yr;1000;NULL;;M
+EXPO.AGR;1000 t dm;Trade|Exports|Secondary products;Mt DM/yr;1000;NULL;;M
+EXPO.CGR;1000 t dm;Trade|Exports|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+EXPO.CGR;1000 t dm;Trade|Exports|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+EXPO.CGR;1000 t dm;Trade|Exports|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+EXPO.CGR;1000 t dm;Trade|Exports|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+EXPO.CRP;1000 t dm;Trade|Exports|Crops;Mt DM/yr;1000;NULL;;M
+EXPO.CRP;1000 t dm;Trade|Exports|Secondary products;Mt DM/yr;1000;NULL;;M
+EXPO.DRY;1000 t dm;Trade|Exports|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
+EXPO.FSH;1000 t dm;Trade|Exports|Fish;Mt DM/yr;1000;NULL;;M
+EXPO.LSP;1000 t dm;Trade|Exports|Livestock products;Mt DM/yr;1000;NULL;;M
+EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
+EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
+EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+EXPO.OSD;1000 t dm;Trade|Exports|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+EXPO.OSD;1000 t dm;Trade|Exports|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+EXPO.OSD;1000 t dm;Trade|Exports|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+EXPO.PFB;1000 t dm;Trade|Exports|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+EXPO.PFB;1000 t dm;Trade|Exports|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+EXPO.RIC;1000 t dm;Trade|Exports|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+EXPO.RUM;1000 t dm;Trade|Exports|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
+EXPO.SGC;1000 t dm;Trade|Exports|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+EXPO.SGC;1000 t dm;Trade|Exports|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+EXPO.VFN;1000 t dm;Trade|Exports|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+EXPO.WHT;1000 t dm;Trade|Exports|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+EXPO.WHT;1000 t dm;Trade|Exports|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+EXPO.ECP;1000 t dm;Trade|Exports|Bioenergy crops;Mt DM/yr;1000;NULL;;M
+NSUP_mass.CRP;TgN/year;Resources|Nitrogen|Pollution|Surplus|Cropland;Mt Nr/yr;1;NULL;;M
+NSUP_mass.MMG;TgN/year;Resources|Nitrogen|Pollution|Surplus|Animal Waste Management;Mt Nr/yr;1;NULL;;M
+NSUP_mass.GRS;TgN/year;Resources|Nitrogen|Pollution|Surplus|Pasture;Mt Nr/yr;1;NULL;;M
+BIOD.TOT;unitless;Biodiversity|BII;unitless;1;NULL;;M
+FRTN.CGR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Maize;Mt Nr/yr;1000;NULL;;M
+FRTN.RIC;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Rice;Mt Nr/yr;1000;NULL;;M
+FRTN.WHT;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Temperate cereals;Mt Nr/yr;1000;NULL;;M
+FRTN.CGR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Cereals|Tropical cereals;Mt Nr/yr;1000;NULL;;M
+FRTN.PFB;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Cotton seed;Mt Nr/yr;1000;NULL;;M
+FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Groundnuts;Mt Nr/yr;1000;NULL;;M
+FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Oilpalms;Mt Nr/yr;1000;NULL;;M
+FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Other oil crops incl rapeseed;Mt Nr/yr;1000;NULL;;M
+FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Soybean;Mt Nr/yr;1000;NULL;;M
+FRTN.OSD;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Oil crops|Sunflower;Mt Nr/yr;1000;NULL;;M
+FRTN.SGC;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Sugar crops|Sugar beet;Mt Nr/yr;1000;NULL;;M
+FRTN.SGC;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Sugar crops|Sugar cane;Mt Nr/yr;1000;NULL;;M
+FRTN.ECP;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Bioenergy crops|Short rotation grasses;Mt Nr/yr;1000;NULL;;M
+FRTN.ECP;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Bioenergy crops|Short rotation trees;Mt Nr/yr;1000;NULL;;M
+FRTN.OCR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Tropical roots;Mt Nr/yr;1000;NULL;;M
+FRTN.VFN;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Fruits Vegetables Nuts;Mt Nr/yr;1000;NULL;;M
+FRTN.OCR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Potatoes;Mt Nr/yr;1000;NULL;;M
+FRTN.OCR;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops|Other crops|Pulses;Mt Nr/yr;1000;NULL;;M
+FRTN.CRP;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops;Mt Nr/yr;1000;NULL;;M
+FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Poultry meat;Nr per Nr;1;Production Nr|Livestock products|+|Poultry meat;;M
+FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Eggs;Nr per Nr;1;Production Nr|Livestock products|+|Eggs;;M
+FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy;;M
+FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Monogastric meat;Nr per Nr;1;Production Nr|Livestock products|+|Monogastric meat;;M
+FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat;;M
+FEEF.RUM;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat;;M
+FEEF.RUM;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy;;M
+FEEF.DRY;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat;;M
+FEEF.DRY;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy;;M
+FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Poultry meat;Nr per Nr;1;Production Nr|Livestock products|+|Poultry meat;;M
+FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Eggs;Nr per Nr;1;Production Nr|Livestock products|+|Eggs;;M
+FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Monogastric meat;Nr per Nr;1;Production Nr|Livestock products|+|Monogastric meat;;M
+LABS.CRP;%;Factor requirement shares|Crop products|Labor requirement share;%;1;NULL;;M
+CAPS.CRP;%;Factor requirement shares|Crop products|Capital requirement share;%;1;NULL;;M
+LABS.LSP;%;Factor requirement shares|Livestock products|Labor requirement share;%;1;NULL;;M
+CAPS.LSP;%;Factor requirement shares|Livestock products|Capital requirement share;%;1;NULL;;M
+ENH3.AGR;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;1;NULL;;M
+ENH3.TOT;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;1;NULL;;M
+FSEC_abs.TOT;million;Nutrition|Anthropometrics|People underweight;million people;1;NULL;;M
+XPRP.CRP;Index 2020=100;Prices|Producer Price Index|Crop products;Index 2020=100;1;NULL;;M
+XPRP.RIC;Index 2020=100;Prices|Producer Price Index|Rice;Index 2020=100;1;NULL;;M
+XPRP.WHT;Index 2020=100;Prices|Producer Price Index|Temperate cereals;Index 2020=100;1;NULL;;M
+XPRP.CGR;Index 2020=100;Prices|Producer Price Index|Tropical cereals;Index 2020=100;1;Production|Crops|Cereals|+|Tropical cereals;;M
+XPRP.CGR;Index 2020=100;Prices|Producer Price Index|Maize;Index 2020=100;1;Production|Crops|Cereals|+|Maize;;M
+XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Soybean;Index 2020=100;1;Production|Crops|Oil crops|+|Soybean;;M
+XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Groundnuts;Index 2020=100;1;Production|Crops|Oil crops|+|Groundnuts;;M
+XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Other oil crops incl rapeseed;Index 2020=100;1;Production|Crops|Oil crops|+|Other oil crops incl rapeseed;;M
+XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Oilpalms;Index 2020=100;1;Production|Crops|Oil crops|+|Oilpalms;;M
+XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Sunflower;Index 2020=100;1;Production|Crops|Oil crops|+|Sunflower;;M
+XPRP.SGC;Index 2020=100;Prices|Producer Price Index|Sugar cane;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar cane;;M
+XPRP.SGC;Index 2020=100;Prices|Producer Price Index|Sugar beet;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar beet;;M
+XPRP.VFN;Index 2020=100;Prices|Producer Price Index|Fruits Vegetables Nuts;Index 2020=100;1;NULL;;M
+XPRP.PFB;Index 2020=100;Prices|Producer Price Index|Cotton seed;Index 2020=100;1;NULL;;M
+XPRP.ECP;Index 2020=100;Prices|Producer Price Index|Short rotation grasses;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation grasses;;M
+XPRP.ECP;Index 2020=100;Prices|Producer Price Index|Short rotation trees;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation trees;;M
+XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Pulses;Index 2020=100;1;Production|Crops|Other crops|+|Pulses;;M
+XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Potatoes;Index 2020=100;1;Production|Crops|Other crops|+|Potatoes;;M
+XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Tropical roots;Index 2020=100;1;Production|Crops|Other crops|+|Tropical roots;;M
+XPRP.CRP;Index 2020=100;Prices|Producer Price Index|Crop products;Index 2020=100;1;NULL;;M
+XPRP.RUM;Index 2020=100;Prices|Producer Price Index|Ruminant meat;Index 2020=100;1;NULL;;M
+XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Monogastric meat;Index 2020=100;1;Production|Livestock products|+|Monogastric meat;;M
+XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Poultry meat;Index 2020=100;1;Production|Livestock products|+|Poultry meat;;M
+XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Eggs;Index 2020=100;1;Production|Livestock products|+|Eggs;;M
+XPRP.DRY;Index 2020=100;Prices|Producer Price Index|Dairy;Index 2020=100;1;Production|Livestock products|+|Dairy;;M
+XPRP.LSP;Index 2020=100;Prices|Producer Price Index|Livestock products;Index 2020=100;1;NULL;;M
+XPRP.FSH;Index 2020=100;Prices|Producer Price Index|Fish;Index 2020=100;1;NULL;;M
+XPRP.AGR;Index 2020=100;Prices|Producer Price Index|All products;Index 2020=100;1;NULL;;M

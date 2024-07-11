@@ -47,7 +47,7 @@ areUnitsIdentical <- function(vec1, vec2) {
   NULL)
   areIdentical <- function(x, y) {
     # literally identical or both found in the same list element above
-    x == y || any(unlist(lapply(identicalUnits, function(units) all(c(x, y) %in% units))))
+    isTRUE(x == y) || any(unlist(lapply(identicalUnits, function(units) all(c(x, y) %in% units))))
   }
   return(unname(unlist(Map(Vectorize(areIdentical), vec1, vec2))))
 }

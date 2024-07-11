@@ -19,6 +19,19 @@ checkNGFS <- function(mifdata, iiasatemplate, logFile, generatePlots = TRUE) {
     priceIndicesIIASA(iiasatemplate, scenBase = NULL) %>%
     checkIIASASubmission(iiasatemplate, logFile = NULL, failOnUnitMismatch = FALSE)
 
+  # fix correctly on reference scenario
+  fixOnRefNGFS <- function(scen, d) {
+    if (scen %in% "h_pol") return(d)
+    startyear <- if (grepl("d_delfrag|d_strain", scen)) 2035 else 2025
+    d %>%
+      filter(.data$scenario %in% c(scen, "h_cpol")) %>%
+      fixOnRef("h_cpol", startyear, ret = "fixed", failfile = NULL, relDiff = 1E-12) %>%
+      filter(.data$scenario %in% scen) %>%
+      return()
+  }
+
+  d <- as.quitte(lapply(levels(d$scenario), fixOnRefNGFS, d))
+
   invisible(checkSummations(d, template = NULL, summationsFile = "AR6", logFile = NULL, logAppend = TRUE,
                             outputDirectory = ".", generatePlots = generatePlots,
                             dataDumpFile = paste0(fileprefix, "_checkSummations.csv"),
