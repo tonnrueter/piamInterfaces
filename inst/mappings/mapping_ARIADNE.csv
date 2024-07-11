@@ -163,7 +163,8 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;carbon management;Carbon Sequestration|Land Use|Afforestation;Mt CO2/yr;total carbon dioxide sequestered through afforestation, stored amounts should be reported as positive numbers;;;;;0;;
 2;carbon management;Carbon Sequestration|Land Use|Biochar;Mt CO2/yr;total carbon dioxide sequestered through biochar, stored amounts should be reported as positive numbers;;;;;0;;
 2;carbon management;Carbon Sequestration|Land Use|Soil Carbon Management;Mt CO2/yr;total carbon dioxide sequestered through soil carbon management techniques, stored amounts should be reported as positive numbers;;;;;0;;
-2;carbon management;Carbon Sequestration|Other;Mt CO2/yr;total carbon dioxide sequestered through other techniques (please provide a definition of other sources in this category in the 'comments' tab), stored amounts should be reported as positive numbers;;;;;0;;
+2;carbon management;Carbon Sequestration|Other;Mt CO2/yr;total carbon dioxide sequestered through other techniques (please provide a definition of other sources in this category in the 'comments' tab), stored amounts should be reported as positive numbers;Emi|CO2|CDR|Industry CCS|Synthetic Fuels;Mt CO2/yr;-1;;0;;R
+2;carbon management;Carbon Sequestration|Other;Mt CO2/yr;total carbon dioxide sequestered through other techniques (please provide a definition of other sources in this category in the 'comments' tab), stored amounts should be reported as positive numbers;Emi|CO2|CDR|Materials|+|Plastics;Mt CO2/yr;-1;;0;;R
 2;emissions (air pollutants);Emissions|BC;Mt BC/yr;total emissions of black carbon;Emi|BC;Mt BC/yr;1;;0;;R
 1;emissions (GHGs);Emissions|CH4;Mt CH4/yr;total CH4 emissions;Emi|CH4;Mt CH4/yr;1;;0;;R
 3;emissions (GHGs);Emissions|CH4|Industrial Processes;Mt CH4/yr;CH4 emissions from industrial processes;;;;;0;;
