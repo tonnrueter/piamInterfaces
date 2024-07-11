@@ -278,7 +278,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
               basename(summationsFile), "."),
         paste0("# All deviations can be found in the returned object",
                paste0(" and in ", dataDumpFile)[! is.null(dataDumpFile)], "."),
-        paste0("# To get more detailed information on '", problematic[1], "', run piamInterfaces::variableInfo('",
+        paste0("# To get more detailed information on '", p, "', run piamInterfaces::variableInfo('",
                pn, "').")
         )
       if (generatePlots) {

@@ -61,10 +61,11 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
       remindname <- mappingData[no, remindVar]
       allexportchilds <- unique(.getChilds(exportname, mappingData$variable))
       allremindchilds <- unique(.getChilds(varname, mappingData[, remindVar]))
-      if (exportname %in% summationGroups$parent) {
-        exportchilds <- summationGroups$child[summationGroups$parent %in% exportname]
+      parentgroups <- intersect(c(exportname, paste(exportname, seq(10))), summationGroups$parent)
+      for (parentname in parentgroups) {
+        exportchilds <- summationGroups$child[summationGroups$parent %in% parentname]
         # print summation parents
-        message(". ", str_pad(paste(exportname, "="), width + 3, "right"), "   . ",
+        message("\n. ", str_pad(paste(parentname, "="), width + 3, "right"), "   . ",
                 paste0(mappingData[, remindVar][mappingData$variable %in% exportname], collapse = " + "), " =")
         # print summation childs
         for (ch in exportchilds) {
@@ -73,7 +74,8 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
           allremindchilds <- setdiff(allremindchilds, remindchilds)
         }
         allexportchilds <- setdiff(allexportchilds, exportchilds)
-      } else {
+      }
+      if (length(parentgroups) == 0) {
         message(". ", str_pad(paste0(exportname, " (", mappingData$unit[no], ")"), width + 3, "right"),
                 "   . ", remindname, " (", mappingData[, remindUnit][no], ")")
       }
