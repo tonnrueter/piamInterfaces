@@ -18,7 +18,7 @@
 #' )
 #' @export
 variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_variable", remindUnit = "piam_unit") {
-  if (is.null(mapping)) mapping <- names(mappingNames())
+  if (length(mapping) == 0) mapping <- names(mappingNames())
   green <- "\033[0;32m"
   blue  <- "\033[0;34m"
   nc    <- "\033[0m"   # No Color
@@ -93,7 +93,7 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
               " Units: ", paste0(unique(mappingData[, remindUnit][no]), collapse = ", "))
     }
   }
-  if (! is.null(mif)) {
+  if (length(mif) > 0) {
     mifdata <- quitte::as.quitte(mif)
     message("\n### Variables found in mif file")
     mifchilds <- .getChilds(varname, sort(unique(mifdata$variable)), keepparent = TRUE)
