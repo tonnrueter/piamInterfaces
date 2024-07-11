@@ -1074,8 +1074,8 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 981;3;energy (final);Final Energy|Bunkers|Passenger;EJ/yr;FE|Transport|Bunkers|Pass|International Aviation;EJ/yr;;;;final energy consumption by the international Passenger transportation sector;T
 982;3;energy (final);Final Energy|Bunkers|Passenger|International Shipping;EJ/yr;;;;;;final energy consumption by the Passenger transportation sector by International Shipping;
 983;3;energy (final);Final Energy|Bunkers|Passenger|International Aviation;EJ/yr;FE|Transport|Bunkers|Pass|International Aviation;EJ/yr;;;;final energy consumption by the Passenger transportation sector by International Aviation;T
-984;3;energy (final);Final Energy|Bunkers|Freight;EJ/yr;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;;;final energy consumption by the international freight transportation sector;
-985;3;energy (final);Final Energy|Bunkers|Freight|International Shipping;EJ/yr;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;;;final energy consumption by the freight transportation sector by International Shipping;
+984;3;energy (final);Final Energy|Bunkers|Freight;EJ/yr;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;;;final energy consumption by the international freight transportation sector;T
+985;3;energy (final);Final Energy|Bunkers|Freight|International Shipping;EJ/yr;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;;;final energy consumption by the freight transportation sector by International Shipping;T
 986;3;energy (final);Final Energy|Bunkers|Freight|International Aviation;EJ/yr;;;;;;final energy consumption by the freight transportation sector by International Aviation;
 987;1;energy (final);Final Energy|Bunkers|Electricity;EJ/yr;;;;;;final energy consumption by the Bunkers sector of electricity;
 988;1;energy (final);Final Energy|Bunkers|Gases;EJ/yr;;;;;;final energy consumption by the Bunkers sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;
