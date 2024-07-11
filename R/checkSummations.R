@@ -233,19 +233,19 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                     if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
         }
 
-        reldDiffMax <- max(-fileLarge$reldiff[fileLarge$variable == p])
-        relDiffMin <- min(-fileLarge$reldiff[fileLarge$variable == p])
-        absDiffMax <- max(abs(fileLarge$diff[fileLarge$variable == p]))
+        relDiffMin <- min(fileLarge$reldiff[fileLarge$variable == p])
+        relDiffMax  <- max(fileLarge$reldiff[fileLarge$variable == p])
+        absDiffMax  <- max(abs(fileLarge$diff[fileLarge$variable == p]))
 
         if (roundDiff) {
-          reldDiffMax <- niceround(reldDiffMax)
           relDiffMin <- niceround(relDiffMin)
+          relDiffMax <- niceround(relDiffMax)
           absDiffMax <- niceround(absDiffMax)
         }
 
-        text <- c(text, paste0("Relative difference between ",
-                          relDiffMin, "% and ",
-                          reldDiffMax, "%, ",
+        text <- c(text, paste0("The child sum differs by ",
+                          relDiffMin, "% to ",
+                          relDiffMax, "% from the parent, ",
                           "absolute difference up to ",
                           absDiffMax, " ",
                           paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
@@ -278,7 +278,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
               basename(summationsFile), "."),
         paste0("# All deviations can be found in the returned object",
                paste0(" and in ", dataDumpFile)[! is.null(dataDumpFile)], "."),
-        paste0("# To get more detailed information on '", problematic[1], "', run piamInterfaces::variableInfo('",
+        paste0("# To get more detailed information on '", p, "', run piamInterfaces::variableInfo('",
                pn, "').")
         )
       if (generatePlots) {
