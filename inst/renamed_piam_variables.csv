@@ -1,4 +1,7 @@
 piam_variable                                 ;old_name
+# temporary, can be removed after EDGE-T refactoring
+FE|Transport|Pass|w/o Bunkers                 ;FE|Transport|Pass|w/o bunkers
+
 # renamed in https://github.com/pik-piam/remind2/pull/579
 Energy Investments|Electricity|Biomass        ;Energy Investments|Elec|Biomass
 Energy Investments|Electricity|Biomass|w/ CC  ;Energy Investments|Elec|Biomass|w/ CC
