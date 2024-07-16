@@ -38,7 +38,7 @@ test_that("Correct Prices are selected and plusses ignored", {
             "Price|Secondary Energy|Gases|Moving Avg")
   levels(qe$variable)[seq_along(vars)] <- vars
   qe <- droplevels(dplyr::filter(qe, .data$variable %in% vars))
-  levels(qe$unit) <- rep("US$2005/GJ", length(levels(qe$unit)))
+  levels(qe$unit) <- rep("US$2017/GJ", length(levels(qe$unit)))
   # just add 1 to first variable, 2 to second etc.
   for (v in seq_along(vars)) {
     qe$value[qe$variable == vars[[v]]] <- v
@@ -49,9 +49,9 @@ test_that("Correct Prices are selected and plusses ignored", {
                                             outputFilename = basename(f), logFile = file.path(tempdir(), "price.log")))
   expect_true(file.exists(f))
   qemif <- quitte::as.quitte(f)
-  # you have to devide by 1.1 and round to compensate for inflation 2005 -> 2010
+  # you have to multiply by 1.23 and round to compensate for inflation 2017 -> 2010
   peSeElec <- unique(filter(qemif, !!sym("variable") == "Price|Secondary Energy|Electricity")$value)
-  expect_identical(round(peSeElec / 1.1), 3)
+  expect_identical(round(peSeElec * 1.23), 3)
 
   # check whether results are identical if we remove the plus and don't write to file
   qenoplus <- qe
@@ -75,7 +75,7 @@ test_that("Correct Prices are selected and plusses ignored", {
   expect_true(file.exists(f2))
   qemif2 <- quitte::as.quitte(f2)
   peSeGas <- unique(filter(qemif2, !!sym("variable") == "Price|Secondary Energy|Gases|Natural Gas")$value)
-  expect_identical(round(peSeGas / 1.1), 4)
+  expect_identical(round(peSeGas * 1.23), 4)
 })
 
 test_that("fail on duplicated data", {

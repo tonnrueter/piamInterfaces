@@ -31,7 +31,7 @@ for (piam_unit in c("US$2005", "US$2017")) {
       } else if (piam_unit == "US$2017" && mif_unit == "US$2005") {
         # is automatically adapting GDP values
         expect_no_error(gdp17 <- checkFixUnits(gdp, getMapping(mappingfile)))
-        expect_true(all(abs(gdp17$value - 1.232084 * gdp$value) < 0.00001))
+        expect_true(all(abs(gdp17$value - 1.231357 * gdp$value) < 0.00001))
         expect_true(all(gdp17$unit == piam_unit))
       } else {
         # no need to adapt anything

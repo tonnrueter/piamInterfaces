@@ -48,7 +48,6 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("0.9096", "US$2010/t CO2", "US$2017/tCO2"),
                           c("0.0009096", "billion US$2010/yr", "million US$17 PPP/yr"),
                           c("0.001099", "EJ/billion US$2010", "MJ/US$2017"), # 0.001 divided by 1.12
-                          c("10.9502", "US$2020", "US$2017"),
                           c("0.9502", "EUR_2020", "US$2017"), # ESABCC
                           c("0.9534", "EUR2020", "US$2017"),  # ARIADNE
                           c("0.8121", "USD05/tCO2", "US$2017/tCO2"),
