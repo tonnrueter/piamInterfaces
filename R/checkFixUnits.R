@@ -9,7 +9,7 @@
 #'        recommended for submission, not used for generating mappings
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter mutate
-#' @importFrom GDPuc convertGDP
+#' @importFrom GDPuc convertSingle
 #' @importFrom rlang .data
 #' @importFrom stringr str_split
 #' @return quitte object with adapted mif data
@@ -45,10 +45,8 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
       } else if (all(gsub("US$2005", "US$2017", mifunit, fixed = TRUE) == templateunit)) {
         # convert US$2005 to US$2017 for backwards compatibility with old REMIND setting
         if ("value" %in% names(mifdata)) {
-          # convertSingle(x = 1, iso3c = "USA", unit_in = "constant 2005 US$MER", unit_out = "constant 2017 US$MER") # nolint
-          convfact <- convertGDP(gdp = tibble::tibble(iso3c = "USA", year = 2000, value = 1),
-                                 unit_in = "constant 2005 US$MER",
-                                 unit_out = "constant 2017 US$MER")$value[[1]]
+          convfact <- convertSingle(x = 1, iso3c = "USA",
+                                    unit_in = "constant 2005 US$MER", unit_out = "constant 2017 US$MER")
           if (grepl("/US$2005", mifunit, fixed = TRUE)) convfact <- 1 / convfact
           mifdata <- mutate(mifdata,
                        unit = factor(ifelse(.data$variable %in% mifvar, templateunit, as.character(.data$unit))),
