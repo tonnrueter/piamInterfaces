@@ -25,8 +25,8 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
   width <- 60
 
   .getChilds <- function(v, c, keepparent = FALSE) {
-    tobefound <- paste0("^", gsub("|", "\\|", removePlus(v), fixed = TRUE), "\\|", if (keepparent) "?", "[^\\|]*$")
-    c[which(grepl(tobefound, removePlus(c)))]
+    tobefound <- paste0("^", gsub("|", "\\|", deletePlus(v), fixed = TRUE), "\\|", if (keepparent) "?", "[^\\|]*$")
+    c[which(grepl(tobefound, deletePlus(c)))]
   }
 
   varname <- trimws(varname)
@@ -35,8 +35,8 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL, remindVar = "piam_
   for (m in mapping) {
     mappingData <- getMapping(m)
     mappingName <- basename(m)
-    remindno <- which(removePlus(varname) == removePlus(mappingData[, remindVar]))
-    exportno <- head(which(removePlus(varname) == removePlus(mappingData$variable)), n = 1)
+    remindno <- which(deletePlus(varname) == deletePlus(mappingData[, remindVar]))
+    exportno <- head(which(deletePlus(varname) == deletePlus(mappingData$variable)), n = 1)
     nothingfound <- isTRUE(length(remindno) + length(exportno) == 0)
     message("\n### ", ifelse(nothingfound, "Nothing found in", "Results from"), " mapping: ", blue, mappingName, nc)
     if (nothingfound) next

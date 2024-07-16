@@ -6,18 +6,21 @@
 #' @param variables the list of requested variables
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter
+#' @importFrom piamutils deletePlus
 #' @importFrom rlang .data
 #' @importFrom tibble as_tibble
 #' @return quitte object with adapted mif data
 #' @export
 
 renameOldVariables <- function(mifdata, variables, logFile = NULL) {
-  mifdata <- as.quitte(mifdata)
+  mifdata <- deletePlus(as.quitte(mifdata))
 
-  toadd <- unique(setdiff(variables, levels(mifdata$variable)))
+  toadd <- unique(setdiff(deletePlus(variables), levels(mifdata$variable)))
   csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
     read.csv2(comment.char = "#", strip.white = TRUE) %>%
     as_tibble() %>%
+    mutate(piam_variable = deletePlus(.data$piam_variable)) %>%
+    mutate(old_name = deletePlus(.data$old_name)) %>%
     filter(.data$piam_variable %in% toadd, .data$old_name %in% levels(mifdata$variable))
   old2new <- csvdata$piam_variable
   names(old2new) <- csvdata$old_name

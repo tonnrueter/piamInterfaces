@@ -52,6 +52,7 @@
 #' @param naAction a function which indicates what should happen when the data contain NA values.
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
+#' @importFrom piamutils deletePlus
 #' @importFrom stringr str_trim
 #' @examples
 #' \dontrun{
@@ -137,6 +138,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
            " before 1.111.0 on 2023-05-26, please use piamInterfaces version 0.9.0 or earlier, see PR #128.")
   }
 
+  mifdata <- deletePlus(mifdata)
   mifdata <- renameOldVariables(mifdata, mapData$piam_variable, logFile = logFile)
   mifdata <- checkFixUnits(mifdata, mapData, logFile = logFile, failOnUnitMismatch = FALSE)
   mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
@@ -148,7 +150,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   mifdata <- mifdata %>%
     filter(.data$period %in% timesteps) %>%
     mutate(
-      "piam_variable" = removePlus(str_trim(.data$variable)),
+      "piam_variable" = str_trim(.data$variable),
       "piam_unit" = str_trim(.data$unit)
       ) %>%
     select(-c("variable", "unit")) %>%
@@ -260,11 +262,11 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   }
   normalizedData <- dataframe %>%
     mutate(
-      "piam_weight" = removePlus(.data$piam_weight)
+      "piam_weight" = deletePlus(.data$piam_weight)
     )
   normalizedWeights <- weightSource %>%
     mutate(
-      "piam_variable" = removePlus(.data$piam_variable),
+      "piam_variable" = deletePlus(.data$piam_variable),
     )
   # ensure the source data variables are normalised in the same way
   normalizedData %>%

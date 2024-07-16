@@ -122,7 +122,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
       } else {
         wrongvars <- length(levels(mismatches$variable))
         mismatches <- mismatches %>%
-          mutate(variable = factor(removePlus(variable))) %>%
+          mutate(variable = factor(deletePlus(variable))) %>%
           arrange(variable) %>%
           summarise(period = paste(sort(unique(period)), collapse = ","),
                     reldiff = max(reldiff),
