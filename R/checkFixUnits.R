@@ -10,6 +10,7 @@
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter mutate
 #' @importFrom GDPuc convertSingle
+#' @importFrom piamutils niceround
 #' @importFrom rlang .data
 #' @importFrom stringr str_split
 #' @return quitte object with adapted mif data
@@ -52,7 +53,8 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
                        unit = factor(ifelse(.data$variable %in% mifvar, templateunit, as.character(.data$unit))),
                        value = ifelse(.data$variable %in% mifvar, round(.data$value * convfact, 7), .data$value)) %>%
                      droplevels()
-          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, ", data adapted."))
+          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit,
+                                       ", data multiplied by ", niceround(convfact, 4), "."))
         }
       } else {
         # log units unable to fix
