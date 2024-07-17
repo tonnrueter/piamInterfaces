@@ -293,10 +293,8 @@ Emissions|CO2|Energy;Emissions|CO2|Energy|Supply;1
 Emissions|CO2|Energy;Emissions|CO2|Energy|Demand;1
 
 Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|AFOFI;1
-Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Commercial;1
 Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Industry;1
 Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Other Sector;1
-Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Residential;1
 Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Residential and Commercial;1
 Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Transportation;1
 Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Bunkers;1
@@ -319,6 +317,9 @@ Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Steel;
 Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Other Sector;1
 Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Pulp and Paper;1
 Emissions|CO2|Energy|Demand|Industry;Emissions|CO2|Energy|Demand|Industry|Non-Ferrous Metals;1
+
+Emissions|CO2|Energy|Demand|Residential and Commercial;Emissions|CO2|Energy|Demand|Commercial;1
+Emissions|CO2|Energy|Demand|Residential and Commercial;Emissions|CO2|Energy|Demand|Residential;1
 
 Emissions|CO2|Energy|Demand|Transportation;Emissions|CO2|Energy|Demand|Transportation|Gases;1
 Emissions|CO2|Energy|Demand|Transportation;Emissions|CO2|Energy|Demand|Transportation|Liquids;1
