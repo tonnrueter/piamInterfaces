@@ -50,6 +50,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("0.001099", "EJ/billion US$2010", "MJ/US$2017"), # 0.001 divided by 0.9096
                           c("0.9502", "EUR_2020", "US$2017"), # ESABCC
                           c("0.9534", "EUR2020", "US$2017"),  # ARIADNE
+                          c("0.9311", "EUR2020", "US$2017"),  # GDPuc 0.931132
                           c("0.8121", "USD05", "US$2017"),
                           # temporary, error in ARIADNE mapping for 'Capital Stock'
                           c("1.174", "billion EUR2020/yr", "billion US$2005"),
