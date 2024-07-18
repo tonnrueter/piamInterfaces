@@ -113,3 +113,82 @@ Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar cane|irrigated;Re
 Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar cane|rainfed;Resources|Land Cover|Cropland|Crops|Sugar crops|Sugar cane|rainfed
 Resources|Land Cover|Cropland|Croparea|Forage|irrigated;Resources|Land Cover|Cropland|Forage|irrigated
 Resources|Land Cover|Cropland|Croparea|Forage|rainfed;Resources|Land Cover|Cropland|Forage|rainfed
+
+#Changes from edgeT refactoring
+Emi|CO2|Energy|Demand|Transport|Bunkers|Freight|International Shipping;Emi|CO2|Transport|Freight|International Shipping|Demand
+Emi|CO2|Energy|Demand|Transport|Bunkers|Pass|International Aviation;Emi|CO2|Transport|Pass|Aviation|International|Demand
+Emi|CO2|Energy|Demand|Transport|Freight;Emi|CO2|Transport|Freight|w/o bunkers|Demand
+Emi|CO2|Energy|Demand|Transport|Freight|Domestic Shipping;Emi|CO2|Transport|Freight|Navigation|Demand
+Emi|CO2|Energy|Demand|Transport|Freight|Rail;Emi|CO2|Transport|Freight|Rail|Demand
+Emi|CO2|Energy|Demand|Transport|Freight|Road;Emi|CO2|Transport|Freight|Road|Demand
+Emi|CO2|Energy|Demand|Transport|Pass;Emi|CO2|Transport|Pass|w/o bunkers|Demand
+Emi|CO2|Energy|Demand|Transport|Pass|Domestic Aviation;Emi|CO2|Transport|Pass|Aviation|Domestic|Demand
+Emi|CO2|Energy|Demand|Transport|Pass|Rail;Emi|CO2|Transport|Pass|Rail|Demand
+Emi|CO2|Energy|Demand|Transport|Pass|Road;Emi|CO2|Transport|Pass|Road|Demand
+Emi|CO2|Energy|Demand|Transport|Pass|Road|Bus;Emi|CO2|Transport|Pass|Road|Bus|Demand
+Emi|CO2|Energy|Demand|Transport|Pass|Road|LDV;Emi|CO2|Transport|Pass|Road|LDV|Demand
+ES|Transport|Bunkers|Freight|International Shipping;ES|Transport|Freight|International Shipping
+ES|Transport|Bunkers|Pass|International Aviation;ES|Transport|Pass|Aviation|International
+ES|Transport|Freight|Domestic Shipping;ES|Transport|Freight|Navigation
+ES|Transport|Freight|Road|BEV;ES|Transport|Freight|Road|Electric
+ES|Transport|Pass|Domestic Aviation;ES|Transport|Pass|Aviation|Domestic
+ES|Transport|Pass|Non-motorized;ES|Transport|Pass|Road|Non-Motorized
+ES|Transport|Pass|Non-motorized|Cycle;ES|Transport|Pass|Road|Non-Motorized|Cycling
+ES|Transport|Pass|Non-motorized|Walk;ES|Transport|Pass|Road|Non-Motorized|Walking
+FE|Transport with bunkers;FE|Transport edge
+FE|Transport|Bunkers|Freight|International Shipping;FE|Transport|Freight|International Shipping
+FE|Transport|Bunkers|Freight|International Shipping|Liquids;FE|Transport|Freight|International Shipping|Liquids
+FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass;FE|Transport|Freight|International Shipping|Liquids|Biomass
+FE|Transport|Bunkers|Freight|International Shipping|Liquids|Fossil;FE|Transport|Freight|International Shipping|Liquids|Fossil
+FE|Transport|Bunkers|Freight|International Shipping|Liquids|Hydrogen;FE|Transport|Freight|International Shipping|Liquids|Hydrogen
+FE|Transport|Bunkers|Pass|International Aviation;FE|Transport|Pass|Aviation|International
+FE|Transport|Bunkers|Pass|International Aviation|Liquids;FE|Transport|Pass|Aviation|International|Liquids
+FE|Transport|Bunkers|Pass|International Aviation|Liquids|Biomass;FE|Transport|Pass|Aviation|International|Liquids|Biomass
+FE|Transport|Bunkers|Pass|International Aviation|Liquids|Fossil;FE|Transport|Pass|Aviation|International|Liquids|Fossil
+FE|Transport|Bunkers|Pass|International Aviation|Liquids|Hydrogen;FE|Transport|Pass|Aviation|International|Liquids|Hydrogen
+FE|Transport|Freight|Domestic Shipping;FE|Transport|Freight|Navigation
+FE|Transport|Freight|Domestic Shipping|Liquids;FE|Transport|Freight|Navigation|Liquids
+FE|Transport|Freight|Domestic Shipping|Liquids|Biomass;FE|Transport|Freight|Navigation|Liquids|Biomass
+FE|Transport|Freight|Domestic Shipping|Liquids|Fossil;FE|Transport|Freight|Navigation|Liquids|Fossil
+FE|Transport|Freight|Domestic Shipping|Liquids|Hydrogen;FE|Transport|Freight|Navigation|Liquids|Hydrogen
+FE|Transport|Pass|Domestic Aviation;FE|Transport|Pass|Aviation|Domestic
+FE|Transport|Pass|Domestic Aviation|Hydrogen;FE|Transport|Pass|Aviation|Domestic|Hydrogen
+FE|Transport|Pass|Domestic Aviation|Liquids;FE|Transport|Pass|Aviation|Domestic|Liquids
+FE|Transport|Pass|Domestic Aviation|Liquids|Biomass;FE|Transport|Pass|Aviation|Domestic|Liquids|Biomass
+FE|Transport|Pass|Domestic Aviation|Liquids|Fossil;FE|Transport|Pass|Aviation|Domestic|Liquids|Fossil
+FE|Transport|Pass|Domestic Aviation|Liquids|Hydrogen;FE|Transport|Pass|Aviation|Domestic|Liquids|Hydrogen
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Sales|Transport|LDV|Large Car and SUV|BEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Sales|Transport|LDV|Large Car and SUV|FCEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Sales|Transport|LDV|Large Car and SUV|Hybrid Electric
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Sales|Transport|LDV|Large Car and SUV|Liquids
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Sales|Transport|LDV|Compact Car|BEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Sales|Transport|LDV|Compact Car|FCEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hybrid electric;Sales|Transport|LDV|Compact Car|Hybrid Electric
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Sales|Transport|LDV|Compact Car|Liquids
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Sales|Transport|LDV|Midsize Car|BEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Sales|Transport|LDV|Midsize Car|FCEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid electric;Sales|Transport|LDV|Midsize Car|Hybrid Electric
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Sales|Transport|LDV|Midsize Car|Liquids
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Sales|Transport|LDV|Subcompact Car|BEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Sales|Transport|LDV|Subcompact Car|FCEV
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Sales|Transport|LDV|Subcompact Car|Hybrid Electric
+Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Sales|Transport|LDV|Subcompact Car|Liquids
+Sales|Transport|Pass|Road|LDV|Hybrid electric;Sales|Transport|LDV|Hybrid Electric
+Stock|Transport|Pass|Road|Bus;Stock|Transport|Bus
+Stock|Transport|Pass|Road|LDV;Stock|Transport|LDV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Stock|Transport|LDV|Large Car and SUV|BEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Stock|Transport|LDV|Large Car and SUV|FCEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Stock|Transport|LDV|Large Car and SUV|Hybrid Electric
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Stock|Transport|LDV|Large Car and SUV|Liquids
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Stock|Transport|LDV|Compact Car|BEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Stock|Transport|LDV|Compact Car|FCEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hybrid electric;Stock|Transport|LDV|Compact Car|Hybrid Electric
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Stock|Transport|LDV|Compact Car|Liquids
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Stock|Transport|LDV|Midsize Car|BEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Stock|Transport|LDV|Midsize Car|FCEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid electric;Stock|Transport|LDV|Midsize Car|Hybrid Electric
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Stock|Transport|LDV|Midsize Car|Liquids
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Stock|Transport|LDV|Subcompact Car|BEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Stock|Transport|LDV|Subcompact Car|FCEV
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Stock|Transport|LDV|Subcompact Car|Hybrid Electric
+Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Stock|Transport|LDV|Subcompact Car|Liquids
