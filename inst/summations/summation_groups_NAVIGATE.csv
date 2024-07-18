@@ -1356,15 +1356,6 @@ OM Cost|Fixed|Electricity|Wind;OM Cost|Fixed|Electricity|Wind|Onshore;1
 
 Population;Population|Rural;1
 Population;Population|Urban;1
-Population;Population|Working Age;1
-Population;Population|Risk of Hunger;1
-Population;Population|Mobile Network Access;1
-Population;Population|Road Access;1
-Population;Population|Drinking Water Access;1
-Population;Population|Sanitation Acces;1
-Population;Population|Electricity Access;1
-Population;Population|Relying on Solid Fuels;1
-Population;Population|Clean cooking Access;1
 
 Primary Energy;Primary Energy|Biomass;1
 Primary Energy;Primary Energy|Fossil;1

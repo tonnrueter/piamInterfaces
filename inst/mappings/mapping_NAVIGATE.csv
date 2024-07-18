@@ -1700,7 +1700,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1585;1;water;Water Withdrawal|Municipal Water;km3/yr;;;;;;water withdrawals for the municial sector (e.g., houses, offices, municipal irrigation);
 1586;2;water;Freshwater|Environmental Flow;km3/yr;;;;;;water allocated to environmental flow in rivers and groundwater systems;
 1587;2;water;Population|Drinking Water Access;million;;;;;;Population with access to improved drinking water sources (by income level);
-1588;2;water;Population|Sanitation Acces;million;;;;;;Population with access to improved sanitation (by income level);
+1588;2;water;Population|Sanitation Access;million;;;;;;Population with access to improved sanitation (by income level);
 1589;2;water;Water Desalination;km3/yr;;;;;;desalination water;
 1590;2;water;Water Extraction|Brackish Water;km3/yr;;;;;;water extracted from brackish groundwater resources;
 1591;2;water;Water Extraction|Groundwater;km3/yr;;;;;;water extracted from groundwater resources;
