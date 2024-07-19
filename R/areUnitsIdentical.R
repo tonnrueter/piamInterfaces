@@ -34,6 +34,8 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("W/m2", "W/m^2"),
     c("USD05", "USD2005", "US$05", "US$2005", "USD2005", "USD_2005"),
     c("USD10", "USD2010", "US$10", "US$2010", "USD2010", "USD_2010"),
+    c("USD_2010/t CO2", "US_2010/t CO2", "US$2010/t CO2"),
+    c("billion USD_2010/yr", "billion US_2010/yr", "billion US$2010/yr"),
     # below, exceptionally added units that actually differ for backwards compatibility
     # for 'Energy Service|Residential and Commercial|Floor Space'
     c("bn m2/yr", "billion m2/yr", "bn m2", "billion m2"),
