@@ -4,3 +4,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Resource|Extraction|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
 ;Resource|Extraction|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
 ;Resource|Extraction|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R
+;Extracted|Primary Energy|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
+;Extracted|Primary Energy|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
+;Extracted|Primary Energy|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R
