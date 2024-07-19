@@ -47,7 +47,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
         # convert US$2005 to US$2017 for backwards compatibility with old REMIND setting
         if ("value" %in% names(mifdata)) {
           convfact <- convertSingle(x = 1, iso3c = "USA",
-                                    unit_in = "constant 2005 US$MER", unit_out = "constant 2017 US$MER")
+                                    unit_in = "constant 2005 Int$PPP", unit_out = "constant 2017 Int$PPP")
           if (grepl("/US$2005", mifunit, fixed = TRUE)) convfact <- 1 / convfact
           mifdata <- mutate(mifdata,
                        unit = factor(ifelse(.data$variable %in% mifvar, templateunit, as.character(.data$unit))),
