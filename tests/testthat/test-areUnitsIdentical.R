@@ -1,10 +1,21 @@
 test_that("areUnitsIdentical works", {
+  # error if not exactly two vectors given
   expect_error(areUnitsIdentical("%"))
+  expect_error(areUnitsIdentical("%", "percent", "FE/yr"))
+  # does the function work as intended on examples?
   expect_true(areUnitsIdentical("%", "percent"))
   expect_true(all(areUnitsIdentical("%", c("percent", "Percent"))))
   expect_true(all(areUnitsIdentical(c("%", "percent"), "Percent")))
   expect_true(areUnitsIdentical("whatever", "whatever"))
+  expect_true(all(areUnitsIdentical("US$2023", c("USD_2023", "USD2023", "US_2023", "US2023"))))
+  expect_true(all(areUnitsIdentical("US$2023/t CO", c("USD_2023/t CO", "USD2023/t CO", "US_2023/t CO", "US2023/t CO"))))
+  expect_true(all(areUnitsIdentical("billion USD_2010/yr", c("billion US_2010/yr", "billion US$2010/yr"))))
+  expect_true(areUnitsIdentical("EUR2023", "EUR_2023"))
+  expect_true(areUnitsIdentical("EUR2023/t CO2", "EUR_2023/t CO2"))
+  expect_false(areUnitsIdentical("USD__2020", "USD_2020"))
+  expect_false(areUnitsIdentical("billion EUR__2030", "billion EUR2030"))
+  expect_false(areUnitsIdentical("US$2020", "US$1999"))
+  expect_false(areUnitsIdentical("US$2023/t CO2", "US$2023/Mt CO2"))
   expect_false(areUnitsIdentical("%", "FE/yr"))
   expect_false(any(areUnitsIdentical(c("%", "percent"), "FE/yr")))
-  expect_error(areUnitsIdentical("%", "percent", "FE/yr"))
 })
