@@ -10,7 +10,10 @@ checkSummationsRegional(
   childRegions = NULL,
   variables = NULL,
   skipUnits = NULL,
-  skipBunkers = NULL
+  skipBunkers = NULL,
+  intensiveUnits = TRUE,
+  absDiff = 1e-04,
+  relDiff = 0.1
 )
 }
 \arguments{
@@ -22,10 +25,18 @@ checkSummationsRegional(
 
 \item{variables}{list of variables to check. Defaults to all in mifFile}
 
-\item{skipUnits}{units to be skipped, because they are not expected to sum up. Set to TRUE to get
-list of units pointing towards their variable being intensive. You can also use c(TRUE, "additionalunit")}
+\item{skipUnits}{units to be skipped. Set to TRUE to get list of units pointing towards
+their variable being intensive. You can also use c(TRUE, "additionalunit")}
 
 \item{skipBunkers}{set to TRUE to skip AR6 variables that contain bunkers only at the global level}
+
+\item{intensiveUnits}{intensive units where the global value should not be the sum, but instead lie between
+the regional values. Set to TRUE to get list of units pointing towards their variable being intensive.
+You can also use c(TRUE, "additionalunit").}
+
+\item{absDiff}{threshold for absolute difference between parent variable and summation}
+
+\item{relDiff}{threshold (in percent) for relative difference between parent variable and summation}
 }
 \description{
 Checks for a run if the regions for selected variables sum up as expected

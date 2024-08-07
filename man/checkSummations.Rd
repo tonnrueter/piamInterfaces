@@ -47,11 +47,9 @@ If NULL, result is returned.}
 
 \item{plotprefix}{added before filename}
 
-\item{absDiff}{threshold for absolute difference between parent variable and summation
-to be listed in human-readable summary}
+\item{absDiff}{threshold for absolute difference between parent variable and summation}
 
-\item{relDiff}{threshold (in percent) for relative difference between parent variable and summation
-to be listed in human-readable summary}
+\item{relDiff}{threshold (in percent) for relative difference between parent variable and summation}
 
 \item{roundDiff}{should the absolute and relative differences in human-readable summary and dataDumpFile
 be rounded? The returned object always contains unrounded values.}
