@@ -16,9 +16,7 @@
 #' @param remindVar REMIND/MAgPIE variable column name in 'template'
 #' @param plotprefix added before filename
 #' @param absDiff threshold for absolute difference between parent variable and summation
-#'                to be listed in human-readable summary
 #' @param relDiff threshold (in percent) for relative difference between parent variable and summation
-#'                to be listed in human-readable summary
 #' @param roundDiff should the absolute and relative differences in human-readable summary and dataDumpFile
 #'                  be rounded? The returned object always contains unrounded values.
 #' @param csvSeparator separator for dataDumpFile, defaults to semicolon
