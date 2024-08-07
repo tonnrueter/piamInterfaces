@@ -30,7 +30,15 @@
 checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions = NULL,
                                     variables = NULL, skipUnits = NULL, skipBunkers = NULL, intensiveUnits = TRUE,
                                     absDiff = 0.0001, relDiff = 0.1) {
-  years <- paste0(c("05", 2005, 2010, 2015, 2020))
+
+  # load data
+  data <- droplevels(quitte::as.quitte(mifFile, na.rm = TRUE))
+  if (! is.null(variables))  data <- droplevels(filter(data, .data$variable %in% variables))
+  if (is.null(parentRegion)) parentRegion <- intersect(c("World", "GLO"), levels(data$region))[[1]]
+  if (is.null(childRegions)) childRegions <- setdiff(levels(data$region), parentRegion)
+
+  # generate a set of units that are intensive units, that get aggregated not by sum but via (weighted) mean
+  years <- paste0(c("05", 2005, 2010, 2015, 2017, 2020))
   index <- c(paste0("Index ", years, "=100"), paste0("Index (", years, " = 1)"))
   unit <- c("", "%", "% of Total GDP", "% pa", "%/yr", "$/GJ", "1", "arbitrary unit", "arbitrary unit/yr",
             "billionDpktU", "billionDpTWyr", "cm/capita", "DM per live animal", "GE per GE",
@@ -46,38 +54,33 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
                "__/worker", "__/GJ", "__/kW", "__/kW/yr", "__/t CH4", "__/t CO2", "__/t N2O",
                "__/tCH4", "__/tCO2", "__/tCO2 yr", "__/tN2O", "__/__", "__/yr", "__/cap/yr")
   unit <- unique(c(index, unit, unlist(lapply(curr, function(x) gsub("__", x, usecurr)))))
+
+  # if intensiveUnits or skipUnits contain 'TRUE', add this list of intensive units to them
+  if (TRUE %in% intensiveUnits) {
+    intensiveUnits <- unique(c(setdiff(intensiveUnits, TRUE), unit))
+  }
+  intensiveUnits <- intersect(intensiveUnits, levels(data$unit))
   if (TRUE %in% skipUnits) {
     skipUnits <- c(setdiff(skipUnits, TRUE), unit)
   }
-  if (TRUE %in% intensiveUnits) {
-    intensiveUnits <- c(setdiff(intensiveUnits, TRUE), unit)
-  }
+  data <- droplevels(filter(data, ! .data$unit %in% skipUnits))
 
-  data <- droplevels(quitte::as.quitte(mifFile, na.rm = TRUE))
-  if (! is.null(variables))  data <- droplevels(filter(data, .data$variable %in% variables))
-
-  skipUnits <- intersect(skipUnits, levels(data$unit))
-  if (length(skipUnits) > 0) {
-    data <- droplevels(filter(data, ! .data$unit %in% skipUnits))
-    message(length(skipUnits), " units skipped.")
-  }
-  intensiveUnits <- intersect(intensiveUnits, levels(data$unit))
-
+  # if desired, skip bunker emissions where regional values are not thought to sum to global sums
   if (isTRUE(skipBunkers)) {
     gases <- c("BC", "CO", "CO2", "Kyoto Gases", "NOx", "OC", "Sulfur", "VOC")
     vars <- c("", "|Energy", "|Energy Demand|Transportation", "|Energy and Industrial Processes",
               "|Energy|Demand", "|Energy|Demand|Transportation", "|Transportation")
     gasvars <- expand.grid(gases, vars, stringsAsFactors = FALSE)
     bunkervars <- unique(sort(c("Gross Emissions|CO2", paste0("Emissions|", gasvars$Var1, gasvars$Var2))))
-    data <- filter(data, ! .data$variable %in% bunkervars)
+    data <- droplevels(filter(data, ! .data$variable %in% bunkervars))
   }
-  if (is.null(parentRegion)) parentRegion <- intersect(c("World", "GLO"), levels(data$region))[[1]]
-  if (is.null(childRegions)) childRegions <- setdiff(levels(data$region), parentRegion)
 
+  # select only parent region
   total <- filter(data, .data$region %in% parentRegion) %>%
     rename("total" = "value") %>%
     select(-"region")
 
+  # for non-intensive units, calculate the sum and check against total
   sumChilds <- filter(data, .data$region %in% childRegions, ! .data$unit %in% intensiveUnits) %>%
     group_by(.data$model, .data$scenario, .data$variable, .data$period, .data$unit) %>%
     summarise(checkSum = sum(.data$value), .groups = "drop") %>%
@@ -98,6 +101,7 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
             paste(head(sumCheckVars, 10), collapse = ", "), if (length(sumCheckVars) > 10) " ...")
   }
 
+  # for intensive units, calculate regional min and max and check against total
   minMaxCheck <- filter(data, .data$region %in% childRegions, .data$unit %in% intensiveUnits) %>%
     group_by(.data$model, .data$scenario, .data$variable, .data$period, .data$unit) %>%
     summarise(max = max(.data$value), min = min(.data$value), .groups = "drop") %>%
@@ -112,5 +116,6 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
             paste(head(minMaxVars, 10), collapse = ", "), if (length(minMaxVars) > 10) " ...")
   }
 
+  # bind and return everything
   return(droplevels(bind_rows(sumCheck, minMaxCheck)))
 }
