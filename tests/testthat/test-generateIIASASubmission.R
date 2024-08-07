@@ -29,6 +29,13 @@ for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS"
   })
 }
 
+test_that("Community template works", {
+  templateurl <- "https://files.ece.iiasa.ac.at/common-definitions/common-definitions-template.xlsx"
+  expect_no_warning(d <- generateIIASASubmission(quitte::quitte_example_data, mapping = "NAVIGATE",
+                                                 outputDirectory = NULL, iiasatemplate = templateurl))
+  expect_true(nrow(d) > 0)
+})
+
 test_that("Correct Prices are selected and plusses ignored", {
   qe <- qeAR6
   vars <- c("Price|Secondary Energy|++|Electricity|Rawdata",

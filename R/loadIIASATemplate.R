@@ -18,6 +18,11 @@
 #' }
 #' @export
 loadIIASATemplate <- function(iiasatemplate) {
+  if (grepl("^https:\\/\\/files\\.ece\\.iiasa\\.ac\\.at\\/.*\\.xlsx$", iiasatemplate)) {
+    tmpfile <- file.path(tempdir(), basename(iiasatemplate))
+    utils::download.file(iiasatemplate, tmpfile, mode = "wb")
+    iiasatemplate <- tmpfile
+  }
   if (! file.exists(iiasatemplate)) {
     stop("# iiasatemplate ", iiasatemplate, " does not exist, unable to load it.")
   }
