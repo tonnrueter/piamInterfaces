@@ -228,6 +228,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     regiEU21 <- c("DEU", "ECE", "ECS", "ENC", "ESC", "ESW", "EWN", "FRA", "UKI", "NEN", "NES")
     if (all(regiEU21 %in% levels(mifdata$region))) {
       dropRegi <- c(dropRegi, "EUR", "NEU", "EU27")
+      warning("Because of dropRegi='auto', dropping 'EUR', 'NEU' and 'EU27' region.")
     }
     dropRegi <- unique(setdiff(dropRegi, "auto"))
   }
