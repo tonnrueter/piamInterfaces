@@ -231,6 +231,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     }
     dropRegi <- unique(setdiff(dropRegi, "auto"))
   }
+  if (length(dropRegi) > 0) message("# Dropping those regions: ", paste(dropRegi, collapse = ", "))
   return(droplevels(filter(mifdata, ! .data$region %in% dropRegi)))
 }
 

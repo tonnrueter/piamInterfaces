@@ -13,6 +13,6 @@ test_that(".dropRegi works", {
   expect_identical(mifdata, .dropRegi(mifdata, "nonexistent"))
   mifdataNoENC <- droplevels(filter(mifdata, ! .data$region %in% "ENC"))
   expect_identical(mifdataNoENC, .dropRegi(mifdataNoENC, "auto"))
-  removedAggregates <- .dropRegi(mifdata, "auto")
+  expect_message(removedAggregates <- .dropRegi(mifdata, "auto"), "Dropping those regions")
   expect_setequal(levels(removedAggregates$region), setdiff(levels(mifdata$region), c("EUR", "NEU")))
 })
