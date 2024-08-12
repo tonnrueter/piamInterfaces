@@ -85,7 +85,7 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
         message("\n# Child variables", if (m %in% names(summationsNames())) " not in summation group")
         for (ch in allexportchilds) {
           piamchilds <- mappingData[, "piam_variable"][mappingData$variable %in% ch]
-          message("  . ", str_pad(ch, width + 1, "right"), "     . ", sumNamesWithFactors(mappingData, ch))
+          message("  . ", str_pad(ch, width + 1, "right"), "   = ", sumNamesWithFactors(mappingData, ch))
           allpiamchilds <- setdiff(allpiamchilds, piamchilds)
         }
         for (ch in allpiamchilds) {

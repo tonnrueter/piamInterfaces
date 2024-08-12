@@ -11,5 +11,7 @@ sumNamesWithFactors <- function(mappingData, exportname) {
   remindfactors[is.na(remindfactors) | remindfactors %in% c("", 1, "1")] <- "+"
   remindfactors[remindfactors %in% c(-1, "-1")] <- "-"
   remindfactors[remindfactors > 0] <- paste("+", remindfactors[remindfactors > 0])
-  return(paste(remindfactors, remindnames, collapse = " "))
+  thesum <- paste(remindfactors, remindnames, collapse = " ")
+  thesum <- sub("^\\+ NA$", "NA", thesum)
+  return(thesum)
 }
