@@ -965,30 +965,30 @@ CAPS.LSP;%;Factor requirement shares|Livestock products|Capital requirement shar
 ENH3.AGR;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;1;NULL;;M
 ENH3.TOT;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;1;NULL;;M
 FSEC_abs.TOT;million;Nutrition|Anthropometrics|People underweight;million people;1;NULL;;M
-XPRP.CRP;Index 2020=100;Prices|Producer Price Index|Crop products;Index 2020=100;1;NULL;;M
-XPRP.RIC;Index 2020=100;Prices|Producer Price Index|Rice;Index 2020=100;1;NULL;;M
-XPRP.WHT;Index 2020=100;Prices|Producer Price Index|Temperate cereals;Index 2020=100;1;NULL;;M
-XPRP.CGR;Index 2020=100;Prices|Producer Price Index|Tropical cereals;Index 2020=100;1;Production|Crops|Cereals|+|Tropical cereals;;M
-XPRP.CGR;Index 2020=100;Prices|Producer Price Index|Maize;Index 2020=100;1;Production|Crops|Cereals|+|Maize;;M
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Soybean;Index 2020=100;1;Production|Crops|Oil crops|+|Soybean;;M
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Groundnuts;Index 2020=100;1;Production|Crops|Oil crops|+|Groundnuts;;M
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Other oil crops incl rapeseed;Index 2020=100;1;Production|Crops|Oil crops|+|Other oil crops incl rapeseed;;M
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Oilpalms;Index 2020=100;1;Production|Crops|Oil crops|+|Oilpalms;;M
-XPRP.OSD;Index 2020=100;Prices|Producer Price Index|Sunflower;Index 2020=100;1;Production|Crops|Oil crops|+|Sunflower;;M
-XPRP.SGC;Index 2020=100;Prices|Producer Price Index|Sugar cane;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar cane;;M
-XPRP.SGC;Index 2020=100;Prices|Producer Price Index|Sugar beet;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar beet;;M
-XPRP.VFN;Index 2020=100;Prices|Producer Price Index|Fruits Vegetables Nuts;Index 2020=100;1;NULL;;M
-XPRP.PFB;Index 2020=100;Prices|Producer Price Index|Cotton seed;Index 2020=100;1;NULL;;M
-XPRP.ECP;Index 2020=100;Prices|Producer Price Index|Short rotation grasses;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation grasses;;M
-XPRP.ECP;Index 2020=100;Prices|Producer Price Index|Short rotation trees;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation trees;;M
-XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Pulses;Index 2020=100;1;Production|Crops|Other crops|+|Pulses;;M
-XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Potatoes;Index 2020=100;1;Production|Crops|Other crops|+|Potatoes;;M
-XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Tropical roots;Index 2020=100;1;Production|Crops|Other crops|+|Tropical roots;;M
-XPRP.RUM;Index 2020=100;Prices|Producer Price Index|Ruminant meat;Index 2020=100;1;NULL;;M
-XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Monogastric meat;Index 2020=100;1;Production|Livestock products|+|Monogastric meat;;M
-XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Poultry meat;Index 2020=100;1;Production|Livestock products|+|Poultry meat;;M
-XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Eggs;Index 2020=100;1;Production|Livestock products|+|Eggs;;M
-XPRP.DRY;Index 2020=100;Prices|Producer Price Index|Dairy;Index 2020=100;1;Production|Livestock products|+|Dairy;;M
-XPRP.LSP;Index 2020=100;Prices|Producer Price Index|Livestock products;Index 2020=100;1;NULL;;M
-XPRP.FSH;Index 2020=100;Prices|Producer Price Index|Fish;Index 2020=100;1;NULL;;M
-XPRP.AGR;Index 2020=100;Prices|Producer Price Index|All products;Index 2020=100;1;NULL;;M
+XPRP.CRP;Index 2020=100;Prices|Index2020|Agriculture|Producer|Crop products;Index 2020=100;1;NULL;;M
+XPRP.RIC;Index 2020=100;Prices|Index2020|Agriculture|Producer|Rice;Index 2020=100;1;NULL;;M
+XPRP.WHT;Index 2020=100;Prices|Index2020|Agriculture|Producer|Temperate cereals;Index 2020=100;1;NULL;;M
+XPRP.CGR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Tropical cereals;Index 2020=100;1;Production|Crops|Cereals|+|Tropical cereals;;M
+XPRP.CGR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Maize;Index 2020=100;1;Production|Crops|Cereals|+|Maize;;M
+XPRP.OSD;Index 2020=100;Prices|Index2020|Agriculture|Producer|Soybean;Index 2020=100;1;Production|Crops|Oil crops|+|Soybean;;M
+XPRP.OSD;Index 2020=100;Prices|Index2020|Agriculture|Producer|Groundnuts;Index 2020=100;1;Production|Crops|Oil crops|+|Groundnuts;;M
+XPRP.OSD;Index 2020=100;Prices|Index2020|Agriculture|Producer|Other oil crops incl rapeseed;Index 2020=100;1;Production|Crops|Oil crops|+|Other oil crops incl rapeseed;;M
+XPRP.OSD;Index 2020=100;Prices|Index2020|Agriculture|Producer|Oilpalms;Index 2020=100;1;Production|Crops|Oil crops|+|Oilpalms;;M
+XPRP.OSD;Index 2020=100;Prices|Index2020|Agriculture|Producer|Sunflower;Index 2020=100;1;Production|Crops|Oil crops|+|Sunflower;;M
+XPRP.SGC;Index 2020=100;Prices|Index2020|Agriculture|Producer|Sugar cane;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar cane;;M
+XPRP.SGC;Index 2020=100;Prices|Index2020|Agriculture|Producer|Sugar beet;Index 2020=100;1;Production|Crops|Sugar crops|+|Sugar beet;;M
+XPRP.VFN;Index 2020=100;Prices|Index2020|Agriculture|Producer|Fruits Vegetables Nuts;Index 2020=100;1;NULL;;M
+XPRP.PFB;Index 2020=100;Prices|Index2020|Agriculture|Producer|Cotton seed;Index 2020=100;1;NULL;;M
+XPRP.ECP;Index 2020=100;Prices|Index2020|Agriculture|Producer|Short rotation grasses;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation grasses;;M
+XPRP.ECP;Index 2020=100;Prices|Index2020|Agriculture|Producer|Short rotation trees;Index 2020=100;1;Production|Bioenergy crops|+|Short rotation trees;;M
+XPRP.OCR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Pulses;Index 2020=100;1;Production|Crops|Other crops|+|Pulses;;M
+XPRP.OCR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Potatoes;Index 2020=100;1;Production|Crops|Other crops|+|Potatoes;;M
+XPRP.OCR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Tropical roots;Index 2020=100;1;Production|Crops|Other crops|+|Tropical roots;;M
+XPRP.RUM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Ruminant meat;Index 2020=100;1;NULL;;M
+XPRP.NRM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Monogastric meat;Index 2020=100;1;Production|Livestock products|+|Monogastric meat;;M
+XPRP.NRM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Poultry meat;Index 2020=100;1;Production|Livestock products|+|Poultry meat;;M
+XPRP.NRM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Eggs;Index 2020=100;1;Production|Livestock products|+|Eggs;;M
+XPRP.DRY;Index 2020=100;Prices|Index2020|Agriculture|Producer|Dairy;Index 2020=100;1;Production|Livestock products|+|Dairy;;M
+XPRP.LSP;Index 2020=100;Prices|Index2020|Agriculture|Producer|Livestock products;Index 2020=100;1;NULL;;M
+XPRP.FSH;Index 2020=100;Prices|Index2020|Agriculture|Producer|Fish;Index 2020=100;1;NULL;;M
+XPRP.AGR;Index 2020=100;Prices|Index2020|Agriculture|Producer|All products;Index 2020=100;1;NULL;;M
