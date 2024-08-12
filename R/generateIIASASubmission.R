@@ -54,6 +54,7 @@
 #' @param naAction a function which indicates what should happen when the data contain NA values.
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
+#' @importFrom gms chooseFromList
 #' @importFrom stringr str_trim
 #' @examples
 #' \dontrun{
@@ -83,7 +84,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     naAction = "na.omit") {
 
   # process input parameters ----
-
+  if (is.null(mapping)) mapping <- chooseFromList(names(mappingNames()), type = "mappings", addAllPattern = FALSE)
   if (! is.null(mappingFile)) {
     warning("mappingFile is deprecated and ignored. If you got here via output.R -> export -> xlsx_IIASA,
             please pick a newer xlsx_IIASA.R file from remindmodel/develop")
