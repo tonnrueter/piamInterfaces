@@ -28,14 +28,14 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("Mt CO2-equiv/yr", "Mt CO2eq/yr", "Mt CO2e/yr", "Mt CO2/yr"),
     c("Mt Nr/yr", "Tg N/yr"),
     c("Mt NO2/yr", "Mt NOX/yr"),
+    c("Nr/Nr", "Nr per Nr"),
     c("Percentage", "Percent", "percent", "%"),
     c("unitless", "", "-", "1", "index"),
     c("tDM/cap/yr", "tDM/capita/yr"),
     c("W/m2", "W/m^2"),
     c("USD05", "USD2005", "US$05", "US$2005", "USD2005", "USD_2005"),
     c("USD10", "USD2010", "US$10", "US$2010", "USD2010", "USD_2010"),
-    c("USD_2010/t CO2", "US_2010/t CO2", "US$2010/t CO2"),
-    c("billion USD_2010/yr", "billion US_2010/yr", "billion US$2010/yr"),
+    c("USD05/tCO2", "US$2005/tCO2"),
     # below, exceptionally added units that actually differ for backwards compatibility
     # for 'Energy Service|Residential and Commercial|Floor Space'
     c("bn m2/yr", "billion m2/yr", "bn m2", "billion m2"),
@@ -43,13 +43,15 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("t DM/ha", "t DM/ha/yr", "dm t/ha"),
     # for 'Water|Environmental flow violation volume'
     c("km3/yr", "km3"),
-    # AgMIP
-    c("USD05/tCO2", "US$2005/tCO2"),
-    c("Nr/Nr", "Nr per Nr"),
   NULL)
   areIdentical <- function(x, y) {
-    # literally identical or both found in the same list element above
-    isTRUE(x == y) || any(unlist(lapply(identicalUnits, function(units) all(c(x, y) %in% units))))
+    # literally identical
+    isTRUE(x == y) ||
+    # both found in the same list element above
+    any(unlist(lapply(identicalUnits, function(units) all(c(x, y) %in% units)))) ||
+    # variations of US$ and EUR spellings, otherwise identical
+    isTRUE(sub("US\\$|USD_|USD|US_", "US", x) == sub("US\\$|USD_|USD|US_", "US", y)) ||
+    isTRUE(sub("EUR_", "EUR", x) == sub("EUR_", "EUR", y))
   }
   return(unname(unlist(Map(Vectorize(areIdentical), vec1, vec2))))
 }

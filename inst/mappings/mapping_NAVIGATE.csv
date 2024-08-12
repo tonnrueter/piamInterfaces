@@ -905,7 +905,6 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 840;2;energy (final);Final Energy|Transportation|Liquids|Electricity;EJ/yr;FE|Transport|w/o Bunkers|Liquids|Hydrogen;EJ/yr;;;;final energy consumption by the transportation sector of synthetic liquid efuels;R
 841;2;energy (final);Final Energy|Transportation|Gases|Biomass;EJ/yr;;;;;;final energy consumption by the transportation sector of biogas;
 842;2;energy (final);Final Energy|Transportation|Gases|Fossil;EJ/yr;;;;;;final energy consumption by the transportation sector of synthetic or derived gases of fossil origin;
-842;2;energy (final);Final Energy|Transportation|Gases|Fossil;EJ/yr;;;;;;final energy consumption by the transportation sector of synthetic or derived gases of fossil origin;
 843;2;energy (final);Final Energy|Transportation|Gases|Electricity;EJ/yr;;;;;;final energy consumption by the transportation sector of e-fuel gas (power-to-gas);
 844;2;energy (final);Final Energy|Transportation|Hydrogen|Biomass;EJ/yr;;;;;;final energy consumption by the transportation sector of hydrogen from biomass;
 845;2;energy (final);Final Energy|Transportation|Hydrogen|Fossil;EJ/yr;;;;;;final energy consumption by the transportation sector of synthetic or derived Hydrogen of fossil origin;

@@ -25,9 +25,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 12;Yield|Sugarcrops;t DM/ha/yr;Productivity|Yield|Crops|+|Sugar crops;t DM/ha;;M;;;aggregated yield of Sugarcrops (e.g. sugarbeet,sugarcane)
 13;Carbon Sequestration|CCS;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 14;Carbon Sequestration|CCS|Biomass;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
-;Carbon Sequestration|CCS|Biomass;Mt CO2/yr;;;;;;;
 15;Carbon Sequestration|CCS|Biomass|Energy;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
-;Carbon Sequestration|CCS|Biomass|Energy;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 16;Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use in industry (IPCC category 1A2) and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 17;Carbon Sequestration|CCS|Biomass|Energy|Supply;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 18;Carbon Sequestration|CCS|Biomass|Energy|Supply|Electricity;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use in electricity production (part of IPCC category 1A1a) and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
@@ -37,10 +35,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 22;Carbon Sequestration|CCS|Biomass|Energy|Supply|Other;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use in other energy supply (part of IPCC category 1A) and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 23;Carbon Sequestration|CCS|Biomass|Industrial Processes;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from industrial processes from biomass (e.g.,cement production,but not from fossil fuel burning) use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 24;Carbon Sequestration|CCS|Fossil;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from fossil fuel use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
-;Carbon Sequestration|CCS|Fossil;Mt CO2/yr;;;;;;;
 25;Carbon Sequestration|CCS|Fossil|Energy;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from fossil fuel use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 26;Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from fossil fuel use in industry (IPCC category 1A2) and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
-;Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry;Mt CO2/yr;;;;;;;
 27;Carbon Sequestration|CCS|Fossil|Energy|Supply;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from fossil fuel use in energy supply (IPCC category 1A) and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 28;Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from fossil fuel use in electricity production (part of IPCC category 1A1a) and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 29;Carbon Sequestration|CCS|Fossil|Energy|Supply|Gases;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from fossil fuel use in gaseous fuel production,excl. hydrogen (part of IPCC category 1A) and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
@@ -298,8 +294,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 257;Emissions|CO2|AFOLU|Land;Mt CO2/yr;Emissions|CO2|Land|+|Land-use Change;Mt CO2/yr;;M;;;CO2|AFOL emissions from forestry and other land use
 ;Emissions|CO2|AFOLU|Wetlands|Peatlands;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|+|Peatland;Mt CO2/yr;;M;;;
 258;Emissions|CO2|Energy;Mt CO2/yr;;;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B)
-;Emissions|CO2|Energy;Mt CO2/yr;;;;;;;
-;Emissions|CO2|Energy;Mt CO2/yr;;;-1;;;;
 259;Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;;;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B) and from industrial processes (IPCC categories 2A,B,C,E)
 260;Emissions|CO2|Energy|Demand;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion in industry (IPCC category 1A2),residential,commercial,institutional sectors and agriculture,forestry,fishing (AFOFI) (IPCC category 1A4a,1A4b,1A4c),and transportation sector (IPCC category 1A3),excluding pipeline emissions (IPCC category 1A3ei)
 261;Emissions|CO2|Energy|Demand|AFOFI;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion in agriculture,forestry,fishing (AFOFI) (IPCC category 1A4c)
@@ -358,14 +352,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 316;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|Bus;Mt CO2/yr;;;;;;;carbon dioxide emissions from road transport passenger Buses
 317;Emissions|CO2|Energy|Demand|Transportation|Road|Passenger|LDV;Mt CO2/yr;;;;;;;carbon dioxide emissions from road transport passenger LDVs
 318;Emissions|CO2|Energy|Supply;Mt CO2/yr;;;;;;!!! warning - the sum only works with Emi|CO2|Fossil Fuels and Industry|Energy Supply, Indirect is not identical to Supply;CO2 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a),other energy conversion (e.g. refineries,synfuel production,solid fuel processing,IPCC category 1Ab,1Ac),incl. pipeline transportation (IPCC category 1A3ei),fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C)
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;;;;;;;
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;;;-1;;;;
 319;Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;;;;;;;CO2 emissions from electricity and CHP production and distribution (IPCC category 1A1ai and 1A1aii)
 320;Emissions|CO2|Energy|Supply|Gases;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion and fugitive emissions from fuels: gaseous fuel extraction and processing (e.g. natural gas extraction production,IPCC category 1B2b,parts of 1A1cii)
 321;Emissions|CO2|Energy|Supply|Heat;Mt CO2/yr;;;;;;;CO2 emissions from heat production and distribution (IPCC category 1A1aiii)
 322;Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion and fugitive emissions from fuels: liquid fuel extraction and processing (e.g. oil production,refineries,synfuel production,IPCC category 1A1b,parts of 1A1cii,1B2a)
-;Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;;;;;;;
-;Emissions|CO2|Energy|Supply|Liquids;Mt CO2/yr;;;-1;;;;
 323;Emissions|CO2|Energy|Supply|Other Sector;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion in other energy supply sectors (please provide a definition of other sources in this category in the 'comments' tab)
 324;Emissions|CO2|Energy|Supply|Solids;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion and fugitive emissions from fuels: solid fuel extraction and processing (IPCC category 1A1ci,parts of 1A1cii,1B1)
 325;Emissions|CO2|Industrial Processes;Mt CO2/yr;;;;;;;CO2 emissions from industrial processes (IPCC categories 2A,B,C,E)
@@ -381,7 +371,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 335;Emissions|CO2|Industrial Processes|Pulp and Paper;Mt CO2/yr;;;;;;;CO2 emissions from industrial processes (excl. fuel combustion IPCC 1A2) in the pulp and paper sector  (IPCC categories 2A,B,C,E)
 336;Emissions|CO2|Industrial Processes|Steel;Mt CO2/yr;;;;;;;CO2 emissions from industrial processes (excl. fuel combustion IPCC 1A2) in the steel sector  (IPCC categories 2A,B,C,E)
 337;Emissions|CO2|Other;Mt CO2/yr;;;;;;;CO2 emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab)
-;Emissions|CO2|Other;Mt CO2/yr;;;;;;;CO2 emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab)
 338;Emissions|CO2|Waste;Mt CO2/yr;;;;;;;
 339;Emissions|CO|AFOLU;Mt CO/yr;;;;;;;Land Use based carbon monoxide emissions
 340;Emissions|CO|AFOLU|Agriculture;Mt CO/yr;;;;;;;CO|AFOLU|Agric emissions from agriculture
@@ -747,7 +736,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 ;Energy Service|Residential and Commercial|Residential|Construction rate;%/yr;;;;;;;
 ;Energy Service|Residential and Commercial|Residential|Renovation rate;%/yr;;;;;;;
 687;Energy Service|Transportation|Aviation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation
-687;Energy Service|Transportation|Aviation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation
 688;Energy Service|Transportation|Freight;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation
 689;Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in aviation
 690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in international shipping
@@ -758,13 +746,11 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 695;Energy Service|Transportation|Navigation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Navigation
 696;Energy Service|Transportation|Passenger;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation
 697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation in aviation
-697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation in aviation
 698;Energy Service|Transportation|Passenger|Bicycling and Walking;bn pkm/yr;;;;;;;energy service demand for passenger transport on bicycles and by foot
 699;Energy Service|Transportation|Passenger|Navigation;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation in navigation
 700;Energy Service|Transportation|Passenger|Other;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation (other)
 701;Energy Service|Transportation|Passenger|Railways;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation in railways
 702;Energy Service|Transportation|Passenger|Road;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation on roads
-;Energy Service|Transportation|Passenger|Road;bn pkm/yr;;;;;;;
 703;Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;;;;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles)
 704;Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;;;;;;;energy service demand for passenger transport on roads (buses)
 705;Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;;;;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans)
@@ -1067,13 +1053,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 995;Final Energy|Transportation|Aviation;EJ/yr;;;;;;;Final energy consumed in the transport sector by aviation mode
 996;Final Energy|Transportation|Aviation|Freight;EJ/yr;;;;;;;Final energy consumed in the transport sector by freight aviation mode
 997;Final Energy|Transportation|Aviation|Passenger;EJ/yr;;;;;;;Final energy consumed in the transport sector by passenger aviation mode
-997;Final Energy|Transportation|Aviation|Passenger;EJ/yr;;;;;;;Final energy consumed in the transport sector by passenger aviation mode
 998;Final Energy|Transportation|Electricity;EJ/yr;;;;;;;final energy consumption by the transportation sector of electricity (including on-site solar PV),excluding transmission/distribution losses
-999;Final Energy|Transportation|Freight;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for freight transportation
-999;Final Energy|Transportation|Freight;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for freight transportation
-999;Final Energy|Transportation|Freight;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for freight transportation
-999;Final Energy|Transportation|Freight;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for freight transportation
-999;Final Energy|Transportation|Freight;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for freight transportation
 999;Final Energy|Transportation|Freight;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for freight transportation
 1000;Final Energy|Transportation|Freight|Electricity;EJ/yr;;;;;;;final energy consumption by the freight transportation sector of electricity (including on-site solar PV),excluding transmission/distribution losses
 1001;Final Energy|Transportation|Freight|Gases;EJ/yr;;;;;;;final energy consumption by the freight transportation sector of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses
@@ -1081,8 +1061,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1003;Final Energy|Transportation|Freight|Gases|Fossil;EJ/yr;;;;;;;Final fossil-based gas energy consumed in the transportation sector by freight transport
 1004;Final Energy|Transportation|Freight|Hydrogen;EJ/yr;;;;;;;final energy consumption by the freight transportation sector of hydrogen
 1005;Final Energy|Transportation|Freight|Liquids;EJ/yr;;;;;we have to sum the sub-categories except Liquids|Hydrogen explicitly, since the latter goes to Other;;final energy consumption by the freight transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids)
-;Final Energy|Transportation|Freight|Liquids;EJ/yr;;;;;we have to sum the sub-categories except Liquids|Hydrogen explicitly, since the latter goes to Other;;final energy consumption by the freight transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids)
-;Final Energy|Transportation|Freight|Liquids;EJ/yr;;;;;we have to sum the sub-categories except Liquids|Hydrogen explicitly, since the latter goes to Other;;final energy consumption by the freight transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids)
 1006;Final Energy|Transportation|Freight|Liquids|Bioenergy;EJ/yr;;;;;;;Final biofuels based (liquid or gas) energy consumed in the transport sector by freight vehicles
 1008;Final Energy|Transportation|Freight|Liquids|Fossil synfuel;EJ/yr;;;;;;;Final energy,in the form of fossil synfuel (e.g. CTL,GTL,Methanol,and DME),consumed in the transport sector by freight vehicles
 1009;Final Energy|Transportation|Freight|Liquids|Oil;EJ/yr;;;;;;;final energy consumption by the freight transportation sector of liquid oil products (from conventional & unconventional oil)
@@ -1090,10 +1068,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1011;Final Energy|Transportation|Gases;EJ/yr;;;;;;;final energy consumption by the transportation sector of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses
 1012;Final Energy|Transportation|Gases|Bioenergy;EJ/yr;;;;;;;Final bioenergy-based gas energy consumed in the transportation sector.
 1013;Final Energy|Transportation|Gases|Fossil;EJ/yr;;;;;;Includes synthetic gases;Final fossil-based gas energy consumed in the transportation sector.
-;Final Energy|Transportation|Gases|Fossil;EJ/yr;;;;;;;
 1014;Final Energy|Transportation|Hydrogen;EJ/yr;;;;;;;final energy consumption by the transportation sector of hydrogen
-1015;Final Energy|Transportation|Liquids;EJ/yr;;;;;we have to sum the sub-categories except Liquids|Hydrogen explicitly, since the latter goes to Other;;final energy consumption by the transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids)
-1015;Final Energy|Transportation|Liquids;EJ/yr;;;;;we have to sum the sub-categories except Liquids|Hydrogen explicitly, since the latter goes to Other;;final energy consumption by the transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids)
 1015;Final Energy|Transportation|Liquids;EJ/yr;;;;;we have to sum the sub-categories except Liquids|Hydrogen explicitly, since the latter goes to Other;;final energy consumption by the transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids)
 1016;Final Energy|Transportation|Liquids|Bioenergy;EJ/yr;;;;;;;Final biofuels based (liquid or gas) energy consumed in the transport sector by passenger and freight vehicles
 1018;Final Energy|Transportation|Liquids|Coal;EJ/yr;;;;;;;final energy consumption by the transportation sector of coal based liquids (coal-to-liquids)
@@ -1101,16 +1076,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1020;Final Energy|Transportation|Liquids|Natural Gas;EJ/yr;;;;;;;final energy consumption by the transportation sector of natural gas based liquids (gas-to-liquids)
 1021;Final Energy|Transportation|Liquids|Oil;EJ/yr;;;;;;;final energy consumption by the transportation sector of liquid oil products (from conventional & unconventional oil)
 1022;Final Energy|Transportation|Maritime;EJ/yr;;;;;;;Final energy consumed in the transport sector by maritime mode
-1022;Final Energy|Transportation|Maritime;EJ/yr;;;;;;;Final energy consumed in the transport sector by maritime mode
 ;Final Energy|Transportation|Maritime|Freight;EJ/yr;;;;;;;Final energy consumed in the transport sector by maritime freight mode
 ;Final Energy|Transportation|Maritime|Passenger;EJ/yr;;;;;;;Final energy consumed in the transport sector by maritime passenger mode
 1023;Final Energy|Transportation|Other;EJ/yr;;;;;;“Green” synthetic fuels from hydrogen made from electrolysis + “blue” synfuels from fossil H2;final energy consumption by the transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab)
-1024;Final Energy|Transportation|Passenger;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for passenger transportation
-1024;Final Energy|Transportation|Passenger;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for passenger transportation
-1024;Final Energy|Transportation|Passenger;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for passenger transportation
-1024;Final Energy|Transportation|Passenger;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for passenger transportation
-1024;Final Energy|Transportation|Passenger;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for passenger transportation
-1024;Final Energy|Transportation|Passenger;EJ/yr;;;;;we sum the sub-categories explicitly, since there was a bug in the totals variable in REMIND;;final energy consumed for passenger transportation
+1024;Final Energy|Transportation|Passenger;EJ/yr;;;;;;;final energy consumed for passenger transportation
 1025;Final Energy|Transportation|Passenger|Electricity;EJ/yr;;;;;;;final energy consumption by the passenger transportation sector of electricity (including on-site solar PV),excluding transmission/distribution losses
 1026;Final Energy|Transportation|Passenger|Gases;EJ/yr;;;;;;;final energy consumption by the passenger transportation sector of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses
 1027;Final Energy|Transportation|Passenger|Gases|Bioenergy;EJ/yr;;;;;;;Final bioenergy-based gas energy consumed in the transportation sector by passenger transport
@@ -1239,7 +1208,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1148;Secondary Energy|Electricity|Wind|Offshore;EJ/yr;;;;;;;net electricity production from offshore wind energy
 1149;Secondary Energy|Electricity|Wind|Onshore;EJ/yr;;;;;;;net electricity production from onshore wind energy
 1150;Secondary Energy|Gases;EJ/yr;;;;;;;total production of gaseous fuels,including natural gas
-;Secondary Energy|Gases;EJ/yr;;;;;;;
 1151;Secondary Energy|Gases|Biomass;EJ/yr;;;;;;;total production of biogas
 1152;Secondary Energy|Gases|Coal;EJ/yr;;;;;;;total production of coal gas from coal gasification
 1153;Secondary Energy|Gases|Natural Gas;EJ/yr;;;;;;;total production of natural gas
@@ -1293,7 +1261,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1201;Secondary Energy|Other Carrier;EJ/yr;;;;;;;generation of other secondary energy carriers that do not fit any other category (please provide a definition of other energy carrier in this category in the 'comments' tab)
 1202;Secondary Energy|Solids;EJ/yr;;;;;;;solid secondary energy carriers (e.g.,briquettes,coke,wood chips,wood pellets)
 1203;Secondary Energy|Solids|Biomass;EJ/yr;;;;;;;solid secondary energy carriers produced from biomass (e.g.,commercial charcoal,wood chips,wood pellets). Tradional bioenergy use is excluded.
-;Secondary Energy|Solids|Biomass;EJ/yr;;;;;;;Tradional bioenergy use
 1204;Secondary Energy|Solids|Coal;EJ/yr;;;;;;;solid secondary energy carriers produced from coal (e.g.,briquettes,coke)
 1205;Trade|Primary Energy|Biomass|Volume;EJ/yr;;;;;;;net exports of solid,unprocessed biomass,at the global level these should add up to the trade losses only
 1206;Trade|Primary Energy|Coal|Volume;EJ/yr;;;;;;;net exports of coal,at the global level these should add up to the trade losses only
@@ -1402,7 +1369,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1296;Specific Energy Consumption|Production|Plastics;MJ/t;;;;;;;Specific energy consumption of Plastics
 1297;Specific Energy Consumption|Production|Pulp and Paper;MJ/t;;;;;;;Specific energy consumption of Pulp and Paper
 1298;Specific Energy Consumption|Production|Steel;MJ/t;;;;;;;Specific energy consumption of Steel
-;Specific Energy Consumption|Production|Steel;MJ/t;;;;;;;
 1299;Expenditure|RnD;billion US$2010/yr;;;;;;;expenditure on research and development
 1300;Investment|Infrastructure;billion US$2010/yr;;;;;;;investment into infrastrucutre
 1301;Population|Mobile Network Access;million;;;;;;;population covered by a mobile network
@@ -1464,8 +1430,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1357;Investment|Energy Supply|Liquids|Coal and Gas;billion US$2010/yr;;;;;;;investments for the production of fossil-based synfuels (coal and gas). For plants equipped with CCS,the investment in the capturing equipment should be included but not the one on transport and storage.
 1358;Investment|Energy Supply|Liquids|Oil;billion US$2010/yr;;;;;;;investments for the production of fossil fuels from oil refineries For plants equipped with CCS,the investment in the capturing equipment should be included but not the one on transport and storage.
 1359;Investment|Energy Supply|Other;billion US$2010/yr;;;;;;;investments in other types of energy conversion facilities
-;Investment|Energy Supply|Other;billion US$2010/yr;;;;;;;
-;Investment|Energy Supply|Other;billion US$2010/yr;;;;;;;
 1360;Investment|Infrastructure|Residential and Commercial|Building Retrofits;billion US$2010/yr;;;;;;;investment into residential and commercial buildings infrastructure (all types of existing buildings that have been retrofitted to become more energy efficient)
 1361;Investment|Infrastructure|Residential and Commercial|High-Efficiency Buildings;billion US$2010/yr;;;;;;;investment into residential and commercial buildings infrastructure (all types of new buildings that are relatively high in their energy efficiency)
 1362;Investment|Infrastructure|Residential and Commercial|Low-Efficiency Buildings;billion US$2010/yr;;;;;;;investment into residential and commercial buildings infrastructure (all types of new buildings that are relatively low in their energy efficiency)
@@ -1685,7 +1649,6 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1548;OM Cost|Fixed|Electricity|Solar|CSP;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new concentrated solar power plant. If more than one CSP technology is modelled (e.g.,parabolic trough,solar power tower),modellers should report fixed O&M costs  for each represented CSP technology by adding variables OM Cost|Fixed|Electricity|Solar|CSP|2,... Capital|Cost|Electricity|Solar|CSP|N (with N = number of represented CSP technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).
 1549;OM Cost|Fixed|Electricity|Solar|PV;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new solar PV units. If more than one PV technology is modelled (e.g.,centralized PV plant,distributed (rooftop) PV,crystalline SI PV,thin-film PV),modellers should report fixed O&M costs  for each represented PV technology by adding variables OM Cost|Fixed|Electricity|Solar|PV|2,... Capital|Cost|Electricity|Solar|PV|N (with N = number of represented PV technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).
 1550;OM Cost|Fixed|Electricity|Wind;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new wind power plants. This variable should only be filled,if wind power is not separated into onshore and offshore. If more than one wind power technology is modelled (e.g.,wind power units with different hub height and capacity),modellers should report fixed O&M costs  for each represented wind power technology by adding variables OM Cost|Fixed|Electricity|Wind|2,... Capital|Cost|Electricity|Wind|N (with N = number of represented wind power technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).
-;OM Cost|Fixed|Electricity|Wind;US$2010/kW/yr;;;;;;;
 1551;OM Cost|Fixed|Electricity|Wind|Offshore;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new offshore wind power plants. This variable should only be filled,if wind power is separated into onshore and offshore. If more than one offshore wind power technology is modelled (e.g.,wind power units with different hub height and capacity),modellers should report fixed O&M costs  for each represented wind power technology by adding variables OM Cost|Fixed|Electricity|Wind|Offshore|2,... Capital|Cost|Electricity|Wind|Offshore|N (with N = number of represented offshore wind power technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).
 1552;OM Cost|Fixed|Electricity|Wind|Onshore;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new onshore wind power plants. This variable should only be filled,if wind power is separated into onshore and offshore. If more than one onshore wind power technology is modelled (e.g.,wind power units with different hub height and capacity),modellers should report fixed O&M costs  for each represented wind power technology by adding variables OM Cost|Fixed|Electricity|Wind|Onshore|2,... Capital|Cost|Electricity|Wind|Onshore|N (with N = number of represented onshore wind power technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).
 1553;OM Cost|Fixed|Gases|Biomass|w/ CCS;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new biomass to gas plant with CCS. If more than one CCS biomass to gas technology is modelled,modellers should report fixed O&M costs  for each represented CCS biomass to  gas technology by adding variables OM Cost|Fixed|Gases|Biomass|w/ CCS|2,... OM Cost|Fixed|Gases|Biomass|w/ CCS|N (with N = number of represented technologies). (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).

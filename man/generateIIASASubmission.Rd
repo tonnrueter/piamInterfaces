@@ -10,6 +10,7 @@ generateIIASASubmission(
   model = NULL,
   removeFromScen = NULL,
   addToScen = NULL,
+  dropRegi = "auto",
   outputDirectory = "output",
   outputFilename = "submission.xlsx",
   logFile = if (is.null(outputFilename)) NULL else paste0(gsub("\\\\.[a-zA-Z]+$",
@@ -34,6 +35,9 @@ If NULL, the user is asked. Multiple mappings are concatenated.}
 \item{removeFromScen}{regular expression to be removed from scenario name (optional). Example: '_d50|d95'}
 
 \item{addToScen}{string to be added as prefix to scenario name (optional)}
+
+\item{dropRegi}{regions to be dropped from output. Default is "auto" which drops aggregate regions
+for REMIND EU21. Set to NULL for none. Set c("auto", "World") for dropping EU21 aggregate plus World}
 
 \item{outputDirectory}{path to directory for the generated submission (default: output).
 If NULL, no files are written and \code{logFile} and \code{outputFilename} have no effect.}

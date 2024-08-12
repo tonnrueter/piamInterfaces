@@ -15,6 +15,14 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(length(conflictsigns) == 0, label = paste0(mapping, " has no merge conflicts"))
 
+    # check for duplicated rows
+    duplicates <- select(mappingData, "variable", "piam_variable")
+    duplicates <- filter(duplicates, duplicated(duplicates))
+    if (nrow(duplicates) > 0) {
+      warning("Duplicated line in ", mapping, ":\n", paste0(duplicates$variable, ";", duplicates$piam_variable, collapse = "\n"))
+    }
+    expect_equal(nrow(duplicates), 0)
+
     # check for inconsistent variable + unit combinations
     nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable), ! .data$piam_variable == "TODO")
     allVarUnit <- paste0(nonempty$piam_variable, " (", nonempty$piam_unit, ")")

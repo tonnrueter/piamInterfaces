@@ -35,6 +35,8 @@
 #'        If NULL, the user is asked. Multiple mappings are concatenated.
 #' @param removeFromScen regular expression to be removed from scenario name (optional). Example: '_d50|d95'
 #' @param addToScen string to be added as prefix to scenario name (optional)
+#' @param dropRegi regions to be dropped from output. Default is "auto" which drops aggregate regions
+#'        for REMIND EU21. Set to NULL for none. Set c("auto", "World") for dropping EU21 aggregate plus World
 #' @param outputDirectory path to directory for the generated submission (default: output).
 #'        If NULL, no files are written and `logFile` and `outputFilename` have no effect.
 #' @param logFile path to the logfile with warnings as passed to generateMappingfile, checkIIASASubmission
@@ -52,6 +54,7 @@
 #' @param naAction a function which indicates what should happen when the data contain NA values.
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
+#' @importFrom gms chooseFromList
 #' @importFrom stringr str_trim
 #' @examples
 #' \dontrun{
@@ -68,6 +71,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     model = NULL,
                                     removeFromScen = NULL,
                                     addToScen = NULL,
+                                    dropRegi = "auto",
                                     outputDirectory = "output",
                                     outputFilename = "submission.xlsx",
                                     logFile = if (is.null(outputFilename)) NULL else
@@ -80,7 +84,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     naAction = "na.omit") {
 
   # process input parameters ----
-
+  if (is.null(mapping)) mapping <- chooseFromList(names(mappingNames()), type = "mappings", addAllPattern = FALSE)
   if (! is.null(mappingFile)) {
     warning("mappingFile is deprecated and ignored. If you got here via output.R -> export -> xlsx_IIASA,
             please pick a newer xlsx_IIASA.R file from remindmodel/develop")
@@ -136,7 +140,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
    warning("Your data contains no Price|*|Rawdata variables. If it is based on a remind2 version",
            " before 1.111.0 on 2023-05-26, please use piamInterfaces version 0.9.0 or earlier, see PR #128.")
   }
-
+  mifdata <- .dropRegi(mifdata, dropRegi)
   mifdata <- renameOldVariables(mifdata, mapData$piam_variable, logFile = logFile)
   mifdata <- checkFixUnits(mifdata, mapData, logFile = logFile, failOnUnitMismatch = FALSE)
   mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
@@ -218,6 +222,19 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
     }
     message("\n\n# Output file written: ", file.path(outputDirectory, outputFilename))
   }
+}
+
+.dropRegi <- function(mifdata, dropRegi) {
+  if ("auto" %in% dropRegi) {
+    regiEU21 <- c("DEU", "ECE", "ECS", "ENC", "ESC", "ESW", "EWN", "FRA", "UKI", "NEN", "NES")
+    if (all(regiEU21 %in% levels(mifdata$region))) {
+      dropRegi <- c(dropRegi, "EUR", "NEU", "EU27")
+      warning("Because of dropRegi='auto', dropping 'EUR', 'NEU' and 'EU27' region.")
+    }
+    dropRegi <- unique(setdiff(dropRegi, "auto"))
+  }
+  if (length(dropRegi) > 0) message("# Dropping those regions: ", paste(dropRegi, collapse = ", "))
+  return(droplevels(filter(mifdata, ! .data$region %in% dropRegi)))
 }
 
 .setModelAndScenario <- function(dt, modelname, scenRemove = NULL, scenAdd = NULL) {

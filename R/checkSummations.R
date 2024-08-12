@@ -12,13 +12,10 @@
 #' @param mainReg main region for the plot generation
 #' @param summationsFile in inst/summations folder that describes the required summation groups
 #'        if set to 'extractVariableGroups', tries to extract summations from variables with + notation
-#' @param template mapping to be loaded, used to print the remindVar corresponding to the data variables
-#' @param remindVar REMIND/MAgPIE variable column name in 'template'
+#' @param template mapping to be loaded, used to print the piam_variable corresponding to the data variables
 #' @param plotprefix added before filename
 #' @param absDiff threshold for absolute difference between parent variable and summation
-#'                to be listed in human-readable summary
 #' @param relDiff threshold (in percent) for relative difference between parent variable and summation
-#'                to be listed in human-readable summary
 #' @param roundDiff should the absolute and relative differences in human-readable summary and dataDumpFile
 #'                  be rounded? The returned object always contains unrounded values.
 #' @param csvSeparator separator for dataDumpFile, defaults to semicolon
@@ -36,7 +33,7 @@
 #' @export
 checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, summationsFile = NULL,
                             logFile = NULL, logAppend = FALSE, generatePlots = FALSE, mainReg = "World",
-                            dataDumpFile = "checkSummations.csv", remindVar = "piam_variable",
+                            dataDumpFile = "checkSummations.csv",
                             plotprefix = NULL, absDiff = 0.001, relDiff = 1, roundDiff = TRUE, csvSeparator = ";") {
   if (is.null(outputDirectory)) {
     dataDumpFile <- NULL
@@ -165,7 +162,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   # generate human-readable summary of larger differences
   .checkSummationsSummary(
     mifFile, data, comparison, mapping, summationsFile, summationGroups, checkVariables,
-    generatePlots, mainReg, outputDirectory, logFile, logAppend, dataDumpFile, remindVar,
+    generatePlots, mainReg, outputDirectory, logFile, logAppend, dataDumpFile,
     plotprefix, roundDiff
   )
 
@@ -175,7 +172,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 .checkSummationsSummary <- function(mifFile, data, comparison, mapping, summationsFile, # nolint: cyclocomp_linter.
                                     summationGroups, checkVariables, generatePlots,
                                     mainReg, outputDirectory, logFile, logAppend,
-                                    dataDumpFile, remindVar, plotprefix, roundDiff) {
+                                    dataDumpFile, plotprefix, roundDiff) {
 
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
@@ -221,16 +218,15 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
 
         childs <- checkVariables[[p]]
 
-        remindchilds <- if (is.null(mapping)) NULL else
-                        mappingData[, remindVar][mappingData$variable %in% pn]
+        piamchilds <- if (is.null(mapping)) NULL else
+                        sumNamesWithFactors(mappingData, pn)
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
-                  paste0(paste0(remindchilds, collapse = " + "), " ", signofdiff)[! is.null(remindchilds)]
+                  paste0(piamchilds, " ", signofdiff)[! is.null(piamchilds)]
                   ))
         for (ch in childs) {
-          remindch <- if (is.null(mapping)) NULL else
-                      mappingData[, remindVar][mappingData$variable %in% ch]
+          piamch <- if (is.null(mapping)) NULL else sumNamesWithFactors(mappingData, ch)
           text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
-                    if (! is.null(remindch)) paste0("      + ", paste0(remindch, collapse = " + "))))
+                    if (! is.null(piamch)) paste0("      ", piamch)))
         }
 
         relDiffMin <- min(fileLarge$reldiff[fileLarge$variable == p])
