@@ -14,7 +14,6 @@ checkSummations(
   generatePlots = FALSE,
   mainReg = "World",
   dataDumpFile = "checkSummations.csv",
-  remindVar = "piam_variable",
   plotprefix = NULL,
   absDiff = 0.001,
   relDiff = 1,
@@ -27,7 +26,7 @@ checkSummations(
 
 \item{outputDirectory}{path to directory to place logFile and dataDumpFile.}
 
-\item{template}{mapping to be loaded, used to print the remindVar corresponding to the data variables}
+\item{template}{mapping to be loaded, used to print the piam_variable corresponding to the data variables}
 
 \item{summationsFile}{in inst/summations folder that describes the required summation groups
 if set to 'extractVariableGroups', tries to extract summations from variables with + notation}
@@ -42,8 +41,6 @@ if set to 'extractVariableGroups', tries to extract summations from variables wi
 
 \item{dataDumpFile}{file where data.frame with the data analysis is saved. Requires outputDirectory.
 If NULL, result is returned.}
-
-\item{remindVar}{REMIND/MAgPIE variable column name in 'template'}
 
 \item{plotprefix}{added before filename}
 
