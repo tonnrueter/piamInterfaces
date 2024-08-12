@@ -5,8 +5,6 @@
 #' @param varname string with variable name
 #' @param mif filename of miffile
 #' @param mapping vector of mapping shortcuts (AR6, NAVIGATE) or mapping filenames. NULL means all
-#' @param remindVar column name of variable in mapping (default: piam_variable)
-#' @param remindUnit column name of unit in mapping (default: piam_unit)
 #' @importFrom quitte read.quitte as.quitte
 #' @importFrom stringr str_split str_pad
 #' @importFrom utils head
@@ -17,8 +15,7 @@
 #'   "Emi|CO2"
 #' )
 #' @export
-variableInfo <- function(varname, mif = NULL, mapping = NULL,            # nolint: cyclocomp_linter.
-                         remindVar = "piam_variable", remindUnit = "piam_unit") {
+variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cyclocomp_linter.
   if (length(mapping) == 0) mapping <- names(mappingNames())
   green <- "\033[0;32m"
   blue  <- "\033[0;34m"
@@ -38,9 +35,9 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL,            # nolin
     mappingData <- getMapping(m)
     mappingName <- basename(m)
     # find fitting variables in piam_variable and variable columns
-    remindno <- which(removePlus(varname) == removePlus(mappingData[, remindVar]))
+    piamno <- which(removePlus(varname) == removePlus(mappingData[, "piam_variable"]))
     exportno <- head(which(removePlus(varname) == removePlus(mappingData$variable)), n = 1)
-    nothingfound <- isTRUE(length(remindno) + length(exportno) == 0)
+    nothingfound <- isTRUE(length(piamno) + length(exportno) == 0)
     message("\n### ", ifelse(nothingfound, "Nothing found in", "Results from"), " mapping: ", blue, mappingName, nc)
     if (nothingfound) next
     # check whether summation file with same name as mapping exists and load it
@@ -50,57 +47,58 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL,            # nolin
       summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(m))
       message(str_pad(paste0("# Export variable groups found in ",
                            basename(summationsFile)), width + 8, "right"),
-            "# Corresponding ", remindVar, " variables")
+            "# Corresponding sum of 'piam_variable'")
     } else {
       summationGroups <- NULL
       message("# No corresponding summation groups file found, show variables in mapping.")
       message("\n", str_pad(paste0("# Export variable"), width + 8, "right"),
-            "# Corresponding ", remindVar, " variables")
+            "# Corresponding 'piam_variable'")
     }
     # loop through all lines found
-    for (no in unique(c(remindno, exportno))) {
+    for (no in unique(c(piamno, exportno))) {
       exportname <- mappingData$variable[no]
-      remindname <- mappingData[no, remindVar]
       # find child variables (example: PE|Oil is child of PE) for piam and export variables
       allexportchilds <- unique(.getChilds(exportname, mappingData$variable))
-      allremindchilds <- unique(.getChilds(varname, mappingData[, remindVar]))
+      allpiamchilds <- unique(.getChilds(varname, mappingData[, "piam_variable"]))
       # check whether variable is parent in one or more summation groups
       parentgroups <- intersect(c(exportname, paste(exportname, seq(10))), summationGroups$parent)
       # if not parent of a summation group, just print the variables
       if (length(parentgroups) == 0) {
-        message(". ", str_pad(exportname, width + 3, "right"), "   . ", remindname)
+        message(". ", str_pad(exportname, width + 3, "right"), "     ", sumNamesWithFactors(mappingData, exportname))
       } else {
         for (parentname in parentgroups) {
           exportchilds <- summationGroups$child[summationGroups$parent %in% parentname]
           # print summation parents
-          message("\n. ", str_pad(paste(parentname, "="), width + 3, "right"), "   . ",
-                  paste0(mappingData[, remindVar][mappingData$variable %in% exportname], collapse = " + "), " =")
+          message("\n. ", str_pad(paste(parentname, "="), width + 3, "right"), "   ",
+                  sumNamesWithFactors(mappingData, exportname), " =")
           # print summation childs
           for (ch in exportchilds) {
-            remindchilds <- mappingData[, remindVar][mappingData$variable %in% ch]
-            message("  + ", str_pad(ch, width + 2, "right"), "    + ", paste0(remindchilds, collapse = " + "))
-            allremindchilds <- setdiff(allremindchilds, remindchilds)
+            piamchilds <- mappingData[, "piam_variable"][mappingData$variable %in% ch]
+            message("  + ", str_pad(ch, width + 2, "right"), "    ", sumNamesWithFactors(mappingData, ch))
+            allpiamchilds <- setdiff(allpiamchilds, piamchilds)
           }
           allexportchilds <- setdiff(allexportchilds, exportchilds)
         }
       }
       # print remaining childs not in summation group (or if no group exists)
-      if (length(allexportchilds) + length(allremindchilds) > 0) {
+      if (length(allexportchilds) + length(allpiamchilds) > 0) {
         message("\n# Child variables", if (m %in% names(summationsNames())) " not in summation group")
         for (ch in allexportchilds) {
-          remindchilds <- mappingData[, remindVar][mappingData$variable %in% ch]
-          message("  . ", str_pad(ch, width + 1, "right"), "     . ", paste0(remindchilds, collapse = " + "))
-          allremindchilds <- setdiff(allremindchilds, remindchilds)
+          piamchilds <- mappingData[, "piam_variable"][mappingData$variable %in% ch]
+          message("  . ", str_pad(ch, width + 1, "right"), "     . ", sumNamesWithFactors(mappingData, ch))
+          allpiamchilds <- setdiff(allpiamchilds, piamchilds)
         }
-        for (ch in allremindchilds) {
-          exportchild <- unique(mappingData$variable[mappingData[, remindVar] %in% ch])
+        for (ch in allpiamchilds) {
+          exportchild <- unique(mappingData$variable[mappingData[, "piam_variable"] %in% ch])
           exportchild <- exportchild[! is.na(exportchild)]
-          message("  . ", str_pad(paste(exportchild, collapse = ", "), width + 1, "right"), "     . ", ch)
+          for (x in exportchild) {
+            message("  . ", str_pad(x, width + 1, "right"), "     . ", sumNamesWithFactors(mappingData, x))
+          }
         }
       }
       # print units
       message("Units: ", str_pad(paste0(unique(mappingData$unit[no]), collapse = ", "), width, "right"),
-              " Units: ", paste0(unique(mappingData[, remindUnit][no]), collapse = ", "))
+              " Units: ", paste0(unique(mappingData[, "piam_unit"][no]), collapse = ", "))
       # print definitions if existing
       if ("Definition" %in% colnames(mappingData) && ! is.na(mappingData$Definition[[no]])) {
         message("\nDefinition of ", mappingData$variable[[no]], " (", mappingData$unit[[no]], "): ",
