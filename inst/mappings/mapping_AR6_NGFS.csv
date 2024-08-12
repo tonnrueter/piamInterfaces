@@ -1,27 +1,28 @@
-idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
-;Emissions|Kyoto Gases|AFOLU;Mt CO2-equiv/yr;Emi|GHG|AFOLU;Mt CO2eq/yr;1;;;;;R
-;Emissions|Kyoto Gases|Industry;Mt CO2-equiv/yr;Emi|GHG|Industry;Mt CO2eq/yr;1;;;;;R
-;Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Transport;Mt CO2eq/yr;1;;;;;R
-;Emissions|Kyoto Gases|Residential and Commercial;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Buildings;Mt CO2eq/yr;1;;;;;R
-;Emissions|Kyoto Gases|Supply;Mt CO2-equiv/yr;Emi|GHG|Energy|+|Supply;Mt CO2eq/yr;1;;;;;R
-;Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;1;;;;;R
-;Final Energy|Residential and Commercial|Liquids|Hydrogen;EJ/yr;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;1;;;;;R
-;Final Energy|Residential and Commercial|Liquids|Oil;EJ/yr;FE|Buildings|Liquids|+|Fossil;EJ/yr;1;;;;;R
-;Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;FE|Buildings|Gases|+|Biomass;EJ/yr;1;;;;;R
-;Final Energy|Residential and Commercial|Gases|Hydrogen;EJ/yr;FE|Buildings|Gases|+|Hydrogen;EJ/yr;1;;;;;R
-;Final Energy|Residential and Commercial|Gases|Natural Gas;EJ/yr;FE|Buildings|Gases|+|Fossil;EJ/yr;1;;;;;R
-;Revenue|Government|Tax|Carbon;billion US$2010/yr;Revenue|Government|Tax|Carbon;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing (weighted aggregation of carbon price by region/sector multiplied by GHG emissions);R
-;Revenue|Government|Tax|Carbon|Demand|Residential and Commercial;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Buildings;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on buildings sector emissions (carbon price by region multiplied by GHG emissions);R
-;Revenue|Government|Tax|Carbon|Demand|Industry;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Industry;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on industry sector emissions (carbon price by region multiplied by GHG emissions);R
-;Revenue|Government|Tax|Carbon|Demand|Transportation;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Transport;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on transport sector emissions (carbon price by region multiplied by GHG emissions);R
-;Revenue|Government|Tax|Carbon|Supply;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Supply;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on the supply sector emissions (carbon price by region multiplied by GHG emissions);R
-;GDP|PPP|including medium chronic physical risk damage estimate;billion US$2010/yr;GDP|PPP|including medium chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
-;GDP|PPP|including high chronic physical risk damage estimate;billion US$2010/yr;GDP|PPP|including high chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
-;GDP|PPP|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|PPP|w/ Macro-Economic Climate Damage;billion US$2005/yr;1.12;;;;;Rx
-;GDP|MER|including medium chronic physical risk damage estimate;billion US$2010/yr;GDP|MER|including medium chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
-;GDP|MER|including high chronic physical risk damage estimate;billion US$2010/yr;GDP|MER|including high chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
-;GDP|MER|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|MER|w/ Macro-Economic Climate Damage;billion US$2005/yr;1.12;;;;;Rx
-;Emissions|NH3;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
-;Emissions|NH3|AFOLU;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
-;Emissions|CO2|Energy|Supply|Extraction;Mt CO2/yr;Emi|CO2|Energy|Supply|Extraction;Mt CO2/yr;1;;;;energy-related CO2 emissions from extraction processes;R
-;Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;FE|Transport|Liquids|Hydrogen;EJ/yr;1;;;;Final energy, in the form of synfuel generated from Hydrogen;R
+variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
+Test;K;Temperature|Global Mean;K;2;;;;;
+Emissions|Kyoto Gases|AFOLU;Mt CO2-equiv/yr;Emi|GHG|AFOLU;Mt CO2eq/yr;1;;;;;R
+Emissions|Kyoto Gases|Industry;Mt CO2-equiv/yr;Emi|GHG|Industry;Mt CO2eq/yr;1;;;;;R
+Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Transport;Mt CO2eq/yr;1;;;;;R
+Emissions|Kyoto Gases|Residential and Commercial;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Buildings;Mt CO2eq/yr;1;;;;;R
+Emissions|Kyoto Gases|Supply;Mt CO2-equiv/yr;Emi|GHG|Energy|+|Supply;Mt CO2eq/yr;1;;;;;R
+Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;1;;;;;R
+Final Energy|Residential and Commercial|Liquids|Hydrogen;EJ/yr;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;1;;;;;R
+Final Energy|Residential and Commercial|Liquids|Oil;EJ/yr;FE|Buildings|Liquids|+|Fossil;EJ/yr;1;;;;;R
+Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;FE|Buildings|Gases|+|Biomass;EJ/yr;1;;;;;R
+Final Energy|Residential and Commercial|Gases|Hydrogen;EJ/yr;FE|Buildings|Gases|+|Hydrogen;EJ/yr;1;;;;;R
+Final Energy|Residential and Commercial|Gases|Natural Gas;EJ/yr;FE|Buildings|Gases|+|Fossil;EJ/yr;1;;;;;R
+Revenue|Government|Tax|Carbon;billion US$2010/yr;Revenue|Government|Tax|Carbon;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing (weighted aggregation of carbon price by region/sector multiplied by GHG emissions);R
+Revenue|Government|Tax|Carbon|Demand|Residential and Commercial;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Buildings;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on buildings sector emissions (carbon price by region multiplied by GHG emissions);R
+Revenue|Government|Tax|Carbon|Demand|Industry;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Industry;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on industry sector emissions (carbon price by region multiplied by GHG emissions);R
+Revenue|Government|Tax|Carbon|Demand|Transportation;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Demand|Transport;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on transport sector emissions (carbon price by region multiplied by GHG emissions);R
+Revenue|Government|Tax|Carbon|Supply;billion US$2010/yr;Revenue|Government|Tax|Carbon|+|Supply;billion US$2005/yr;1.12;;;;Total government revenue from carbon pricing on the supply sector emissions (carbon price by region multiplied by GHG emissions);R
+GDP|PPP|including medium chronic physical risk damage estimate;billion US$2010/yr;GDP|PPP|including medium chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
+GDP|PPP|including high chronic physical risk damage estimate;billion US$2010/yr;GDP|PPP|including high chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
+GDP|PPP|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|PPP|w/ Macro-Economic Climate Damage;billion US$2005/yr;1.12;;;;;Rx
+GDP|MER|including medium chronic physical risk damage estimate;billion US$2010/yr;GDP|MER|including medium chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
+GDP|MER|including high chronic physical risk damage estimate;billion US$2010/yr;GDP|MER|including high chronic physical risk damage estimate;billion US$2005/yr;1.12;;;;;Rx
+GDP|MER|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|MER|w/ Macro-Economic Climate Damage;billion US$2005/yr;1.12;;;;;Rx
+Emissions|NH3;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
+Emissions|NH3|AFOLU;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
+Emissions|CO2|Energy|Supply|Extraction;Mt CO2/yr;Emi|CO2|Energy|Supply|Extraction;Mt CO2/yr;1;;;;energy-related CO2 emissions from extraction processes;R
+Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;FE|Transport|Liquids|Hydrogen;EJ/yr;1;;;;Final energy, in the form of synfuel generated from Hydrogen;R

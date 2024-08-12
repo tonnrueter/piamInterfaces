@@ -56,6 +56,16 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(nrow(unitfails) == 0)
 
+    # check if piam_factor is supplied without variable
+    factorWithoutVar <- mappingData %>%
+      filter(! is.na(.data$piam_factor), is.na(.data$piam_variable)) %>%
+      pull("variable")
+    if (length(factorWithoutVar) > 0) {
+      warning("These variables in mapping ", mapping, " have a piam_factor, but nothing specified in piam_variable:\n",
+              paste(factorWithoutVar, collapse = "\n"))
+    }
+    expect_true(length(factorWithoutVar) == 0)
+
     # checks only if source is supplied
     if ("source" %in% colnames(mappingData)) {
       # check for empty piam_variable with source
