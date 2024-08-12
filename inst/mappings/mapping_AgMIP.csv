@@ -984,7 +984,6 @@ XPRP.ECP;Index 2020=100;Prices|Producer Price Index|Short rotation trees;Index 2
 XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Pulses;Index 2020=100;1;Production|Crops|Other crops|+|Pulses;;M
 XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Potatoes;Index 2020=100;1;Production|Crops|Other crops|+|Potatoes;;M
 XPRP.OCR;Index 2020=100;Prices|Producer Price Index|Tropical roots;Index 2020=100;1;Production|Crops|Other crops|+|Tropical roots;;M
-XPRP.CRP;Index 2020=100;Prices|Producer Price Index|Crop products;Index 2020=100;1;NULL;;M
 XPRP.RUM;Index 2020=100;Prices|Producer Price Index|Ruminant meat;Index 2020=100;1;NULL;;M
 XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Monogastric meat;Index 2020=100;1;Production|Livestock products|+|Monogastric meat;;M
 XPRP.NRM;Index 2020=100;Prices|Producer Price Index|Poultry meat;Index 2020=100;1;Production|Livestock products|+|Poultry meat;;M
