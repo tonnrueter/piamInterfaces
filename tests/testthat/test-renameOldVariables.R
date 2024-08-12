@@ -3,8 +3,8 @@ test_that("renameOldVariables() works", {
   newtemperature <- "MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile"
   expect_message(newvar <- renameOldVariables(oldvar, variables = newtemperature),
                  "Automatically adjusted variables based")
-  expect_true(newtemperature %in% levels(newvar$variable))
-  expect_false("Temperature|Global Mean" %in% levels(newvar$variable))
+  expect_true(newtemperature %in% newvar$variable)
+  expect_false("Temperature|Global Mean" %in% newvar$variable)
   expect_identical(nrow(oldvar), nrow(newvar))
 
   oldname <- "Resources|Land Cover|Cropland|Bioenergy crops|+|Short rotation grasses"
@@ -12,8 +12,8 @@ test_that("renameOldVariables() works", {
   levels(oldvar$variable)[[1]] <- oldname
   expect_message(newvar <- renameOldVariables(oldvar, variables = newname),
                  "Automatically adjusted variables based")
-  expect_true(newname %in% levels(newvar$variable))
-  expect_false(oldname %in% levels(newvar$variable))
+  expect_true(newname %in% newvar$variable)
+  expect_false(deletePlus(oldname) %in% deletePlus(newvar$variable))
   expect_identical(nrow(oldvar), nrow(newvar))
 
   levels(oldvar$variable)[[1]] <- "Energy Investments|Elec|Wind"

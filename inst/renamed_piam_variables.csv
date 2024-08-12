@@ -15,7 +15,10 @@ MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile ;Concentration|N2O
 Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Resources|Nitrogen|Cropland Budget|Inputs|Manure
 
 # magpie4 reporting variables for cropland changed with magpie4 2.3.2
-Resources|Land Cover|Cropland|Croparea|*;Resources|Land Cover|Cropland|*
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops*;Resources|Land Cover|Cropland|Bioenergy crops*
+Resources|Land Cover|Cropland|Croparea|Crops*;Resources|Land Cover|Cropland|Crops*
+Resources|Land Cover|Cropland|Croparea|Fallow Cropland*;Resources|Land Cover|Cropland|Fallow Cropland*
+Resources|Land Cover|Cropland|Croparea|Forage*;Resources|Land Cover|Cropland|Forage*
 # https://github.com/pik-piam/magpie4/commit/2847a13e5c171b9dc78dccdc7d6a085e8c8d74d3
 Prices|Index2020|Agriculture|Producer*;Prices|Producer Price Index*
 

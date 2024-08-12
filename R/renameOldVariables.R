@@ -22,7 +22,7 @@ renameOldVariables <- function(mifdata, variables, logFile = NULL) {
   names(old2new) <- csvdata$old_name
   for (v in names(old2new)) {
     mifdata <- mifdata %>%
-      mutate(variable = factor(ifelse(.data$variable == v, old2new[[v]], as.character(.data$variable))))
+      mutate(variable = factor(ifelse(deletePlus(.data$variable) %in% v, old2new[[v]], deletePlus(as.character(.data$variable)))))
   }
 
   if (length(old2new) > 0 && ! isFALSE(logFile)) {
