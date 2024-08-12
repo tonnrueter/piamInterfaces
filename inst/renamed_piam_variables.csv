@@ -16,7 +16,7 @@ Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Re
 
 # magpie4 reporting variables for cropland changed with magpie4 2.3.2
 Resources|Land Cover|Cropland|Croparea|*;Resources|Land Cover|Cropland|*
-
+# https://github.com/pik-piam/magpie4/commit/2847a13e5c171b9dc78dccdc7d6a085e8c8d74d3
 Prices|Index2020|Agriculture|Producer*;Prices|Producer Price Index*
 
 #Changes from edgeT refactoring
@@ -97,30 +97,3 @@ Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Stock|Trans
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Stock|Transport|LDV|Subcompact Car|FCEV
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Stock|Transport|LDV|Subcompact Car|Hybrid Electric
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Stock|Transport|LDV|Subcompact Car|Liquids
-Prices|Index2020|Agriculture|Producer|Crop products;Prices|Producer Price Index|Crop products
-Prices|Index2020|Agriculture|Producer|Rice;Prices|Producer Price Index|Rice
-Prices|Index2020|Agriculture|Producer|Temperate cereals;Prices|Producer Price Index|Temperate cereals
-Prices|Index2020|Agriculture|Producer|Tropical cereals;Prices|Producer Price Index|Tropical cereals
-Prices|Index2020|Agriculture|Producer|Maize;Prices|Producer Price Index|Maize
-Prices|Index2020|Agriculture|Producer|Soybean;Prices|Producer Price Index|Soybean
-Prices|Index2020|Agriculture|Producer|Groundnuts;Prices|Producer Price Index|Groundnuts
-Prices|Index2020|Agriculture|Producer|Other oil crops incl rapeseed;Prices|Producer Price Index|Other oil crops incl rapeseed
-Prices|Index2020|Agriculture|Producer|Oilpalms;Prices|Producer Price Index|Oilpalms
-Prices|Index2020|Agriculture|Producer|Sunflower;Prices|Producer Price Index|Sunflower
-Prices|Index2020|Agriculture|Producer|Sugar cane;Prices|Producer Price Index|Sugar cane
-Prices|Index2020|Agriculture|Producer|Sugar beet;Prices|Producer Price Index|Sugar beet
-Prices|Index2020|Agriculture|Producer|Fruits Vegetables Nuts;Prices|Producer Price Index|Fruits Vegetables Nuts
-Prices|Index2020|Agriculture|Producer|Cotton seed;Prices|Producer Price Index|Cotton seed
-Prices|Index2020|Agriculture|Producer|Short rotation grasses;Prices|Producer Price Index|Short rotation grasses
-Prices|Index2020|Agriculture|Producer|Short rotation trees;Prices|Producer Price Index|Short rotation trees
-Prices|Index2020|Agriculture|Producer|Pulses;Prices|Producer Price Index|Pulses
-Prices|Index2020|Agriculture|Producer|Potatoes;Prices|Producer Price Index|Potatoes
-Prices|Index2020|Agriculture|Producer|Tropical roots;Prices|Producer Price Index|Tropical roots
-Prices|Index2020|Agriculture|Producer|Ruminant meat;Prices|Producer Price Index|Ruminant meat
-Prices|Index2020|Agriculture|Producer|Monogastric meat;Prices|Producer Price Index|Monogastric meat
-Prices|Index2020|Agriculture|Producer|Poultry meat;Prices|Producer Price Index|Poultry meat
-Prices|Index2020|Agriculture|Producer|Eggs;Prices|Producer Price Index|Eggs
-Prices|Index2020|Agriculture|Producer|Dairy;Prices|Producer Price Index|Dairy
-Prices|Index2020|Agriculture|Producer|Livestock products;Prices|Producer Price Index|Livestock products
-Prices|Index2020|Agriculture|Producer|Fish;Prices|Producer Price Index|Fish
-Prices|Index2020|Agriculture|Producer|All products;Prices|Producer Price Index|Producer|All products

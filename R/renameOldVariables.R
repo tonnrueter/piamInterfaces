@@ -41,9 +41,8 @@ getExpandRenamedVariables <- function(variables) {
     mutate(piam_variable = deletePlus(.data$piam_variable),
            old_name = deletePlus(.data$old_name))
   variables <- deletePlus(variables)
-  varExpand <- filter(csvdata, grepl("\\*$", csvdata$piam_variable))
-  csvdataNew <- NULL
 
+  csvdataNew <- NULL
   for (i in seq(nrow(csvdata))) {
     # prepare strings for grepping by adding escape characters and "."
     if (all(grepl("\\*$", c(csvdata$piam_variable[i], csvdata$old_name[i])))) {

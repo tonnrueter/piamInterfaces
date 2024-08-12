@@ -4,7 +4,7 @@ test_that("renameOldVariables() works", {
   expect_message(newvar <- renameOldVariables(oldvar, variables = newtemperature),
                  "Automatically adjusted variables based")
   expect_true(newtemperature %in% levels(newvar$variable))
-  expect_false("Temperature|Globa Mean" %in% levels(newvar$variable))
+  expect_false("Temperature|Global Mean" %in% levels(newvar$variable))
   expect_identical(nrow(oldvar), nrow(newvar))
 
   oldname <- "Resources|Land Cover|Cropland|Bioenergy crops|+|Short rotation grasses"
