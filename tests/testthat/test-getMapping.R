@@ -15,6 +15,14 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(length(conflictsigns) == 0, label = paste0(mapping, " has no merge conflicts"))
 
+    # look for Moving Avg prices
+    movingavg <- grep("^Price\\|.*\\|Moving Avg$", mappingData$piam_variable, value = TRUE)
+    if (length(movingavg) > 0) {
+      warning("These variables use 'Price|*|Moving Avg' which is deprecated since remind2 1.111.0 on 2023-05-26.\n",
+              "Please remove '|Moving Avg' to get a moving average with some fixes:\n", paste(movingavg, collapse = ", "))
+    }
+    expect_equal(length(movingavg), 0)
+
     # check for duplicated rows
     duplicates <- select(mappingData, "variable", "piam_variable")
     duplicates <- filter(duplicates, duplicated(duplicates))
