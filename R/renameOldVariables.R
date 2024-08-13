@@ -44,18 +44,18 @@ getExpandRenamedVariables <- function(variables) {
 
   csvdataNew <- NULL
   for (i in seq_len(nrow(csvdata))) {
-    # prepare strings for grepping by adding escape characters and "."
+    # if both end with *, replace by options taken from 'variables'
     if (all(grepl("\\*$", c(csvdata$piam_variable[i], csvdata$old_name[i])))) {
-      matchOld <- sub(".$", "", csvdata$old_name[i])
+      matchOld <- sub("\\*$", "", csvdata$old_name[i])
       postfix <- gsub(matchOld, "", grep(matchOld, variables, fixed = TRUE, value = TRUE), fixed = TRUE)
+      csvdataNew <- rbind(
+        csvdataNew,
+        data.frame(piam_variable = paste0(gsub("\\*$", "", csvdata$piam_variable[i]), postfix),
+                   old_name = paste0(gsub("\\*$", "", csvdata$old_name[i]), postfix))
+      )
     } else {
-      postfix <- ""
+      csvdataNew <- rbind(csvdataNew, csvdata[i, ])
     }
-    csvdataNew <- rbind(
-      csvdataNew,
-      data.frame(piam_variable = paste0(gsub("\\*$", "", csvdata$piam_variable[i]), postfix),
-                 old_name = paste0(gsub("\\*$", "", csvdata$old_name[i]), postfix))
-    )
   }
   return(filter(csvdataNew, .data$old_name %in% variables))
 }
