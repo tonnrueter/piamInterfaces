@@ -1,5 +1,13 @@
 #' Check unit factor in template
 #'
+#' This function checks whether the piam_factor in a mapping fits unit and piam_unit.
+#' It does the following:
+#' 1. check whether the units are identical based on areUnitsIdentical() and piam_factor is 1 or -1.
+#' 2. based on scaleConversion defined below, check whether manually added factors are satisfied
+#'    This works based on regex matching, so for example 1000 TW = 1 PW is matched by the c("1000", "T", "P") line.
+#' If the tests fail because of a new unit, you can add them below. If the units are really identical except for
+#' spelling, better add them to areUnitsIdentical.R
+#'
 #' @md
 #' @author Oliver Richters
 #' @param template object provided by loadIIASAtemplate()
@@ -16,8 +24,10 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   errortext <- NULL
   colnames(template) <- tolower(names(template))
 
+  # if units are really identical, better add them to areUnitsIdentical.R
   # check whether scales are correctly transformed. c(piam_factor, unit, piam_unit)
-  # the first line checks that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
+  # For example, line 7 check that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
+  # This uses regex matching, so "1000 million US$" = "1 billion US$" is covered by that as well.
   scaleConversion <- list(
                           c("1", "million", "Million vehicles"),
                           c("1", "Index (2020 = 1)", "1"),

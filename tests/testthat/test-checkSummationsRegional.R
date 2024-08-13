@@ -22,6 +22,8 @@ test_that("checkSummations works", {
     "unit" = c("EJ/yr", "US$2010/EJ")
   ))
   expect_no_warning(d <- checkSummationsRegional(mifdata))
+  expect_true("diff" %in% colnames(d)) # needed for REMIND
+  expect_true("reldiff" %in% colnames(d)) # needed for REMIND
   expect_equal(nrow(d), 2)
   expect_true(all(variables %in% levels(d$variable)))
 

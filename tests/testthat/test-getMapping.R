@@ -15,11 +15,22 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(length(conflictsigns) == 0, label = paste0(mapping, " has no merge conflicts"))
 
+    # look for Moving Avg prices in REMIND variables
+    movingavg <- mappingData %>%
+      filter(grepl("^Price\\|.*\\|Moving Avg", .data$piam_variable), .data$source %in% c("R", "Rx")) %>%
+      pull("variable")
+    if (length(movingavg) > 0) {
+      warning("These variables use 'Price|*|Moving Avg' which is deprecated since remind2 1.111.0 on 2023-05-26.\n",
+              "Please remove '|Moving Avg' to use a fixed moving average:\n", paste(movingavg, collapse = ", "))
+    }
+    expect_equal(length(movingavg), 0)
+
     # check for duplicated rows
     duplicates <- select(mappingData, "variable", "piam_variable")
     duplicates <- filter(duplicates, duplicated(duplicates))
     if (nrow(duplicates) > 0) {
-      warning("Duplicated line in ", mapping, ":\n", paste0(duplicates$variable, ";", duplicates$piam_variable, collapse = "\n"))
+      warning("Duplicated line in ", mapping, ":\n",
+              paste0(duplicates$variable, ";", duplicates$piam_variable, collapse = "\n"))
     }
     expect_equal(nrow(duplicates), 0)
 
@@ -55,6 +66,16 @@ for (mapping in names(mappingNames())) {
               paste(printoutput, collapse = "\n"))
     }
     expect_true(nrow(unitfails) == 0)
+
+    # check if piam_factor is supplied without variable
+    factorWithoutVar <- mappingData %>%
+      filter(! is.na(.data$piam_factor), is.na(.data$piam_variable)) %>%
+      pull("variable")
+    if (length(factorWithoutVar) > 0) {
+      warning("These variables in mapping ", mapping, " have a piam_factor, but nothing specified in piam_variable:\n",
+              paste(factorWithoutVar, collapse = "\n"))
+    }
+    expect_true(length(factorWithoutVar) == 0)
 
     # checks only if source is supplied
     if ("source" %in% colnames(mappingData)) {

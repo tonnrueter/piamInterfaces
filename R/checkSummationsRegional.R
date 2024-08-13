@@ -43,16 +43,16 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
   unit <- c("", "%", "% of Total GDP", "% pa", "%/yr", "$/GJ", "1", "arbitrary unit", "arbitrary unit/yr",
             "billionDpktU", "billionDpTWyr", "cm/capita", "DM per live animal", "GE per GE",
             "GJ/cap/yr", "GJ/t", "hectares per capita", "index", "Index",
-            "kcal/cap/day", "kcal/capita/day", "kcal/kcal", "m3/ha", "MJ/t",
-            "Mt CO2-equiv/EJ", "Mt CO2-equiv/Mt", "Mt CO2/EJ", "Mt Nr/Mt Nr", "Nr per Nr", "percent",
+            "kcal/cap/day", "kcal/capita/day", "kcal/kcal", "m3/ha", "MJ/t", "MJ/vehkm",
+            "Mt CO2-equiv/EJ", "Mt CO2-equiv/Mt", "Mt CO2/Mt", "Mt CO2/EJ", "Mt Nr/Mt Nr", "Nr per Nr", "percent",
             "Percent", "protein/capita/day", "ratio", "share", "share of total land", "t DM/ha", "t DM/ha/yr",
             "tC/ha", "tC/tC", "tDM/capita/yr", "tDM/cap/yr", "unitless", "years")
   curr <- c("USD", paste0("USDMER", years), paste0("USD", years), paste0("US$", years), paste0("USD_", years),
             paste0("EUR_", years), paste0("EUR", years))
   usecurr <- c("EJ/billion __", "MJ/__", "Mt CO2-equiv/__", "t/million __", "tr __/input unit", "tr__/Input",
                "__ PPP/cap/yr", "k__/per capita", "__/capita", "__/EJ", "__/GJ", "__/h", "__/ha", "__/tDM",
-               "__/worker", "__/GJ", "__/kW", "__/kW/yr", "__/t CH4", "__/t CO2", "__/t N2O",
-               "__/tCH4", "__/tCO2", "__/tCO2 yr", "__/tN2O", "__/__", "__/yr", "__/cap/yr")
+               "__/worker", "__/GJ", "__/kW", "__/kW/yr", "__/t CH4", "__/t CO2", "_/t CO2/yr", "__/t N2O",
+               "__/tCH4", "__/tCO2", "__/tCO2 yr", "__/t CO2/yr", "__/tN2O", "__/__", "__/yr", "__/cap/yr")
   unit <- unique(c(index, unit, unlist(lapply(curr, function(x) gsub("__", x, usecurr)))))
 
   # if intensiveUnits or skipUnits contain 'TRUE', add this list of intensive units to them
@@ -89,10 +89,10 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
   sumCheck <- left_join(sumChilds, filter(total, ! .data$unit %in% intensiveUnits),
                         by = c("model", "scenario", "variable", "period", "unit")) %>%
     mutate(
-      absdiff = .data$checkSum - .data$total,
+      diff = .data$checkSum - .data$total,
       reldiff = 100 * (.data$checkSum - .data$total) / .data$total
     ) %>%
-    filter(abs(.data$reldiff) >= relDiff, abs(.data$absdiff) >= absDiff) %>%
+    filter(abs(.data$reldiff) >= relDiff, abs(.data$diff) >= absDiff) %>%
     droplevels()
 
   sumCheckVars <- levels(sumCheck$variable)
