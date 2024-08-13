@@ -1,3 +1,18 @@
+test_that("renamed_piam_variables wildcards match", {
+  csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
+    read.csv2(comment.char = "#", strip.white = TRUE) %>%
+    as_tibble()
+  inconsistentAsterisk <- filter(csvdata) %>%
+    filter(grepl("\\*", .data$piam_variable) | grepl("\\*", .data$old_name)) %>%
+    filter(! grepl("^[^\\*]+\\*$", .data$piam_variable) | ! grepl("^[^\\*]+\\*$", .data$old_name))
+  if (nrow(inconsistentAsterisk) > 0) {
+    warning("In inst/renamed_piam_variables.csv, you can have either no * at all or an * at the end of both columns.\n",
+            "These lines do not match this pattern:\n",
+            paste(inconsistentAsterisk$old_name, "->", inconsistentAsterisk$piam_variable, collapse = "\n"))
+  }
+  expect_true(nrow(inconsistentAsterisk) == 0)
+})
+
 test_that("renameOldVariables() works", {
   oldvar <- qeAR6
   newtemperature <- "MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile"

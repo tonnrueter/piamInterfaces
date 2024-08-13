@@ -19,7 +19,8 @@ for (mapping in names(mappingNames())) {
     duplicates <- select(mappingData, "variable", "piam_variable")
     duplicates <- filter(duplicates, duplicated(duplicates))
     if (nrow(duplicates) > 0) {
-      warning("Duplicated line in ", mapping, ":\n", paste0(duplicates$variable, ";", duplicates$piam_variable, collapse = "\n"))
+      warning("Duplicated line in ", mapping, ":\n",
+              paste0(duplicates$variable, ";", duplicates$piam_variable, collapse = "\n"))
     }
     expect_equal(nrow(duplicates), 0)
 

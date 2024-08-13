@@ -1,9 +1,11 @@
 piam_variable                                 ;old_name
+# you are allowed to add a wildcard *, but only at the end of both columns simultaneously
+
 # temporary, can be removed after EDGE-T refactoring
-FE|Transport|Pass|w/o Bunkers                 ;FE|Transport|Pass|w/o bunkers
+FE|Transport|Pass|w/o Bunkers          ;FE|Transport|Pass|w/o bunkers
 
 # renamed in https://github.com/pik-piam/remind2/pull/579
-Energy Investments|Electricity|*;Energy Investments|Elec|*
+Energy Investments|Electricity|*       ;Energy Investments|Elec|*
 
 # map MAGICC6 variables to new MAGICC7 names
 MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile     ;Temperature|Global Mean
@@ -15,14 +17,15 @@ MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile ;Concentration|N2O
 Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Resources|Nitrogen|Cropland Budget|Inputs|Manure
 
 # magpie4 reporting variables for cropland changed with magpie4 2.3.2
-Resources|Land Cover|Cropland|Croparea|Bioenergy crops*;Resources|Land Cover|Cropland|Bioenergy crops*
-Resources|Land Cover|Cropland|Croparea|Crops*;Resources|Land Cover|Cropland|Crops*
-Resources|Land Cover|Cropland|Croparea|Fallow Cropland*;Resources|Land Cover|Cropland|Fallow Cropland*
-Resources|Land Cover|Cropland|Croparea|Forage*;Resources|Land Cover|Cropland|Forage*
-# https://github.com/pik-piam/magpie4/commit/2847a13e5c171b9dc78dccdc7d6a085e8c8d74d3
-Prices|Index2020|Agriculture|Producer*;Prices|Producer Price Index*
+Resources|Land Cover|Cropland|Croparea|Bioenergy crops* ;Resources|Land Cover|Cropland|Bioenergy crops*
+Resources|Land Cover|Cropland|Croparea|Crops*           ;Resources|Land Cover|Cropland|Crops*
+Resources|Land Cover|Cropland|Croparea|Fallow Cropland* ;Resources|Land Cover|Cropland|Fallow Cropland*
+Resources|Land Cover|Cropland|Croparea|Forage*          ;Resources|Land Cover|Cropland|Forage*
 
-#Changes from edgeT refactoring
+# https://github.com/pik-piam/magpie4/commit/2847a13e5c171b9dc78dccdc7d6a085e8c8d74d3
+Prices|Index2020|Agriculture|Producer*                  ;Prices|Producer Price Index*
+
+# Changes from edgeT refactoring v2.0
 Emi|CO2|Energy|Demand|Transport|Bunkers|Freight|International Shipping;Emi|CO2|Transport|Freight|International Shipping|Demand
 Emi|CO2|Energy|Demand|Transport|Bunkers|Pass|International Aviation;Emi|CO2|Transport|Pass|Aviation|International|Demand
 Emi|CO2|Energy|Demand|Transport|Freight;Emi|CO2|Transport|Freight|w/o bunkers|Demand

@@ -6,14 +6,14 @@
 #' @param variables the list of requested variables
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter
-#' @importFrom piamutils deletePnus
-#' @importFrom rlang .datan
+#' @importFrom piamutils deletePlus
+#' @importFrom rlang .data
 #' @importFrom tibble as_tibble
 #' @return quitte object with adapted mif data
 #' @export
 
 renameOldVariables <- function(mifdata, variables, logFile = NULL) {
-  mifdata <- as.quitte(mifdata)
+  mifdata <- deletePlus(as.quitte(mifdata))
 
   toadd <- unique(setdiff(variables, levels(mifdata$variable)))
   csvdata <- getExpandRenamedVariables(levels(mifdata$variable)) %>%
@@ -22,7 +22,7 @@ renameOldVariables <- function(mifdata, variables, logFile = NULL) {
   names(old2new) <- csvdata$old_name
   for (v in names(old2new)) {
     mifdata <- mifdata %>%
-      mutate(variable = factor(ifelse(deletePlus(.data$variable) %in% v, old2new[[v]], deletePlus(as.character(.data$variable)))))
+      mutate(variable = factor(ifelse(.data$variable %in% v, old2new[[v]], as.character(.data$variable))))
   }
 
   if (length(old2new) > 0 && ! isFALSE(logFile)) {
@@ -43,7 +43,7 @@ getExpandRenamedVariables <- function(variables) {
   variables <- deletePlus(variables)
 
   csvdataNew <- NULL
-  for (i in seq(nrow(csvdata))) {
+  for (i in seq_len(nrow(csvdata))) {
     # prepare strings for grepping by adding escape characters and "."
     if (all(grepl("\\*$", c(csvdata$piam_variable[i], csvdata$old_name[i])))) {
       matchOld <- sub(".$", "", csvdata$old_name[i])
