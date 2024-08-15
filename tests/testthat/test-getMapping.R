@@ -26,13 +26,25 @@ for (mapping in names(mappingNames())) {
     expect_equal(length(movingavg), 0)
 
     # check for duplicated rows
-    duplicates <- select(mappingData, "variable", "piam_variable")
+    duplicates <- mappingData %>%
+      select("variable", "piam_variable") %>%
+      mutate(piam_variable = deletePlus(.data$piam_variable),
+             variable = deletePlus(.data$variable))
     duplicates <- filter(duplicates, duplicated(duplicates))
     if (nrow(duplicates) > 0) {
       warning("Duplicated line in ", mapping, ":\n",
               paste0(duplicates$variable, ";", duplicates$piam_variable, collapse = "\n"))
     }
     expect_equal(nrow(duplicates), 0)
+
+    # check for |+| notation used inconsistenly
+    vars <- setdiff(unique(mappingData$piam_variable), NA)
+    somePlusSomeNot <- vars[table(deletePlus(unique(vars)))[deletePlus(vars)] > 1]
+    if (length(somePlusSomeNot) > 0) {
+      warning("Inconsistent use of |+| notation for these variables:\n",
+              paste(somePlusSomeNot, collapse = ", "))
+    }
+    expect_equal(length(somePlusSomeNot), 0)
 
     # check for inconsistent variable + unit combinations
     nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable), ! .data$piam_variable == "TODO")

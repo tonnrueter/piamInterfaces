@@ -556,7 +556,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (industry);Final Energy|Non-Energy Use|Hydrogen;PJ/yr;Final energy consumption of hydrogen by the non-combustion processes;;;;;0;;
 2;energy (industry);Final Energy|Non-Energy Use|Waste;PJ/yr;Final energy consumption of non-renewable waste by the non-combustion processes;;;;;0;;
 2;energy (industry);Final Energy|Non-Energy Use|Other;PJ/yr;Final energy consumption of other feedstocks by the non-combustion processes (please provide a definition of the feedstocks in this category in the 'comments' tab);;;;;0;;
-2;energy (industry);Final Energy|Non-Energy Use|Chemicals;PJ/yr;Final energy consumption in the chemical sector by the non-combustion processes;FE|Non-energy Use|Industry;EJ/yr;1000;;0;;R
+2;energy (industry);Final Energy|Non-Energy Use|Chemicals;PJ/yr;Final energy consumption in the chemical sector by the non-combustion processes;FE|Non-energy Use|+|Industry;EJ/yr;1000;;0;;R
 2;energy (industry);Final Energy|Non-Energy Use|Chemicals|Gases;PJ/yr;Final energy consumption of gases by the chemical sector by the non-combustion processes;FE|Non-energy Use|Industry|+|Gases;EJ/yr;1000;Currently, all non-energy use in REMIND occurs in the chemicals sector;0;;R
 3;energy (industry);Final Energy|Non-Energy Use|Chemicals|Gases|Natural Gas;PJ/yr;Final energy consumption of natural gas by the chemical sector by the non-combustion processes;;;;;0;;
 3;energy (industry);Final Energy|Non-Energy Use|Chemicals|Gases|Biomass;PJ/yr;Final energy consumption of biogas by the chemical sector by the non-combustion processes;;;;;0;;
