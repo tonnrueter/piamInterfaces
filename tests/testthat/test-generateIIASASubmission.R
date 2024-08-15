@@ -9,7 +9,8 @@ for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS"
 
     data <- data %>% # [seq(min(10, nrow(data))), ] %>%
       filter(!is.na(variable)) %>%
-      mutate(model = "REMIND", scenario = "default", region = "GLO", value = 1)
+      mutate(model = "REMIND", scenario = "default", region = "GLO", value = 1) %>%
+      mutate(variable = deletePlus(.data$variable))
 
     data <- tidyr::crossing(data, year = seq(2005, 2020, 5))
 
@@ -87,8 +88,11 @@ test_that("Correct Prices are selected and plusses ignored", {
 
 test_that("fail on duplicated data", {
   dupl <- rbind(testdata, testdata)
-  expect_error(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
-               "Duplicated data found")
+  expect_warning(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
+                 "Duplicated data found")
+  dupl <- rbind(testdata, mutate(testdata, variable = sub("|", "|++|", variable, fixed = TRUE)))
+  expect_warning(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
+                 "Duplicated data found")
 })
 
 

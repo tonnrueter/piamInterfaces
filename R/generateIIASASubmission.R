@@ -55,6 +55,7 @@
 #' @importFrom quitte as.quitte write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
 #' @importFrom gms chooseFromList
+#' @importFrom piamutils deletePlus
 #' @importFrom stringr str_trim
 #' @examples
 #' \dontrun{
@@ -125,13 +126,14 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   # read in data from mifs ----
 
   # for each directory, include all mif files
-  mifdata <- readMifs(mifs)
+  mifdata <- deletePlus(readMifs(mifs))
 
   dupl <- mifdata %>% select(-"value") %>% filter(duplicated(mifdata)) %>% droplevels()
   if (nrow(dupl) > 0) {
-    stop("Duplicated data found: ",
-         "\n  - Models: ", paste(levels(dupl$model), collapse = ", "),
-         "\n  - Scenarios: ", paste(levels(dupl$scenario), collapse = ", ")
+    warning("Duplicated data found which will lead to wrong calculations for: ",
+         "\n  - Models:    ", paste(levels(dupl$model), collapse = ", "),
+         "\n  - Scenarios: ", paste(levels(dupl$scenario), collapse = ", "),
+         "\n  - Variables: ", paste(levels(dupl$variable), collapse = ", ")
         )
   }
 
@@ -152,7 +154,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   mifdata <- mifdata %>%
     filter(.data$period %in% timesteps) %>%
     mutate(
-      "piam_variable" = removePlus(str_trim(.data$variable)),
+      "piam_variable" = str_trim(.data$variable),
       "piam_unit" = str_trim(.data$unit)
       ) %>%
     select(-c("variable", "unit")) %>%
