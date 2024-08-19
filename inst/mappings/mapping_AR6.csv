@@ -141,7 +141,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 116;Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;;;;total radiative forcing from tropospheric ozone;C
 117;Temperature|Global Mean;°C;MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile;K;;;;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab;C
 118;Capital Formation;billion US$2010/yr;Investments;billion US$2005/yr;1.12;;;might not fit completely;net additions to the physical capital stock;R
-119;Capital Stock;billion US$2010/yr;TODO;billion US$2005;1.12;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND;TODO: report yearly value,Macroeconomic capital stock;
+119;Capital Stock;billion US$2010/yr;;;;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND;TODO: report yearly value,Macroeconomic capital stock;
 120;Consumption;billion US$2010/yr;Consumption;billion US$2005/yr;1.12;;;quality depends on capital market realization (switch);total consumption of all goods,by all consumers in a region;R
 121;Discount rate|Residential and Commercial;%;;;;;;;Discount rate for investments into residential and commercial buildings;
 122;Discount rate|Economy;%;;;;;;;Economy wide discount rate: real interest rate of capital;
@@ -155,11 +155,11 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 130;Expenditure|household;billion US$2010/yr;;;;;;;Total household expenditure;
 131;Expenditure|household|Services|Telecommunications;billion US$2010/yr;;;;;;;expenditure of households for telecommunications incl. internet;
 132;Expenditure|household|Services|Water & sanitation;billion US$2010/yr;;;;;;;expenditure of households for Water & Sanitation services;
-133;Export;billion US$2010/yr;TODO;billion US$2005/yr;1.12;;;;total exports measured in monetary quantities;
+133;Export;billion US$2010/yr;;;;;;;total exports measured in monetary quantities;
 134;GDP|MER;billion US$2010/yr;GDP|MER;billion US$2005/yr;1.12;;;;GDP at market exchange rate;R
 135;GDP|PPP;billion US$2010/yr;GDP|PPP;billion US$2005/yr;1.12;;;;GDP at purchasing power parity;R
 136;GINI;0;;;;;;;GINI income inequality index;
-137;Import;billion US$2010/yr;TODO;billion US$2005/yr;1.12;;;;total imports measured in monetary quantities;
+137;Import;billion US$2010/yr;;;;;;;total imports measured in monetary quantities;
 138;Interest Rate|Real;%;Interest Rate t/(t-1)|Real;unitless;100;;;time preference rate as component of the interest rate is exogenous;Real interest rate or return on capital that is relevant for energy system investments;R
 139;Policy Cost|Additional Total Energy System Cost;billion US$2010/yr;Policy Cost|Additional Total Energy System Cost;billion US$2005/yr;1.12;;;;additional energy system cost associated with the policy;R
 140;Policy Cost|Area under MAC Curve;billion US$2010/yr;;;;;;;total costs of the policy,i.e. the area under the Marginal Abatement Cost (MAC) curve;
@@ -573,7 +573,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 515;Capacity Additions|Electricity|Nuclear;GW/yr;New Cap|Electricity|Nuclear;GW/yr;;;;;Capacity additions of nuclear power plants (yearly average additions between previos and current model time step);R
 516;Capacity Additions|Electricity|Oil;GW/yr;New Cap|Electricity|Oil;GW/yr;;;;;Capacity additions of all oil power plants (yearly average additions between previos and current model time step);R
 517;Capacity Additions|Electricity|Oil|w/ CCS;GW/yr;;;;;;;Capacity additions of oil power plants with CCS (yearly average additions between previos and current model time step);
-518;Capacity Additions|Electricity|Oil|w/o CCS;GW/yr;TODO;GW;;;;;Capacity additions of oil power plants without CCS (yearly average additions between previos and current model time step);
+518;Capacity Additions|Electricity|Oil|w/o CCS;GW/yr;;GW;;;;;Capacity additions of oil power plants without CCS (yearly average additions between previos and current model time step);
 519;Capacity Additions|Electricity|Solar;GW/yr;New Cap|Electricity|Solar;GW/yr;;;;;Capacity additions of solar power plants (yearly average additions between previos and current model time step);R
 520;Capacity Additions|Electricity|Solar|CSP;GW/yr;New Cap|Electricity|Solar|CSP;GW/yr;;;;;Capacity additions of concentrated solar power plants (yearly average additions between previos and current model time step);R
 521;Capacity Additions|Electricity|Solar|PV;GW/yr;New Cap|Electricity|Solar|PV;GW/yr;;;;;Capacity additions of solar PV (yearly average additions between previos and current model time step);R
@@ -1218,8 +1218,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1125;Secondary Energy|Electricity|Coal|w/o CCS;EJ/yr;SE|Electricity|Coal|+|w/o CC;EJ/yr;;;;;net electricity production from coal with freely vented CO2 emissions;R
 1126;Secondary Energy|Electricity|Curtailment;EJ/yr;SE|Electricity|Curtailment;EJ/yr;;;;;curtailment of electricity production due to oversupply from variable renewable sources (typically from wind and solar);R
 1127;Secondary Energy|Electricity|Fossil;EJ/yr;;;;;;;net electricity production from coal,gas,conventional and unconventional oil;
-1128;Secondary Energy|Electricity|Fossil|w/ CCS;EJ/yr;TODO;EJ/yr;;;;;net electricity production from coal,gas,conventional and unconventional oil used in combination with CCS;
-1129;Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;TODO;EJ/yr;;;;;net electricity production from coal,gas,conventional and unconventional oil without CCS;
+1128;Secondary Energy|Electricity|Fossil|w/ CCS;EJ/yr;;EJ/yr;;;;;net electricity production from coal,gas,conventional and unconventional oil used in combination with CCS;
+1129;Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;;EJ/yr;;;;;net electricity production from coal,gas,conventional and unconventional oil without CCS;
 1130;Secondary Energy|Electricity|Gas;EJ/yr;SE|Electricity|+|Gas;EJ/yr;;;;;net electricity production from natural gas;R
 1131;Secondary Energy|Electricity|Gas|w/ CCS;EJ/yr;SE|Electricity|Gas|+|w/ CC;EJ/yr;;;;;net electricity production from natural gas with a CO2 capture component;R
 1132;Secondary Energy|Electricity|Gas|w/o CCS;EJ/yr;SE|Electricity|Gas|+|w/o CC;EJ/yr;;;;;net electricity production from natural gas with freely vented CO2 emissions;R
@@ -1415,7 +1415,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1311;Investment|Energy Demand|Transportation|Passenger|Road|LDV|EV;billion US$2010/yr;;;;;;;investments into new vehicle technologies in the transport sector (light-duty cars and trucks: electric vehicle technologies,including all-electrics and plug-in hybrids);
 1312;Investment|Energy Demand|Transportation|Passenger|Road|LDV|FCV;billion US$2010/yr;;;;;;;investments into new vehicle technologies in the transport sector (light-duty cars and trucks: fuel cell technologies running on hydrogen or another type of fuel);
 1313;Investment|Energy Demand|Transportation|Passenger|Road|LDV|ICE;billion US$2010/yr;;;;;;;investments into new vehicle technologies in the transport sector (light-duty cars and trucks: internal combustion engine technologies running on any type of liquid or gaseous fuel);
-1314;Investment|Energy Efficiency;billion US$2010/yr;TODO;billion US$2005/yr;1.12;;;;investments into the efficiency-increasing components of energy demand technologies;
+1314;Investment|Energy Efficiency;billion US$2010/yr;;;;;;;investments into the efficiency-increasing components of energy demand technologies;
 1315;Investment|Energy Supply;billion US$2010/yr;Energy Investments|Supply;billion US$2005/yr;1.12;;;;investments into the energy supply system;R
 1316;Investment|Energy Supply|CO2 Transport and Storage;billion US$2010/yr;Energy Investments|CO2 Trans&Stor;billion US$2005/yr;1.12;;;;investment in CO2 transport and storage (note that investment in the capturing equipment should be included along with the power plant technology);R
 1317;Investment|Energy Supply|Electricity;billion US$2010/yr;Energy Investments|Electricity;billion US$2005/yr;1.12;;;;investments into electricity generation and supply (including electricity storage and transmission & distribution);R
@@ -1563,10 +1563,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1428;Resource|Extraction|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;;;;;;R
 1429;Resource|Use|Mineral;Mt Fe-eq;;;;;;;;
 1430;Resource|Use|Mineral|Electricity;Mt Fe-eq;;;;;;;;
-1431;Ecotoxicity|Freshwater;Mt 1;TODO;4-DCB-eq;;;;;;
-1432;Ecotoxicity|Freshwater|Electricity;Mt 1;TODO;4-DCB-eq;;;;;;
-1433;Ecotoxicity|Marine;Mt 1;TODO;4-DCB-eq;;;;;;
-1434;Ecotoxicity|Marine|Electricity;Mt 1;TODO;4-DCB-eq;;;;;;
+1431;Ecotoxicity|Freshwater;Mt 1;;4-DCB-eq;;;;;;
+1432;Ecotoxicity|Freshwater|Electricity;Mt 1;;4-DCB-eq;;;;;;
+1433;Ecotoxicity|Marine;Mt 1;;4-DCB-eq;;;;;;
+1434;Ecotoxicity|Marine|Electricity;Mt 1;;4-DCB-eq;;;;;;
 1435;Emissions|PM2.5;Mt PM2.5;;;;;;Post-processing;;
 1436;Employment;million;;;;;work in progress;;number of employed inhabitants (based on ILO classification);
 1437;Employment|Agriculture;million;;;;;;;number of employed inhabitants (payrolls) in agriculture (based on ILO classification);
@@ -1577,10 +1577,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1442;Food Demand;kcal/cap/day;Nutrition|Calorie Supply;kcal/capita/day;;;;;all food demand in calories (conversion factor: 1 kcal = 4,1868 kJ);M
 1443;Food Demand|Crops;kcal/cap/day;Nutrition|Calorie Supply|+|Crops;kcal/capita/day;;;;;crop related food demand in calories;M
 1444;Food Demand|Livestock;kcal/cap/day;Nutrition|Calorie Supply|+|Livestock products;kcal/capita/day;;;;;livestock related food demand in calories;M
-1445;Food Energy Supply;EJ/yr;TODO;;;;;;total calory food demand;
-1446;Food Energy Supply|Livestock;EJ/yr;TODO;;;;;;calory food demand from livestock products;
-1447;Human Toxicity;Mt 1;TODO;4-DCB-eq;;;;;;
-1448;Human Toxicity|Electricity;Mt 1;TODO;4-DCB-eq;;;;;;
+1445;Food Energy Supply;EJ/yr;;;;;;;total calory food demand;
+1446;Food Energy Supply|Livestock;EJ/yr;;;;;;;calory food demand from livestock products;
+1447;Human Toxicity;Mt 1;;4-DCB-eq;;;;;;
+1448;Human Toxicity|Electricity;Mt 1;;4-DCB-eq;;;;;;
 1449;Population;million;Population;million;;;;exogenous;total population;R
 1450;Population|Clean cooking Access;million;;;;;work in progress;;population with access to clean cooking (e.g. non-solid fuels);
 1451;Population|Democratic rights;million;;;;;;;population with democratic rights (e.g. voiting,association,etc.);
@@ -1705,14 +1705,14 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1569;OM Cost|Fixed|Liquids|Gas|w/o CCS;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new gas to liquids plant w/o CCS. If more than one GTL technology is modelled,modellers should report fixed O&M costs  for each represented GTL technology by adding variables OM Cost|Fixed|Liquids|Gas|w/o CCS|2,... OM Cost|Fixed|Liquids|Gas|w/o CCS|N (with N = number of represented technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet);
 1570;OM Cost|Fixed|Liquids|Oil;US$2010/kW/yr;Tech|Liquids|Fossil|Oil|OM Cost|fixed;US$2005/kW/yr;1.12;;;;Annual fixed operation & maintainance cost of a new oil refining plant. If more than one refinery technology is modelled,modellers should report fixed O&M costs  for each represented refinery technology by adding variables OM Cost|Fixed|Liquids|Oil|2,... OM Cost|Fixed|Liquids|Oil|N (with N = number of represented technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet);R
 1571;Export|Agriculture;billion US$2010/yr;;;;;;;export of agricultural commodities measured in monetary units;
-1572;Export|Energy;billion US$2010/yr;TODO;;;;;Export of primary energy can be computed from REMIND;export of energy commodities measured in monetary units;
+1572;Export|Energy;billion US$2010/yr;;;;;;Export of primary energy can be computed from REMIND;export of energy commodities measured in monetary units;
 1573;Export|Industry;billion US$2010/yr;;;;;;;export of industrial (non-energy) commodities measured in monetary units;
 1574;Export|Industry|Energy;billion US$2010/yr;;;;;;;export of energy commodities measured in monetary units;
 1575;Export|Industry|Energy Intensive;billion US$2010/yr;;;;;;;export of energy intensive commodities measured in monetary units;
 1576;Export|Industry|Manufacturing;billion US$2010/yr;;;;;;;export of manufacturing goods measured in monetary units;
 1577;Export|Other;billion US$2010/yr;;;;;;;export of other commodities measured in monetary units (please provide a definition of the sources in this category in the 'comments' tab);
 1578;Import|Agriculture;billion US$2010/yr;;;;;;;import of agricultural commodities measured in monetary units;
-1579;Import|Energy;billion US$2010/yr;TODO;;;;;Import of primary energy can be computed from REMIND;import of energy commodities measured in monetary units;
+1579;Import|Energy;billion US$2010/yr;;;;;;Import of primary energy can be computed from REMIND;import of energy commodities measured in monetary units;
 1580;Import|Industry;billion US$2010/yr;;;;;;;import of industrial (non-energy) commodities measured in monetary units;
 1581;Import|Industry|Energy;billion US$2010/yr;;;;;;;Import of energy commodities measured in monetary units;
 1582;Import|Industry|Energy Intensive;billion US$2010/yr;;;;;;;Import of energy intensive commodities measured in monetary units;
@@ -1727,29 +1727,29 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1591;Capacity|Transportation|Rail|Passenger;billion pkm/yr;;;;;;;Maximum amount of pkms that can be transported per year by rail;
 1592;Capacity|Transportation|Road|Freight;billion tkm/yr;;;;;;;Maximum amount of tkms that can be transported per year on the road;
 1593;Capacity|Transportation|Road|Passenger;billion pkm/yr;;;;;;;Maximum amount of pkms that can be transported per year on the road;
-1594;Transport|Stock|Aviation;million vehicles;TODO;;;;;;The stock of aircrafts;
-1595;Transport|Stock|Aviation|Freight;million vehicles;TODO;;;;;;The stock of aircrafts,used to transport freight;
-1596;Transport|Stock|Aviation|Passenger;million vehicles;TODO;;;;;;The stock of aircrafts,used to transport passengers;
-1597;Transport|Stock|Maritime;million vehicles;TODO;;;;;;The stock of ships at the reported year;
-1598;Transport|Stock|Maritime|Freight;million vehicles;TODO;;;;;;The stock of freight ships at the reported year;
-1599;Transport|Stock|Rail;million vehicles;TODO;;;;;;The stock of railway vehicles;
-1600;Transport|Stock|Rail|Freight;million vehicles;TODO;;;;;;The stock of railway vehicles,used to transport freight;
-1601;Transport|Stock|Rail|Passenger;million vehicles;TODO;;;;;;The stock of railway vehicles,used to transport passengers;
-1602;Transport|Stock|Road;million vehicles;TODO;;;;;;The stock of road transport vehicles at the reported year;
-1603;Transport|Stock|Road|Freight;million vehicles;TODO;;;;;;The stock of road transport freight vehicles at the reported year;
-1604;Transport|Stock|Road|Passenger;million vehicles;TODO;;;;;;The stock of road transport passenger vehicles at the reported year;
-1605;Transport|Stock|Road|Passenger|2W&3W;million vehicles;TODO;;;;;;The stock of road transport passenger 2W &3W vehicles at the reported year;
+1594;Transport|Stock|Aviation;million vehicles;;;;;;;The stock of aircrafts;
+1595;Transport|Stock|Aviation|Freight;million vehicles;;;;;;;The stock of aircrafts,used to transport freight;
+1596;Transport|Stock|Aviation|Passenger;million vehicles;;;;;;;The stock of aircrafts,used to transport passengers;
+1597;Transport|Stock|Maritime;million vehicles;;;;;;;The stock of ships at the reported year;
+1598;Transport|Stock|Maritime|Freight;million vehicles;;;;;;;The stock of freight ships at the reported year;
+1599;Transport|Stock|Rail;million vehicles;;;;;;;The stock of railway vehicles;
+1600;Transport|Stock|Rail|Freight;million vehicles;;;;;;;The stock of railway vehicles,used to transport freight;
+1601;Transport|Stock|Rail|Passenger;million vehicles;;;;;;;The stock of railway vehicles,used to transport passengers;
+1602;Transport|Stock|Road;million vehicles;;;;;;;The stock of road transport vehicles at the reported year;
+1603;Transport|Stock|Road|Freight;million vehicles;;;;;;;The stock of road transport freight vehicles at the reported year;
+1604;Transport|Stock|Road|Passenger;million vehicles;;;;;;;The stock of road transport passenger vehicles at the reported year;
+1605;Transport|Stock|Road|Passenger|2W&3W;million vehicles;;;;;;;The stock of road transport passenger 2W &3W vehicles at the reported year;
 1606;Transport|Stock|Road|Passenger|Bus;million vehicles;Stock|Transport|Pass|Road|Bus;Million vehicles;;;;;The stock of road transport passenger buses at the reported year;T
 1607;Transport|Stock|Road|Passenger|LDV;million vehicles;Stock|Transport|Pass|Road|LDV;Million vehicles;;;;;The stock of road transport passenger LDVs at the reported year;T
 1608;Final Energy|Residential and Commercial|Commercial|Water|Desalination;EJ/yr;;;;;;;Energy consumption for desalination water;
 1609;Final Energy|Residential and Commercial|Commercial|Water|Groundwater Extraction;EJ/yr;;;;;;;Energy consumption for groundwater extraction;
 1610;Final Energy|Residential and Commercial|Commercial|Water|Surface Water Extraction;EJ/yr;;;;;;;Energy consumption for surface water extraction;
 1611;Final Energy|Residential and Commercial|Commercial|Water|Transfer;EJ/yr;;;;;;;Energy consumption for water transfers;
-1612;Freshwater|Environmental Flow;km3/yr;TODO;;;;;SDG|SDG06|Environmental flow exceedance (percentage of land area) – units do not match;water allocated to environmental flow in rivers and groundwater systems;
+1612;Freshwater|Environmental Flow;km3/yr;;;;;;SDG|SDG06|Environmental flow exceedance (percentage of land area) – units do not match;water allocated to environmental flow in rivers and groundwater systems;
 1613;Improvement|Efficiency|Irrigation;%/yr;;;;;;;improvements in irrigation water use efficiency per year;
 1614;Population|Drinking Water Access;million;;;;;;;population with access to improved drinking water sources (by income level);
 1615;Population|Sanitation Access;million;;;;;;;population with access to improved sanitation (by income level);
-1616;Water Consumption;km3/yr;TODO;;;;work in progress;;total water consumption;
+1616;Water Consumption;km3/yr;;;;;work in progress;;total water consumption;
 1617;Water Consumption|Electricity;km3/yr;Water Consumption|Electricity;km3/yr;;;;;Water consumption for electricity generation;Rx
 1618;Water Consumption|Electricity|Biomass;km3/yr;Water Consumption|Electricity|Biomass;km3/yr;;;work in progress;;water consumption for net electricity production from municipal solid waste;Rx
 1619;Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;Water Consumption|Electricity|Biomass|w/ CCS;km3/yr;;;;;water consumption for net electricity production from municipal solid waste;Rx
@@ -1841,7 +1841,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1705;Water Extraction|Surface Water;km3/yr;;;;;;;water extracted from surface water resources (rivers,lakes ...);
 1706;Water Resource|Brackish Water;km3;;;;;;;anticipated volume of exploitable brackish groundwater resources;
 1707;Water Resource|Groundwater;km3;;;;;;;anticipated volume of exploitable groundwater resources;
-1708;Water Resource|Surface Water;km3;TODO;;;;;;anticipated volume of exploitable surface water resources;
+1708;Water Resource|Surface Water;km3;;;;;;;anticipated volume of exploitable surface water resources;
 1709;Water Thermal Pollution|Electricity|Biomass;EJ/yr;;;;;;;thermal water pollution from net electricity production from municipal solid waste,purpose-grown biomass,crop residues,forest industry waste,biogas;
 1710;Water Thermal Pollution|Electricity|Biomass|w/ CCS;EJ/yr;;;;;;;thermal water pollution from net electricity production from municipal solid waste,purpose-grown biomass,crop residues,forest industry waste with a CO2 capture component;
 1711;Water Thermal Pollution|Electricity|Biomass|w/o CCS;EJ/yr;;;;;;;thermal water pollution from net electricity production from municipal solid waste,purpose-grown biomass,crop residues,forest industry waste with freely vented CO2 emissions;
@@ -1866,7 +1866,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1730;Water Thermal Pollution|Electricity|Solar;EJ/yr;;;;;;;thermal water pollution from net electricity production from all sources of solar energy (e.g.,PV and concentrating solar power);
 1731;Water Thermal Pollution|Electricity|Solar|CSP;EJ/yr;;;;;;;thermal water pollution from net electricity production from concentrating solar power (CSP);
 1732;Water Transfer;km3/yr;;;;;;;water imported/exported using conveyance infrastructure;
-1733;Water Withdrawal;km3/yr;TODO;;;;work in progress;;total water withdrawal;
+1733;Water Withdrawal;km3/yr;;;;;;;total water withdrawal;
 1734;Water Withdrawal|Electricity;km3/yr;Water Withdrawal|Electricity;km3/yr;;;work in progress;;total water withdrawals for net electricity production;Rx
 1735;Water Withdrawal|Electricity|Biomass;km3/yr;Water Withdrawal|Electricity|Biomass;km3/yr;;;work in progress;;water withdrawals for net electricity production from municipal solid waste;Rx
 1736;Water Withdrawal|Electricity|Biomass|w/ CCS;km3/yr;Water Withdrawal|Electricity|Biomass|w/ CCS;km3/yr;;;;;water withdrawals for net electricity production from municipal solid waste;Rx
