@@ -6,7 +6,8 @@
 #' @param vec2 units to be checked against vec1, elementwise
 #' @return boolean
 #' @export
-areUnitsIdentical <- function(vec1, vec2) {
+areUnitsIdentical <- function(vec1, vec2 = NULL) {
+  if (is.null(vec2)) vec2 <- head(vec1)
   # only add units that actually have the same meaning, just different spelling
   abbreviations <- list(
     "bn" = "billion",
