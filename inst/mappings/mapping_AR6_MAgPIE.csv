@@ -131,7 +131,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 116;Forcing|Tropospheric Ozone;W/m2;;;;;;;total radiative forcing from tropospheric ozone
 117;Temperature|Global Mean;°C;;;;;;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab
 118;Capital Formation;billion US$2010/yr;;;;;;might not fit completely;net additions to the physical capital stock
-119;Capital Stock;billion US$2010/yr;;;;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND;TODO: report yearly value,Macroeconomic capital stock
+119;Capital Stock;billion US$2010/yr;;;;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND, report yearly value;Macroeconomic capital stock
 120;Consumption;billion US$2010/yr;;;;;;quality depends on capital market realization (switch);total consumption of all goods,by all consumers in a region
 121;Discount rate|Residential and Commercial;%;;;;;;;Discount rate for investments into residential and commercial buildings
 122;Discount rate|Economy;%;;;;;;;Economy wide discount rate: real interest rate of capital
@@ -1670,14 +1670,14 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 1569;OM Cost|Fixed|Liquids|Gas|w/o CCS;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new gas to liquids plant w/o CCS. If more than one GTL technology is modelled,modellers should report fixed O&M costs  for each represented GTL technology by adding variables OM Cost|Fixed|Liquids|Gas|w/o CCS|2,... OM Cost|Fixed|Liquids|Gas|w/o CCS|N (with N = number of represented technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).
 1570;OM Cost|Fixed|Liquids|Oil;US$2010/kW/yr;;;;;;;Annual fixed operation & maintainance cost of a new oil refining plant. If more than one refinery technology is modelled,modellers should report fixed O&M costs  for each represented refinery technology by adding variables OM Cost|Fixed|Liquids|Oil|2,... OM Cost|Fixed|Liquids|Oil|N (with N = number of represented technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).
 1571;Export|Agriculture;billion US$2010/yr;;;;;;;export of agricultural commodities measured in monetary units.
-1572;Export|Energy;billion US$2010/yr;TODO;;;;;Export of primary energy can be computed from REMIND;export of energy commodities measured in monetary units.
+1572;Export|Energy;billion US$2010/yr;;;;;;Export of primary energy can be computed from REMIND;export of energy commodities measured in monetary units.
 1573;Export|Industry;billion US$2010/yr;;;;;;;export of industrial (non-energy) commodities measured in monetary units.
 1574;Export|Industry|Energy;billion US$2010/yr;;;;;;;export of energy commodities measured in monetary units.
 1575;Export|Industry|Energy Intensive;billion US$2010/yr;;;;;;;export of energy intensive commodities measured in monetary units.
 1576;Export|Industry|Manufacturing;billion US$2010/yr;;;;;;;export of manufacturing goods measured in monetary units.
 1577;Export|Other;billion US$2010/yr;;;;;;;export of other commodities measured in monetary units (please provide a definition of the sources in this category in the 'comments' tab).
 1578;Import|Agriculture;billion US$2010/yr;;;;;;;import of agricultural commodities measured in monetary units.
-1579;Import|Energy;billion US$2010/yr;TODO;;;;;Import of primary energy can be computed from REMIND;import of energy commodities measured in monetary units.
+1579;Import|Energy;billion US$2010/yr;;;;;;;import of energy commodities measured in monetary units.
 1580;Import|Industry;billion US$2010/yr;;;;;;;import of industrial (non-energy) commodities measured in monetary units.
 1581;Import|Industry|Energy;billion US$2010/yr;;;;;;;Import of energy commodities measured in monetary units.
 1582;Import|Industry|Energy Intensive;billion US$2010/yr;;;;;;;Import of energy intensive commodities measured in monetary units.
