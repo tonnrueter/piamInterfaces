@@ -15,7 +15,7 @@ for (mapping in names(mappingNames())) {
   test_that(paste0("checkVarNames in mapping ", mapping), {
     mappingData <- getMapping(mapping)
     expect_no_warning(checkVarNames(paste0(mappingData$variable, " (", mappingData$unit, ")")))
-    mpiam <- dplyr::filter(mappingData, ! is.na(.data$piam_variable), .data$piam_variable != "TODO")
+    mpiam <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
     expect_no_warning(checkVarNames(paste0(mpiam$piam_variable, " (", mpiam$piam_unit, ")")))
   })
 }

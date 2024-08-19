@@ -71,15 +71,16 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Commercial;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in commercial and institutional sectors (IPCC category 1A4a);;;;;0;;
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Residential;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in residential (IPCC category 1A4b);;;;;0;;
 1;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in transportation sector (IPCC category 1A3), excluding pipeline emissions (IPCC category 1A3ei), excluding emissions from international bunkers (IPCC category 1A3ai and 1A3di) on sub-global level, including bunker fuels on global level;Emi|CO2|Energy|Demand|+|Transport;Mt CO2/yr;1;;0;;R
-2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by light duty vehicles;Emi|CO2|Transport|Pass|Road|LDV|Demand;Mt CO2/yr;1;;0;;T
-2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Truck;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by trucks;Emi|CO2|Transport|Freight|Road|Demand;Mt CO2/yr;1;;0;;T
-2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by buses;Emi|CO2|Transport|Pass|Road|Bus|Demand;Mt CO2/yr;1;;0;;T
-2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by trains;Emi|CO2|Transport|Rail|Demand;Mt CO2/yr;1;;0;;T
-2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Aviation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by domestic aviation;Emi|CO2|Transport|Pass|Aviation|Domestic|Demand;Mt CO2/yr;1;;0;;T
+2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|LDV;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by light duty vehicles;Emi|CO2|Energy|Demand|Transport|Pass|Road|LDV;Mt CO2/yr;1;;0;;T
+2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Truck;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by trucks;Emi|CO2|Energy|Demand|Transport|Freight|Road;Mt CO2/yr;1;;0;;T
+2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Bus;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by buses;Emi|CO2|Energy|Demand|Transport|Pass|Road|Bus;Mt CO2/yr;1;;0;;T
+2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Rail;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by trains;;;;;0;;
+2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Aviation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by domestic aviation;Emi|CO2|Energy|Demand|Transport|Pass|Domestic Aviation;Mt CO2/yr;1;;0;;T
+2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Domestic Navigation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by domestic navigation;;;;;0;;
 2;emissions (CO2);Emissions|CO2|Energy|Demand|Transportation|Other transport;Mt CO2/yr;Fossil CO2 emissions from fuel combustion by other transport modes;;;;;0;;
 1;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers;Mt CO2/yr;Fossil CO2 emissions from fuel combustion from international bunkers (IPCC category 1A3ai and 1A3di);Emi|CO2|Energy|Demand|Transport|International Bunkers;Mt CO2/yr;1;;0;;R
-1;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|Aviation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in transportation sector: bunkers - Aviation (IPCC category 1A3ai);Emi|CO2|Transport|Pass|Aviation|International|Demand;Mt CO2/yr;1;;0;;T
-1;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|Navigation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in transportation sector: bunkers - Navigation (IPCC category 1A3di);Emi|CO2|Transport|Freight|International Shipping|Demand;Mt CO2/yr;1;;0;;T
+1;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|Aviation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in transportation sector: bunkers - Aviation (IPCC category 1A3ai);Emi|CO2|Energy|Demand|Transport|Bunkers|Pass|International Aviation;Mt CO2/yr;1;;0;;T
+1;emissions (CO2);Emissions|CO2|Energy|Demand|Bunkers|Navigation;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in transportation sector: bunkers - Navigation (IPCC category 1A3di);Emi|CO2|Energy|Demand|Transport|Bunkers|Freight|International Shipping;Mt CO2/yr;1;;0;;T
 1;emissions (CO2);Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Fossil CO2 emissions from fuel combustion in other energy supply sectors (please provide a definition of other sources in this category in the 'comments' tab);;;;;0;;
 1;emissions (CO2);Emissions|CO2|Energy|Supply;Mt CO2/yr;Fossil CO2 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g. refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei), fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C), net of negative emissions from Bioenergy with CCS (BECCS), exc. industrial autoproduction;Emi|CO2|Energy|+|Supply;Mt CO2/yr;1;;0;;R
 1;emissions (CO2);Emissions|CO2|Energy|Supply;Mt CO2/yr;Fossil CO2 emissions from fuel combustion and fugitive emissions from fuels: electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g. refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei), fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C), net of negative emissions from Bioenergy with CCS (BECCS), exc. industrial autoproduction;Emi|CO2|Energy|Supply|Electricity|Autoproducer;Mt CO2/yr;-1;;0;;Rx
@@ -555,7 +556,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (industry);Final Energy|Non-Energy Use|Hydrogen;PJ/yr;Final energy consumption of hydrogen by the non-combustion processes;;;;;0;;
 2;energy (industry);Final Energy|Non-Energy Use|Waste;PJ/yr;Final energy consumption of non-renewable waste by the non-combustion processes;;;;;0;;
 2;energy (industry);Final Energy|Non-Energy Use|Other;PJ/yr;Final energy consumption of other feedstocks by the non-combustion processes (please provide a definition of the feedstocks in this category in the 'comments' tab);;;;;0;;
-2;energy (industry);Final Energy|Non-Energy Use|Chemicals;PJ/yr;Final energy consumption in the chemical sector by the non-combustion processes;FE|Non-energy Use|Industry;EJ/yr;1000;;0;;R
+2;energy (industry);Final Energy|Non-Energy Use|Chemicals;PJ/yr;Final energy consumption in the chemical sector by the non-combustion processes;FE|Non-energy Use|+|Industry;EJ/yr;1000;;0;;R
 2;energy (industry);Final Energy|Non-Energy Use|Chemicals|Gases;PJ/yr;Final energy consumption of gases by the chemical sector by the non-combustion processes;FE|Non-energy Use|Industry|+|Gases;EJ/yr;1000;Currently, all non-energy use in REMIND occurs in the chemicals sector;0;;R
 3;energy (industry);Final Energy|Non-Energy Use|Chemicals|Gases|Natural Gas;PJ/yr;Final energy consumption of natural gas by the chemical sector by the non-combustion processes;;;;;0;;
 3;energy (industry);Final Energy|Non-Energy Use|Chemicals|Gases|Biomass;PJ/yr;Final energy consumption of biogas by the chemical sector by the non-combustion processes;;;;;0;;
@@ -891,6 +892,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (buildings);Final Energy|Residential and Commercial;PJ/yr;final energy consumed in the residential & commercial sector, ambient heat is not included here;FE|++|Buildings;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Ambient Heat;PJ/yr;final energy consumption by the residential & commercial sector of ambient heat, this variable is not included into the total final energy of the residential and commercial sector;;;;;0;;
 1;energy (buildings);Final Energy|Residential and Commercial|Electricity;PJ/yr;final energy consumption by the residential & commercial sector of electricity (including on-site solar PV), excluding transmission/distribution losses;FE|Buildings|+|Electricity;EJ/yr;1000;;0;;R
+1;energy (buildings);Final Energy|Residential and Commercial|Electricity|Heat Pumps;PJ/yr;final energy consumption by the residential & commercial sector of electricity (including on-site solar PV) for heat pumps, excluding transmission/distribution losses;;;;;0;;
 1;energy (buildings);Final Energy|Residential and Commercial|Gases;PJ/yr;final energy consumption by the residential & commercial sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;FE|Buildings|+|Gases;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Gases|Natural Gas;PJ/yr;final energy consumption by the residential & commercial sector of natural gas;FE|Buildings|Gases|+|Fossil;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Gases|Biomass;PJ/yr;final energy consumption by the residential & commercial sector of biogas;FE|Buildings|Gases|+|Biomass;EJ/yr;1000;;0;;R
@@ -912,12 +914,12 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (buildings);Final Energy|Residential and Commercial|Appliances and Lighting;PJ/yr;Final energy consumed in the Appliances and Lighting sector;FE|Buildings|non-Heating|Electricity|Conventional;EJ/yr;1000;;0;;R
 3;energy (buildings);Final Energy|Residential and Commercial|Appliances and Lighting|Electricity;PJ/yr;Final energy consumption of electricity by the Appliances and Lighting sector (including on-site solar PV), excluding transmission/distribution losses;FE|Buildings|non-Heating|Electricity|Conventional;EJ/yr;1000;;0;;R
 3;energy (buildings);Final Energy|Residential and Commercial|Appliances and Lighting|Other;PJ/yr;Final energy consumption of other sources that do not fit to any other category by the Appliances and Lighting sector;;;;;0;;
-2;energy (buildings);Final Energy|Residential and Commercial|Water Heating;PJ/yr;Final energy consumed in the Water Heating sector;;;;;0;;
+1;energy (buildings);Final Energy|Residential and Commercial|Water Heating;PJ/yr;Final energy consumed in the Water Heating sector;;;;;0;;
 2;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Electricity;PJ/yr;Final energy consumption of electricity by the Water Heating sector (including on-site solar PV), excluding transmission/distribution losses;;;;;0;;
-3;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity by Water Heating provided from electric heat pumps;;;;;0;;
+1;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity by Water Heating provided from electric heat pumps;;;;;0;;
 3;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Electricity|Resistive;PJ/yr;Final energy consumption of electricity by Water Heating provided from electric resistive heat;;;;;0;;
 2;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Gases;PJ/yr;Final energy consumption of gases by the Water Heating sector (natural gas, biogas, coal-gas), excluding transmission/distribution losses;;;;;0;;
-2;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Heat;PJ/yr;Final energy consumption of heat by the Water Heating sector (e.g., district heat, process heat and warm water), excluding transmission/distribution losses;;;;;0;;
+1;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Heat;PJ/yr;Final energy consumption of heat by the Water Heating sector (e.g., district heat, process heat and warm water), excluding transmission/distribution losses;;;;;0;;
 2;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Hydrogen;PJ/yr;Final energy consumption of hydrogen by the Water Heating sector;;;;;0;;
 2;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Liquids;PJ/yr;Final energy consumption of refined liquids by the Water Heating sector (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);;;;;0;;
 2;energy (buildings);Final Energy|Residential and Commercial|Water Heating|Other;PJ/yr;Final energy consumption of other sources that do not fit to any other category by the Water Heating sector;;;;;0;;
@@ -935,28 +937,40 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (buildings);Final Energy|Residential and Commercial|Space Cooling|Heat;PJ/yr;Final energy consumption of heat by the Space Cooling sector (e.g., district heat, process heat and warm water), excluding transmission/distribution losses;;;;;0;;
 3;energy (buildings);Final Energy|Residential and Commercial|Space Cooling|Hydrogen;PJ/yr;Final energy consumption of hydrogen by the Space Cooling sector;;;;;0;;
 3;energy (buildings);Final Energy|Residential and Commercial|Space Cooling|Other;PJ/yr;Final energy consumption of other sources that do not fit to any other category by the Space Cooling sector;;;;;0;;
-2;energy (buildings);Final Energy|Residential and Commercial|Space Heating;PJ/yr;final energy consumed for space heating in residential and commercial buildings;;;;;0;;
+1;energy (buildings);Final Energy|Residential and Commercial|Space Heating;PJ/yr;final energy consumed for space heating in residential and commercial buildings;;;;;0;;
 2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Electricity;PJ/yr;Final energy consumption of electricity by the Space Heating sector (including on-site solar PV), excluding transmission/distribution losses;;;;;0;;
-2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity by Space Heating provided from electric heat pumps;FE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1000;;0;;R
+1;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity by Space Heating provided from electric heat pumps;FE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Electricity|Resistive;PJ/yr;Final energy consumption of electricity by Space Heating provided from electric resistive heat;FE|Buildings|Heating|Electricity|Resistance;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Gases;PJ/yr;Final energy consumption of gases by the Space Heating sector (natural gas, biogas, coal-gas), excluding transmission/distribution losses;FE|Buildings|Gases|Fossil|+|Natural Gas;EJ/yr;1000;;0;;R
-2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Heat;PJ/yr;Final energy consumption of heat by the Space Heating sector (e.g., district heat, process heat and warm water), excluding transmission/distribution losses;FE|Buildings|Heating|District Heating;EJ/yr;1000;;0;;R
+1;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Heat;PJ/yr;Final energy consumption of heat by the Space Heating sector (e.g., district heat, process heat and warm water), excluding transmission/distribution losses;FE|Buildings|Heating|District Heating;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Hydrogen;PJ/yr;Final energy consumption of hydrogen by the Space Heating sector;FE|Buildings|Gases|+|Hydrogen;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Liquids;PJ/yr;Final energy consumption of refined liquids by the Space Heating sector (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);FE|Buildings|Heating|Liquids;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Solids;PJ/yr;Final energy solid fuel consumption by the Space Heating sector (including coal and solid biomass);FE|Buildings|Heating|Solids;EJ/yr;1000;;0;;R
 2;energy (buildings);Final Energy|Residential and Commercial|Space Heating|Other;PJ/yr;Final energy consumption of other sources that do not fit to any other category by the Space Heating sector;;;;;0;;
 2;energy (buildings);Final Energy|Residential and Commercial|Non-Heating|Electricity;PJ/yr;Final energy consumption of electricity by the residential & commercial sector for all non-heating applications, excluding transmission/distribution losses;FE|Buildings|non-Heating|Electricity|Conventional;EJ/yr;1000;;0;;R
-2;energy (buildings);Final Energy|Residential and Commercial|Space and Water Heating;PJ/yr;Final energy consumed for space heating in residential and commercial buildings and final energy consumed in the Water Heating sector;FE|Buildings|Heating;EJ/yr;1000;;0;;R
+1;energy (buildings);Final Energy|Residential and Commercial|Space and Water Heating;PJ/yr;Final energy consumed for space and water heating in residential and commercial buildings;FE|Buildings|Heating;EJ/yr;1000;;0;;R
+1;energy (buildings);Final Energy|Residential and Commercial|Space and Water Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity for heat pumps for space and water heating in residential and commercial buildings;;;;;0;;
+1;energy (buildings);Final Energy|Residential and Commercial|Space and Water Heating|Heat;PJ/yr;Final energy consumption of heat for space and water heating in residential and commercial buildings;;;;;0;;
 2;energy (buildings);Final Energy|Residential;PJ/yr;final energy consumption by the residential sector;;;;;0;;
 3;energy (buildings);Final Energy|Residential|Electricity;PJ/yr;final energy consumption by the residential sector of electricity (including on-site solar PV), excluding transmission/distribution losses;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Electricity|Heat Pumps;PJ/yr;final energy consumption by the residential sector of electricity (including on-site solar PV) for heat pumps, excluding transmission/distribution losses;;;;;0;;
 3;energy (buildings);Final Energy|Residential|Gases;PJ/yr;final energy consumption by the residential sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;;;;;0;;
-3;energy (buildings);Final Energy|Residential|Heat;PJ/yr;final energy consumption by the residential sector of heat (e.g., district heat, process heat, solar heating and warm water), excluding transmission/distribution losses;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Heat;PJ/yr;final energy consumption by the residential sector of heat (e.g., district heat, process heat, solar heating and warm water), excluding transmission/distribution losses;;;;;0;;
 3;energy (buildings);Final Energy|Residential|Hydrogen;PJ/yr;final energy consumption by the residential sector of hydrogen;;;;;0;;
 3;energy (buildings);Final Energy|Residential|Liquids;PJ/yr;final energy consumption by the residential sector of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);;;;;0;;
 3;energy (buildings);Final Energy|Residential|Other;PJ/yr;final energy consumption by the residential sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);;;;;0;;
 3;energy (buildings);Final Energy|Residential|Renewables;PJ/yr;final energy consumption by the residential sector of renewables (geothermal, solarthermal, solid biomass, biofuels, biogas);;;;;0;;
 3;energy (buildings);Final Energy|Residential|Solids;PJ/yr;final energy solid fuel consumption by the residential sector (including coal and solid biomass);;;;;0;;
 3;energy (buildings);Final Energy|Residential|Waste;PJ/yr;final energy consumption by the residential sector of waste;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Space Heating;PJ/yr;Final energy consumption for space heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Space Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity for heat pumps for space heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Space Heating|Heat;PJ/yr;Final energy consumption of heat for space heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Water Heating;PJ/yr;Final energy consumption for water heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Water Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity for heat pumps for water heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Water Heating|Heat;PJ/yr;Final energy consumption of heat for water heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Space and Water Heating;PJ/yr;Final energy consumption for space and water heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Space and Water Heating|Electricity|Heat Pumps;PJ/yr;Final energy consumption of electricity for heat pumps for space and water heating in residential buildings;;;;;0;;
+2;energy (buildings);Final Energy|Residential|Space and Water Heating|Heat;PJ/yr;Final energy consumption of heat for space and water heating in residential buildings;;;;;0;;
 2;energy (buildings);Final Energy|Commercial;PJ/yr;final energy consumed in the commercial sector;;;;;0;;
 3;energy (buildings);Final Energy|Commercial|Electricity;PJ/yr;final energy consumption by the commercial sector of electricity (including on-site solar PV), excluding transmission/distribution losses;;;;;0;;
 3;energy (buildings);Final Energy|Commercial|Gases;PJ/yr;final energy consumption by the commercial sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;;;;;0;;
@@ -988,21 +1002,21 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Final Energy|Bunkers|Liquids|Petroleum;PJ/yr;final energy consumption of liquids from fossil origin (conventional & unconventional petroleum) as bunker fuels;;;;;0;;
 3;energy (transport);Final Energy|Bunkers|Liquids;PJ/yr;final energy consumption of liquid bunker fuels in international aviation and navigation (IPCC category 1A3ai and 1A3di);FE|Transport|Bunkers|+|Liquids;EJ/yr;1000;;0;;R
 3;energy (transport);Final Energy|Bunkers|Hydrogen;PJ/yr;final energy consumption of hydrogen in international aviation and navigation (IPCC category 1A3ai and 1A3di);;;;;0;;
-2;energy (transport);Final Energy|Bunkers|Aviation;PJ/yr;final energy consumption of bunker fuels for aviation;FE|Transport|Pass|Aviation|International;EJ/yr;1000;;0;;T
-2;energy (transport);Final Energy|Bunkers|Aviation|Liquids;PJ/yr;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels) as bunker fuels for aviation;FE|Transport|Pass|Aviation|International|Liquids;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Bunkers|Aviation|Liquids|Biomass;PJ/yr;final energy consumption of liquid biofuels as bunker fuels for aviation;FE|Transport|Pass|Aviation|International|Liquids|Biomass;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Bunkers|Aviation;PJ/yr;final energy consumption of bunker fuels for aviation;FE|Transport|Bunkers|Pass|International Aviation;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Bunkers|Aviation|Liquids;PJ/yr;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels) as bunker fuels for aviation;FE|Transport|Bunkers|Pass|International Aviation|Liquids;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Bunkers|Aviation|Liquids|Biomass;PJ/yr;final energy consumption of liquid biofuels as bunker fuels for aviation;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Biomass;EJ/yr;1000;;0;;T
 3;energy (transport);Final Energy|Bunkers|Aviation|Liquids|Synthetic Fossil;PJ/yr;final energy consumption of synthetic liquids of fossil origin (e.g. coal or gas liquefaction) as bunker fuels for aviation;;;;;0;;
-3;energy (transport);Final Energy|Bunkers|Aviation|Liquids|Efuel;PJ/yr;final energy consumption of synthetic liquid efuels (power-to-liquid) as bunker fuels for aviation;FE|Transport|Pass|Aviation|International|Liquids|Hydrogen;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Bunkers|Aviation|Liquids|Petroleum;PJ/yr;final energy consumption of liquids from fossil origin (conventional & unconventional petroleum) as bunker fuels for aviation;FE|Transport|Pass|Aviation|International|Liquids|Fossil;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Bunkers|Aviation|Liquids|Efuel;PJ/yr;final energy consumption of synthetic liquid efuels (power-to-liquid) as bunker fuels for aviation;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Hydrogen;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Bunkers|Aviation|Liquids|Petroleum;PJ/yr;final energy consumption of liquids from fossil origin (conventional & unconventional petroleum) as bunker fuels for aviation;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Fossil;EJ/yr;1000;;0;;T
 3;energy (transport);Final Energy|Bunkers|Aviation|Hydrogen;PJ/yr;final energy consumption of hydrogen as bunker fuels for aviation;;;;;0;;
 3;energy (transport);Final Energy|Bunkers|Aviation|Outside EU;PJ/yr;final energy consumption of bunker fuels for aviation - outside EU;;;;;0;;
 3;energy (transport);Final Energy|Bunkers|Aviation|Within EU;PJ/yr;final energy consumption of bunker fuels for aviation - within EU;;;;;0;;
-2;energy (transport);Final Energy|Bunkers|Navigation;PJ/yr;final energy consumption of bunker fuels for navigation;FE|Transport|Freight|International Shipping;EJ/yr;1000;;0;;T
-2;energy (transport);Final Energy|Bunkers|Navigation|Liquids;PJ/yr;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels) as bunker fuels for navigation;FE|Transport|Freight|International Shipping|Liquids;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Bunkers|Navigation|Liquids|Biomass;PJ/yr;final energy consumption of liquid biofuels as bunker fuels for navigation;FE|Transport|Freight|International Shipping|Liquids|Biomass;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Bunkers|Navigation;PJ/yr;final energy consumption of bunker fuels for navigation;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Bunkers|Navigation|Liquids;PJ/yr;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels) as bunker fuels for navigation;FE|Transport|Bunkers|Freight|International Shipping|Liquids;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Bunkers|Navigation|Liquids|Biomass;PJ/yr;final energy consumption of liquid biofuels as bunker fuels for navigation;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass;EJ/yr;1000;;0;;T
 3;energy (transport);Final Energy|Bunkers|Navigation|Liquids|Synthetic Fossil;PJ/yr;final energy consumption of synthetic liquids of fossil origin (e.g. coal or gas liquefaction) as bunker fuels for navigation;;;;;0;;
-3;energy (transport);Final Energy|Bunkers|Navigation|Liquids|Efuel;PJ/yr;final energy consumption of synthetic liquid efuels (power-to-liquid) as bunker fuels for navigation;FE|Transport|Freight|International Shipping|Liquids|Hydrogen;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Bunkers|Navigation|Liquids|Petroleum;PJ/yr;final energy consumption of liquids from fossil origin (conventional & unconventional petroleum) as bunker fuels for navigation;FE|Transport|Freight|International Shipping|Liquids|Fossil;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Bunkers|Navigation|Liquids|Efuel;PJ/yr;final energy consumption of synthetic liquid efuels (power-to-liquid) as bunker fuels for navigation;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Hydrogen;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Bunkers|Navigation|Liquids|Petroleum;PJ/yr;final energy consumption of liquids from fossil origin (conventional & unconventional petroleum) as bunker fuels for navigation;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Fossil;EJ/yr;1000;;0;;T
 2;energy (transport);Final Energy|Bunkers|Navigation|Gases;PJ/yr;final energy consumption of gases (natural gas, biogas, coal-gas) as bunker fuels for navigation;;;;;0;;
 2;energy (transport);Final Energy|Bunkers|Navigation|Hydrogen;PJ/yr;final energy consumption of hydrogen as bunker fuels for navigation;;;;;0;;
 3;energy (transport);Final Energy|Transportation|Renewables;PJ/yr;final energy consumption by the transportation sector of renewables (solid biomass, biofuels, biogas, green e-fuels);;;;;0;;
@@ -1049,21 +1063,21 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (transport);Final Energy|Transportation|Rail|Electricity;PJ/yr;final energy consumption by trains of electricity;FE|Transport|Freight|Rail|Electricity;EJ/yr;1000;;0;;T
 2;energy (transport);Final Energy|Transportation|Rail|Passenger;PJ/yr;final energy consumption by trains for passenger transport;FE|Transport|Pass|Rail;EJ/yr;1000;;0;;T
 2;energy (transport);Final Energy|Transportation|Rail|Freight;PJ/yr;final energy consumption by trains for freight transport;FE|Transport|Freight|Rail;EJ/yr;1000;;0;;T
-2;energy (transport);Final Energy|Transportation|Domestic Aviation;PJ/yr;final energy consumption by domestic aviation;FE|Transport|Pass|Aviation|Domestic;EJ/yr;1000;;0;;T
-2;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids;PJ/yr;final energy consumption by domestic aviation of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);FE|Transport|Pass|Aviation|Domestic|Liquids;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids|Biomass;PJ/yr;final energy consumption by domestic aviation of liquid biofuels;FE|Transport|Pass|Aviation|Domestic|Liquids|Biomass;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Transportation|Domestic Aviation;PJ/yr;final energy consumption by domestic aviation;FE|Transport|Pass|Domestic Aviation;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids;PJ/yr;final energy consumption by domestic aviation of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);FE|Transport|Pass|Domestic Aviation|Liquids;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids|Biomass;PJ/yr;final energy consumption by domestic aviation of liquid biofuels;FE|Transport|Pass|Domestic Aviation|Liquids|Biomass;EJ/yr;1000;;0;;T
 3;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids|Synthetic Fossil;PJ/yr;final energy consumption by domestic aviation of synthetic liquids of fossil origin (e.g. coal or gas liquefaction);;;;;0;;
-3;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids|Efuel;PJ/yr;final energy consumption by domestic aviation of synthetic liquid efuels (power-to-liquid);FE|Transport|Pass|Aviation|Domestic|Liquids|Hydrogen;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids|Petroleum;PJ/yr;final energy consumption by domestic aviation of liquids from fossil origin (conventional & unconventional petroleum);FE|Transport|Pass|Aviation|Domestic|Liquids|Fossil;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids|Efuel;PJ/yr;final energy consumption by domestic aviation of synthetic liquid efuels (power-to-liquid);FE|Transport|Pass|Domestic Aviation|Liquids|Hydrogen;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Transportation|Domestic Aviation|Liquids|Petroleum;PJ/yr;final energy consumption by domestic aviation of liquids from fossil origin (conventional & unconventional petroleum);FE|Transport|Pass|Domestic Aviation|Liquids|Fossil;EJ/yr;1000;;0;;T
 2;energy (transport);Final Energy|Transportation|Domestic Aviation|Gases;PJ/yr;final energy consumption by domestic aviation of gases (natural gas, biogas, coal-gas);;;;;0;;
-2;energy (transport);Final Energy|Transportation|Domestic Aviation|Hydrogen;PJ/yr;final energy consumption by domestic aviation of hydrogen;FE|Transport|Pass|Aviation|Domestic|Hydrogen;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Transportation|Domestic Aviation|Hydrogen;PJ/yr;final energy consumption by domestic aviation of hydrogen;FE|Transport|Pass|Domestic Aviation|Hydrogen;EJ/yr;1000;;0;;T
 2;energy (transport);Final Energy|Transportation|Domestic Aviation|Electricity;PJ/yr;final energy consumption by domestic aviation of electricity;;;;;0;;
-2;energy (transport);Final Energy|Transportation|Domestic Navigation;PJ/yr;final energy consumption by domestic navigation;FE|Transport|Freight|Navigation;EJ/yr;1000;;0;;T
-2;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids;PJ/yr;final energy consumption by domestic navigation of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);FE|Transport|Freight|Navigation|Liquids;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids|Biomass;PJ/yr;final energy consumption by domestic navigation of liquid biofuels;FE|Transport|Freight|Navigation|Liquids|Biomass;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Transportation|Domestic Navigation;PJ/yr;final energy consumption by domestic navigation;FE|Transport|Freight|Domestic Shipping;EJ/yr;1000;;0;;T
+2;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids;PJ/yr;final energy consumption by domestic navigation of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids, efuels);FE|Transport|Freight|Domestic Shipping|Liquids;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids|Biomass;PJ/yr;final energy consumption by domestic navigation of liquid biofuels;FE|Transport|Freight|Domestic Shipping|Liquids|Biomass;EJ/yr;1000;;0;;T
 3;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids|Synthetic Fossil;PJ/yr;final energy consumption by domestic navigation of synthetic liquids of fossil origin (e.g. coal or gas liquefaction);;;;;0;;
-3;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids|Efuel;PJ/yr;final energy consumption by domestic navigation of synthetic liquid efuels (power-to-liquid);FE|Transport|Freight|Navigation|Liquids|Hydrogen;EJ/yr;1000;;0;;T
-3;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids|Petroleum;PJ/yr;final energy consumption by domestic navigation of liquids from fossil origin (conventional & unconventional petroleum);FE|Transport|Freight|Navigation|Liquids|Fossil;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids|Efuel;PJ/yr;final energy consumption by domestic navigation of synthetic liquid efuels (power-to-liquid);FE|Transport|Freight|Domestic Shipping|Liquids|Hydrogen;EJ/yr;1000;;0;;T
+3;energy (transport);Final Energy|Transportation|Domestic Navigation|Liquids|Petroleum;PJ/yr;final energy consumption by domestic navigation of liquids from fossil origin (conventional & unconventional petroleum);FE|Transport|Freight|Domestic Shipping|Liquids|Fossil;EJ/yr;1000;;0;;T
 2;energy (transport);Final Energy|Transportation|Domestic Navigation|Gases;PJ/yr;final energy consumption by domestic navigation of gases (natural gas, biogas, coal-gas);;;;;0;;
 2;energy (transport);Final Energy|Transportation|Domestic Navigation|Hydrogen;PJ/yr;final energy consumption by domestic navigation of hydrogen;;;;;0;;
 2;energy (transport);Final Energy|Transportation|Domestic Navigation|Electricity;PJ/yr;final energy consumption by domestic navigation of electricity;;;;;0;;
@@ -1350,6 +1364,30 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (supply);Secondary Energy|Solids;PJ/yr;solid secondary energy carriers (e.g., briquettes, coke, wood chips, wood pellets);SE|Solids;EJ/yr;1000;;0;;R
 1;energy (supply);Secondary Energy|Solids|Biomass;PJ/yr;solid secondary energy carriers produced from biomass (e.g., commercial charcoal, wood chips, wood pellets). Tradional bioenergy use is excluded.;SE|Solids|+|Biomass;EJ/yr;1000;;0;;R
 1;energy (supply);Secondary Energy|Solids|Coal;PJ/yr;Solid secondary energy derived from coal (e.g., briquettes, coke) for the usage in the buildings, transport and industry sector. This does not include the usage of coal for energy conversion into other (non-solid) secondary energy.;SE|Solids|+|Coal;EJ/yr;1000;;0;;R
+1;energy (buildings);Useful Energy|Residential and Commercial;PJ/yr;Useful Energy consumption by the residential & commercial sector;UE|Buildings;EJ/yr;1000;;0;;R
+1;energy (buildings);Useful Energy|Residential and Commercial|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption by the residential & commercial sector of electricity (including on-site solar PV) for heat pumps, excluding transmission/distribution losses;UE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1000;;0;;R
+1;energy (buildings);Useful Energy|Residential and Commercial|Heat;PJ/yr;Useful Energy consumption by the residential & commercial sector of heat (e.g., district heat, process heat and warm water), excluding transmission/distribution losses, excluding ambient heat;UE|Buildings|Heating|District Heating;EJ/yr;1000;;0;;R
+1;energy (buildings);Useful Energy|Residential and Commercial|Water Heating;PJ/yr;Useful Energy consumption by Water Heating;;;;;0;;
+1;energy (buildings);Useful Energy|Residential and Commercial|Water Heating|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption of electricity by Water Heating provided from electric heat pumps;;;;;0;;
+1;energy (buildings);Useful Energy|Residential and Commercial|Water Heating|Heat;PJ/yr;Useful Energy consumption of heat by the Water Heating sector (e.g., district heat, process heat and warm water), excluding transmission/distribution losses;;;;;0;;
+1;energy (buildings);Useful Energy|Residential and Commercial|Space Heating;PJ/yr;Useful Energy consumptionby Space Heating;;;;;0;;
+1;energy (buildings);Useful Energy|Residential and Commercial|Space Heating|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption of electricity by Space Heating provided from electric heat pumps;;;;;0;;
+1;energy (buildings);Useful Energy|Residential and Commercial|Space Heating|Heat;PJ/yr;Useful Energy consumption of heat by the Space Heating sector (e.g., district heat, process heat and warm water), excluding transmission/distribution losses;;;;;0;;
+1;energy (buildings);Useful Energy|Residential and Commercial|Space and Water Heating;PJ/yr;Useful Energy consumption for space and water heating in residential and commercial buildings;UE|Buildings|Heating;EJ/yr;1000;;0;;R
+1;energy (buildings);Useful Energy|Residential and Commercial|Space and Water Heating|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption of electricity for heat pumps for space and water heating in residential and commercial buildings;UE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1000;;0;;R
+1;energy (buildings);Useful Energy|Residential and Commercial|Space and Water Heating|Heat;PJ/yr;Useful Energy consumption of heat for space and water heating in residential and commercial buildings;UE|Buildings|Heating|District Heating;EJ/yr;1000;;0;;R
+2;energy (buildings);Useful Energy|Residential;PJ/yr;Useful Energy consumption by the residential sector;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption by the residential sector of electricity (including on-site solar PV) for heat pumps, excluding transmission/distribution losses;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Heat;PJ/yr;Useful Energy consumption by the residential sector of heat (e.g., district heat, process heat, solar heating and warm water), excluding transmission/distribution losses;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Space Heating;PJ/yr;Useful Energy consumption for space heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Space Heating|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption of electricity for heat pumps for space heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Space Heating|Heat;PJ/yr;Useful Energy consumption of heat for space heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Water Heating;PJ/yr;Useful Energy consumption for water heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Water Heating|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption of electricity for heat pumps for water heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Water Heating|Heat;PJ/yr;Useful Energy consumption of heat for water heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Space and Water Heating;PJ/yr;Useful Energy consumption for space and water heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Space and Water Heating|Electricity|Heat Pumps;PJ/yr;Useful Energy consumption of electricity for heat pumps for space and water heating in residential buildings;;;;;0;;
+2;energy (buildings);Useful Energy|Residential|Space and Water Heating|Heat;PJ/yr;Useful Energy consumption of heat for space and water heating in residential buildings;;;;;0;;
 2;energy (buildings);Energy Service|Commercial|Floor Space;bn m2/yr;energy service demand for conditioned floor space in commercial buildings;ES|Buildings|Commercial|Floor Space;bn m2;1;;0;;Rx
 2;energy (buildings);Energy Service|Residential and Commercial|Floor Space;bn m2/yr;energy service demand for conditioned floor space in buildings;ES|Buildings|Floor Space;bn m2;1;;0;;R
 2;energy (buildings);Energy Service|Residential|Floor Space;bn m2/yr;energy service demand for conditioned floor space in residential buildings;ES|Buildings|Residential|Floor Space;bn m2;1;;0;;Rx
@@ -1371,20 +1409,20 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (industry);Production|Pulp and Paper;Mt/yr;production of pulp and paper;;;;;0;;
 2;energy (transport);Energy Service|Transportation|Freight;bn tkm/yr;energy service demand for domestic freight transport;ES|Transport|Freight|Rail;bn tkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Freight;bn tkm/yr;energy service demand for domestic freight transport;ES|Transport|Freight|Road;bn tkm/yr;1;;0;;T
-2;energy (transport);Energy Service|Transportation|Freight;bn tkm/yr;energy service demand for domestic freight transport;ES|Transport|Freight|Navigation;bn tkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Freight;bn tkm/yr;energy service demand for domestic freight transport;ES|Transport|Freight|Domestic Shipping;bn tkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger;bn pkm/yr;energy service demand for domestic passenger transport;ES|Transport|Pass|Rail;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger;bn pkm/yr;energy service demand for domestic passenger transport;ES|Transport|Pass|Road;bn pkm/yr;1;;0;;T
-2;energy (transport);Energy Service|Transportation|Passenger;bn pkm/yr;energy service demand for domestic passenger transport;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Passenger;bn pkm/yr;energy service demand for domestic passenger transport;ES|Transport|Pass|Domestic Aviation;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Freight|Domestic Aviation;bn tkm/yr;energy service demand for freight transport on domestic aircrafts;;;;;0;;
-2;energy (transport);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;energy service demand for freight transport on domestic navigation;ES|Transport|Freight|Navigation;bn tkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;energy service demand for freight transport on domestic navigation;ES|Transport|Freight|Domestic Shipping;bn tkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Freight|Other;bn tkm/yr;energy service demand for freight transport using other modes (please provide a definition of the modes in this category in the 'comments' tab);;;;;0;;
 2;energy (transport);Energy Service|Transportation|Freight|Rail;bn tkm/yr;energy service demand for freight transport on railways;ES|Transport|Freight|Rail;bn tkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Freight|Road;bn tkm/yr;energy service demand for freight transport on roads;ES|Transport|Freight|Road;bn tkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Freight|Road|ICE;bn tkm/yr;energy service demand for freight transport on roads by vehicles with an internal combustion engine including hybrids and plug-in hybrids;ES|Transport|Freight|Road|Liquids;bn tkm/yr;1;;0;;T
-2;energy (transport);Energy Service|Transportation|Freight|Road|BEV;bn tkm/yr;energy service demand for freight transport on roads by battery electric vehicles;ES|Transport|Freight|Road|Electric;bn tkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Freight|Road|BEV;bn tkm/yr;energy service demand for freight transport on roads by battery electric vehicles;ES|Transport|Freight|Road|BEV;bn tkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Freight|Road|FCEV;bn tkm/yr;energy service demand for freight transport on roads by fuel cell electric vehicles;ES|Transport|Freight|Road|FCEV;bn tkm/yr;1;;0;;T
-2;energy (transport);Energy Service|Transportation|Passenger|Domestic Aviation;bn pkm/yr;energy service demand for passenger transport in domestic aircrafts;ES|Transport|Pass|Aviation|Domestic;bn pkm/yr;1;;0;;T
-2;energy (transport);Energy Service|Transportation|Passenger|International Aviation;bn pkm/yr;energy service demand for passenger transport in international aviation;ES|Transport|Pass|Aviation|International;bn pkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Passenger|Domestic Aviation;bn pkm/yr;energy service demand for passenger transport in domestic aircrafts;ES|Transport|Pass|Domestic Aviation;bn pkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Passenger|International Aviation;bn pkm/yr;energy service demand for passenger transport in international aviation;ES|Transport|Bunkers|Pass|International Aviation;bn pkm/yr;1;;0;;T
 3;energy (transport);Energy Service|Transportation|Passenger|International Aviation|International Aviation / in Europe;bn pkm/yr;energy service demand for passenger transport in international aviation within Europe;;;;;0;;
 3;energy (transport);Energy Service|Transportation|Passenger|International Aviation|International Aviation / Non-EU destinations;bn pkm/yr;energy service demand for passenger transport in international aviation with non-EU destinations;;;;;0;;
 2;energy (transport);Energy Service|Transportation|Passenger|Domestic Navigation;bn pkm/yr;energy service demand for passenger transport in domestic navigation;;;;;0;;
@@ -1392,65 +1430,65 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (transport);Energy Service|Transportation|Passenger|Other;bn pkm/yr;energy service demand for passenger transport using other modes (please provide a definition of the modes in this category in the 'comments' tab);;;;;0;;
 2;energy (transport);Energy Service|Transportation|Passenger|Rail;bn pkm/yr;energy service demand for passenger transport on railways;ES|Transport|Pass|Rail;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger|Road;bn pkm/yr;energy service demand for passenger transport on roads;ES|Transport|Pass|Road;bn pkm/yr;1;;0;;T
-2;energy (transport);Energy Service|Transportation|Passenger|Road;bn pkm/yr;energy service demand for passenger transport on roads;ES|Transport|Pass|Road|Non-Motorized;bn pkm/yr;-1;;0;;T
-3;energy (transport);Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;energy service demand for freight transport operating on international shipping routes;ES|Transport|Freight|International Shipping;bn tkm/yr;1;;0;;T
-2;energy (transport);Energy Service|Transportation|Passenger|Bicycling and Walking;bn pkm/yr;energy service demand for passenger transport on bicycles and by foot;ES|Transport|Pass|Road|Non-Motorized;bn pkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Passenger|Road;bn pkm/yr;energy service demand for passenger transport on roads;ES|Transport|Pass|Non-motorized;bn pkm/yr;-1;;0;;T
+3;energy (transport);Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;energy service demand for freight transport operating on international shipping routes;ES|Transport|Bunkers|Freight|International Shipping;bn tkm/yr;1;;0;;T
+2;energy (transport);Energy Service|Transportation|Passenger|Bicycling and Walking;bn pkm/yr;energy service demand for passenger transport on bicycles and by foot;ES|Transport|Pass|Non-motorized;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;energy service demand for passenger transport on roads (two- and three-wheel vehicles);ES|Transport|Pass|Road|LDV|Two Wheelers;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);ES|Transport|Pass|Road|LDV;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger|Road|LDV|ICE;bn pkm/yr;energy service demand for passenger transport on roads (light-duty vehicles with internal combustion engine including hybrids and plug-in hybrids);ES|Transport|Pass|Road|LDV|Liquids;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger|Road|LDV|BEV;bn pkm/yr;energy service demand for passenger transport on roads (light-duty battery electric vehicles);ES|Transport|Pass|Road|LDV|BEV;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger|Road|LDV|FCEV;bn pkm/yr;energy service demand for passenger transport on roads (light-duty full cell electric vehicles);ES|Transport|Pass|Road|LDV|FCEV;bn pkm/yr;1;;0;;T
 2;energy (transport);Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;energy service demand for passenger transport on roads (buses);ES|Transport|Pass|Road|Bus;bn pkm/yr;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Subcompact Car|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Compact Car|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Midsize Car|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Subcompact Car|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Compact Car|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Midsize Car|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Large Car and SUV|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Subcompact Car|FCEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Compact Car|FCEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Midsize Car|FCEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Subcompact Car|Hybrid Electric;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Compact Car|Hybrid Electric;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Midsize Car|Hybrid Electric;Million vehicles;1;;0;;T
-2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|LDV|Large Car and SUV|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|LDV|Subcompact Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|LDV|Compact Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|LDV|Midsize Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|LDV|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|ICE|Subcompact Car;million;Stock of subcompact internal combustion engine cars (US EPA);Stock|Transport|LDV|Subcompact Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|ICE|Compact Car;million;Stock of compact internal combustion engine cars (US EPA);Stock|Transport|LDV|Compact Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hybrid electric;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid electric;Million vehicles;1;;0;;T
+2;energy (transport);Stock|Transportation|LDV;million;Stock of light duty vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE;million;Stock of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE|Subcompact Car;million;Stock of subcompact internal combustion engine cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE|Compact Car;million;Stock of compact internal combustion engine cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Million vehicles;1;;0;;T
 3;energy (transport);Stock|Transportation|LDV|ICE|Two-Wheelers;million;Stock of internal combustion engine two-wheelers;;;;;0;;
-3;energy (transport);Stock|Transportation|LDV|ICE|Midsize Car;million;Stock of midsize internal combustion engine cars (US EPA);Stock|Transport|LDV|Midsize Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|ICE|Large Car and SUV;million;Stock of large internal combustion engine cars and SUVs (US EPA);Stock|Transport|LDV|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|LDV|Subcompact Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|LDV|Compact Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|LDV|Midsize Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|LDV|Large Car and SUV|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|BEV|Subcompact Car;million;Stock of subcompact battery electric cars (US EPA);Stock|Transport|LDV|Subcompact Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|BEV|Compact Car;million;Stock of compact battery electric cars (US EPA);Stock|Transport|LDV|Compact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE|Midsize Car;million;Stock of midsize internal combustion engine cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|ICE|Large Car and SUV;million;Stock of large internal combustion engine cars and SUVs (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV;million;Stock of light duty battery electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV|Subcompact Car;million;Stock of subcompact battery electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV|Compact Car;million;Stock of compact battery electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Million vehicles;1;;0;;T
 3;energy (transport);Stock|Transportation|LDV|BEV|Two-Wheelers;million;Stock of battery electric two-wheelers;;;;;0;;
-3;energy (transport);Stock|Transportation|LDV|BEV|Midsize Car;million;Stock of midsize battery electric cars (US EPA);Stock|Transport|LDV|Midsize Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|BEV|Large Car and SUV;million;Stock of large battery electric cars and SUVs (US EPA);Stock|Transport|LDV|Large Car and SUV|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|LDV|Subcompact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|LDV|Compact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|LDV|Midsize Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|LDV|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV|Subcompact Car;million;Stock of subcompact fuel cell electric cars (US EPA);Stock|Transport|LDV|Subcompact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV|Compact Car;million;Stock of compact fuel cell electric cars (US EPA);Stock|Transport|LDV|Compact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV|Midsize Car;million;Stock of midsize fuel cell electric cars (US EPA);Stock|Transport|LDV|Midsize Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|FCEV|Large Car and SUV;million;Stock of large fuel cell electric cars and SUVs (US EPA);Stock|Transport|LDV|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|LDV|Subcompact Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|LDV|Compact Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|LDV|Midsize Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|LDV|Large Car and SUV|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV|Subcompact Car;million;Stock of subcompact plug-in hybrid electric cars (US EPA);Stock|Transport|LDV|Subcompact Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV|Compact Car;million;Stock of compact plug-in hybrid electric cars (US EPA);Stock|Transport|LDV|Compact Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV|Midsize Car;million;Stock of midsize plug-in hybrid electric cars (US EPA);Stock|Transport|LDV|Midsize Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Stock|Transportation|LDV|PHEV|Large Car and SUV;million;Stock of Large plug-in hybrid electric cars and SUVs (US EPA);Stock|Transport|LDV|Large Car and SUV|Hybrid Electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV|Midsize Car;million;Stock of midsize battery electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|BEV|Large Car and SUV;million;Stock of large battery electric cars and SUVs (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV;million;Stock of light duty fuel cell electric vehicles;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV|Subcompact Car;million;Stock of subcompact fuel cell electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV|Compact Car;million;Stock of compact fuel cell electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV|Midsize Car;million;Stock of midsize fuel cell electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|FCEV|Large Car and SUV;million;Stock of large fuel cell electric cars and SUVs (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV;million;Stock of light duty plug-in hybrid electric cars;Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV|Subcompact Car;million;Stock of subcompact plug-in hybrid electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV|Compact Car;million;Stock of compact plug-in hybrid electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV|Midsize Car;million;Stock of midsize plug-in hybrid electric cars (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Stock|Transportation|LDV|PHEV|Large Car and SUV;million;Stock of Large plug-in hybrid electric cars and SUVs (US EPA);Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Million vehicles;1;;0;;T
 3;energy (transport);Stock|Transportation|LDV|Subcompact Car;million;Stock of subcompact (and smaller) cars (US EPA);;;;;0;;
 3;energy (transport);Stock|Transportation|LDV|Compact Car;million;Stock of compact cars (US EPA);;;;;0;;
 3;energy (transport);Stock|Transportation|LDV|Two-Wheelers;million;Stock of two-wheelers;;;;;0;;
@@ -1511,53 +1549,53 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Stock|Transportation|Bus|ICE;million;Stock of buses with internal combustion engine including hybrids and plug-in hybrids;;;;;0;;
 3;energy (transport);Stock|Transportation|Bus|BEV;million;Stock of battery electric buses;;;;;0;;
 3;energy (transport);Stock|Transportation|Bus|FCEV;million;Stock of fuel cell electric buses;;;;;0;;
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Subcompact Car|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Compact Car|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Midsize Car|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Subcompact Car|Hybrid Electric;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Compact Car|Hybrid Electric;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Midsize Car|Hybrid Electric;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Large Car and SUV|Hybrid Electric;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Subcompact Car|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Compact Car|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Midsize Car|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Large Car and SUV|BEV;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Subcompact Car|FCEV;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Compact Car|FCEV;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Midsize Car|FCEV;Million vehicles;1;;0;;T
-2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|LDV|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|LDV|Subcompact Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|LDV|Compact Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|LDV|Midsize Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|LDV|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|ICE|Subcompact Car;million;Sales of subcompact internal combustion engine cars (US EPA);Sales|Transport|LDV|Subcompact Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|ICE|Compact Car;million;Sales of compact internal combustion engine cars (US EPA);Sales|Transport|LDV|Compact Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hybrid electric;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid electric;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Million vehicles;1;;0;;T
+2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE;million;Sales of light duty vehicles with internal combustion engine including mild-hybrids and excluding plug-in hybrids;Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE|Subcompact Car;million;Sales of subcompact internal combustion engine cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE|Compact Car;million;Sales of compact internal combustion engine cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;Million vehicles;1;;0;;T
 3;energy (transport);Sales|Transportation|LDV|ICE|Two-Wheelers;million;Sales of internal combustion engine two-wheelers;;;;;0;;
-3;energy (transport);Sales|Transportation|LDV|ICE|Midsize Car;million;Sales of midsize internal combustion engine cars (US EPA);Sales|Transport|LDV|Midsize Car|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|ICE|Large Car and SUV;million;Sales of large internal combustion engine cars and SUVs (US EPA);Sales|Transport|LDV|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|LDV|Subcompact Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|LDV|Compact Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|LDV|Midsize Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|LDV|Large Car and SUV|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|BEV|Subcompact Car;million;Sales of subcompact battery electric cars (US EPA);Sales|Transport|LDV|Subcompact Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|BEV|Compact Car;million;Sales of compact battery electric cars (US EPA);Sales|Transport|LDV|Compact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE|Midsize Car;million;Sales of midsize internal combustion engine cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|ICE|Large Car and SUV;million;Sales of large internal combustion engine cars and SUVs (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV;million;Sales of light duty battery electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV|Subcompact Car;million;Sales of subcompact battery electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV|Compact Car;million;Sales of compact battery electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|BEV;Million vehicles;1;;0;;T
 3;energy (transport);Sales|Transportation|LDV|BEV|Two-Wheelers;million;Sales of battery electric two-wheelers;;;;;0;;
-3;energy (transport);Sales|Transportation|LDV|BEV|Midsize Car;million;Sales of midsize battery electric cars (US EPA);Sales|Transport|LDV|Midsize Car|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|BEV|Large Car and SUV;million;Sales of large battery electric cars and SUVs (US EPA);Sales|Transport|LDV|Large Car and SUV|BEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|LDV|Subcompact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|LDV|Compact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|LDV|Midsize Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|LDV|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV|Subcompact Car;million;Sales of subcompact fuel cell electric cars (US EPA);Sales|Transport|LDV|Subcompact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV|Compact Car;million;Sales of compact fuel cell electric cars (US EPA);Sales|Transport|LDV|Compact Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV|Midsize Car;million;Sales of midsize fuel cell electric cars (US EPA);Sales|Transport|LDV|Midsize Car|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|FCEV|Large Car and SUV;million;Sales of large fuel cell electric cars and SUVs (US EPA);Sales|Transport|LDV|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|PHEV;million;Sales of light duty plug-in hybrid electric cars;Sales|Transport|LDV|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|PHEV|Subcompact Car;million;Sales of subcompact plug-in hybrid electric cars (US EPA);Sales|Transport|LDV|Subcompact Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|PHEV|Compact Car;million;Sales of compact plug-in hybrid electric cars (US EPA);Sales|Transport|LDV|Compact Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|PHEV|Midsize Car;million;Sales of midsize plug-in hybrid electric cars (US EPA);Sales|Transport|LDV|Midsize Car|Hybrid Electric;Million vehicles;1;;0;;T
-3;energy (transport);Sales|Transportation|LDV|PHEV|Large Car and SUV;million;Sales of Large plug-in hybrid electric cars and SUVs (US EPA);Sales|Transport|LDV|Large Car and SUV|Hybrid Electric;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV|Midsize Car;million;Sales of midsize battery electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|BEV|Large Car and SUV;million;Sales of large battery electric cars and SUVs (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV;million;Sales of light duty fuel cell electric vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV|Subcompact Car;million;Sales of subcompact fuel cell electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV|Compact Car;million;Sales of compact fuel cell electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV|Midsize Car;million;Sales of midsize fuel cell electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|FCEV|Large Car and SUV;million;Sales of large fuel cell electric cars and SUVs (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|PHEV;million;Sales of light duty plug-in hybrid electric cars;Sales|Transport|Pass|Road|LDV|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|PHEV|Subcompact Car;million;Sales of subcompact plug-in hybrid electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|PHEV|Compact Car;million;Sales of compact plug-in hybrid electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|PHEV|Midsize Car;million;Sales of midsize plug-in hybrid electric cars (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid electric;Million vehicles;1;;0;;T
+3;energy (transport);Sales|Transportation|LDV|PHEV|Large Car and SUV;million;Sales of Large plug-in hybrid electric cars and SUVs (US EPA);Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Million vehicles;1;;0;;T
 3;energy (transport);Sales|Transportation|LDV|Subcompact Car;million;Sales of subcompact (and smaller) cars (US EPA);;;;;0;;
 3;energy (transport);Sales|Transportation|LDV|Compact Car;million;Sales of compact cars (US EPA);;;;;0;;
 3;energy (transport);Sales|Transportation|LDV|Two-Wheelers;million;Sales of two-wheelers;;;;;0;;
@@ -1788,6 +1826,12 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;investment;Investment;billion EUR2020/yr;Total economy wide investments (macroecomic capital stock, energy system, R&D, ...);Investments;billion US$2005/yr;1.174;;0;;R
 2;energy (supply);Investment|Energy Supply;billion EUR2020/yr;Investments into the energy supply system;Energy Investments|Supply;billion US$2005/yr;1.174;;0;;R
 1;energy (supply);Investment|Energy Supply|Electricity;billion EUR2020/yr;Total investment spending into electricity generation and supply (including electricity storage and transmission & distribution);Energy Investments|Electricity;billion US$2005/yr;1.174;;0;;R
+3;energy (supply);Investment|Energy Supply|Extraction|Fossil;billion EUR2020/yr;investments for all types of fossil extraction;;;;;0;;
+3;energy (supply);Investment|Energy Supply|Extraction|Coal;billion EUR2020/yr;investments for extraction and conversion of coal. These should include mining, shipping and ports;;;;;0;;
+3;energy (supply);Investment|Energy Supply|Extraction|Gas;billion EUR2020/yr;investments for extraction and conversion of natural gas. These should include upstream, LNG chain and transmission and distribution;;;;;0;;
+3;energy (supply);Investment|Energy Supply|Extraction|Oil;billion EUR2020/yr;investments for extraction and conversion of oil. These should include upstream, transport and refining;;;;;0;;
+3;energy (supply);Investment|Energy Supply|Extraction|Bioenergy;billion EUR2020/yr;investments for extraction and production of bioenergy;;;;;0;;
+3;energy (supply);Investment|Energy Supply|Extraction|Uranium;billion EUR2020/yr;investments for extraction and conversion of uranium. These should include mining, conversion and enrichment;;;;;0;;
 2;energy (electricity);Investment|Energy Supply|Electricity|Fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Coal;billion US$2005/yr;1.174;;0;;R
 2;energy (electricity);Investment|Energy Supply|Electricity|Fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Gas;billion US$2005/yr;1.174;;0;;R
 2;energy (electricity);Investment|Energy Supply|Electricity|Fossil;billion EUR2020/yr;Total investment spending in new power generation for the specified power plant category. If the model features several sub-categories, the total investments should be reported. For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage of CO2.;Energy Investments|Electricity|+|Oil;billion US$2005/yr;1.174;;0;;R
@@ -1860,7 +1904,8 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (heat);Investment|Energy Supply|Heat|Renewable;billion EUR2020/yr;Total investment spending in renewable heat generation facilities (including retrofitting of fossil plants);;;;;0;;
 1;energy (hydrogen);Investment|Energy Supply|Hydrogen;billion EUR2020/yr;Total investment spending for the production of hydrogen from all energy sources (fossil, biomass, electrolysis). For plants equipped with CCS, the investment in the capturing equipment should be included but not the one on transport and storage.;Energy Investments|Hydrogen;billion US$2005/yr;1.174;;0;;R
 2;energy (supply);Investment|RnD|Energy Supply;billion EUR2020/yr;Total investment spending into research and development, energy supply sector;;;;;0;;
-1;energy (transport);Investment|Energy Demand|Transportation;billion EUR2020/yr;Total investment spending into vehicle purchases, infrastructure and charging infrastructure in the transport sector (sum of all total investment/consumption spending variables in the transport sector);;;;;0;;
+1;energy (transport);Investment|Transportation;billion EUR2020/yr;Total investment spending into vehicle purchases, infrastructure and charging infrastructure in the transport sector (sum of all total investment/consumption spending variables in the transport sector);;;;;0;;
+1;energy (transport);Investment|Energy Demand|Transportation;billion EUR2020/yr;Total investment spending into vehicle purchases in the transport sector (sum of all total investment/consumption spending variables in the transport sector);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|LDV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (light-duty cars and trucks);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|LDV|Additional;billion EUR2020/yr;Additional investment spending for climate friendly technologies compared to the alternative fossil technology (e-car versus ICE, hybrid versus ICE, and fuel cell versus ICE) through new vehicle purchases in the transport sector (light-duty cars and trucks);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|LDV|ICE;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (light-duty cars and trucks: internal combustion engine technologies running on any type of liquid or gaseous fuel including mild hybrids and excluding plug-in hybrids);;;;;0;;
@@ -1872,7 +1917,13 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (transport);Investment|Energy Demand|Transportation|LDV|PHEV|Additional;billion EUR2020/yr;Additional investment spending for PHEV-cars compared to the alternative ICE technology through new vehicle purchases in the transport sector (light-duty cars and trucks: plug-in hybrids with internal combustion engine running on any type of liquid or gaseous fuel);;;;;0;;
 2;energy (transport);Investment|Energy Demand|Transportation|Bus;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (buses, any type of engine and fuels);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|Bus|Additional;billion EUR2020/yr;Additional investment spending for climate friendly bus technologies compared the the fossil alternative (ICE);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Bus|ICE;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (buses, internal combustion engine technologies running on any type of liquid or gaseous fuel including mild hybrids and excluding plug-in hybrids);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Bus|BEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (buses, electric vehicle technologies, only all-electrics);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Bus|FCEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (buses, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
 2;energy (transport);Investment|Energy Demand|Transportation|Rail;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (rail);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Rail|ICE;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (rail, internal combustion engine technologies running on any type of liquid or gaseous fuel including mild hybrids and excluding plug-in hybrids);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Rail|BEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (rail, electric vehicle technologies, only all-electrics);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Rail|FCEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (rail, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|Truck;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (heavy-duty freight trucks);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|Truck|Additional;billion EUR2020/yr;Additional investment spending through new vehicle purchases in the transport sector (heavy-duty freight trucks) for climate friendly trucks compared the the fossil alternative (ICE);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|Truck|ICE;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (heavy-duty freight trucks: internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
@@ -1882,14 +1933,49 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 1;energy (transport);Investment|Energy Demand|Transportation|Truck|FCEV|Additional;billion EUR2020/yr;Additional investment spending for FCEV-trucks compared to the alternative ICE technology spending through new vehicle purchases in the transport sector (heavy-duty freight trucks: fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|Truck|PHEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (heavy-duty freight trucks: plug-in hybrids with internal combustion engine running on any type of liquid or gaseous fuel);;;;;0;;
 1;energy (transport);Investment|Energy Demand|Transportation|Truck|PHEV|Additional;billion EUR2020/yr;Additional investment spending for PHEV-trucks compared to the alternative ICE technology spending through new vehicle purchases in the transport sector (heavy-duty freight trucks: plug-in hybrids with internal combustion engine running on any type of liquid or gaseous fuel);;;;;0;;
+1;energy (transport);Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (heavy-duty freight trucks using overhead line technology: electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (heavy-duty freight trucks using overhead line technology: internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
 2;energy (transport);Investment|Energy Demand|Transportation|Other;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (other, like bicycles, e-scooter, …);;;;;0;;
-1;energy (transport);Investment|Infrastructure|Transport;billion EUR2020/yr;Total investment spending into transport infrastructure - both newly constructed and maintenance of existing (all types: roads, bridges, ports, railways, refueling stations and charging infrastructure, etc.). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
-1;energy (transport);Investment|Infrastructure|Transport|Rail;billion EUR2020/yr;Total investment spending into transport infrastructure - both newly constructed and maintenance of existing (all related to railway). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
-2;energy (transport);Investment|Infrastructure|Transport|Road;billion EUR2020/yr;Total investment spending into transport infrastructure - both newly constructed and maintenance of existing (all related to roads). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
-1;energy (transport);Investment|Infrastructure|Transport|Charging|Public;billion EUR2020/yr;Total investment spending into public charging infrastructure - both newly constructed and maintenance of existing;Energy Investments|Electricity|Grid|+|BEV Chargers;billion US$2005/yr;1.174;REMIND does not distinguish between private and public charging infrastructure;0;;R
-1;energy (transport);Investment|Infrastructure|Transport|Charging|Private;billion EUR2020/yr;Total investment spending into private charging infrastructure - both newly constructed and maintenance of existing;;;;;0;;
-2;energy (transport);Investment|Infrastructure|Transport|Other;billion EUR2020/yr;Total investment spending into other transport infrastructure (like cycle paths, mobility hubs, rail stations, ...) - both newly constructed and maintenance of existing Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
-1;energy (buildings);Investment|Energy Demand|Residential and Commercial;billion EUR2020/yr;Total investment spending into residential and commercial building shells (not including the costs of the general building structure, technical equipment, etc.);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Navigation;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic navigation);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Navigation|ICE;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic navigation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Navigation|BEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic navigation, electric vehicle technologies, only all-electrics);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Navigation|FCEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic navigation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Aviation;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic aviation);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Aviation|ICE;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic aviation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Aviation|BEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic aviation, electric vehicle technologies, only all-electrics);;;;;0;;
+2;energy (transport);Investment|Energy Demand|Transportation|Domestic Aviation|FCEV;billion EUR2020/yr;Total investment spending through new vehicle purchases in the transport sector (domestic aviation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation;billion EUR2020/yr;Total investment spending into transport infrastructure (all types: roads, bridges, ports, railways, refueling stations and charging infrastructure, etc.). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|LDV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (light-duty cars and trucks);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|LDV|BEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|LDV|BEV|Public;billion EUR2020/yr;Total public investment spending through Infrastructure in the transport sector (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|LDV|BEV|Work;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector at working places (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|LDV|BEV|Private;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector at private homes (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|LDV|FCEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (light-duty cars and trucks, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Truck;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (heavy-duty freight trucks);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Truck|BEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (heavy-duty trucks: electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Truck|Overhead Line;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (heavy-duty trucks, all types);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Truck|FCEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (heavy-duty trucks, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);Investment|Infrastructure|Transportation|Rail;billion EUR2020/yr;Total investment spending into transport infrastructure (all related to railway). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Rail|ICE;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (rail, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Rail|BEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (rail, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Rail|FCEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (rail, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);Investment|Infrastructure|Transportation|Bus;billion EUR2020/yr;Total investment spending into transport infrastructure (all related to buses). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Bus|ICE;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (bus, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Bus|BEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (bus, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Bus|FCEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (bus, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);Investment|Infrastructure|Transportation|Road;billion EUR2020/yr;Total investment spending into transport infrastructure (all related to roads). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Charging|Public;billion EUR2020/yr;Total investment spending into public charging infrastructure.;Energy Investments|Electricity|Grid|+|BEV Chargers;billion US$2005/yr;1.174;;0;REMIND does not distinguish between private and public charging infrastructure;R
+1;energy (transport);Investment|Infrastructure|Transportation|Charging|Private;billion EUR2020/yr;Total investment spending into private charging infrastructure;;;;;0;;
+2;energy (transport);Investment|Infrastructure|Transportation|Other;billion EUR2020/yr;Total investment spending into other transport infrastructure (like cycle paths, mobility hubs, rail stations, ...). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
+2;energy (transport);Investment|Infrastructure|Transportation|Domestic Navigation;billion EUR2020/yr;Total investment spending into transport infrastructure (all related to domestic navigation). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Domestic Navigation|ICE;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (domestic navigation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Domestic Navigation|BEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (domestic navigation, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Domestic Navigation|FCEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (domestic navigation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);Investment|Infrastructure|Transportation|Domestic Aviation;billion EUR2020/yr;Total investment spending into transport infrastructure (all related to domestic aviation). Please specify in the comments section the type of infastructure that is being referred to here.;;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Domestic Aviation|ICE;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (domestic aviation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Domestic Aviation|BEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (domestic aviation, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);Investment|Infrastructure|Transportation|Domestic Aviation|FCEV;billion EUR2020/yr;Total investment spending through Infrastructure in the transport sector (domestic aviation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+1;energy (buildings);Investment|Energy Demand|Residential and Commercial;billion EUR2020/yr;Total investment spending into residential and commercial building shells and space heating devices (not including the costs of the general building structure, technical equipment, etc.);;;;;0;;
 1;energy (buildings);Investment|Energy Demand|Residential and Commercial|Low-Efficiency Buildings;billion EUR2020/yr;Total investment spending into residential and commercial building shells (all types of new buildings that are relatively low in their energy efficiency), not including the costs of the general building structure, technical equipment, etc.;;;;;0;;
 1;energy (buildings);Investment|Energy Demand|Residential and Commercial|Medium-Efficiency Buildings;billion EUR2020/yr;Total investment spending into residential and commercial building shells (all types of new buildings that are relatively medium-range in their energy efficiency), not including the costs of the general building structure, technical equipment, etc.;;;;;0;;
 1;energy (buildings);Investment|Energy Demand|Residential and Commercial|High-Efficiency Buildings;billion EUR2020/yr;Total investment spending into residential and commercial building shells (all types of new buildings that are relatively high in their energy efficiency), not including the costs of the general building structure, technical equipment, etc.;;;;;0;;
@@ -2110,6 +2196,36 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;energy (supply);OM Cost|Variable|Liquids|Gas|w/o CCS;EUR2020/GJ;Variable operation & maintainance cost of a new hydrogen to synthetic liquids plant. If more than one GTL technology is modelled, modellers should report fixed O&M costs for each represented GTL technology by adding variables OM Cost|Variable|Liquids|Gas|w/o CCS|2, ... OM Cost|Variable|Liquids|Gas|w/o CCS|N (with N = number of represented technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;;;;;0;;
 2;energy (supply);OM Cost|Variable|Liquids|Hydrogen;EUR2020/GJ;Variable operation & maintainance cost of a new gas to liquids plant. If more than one GTL technology is modelled, modellers should report fixed O&M costs for each represented GTL technology by adding variables OM Cost|Variable|Liquids|Gas|w/o CCS|2, ... OM Cost|Variable|Liquids|Gas|w/o CCS|N (with N = number of represented technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;;;;;0;;
 2;energy (supply);OM Cost|Variable|Liquids|Oil;EUR2020/GJ;Variable operation & maintainance cost of a new oil refining plant. If more than one refinery technology is modelled, modellers should report fixed O&M costs for each represented refinery technology by adding variables OM Cost|Variable|Liquids|Oil|2, ... OM Cost|Variable|Liquids|Oil|N (with N = number of represented technologies) (matching the assignment of plant types to technologies in the reporting of capital costs as documented in the comments sheet).;Tech|Liquids|Fossil|Oil|OM Cost|variable;US$2005/GJ;1.174;;0;;R
+1;energy (transport);OM Cost|Transportation;billion EUR2020/yr;Total O&M spending into vehicle purchases, infrastructure and charging infrastructure in the transport sector (sum of all total O&M/consumption spending variables in the transport sector);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation;billion EUR2020/yr;Total O&M spending into vehicle purchases (sum of all total O&M/consumption spending variables in the transport sector);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|LDV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (light-duty cars and trucks);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|LDV|ICE;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (light-duty cars and trucks,  internal combustion engine technologies running on any type of liquid or gaseous fuel including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|LDV|BEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|LDV|PHEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (light-duty cars and trucks, plug-in hybrids with internal combustion engine running on any type of liquid or gaseous fuel);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|LDV|FCEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (light-duty cars and trucks, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Truck;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (heavy-duty freight trucks);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Truck|ICE;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (heavy-duty freight trucks, internal combustion engine technologies running on any type of liquid or gaseous fuel including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Truck|BEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (heavy-duty freight trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Truck|PHEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (heavy-duty freight trucks, plug-in hybrids with internal combustion engine running on any type of liquid or gaseous fuel);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Truck|Overhead Line|ICE;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (heavy-duty freight trucks with overhead line technologies, internal combustion engine technologies running on any type of liquid or gaseous fuel including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Truck|Overhead Line|BEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (heavy-duty freight trucks with overhead line technologies, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Truck|FCEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (heavy-duty freight trucks, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Energy Demand|Transportation|Rail;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (rail);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Rail|ICE;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (rail, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Rail|BEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (rail, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Rail|FCEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (rail, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Energy Demand|Transportation|Bus;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (buses, any type of engine and fuels);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Bus|ICE;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (buses, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Bus|BEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (buses, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Bus|FCEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (buses, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Navigation;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic navigation);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Navigation|ICE;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic navigation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Navigation|BEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic navigation, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Navigation|FCEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic navigation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Aviation;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic aviation);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Aviation|ICE;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic aviation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Aviation|BEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic aviation, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Energy Demand|Transportation|Domestic Aviation|FCEV;billion EUR2020/yr;Total O&M spending for vehicles in the transport sector (domestic aviation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
 2;Trade;Export|Energy;billion EUR2020/yr;export of energy commodities measured in monetary units.;;;;;0;;
 2;Trade;Export|Industry;billion EUR2020/yr;export of industrial (non-energy) commodities measured in monetary units.;;;;;0;;
 2;Trade;Import|Energy;billion EUR2020/yr;import of energy commodities measured in monetary units.;;;;;0;;
@@ -2276,6 +2392,33 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;policy;Subsidies|Energy Demand|Residential and Commercial|Space Heating;billion EUR2020/yr;Subsidies for installation of space heating technologies in residential or commercial buildings;;;;;0;;
 2;policy;Subsidies|Energy Demand|Residential and Commercial|New Efficient Buildings;billion EUR2020/yr;Subsidies for new construction of efficient residential or commercial buildings;;;;;0;;
 2;policy;Subsidies|Energy Demand|Residential and Commercial|Building Retrofits;billion EUR2020/yr;Subsidies for residential or commercial building retrofits;;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation;billion EUR2020/yr;Total O&M spending into infrastructure and charging infrastructure in the transport sector (sum of all total O&M/consumption spending variables in the transport sector);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|LDV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (light-duty cars and trucks);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|LDV|BEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (light-duty cars and trucks: electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|LDV|BEV|Public;billion EUR2020/yr;Total public O&M spending through Infrastructure in the transport sector (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|LDV|BEV|Work;billion EUR2020/yr;Total O&M spending through Infrastructure at working places in the transport sector (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|LDV|BEV|Private;billion EUR2020/yr;Total O&M spending through Infrastructure at private homes in the transport sector (light-duty cars and trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|LDV|FCEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (light-duty cars and trucks, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Truck;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (heavy-duty freight trucks);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Truck|BEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (heavy-duty freight trucks, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Truck|Overhead Line;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (heavy-duty freight trucks with overhead line technologies);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Truck|FCEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (heavy-duty freight trucks, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Infrastructure|Transportation|Rail;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (rail);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Rail|ICE;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (rail, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Rail|BEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (rail, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Rail|FCEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (rail, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Infrastructure|Transportation|Bus;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (buses, any type of engine and fuels);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Bus|ICE;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (buses, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Bus|BEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (buses, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Bus|FCEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (buses, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Navigation;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic navigation);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Navigation|ICE;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic navigation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Navigation|BEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic navigation, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Navigation|FCEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic navigation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
+2;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Aviation;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic aviation);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Aviation|ICE;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic aviation, internal combustion engine technologies running on any type of liquid or gaseous fuel, including mild hybrids and excluding plug-in hybrids);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Aviation|BEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic aviation, electric vehicle technologies, only all-electrics);;;;;0;;
+1;energy (transport);OM Cost|Infrastructure|Transportation|Domestic Aviation|FCEV;billion EUR2020/yr;Total O&M spending through Infrastructure in the transport sector (domestic aviation, fuel cell technologies running on hydrogen or another type of fuel);;;;;0;;
 2;policy;Subsidies|Energy Demand|Transportation|LDV;billion EUR2020/yr;Subsidies for LDV sales;;;;;0;;
 2;policy;Subsidies|Energy Demand|Transportation|Truck;billion EUR2020/yr;Subsidies for Truck sales;;;;;0;;
 2;policy;Subsidies|Infrastructure|Transportation|Charging;billion EUR2020/yr;Subsidies for installation of charging options;;;;;0;;
@@ -2287,3 +2430,143 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;policy;Subsidies|Energy Supply|Hydrogen;billion EUR2020/yr;Subsidies for energy infrastructure related to Hydrogen (generation plants, transport and storage);;;;;0;;
 2;policy;Subsidies|Energy Supply|Infrastructure|Hydrogen;billion EUR2020/yr;Subsidies for energy infrastructure related to Hydrogen (transport and storage);;;;;0;;
 2;policy;Subsidies|Energy Supply|Infrastructure|Electricity;billion EUR2020/yr;Subsidies for energy infrastructure related to Electricity (transport and storage);;;;;0;;
+2;raw materials;Minerals|Aluminium|Wind;Mt/yr;Demand of Aluminium for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Aluminium|PV;Mt/yr;Demand of Aluminium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Aluminium|CSP;Mt/yr;Demand of Aluminium for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Aluminium|Stationary Fuel Cells;Mt/yr;Demand of Aluminium for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Aluminium|Power Plants (renewable);Mt/yr;Demand of Aluminium for Power Plants (renewable);;;;;0;;
+2;raw materials;Minerals|Aluminium|Power Plants (fossil + nuclear);Mt/yr;Demand of Aluminium for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Aluminium|Stationary Batteries;Mt/yr;Demand of Aluminium for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Aluminium|Electrolysers;Mt/yr;Demand of Aluminium for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Aluminium|Other Conversion Technologies;Mt/yr;Demand of Aluminium for Other Conversion Technologies;;;;;0;;
+2;raw materials;Minerals|Aluminium|Cars;Mt/yr;Demand of Aluminium for Cars;;;;;0;;
+2;raw materials;Minerals|Aluminium|Other Sectors;Mt/yr;Demand of Aluminium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Cadmium|PV;Mt/yr;Demand of Cadmium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Cadmium|Power Plants (fossil + nuclear);Mt/yr;Demand of Cadmium for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Cadmium|Other Sectors;Mt/yr;Demand of Cadmium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Chromium|Wind;Mt/yr;Demand of Chromium for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Chromium|PV;Mt/yr;Demand of Chromium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Chromium|CSP;Mt/yr;Demand of Chromium for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Chromium|Stationary Fuel Cells;Mt/yr;Demand of Chromium for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Chromium|Power Plants (renewable);Mt/yr;Demand of Chromium for Power Plants (renewable);;;;;0;;
+2;raw materials;Minerals|Chromium|Power Plants (fossil + nuclear);Mt/yr;Demand of Chromium for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Chromium|Cars;Mt/yr;Demand of Chromium for Cars;;;;;0;;
+2;raw materials;Minerals|Chromium|Other Sectors;Mt/yr;Demand of Chromium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Cobalt|Stationary Fuel Cells;Mt/yr;Demand of Cobalt for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Cobalt|Stationary Batteries;Mt/yr;Demand of Cobalt for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Cobalt|Electrolysers;Mt/yr;Demand of Cobalt for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Cobalt|Other Conversion Technologies;Mt/yr;Demand of Cobalt for Other Conversion Technologies;;;;;0;;
+2;raw materials;Minerals|Cobalt|Cars;Mt/yr;Demand of Cobalt for Cars;;;;;0;;
+2;raw materials;Minerals|Cobalt|Other Sectors;Mt/yr;Demand of Cobalt for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Copper|Wind;Mt/yr;Demand of Copper for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Copper|PV;Mt/yr;Demand of Copper for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Copper|CSP;Mt/yr;Demand of Copper for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Copper|Stationary Fuel Cells;Mt/yr;Demand of Copper for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Copper|Power Plants (renewable);Mt/yr;Demand of Copper for Power Plants (renewable);;;;;0;;
+2;raw materials;Minerals|Copper|Power Plants (fossil + nuclear);Mt/yr;Demand of Copper for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Copper|Stationary Batteries;Mt/yr;Demand of Copper for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Copper|Electrolysers;Mt/yr;Demand of Copper for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Copper|Other Conversion Technologies;Mt/yr;Demand of Copper for Other Conversion Technologies;;;;;0;;
+2;raw materials;Minerals|Copper|Cars;Mt/yr;Demand of Copper for Cars;;;;;0;;
+2;raw materials;Minerals|Copper|Other Sectors;Mt/yr;Demand of Copper for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Dysprosium|Wind;Mt/yr;Demand of Dysprosium for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Dysprosium|Other Sectors;Mt/yr;Demand of Dysprosium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Gallium|PV;Mt/yr;Demand of Gallium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Gallium|Other Sectors;Mt/yr;Demand of Gallium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Germanium|PV;Mt/yr;Demand of Germanium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Germanium|Other Sectors;Mt/yr;Demand of Germanium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Indium|PV;Mt/yr;Demand of Indium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Indium|Power Plants (fossil + nuclear);Mt/yr;Demand of Indium for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Indium|Other Sectors;Mt/yr;Demand of Indium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Iridium|Electrolysers;Mt/yr;Demand of Iridium for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Iridium|Other Sectors;Mt/yr;Demand of Iridium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Lanthanum|Electrolysers;Mt/yr;Demand of Lanthanum for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Lanthanum|Other Sectors;Mt/yr;Demand of Lanthanum for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Lead|PV;Mt/yr;Demand of Lead for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Lead|Stationary Batteries;Mt/yr;Demand of Lead for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Lead|Cars;Mt/yr;Demand of Lead for Cars;;;;;0;;
+2;raw materials;Minerals|Lead|Other Sectors;Mt/yr;Demand of Lead for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Lithium|Stationary Batteries;Mt/yr;Demand of Lithium for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Lithium|Cars;Mt/yr;Demand of Lithium for Cars;;;;;0;;
+2;raw materials;Minerals|Lithium|Other Sectors;Mt/yr;Demand of Lithium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Magnesium|PV;Mt/yr;Demand of Magnesium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Magnesium|CSP;Mt/yr;Demand of Magnesium for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Magnesium|Cars;Mt/yr;Demand of Magnesium for Cars;;;;;0;;
+2;raw materials;Minerals|Magnesium|Other Sectors;Mt/yr;Demand of Magnesium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Manganese|Wind;Mt/yr;Demand of Manganese for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Manganese|PV;Mt/yr;Demand of Manganese for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Manganese|CSP;Mt/yr;Demand of Manganese for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Manganese|Stationary Fuel Cells;Mt/yr;Demand of Manganese for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Manganese|Power Plants (fossil + nuclear);Mt/yr;Demand of Manganese for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Manganese|Stationary Batteries;Mt/yr;Demand of Manganese for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Manganese|Electrolysers;Mt/yr;Demand of Manganese for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Manganese|Other Conversion Technologies;Mt/yr;Demand of Manganese for Other Conversion Technologies;;;;;0;;
+2;raw materials;Minerals|Manganese|Cars;Mt/yr;Demand of Manganese for Cars;;;;;0;;
+2;raw materials;Minerals|Manganese|Other Sectors;Mt/yr;Demand of Manganese for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Neodymium|Wind;Mt/yr;Demand of Neodymium for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Neodymium|Other Sectors;Mt/yr;Demand of Neodymium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Nickel|Wind;Mt/yr;Demand of Nickel for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Nickel|PV;Mt/yr;Demand of Nickel for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Nickel|CSP;Mt/yr;Demand of Nickel for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Nickel|Stationary Fuel Cells;Mt/yr;Demand of Nickel for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Nickel|Power Plants (renewable);Mt/yr;Demand of Nickel for Power Plants (renewable);;;;;0;;
+2;raw materials;Minerals|Nickel|Power Plants (fossil + nuclear);Mt/yr;Demand of Nickel for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Nickel|Stationary Batteries;Mt/yr;Demand of Nickel for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Nickel|Electrolysers;Mt/yr;Demand of Nickel for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Nickel|Other Conversion Technologies;Mt/yr;Demand of Nickel for Other Conversion Technologies;;;;;0;;
+2;raw materials;Minerals|Nickel|Cars;Mt/yr;Demand of Nickel for Cars;;;;;0;;
+2;raw materials;Minerals|Nickel|Other Sectors;Mt/yr;Demand of Nickel for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Platinum|Electrolysers;Mt/yr;Demand of Platinum for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Platinum|Cars;Mt/yr;Demand of Platinum for Cars;;;;;0;;
+2;raw materials;Minerals|Platinum|Other Sectors;Mt/yr;Demand of Platinum for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Potassium|CSP;Mt/yr;Demand of Potassium for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Potassium|Stationary Fuel Cells;Mt/yr;Demand of Potassium for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Potassium|Electrolysers;Mt/yr;Demand of Potassium for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Potassium|Other Sectors;Mt/yr;Demand of Potassium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Selenium|PV;Mt/yr;Demand of Selenium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Selenium|Other Sectors;Mt/yr;Demand of Selenium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Silicon|PV;Mt/yr;Demand of Silicon for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Silicon|Other Sectors;Mt/yr;Demand of Silicon for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Silver|PV;Mt/yr;Demand of Silver for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Silver|CSP;Mt/yr;Demand of Silver for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Silver|Power Plants (fossil + nuclear);Mt/yr;Demand of Silver for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Silver|Other Sectors;Mt/yr;Demand of Silver for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Steel|Wind;Mt/yr;Demand of Steel for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Steel|PV;Mt/yr;Demand of Steel for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Steel|CSP;Mt/yr;Demand of Steel for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Steel|Stationary Fuel Cells;Mt/yr;Demand of Steel for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Steel|Power Plants (renewable);Mt/yr;Demand of Steel for Power Plants (renewable);;;;;0;;
+2;raw materials;Minerals|Steel|Power Plants (fossil + nuclear);Mt/yr;Demand of Steel for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Steel|Stationary Batteries;Mt/yr;Demand of Steel for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Steel|Electrolysers;Mt/yr;Demand of Steel for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Steel|Other Conversion Technologies;Mt/yr;Demand of Steel for Other Conversion Technologies;;;;;0;;
+2;raw materials;Minerals|Steel|Cars;Mt/yr;Demand of Steel for Cars;;;;;0;;
+2;raw materials;Minerals|Steel|Other Sectors;Mt/yr;Demand of Steel for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Sulfur|Stationary Batteries;Mt/yr;Demand of Sulfur for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Sulfur|Other Sectors;Mt/yr;Demand of Sulfur for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Tellurium|PV;Mt/yr;Demand of Tellurium for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Tellurium|Other Sectors;Mt/yr;Demand of Tellurium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Vanadium|Wind;Mt/yr;Demand of Vanadium for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Vanadium|CSP;Mt/yr;Demand of Vanadium for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Vanadium|Stationary Fuel Cells;Mt/yr;Demand of Vanadium for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Vanadium|Power Plants (fossil + nuclear);Mt/yr;Demand of Vanadium for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Vanadium|Stationary Batteries;Mt/yr;Demand of Vanadium for Stationary Batteries;;;;;0;;
+2;raw materials;Minerals|Vanadium|Electrolysers;Mt/yr;Demand of Vanadium for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Vanadium|Other Sectors;Mt/yr;Demand of Vanadium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Yttrium|Wind;Mt/yr;Demand of Yttrium for Wind Power Plants;;;;;0;;
+2;raw materials;Minerals|Yttrium|Stationary Fuel Cells;Mt/yr;Demand of Yttrium for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Yttrium|Power Plants (fossil + nuclear);Mt/yr;Demand of Yttrium for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Yttrium|Electrolysers;Mt/yr;Demand of Yttrium for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Yttrium|Other Sectors;Mt/yr;Demand of Yttrium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Zinc|PV;Mt/yr;Demand of Zinc for PV Power Plants;;;;;0;;
+2;raw materials;Minerals|Zinc|CSP;Mt/yr;Demand of Zinc for CSP Plants;;;;;0;;
+2;raw materials;Minerals|Zinc|Other Sectors;Mt/yr;Demand of Zinc for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Zirconium|Stationary Fuel Cells;Mt/yr;Demand of Zirconium for Stationary Fuel Cells;;;;;0;;
+2;raw materials;Minerals|Zirconium|Power Plants (fossil + nuclear);Mt/yr;Demand of Zirconium for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Zirconium|Electrolysers;Mt/yr;Demand of Zirconium for Electrolysers;;;;;0;;
+2;raw materials;Minerals|Zirconium|Other Sectors;Mt/yr;Demand of Zirconium for Other Sectors;;;;;0;;
+2;raw materials;Minerals|Oil|Power Plants (fossil + nuclear);Mt/yr;Demand of Oil for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Oil|Cars;Mt/yr;Demand of Oil for Cars;;;;;0;;
+2;raw materials;Minerals|Gas|Power Plants (fossil + nuclear);Mt/yr;Demand of Gas for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Coal|Power Plants (fossil + nuclear);Mt/yr;Demand of Coal for Power Plants (fossil + nuclear);;;;;0;;
+2;raw materials;Minerals|Uranium|Power Plants (fossil + nuclear);Mt/yr;Demand of Uranium for Power Plants (fossil + nuclear);;;;;0;;

@@ -35,6 +35,8 @@
 #'        If NULL, the user is asked. Multiple mappings are concatenated.
 #' @param removeFromScen regular expression to be removed from scenario name (optional). Example: '_d50|d95'
 #' @param addToScen string to be added as prefix to scenario name (optional)
+#' @param dropRegi regions to be dropped from output. Default is "auto" which drops aggregate regions
+#'        for REMIND EU21. Set to NULL for none. Set c("auto", "World") for dropping EU21 aggregate plus World
 #' @param outputDirectory path to directory for the generated submission (default: output).
 #'        If NULL, no files are written and `logFile` and `outputFilename` have no effect.
 #' @param logFile path to the logfile with warnings as passed to generateMappingfile, checkIIASASubmission
@@ -50,8 +52,9 @@
 #' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @param naAction a function which indicates what should happen when the data contain NA values.
-#' @importFrom quitte as.quitte write.IAMCxlsx write.mif
+#' @importFrom quitte as.quitte reportDuplicates write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
+#' @importFrom gms chooseFromList
 #' @importFrom piamutils deletePlus
 #' @importFrom stringr str_trim
 #' @examples
@@ -69,6 +72,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     model = NULL,
                                     removeFromScen = NULL,
                                     addToScen = NULL,
+                                    dropRegi = "auto",
                                     outputDirectory = "output",
                                     outputFilename = "submission.xlsx",
                                     logFile = if (is.null(outputFilename)) NULL else
@@ -81,7 +85,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
                                     naAction = "na.omit") {
 
   # process input parameters ----
-
+  if (is.null(mapping)) mapping <- chooseFromList(names(mappingNames()), type = "mappings", addAllPattern = FALSE)
   if (! is.null(mappingFile)) {
     warning("mappingFile is deprecated and ignored. If you got here via output.R -> export -> xlsx_IIASA,
             please pick a newer xlsx_IIASA.R file from remindmodel/develop")
@@ -105,7 +109,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   for (i in seq_along(mapping)) {
     t <- getMapping(mapping[i]) %>%
-      filter(.data$piam_variable != "", !is.na(.data$piam_variable), .data$piam_variable != "TODO") %>%
+      filter(! .data$piam_variable %in% "", ! is.na(.data$piam_variable)) %>%
       mutate(
         "piam_variable" = removePlus(.data$piam_variable),
         "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor))
@@ -123,15 +127,10 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   # for each directory, include all mif files
   message("# Read data...")
-  mifdata <- readMifs(mifs)
+  mifdata <- deletePlus(readMifs(mifs))
 
-  dupl <- mifdata %>% select(-"value") %>% filter(duplicated(mifdata)) %>% droplevels()
-  if (nrow(dupl) > 0) {
-    stop("Duplicated data found: ",
-         "\n  - Models: ", paste(levels(dupl$model), collapse = ", "),
-         "\n  - Scenarios: ", paste(levels(dupl$scenario), collapse = ", ")
-        )
-  }
+  # report if duplicates are found
+  invisible(reportDuplicates(mifdata))
 
   if (any(grepl("^Price\\|.*\\|Moving Avg$", levels(mifdata$variable))) &&
       ! any(grepl("^Price\\|.*\\|Rawdata$", levels(mifdata$variable)))) {
@@ -139,8 +138,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
            " before 1.111.0 on 2023-05-26, please use piamInterfaces version 0.9.0 or earlier, see PR #128.")
   }
 
-  message("# Remove |+| notation...")
-  mifdata <- deletePlus(mifdata)
+  mifdata <- .dropRegi(mifdata, dropRegi)
   message("# Rename old variables...")
   mifdata <- renameOldVariables(mifdata, mapData$piam_variable, logFile = logFile)
   message("# Check and fix units...")
@@ -227,6 +225,19 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   }
 }
 
+.dropRegi <- function(mifdata, dropRegi) {
+  if ("auto" %in% dropRegi) {
+    regiEU21 <- c("DEU", "ECE", "ECS", "ENC", "ESC", "ESW", "EWN", "FRA", "UKI", "NEN", "NES")
+    if (all(regiEU21 %in% levels(mifdata$region))) {
+      dropRegi <- c(dropRegi, "EUR", "NEU", "EU27")
+      warning("Because of dropRegi='auto', dropping 'EUR', 'NEU' and 'EU27' region.")
+    }
+    dropRegi <- unique(setdiff(dropRegi, "auto"))
+  }
+  if (length(dropRegi) > 0) message("# Dropping those regions: ", paste(dropRegi, collapse = ", "))
+  return(droplevels(filter(mifdata, ! .data$region %in% dropRegi)))
+}
+
 .setModelAndScenario <- function(dt, modelname, scenRemove = NULL, scenAdd = NULL) {
     scenarioNames <- unique(dt$scenario)
     if (! is.null(modelname)) {
@@ -259,7 +270,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
 # resolve the weight column if present else return
 .resolveWeights <- function(dataframe, weightSource) {
-  if (all(dataframe$piam_weight == "NULL") || all(is.na(dataframe$piam_weight))) {
+  if (all(dataframe$piam_weight %in% c("NULL", NA))) {
     message("No weights to resolve. Skipping.")
     return(dataframe)
   } else {

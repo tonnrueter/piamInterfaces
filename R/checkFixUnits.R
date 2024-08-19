@@ -10,7 +10,8 @@
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter mutate
 #' @importFrom GDPuc convertSingle
-#' @importFrom piamutils niceround
+#' @importFrom piamutils deletePlus niceround
+#' @importFrom piamutils 
 #' @importFrom rlang .data
 #' @importFrom stringr str_split
 #' @return quitte object with adapted mif data
@@ -21,7 +22,9 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
   unitcol <- if (haspiam) "piam_unit" else "unit"
   varcol <- if (haspiam) "piam_variable" else "variable"
 
-  mifdata <- droplevels(as.quitte(mifdata))
+  template[[varcol]] <- deletePlus(template[[varcol]])
+  mifdata <- deletePlus(droplevels(as.quitte(mifdata)))
+
   # try to identify and fix wrong units
   wrongUnits <- data.frame(variable = character(), templateunit = character(), mifunit = character())
   logtext <- NULL

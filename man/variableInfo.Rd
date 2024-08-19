@@ -4,13 +4,7 @@
 \alias{variableInfo}
 \title{Provide information on variable, its mappings and summation groups}
 \usage{
-variableInfo(
-  varname,
-  mif = NULL,
-  mapping = NULL,
-  remindVar = "piam_variable",
-  remindUnit = "piam_unit"
-)
+variableInfo(varname, mif = NULL, mapping = NULL)
 }
 \arguments{
 \item{varname}{string with variable name}
@@ -18,10 +12,6 @@ variableInfo(
 \item{mif}{filename of miffile}
 
 \item{mapping}{vector of mapping shortcuts (AR6, NAVIGATE) or mapping filenames. NULL means all}
-
-\item{remindVar}{column name of variable in mapping (default: piam_variable)}
-
-\item{remindUnit}{column name of unit in mapping (default: piam_unit)}
 }
 \value{
 prints human-readable summary to the user

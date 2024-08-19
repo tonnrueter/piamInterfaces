@@ -4,7 +4,7 @@
 \alias{areUnitsIdentical}
 \title{Check whether units are identical following a specified list}
 \usage{
-areUnitsIdentical(vec1, vec2)
+areUnitsIdentical(vec1, vec2 = NULL)
 }
 \arguments{
 \item{vec1}{units to be checked against vec2, elementwise}

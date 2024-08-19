@@ -6,34 +6,36 @@
 #' @param vec2 units to be checked against vec1, elementwise
 #' @return boolean
 #' @export
-areUnitsIdentical <- function(vec1, vec2) {
+areUnitsIdentical <- function(vec1, vec2 = NULL) {
+  if (is.null(vec2)) vec2 <- head(vec1)
   # only add units that actually have the same meaning, just different spelling
+  abbreviations <- list(
+    "bn" = "billion",
+    "US" = "US\\$|USD_|USD|US_",
+    "US05" = "US2005",
+    "US10" = "US2010",
+    "EUR" = "EUR_",
+    "yr" = "year",
+    "mio" = "million|Million",
+    "CO2" = "CO2e|CO2eq|CO2-equiv",
+    "%" = "Percentage|Percent|percent",
+    "cap" = "capita"
+  )
   identicalUnits <- list(
     c("\u00B0C", "\u00C2\u00B0C", "K"),
-    c("billion m2/yr", "bn m2/yr"),
-    c("billion pkm/yr", "bn pkm/yr"),
-    c("billion tkm/yr", "bn tkm/yr"),
-    c("billion vkm/yr", "bn vkm/yr"),
     c("Gtkm/yr", "bn tkm/yr"),
     c("Gpkm/yr", "bn pkm/yr"),
     c("kcal/cap/day", "kcal/capita/day", "kcal/cap/d"),
     c("kt CF4/yr", "kt CF4-equiv/yr"),
     c("ktU/yr", "kt U/yr"),
     c("km\u00b3", "km3"),
-    c("Million", "million", "million people", "mio people"),
+    c("mio", "mio people"),
     c("million t DM/yr", "Mt DM/yr"),
-    c("million vehicles", "Million vehicles"),
-    c("Mt/yr", "Mt/year"),
-    c("Mt CO2-equiv/Mt", "Mt CO2/Mt"),
-    c("Mt CO2-equiv/yr", "Mt CO2eq/yr", "Mt CO2e/yr", "Mt CO2/yr"),
     c("Mt Nr/yr", "Tg N/yr"),
     c("Mt NO2/yr", "Mt NOX/yr"),
-    c("Percentage", "Percent", "percent", "%"),
+    c("Nr/Nr", "Nr per Nr"),
     c("unitless", "", "-", "1", "index"),
-    c("tDM/cap/yr", "tDM/capita/yr"),
     c("W/m2", "W/m^2"),
-    c("USD05", "USD2005", "US$05", "US$2005", "USD2005", "USD_2005"),
-    c("USD10", "USD2010", "US$10", "US$2010", "USD2010", "USD_2010"),
     # below, exceptionally added units that actually differ for backwards compatibility
     # for 'Energy Service|Residential and Commercial|Floor Space'
     c("bn m2/yr", "billion m2/yr", "bn m2", "billion m2"),
@@ -41,13 +43,17 @@ areUnitsIdentical <- function(vec1, vec2) {
     c("t DM/ha", "t DM/ha/yr", "dm t/ha"),
     # for 'Water|Environmental flow violation volume'
     c("km3/yr", "km3"),
-    # AgMIP
-    c("USD05/tCO2", "US$2005/tCO2"),
-    c("Nr/Nr", "Nr per Nr"),
   NULL)
   areIdentical <- function(x, y) {
-    # literally identical or both found in the same list element above
-    isTRUE(x == y) || any(unlist(lapply(identicalUnits, function(units) all(c(x, y) %in% units))))
+    # literally identical
+    isTRUE(x == y) ||
+    # both found in the same list element above
+    any(unlist(lapply(identicalUnits, function(units) all(c(x, y) %in% units))))
+  }
+  for (abb in names(abbreviations)) {
+    vec1 <- gsub(abbreviations[abb], abb, vec1)
+    vec2 <- gsub(abbreviations[abb], abb, vec2)
+    identicalUnits <- lapply(identicalUnits, function(x) gsub(abbreviations[abb], abb, x))
   }
   return(unname(unlist(Map(Vectorize(areIdentical), vec1, vec2))))
 }

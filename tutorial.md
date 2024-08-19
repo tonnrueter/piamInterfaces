@@ -32,7 +32,7 @@ Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
 - `Tier`: importance of variable. 1 means most important
 - `Comment`: place for comments
-
+- `weight`: calculates a weighted average of multiple entries of `piam_variable`. Provide a different `piam_variable` in this column, and `generateIIASASubmission()` will split the data on the rows which contain weight pointers, resolve these weights into numerical values (via a join operation between the submission and the input data) and then modify the value based on the weighting. This takes place in the private .resolveWeights method.
 
 To edit a mapping in `R`, use:
 ```

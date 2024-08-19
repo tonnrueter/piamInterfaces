@@ -15,8 +15,40 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(length(conflictsigns) == 0, label = paste0(mapping, " has no merge conflicts"))
 
+    # look for Moving Avg prices in REMIND variables
+    movingavg <- mappingData %>%
+      filter(grepl("^Price\\|.*\\|Moving Avg", .data$piam_variable),
+             ifelse("source" %in% colnames(.data), .data$source %in% c("R", "Rx"), TRUE)) %>%
+      pull("variable")
+    if (length(movingavg) > 0) {
+      warning("These variables use 'Price|*|Moving Avg' which is deprecated since remind2 1.111.0 on 2023-05-26.\n",
+              "Please remove '|Moving Avg' to use a fixed moving average:\n", paste(movingavg, collapse = ", "))
+    }
+    expect_equal(length(movingavg), 0)
+
+    # check for duplicated rows
+    duplicates <- mappingData %>%
+      select("variable", "piam_variable") %>%
+      mutate(piam_variable = deletePlus(.data$piam_variable),
+             variable = deletePlus(.data$variable))
+    duplicates <- filter(duplicates, duplicated(duplicates))
+    if (nrow(duplicates) > 0) {
+      warning("Duplicated line in ", mapping, ":\n",
+              paste0(duplicates$variable, ";", duplicates$piam_variable, collapse = "\n"))
+    }
+    expect_equal(nrow(duplicates), 0)
+
+    # check for |+| notation used inconsistenly
+    vars <- setdiff(unique(mappingData$piam_variable), NA)
+    somePlusSomeNot <- vars[table(deletePlus(unique(vars)))[deletePlus(vars)] > 1]
+    if (length(somePlusSomeNot) > 0) {
+      warning("Inconsistent use of |+| notation for these variables:\n",
+              paste(somePlusSomeNot, collapse = ", "))
+    }
+    expect_equal(length(somePlusSomeNot), 0)
+
     # check for inconsistent variable + unit combinations
-    nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable), ! .data$piam_variable == "TODO")
+    nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
     allVarUnit <- paste0(nonempty$piam_variable, " (", nonempty$piam_unit, ")")
     unclearVar <- nonempty$piam_variable[duplicated(nonempty$piam_variable) & ! duplicated(allVarUnit)]
     unclearVarUnit <- sort(unique(allVarUnit[nonempty$piam_variable %in% unclearVar]))
@@ -48,6 +80,16 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(nrow(unitfails) == 0)
 
+    # check if piam_factor is supplied without variable
+    factorWithoutVar <- mappingData %>%
+      filter(! is.na(.data$piam_factor), is.na(.data$piam_variable)) %>%
+      pull("variable")
+    if (length(factorWithoutVar) > 0) {
+      warning("These variables in mapping ", mapping, " have a piam_factor, but nothing specified in piam_variable:\n",
+              paste(factorWithoutVar, collapse = "\n"))
+    }
+    expect_true(length(factorWithoutVar) == 0)
+
     # checks only if source is supplied
     if ("source" %in% colnames(mappingData)) {
       # check for empty piam_variable with source
@@ -62,7 +104,7 @@ for (mapping in names(mappingNames())) {
 
       # check for piam_variable without source if source is supplied
       varWithoutSource <- mappingData %>%
-        filter(! is.na(.data$piam_variable), ! .data$piam_variable %in% "TODO", is.na(.data$source)) %>%
+        filter(! is.na(.data$piam_variable), is.na(.data$source)) %>%
         pull("piam_variable") %>%
         unique()
       if (length(varWithoutSource) > 0) {

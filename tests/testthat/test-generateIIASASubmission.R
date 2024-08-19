@@ -8,8 +8,10 @@ for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS"
     }
 
     data <- data %>% # [seq(min(10, nrow(data))), ] %>%
-      filter(!is.na(variable)) %>%
-      mutate(model = "REMIND", scenario = "default", region = "GLO", value = 1)
+      filter(!is.na(.data$variable)) %>%
+      mutate(model = "REMIND", scenario = "default", region = "GLO", value = 1) %>%
+      mutate(variable = deletePlus(.data$variable)) %>%
+      distinct()
 
     data <- tidyr::crossing(data, year = seq(2005, 2020, 5))
 
@@ -28,6 +30,13 @@ for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS"
     unlink(expectedFiles)
   })
 }
+
+test_that("Community template works", {
+  templateurl <- "https://files.ece.iiasa.ac.at/common-definitions/common-definitions-template.xlsx"
+  expect_no_warning(d <- generateIIASASubmission(quitte::quitte_example_data, mapping = "NAVIGATE",
+                                                 outputDirectory = NULL, iiasatemplate = templateurl))
+  expect_true(nrow(d) > 0)
+})
 
 test_that("Correct Prices are selected and plusses ignored", {
   qe <- qeAR6
@@ -80,8 +89,11 @@ test_that("Correct Prices are selected and plusses ignored", {
 
 test_that("fail on duplicated data", {
   dupl <- rbind(testdata, testdata)
-  expect_error(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
-               "Duplicated data found")
+  expect_warning(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
+                 "Duplicated data found")
+  dupl <- rbind(testdata, mutate(testdata, variable = sub("|", "|++|", variable, fixed = TRUE)))
+  expect_warning(generateIIASASubmission(dupl, mapping = "AR6", outputFilename = NULL, logFile = NULL),
+                 "Duplicated data found")
 })
 
 

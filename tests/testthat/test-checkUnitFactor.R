@@ -16,7 +16,8 @@ test_that("checkUnitFactor works", {
     c("Emissions|N2O", "kt N2O/yr", "Mt N2O/yr", "1000"),
     c("FE", "MJ", "GJ", "1000"),
     c("GDP", "US$2010", "US$2005", "1.12"),
-    c("Trade", "EUR_2020", "US$2005", "1.17")
+    c("Trade", "EUR_2020", "US$2005", "1.17"),
+    c("Price", "Index 2020=100", "1", "1")
   )
   for (w in wrong) {
     mapping <- data.frame(Variable = character(), Unit = character(),
