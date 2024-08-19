@@ -109,7 +109,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   for (i in seq_along(mapping)) {
     t <- getMapping(mapping[i]) %>%
-      filter(.data$piam_variable != "", !is.na(.data$piam_variable), .data$piam_variable != "TODO") %>%
+      filter(! .data$piam_variable %in% "", ! is.na(.data$piam_variable)) %>%
       mutate(
         "piam_variable" = removePlus(.data$piam_variable),
         "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor))

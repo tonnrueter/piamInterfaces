@@ -48,7 +48,7 @@ for (mapping in names(mappingNames())) {
     expect_equal(length(somePlusSomeNot), 0)
 
     # check for inconsistent variable + unit combinations
-    nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable), ! .data$piam_variable == "TODO")
+    nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
     allVarUnit <- paste0(nonempty$piam_variable, " (", nonempty$piam_unit, ")")
     unclearVar <- nonempty$piam_variable[duplicated(nonempty$piam_variable) & ! duplicated(allVarUnit)]
     unclearVarUnit <- sort(unique(allVarUnit[nonempty$piam_variable %in% unclearVar]))
@@ -104,7 +104,7 @@ for (mapping in names(mappingNames())) {
 
       # check for piam_variable without source if source is supplied
       varWithoutSource <- mappingData %>%
-        filter(! is.na(.data$piam_variable), ! .data$piam_variable %in% "TODO", is.na(.data$source)) %>%
+        filter(! is.na(.data$piam_variable), is.na(.data$source)) %>%
         pull("piam_variable") %>%
         unique()
       if (length(varWithoutSource) > 0) {

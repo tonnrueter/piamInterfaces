@@ -1,10 +1,4 @@
 idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
-# temporary fix until waste emissions are separated;;;;;;;;;; # https://github.com/remindmodel/development_issues/issues/261
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
-;Emissions|CO2|Energy|Supply|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
-;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
-;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
-#;;;;;;;;;;
 0;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
@@ -141,7 +135,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 116;Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;;;;total radiative forcing from tropospheric ozone;C
 117;Temperature|Global Mean;°C;MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile;K;;;;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab;C
 118;Capital Formation;billion US$2010/yr;Investments;billion US$2005/yr;1.12;;;might not fit completely;net additions to the physical capital stock;R
-119;Capital Stock;billion US$2010/yr;;;;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND;TODO: report yearly value,Macroeconomic capital stock;
+119;Capital Stock;billion US$2010/yr;;;;;;Capital Stock|Non-ESM is actually a cumulative value in REMIND, report yearly value;Macroeconomic capital stock;
 120;Consumption;billion US$2010/yr;Consumption;billion US$2005/yr;1.12;;;quality depends on capital market realization (switch);total consumption of all goods,by all consumers in a region;R
 121;Discount rate|Residential and Commercial;%;;;;;;;Discount rate for investments into residential and commercial buildings;
 122;Discount rate|Economy;%;;;;;;;Economy wide discount rate: real interest rate of capital;
