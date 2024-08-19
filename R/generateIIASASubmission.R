@@ -52,7 +52,7 @@
 #' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @param naAction a function which indicates what should happen when the data contain NA values.
-#' @importFrom quitte as.quitte write.IAMCxlsx write.mif
+#' @importFrom quitte as.quitte reportDuplicates write.IAMCxlsx write.mif
 #' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
 #' @importFrom gms chooseFromList
 #' @importFrom piamutils deletePlus
@@ -127,15 +127,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   # for each directory, include all mif files
   mifdata <- deletePlus(readMifs(mifs))
-
-  dupl <- mifdata %>% select(-"value") %>% filter(duplicated(mifdata)) %>% droplevels()
-  if (nrow(dupl) > 0) {
-    warning("Duplicated data found which will lead to wrong calculations for: ",
-         "\n  - Models:    ", paste(levels(dupl$model), collapse = ", "),
-         "\n  - Scenarios: ", paste(levels(dupl$scenario), collapse = ", "),
-         "\n  - Variables: ", paste(levels(dupl$variable), collapse = ", ")
-        )
-  }
+  # report if duplicates are found
+  invisible(reportDuplicates(mifdata))
 
   if (any(grepl("^Price\\|.*\\|Moving Avg$", levels(mifdata$variable))) &&
       ! any(grepl("^Price\\|.*\\|Rawdata$", levels(mifdata$variable)))) {

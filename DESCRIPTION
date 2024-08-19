@@ -1,8 +1,8 @@
 Type: Package
 Package: piamInterfaces
 Title: Project specific interfaces to REMIND / MAgPIE
-Version: 0.26.0
-Date: 2024-08-15
+Version: 0.26.1
+Date: 2024-08-19
 Authors@R: c(
     person("Falk", "Benke", , "benke@pik-potsdam.de", role = c("aut", "cre")),
     person("Oliver", "Richters", role = "aut")
@@ -16,8 +16,8 @@ Imports:
     magclass,
     mip (>= 0.144.3),
     readxl,
-    quitte (>= 0.3123.0),
-    piamutils (>= 0.0.8),
+    quitte (>= 0.3137.1),
+    piamutils (>= 0.0.12),
     rlang,
     stringr,
     tibble,

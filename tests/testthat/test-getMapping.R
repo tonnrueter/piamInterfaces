@@ -17,7 +17,8 @@ for (mapping in names(mappingNames())) {
 
     # look for Moving Avg prices in REMIND variables
     movingavg <- mappingData %>%
-      filter(grepl("^Price\\|.*\\|Moving Avg", .data$piam_variable), .data$source %in% c("R", "Rx")) %>%
+      filter(grepl("^Price\\|.*\\|Moving Avg", .data$piam_variable),
+             ifelse("source" %in% colnames(.data), .data$source %in% c("R", "Rx"), TRUE)) %>%
       pull("variable")
     if (length(movingavg) > 0) {
       warning("These variables use 'Price|*|Moving Avg' which is deprecated since remind2 1.111.0 on 2023-05-26.\n",
