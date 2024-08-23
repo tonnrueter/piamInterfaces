@@ -757,7 +757,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 687;Energy Service|Transportation|Aviation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation;
 688;Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight;billion tkm/yr;;;;;annual demand for energy services related to freight transportation;R
 689;Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in aviation;
-690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in international shipping;T
+690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in international shipping;
 691;Energy Service|Transportation|Freight|Navigation;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in navigation;T
 692;Energy Service|Transportation|Freight|Other;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation (other);
 693;Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in railways;T
@@ -776,7 +776,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 704;Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;billion pkm/yr;;;;;energy service demand for passenger transport on roads (buses);T
 705;Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;billion pkm/yr;;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);T
 706;Energy Service|Transportation|Rail;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Rail;
-707;Energy Service|Transportation|Road;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Road;T
+707;Energy Service|Transportation|Road;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Road;
 708;Final Energy;EJ/yr;FE;EJ/yr;;;;;total final energy consumption by all end-use sectors and all fuels,excluding transmission/distribution losses;R
 ;Final Energy (excl. feedstocks)|Industry;EJ/yr;;;;;;;;
 709;Final Energy (excl. feedstocks)|Industry|Electricity;EJ/yr;;;;;;;Final Energy consumption by the industrial sector,excluding feedstocks use,of electricity;
@@ -1088,7 +1088,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1005;Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|Liquids;EJ/yr;;;;;final energy consumption by the freight transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids);R
 1006;Final Energy|Transportation|Freight|Liquids|Bioenergy;EJ/yr;FE|Transport|Freight|Liquids|Biomass;EJ/yr;;;;;Final biofuels based (liquid or gas) energy consumed in the transport sector by freight vehicles;T
 1008;Final Energy|Transportation|Freight|Liquids|Fossil synfuel;EJ/yr;;;;;;;Final energy,in the form of fossil synfuel (e.g. CTL,GTL,Methanol,and DME),consumed in the transport sector by freight vehicles;
-1009;Final Energy|Transportation|Freight|Liquids|Oil;EJ/yr;;;;;;;final energy consumption by the freight transportation sector of liquid oil products (from conventional & unconventional oil);T
+1009;Final Energy|Transportation|Freight|Liquids|Oil;EJ/yr;;;;;;;final energy consumption by the freight transportation sector of liquid oil products (from conventional & unconventional oil);
 1010;Final Energy|Transportation|Freight|Other;EJ/yr;FE|Transport|Freight|Liquids|Hydrogen;EJ/yr;;;;“Green” synthetic fuels from hydrogen made from electrolysis + “blue” synfuels from fossil H2;final energy consumption by the freight transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);T
 1011;Final Energy|Transportation|Gases;EJ/yr;FE|Transport|+|Gases;EJ/yr;;;;;final energy consumption by the transportation sector of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses;R
 1012;Final Energy|Transportation|Gases|Bioenergy;EJ/yr;FE|Transport|Gases|+|Biomass;EJ/yr;;;;;Final bioenergy-based gas energy consumed in the transportation sector;R
