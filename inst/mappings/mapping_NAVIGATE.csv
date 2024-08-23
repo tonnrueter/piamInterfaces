@@ -9,7 +9,6 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 4;1;agriculture;Agricultural Demand|Energy|Crops;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;demand for modern primary energy crops (1st and 2nd generation);M
 5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock);M
 5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops and livestock);M
-5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|Bioenergy|+|Crop residues ;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops and livestock);M
 5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|Bioenergy|+|Crop residues;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops and livestock);M
 5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock);M
 6;1;agriculture;Agricultural Demand|Non-Energy|Crops;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops);M
