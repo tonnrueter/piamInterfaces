@@ -10,7 +10,8 @@
 #'        of files containing a 'variable' column (or both)
 #' @param areaplotVariables vector with variable names for areaplot or filenames
 #'        of files containing a 'variable' column. Only those available in the summationsFile can be plotted.
-#' @param interactive boolean whether you want to select variables, regions and models to be plotted
+#' @param interactive set to subset of c("variable", "model", "scenario", "region", "period", "plotby", "diffto") to select them
+#'        interactively, or to TRUE to select all of them
 #' @param mainReg region name of main region to be passed to mip
 #' @param plotby whether you would like to have everything plotted by scenario, model and/or onefile.
 #'        set to NULL to be asked.
@@ -40,6 +41,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     dir.create(outputDirectory, recursive = TRUE)
   }
   stopifnot(is.null(plotby) || all(plotby %in% c("model", "scenario", "onefile")))
+  if (isTRUE(interactive)) interactive <- c("variable", "model", "scenario", "region", "period", "plotby", "diffto")
 
   # load data
   data <- droplevels(quitte::as.quitte(mifFile, na.rm = TRUE))
@@ -47,8 +49,8 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   # prepare summation groups
   summationGroups <- data.frame(list(variable = "", child = ""))
   if (isTRUE(summationsFile == "extractVariableGroups")) {
-    areaplotVars <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
-    names(areaplotVars) <- make.unique(names(areaplotVars), sep = " ")
+    summationList <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE, sorted = TRUE)
+    names(summationList) <- make.unique(names(summationList), sep = " ")
   } else if (! is.null(summationsFile)) {
     summationGroups <- getSummations(summationsFile)
     # only leave in areaplotVariables contained in summationFile and where at least one child is in the data
@@ -66,7 +68,12 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   data <- data %>%
     left_join(summationGroups, by = c("variable" = "child")) %>%
     droplevels()
-  if (! is.null(diffto)) data <- diffToScen(data, diffto)
+  if ("diffto" %in% interactive) {
+    diffto <- chooseFromList(unique(data$scenario), multiple = FALSE,
+                             userinfo = "Leave empty to get the normal absolute values.",
+                             type = "scenario that serves as reference, so the difference to this scenario is plotted")
+  }
+  if (length(diffto) > 0) data <- diffToScen(data, diffto)
   hist <- filter(data,   .data$scenario %in% "historical") %>% droplevels()
   data <- filter(data, ! .data$scenario %in% "historical") %>% droplevels()
 
@@ -90,24 +97,26 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   areaplotVariables <- if (isTRUE(areaplotVariables)) unique(data$variable) else combineVariables(areaplotVariables)
 
   # select the plot style if undefined
-  if (is.null(plotby)) {
+  if (is.null(plotby) || "plotby" %in% interactive) {
     plotby <- chooseFromList(c("onefile", "model", "scenario"), "pdfs to be generated",
                           userinfo = "all in one file, and/or one file per model, scenario")
   }
-  if (interactive) {
-    data <- quitte::chooseFilter(data, types = c("model", "scenario", "region", "period"),
+  if (any(c("model", "scenario", "region", "period") %in% interactive)) {
+    data <- quitte::chooseFilter(data, types = intersect(c("model", "scenario", "region", "period"), interactive),
                                  keep = list(region = mainReg))
   }
   lineplotVariables <- sort(intersect(lineplotVariables, unique(data$variable)))
   availableForAreaplot <- removeNo(names(summationList)) %in% intersect(areaplotVariables, unique(data$variable))
   areaplotVariables <- summationList[sort(names(summationList)[availableForAreaplot])]
 
-  if (interactive) {
-    chosen <- chooseFromList(unique(removeNo(names(areaplotVariables))), userinfo = "Enter to select all variables",
-                                 type = "parent variables of area plots to be plotted")
+  if ("variable" %in% interactive) {
+    chosen <- chooseFromList(unique(removeNo(names(areaplotVariables))),
+                             userinfo = "Choose parent variables for area plots. Press Enter to select all.",
+                             type = "parent variables of area plots to be plotted")
     if (length(chosen) > 0) areaplotVariables <- areaplotVariables[removeNo(names(areaplotVariables)) %in% chosen]
-    chosen <- chooseFromList(lineplotVariables, userinfo = "Enter to select all variables",
-                                             type = "variables to be plotted with line plots")
+    chosen <- chooseFromList(lineplotVariables,
+                             userinfo = "Choose variables for line plots. Rress Enter to select all.",
+                             type = "variables to be plotted with line plots")
     if (length(chosen) > 0) lineplotVariables <- chosen
   }
 
@@ -117,12 +126,13 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   output <- try(mip::plotstyle.add(levels(data$scenario), levels(data$scenario), ps, replace = TRUE))
   if (inherits(output, "try-error")) message("Error running mip::plotstyle.add, you may have inconsistent coloring.")
 
-  countpdfs <- length(c(if ("scenario" %in% plotby) quitte::getScenarios(data),
-                        if ("model" %in% plotby) quitte::getModels(data),
+  countpdfs <- length(c(if ("scenario" %in% plotby && length(quitte::getModels(data)) > 1) quitte::getScenarios(data),
+                        if ("model" %in% plotby && length(quitte::getScenarios(data)) > 1) quitte::getModels(data),
                         if ("onefile" %in% plotby) "onefile"))
+  countpdfs <- max(1, countpdfs)
 
   message("### ", countpdfs, " documents will be generated, each with max. ",
-          (length(areaplotVariables) + length(lineplotVariables)), " plots. Enjoy waiting.\n")
+          length(unique(c(removeNo(names(areaplotVariables)), lineplotVariables))), " variables. Enjoy waiting.\n")
 
   if ("scenario" %in% plotby && length(quitte::getModels(data)) > 1) {
     for (thisscenario in quitte::getScenarios(data)) {
@@ -191,22 +201,20 @@ makepdf <- function(pdfFilename, plotdata, lineplotVariables, areaplotVariables,
 }
 
 diffToScen <- function(data, diffto) {
-  if (! is.null(diffto)) {
-    stopifnot(
-      `diffto has to have length 1` = length(diffto) == 1,
-      `diffto has to be a scenario name present in the data` = diffto %in% levels(data$scenario)
-    )
-    dref <- data %>%
-      filter(.data$scenario == diffto) %>%
-      select(-"scenario") %>%
-      rename("ref" = "value") %>%
-      droplevels()
-    data <- data %>%
-      left_join(dref, by = c("model", "region", "variable", "unit", "period")) %>%
-      mutate("value" = !!sym("value") - !!sym("ref")) %>%
-      filter(.data$scenario != diffto) %>%
-      droplevels()
-  }
+  stopifnot(
+    `diffto has to have length 1` = length(diffto) == 1,
+    `diffto has to be a scenario name present in the data` = diffto %in% levels(data$scenario)
+  )
+  dref <- data %>%
+    filter(.data$scenario == diffto) %>%
+    select(-"scenario") %>%
+    rename("ref" = "value") %>%
+    droplevels()
+  data <- data %>%
+    left_join(dref, by = c("model", "region", "variable", "unit", "period")) %>%
+    mutate("value" = !!sym("value") - !!sym("ref")) %>%
+    filter(.data$scenario != diffto) %>%
+    droplevels()
   return(data)
 }
 

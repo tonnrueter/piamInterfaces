@@ -10,11 +10,13 @@ plotIntercomparison(
   outputDirectory = "output",
   summationsFile = "AR6",
   renameModels = NULL,
-  lineplotVariables = "AR6",
+  lineplotVariables = TRUE,
+  areaplotVariables = TRUE,
   interactive = FALSE,
   mainReg = "World",
   plotby = c("model", "scenario"),
-  diffto = NULL
+  diffto = NULL,
+  postfix = format(Sys.time(), "_\%Y-\%m-\%d_\%H.\%M.\%S")
 )
 }
 \arguments{
@@ -26,16 +28,22 @@ plotIntercomparison(
 
 \item{renameModels}{vector with oldname = newname}
 
-\item{lineplotVariables}{vector with variable names for additional lineplots or filenames
+\item{lineplotVariables}{vector with variable names for lineplots or filenames
 of files containing a 'variable' column (or both)}
+
+\item{areaplotVariables}{vector with variable names for areaplot or filenames
+of files containing a 'variable' column. Only those available in the summationsFile can be plotted.}
 
 \item{interactive}{boolean whether you want to select variables, regions and models to be plotted}
 
 \item{mainReg}{region name of main region to be passed to mip}
 
-\item{plotby}{whether you would like to have everything plotted by scenario, model and/or onefile}
+\item{plotby}{whether you would like to have everything plotted by scenario, model and/or onefile.
+set to NULL to be asked.}
 
 \item{diffto}{if specified, the difference to this scenario is calculated and plotted}
+
+\item{postfix}{to the filename, defaults to something like "_2024-09-05_12.47.28"}
 }
 \description{
 Model intercomparison plots: area plots based on summation groups, line plots for further

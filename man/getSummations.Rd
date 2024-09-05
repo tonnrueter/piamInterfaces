@@ -4,10 +4,12 @@
 \alias{getSummations}
 \title{Retrieves latest summation group file for a given project}
 \usage{
-getSummations(project = NULL)
+getSummations(project = NULL, format = "dataframe")
 }
 \arguments{
 \item{project}{name of the project of requested summation group, or summation group filename}
+
+\item{format}{either "dataframe" or "list", the latter ignores the factor column}
 }
 \description{
 Retrieves latest summation group file for a given project
