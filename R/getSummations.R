@@ -3,10 +3,11 @@
 #' @md
 #' @author Oliver Richters
 #' @param project name of the project of requested summation group, or summation group filename
+#' @param format either "dataframe" or "list", the latter ignores the factor column
 #' @importFrom utils read.csv2
 #' @importFrom gms chooseFromList
 #' @export
-getSummations <- function(project = NULL) {
+getSummations <- function(project = NULL, format = "dataframe") {
   summations <- summationsNames()
   if (is.null(project)) {
     project <- chooseFromList(names(summations), type = "summation group files",
@@ -26,7 +27,15 @@ getSummations <- function(project = NULL) {
     } else {
       summations$factor <- as.numeric(summations$factor)
     }
-    return(summations)
+    if (isTRUE(format == "list")) {
+      summationsList <- list()
+      for (i in unique(summations$parent)) {
+        summationsList[[i]] <- summations[summations[, "parent"] == i, "child"]
+      }
+      return(summationsList)
+    } else {
+      return(summations)
+    }
   } else {
     stop("Summation group file ", filename, " not found.")
   }

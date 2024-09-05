@@ -6,7 +6,7 @@ test_that("plotComparison works", {
                         ! .data$variable %in% c("Population", "Final Energy|Industry|Liquids"))
   capture.output(m <- capture_messages(plotIntercomparison(data,
                                                            outputDirectory = tmpdir,
-                                                           lineplotVariables = lPV)))
+                                                           lineplotVariables = lPV, postfix = "")))
   expect_match(m, "Add plot for Final Energy", all = FALSE)
   expect_match(m, "Add plot for Temperature", all = FALSE)
   expectedFiles <- c("compare_models_Delayed_transition.pdf", "compare_models_Current_Policies.pdf",
