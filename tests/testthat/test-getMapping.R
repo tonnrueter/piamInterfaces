@@ -15,6 +15,19 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(length(conflictsigns) == 0, label = paste0(mapping, " has no merge conflicts"))
 
+    # check whether piam_factor column has , as decimal separator
+    factorWithComma <- mappingData %>%
+      filter(grepl(",", .data$piam_factor)) %>%
+      pull("variable")
+    if (length(factorWithComma) > 0) {
+      warning("These variables in mapping ", mapping, " have a piam_factor using a ',' as decimal. Please use '.':\n",
+              paste(factorWithComma, collapse = "\n"),
+              "\nYou can run: devtools::load_all(); write.csv2(getMapping('", mapping,
+              "') %>% mutate(piam_factor = gsub(',', '.', .data$piam_factor)), mappingNames('", mapping,
+              "'), na = '', row.names = FALSE, quote = FALSE)")
+    }
+    expect_true(length(factorWithComma) == 0)
+
     # look for Moving Avg prices in REMIND variables
     movingavg <- mappingData %>%
       filter(grepl("^Price\\|.*\\|Moving Avg", .data$piam_variable),
@@ -89,19 +102,6 @@ for (mapping in names(mappingNames())) {
               paste(factorWithoutVar, collapse = "\n"))
     }
     expect_true(length(factorWithoutVar) == 0)
-
-    # check whether piam_factor column has , as decimal separator
-    factorWithComma <- mappingData %>%
-      filter(grepl(",", .data$piam_factor)) %>%
-      pull("variable")
-    if (length(factorWithComma) > 0) {
-      warning("These variables in mapping ", mapping, " have a piam_factor using a ',' as decimal. Please use '.':\n",
-              paste(factorWithComma, collapse = "\n"),
-              "\nYou can run: devtools::load_all(); write.csv2(getMapping('", mapping,
-              "') %>% mutate(piam_factor = gsub(',', '.', .data$piam_factor)), mappingNames('", mapping,
-              "'), na = '', row.names = FALSE, quote = FALSE)")
-    }
-    expect_true(length(factorWithComma) == 0)
 
     # checks only if source is supplied
     if ("source" %in% colnames(mappingData)) {
