@@ -16,6 +16,7 @@ plotIntercomparison(
   mainReg = "World",
   plotby = c("model", "scenario"),
   diffto = NULL,
+  yearsBarPlot = c(2030, 2050),
   postfix = format(Sys.time(), "_\%Y-\%m-\%d_\%H.\%M.\%S")
 )
 }
@@ -24,7 +25,8 @@ plotIntercomparison(
 
 \item{outputDirectory}{path to directory to place one PDF for each model and scenario}
 
-\item{summationsFile}{in inst/summations folder that describes the required summation groups}
+\item{summationsFile}{in inst/summations folder that describes the required summation groups.
+set to "extractVariableGroups" to extract it automatically from data based on |+| notation}
 
 \item{renameModels}{vector with oldname = newname}
 
@@ -34,7 +36,9 @@ of files containing a 'variable' column (or both)}
 \item{areaplotVariables}{vector with variable names for areaplot or filenames
 of files containing a 'variable' column. Only those available in the summationsFile can be plotted.}
 
-\item{interactive}{boolean whether you want to select variables, regions and models to be plotted}
+\item{interactive}{allows to select various settings interactively:
+subset of c("variable", "model", "scenario", "region", "period", "plotby", "diffto", "yearsBarPlot")
+or set to TRUE to select all of them}
 
 \item{mainReg}{region name of main region to be passed to mip}
 
@@ -42,6 +46,8 @@ of files containing a 'variable' column. Only those available in the summationsF
 set to NULL to be asked.}
 
 \item{diffto}{if specified, the difference to this scenario is calculated and plotted}
+
+\item{yearsBarPlot}{years for which bar plots are to be made.}
 
 \item{postfix}{to the filename, defaults to something like "_2024-09-05_12.47.28"}
 }
