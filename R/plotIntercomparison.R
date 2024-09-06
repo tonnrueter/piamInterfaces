@@ -78,7 +78,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     left_join(summationGroups, by = c("variable" = "child")) %>%
     droplevels()
   if ("diffto" %in% interactive) {
-    diffto <- chooseFromList(levels(data$scenario), multiple = FALSE,
+    diffto <- chooseFromList(setdiff(levels(data$scenario), "historical"), multiple = FALSE,
                              userinfo = "Leave empty to get the normal absolute values.",
                              type = "scenario that serves as reference, so the difference to this scenario is plotted")
   }
