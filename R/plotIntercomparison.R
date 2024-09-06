@@ -20,7 +20,7 @@
 #' @param diffto if specified, the difference to this scenario is calculated and plotted
 #' @param yearsBarPlot years for which bar plots are to be made.
 #' @param postfix to the filename, defaults to something like "_2024-09-05_12.47.28"
-#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc pull
+#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc pull bind_rows
 #' @importFrom gms chooseFromList
 #' @importFrom rlang sym syms .data
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
@@ -232,6 +232,11 @@ diffToScen <- function(data, diffto) {
     select(-"scenario") %>%
     rename("ref" = "value") %>%
     droplevels()
+  # make sure also historical data is adjusted, if only one model is provided and diffto therefore unique
+  histmodels <- unique(as.character(data$model[data$scenario == "historical"]))
+  if (length(levels(dref$model) == 1) && length(histmodels) > 0) {
+    dref <- bind_rows(list(dref, lapply(histmodels, function(x) mutate(dref, model = factor(x)))))
+  }
   data <- data %>%
     left_join(dref, by = c("model", "region", "variable", "unit", "period")) %>%
     mutate("value" = !!sym("value") - !!sym("ref")) %>%
