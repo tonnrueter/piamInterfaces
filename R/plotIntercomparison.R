@@ -120,13 +120,12 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
 
   if ("variable" %in% interactive) {
     chosen <- chooseFromList(unique(removeNo(names(areaplotVariables))),
-                             userinfo = "Choose parent variables for area plots. Press Enter to select all.",
+                             userinfo = "Choose parent variables for area plots.",
                              type = "parent variables of area plots to be plotted")
-    if (length(chosen) > 0) areaplotVariables <- areaplotVariables[removeNo(names(areaplotVariables)) %in% chosen]
-    chosen <- chooseFromList(lineplotVariables,
-                             userinfo = "Choose variables for line plots. Press Enter to select all.",
-                             type = "variables to be plotted with line plots")
-    if (length(chosen) > 0) lineplotVariables <- chosen
+    areaplotVariables <- areaplotVariables[removeNo(names(areaplotVariables)) %in% chosen]
+    lineplotVariables <- chooseFromList(lineplotVariables,
+                                        userinfo = "Choose variables for line plots.",
+                                        type = "variables to be plotted with line plots")
   }
 
   if ("yearsBarPlot" %in% interactive && length(areaplotVariables) > 0) {
