@@ -14,7 +14,7 @@ Imports:
     dplyr (>= 1.1.1),
     gms,
     magclass,
-    mip (>= 0.149.3),
+    mip (>= 0.150.0),
     readxl,
     quitte (>= 0.3137.1),
     piamutils (>= 0.0.12),
