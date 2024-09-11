@@ -10,8 +10,8 @@
 #' @importFrom utils read.csv2
 #' @importFrom gms chooseFromList
 #' @importFrom dplyr filter mutate select rename
-#' @importFrom tidyr pivot_longer separate_wider_delim
-#' @importFrom tidyselect starts_with
+#' @importFrom jsonlite fromJSON
+#' @importFrom tidyr unnest_longer
 #' @export
 getSummations <- function(project = NULL, format = "dataframe") {
   summations <- summationsNames()
@@ -28,13 +28,7 @@ getSummations <- function(project = NULL, format = "dataframe") {
     if (str_sub(filename, -5, -1) == ".xlsx") {
       template <- loadIIASATemplate(filename)
       if (! "components" %in% names(template)) stop("project=", filename, " is missing 'components' column.")
-      summations <- template %>%
-        select("variable", "components") %>%
-        filter(! is.na(.data$components)) %>%
-        mutate(components = gsub('\\\", \"', ",", gsub('^\\[\\\"|\\\"\\]$', "", .data$components))) %>%
-        separate_wider_delim("components", ",", names_sep = "", too_few = "align_start") %>%
-        pivot_longer(starts_with("components"), values_to = "child", names_to = NULL) %>%
-        rename(parent = "variable")
+      summations <- unnestComponents(template)
     } else {
       summations <- read.csv2(filename, sep = ";", stringsAsFactors = FALSE,
                               strip.white = TRUE, comment.char = "#") %>%
@@ -57,4 +51,20 @@ getSummations <- function(project = NULL, format = "dataframe") {
   } else {
     stop("Summation group file ", filename, " not found.")
   }
+}
+
+json2list <- function(x) {
+  x <- lapply(x, fromJSON, simplifyMatrix = FALSE)
+  lapply(x, function(t) if (is.list(t)) t else list(t))
+}
+
+unnestComponents <- function(template) {
+  template %>%
+    select("variable", "components") %>%
+    filter(! is.na(.data$components)) %>%
+    mutate(components = json2list(.data$components)) %>%
+    unnest_longer("components") %>%
+    mutate(variable = make.unique(.data$variable, sep = " ")) %>%
+    unnest_longer("components") %>%
+    rename(parent = "variable", child = "components")
 }
