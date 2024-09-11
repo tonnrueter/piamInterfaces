@@ -7,7 +7,7 @@
 #' @return boolean
 #' @export
 areUnitsIdentical <- function(vec1, vec2 = NULL) {
-  if (is.null(vec2)) vec2 <- head(vec1)
+  if (is.null(vec2)) vec2 <- head(vec1, n = 1)
   # add abbreviations here that are used in the units
   abbreviations <- list(
     "bn" = "billion",

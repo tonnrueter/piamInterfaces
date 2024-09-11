@@ -214,7 +214,8 @@ makepdf <- function(pdfFilename, plotdata, lineplotVariables, areaplotVariables,
     }
     # line plot
     if (p %in% lineplotVariables) {
-      showLinePlots(rbind(plotdata, hist), p, mainReg = mainReg, color.dim.name = legendTitle)
+      showLinePlots(rbind(plotdata, hist), p, mainReg = mainReg, color.dim.name = legendTitle,
+                    vlines = as.numeric(format(Sys.time(), "%Y")))
     }
   }
   dev.off()

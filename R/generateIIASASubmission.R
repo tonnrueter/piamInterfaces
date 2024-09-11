@@ -52,7 +52,7 @@
 #' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @param naAction a function which indicates what should happen when the data contain NA values.
-#' @importFrom quitte as.quitte reportDuplicates write.IAMCxlsx write.mif
+#' @importFrom quitte as.quitte reportDuplicates write.IAMCxlsx write.mif quitteSort
 #' @importFrom dplyr filter mutate distinct inner_join bind_rows tibble
 #' @importFrom gms chooseFromList
 #' @importFrom piamutils deletePlus
@@ -181,7 +181,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
 
   # apply corrections using IIASA template ----
 
-  if (!is.null(iiasatemplate) && file.exists(iiasatemplate)) {
+  if (!is.null(iiasatemplate) && (file.exists(iiasatemplate) ||
+      grepl("^https:\\/\\/files\\.ece\\.iiasa\\.ac\\.at\\/.*\\.xlsx$", iiasatemplate))) {
     submission <- priceIndicesIIASA(submission, iiasatemplate, scenBase = NULL)
     submission <- checkIIASASubmission(submission, iiasatemplate, logFile, failOnUnitMismatch = FALSE)
   } else if (! is.null(iiasatemplate)) {
@@ -205,7 +206,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
   }
 
   # write or return data ----
-
+  submission <- quitteSort(submission)
   if (is.null(outputFilename)) {
     return(submission)
   } else {

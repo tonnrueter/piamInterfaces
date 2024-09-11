@@ -3,9 +3,15 @@
 #' @md
 #' @author Oliver Richters
 #' @param project name of the project of requested summation group, or summation group filename
+#'        which can be a csv file of a xlsx file where the first sheet containing a 'variable' column
+#'        is expected to have a 'components' column as well.
+#'        If project is a https://files.ece.iiasa.ac.at/*.xlsx  URL, it will be automatically downloaded.
 #' @param format either "dataframe" or "list", the latter ignores the factor column
 #' @importFrom utils read.csv2
 #' @importFrom gms chooseFromList
+#' @importFrom dplyr filter mutate select rename
+#' @importFrom jsonlite fromJSON
+#' @importFrom tidyr unnest_longer
 #' @export
 getSummations <- function(project = NULL, format = "dataframe") {
   summations <- summationsNames()
@@ -14,14 +20,21 @@ getSummations <- function(project = NULL, format = "dataframe") {
                               returnBoolean = FALSE, multiple = TRUE, addAllPattern = FALSE)
     if (length(project) == 0) stop("No summation group files selected, abort.")
   }
-  if (!file.exists(project)) {
+  if (! file.exists(project)) {
     project <- gsub("\\.csv$", "", gsub("^summation_groups_", "", project))
   }
   filename <- if (project %in% names(summations)) summations[project] else project
-  if (file.exists(filename)) {
-    summations <- read.csv2(filename, sep = ";", stringsAsFactors = FALSE,
-                            strip.white = TRUE, comment.char = "#") %>%
+  if (file.exists(filename) || grepl("^https:\\/\\/files\\.ece\\.iiasa\\.ac\\.at\\/.*\\.xlsx$", filename)) {
+    if (str_sub(filename, -5, -1) == ".xlsx") {
+      template <- loadIIASATemplate(filename)
+      if (! "components" %in% names(template)) stop("project=", filename, " is missing 'components' column.")
+      summations <- unnestComponents(template) %>%
+        as.data.frame()
+    } else {
+      summations <- read.csv2(filename, sep = ";", stringsAsFactors = FALSE,
+                              strip.white = TRUE, comment.char = "#") %>%
       filter(! .data$parent %in% "")
+    }
     if (!("factor" %in% names(summations))) {
       summations$factor <- 1
     } else {
@@ -39,4 +52,20 @@ getSummations <- function(project = NULL, format = "dataframe") {
   } else {
     stop("Summation group file ", filename, " not found.")
   }
+}
+
+json2list <- function(x) {
+  x <- lapply(x, fromJSON, simplifyMatrix = FALSE)
+  lapply(x, function(t) if (is.list(t)) t else list(t))
+}
+
+unnestComponents <- function(template) {
+  template %>%
+    select("variable", "components") %>%
+    filter(! is.na(.data$components)) %>%
+    mutate(components = json2list(.data$components)) %>%
+    unnest_longer("components") %>%
+    mutate(variable = make.unique(.data$variable, sep = " ")) %>%
+    unnest_longer("components") %>%
+    rename(parent = "variable", child = "components")
 }
