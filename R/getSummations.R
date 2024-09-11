@@ -28,7 +28,8 @@ getSummations <- function(project = NULL, format = "dataframe") {
     if (str_sub(filename, -5, -1) == ".xlsx") {
       template <- loadIIASATemplate(filename)
       if (! "components" %in% names(template)) stop("project=", filename, " is missing 'components' column.")
-      summations <- unnestComponents(template)
+      summations <- unnestComponents(template) %>%
+        as.data.frame()
     } else {
       summations <- read.csv2(filename, sep = ";", stringsAsFactors = FALSE,
                               strip.white = TRUE, comment.char = "#") %>%
