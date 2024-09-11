@@ -7,7 +7,10 @@
 getSummations(project = NULL, format = "dataframe")
 }
 \arguments{
-\item{project}{name of the project of requested summation group, or summation group filename}
+\item{project}{name of the project of requested summation group, or summation group filename
+which can be a csv file of a xlsx file where the first sheet containing a 'variable' column
+is expected to have a 'components' column as well.
+If project is a https://files.ece.iiasa.ac.at/*.xlsx  URL, it will be automatically downloaded.}
 
 \item{format}{either "dataframe" or "list", the latter ignores the factor column}
 }

@@ -28,7 +28,7 @@ loadIIASATemplate <- function(iiasatemplate) {
   }
   if (str_sub(iiasatemplate, -5, -1) == ".xlsx") {
     for (i in seq(20)) {
-      template <- rename_with(read_excel(iiasatemplate, sheet = i), tolower)
+      template <- rename_with(read_excel(iiasatemplate, sheet = i, guess_max = 21474836), tolower)
       if ("variable" %in% names(template)) {
         break
       }
