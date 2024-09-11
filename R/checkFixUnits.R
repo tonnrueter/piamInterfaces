@@ -31,7 +31,11 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
     mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
     # find unit mismatches
     if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
-      if (areUnitsIdentical(mifunit, templateunit)) {
+      if (length(templateunit) > 1 || length(mifunit) > 1) {
+        warning("Non-unique units for ", mifvar, ": templateunit: ", paste(templateunit, collapse = ", "),
+                ". mifunit: ", paste(mifunit, collapse = ", "))
+      }
+      if (all(areUnitsIdentical(c(mifunit, templateunit)))) {
         # fix wrong spelling of units as allowed in identicalUnits
         logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, "."))
         mifdata <- mifdata %>%
