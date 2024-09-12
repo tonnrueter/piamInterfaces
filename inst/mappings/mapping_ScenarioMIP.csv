@@ -2,6 +2,7 @@ variable;unit;Tier;description;Comment;weight;piam_variable;piam_unit;piam_facto
 Agricultural Demand;million t DM/yr;2;Total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Demand|++|Crops;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M
 Agricultural Demand;million t DM/yr;2;Total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M
 Agricultural Demand;million t DM/yr;2;Total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Demand|++|Livestock products;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M
+Agricultural Demand;million t DM/yr;2;Total demand for food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M
 Agricultural Production;million t DM/yr;2;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Production|+|Crops;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M
 Agricultural Production;million t DM/yr;2;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Production|+|Livestock products;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M
 Agricultural Production;million t DM/yr;2;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Production|+|Bioenergy crops;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M
@@ -953,17 +954,17 @@ Primary Energy|Gas|Hydrogen|w/o CCS;EJ/yr;;Primary energy consumption of natural
 Primary Energy|Oil|Heat;EJ/yr;;Primary energy consumption of conventional and unconventional crude oil for conversion to heat;;;;;;mapping taken from ARIADNE, ARIADNE category: energy (supply);
 Final Energy|Bunkers|Gases|Biomass;EJ/yr;2;Final energy consumption by the international aviation and shipping of gas from biogenic sources, mainly biogas;;;FE|Transport|Bunkers|Gases|+|Biomass;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Bunkers|Liquids|Electricity;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;FE|Transport|Bunkers|Liquids|+|Hydrogen;EJ/yr;1;mapping taken from ECEMF;R
-Agricultural Demand|Crops|Bioenergy;million t DM/yr;3;Demand for bioenergy crops (1st & 2nd generation);;;;;;;
+Agricultural Demand|Crops|Bioenergy;million t DM/yr;3;Demand for bioenergy crops (1st & 2nd generation);;;Demand|++|Bioenergy crops;Mt DM/yr;;;
 Agricultural Demand|Crops|Bioenergy|1st Generation;million t DM/yr;3;Demand for 1st generation bioenergy crops (sugar, starch and oil crops);;;;;;;
 Agricultural Demand|Crops|Bioenergy|2nd generation;million t DM/yr;3;Demand for second-generation bioenergy crops (short rotation grasses, short rotation trees);;;;;;;
-Agricultural Demand|Crops|Feed|Cereals;million t DM/yr;4;Demand for feed crops from cereals (maize, rice, temperate cereals and tropical cereals);;;;;;;
-Agricultural Demand|Crops|Feed|Oil Crops;million t DM/yr;4;Demand for feed crops from oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl. rapeseed, soybean, sunflower);;;;;;;
-Agricultural Demand|Crops|Feed|Other Crops;million t DM/yr;4;Demand for feed crops from other crops (Fruits Vegetables Nuts, Potatoes, Pulses, Tropical roots);;;;;;;
-Agricultural Demand|Crops|Feed|Sugar Crops;million t DM/yr;4;Demand for feed crops from sugar crops (Sugar beet, Sugar cane);;;;;;;
-Agricultural Demand|Crops|Food|Cereals;million t DM/yr;4;Demand for food crops from cereals (maize, rice, temperate cereals and tropical cereals);;;;;;;
-Agricultural Demand|Crops|Food|Oil Crops;million t DM/yr;4;Demand for food crops from oil crops (Cotton seed, Groundnuts, Oilpalms, Other oil crops incl rapeseed, Soybean, Sunflower);;;;;;;
-Agricultural Demand|Crops|Food|Other Crops;million t DM/yr;4;Demand for food crops from other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;;;;;
-Agricultural Demand|Crops|Food|Sugar Crops;million t DM/yr;4;Demand for food crops from sugar crops (Sugar beet, Sugar cane);;;;;;;
+Agricultural Demand|Crops|Feed|Cereals;million t DM/yr;4;Demand for feed crops from cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Feed|Crops|+|Cereals;t DM/yr;;;
+Agricultural Demand|Crops|Feed|Oil Crops;million t DM/yr;4;Demand for feed crops from oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl. rapeseed, soybean, sunflower);;;Demand|Feed|Crops|+|Oil crops;t DM/yr;;;
+Agricultural Demand|Crops|Feed|Other Crops;million t DM/yr;4;Demand for feed crops from other crops (Fruits Vegetables Nuts, Potatoes, Pulses, Tropical roots);;;Demand|Food|Crops|+|Other crops;t DM/yr;;;
+Agricultural Demand|Crops|Feed|Sugar Crops;million t DM/yr;4;Demand for feed crops from sugar crops (Sugar beet, Sugar cane);;;Demand|Feed|Crops|+|Sugar crops;Mt DM/yr;;;
+Agricultural Demand|Crops|Food|Cereals;million t DM/yr;4;Demand for food crops from cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Food|Crops|+|Cereals;Mt DM/yr;;;
+Agricultural Demand|Crops|Food|Oil Crops;million t DM/yr;4;Demand for food crops from oil crops (Cotton seed, Groundnuts, Oilpalms, Other oil crops incl rapeseed, Soybean, Sunflower);;;Demand|Food|Crops|+|Oil crops;Mt DM/yr;;;
+Agricultural Demand|Crops|Food|Other Crops;million t DM/yr;4;Demand for food crops from other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Demand|Food|Crops|+|Other crops;t DM/yr;;;
+Agricultural Demand|Crops|Food|Sugar Crops;million t DM/yr;4;Demand for food crops from sugar crops (Sugar beet, Sugar cane);;;Demand|Food|Crops|+|Sugar crops;t DM/yr;;;
 Agricultural Demand|Livestock|Feed;million t DM/yr;3;Demand for livestock products used as feed;;;;;;;
 Agricultural Demand|Livestock|Food|Dairy;million t DM/yr;4;Demand for livestock products used as food from dairy (milk and eggs);;;;;;;
 Agricultural Demand|Livestock|Food|Non-Ruminant;million t DM/yr;4;Demand for livestock products used as food from monogastrics and poultry;;;;;;;
