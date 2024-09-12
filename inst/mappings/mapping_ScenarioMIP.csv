@@ -10,12 +10,12 @@ Carbon Removal;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) from atmospheri
 Carbon Removal|Enhanced Weathering;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by terrestrial application of alkalinity to increase CO2 uptake on land;, Values should be reported as positive numbers;;Emi|CO2|CDR|EW;Mt CO2/yr;-1;mapping taken from NAVIGATE, NAVIGATE category: carbon management;R
 Population;million;1;Total population;;;Population;million;;mapping taken from NAVIGATE, NAVIGATE category: demography;R
 Population|Urban;million;2;Total population living in urban areas;;;Population|Urban;million;;mapping taken from NAVIGATE, NAVIGATE category: demography;S
-Consumption;billion USD_2010/yr;1;total consumption of all goods, by all consumers in a region;;;Consumption;billion US$2005/yr;1,12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
-GDP|MER;billion USD_2010/yr;1;GDP converted to USD at market exchange rate (MER);;;GDP|MER;billion US$2005/yr;1,12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
-GDP|PPP;billion USD_2010/yr;1;GDP converted to USD using purchasing power parity (PPP);;;GDP|PPP;billion US$2005/yr;1,12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+Consumption;billion USD_2010/yr;1;total consumption of all goods, by all consumers in a region;;;Consumption;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+GDP|MER;billion USD_2010/yr;1;GDP converted to USD at market exchange rate (MER);;;GDP|MER;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+GDP|PPP;billion USD_2010/yr;1;GDP converted to USD using purchasing power parity (PPP);;;GDP|PPP;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
 Value Added|Agriculture;billion USD_2010/yr;1;Value added by the the aggregated agricultural sectors (ISIC Rev.4 A);;;;;;mapping taken from NAVIGATE, NAVIGATE category: economy;
 Value Added|Industry;billion USD_2010/yr;1;Value added by the the aggregated industrial sector (ISIC Rev.4 B-F);;;;;;mapping taken from NAVIGATE, NAVIGATE category: economy;
-Capital Formation;billion USD_2010/yr;1;Net additions to the physical capital stock;;;Investments;billion US$2005/yr;1,12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+Capital Formation;billion USD_2010/yr;1;Net additions to the physical capital stock;;;Investments;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
 Expenditure|Government;billion USD_2010/yr;1;Total expenditure by governments;;;;;;mapping taken from NAVIGATE, NAVIGATE category: economy;
 Emissions|CO2;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2);;;Emi|CO2|w/ Bunkers;Mt CO2/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (CO2);R
 Gross Emissions|CO2;Mt CO2/yr;;Gross emissions of fossil carbon dioxide (CO2), not accounting for negative emissions from bioenergy with CCS (BECCS) or agriculture, forestry and other land use (AFOLU);;;Emi|CO2|w/ Bunkers|Gross;Mt CO2/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (CO2);R
@@ -684,7 +684,7 @@ Land Cover|Cropland|Cereals;million ha;3;Cropland with maize, rice, temperate ce
 Land Cover|Cropland|Energy Crops;million ha;3;Cropland with short rotation grasses, short rotation trees (physical area);;;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Forest|Managed;million ha;2;Managed forest area incl. timber plantations and re-/afforestation areas;;;Resources|Land Cover|Forest|Managed Forest|+|Plantations;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Other Land;million ha;2;Other land cover that does not fit into any other category;;;Resources|Land Cover|+|Other Land;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2005/t CO2;1,12;mapping taken from NAVIGATE, NAVIGATE category: policy;R
+Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2005/t CO2;1.12;mapping taken from NAVIGATE, NAVIGATE category: policy;R
 Final Energy|Commercial|Water|Desalination;EJ/yr;;Energy consumption for water desalination;;;;;;mapping taken from NAVIGATE, NAVIGATE category: water (energy);
 Final Energy|Commercial|Water|Groundwater Extraction;EJ/yr;;Energy consumption for groundwater extraction;;;;;;mapping taken from NAVIGATE, NAVIGATE category: water (energy);
 Final Energy|Commercial|Water|Surface Water Extraction;EJ/yr;;Energy consumption for surface water extraction;;;;;;mapping taken from NAVIGATE, NAVIGATE category: water (energy);
@@ -708,7 +708,7 @@ Primary Energy|Oil|Hydrogen;EJ/yr;;Primary energy consumption of conventional an
 Population|Electricity Access;million;;Population with access to electricity;;;;;;mapping taken from NAVIGATE, NAVIGATE category: demography;
 Population|Relying on Solid Fuels;million;;Population without access to electricity and relying on solid fuels for heating-cooking;;;;;;mapping taken from NAVIGATE, NAVIGATE category: demography;
 Intensity|Final Energy;EJ/billion USD_2010;;Final Energy intensity;;GDP|PPP;;;;mapping taken from SHAPE;
-Policy Cost|Transfers;billion USD_2010/yr;;Net international climate finance transfers (positive for inflow, negative for payment);;;Policy Cost|Transfers;billion US$2005/yr;1,12;mapping taken from SHAPE;Rx
+Policy Cost|Transfers;billion USD_2010/yr;;Net international climate finance transfers (positive for inflow, negative for payment);;;Policy Cost|Transfers;billion US$2005/yr;1.12;mapping taken from SHAPE;Rx
 Population|Prevalence of Underweight;million;;Number of adults with body mass index (BMI) lower than 18.5 and children with BMI lower than two standard deviations from reference;;;SDG|SDG02|Prevalence of underweight;million;;mapping taken from SHAPE;M
 Population|Prevalence of Underweight|Children;million;;Number of children aged 0-14 years with BMI lower than two standard deviations from reference;;;SDG|SDG02|Prevalence of underweight|Children;million;;mapping taken from SHAPE;M
 Population|Prevalence of Overweight;million;;Number of adults with body mass index (BMI) greater than 25 and children with BMI greater than one standard deviation from reference;;;SDG|SDG03|Prevalence of overweight;million;;mapping taken from SHAPE;M
@@ -922,7 +922,7 @@ GDP|PPP [Growth Rate per capita];%;;Annual growth rate of GDP-per-capita (PPP);;
 GDP|PPP [per capita relative to OECD];%;;Ratio of GDP-per-capita (PPP) relative to OECD average;;Population;GDP|PPP|Per capita ratio to OECD;percent;;additional mapping taken from additional_SHAPE;S
 Population|Poverty|Below 50% of National Median Income [Share];%;;Share of population below 50% of median national income;;Population;Population|Relative poverty|wrt median income|Share;percent;;additional mapping taken from additional_SHAPE;S
 Inequality|Average Income|Bottom 40% [Ratio];%;;Average income of bottom 40% of population relative to national average;;Population;Inequality|Bottom 40% average income|Ratio;percent;;additional mapping taken from additional_SHAPE;S
-Policy Cost|GDP Loss w/o Transfers;billion USD_2010/yr;;GDP loss without international transfers in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers);;;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1,12;additional mapping taken from additional_SHAPE;Rx
+Policy Cost|GDP Loss w/o Transfers;billion USD_2010/yr;;GDP loss without international transfers in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers);;;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1.12;additional mapping taken from additional_SHAPE;Rx
 Price|Agriculture|Livestock [Index];Index (2020 = 1);;Weighted average price index of livestock;;;Prices|Index2020|Agriculture|Food products|Livestock;1;;additional mapping taken from additional_SHAPE;M
 Expenditure|Households|Food [Share];%;;Share of food expenditure in total income;;GDP|PPP;SDG|SDG02|Food expenditure share;income;100;additional mapping taken from additional_SHAPE;M
 Agricultural Material Footprint [per capita];tDM/cap/yr;;Biomass usage per capita excluding pasture and forestry;;Population;SDG|SDG12|Material footprint;tDM/capita/yr;;additional mapping taken from additional_SHAPE;M
