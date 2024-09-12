@@ -965,10 +965,12 @@ Agricultural Demand|Crops|Food|Cereals;million t DM/yr;4;Demand for food crops f
 Agricultural Demand|Crops|Food|Oil Crops;million t DM/yr;4;Demand for food crops from oil crops (Cotton seed, Groundnuts, Oilpalms, Other oil crops incl rapeseed, Soybean, Sunflower);;;Demand|Food|Crops|+|Oil crops;Mt DM/yr;;;
 Agricultural Demand|Crops|Food|Other Crops;million t DM/yr;4;Demand for food crops from other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Demand|Food|Crops|+|Other crops;t DM/yr;;;
 Agricultural Demand|Crops|Food|Sugar Crops;million t DM/yr;4;Demand for food crops from sugar crops (Sugar beet, Sugar cane);;;Demand|Food|Crops|+|Sugar crops;t DM/yr;;;
-Agricultural Demand|Livestock|Feed;million t DM/yr;3;Demand for livestock products used as feed;;;;;;;
-Agricultural Demand|Livestock|Food|Dairy;million t DM/yr;4;Demand for livestock products used as food from dairy (milk and eggs);;;;;;;
-Agricultural Demand|Livestock|Food|Non-Ruminant;million t DM/yr;4;Demand for livestock products used as food from monogastrics and poultry;;;;;;;
-Agricultural Demand|Livestock|Food|Ruminant;million t DM/yr;4;Demand for livestock products used as food from ruminants;;;;;;;
+Agricultural Demand|Livestock|Feed;million t DM/yr;3;Demand for livestock products used as feed;;;Demand|Feed|+|Livestock products;Mt DM/yr;;;
+Agricultural Demand|Livestock|Food|Dairy;million t DM/yr;4;Demand for livestock products used as food from dairy (milk and eggs);;;Demand|Food|Livestock products|+|Dairy;Mt DM/yr;;;
+Agricultural Demand|Livestock|Food|Dairy;million t DM/yr;4;Demand for livestock products used as food from dairy (milk and eggs);;;Demand|Food|Livestock products|+|Eggs;Mt DM/yr;;;
+Agricultural Demand|Livestock|Food|Non-Ruminant;million t DM/yr;4;Demand for livestock products used as food from monogastrics and poultry;;;Demand|Food|Livestock products|+|Monogastric meat;Mt DM/yr;;;
+Agricultural Demand|Livestock|Food|Non-Ruminant;million t DM/yr;4;Demand for livestock products used as food from monogastrics and poultry;;;Demand|Food|Livestock products|+|Poultry meat;Mt DM/yr;;;
+Agricultural Demand|Livestock|Food|Ruminant;million t DM/yr;4;Demand for livestock products used as food from ruminants;;;Demand|Food|Livestock products|+|Ruminant meat;Mt DM/yr;;;
 Agricultural Demand|Residues;million t DM/yr;3;Demand for residues from agricultural production for feed, bioenergy and other uses;;;;;;;
 Agricultural Demand|Residues|Bioenergy;million t DM/yr;3;Demand for residues as bioenergy;;;;;;;
 Agricultural Demand|Residues|Feed;million t DM/yr;3;Demand for residues as feed;;;;;;;
