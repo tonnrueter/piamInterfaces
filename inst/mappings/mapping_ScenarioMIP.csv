@@ -676,7 +676,9 @@ Energy Service|Transportation|Passenger;billion pkm/yr;;Energy service demand fo
 Energy Service|Transportation|Passenger;billion pkm/yr;;Energy service demand for passenger transport;;;ES|Transport|Pass|Domestic Aviation;bn pkm/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (service);T
 Energy Service|Transportation|Passenger|Road;billion pkm/yr;;Energy service demand for passenger transport on roads;;;ES|Transport|Pass|Road;bn pkm/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (service);T
 Population|Risk of Hunger;million;;Population at risk of hunger, calculated by multipling total population and prevalence of undernourishment which is computed from a probability distribution of daily dietary energy consumption and minimum dietary energy requirement.;;;SDG|SDG02|Prevalence of underweight;million;;mapping taken from NAVIGATE, NAVIGATE category: food;M
+Revenue|government;;;;;;;;;mapping taken from NAVIGATE, NAVIGATE category: government;
 Land Cover;million ha;2;Total land cover;;;Resources|Land Cover;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Built-up Area;;;;;;Resources|Land Cover|+|Urban Area;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland;million ha;2;Arable land, i.e. land in bioenergy crop, food, and feed/fodder crops, permanent crops as well as other arable land (physical area);;;Resources|Land Cover|+|Cropland;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Forest;million ha;2;Managed and unmanaged forest area;;;Resources|Land Cover|+|Forest;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Pasture;million ha;2;Pasture, not only high quality rangeland, based on FAO definition of permanent meadows and pastures;;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
@@ -707,7 +709,12 @@ Primary Energy|Gas|Hydrogen;EJ/yr;;Primary energy consumption of natural gas (fo
 Primary Energy|Oil|Hydrogen;EJ/yr;;Primary energy consumption of conventional and unconventional crude oil for conversion to hydrogen;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);
 Population|Electricity Access;million;;Population with access to electricity;;;;;;mapping taken from NAVIGATE, NAVIGATE category: demography;
 Population|Relying on Solid Fuels;million;;Population without access to electricity and relying on solid fuels for heating-cooking;;;;;;mapping taken from NAVIGATE, NAVIGATE category: demography;
+Population|Clean cooking Access;;;;;;;;;mapping taken from NAVIGATE, NAVIGATE category: demography;
 Intensity|Final Energy;EJ/billion USD_2010;;Final Energy intensity;;GDP|PPP;;;;mapping taken from SHAPE;
+Population|Poverty|LMIC poverty line;;;;;;Population|Poverty|LMIC poverty line;million;;mapping taken from SHAPE;S
+Population|Poverty|UMIC poverty line;;;;;;Population|Poverty|UMIC poverty line;million;;mapping taken from SHAPE;S
+Population|Gender education gap|Primary;;;;;;;;;mapping taken from SHAPE;
+Population|Gender education gap|Secondary;;;;;;;;;mapping taken from SHAPE;
 Policy Cost|Transfers;billion USD_2010/yr;;Net international climate finance transfers (positive for inflow, negative for payment);;;Policy Cost|Transfers;billion US$2005/yr;1.12;mapping taken from SHAPE;Rx
 Population|Prevalence of Underweight;million;;Number of adults with body mass index (BMI) lower than 18.5 and children with BMI lower than two standard deviations from reference;;;SDG|SDG02|Prevalence of underweight;million;;mapping taken from SHAPE;M
 Population|Prevalence of Underweight|Children;million;;Number of children aged 0-14 years with BMI lower than two standard deviations from reference;;;SDG|SDG02|Prevalence of underweight|Children;million;;mapping taken from SHAPE;M
@@ -718,6 +725,7 @@ Population|Prevalence of Obesity|Children;million;;Number of children aged 0-14 
 Ocean|Carbonate Saturation|Calcite;;;Saturation state of calcite (Omega C);;;Ocean|Carbonate Saturation|Calcite;-;;mapping taken from SHAPE;S
 Ocean|Carbonate Saturation|Aragonite;;;Saturation state of aragonite (Omega A);;;Ocean|Carbonate Saturation|Aragonite;-;;mapping taken from SHAPE;S
 Freshwater|Environmental Flow Violations;km3/yr;;Water withdrawals at the expense of environmental flow requirements;;;Water|Environmental flow violation volume;km3/yr;;mapping taken from SHAPE;M
+Political institutions|Equality before law and individual liberty;;;;;;Political institutions|Equality before law and individual liberty;-;;mapping taken from SHAPE;S
 Land Cover|Forest|Natural Forest|Primary Forest;million ha;;Undisturbed primary natural forests;;;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;mapping taken from SHAPE;M
 Land Cover|Forest|Natural Forest|Secondary Forest;million ha;;Modified natural forests and secondary forests from natural succession;;;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;mapping taken from SHAPE;M
 Terrestrial Biodiversity|Shannon Crop Diversity Index;index;;Crop diversity measured by the Shannon index accounting for crop richness and abundance;;;Biodiversity|Shannon crop area diversity index;unitless;;mapping taken from SHAPE;M
@@ -761,8 +769,6 @@ Final Energy|Carbon Management|Direct Air Capture|Heat;EJ/yr;1;Use of {Secondary
 Final Energy|Carbon Management|Enhanced Weathering|Heat;EJ/yr;1;Use of {Secondary Fuel} for carbon management by terrestrial application of alkalinity to increase CO2 uptake on land;;;;;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: energy (final);
 Final Energy|Carbon Management|Direct Air Capture|Gases;EJ/yr;1;Use of {Secondary Fuel} for carbon management by direct air capture;;;FE|CDR|DAC|+|Gases;EJ/yr;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: energy (final);R
 Final Energy|Carbon Management|Direct Air Capture|Hydrogen;EJ/yr;1;Use of {Secondary Fuel} for carbon management by direct air capture;;;FE|CDR|DAC|+|Hydrogen;EJ/yr;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: energy (final);R
-Land Cover|Built-Up Area;million ha;2;Built-up land associated with human settlements;;;Resources|Land Cover|+|Urban Area;million ha;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: land cover;M
-Population|Clean Cooking Access;million;;Population with access to improved cooking facilities (electric or gas);;;;;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: demography;
 Terrestrial Biodiversity|Mean Species Abundance|Plants;%;;Terrestrial biodiversity of plant species measured in Mean Species Abundance (MSA);;Land Cover;;;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: SDG;
 Terrestrial Biodiversity|Mean Species Abundance|Vertebrates;%;;Terrestrial biodiversity of vertebrate species measured in Mean Species Abundance (MSA);;Land Cover;;;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: SDG;
 Terrestrial Biodiversity|Biodiversity Intactness Index;%;;Terrestrial biodiversity measured with Biodiversity Intactness Index (BII);;Land Cover;Biodiversity|BII;unitless;100;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: SDG;Mx
@@ -815,14 +821,18 @@ Emissions|C2F6|Waste;kt C2F6/yr;;Emissions of C2F6 from waste (IPCC category 6);
 Emissions|CFC;kt CFC12-equiv/yr;;Emissions of Chlorofluorocarbons (CFCs), provided as aggregate CFC12-equivalents;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CH4|Industrial Processes|Chemicals;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the chemical sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CH4|Industrial Processes|Chemicals|Ammonia;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the ammonia sector;;;;;;mapping taken from AR6_MAgPIE;
+Emissions|CH4|Industrial Processes|Chemicals|High value chemicals;;;;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CH4|Industrial Processes|Chemicals|Methanol;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the methanol sector;;;;;;mapping taken from AR6_MAgPIE;
+Emissions|CH4|Industrial Processes|Non-ferrous metals;;;;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CH4|Industrial Processes|Plastics;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the plastics sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CH4|Industrial Processes|Pulp and Paper;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the pulp and paper sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO2|Energy|Demand|Industry|Chemicals|Ammonia;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from energy demand in the ammonia sector;;;;;;mapping taken from AR6_MAgPIE;
+Emissions|CO2|Energy|Demand|Industry|Chemicals|High value chemicals;;;;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO2|Energy|Demand|Industry|Chemicals|Methanol;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from energy demand in the methanol sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO2|Energy|Demand|Industry|Plastics;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from energy demand in the plastics sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO2|Industrial Processes|Cement;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the cement sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO2|Industrial Processes|Chemicals|Ammonia;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the ammonia sector;;;;;;mapping taken from AR6_MAgPIE;
+Emissions|CO2|Industrial Processes|Chemicals|High value chemicals;;;;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO2|Industrial Processes|Chemicals|Methanol;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the methanol sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO2|Industrial Processes|Plastics;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the plastics sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|CO|AFOLU|Agriculture;Mt CO/yr;;Emissions of carbon monoxide (CO) from the agriculture sector;;;;;;mapping taken from AR6_MAgPIE;
@@ -830,6 +840,7 @@ Emissions|CO|AFOLU|Land;Mt CO/yr;;Emissions of carbon monoxide (CO) from forestr
 Emissions|CO|Industrial Processes;Mt CO/yr;;Emissions of carbon monoxide (CO) from industrial processes (IPCC categories 2A, B, C, E), net of negative emissions using CCS;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|N2O|Industrial Processes;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E), net of negative emissions using CCS;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|N2O|Industrial Processes|Chemicals;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the chemical sector;;;;;;mapping taken from AR6_MAgPIE;
+Emissions|N2O|Industrial Processes|Non-ferrous metals;;;;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|N2O|Industrial Processes|Plastics;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the plastics sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|NH3|AFOLU|Agriculture;Mt NH3/yr;;Emissions of ammonium (NH3) from the agriculture sector;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|NH3|AFOLU|Land;Mt NH3/yr;;Emissions of ammonium (NH3) from forestry and other land use;;;;;;mapping taken from AR6_MAgPIE;
@@ -863,6 +874,14 @@ Final Energy|Industry|Chemicals|Ammonia|Hydrogen;EJ/yr;1;Final energy consumptio
 Final Energy|Industry|Chemicals|Ammonia|Liquids;EJ/yr;1;Final energy consumption by the ammonia sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Industry|Chemicals|Ammonia|Other;EJ/yr;;Final energy consumption by the ammonia sector of other energy sources;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Industry|Chemicals|Ammonia|Solids;EJ/yr;1;Final energy consumption by the ammonia sector of solid fuels;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals;;;;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals|Electricity;;;;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals|Gases;;;;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals|Heat;;;;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals|Hydrogen;;;;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals|Liquids;;;;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals|Other;;;;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Chemicals|High value chemicals|Solids;;;;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Industry|Chemicals|Methanol;EJ/yr;;Final energy consumption by the methanol sector;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Industry|Chemicals|Methanol|Electricity;EJ/yr;;Final energy consumption by the methanol sector of electricity;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Industry|Chemicals|Methanol|Gases;EJ/yr;1;Final energy consumption by the methanol sector of gaseous fuels not including hydrogen;;;;;;mapping taken from AR6_MAgPIE;
@@ -889,7 +908,9 @@ Final Energy|Transportation|Liquids|Oil;EJ/yr;2;Final energy consumption by the 
 Final Energy|Transportation|Passenger|Liquids|Oil;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels from refined crude oil;;;;;;mapping taken from AR6_MAgPIE;
 Primary Energy|Biomass|Modern|w/ CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy in combination with CCS;;;;;;mapping taken from AR6_MAgPIE;
 Primary Energy|Biomass|Modern|w/o CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy without CCS;;;;;;mapping taken from AR6_MAgPIE;
-Revenue|Government;billion USD_2010/yr;1;Government revenue;;;;;;mapping taken from AR6_MAgPIE;
+Material recycling|Chemicals;;;;;;;;;mapping taken from AR6_MAgPIE;
+Material recycling|Plastics;;;;;;;;;mapping taken from AR6_MAgPIE;
+Material recycling|Steel;;;;;;;;;mapping taken from AR6_MAgPIE;
 Agricultural Demand|Crops;million t DM/yr;2;Demand for crops including food, feed products and bioenergy (1st & 2nd generation crops);;;Demand|++|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M
 Agricultural Demand|Crops;million t DM/yr;2;Demand for crops including food, feed products and bioenergy (1st & 2nd generation crops);;;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M
 Agricultural Demand|Crops|Feed;million t DM/yr;3;Demand for feed crops;;;Demand|Feed|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M
@@ -910,7 +931,9 @@ Agricultural Demand|Livestock|Other;million t DM/yr;3;Demand for livestock produ
 Agricultural Demand|Livestock|Other;million t DM/yr;3;Demand for livestock products for other uses;;;Demand|Seed|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M
 Resource|Extraction|Fossil;EJ/yr;;Annual extraction of fossil fuels including coal, natural gas and conventional/unconventional oil;;;;;;mapping taken from AR6_MAgPIE;
 Population|Female;million;2;Total female population;;;;;;mapping taken from AR6_MAgPIE;
+Population|Informal settlements;;;;;;;;;mapping taken from AR6_MAgPIE;
 Population|Male;million;2;Total male population;;;;;;mapping taken from AR6_MAgPIE;
+Population|substandard accommodation;;;;;;;;;mapping taken from AR6_MAgPIE;
 Emissions|Kyoto Gases|Energy|Supply;Mt CO2-equiv/yr;;Emissions of Kyoto GHG emissions, including fossil CO2, CH4, N2O and F-gases from fuel combustion and fugitive emissions from fuels, including electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g., refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei), fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C);;;Emi|CO2|Energy|Supply|Electricity|Autoproducer;Mt CO2/yr;-1;mapping taken from ARIADNE, ARIADNE category: emissions (GHGs);Rx
 Emissions|Kyoto Gases|Energy|Supply;Mt CO2-equiv/yr;;Emissions of Kyoto GHG emissions, including fossil CO2, CH4, N2O and F-gases from fuel combustion and fugitive emissions from fuels, including electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g., refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei), fugitive emissions from fuels (IPCC category 1B) and emissions from carbon dioxide transport and storage (IPCC category 1C);;;Emi|GHG|Energy|+|Supply;Mt CO2eq/yr;1;mapping taken from ARIADNE, ARIADNE category: emissions (GHGs);R
 Final Energy|Waste;EJ/yr;;Final energy consumption of non-renewable waste;;;;;;mapping taken from ARIADNE, ARIADNE category: energy (final);
@@ -1080,10 +1103,8 @@ Emissions|CH4|Energy|Supply|Combustion;Mt CH4/yr;;Emissions of methane (CH4) fro
 Emissions|CH4|Energy|Supply|Fugitive;Mt CH4/yr;;Fugitive emissions of methane (CH4) from fuels in energy extraction, processing, storage and transport (IPCC category 1B);;;;;;;
 Emissions|CH4|Fossil Fuel Fires;Mt CH4/yr;;Emissions of methane (CH4) from fossil fuel fires (IPCC category 7);;;;;;;
 Emissions|CH4|Industrial Processes|Cement;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the cement sector;;;;;;;
-Emissions|CH4|Industrial Processes|Chemicals|High Value Chemicals;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the high-value-chemicals sector;;;;;;;
 Emissions|CH4|Industrial Processes|Chemicals|Other Sector;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the other use in the chemical sector;;;;;;;
 Emissions|CH4|Industrial Processes|Iron and Steel;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the iron and steel sector;;;;;;;
-Emissions|CH4|Industrial Processes|Non-Ferrous Metals;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the non-ferrous metals sector;;;;;;;
 Emissions|CH4|Industrial Processes|Non-Metallic Minerals;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the non-metallic minerals sector excluding cement;;;;;;;
 Emissions|CH4|Industrial Processes|Other Sector;Mt CH4/yr;;Emissions of methane (CH4) from industrial processes (IPCC categories 2A, B, C, E) in the other industries;;;;;;;
 Emissions|CH4|Product Use;Mt CH4/yr;;Emissions of methane (CH4) from product use (IPCC category 2D, 2F and 2G);;;;;;;
@@ -1100,7 +1121,6 @@ Emissions|CO2|AFOLU|Land|Forest Burning;Mt CO2/yr;;Emissions and removals of fos
 Emissions|CO2|AFOLU|Land|Grassland Burning;Mt CO2/yr;;Emissions and removals of fossil carbon dioxide (CO2) from rangelands and pasture land (IPCC category 3B3);;;;;;;
 Emissions|CO2|AFOLU|Land|Other Land Burning;Mt CO2/yr;;Emissions and removals of fossil carbon dioxide (CO2) from any other categories of land burning (e.g. peatlands);;;;;;;
 Emissions|CO2|Capture and Removal;Mt CO2/yr;;Capture and removal of atmospheric fossil carbon dioxide (CO2) using net-negative technologies that are not directly linked to an emissions source, e.g., direct air capture (DAC) or enhanced weathering;, This timeseries should be reported as negative values so that subcategories of emissions add up to net emissions `Emissions|CO2`.;;;;;;
-Emissions|CO2|Energy|Demand|Industry|Chemicals|High Value Chemicals;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from energy demand in the high-value-chemicals sector;;;;;;;
 Emissions|CO2|Energy|Demand|Industry|Chemicals|Other Sector;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from energy demand in the other use in the chemical sector;;;;;;;
 Emissions|CO2|Energy|Demand|Industry|Iron and Steel;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from energy demand in the iron and steel sector;;;;;;;
 Emissions|CO2|Energy|Demand|Residential and Commercial and AFOFI;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from fuel combustion in residential, commercial and institutional sectors (IPCC category 1A4a and 1A4b) and agriculture, forestry and fishing (AFOFI) (IPCC category 1A4c);;;;;;;
@@ -1126,7 +1146,6 @@ Emissions|CO2|Energy|Supply|Liquids|Oil;Mt CO2/yr;2;Emissions of fossil carbon d
 Emissions|CO2|Energy|Supply|Solids|Biomass;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of solid biomass;;;;;;;
 Emissions|CO2|Energy|Supply|Solids|Coal;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of coal and coal products;;;;;;;
 Emissions|CO2|Fossil Fuel Fires;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from fossil fuel fires (IPCC category 7);;;;;;;
-Emissions|CO2|Industrial Processes|Chemicals|High Value Chemicals;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the high-value-chemicals sector;;;;;;;
 Emissions|CO2|Industrial Processes|Chemicals|Other Sector;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the other use in the chemical sector;;;;;;;
 Emissions|CO2|Product Use;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from product use (IPCC category 2D, 2F and 2G);;;;;;;
 Emissions|CO2|Product Use|Non-Energy Use;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from non-energy products from fuels (IPCC category 2D1 and 2D2);;;;;;;
@@ -1240,7 +1259,6 @@ Emissions|N2O|Industrial Processes|Chemicals|High Value Chemicals;kt N2O/yr;;Emi
 Emissions|N2O|Industrial Processes|Chemicals|Methanol;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the methanol sector;;;;;;;
 Emissions|N2O|Industrial Processes|Chemicals|Other Sector;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the other use in the chemical sector;;;;;;;
 Emissions|N2O|Industrial Processes|Iron and Steel;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the iron and steel sector;;;;;;;
-Emissions|N2O|Industrial Processes|Non-Ferrous Metals;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the non-ferrous metals sector;;;;;;;
 Emissions|N2O|Industrial Processes|Non-Metallic Minerals;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the non-metallic minerals sector excluding cement;;;;;;;
 Emissions|N2O|Industrial Processes|Other Sector;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the other industries;;;;;;;
 Emissions|N2O|Industrial Processes|Pulp and Paper;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the pulp and paper sector;;;;;;;
@@ -1702,19 +1720,13 @@ Final Energy|Industry|Chemicals|Ammonia|Solids|Biomass;EJ/yr;2;Final energy cons
 Final Energy|Industry|Chemicals|Ammonia|Solids|Coal;EJ/yr;2;Final energy consumption by the ammonia sector of coal and coal products;;;;;;;
 Final Energy|Industry|Chemicals|Gases|Coal;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of gaseous fuels from coal;;;;;;;
 Final Energy|Industry|Chemicals|Gases|Gas;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of fossil methane (natural gas);;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals;EJ/yr;;Final energy consumption by the high-value-chemicals sector;;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Electricity;EJ/yr;;Final energy consumption by the high-value-chemicals sector of electricity;;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Gases;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of gaseous fuels not including hydrogen;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Gases|Biomass;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Gases|Coal;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of gaseous fuels from coal;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Gases|Gas;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of fossil methane (natural gas);;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Heat;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of heat;;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Hydrogen;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of hydrogen;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Hydrogen|Other;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of hydrogen from other sources;;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Liquids;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Biomass;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Coal;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Electricity;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
@@ -1725,8 +1737,6 @@ Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Hydrogen|Electricit
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the high-value-chemicals sector of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the high-value-chemicals sector of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Oil;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from refined crude oil;;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Other;EJ/yr;;Final energy consumption by the high-value-chemicals sector of other energy sources;;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Solids;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of solid fuels;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Solids|Biomass;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of solid biomass;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Solids|Coal;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of coal and coal products;;;;;;;
 Final Energy|Industry|Chemicals|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of hydrogen generated from biomass;;;;;;;
@@ -2384,11 +2394,8 @@ Land Cover|Forest|Primary Forest;million ha;2;Primary forest area;;;;;;;
 Land Cover|Forest|Secondary Forest;million ha;2;Secondary forest area;;;;;;;
 Material Recycling|Aluminum;Mt/year;;Production of recycled aluminum;;;;;;;
 Material Recycling|Aluminum [Share];%;;Share of recycled aluminum;;;;;;;
-Material Recycling|Chemicals;Mt/year;;Production of recycled chemicals;;;;;;;
 Material Recycling|Chemicals [Share];%;;Share of recycled chemicals;;;;;;;
-Material Recycling|Plastics;Mt/year;;Production of recycled plastics;;;;;;;
 Material Recycling|Plastics [Share];%;;Share of recycled plastics;;;;;;;
-Material Recycling|Steel;Mt/year;;Production of recycled steel;;;;;;;
 Material Recycling|Steel [Share];%;;Share of recycled steel;;;;;;;
 Mean Years of Education|Female|Age 0-4;years;3;Mean years of formal education of the female population aged 0-4 years;;;;;;;
 Mean Years of Education|Female|Age 10-14;years;3;Mean years of formal education of the female population aged 10-14 years;;;;;;;
@@ -2432,7 +2439,6 @@ Mean Years of Education|Male|Age 80-84;years;3;Mean years of formal education of
 Mean Years of Education|Male|Age 85-89;years;3;Mean years of formal education of the male population aged 85-89 years;;;;;;;
 Mean Years of Education|Male|Age 90-94;years;3;Mean years of formal education of the male population aged 90-94 years;;;;;;;
 Mean Years of Education|Male|Age 95-99;years;3;Mean years of formal education of the male population aged 95-99 years;;;;;;;
-Political Institutions|Equality Before Law and Individual Liberty;;;Aggregated 'Equality Before the Law and Individual Liberty' index as defined by Varieties of Democracy (V-DEM, Coppedge et al., 2022; Pemstein et al., 2022);;Population;;;;;
 Population|Adults|Without Secondary Education [Share];%;;Share of adults aged 20+ without secondary education;;Population;;;;;
 Population|Female|Age 0-4;million;3;Total female population aged 0-4 years;;;;;;;
 Population|Female|Age 0-4|Incomplete Primary Education;million;3;Total female population aged 0-4 years with with incomplete primary education;;;;;;;
@@ -2581,9 +2587,6 @@ Population|Female|Age 95-99|No Education;million;3;Total female population aged 
 Population|Female|Age 95-99|Post Secondary Education;million;3;Total female population aged 95-99 years with with completed post secondary education;;;;;;;
 Population|Female|Age 95-99|Primary Education;million;3;Total female population aged 95-99 years with with completed primary education;;;;;;;
 Population|Female|Age 95-99|Upper Secondary Education;million;3;Total female population aged 95-99 years with with completed upper secondary education;;;;;;;
-Population|Gender Education Gap|Primary;percentage points;;Difference of percentage of males and females in school-leaving cohort aged 15-19 with at least primary education;;;;;;;
-Population|Gender Education Gap|Secondary;percentage points;;Difference of percentage of males and females in school-leaving cohort aged 20-24 with at least lower secondary education;;;;;;;
-Population|Informal Settlements;million;;Number of people living in informal settlements, e.g., slums;;;;;;;
 Population|Male|Age 0-4;million;3;Total male population aged 0-4 years;;;;;;;
 Population|Male|Age 0-4|Incomplete Primary Education;million;3;Total male population aged 0-4 years with with incomplete primary education;;;;;;;
 Population|Male|Age 0-4|Lower Secondary Education;million;3;Total male population aged 0-4 years with with completed lower secondary education;;;;;;;
@@ -2731,15 +2734,12 @@ Population|Male|Age 95-99|No Education;million;3;Total male population aged 95-9
 Population|Male|Age 95-99|Post Secondary Education;million;3;Total male population aged 95-99 years with with completed post secondary education;;;;;;;
 Population|Male|Age 95-99|Primary Education;million;3;Total male population aged 95-99 years with with completed primary education;;;;;;;
 Population|Male|Age 95-99|Upper Secondary Education;million;3;Total male population aged 95-99 years with with completed upper secondary education;;;;;;;
-Population|Poverty|LMIC Poverty Line;million;;Number of people living in poverty with income with income below USD_2011 3.20 PPP per day (World Bank LMIC definition);;;;;;;
 Population|Poverty|National Poverty Line [Share];%;;Share of population living in relative poverty with income below their respective national poverty lines;;Population;;;;;
-Population|Poverty|UMIC Poverty Line;million;;Number of people living in poverty with income below USD_2011 5.50 PPP per day (World Bank LMIC definition);;;;;;;
 Population|Prevalence of Normal Weight;million;;Number of adults with body mass index (BMI) BMI between 18.5 and 25 and children with BMI within two standard deviations below reference (lower bound) and one standard deviations above reference (upper bound);;;;;;;
 Population|Prevalence of Normal Weight|Children;million;;Number of children aged 0-14 with BMI within two standard deviations below reference (lower bound) and one standard deviations above reference (upper bound);;;;;;;
 Population|Primary Education|Leaving Cohort [Share];%;;Share of school-leaving cohort aged 15-19 completing primary education;;Population;;;;;
 Population|Secondary Education|Leaving Cohort [Share];%;;Share of school-leaving cohort aged 20-24 completing secondary education (lower secondary or above);;Population;;;;;
 Population|Severe Water Stress;million;;Number of people living in areas with severe water stress;;;;;;;
-Population|Substandard Accommodation;million;;Number of people living in substandard accommodation, e.g., accommodation that does not meet legal requirements and/or enable well being for the occupants;;;;;;;
 Population|Urban [Share];%;;Share of population living in urban areas;;Population;;;;;
 Population|Without Education [Share];%;;Share of people aged 15 or older without education, not counting those with incomplete primary education;;Population;;;;;
 Price|Carbon [relative to OECD];%;;Carbon price relative to OECD carbon price;;;;;;;
