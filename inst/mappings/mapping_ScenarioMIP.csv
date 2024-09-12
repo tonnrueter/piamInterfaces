@@ -268,7 +268,7 @@ Final Energy|Non-Energy Use|Other Sector|Solids|Coal;EJ/yr;2;Final energy consum
 Final Energy|Non-Energy Use|Other Sector|Other;EJ/yr;;Final energy consumption of other feedstocks by the other industries for non-combustion processes;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
 Final Energy|Non-Energy Use|Other Sector|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the other industries for non-combustion processes;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
 Final Energy;EJ/yr;;Final energy consumption by all end-use sectors and all fuels, including non-energy use, excluding transmission/distribution losses;;;FE;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy (w/o bunkers);EJ/yr;;Final energy consumption by all end-use sectors and all fuels including non-energy use, excluding international aviation and shipping (see "Bunkers"), excluding transmission/distribution losses;;;FE|w/o Bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy (w/o bunkers);EJ/yr;;Final energy consumption by all end-use sectors and all fuels including non-energy use, excluding international aviation and shipping (see Bunkers), excluding transmission/distribution losses;;;FE|w/o Bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Electricity;EJ/yr;;Final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses;;;FE|+|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Solids;EJ/yr;1;Final energy fuel consumption of solid fuels;;;FE|+|Solids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Liquids;EJ/yr;1;Final energy fuel consumption of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|+|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
@@ -415,25 +415,25 @@ Final Energy|Residential and Commercial|Solids|Biomass;EJ/yr;2;Final energy cons
 Final Energy|Residential and Commercial|Gases|Biomass;EJ/yr;2;Final energy consumption by the residential and commercial sector of gas from biogenic sources, mainly biogas;;;FE|Buildings|Gases|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;2;Final energy consumption by the residential and commercial sector of liquid fuels from biomass;;;FE|Buildings|Liquids|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;2;Final energy consumption by the residential and commercial sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers");;;FE|Transport|w/o Bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Transportation;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers);;;FE|Transport|w/o Bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Transportation (w/ bunkers);EJ/yr;;Final energy consumption by the transportation sector including international aviation and shipping;;;FE|Transport with bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation (w/ bunkers);EJ/yr;;Final energy consumption by the transportation sector including international aviation and shipping;;;FE|Transport;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
-Final Energy|Transportation|Electricity;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of electricity;;;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Gases;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of gaseous fuels not including hydrogen;;;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Hydrogen;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of hydrogen;;;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Liquids;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Transport|w/o Bunkers|+|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Other;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of other energy sources;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Transportation|Electricity;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of electricity;;;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Transportation|Gases;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of gaseous fuels not including hydrogen;;;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Transportation|Hydrogen;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of hydrogen;;;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Transportation|Liquids;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Transport|w/o Bunkers|+|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Transportation|Other;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of other energy sources;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
 Final Energy|Transportation|Bus;EJ/yr;;Final energy consumption by the transportation sector by bus;;;FE|Transport|Pass|Road|Bus;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation|Rail;EJ/yr;;Final energy consumption by the rail transportation sector;;;FE|Transport|Rail;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation|Truck;EJ/yr;;Final energy consumption by the trucking sector;;;FE|Transport|Freight|Road;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation|Domestic Aviation;EJ/yr;;Final energy consumption by the domestic aviation sector;;;FE|Transport|Pass|Domestic Aviation;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation|Domestic Shipping;EJ/yr;;Final energy consumption by the domestic shipping sector;;;FE|Transport|Freight|Domestic Shipping;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
-Final Energy|Transportation|Liquids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels from biomass;;;FE|Transport|w/o Bunkers|Liquids|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Liquids|Electricity;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;FE|Transport|w/o Bunkers|Liquids|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Gases|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of gas from biogenic sources, mainly biogas;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
-Final Energy|Transportation|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of hydrogen generated from biomass;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
-Final Energy|Transportation|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of hydrogen from fossils;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
-Final Energy|Transportation|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of hydrogen from electrolysis;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Transportation|Liquids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from biomass;;;FE|Transport|w/o Bunkers|Liquids|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Transportation|Liquids|Electricity;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;FE|Transport|w/o Bunkers|Liquids|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Transportation|Gases|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of gas from biogenic sources, mainly biogas;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Transportation|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of hydrogen generated from biomass;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Transportation|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of hydrogen from fossils;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Transportation|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of hydrogen from electrolysis;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
 Final Energy|Transportation|Bus|Electricity;EJ/yr;;Final energy consumption by the transportation sector by bus of electricity;;;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation|Bus|Gases;EJ/yr;1;Final energy consumption by the transportation sector by bus of gaseous fuels not including hydrogen;;;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation|Bus|Hydrogen;EJ/yr;1;Final energy consumption by the transportation sector by bus of hydrogen;;;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
@@ -679,7 +679,7 @@ Population|Risk of Hunger;million;;Population at risk of hunger, calculated by m
 Land Cover;million ha;2;Total land cover;;;Resources|Land Cover;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland;million ha;2;Arable land, i.e. land in bioenergy crop, food, and feed/fodder crops, permanent crops as well as other arable land (physical area);;;Resources|Land Cover|+|Cropland;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Forest;million ha;2;Managed and unmanaged forest area;;;Resources|Land Cover|+|Forest;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Pasture;million ha;2;Pasture, not only high quality rangeland, based on FAO definition of "permanent meadows and pastures";;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Pasture;million ha;2;Pasture, not only high quality rangeland, based on FAO definition of permanent meadows and pastures;;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland|Cereals;million ha;3;Cropland with maize, rice, temperate cereals and tropical cereals (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland|Energy Crops;million ha;3;Cropland with short rotation grasses, short rotation trees (physical area);;;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Forest|Managed;million ha;2;Managed forest area incl. timber plantations and re-/afforestation areas;;;Resources|Land Cover|Forest|Managed Forest|+|Plantations;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
@@ -737,7 +737,7 @@ Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;;Nitrogen inputs on cropland from 
 Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;;Nitrogen inputs on cropland from other sources;;;Resources|Nitrogen|Cropland Budget|Inputs|+|Seed;Mt Nr/yr;;mapping taken from SHAPE;M
 Final Energy|Residential and Commercial|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the residential and commercial sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;1;mapping taken from AR6_NGFS;R
 Final Energy|Residential and Commercial|Liquids|Oil;EJ/yr;2;Final energy consumption by the residential and commercial sector of liquid fuels from refined crude oil;;;FE|Buildings|Liquids|+|Fossil;EJ/yr;1;mapping taken from AR6_NGFS;R
-Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;FE|Transport|Liquids|Hydrogen;EJ/yr;1;mapping taken from AR6_NGFS;R
+Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;FE|Transport|Liquids|Hydrogen;EJ/yr;1;mapping taken from AR6_NGFS;R
 Resource|Extraction|Coal;EJ/yr;;Annual extraction of coal including lignite;;;Res|Extraction|Coal;EJ/yr;1;mapping taken from ELEVATE;R
 Resource|Extraction|Gas;EJ/yr;;Annual extraction of natural gas (fossil methane);;;Res|Extraction|Gas;EJ/yr;1;mapping taken from ELEVATE;R
 Resource|Extraction|Oil;EJ/yr;;Annual extraction of conventional and unconventional crude oil;;;Res|Extraction|Oil;EJ/yr;1;mapping taken from ELEVATE;R
@@ -842,8 +842,8 @@ Final Energy|Industry|Solids|Coal;EJ/yr;2;Final energy consumption by the indust
 Final Energy|Other Sector|Solids|Coal;EJ/yr;2;Final energy consumption by the other sectors of coal and coal products;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Solids|Coal;EJ/yr;2;Final energy fuel consumption of coal and coal products;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Transportation|Freight|Liquids|Oil;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels from refined crude oil;;;;;;mapping taken from AR6_MAgPIE;
-Final Energy|Transportation|Liquids|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels from coal;;;;;;mapping taken from AR6_MAgPIE;
-Final Energy|Transportation|Liquids|Oil;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels from refined crude oil;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Transportation|Liquids|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from coal;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Transportation|Liquids|Oil;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from refined crude oil;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Transportation|Passenger|Liquids|Oil;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels from refined crude oil;;;;;;mapping taken from AR6_MAgPIE;
 Primary Energy|Biomass|Modern|w/ CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy in combination with CCS;;;;;;mapping taken from AR6_MAgPIE;
 Primary Energy|Biomass|Modern|w/o CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy without CCS;;;;;;mapping taken from AR6_MAgPIE;
@@ -1112,7 +1112,7 @@ Emissions|CO2|Energy|Supply|Combustion;Mt CO2/yr;;Emissions of fossil carbon dio
 Emissions|CO2|Energy|Supply|Fugitive;Mt CO2/yr;;Fugitive emissions of fossil carbon dioxide (CO2) from fuels in energy extraction, processing, storage and transport (IPCC category 1B);;;;;;;
 Emissions|CO2|Energy|Supply|Gases|Biomass;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of gas from biogenic sources, mainly biogas;;;;;;;
 Emissions|CO2|Energy|Supply|Gases|Coal;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of gaseous fuels from coal;;;;;;;
-Emissions|CO2|Energy|Supply|Gases|Gas;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of fossil methane ("natural gas");;;;;;;
+Emissions|CO2|Energy|Supply|Gases|Gas;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of fossil methane (natural gas);;;;;;;
 Emissions|CO2|Energy|Supply|Hydrogen|Biomass;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of hydrogen generated from biomass;;;;;;;
 Emissions|CO2|Energy|Supply|Hydrogen|Electricity;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of hydrogen from electrolysis;;;;;;;
 Emissions|CO2|Energy|Supply|Hydrogen|Fossil;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of hydrogen from fossils;;;;;;;
@@ -1120,7 +1120,7 @@ Emissions|CO2|Energy|Supply|Hydrogen|Other;Mt CO2/yr;2;Emissions of fossil carbo
 Emissions|CO2|Energy|Supply|Liquids|Biomass;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of liquid fuels from biomass;;;;;;;
 Emissions|CO2|Energy|Supply|Liquids|Coal;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of liquid fuels from coal;;;;;;;
 Emissions|CO2|Energy|Supply|Liquids|Electricity;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Emissions|CO2|Energy|Supply|Liquids|Gas;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of liquid fuels from fossil methane ("natural gas");;;;;;;
+Emissions|CO2|Energy|Supply|Liquids|Gas;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of liquid fuels from fossil methane (natural gas);;;;;;;
 Emissions|CO2|Energy|Supply|Liquids|Hydrogen;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Emissions|CO2|Energy|Supply|Liquids|Hydrogen|Biomass;Mt CO2/yr;3;Emissions of fossil carbon dioxide (CO2) for production of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Emissions|CO2|Energy|Supply|Liquids|Hydrogen|Electricity;Mt CO2/yr;3;Emissions of fossil carbon dioxide (CO2) for production of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1459,7 +1459,7 @@ Energy Service|Transportation|Passenger|Active Transport [Share];%;;Share of wal
 Energy Service|Transportation|Passenger|Public Transport [Share];%;;Share of public transit in passenger transport;;;;;;;
 Final Energy|Agriculture|Gases|Biomass;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Agriculture|Gases|Coal;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of gaseous fuels from coal;;;;;;;
-Final Energy|Agriculture|Gases|Gas;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of fossil methane ("natural gas");;;;;;;
+Final Energy|Agriculture|Gases|Gas;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of fossil methane (natural gas);;;;;;;
 Final Energy|Agriculture|Hydrogen;EJ/yr;1;Final energy consumption by the agriculture sector including fishing of hydrogen;;;;;;;
 Final Energy|Agriculture|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of hydrogen generated from biomass;;;;;;;
 Final Energy|Agriculture|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of hydrogen from electrolysis;;;;;;;
@@ -1468,7 +1468,7 @@ Final Energy|Agriculture|Hydrogen|Other;EJ/yr;2;Final energy consumption by the 
 Final Energy|Agriculture|Liquids|Biomass;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of liquid fuels from biomass;;;;;;;
 Final Energy|Agriculture|Liquids|Coal;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of liquid fuels from coal;;;;;;;
 Final Energy|Agriculture|Liquids|Electricity;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Agriculture|Liquids|Gas;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Agriculture|Liquids|Gas;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Agriculture|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Agriculture|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the agriculture sector including fishing of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Agriculture|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the agriculture sector including fishing of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1480,14 +1480,14 @@ Final Energy|Agriculture|Solids;EJ/yr;1;Final energy consumption by the agricult
 Final Energy|Agriculture|Solids|Biomass;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of solid biomass;;;;;;;
 Final Energy|Agriculture|Solids|Coal;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of coal and coal products;;;;;;;
 Final Energy|Bunkers|Gases|Coal;EJ/yr;2;Final energy consumption by the international aviation and shipping of gaseous fuels from coal;;;;;;;
-Final Energy|Bunkers|Gases|Gas;EJ/yr;2;Final energy consumption by the international aviation and shipping of fossil methane ("natural gas");;;;;;;
+Final Energy|Bunkers|Gases|Gas;EJ/yr;2;Final energy consumption by the international aviation and shipping of fossil methane (natural gas);;;;;;;
 Final Energy|Bunkers|Heat;EJ/yr;1;Final energy consumption by the international aviation and shipping of heat;;;;;;;
 Final Energy|Bunkers|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the international aviation and shipping of hydrogen generated from biomass;;;;;;;
 Final Energy|Bunkers|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the international aviation and shipping of hydrogen from electrolysis;;;;;;;
 Final Energy|Bunkers|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the international aviation and shipping of hydrogen from fossils;;;;;;;
 Final Energy|Bunkers|Hydrogen|Other;EJ/yr;2;Final energy consumption by the international aviation and shipping of hydrogen from other sources;;;;;;;
 Final Energy|Bunkers|Liquids|Coal;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from coal;;;;;;;
-Final Energy|Bunkers|Liquids|Gas;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Bunkers|Liquids|Gas;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Bunkers|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Bunkers|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the international aviation and shipping of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Bunkers|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the international aviation and shipping of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1599,7 +1599,7 @@ Final Energy|Carbon Management|Enhanced Weathering|Solids|Biomass;EJ/yr;2;Use of
 Final Energy|Carbon Management|Enhanced Weathering|Solids|Coal;EJ/yr;2;Use of {Secondary Fuel} for carbon management by terrestrial application of alkalinity to increase CO2 uptake on land;;;;;;;
 Final Energy|Carbon Management|Gases|Biomass;EJ/yr;2;Use of gas from biogenic sources, mainly biogas for carbon management;;;;;;;
 Final Energy|Carbon Management|Gases|Coal;EJ/yr;2;Use of gaseous fuels from coal for carbon management;;;;;;;
-Final Energy|Carbon Management|Gases|Gas;EJ/yr;2;Use of fossil methane ("natural gas") for carbon management;;;;;;;
+Final Energy|Carbon Management|Gases|Gas;EJ/yr;2;Use of fossil methane (natural gas) for carbon management;;;;;;;
 Final Energy|Carbon Management|Hydrogen|Biomass;EJ/yr;2;Use of hydrogen generated from biomass for carbon management;;;;;;;
 Final Energy|Carbon Management|Hydrogen|Electricity;EJ/yr;2;Use of hydrogen from electrolysis for carbon management;;;;;;;
 Final Energy|Carbon Management|Hydrogen|Fossil;EJ/yr;2;Use of hydrogen from fossils for carbon management;;;;;;;
@@ -1607,7 +1607,7 @@ Final Energy|Carbon Management|Hydrogen|Other;EJ/yr;2;Use of hydrogen from other
 Final Energy|Carbon Management|Liquids|Biomass;EJ/yr;2;Use of liquid fuels from biomass for carbon management;;;;;;;
 Final Energy|Carbon Management|Liquids|Coal;EJ/yr;2;Use of liquid fuels from coal for carbon management;;;;;;;
 Final Energy|Carbon Management|Liquids|Electricity;EJ/yr;2;Use of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product) for carbon management;;;;;;;
-Final Energy|Carbon Management|Liquids|Gas;EJ/yr;2;Use of liquid fuels from fossil methane ("natural gas") for carbon management;;;;;;;
+Final Energy|Carbon Management|Liquids|Gas;EJ/yr;2;Use of liquid fuels from fossil methane (natural gas) for carbon management;;;;;;;
 Final Energy|Carbon Management|Liquids|Hydrogen;EJ/yr;2;Use of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) for carbon management;;;;;;;
 Final Energy|Carbon Management|Liquids|Hydrogen|Biomass;EJ/yr;3;Use of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) for carbon management;;;;;;;
 Final Energy|Carbon Management|Liquids|Hydrogen|Electricity;EJ/yr;3;Use of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) for carbon management;;;;;;;
@@ -1646,13 +1646,13 @@ Final Energy|Carbon Management|Solids;EJ/yr;1;Use of solid fuels for carbon mana
 Final Energy|Carbon Management|Solids|Biomass;EJ/yr;2;Use of solid biomass for carbon management;;;;;;;
 Final Energy|Carbon Management|Solids|Coal;EJ/yr;2;Use of coal and coal products for carbon management;;;;;;;
 Final Energy|Commercial|Gases|Coal;EJ/yr;2;Final energy consumption by the commercial sector of gaseous fuels from coal;;;;;;;
-Final Energy|Commercial|Gases|Gas;EJ/yr;2;Final energy consumption by the commercial sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Commercial|Gases|Gas;EJ/yr;2;Final energy consumption by the commercial sector of fossil methane (natural gas);;;;;;;
 Final Energy|Commercial|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the commercial sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Commercial|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the commercial sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Commercial|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the commercial sector of hydrogen from fossils;;;;;;;
 Final Energy|Commercial|Hydrogen|Other;EJ/yr;2;Final energy consumption by the commercial sector of hydrogen from other sources;;;;;;;
 Final Energy|Commercial|Liquids|Coal;EJ/yr;2;Final energy consumption by the commercial sector of liquid fuels from coal;;;;;;;
-Final Energy|Commercial|Liquids|Gas;EJ/yr;2;Final energy consumption by the commercial sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Commercial|Liquids|Gas;EJ/yr;2;Final energy consumption by the commercial sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Commercial|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the commercial sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Commercial|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the commercial sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Commercial|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the commercial sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1661,14 +1661,14 @@ Final Energy|Commercial|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption 
 Final Energy|Commercial|Liquids|Oil;EJ/yr;2;Final energy consumption by the commercial sector of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Commercial|Solids|Coal;EJ/yr;2;Final energy consumption by the commercial sector of coal and coal products;;;;;;;
 Final Energy|Gases|Coal;EJ/yr;2;Final energy fuel consumption of gaseous fuels from coal;;;;;;;
-Final Energy|Gases|Gas;EJ/yr;2;Final energy fuel consumption of fossil methane ("natural gas");;;;;;;
+Final Energy|Gases|Gas;EJ/yr;2;Final energy fuel consumption of fossil methane (natural gas);;;;;;;
 Final Energy|Hydrogen|Biomass;EJ/yr;2;Final energy fuel consumption of hydrogen generated from biomass;;;;;;;
 Final Energy|Hydrogen|Electricity;EJ/yr;2;Final energy fuel consumption of hydrogen from electrolysis;;;;;;;
 Final Energy|Hydrogen|Fossil;EJ/yr;2;Final energy fuel consumption of hydrogen from fossils;;;;;;;
 Final Energy|Hydrogen|Other;EJ/yr;2;Final energy fuel consumption of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Cement|Gases|Biomass;EJ/yr;2;Final energy consumption by the cement sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Cement|Gases|Coal;EJ/yr;2;Final energy consumption by the cement sector of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Cement|Gases|Gas;EJ/yr;2;Final energy consumption by the cement sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Cement|Gases|Gas;EJ/yr;2;Final energy consumption by the cement sector of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Cement|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the cement sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Cement|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the cement sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Cement|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the cement sector of hydrogen from fossils;;;;;;;
@@ -1676,7 +1676,7 @@ Final Energy|Industry|Cement|Hydrogen|Other;EJ/yr;2;Final energy consumption by 
 Final Energy|Industry|Cement|Liquids|Biomass;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Cement|Liquids|Coal;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Cement|Liquids|Electricity;EJ/yr;2;Final energy consumption by the cement sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Industry|Cement|Liquids|Gas;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Cement|Liquids|Gas;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Cement|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Cement|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the cement sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Cement|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the cement sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1687,7 +1687,7 @@ Final Energy|Industry|Cement|Solids|Biomass;EJ/yr;2;Final energy consumption by 
 Final Energy|Industry|Cement|Solids|Coal;EJ/yr;2;Final energy consumption by the cement sector of coal and coal products;;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Gases|Biomass;EJ/yr;2;Final energy consumption by the ammonia sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Gases|Coal;EJ/yr;2;Final energy consumption by the ammonia sector of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Chemicals|Ammonia|Gases|Gas;EJ/yr;2;Final energy consumption by the ammonia sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Ammonia|Gases|Gas;EJ/yr;2;Final energy consumption by the ammonia sector of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the ammonia sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the ammonia sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the ammonia sector of hydrogen from fossils;;;;;;;
@@ -1695,7 +1695,7 @@ Final Energy|Industry|Chemicals|Ammonia|Hydrogen|Other;EJ/yr;2;Final energy cons
 Final Energy|Industry|Chemicals|Ammonia|Liquids|Biomass;EJ/yr;2;Final energy consumption by the ammonia sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Liquids|Coal;EJ/yr;2;Final energy consumption by the ammonia sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Liquids|Electricity;EJ/yr;2;Final energy consumption by the ammonia sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Industry|Chemicals|Ammonia|Liquids|Gas;EJ/yr;2;Final energy consumption by the ammonia sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Ammonia|Liquids|Gas;EJ/yr;2;Final energy consumption by the ammonia sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the ammonia sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the ammonia sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the ammonia sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1705,13 +1705,13 @@ Final Energy|Industry|Chemicals|Ammonia|Liquids|Oil;EJ/yr;2;Final energy consump
 Final Energy|Industry|Chemicals|Ammonia|Solids|Biomass;EJ/yr;2;Final energy consumption by the ammonia sector of solid biomass;;;;;;;
 Final Energy|Industry|Chemicals|Ammonia|Solids|Coal;EJ/yr;2;Final energy consumption by the ammonia sector of coal and coal products;;;;;;;
 Final Energy|Industry|Chemicals|Gases|Coal;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Chemicals|Gases|Gas;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Gases|Gas;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals;EJ/yr;;Final energy consumption by the high-value-chemicals sector;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Electricity;EJ/yr;;Final energy consumption by the high-value-chemicals sector of electricity;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Gases;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of gaseous fuels not including hydrogen;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Gases|Biomass;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Gases|Coal;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Gases|Gas;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|High Value Chemicals|Gases|Gas;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Heat;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of heat;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Hydrogen;EJ/yr;1;Final energy consumption by the high-value-chemicals sector of hydrogen;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of hydrogen generated from biomass;;;;;;;
@@ -1722,7 +1722,7 @@ Final Energy|Industry|Chemicals|High Value Chemicals|Liquids;EJ/yr;1;Final energ
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Biomass;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Coal;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Electricity;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Gas;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Gas;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the high-value-chemicals sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the high-value-chemicals sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|High Value Chemicals|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the high-value-chemicals sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1738,7 +1738,7 @@ Final Energy|Industry|Chemicals|Hydrogen|Electricity;EJ/yr;2;Final energy consum
 Final Energy|Industry|Chemicals|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Chemicals|Hydrogen|Other;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Chemicals|Liquids|Coal;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Chemicals|Liquids|Gas;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Liquids|Gas;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the chemicals sector excluding feedstocks of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the chemicals sector excluding feedstocks of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1747,7 +1747,7 @@ Final Energy|Industry|Chemicals|Liquids|Hydrogen|Other;EJ/yr;3;Final energy cons
 Final Energy|Industry|Chemicals|Liquids|Oil;EJ/yr;2;Final energy consumption by the chemicals sector excluding feedstocks of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Gases|Biomass;EJ/yr;2;Final energy consumption by the methanol sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Gases|Coal;EJ/yr;2;Final energy consumption by the methanol sector of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Chemicals|Methanol|Gases|Gas;EJ/yr;2;Final energy consumption by the methanol sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Methanol|Gases|Gas;EJ/yr;2;Final energy consumption by the methanol sector of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the methanol sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the methanol sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the methanol sector of hydrogen from fossils;;;;;;;
@@ -1755,7 +1755,7 @@ Final Energy|Industry|Chemicals|Methanol|Hydrogen|Other;EJ/yr;2;Final energy con
 Final Energy|Industry|Chemicals|Methanol|Liquids|Biomass;EJ/yr;2;Final energy consumption by the methanol sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Liquids|Coal;EJ/yr;2;Final energy consumption by the methanol sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Liquids|Electricity;EJ/yr;2;Final energy consumption by the methanol sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Industry|Chemicals|Methanol|Liquids|Gas;EJ/yr;2;Final energy consumption by the methanol sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Methanol|Liquids|Gas;EJ/yr;2;Final energy consumption by the methanol sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the methanol sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the methanol sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Methanol|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the methanol sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1769,7 +1769,7 @@ Final Energy|Industry|Chemicals|Other Sector|Electricity;EJ/yr;;Final energy con
 Final Energy|Industry|Chemicals|Other Sector|Gases;EJ/yr;1;Final energy consumption by the other use in the chemical sector of gaseous fuels not including hydrogen;;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Gases|Biomass;EJ/yr;2;Final energy consumption by the other use in the chemical sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Gases|Coal;EJ/yr;2;Final energy consumption by the other use in the chemical sector of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Chemicals|Other Sector|Gases|Gas;EJ/yr;2;Final energy consumption by the other use in the chemical sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Other Sector|Gases|Gas;EJ/yr;2;Final energy consumption by the other use in the chemical sector of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Heat;EJ/yr;1;Final energy consumption by the other use in the chemical sector of heat;;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Hydrogen;EJ/yr;1;Final energy consumption by the other use in the chemical sector of hydrogen;;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the other use in the chemical sector of hydrogen generated from biomass;;;;;;;
@@ -1780,7 +1780,7 @@ Final Energy|Industry|Chemicals|Other Sector|Liquids;EJ/yr;1;Final energy consum
 Final Energy|Industry|Chemicals|Other Sector|Liquids|Biomass;EJ/yr;2;Final energy consumption by the other use in the chemical sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Liquids|Coal;EJ/yr;2;Final energy consumption by the other use in the chemical sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Liquids|Electricity;EJ/yr;2;Final energy consumption by the other use in the chemical sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Industry|Chemicals|Other Sector|Liquids|Gas;EJ/yr;2;Final energy consumption by the other use in the chemical sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Chemicals|Other Sector|Liquids|Gas;EJ/yr;2;Final energy consumption by the other use in the chemical sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the other use in the chemical sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the other use in the chemical sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the other use in the chemical sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1792,19 +1792,19 @@ Final Energy|Industry|Chemicals|Other Sector|Solids;EJ/yr;1;Final energy consump
 Final Energy|Industry|Chemicals|Other Sector|Solids|Biomass;EJ/yr;2;Final energy consumption by the other use in the chemical sector of solid biomass;;;;;;;
 Final Energy|Industry|Chemicals|Other Sector|Solids|Coal;EJ/yr;2;Final energy consumption by the other use in the chemical sector of coal and coal products;;;;;;;
 Final Energy|Industry|Gases|Coal;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Gases|Gas;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Gases|Gas;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Hydrogen|Other;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Iron and Steel|Gases|Coal;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Iron and Steel|Gases|Gas;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Iron and Steel|Gases|Gas;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Iron and Steel|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Iron and Steel|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Iron and Steel|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Iron and Steel|Hydrogen|Other;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Iron and Steel|Liquids|Coal;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Iron and Steel|Liquids|Gas;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Iron and Steel|Liquids|Gas;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Iron and Steel|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Iron and Steel|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Iron and Steel|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1812,20 +1812,20 @@ Final Energy|Industry|Iron and Steel|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energ
 Final Energy|Industry|Iron and Steel|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Iron and Steel|Liquids|Oil;EJ/yr;2;Final energy consumption by the iron and steel sector excluding feedstocks of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Industry|Liquids|Coal;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Liquids|Gas;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Liquids|Gas;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Gases|Coal;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Non-Ferrous Metals|Gases|Gas;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Non-Ferrous Metals|Gases|Gas;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Hydrogen|Other;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Liquids|Coal;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Non-Ferrous Metals|Liquids|Gas;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Non-Ferrous Metals|Liquids|Gas;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the non-ferrous metals sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the non-ferrous metals sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1833,13 +1833,13 @@ Final Energy|Industry|Non-Ferrous Metals|Liquids|Hydrogen|Fossil;EJ/yr;3;Final e
 Final Energy|Industry|Non-Ferrous Metals|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the non-ferrous metals sector of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Liquids|Oil;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Gases|Coal;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Non-Metallic Minerals|Gases|Gas;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Gases|Gas;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Other;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Coal;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Non-Metallic Minerals|Liquids|Gas;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Liquids|Gas;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1847,13 +1847,13 @@ Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Fossil;EJ/yr;3;Fina
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Oil;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Industry|Other Sector|Gases|Coal;EJ/yr;2;Final energy consumption by the other industrial sectors of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Other Sector|Gases|Gas;EJ/yr;2;Final energy consumption by the other industrial sectors of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Other Sector|Gases|Gas;EJ/yr;2;Final energy consumption by the other industrial sectors of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Other Sector|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the other industrial sectors of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Other Sector|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the other industrial sectors of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Other Sector|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the other industrial sectors of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Other Sector|Hydrogen|Other;EJ/yr;2;Final energy consumption by the other industrial sectors of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Other Sector|Liquids|Coal;EJ/yr;2;Final energy consumption by the other industrial sectors of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Other Sector|Liquids|Gas;EJ/yr;2;Final energy consumption by the other industrial sectors of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Other Sector|Liquids|Gas;EJ/yr;2;Final energy consumption by the other industrial sectors of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Other Sector|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the other industrial sectors of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Other Sector|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the other industrial sectors of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Other Sector|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the other industrial sectors of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1862,7 +1862,7 @@ Final Energy|Industry|Other Sector|Liquids|Hydrogen|Other;EJ/yr;3;Final energy c
 Final Energy|Industry|Other Sector|Liquids|Oil;EJ/yr;2;Final energy consumption by the other industrial sectors of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Industry|Plastics|Gases|Biomass;EJ/yr;2;Final energy consumption by the plastics sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Plastics|Gases|Coal;EJ/yr;2;Final energy consumption by the plastics sector of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Plastics|Gases|Gas;EJ/yr;2;Final energy consumption by the plastics sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Plastics|Gases|Gas;EJ/yr;2;Final energy consumption by the plastics sector of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Plastics|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the plastics sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Plastics|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the plastics sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Plastics|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the plastics sector of hydrogen from fossils;;;;;;;
@@ -1870,7 +1870,7 @@ Final Energy|Industry|Plastics|Hydrogen|Other;EJ/yr;2;Final energy consumption b
 Final Energy|Industry|Plastics|Liquids|Biomass;EJ/yr;2;Final energy consumption by the plastics sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Plastics|Liquids|Coal;EJ/yr;2;Final energy consumption by the plastics sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Plastics|Liquids|Electricity;EJ/yr;2;Final energy consumption by the plastics sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Industry|Plastics|Liquids|Gas;EJ/yr;2;Final energy consumption by the plastics sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Plastics|Liquids|Gas;EJ/yr;2;Final energy consumption by the plastics sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Plastics|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the plastics sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Plastics|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the plastics sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Plastics|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the plastics sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1880,13 +1880,13 @@ Final Energy|Industry|Plastics|Liquids|Oil;EJ/yr;2;Final energy consumption by t
 Final Energy|Industry|Plastics|Solids|Biomass;EJ/yr;2;Final energy consumption by the plastics sector of solid biomass;;;;;;;
 Final Energy|Industry|Plastics|Solids|Coal;EJ/yr;2;Final energy consumption by the plastics sector of coal and coal products;;;;;;;
 Final Energy|Industry|Pulp and Paper|Gases|Coal;EJ/yr;2;Final energy consumption by the pulp and paper of gaseous fuels from coal;;;;;;;
-Final Energy|Industry|Pulp and Paper|Gases|Gas;EJ/yr;2;Final energy consumption by the pulp and paper of fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Pulp and Paper|Gases|Gas;EJ/yr;2;Final energy consumption by the pulp and paper of fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Pulp and Paper|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the pulp and paper of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Pulp and Paper|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the pulp and paper of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Pulp and Paper|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the pulp and paper of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Pulp and Paper|Hydrogen|Other;EJ/yr;2;Final energy consumption by the pulp and paper of hydrogen from other sources;;;;;;;
 Final Energy|Industry|Pulp and Paper|Liquids|Coal;EJ/yr;2;Final energy consumption by the pulp and paper of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Pulp and Paper|Liquids|Gas;EJ/yr;2;Final energy consumption by the pulp and paper of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Industry|Pulp and Paper|Liquids|Gas;EJ/yr;2;Final energy consumption by the pulp and paper of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Pulp and Paper|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the pulp and paper of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Pulp and Paper|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the pulp and paper of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Pulp and Paper|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the pulp and paper of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1894,7 +1894,7 @@ Final Energy|Industry|Pulp and Paper|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energ
 Final Energy|Industry|Pulp and Paper|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the pulp and paper of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Pulp and Paper|Liquids|Oil;EJ/yr;2;Final energy consumption by the pulp and paper of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Liquids|Coal;EJ/yr;2;Final energy fuel consumption of liquid fuels from coal;;;;;;;
-Final Energy|Liquids|Gas;EJ/yr;2;Final energy fuel consumption of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Liquids|Gas;EJ/yr;2;Final energy fuel consumption of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Liquids|Hydrogen;EJ/yr;2;Final energy fuel consumption of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy fuel consumption of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy fuel consumption of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2025,7 +2025,7 @@ Final Energy|Non-Energy Use|Chemicals|Other Sector|Solids|Biomass;EJ/yr;2;Final 
 Final Energy|Non-Energy Use|Chemicals|Other Sector|Solids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Other Sector|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the other use in the chemical sector for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Gases|Coal;EJ/yr;2;Final energy consumption of gaseous fuels from coal in non-combustion processes;;;;;;;
-Final Energy|Non-Energy Use|Gases|Gas;EJ/yr;2;Final energy consumption of fossil methane ("natural gas") in non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Gases|Gas;EJ/yr;2;Final energy consumption of fossil methane (natural gas) in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Heat;EJ/yr;1;Final energy consumption of heat in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Hydrogen|Biomass;EJ/yr;2;Final energy consumption of hydrogen generated from biomass in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Hydrogen|Electricity;EJ/yr;2;Final energy consumption of hydrogen from electrolysis in non-combustion processes;;;;;;;
@@ -2047,7 +2047,7 @@ Final Energy|Non-Energy Use|Iron and Steel|Liquids|Hydrogen|Fossil;EJ/yr;3;Final
 Final Energy|Non-Energy Use|Iron and Steel|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Iron and Steel|Liquids|Oil;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Liquids|Coal;EJ/yr;2;Final energy consumption of liquid fuels from coal in non-combustion processes;;;;;;;
-Final Energy|Non-Energy Use|Liquids|Gas;EJ/yr;2;Final energy consumption of liquid fuels from fossil methane ("natural gas") in non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Liquids|Gas;EJ/yr;2;Final energy consumption of liquid fuels from fossil methane (natural gas) in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Liquids|Hydrogen;EJ/yr;2;Final energy consumption of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) in non-combustion processes;;;;;;;
@@ -2127,13 +2127,13 @@ Final Energy|Non-Energy Use|Plastics|Solids|Biomass;EJ/yr;2;Final energy consump
 Final Energy|Non-Energy Use|Plastics|Solids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Plastics|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the plastics sector for non-combustion processes;;;;;;;
 Final Energy|Other Sector|Gases|Coal;EJ/yr;2;Final energy consumption by the other sectors of gaseous fuels from coal;;;;;;;
-Final Energy|Other Sector|Gases|Gas;EJ/yr;2;Final energy consumption by the other sectors of fossil methane ("natural gas");;;;;;;
+Final Energy|Other Sector|Gases|Gas;EJ/yr;2;Final energy consumption by the other sectors of fossil methane (natural gas);;;;;;;
 Final Energy|Other Sector|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the other sectors of hydrogen generated from biomass;;;;;;;
 Final Energy|Other Sector|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the other sectors of hydrogen from electrolysis;;;;;;;
 Final Energy|Other Sector|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the other sectors of hydrogen from fossils;;;;;;;
 Final Energy|Other Sector|Hydrogen|Other;EJ/yr;2;Final energy consumption by the other sectors of hydrogen from other sources;;;;;;;
 Final Energy|Other Sector|Liquids|Coal;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from coal;;;;;;;
-Final Energy|Other Sector|Liquids|Gas;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Other Sector|Liquids|Gas;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Other Sector|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Other Sector|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the other sectors of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Other Sector|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the other sectors of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2141,25 +2141,25 @@ Final Energy|Other Sector|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumpti
 Final Energy|Other Sector|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the other sectors of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Other Sector|Liquids|Oil;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Residential and Commercial|Gases|Coal;EJ/yr;2;Final energy consumption by the residential and commercial sector of gaseous fuels from coal;;;;;;;
-Final Energy|Residential and Commercial|Gases|Gas;EJ/yr;2;Final energy consumption by the residential and commercial sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Residential and Commercial|Gases|Gas;EJ/yr;2;Final energy consumption by the residential and commercial sector of fossil methane (natural gas);;;;;;;
 Final Energy|Residential and Commercial|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the residential and commercial sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Residential and Commercial|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the residential and commercial sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Residential and Commercial|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the residential and commercial sector of hydrogen from fossils;;;;;;;
 Final Energy|Residential and Commercial|Hydrogen|Other;EJ/yr;2;Final energy consumption by the residential and commercial sector of hydrogen from other sources;;;;;;;
 Final Energy|Residential and Commercial|Liquids|Coal;EJ/yr;2;Final energy consumption by the residential and commercial sector of liquid fuels from coal;;;;;;;
-Final Energy|Residential and Commercial|Liquids|Gas;EJ/yr;2;Final energy consumption by the residential and commercial sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Residential and Commercial|Liquids|Gas;EJ/yr;2;Final energy consumption by the residential and commercial sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Residential and Commercial|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the residential and commercial sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Residential and Commercial|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the residential and commercial sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Residential and Commercial|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the residential and commercial sector of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Residential and Commercial|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the residential and commercial sector of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Residential|Gases|Coal;EJ/yr;2;Final energy consumption by the residential sector of gaseous fuels from coal;;;;;;;
-Final Energy|Residential|Gases|Gas;EJ/yr;2;Final energy consumption by the residential sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Residential|Gases|Gas;EJ/yr;2;Final energy consumption by the residential sector of fossil methane (natural gas);;;;;;;
 Final Energy|Residential|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the residential sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Residential|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the residential sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Residential|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the residential sector of hydrogen from fossils;;;;;;;
 Final Energy|Residential|Hydrogen|Other;EJ/yr;2;Final energy consumption by the residential sector of hydrogen from other sources;;;;;;;
 Final Energy|Residential|Liquids|Coal;EJ/yr;2;Final energy consumption by the residential sector of liquid fuels from coal;;;;;;;
-Final Energy|Residential|Liquids|Gas;EJ/yr;2;Final energy consumption by the residential sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Residential|Liquids|Gas;EJ/yr;2;Final energy consumption by the residential sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Residential|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the residential sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Residential|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the residential sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Residential|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the residential sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2171,7 +2171,7 @@ Final Energy|Transportation (w/ bunkers)|Electricity;EJ/yr;;Final energy consump
 Final Energy|Transportation (w/ bunkers)|Gases;EJ/yr;1;Final energy consumption by the transportation sector including international aviation and shipping of gaseous fuels not including hydrogen;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Gases|Biomass;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Gases|Coal;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation (w/ bunkers)|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation (w/ bunkers)|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation (w/ bunkers)|Heat;EJ/yr;1;Final energy consumption by the transportation sector including international aviation and shipping of heat;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Hydrogen;EJ/yr;1;Final energy consumption by the transportation sector including international aviation and shipping of hydrogen;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of hydrogen generated from biomass;;;;;;;
@@ -2182,7 +2182,7 @@ Final Energy|Transportation (w/ bunkers)|Liquids;EJ/yr;1;Final energy consumptio
 Final Energy|Transportation (w/ bunkers)|Liquids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of liquid fuels from biomass;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Liquids|Coal;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of liquid fuels from coal;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Liquids|Electricity;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Transportation (w/ bunkers)|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation (w/ bunkers)|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation (w/ bunkers)|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation (w/ bunkers)|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the transportation sector including international aviation and shipping of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation (w/ bunkers)|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the transportation sector including international aviation and shipping of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2194,11 +2194,11 @@ Final Energy|Transportation (w/ bunkers)|Solids;EJ/yr;1;Final energy consumption
 Final Energy|Transportation (w/ bunkers)|Solids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of solid biomass;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Solids|Coal;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of coal and coal products;;;;;;;
 Final Energy|Transportation|Bus|Gases|Coal;EJ/yr;2;Final energy consumption by the transportation sector by bus of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Bus|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector by bus of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Bus|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector by bus of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Bus|Heat;EJ/yr;1;Final energy consumption by the transportation sector by bus of heat;;;;;;;
 Final Energy|Transportation|Bus|Hydrogen|Other;EJ/yr;2;Final energy consumption by the transportation sector by bus of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Bus|Liquids|Coal;EJ/yr;2;Final energy consumption by the transportation sector by bus of liquid fuels from coal;;;;;;;
-Final Energy|Transportation|Bus|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector by bus of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Bus|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector by bus of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Bus|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the transportation sector by bus of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Bus|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the transportation sector by bus of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Bus|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the transportation sector by bus of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2210,11 +2210,11 @@ Final Energy|Transportation|Bus|Solids;EJ/yr;1;Final energy consumption by the t
 Final Energy|Transportation|Bus|Solids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector by bus of solid biomass;;;;;;;
 Final Energy|Transportation|Bus|Solids|Coal;EJ/yr;2;Final energy consumption by the transportation sector by bus of coal and coal products;;;;;;;
 Final Energy|Transportation|Domestic Aviation|Gases|Coal;EJ/yr;2;Final energy consumption by the domestic aviation sector of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Domestic Aviation|Gases|Gas;EJ/yr;2;Final energy consumption by the domestic aviation sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Domestic Aviation|Gases|Gas;EJ/yr;2;Final energy consumption by the domestic aviation sector of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Domestic Aviation|Heat;EJ/yr;1;Final energy consumption by the domestic aviation sector of heat;;;;;;;
 Final Energy|Transportation|Domestic Aviation|Hydrogen|Other;EJ/yr;2;Final energy consumption by the domestic aviation sector of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Domestic Aviation|Liquids|Coal;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from coal;;;;;;;
-Final Energy|Transportation|Domestic Aviation|Liquids|Gas;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Domestic Aviation|Liquids|Gas;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Domestic Aviation|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Domestic Aviation|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the domestic aviation sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Domestic Aviation|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the domestic aviation sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2226,11 +2226,11 @@ Final Energy|Transportation|Domestic Aviation|Solids;EJ/yr;1;Final energy consum
 Final Energy|Transportation|Domestic Aviation|Solids|Biomass;EJ/yr;2;Final energy consumption by the domestic aviation sector of solid biomass;;;;;;;
 Final Energy|Transportation|Domestic Aviation|Solids|Coal;EJ/yr;2;Final energy consumption by the domestic aviation sector of coal and coal products;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Gases|Coal;EJ/yr;2;Final energy consumption by the domestic shipping sector of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Domestic Shipping|Gases|Gas;EJ/yr;2;Final energy consumption by the domestic shipping sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Domestic Shipping|Gases|Gas;EJ/yr;2;Final energy consumption by the domestic shipping sector of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Domestic Shipping|Heat;EJ/yr;1;Final energy consumption by the domestic shipping sector of heat;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Hydrogen|Other;EJ/yr;2;Final energy consumption by the domestic shipping sector of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Coal;EJ/yr;2;Final energy consumption by the domestic shipping sector of liquid fuels from coal;;;;;;;
-Final Energy|Transportation|Domestic Shipping|Liquids|Gas;EJ/yr;2;Final energy consumption by the domestic shipping sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Domestic Shipping|Liquids|Gas;EJ/yr;2;Final energy consumption by the domestic shipping sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the domestic shipping sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the domestic shipping sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Domestic Shipping|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the domestic shipping sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2243,14 +2243,14 @@ Final Energy|Transportation|Domestic Shipping|Solids|Biomass;EJ/yr;2;Final energ
 Final Energy|Transportation|Domestic Shipping|Solids|Coal;EJ/yr;2;Final energy consumption by the domestic shipping sector of coal and coal products;;;;;;;
 Final Energy|Transportation|Freight|Gases|Biomass;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Transportation|Freight|Gases|Coal;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Freight|Gases|Gas;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Freight|Gases|Gas;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Freight|Heat;EJ/yr;1;Final energy consumption by the freight transportation sector excluding international aviation and shipping of heat;;;;;;;
 Final Energy|Transportation|Freight|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of hydrogen generated from biomass;;;;;;;
 Final Energy|Transportation|Freight|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of hydrogen from electrolysis;;;;;;;
 Final Energy|Transportation|Freight|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of hydrogen from fossils;;;;;;;
 Final Energy|Transportation|Freight|Hydrogen|Other;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Freight|Liquids|Coal;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels from coal;;;;;;;
-Final Energy|Transportation|Freight|Liquids|Gas;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Freight|Liquids|Gas;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Freight|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Freight|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Freight|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2259,16 +2259,16 @@ Final Energy|Transportation|Freight|Liquids|Hydrogen|Other;EJ/yr;3;Final energy 
 Final Energy|Transportation|Freight|Solids;EJ/yr;1;Final energy consumption by the freight transportation sector excluding international aviation and shipping of solid fuels;;;;;;;
 Final Energy|Transportation|Freight|Solids|Biomass;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of solid biomass;;;;;;;
 Final Energy|Transportation|Freight|Solids|Coal;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of coal and coal products;;;;;;;
-Final Energy|Transportation|Gases|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of fossil methane ("natural gas");;;;;;;
-Final Energy|Transportation|Heat;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of heat;;;;;;;
-Final Energy|Transportation|Hydrogen|Other;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of hydrogen from other sources;;;;;;;
+Final Energy|Transportation|Gases|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of gaseous fuels from coal;;;;;;;
+Final Energy|Transportation|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of fossil methane (natural gas);;;;;;;
+Final Energy|Transportation|Heat;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of heat;;;;;;;
+Final Energy|Transportation|Hydrogen|Other;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle;EJ/yr;;Final energy consumption by the transportation sector with light-duty vehicles;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Electricity;EJ/yr;;Final energy consumption by the transportation sector with light-duty vehicles of electricity;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Gases;EJ/yr;1;Final energy consumption by the transportation sector with light-duty vehicles of gaseous fuels not including hydrogen;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Gases|Biomass;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Gases|Coal;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Light Duty Vehicle|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Light Duty Vehicle|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Heat;EJ/yr;1;Final energy consumption by the transportation sector with light-duty vehicles of heat;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Hydrogen;EJ/yr;1;Final energy consumption by the transportation sector with light-duty vehicles of hydrogen;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of hydrogen generated from biomass;;;;;;;
@@ -2279,7 +2279,7 @@ Final Energy|Transportation|Light Duty Vehicle|Liquids;EJ/yr;1;Final energy cons
 Final Energy|Transportation|Light Duty Vehicle|Liquids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of liquid fuels from biomass;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Liquids|Coal;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of liquid fuels from coal;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Liquids|Electricity;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
-Final Energy|Transportation|Light Duty Vehicle|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Light Duty Vehicle|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the transportation sector with light-duty vehicles of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the transportation sector with light-duty vehicles of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2290,21 +2290,21 @@ Final Energy|Transportation|Light Duty Vehicle|Other;EJ/yr;;Final energy consump
 Final Energy|Transportation|Light Duty Vehicle|Solids;EJ/yr;1;Final energy consumption by the transportation sector with light-duty vehicles of solid fuels;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Solids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of solid biomass;;;;;;;
 Final Energy|Transportation|Light Duty Vehicle|Solids|Coal;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of coal and coal products;;;;;;;
-Final Energy|Transportation|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels from fossil methane ("natural gas");;;;;;;
-Final Energy|Transportation|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
-Final Energy|Transportation|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
-Final Energy|Transportation|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
-Final Energy|Transportation|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
+Final Energy|Transportation|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from fossil methane (natural gas);;;;;;;
+Final Energy|Transportation|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
+Final Energy|Transportation|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
+Final Energy|Transportation|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
+Final Energy|Transportation|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Passenger|Gases|Biomass;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Transportation|Passenger|Gases|Coal;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Passenger|Gases|Gas;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Passenger|Gases|Gas;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Passenger|Heat;EJ/yr;1;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of heat;;;;;;;
 Final Energy|Transportation|Passenger|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of hydrogen generated from biomass;;;;;;;
 Final Energy|Transportation|Passenger|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of hydrogen from electrolysis;;;;;;;
 Final Energy|Transportation|Passenger|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of hydrogen from fossils;;;;;;;
 Final Energy|Transportation|Passenger|Hydrogen|Other;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Passenger|Liquids|Coal;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels from coal;;;;;;;
-Final Energy|Transportation|Passenger|Liquids|Gas;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Passenger|Liquids|Gas;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Passenger|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Passenger|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Passenger|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2314,11 +2314,11 @@ Final Energy|Transportation|Passenger|Solids;EJ/yr;1;Final energy consumption by
 Final Energy|Transportation|Passenger|Solids|Biomass;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of solid biomass;;;;;;;
 Final Energy|Transportation|Passenger|Solids|Coal;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of coal and coal products;;;;;;;
 Final Energy|Transportation|Rail|Gases|Coal;EJ/yr;2;Final energy consumption by the rail transportation sector of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Rail|Gases|Gas;EJ/yr;2;Final energy consumption by the rail transportation sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Rail|Gases|Gas;EJ/yr;2;Final energy consumption by the rail transportation sector of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Rail|Heat;EJ/yr;1;Final energy consumption by the rail transportation sector of heat;;;;;;;
 Final Energy|Transportation|Rail|Hydrogen|Other;EJ/yr;2;Final energy consumption by the rail transportation sector of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Rail|Liquids|Coal;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from coal;;;;;;;
-Final Energy|Transportation|Rail|Liquids|Gas;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Rail|Liquids|Gas;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Rail|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Rail|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the rail transportation sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Rail|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the rail transportation sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2329,15 +2329,15 @@ Final Energy|Transportation|Rail|Other;EJ/yr;;Final energy consumption by the ra
 Final Energy|Transportation|Rail|Solids;EJ/yr;1;Final energy consumption by the rail transportation sector of solid fuels;;;;;;;
 Final Energy|Transportation|Rail|Solids|Biomass;EJ/yr;2;Final energy consumption by the rail transportation sector of solid biomass;;;;;;;
 Final Energy|Transportation|Rail|Solids|Coal;EJ/yr;2;Final energy consumption by the rail transportation sector of coal and coal products;;;;;;;
-Final Energy|Transportation|Solids;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of solid fuels;;;;;;;
-Final Energy|Transportation|Solids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of solid biomass;;;;;;;
-Final Energy|Transportation|Solids|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see "Bunkers") of coal and coal products;;;;;;;
+Final Energy|Transportation|Solids;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of solid fuels;;;;;;;
+Final Energy|Transportation|Solids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of solid biomass;;;;;;;
+Final Energy|Transportation|Solids|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of coal and coal products;;;;;;;
 Final Energy|Transportation|Truck|Gases|Coal;EJ/yr;2;Final energy consumption by the trucking sector of gaseous fuels from coal;;;;;;;
-Final Energy|Transportation|Truck|Gases|Gas;EJ/yr;2;Final energy consumption by the trucking sector of fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Truck|Gases|Gas;EJ/yr;2;Final energy consumption by the trucking sector of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Truck|Heat;EJ/yr;1;Final energy consumption by the trucking sector of heat;;;;;;;
 Final Energy|Transportation|Truck|Hydrogen|Other;EJ/yr;2;Final energy consumption by the trucking sector of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Truck|Liquids|Coal;EJ/yr;2;Final energy consumption by the trucking sector of liquid fuels from coal;;;;;;;
-Final Energy|Transportation|Truck|Liquids|Gas;EJ/yr;2;Final energy consumption by the trucking sector of liquid fuels from fossil methane ("natural gas");;;;;;;
+Final Energy|Transportation|Truck|Liquids|Gas;EJ/yr;2;Final energy consumption by the trucking sector of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Truck|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the trucking sector of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Truck|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the trucking sector of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Truck|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the trucking sector of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -2356,7 +2356,7 @@ Gender Inequality Index;;;Geometric average of reproductive health, empowerment 
 Gross Emissions|CO2|Energy|Supply|Autoproduction;Mt CO2/yr;;Gross emissions of fossil carbon dioxide (CO2) for own-use energy supply, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Gases|Biomass;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of gas from biogenic sources, mainly biogas, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Gases|Coal;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of gaseous fuels from coal, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
-Gross Emissions|CO2|Energy|Supply|Gases|Gas;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of fossil methane ("natural gas"), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
+Gross Emissions|CO2|Energy|Supply|Gases|Gas;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of fossil methane (natural gas), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Hydrogen|Biomass;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of hydrogen generated from biomass, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Hydrogen|Electricity;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of hydrogen from electrolysis, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Hydrogen|Fossil;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of hydrogen from fossils, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
@@ -2364,7 +2364,7 @@ Gross Emissions|CO2|Energy|Supply|Hydrogen|Other;Mt CO2/yr;2;Gross emissions of 
 Gross Emissions|CO2|Energy|Supply|Liquids|Biomass;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of liquid fuels from biomass, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Liquids|Coal;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of liquid fuels from coal, not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Liquids|Electricity;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
-Gross Emissions|CO2|Energy|Supply|Liquids|Gas;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of liquid fuels from fossil methane ("natural gas"), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
+Gross Emissions|CO2|Energy|Supply|Liquids|Gas;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of liquid fuels from fossil methane (natural gas), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Liquids|Hydrogen;Mt CO2/yr;2;Gross emissions of fossil carbon dioxide (CO2) for production of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Liquids|Hydrogen|Biomass;Mt CO2/yr;3;Gross emissions of fossil carbon dioxide (CO2) for production of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
 Gross Emissions|CO2|Energy|Supply|Liquids|Hydrogen|Electricity;Mt CO2/yr;3;Gross emissions of fossil carbon dioxide (CO2) for production of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies), not accounting for negative emissions from bioenergy with CCS (BECCS) in this sector;;;;;;;
@@ -2436,7 +2436,7 @@ Mean Years of Education|Male|Age 80-84;years;3;Mean years of formal education of
 Mean Years of Education|Male|Age 85-89;years;3;Mean years of formal education of the male population aged 85-89 years;;;;;;;
 Mean Years of Education|Male|Age 90-94;years;3;Mean years of formal education of the male population aged 90-94 years;;;;;;;
 Mean Years of Education|Male|Age 95-99;years;3;Mean years of formal education of the male population aged 95-99 years;;;;;;;
-Political Institutions|Equality Before Law and Individual Liberty;;;Aggregated 'Equality Before the Law and Individual Liberty' index as defined by "Varieties of Democracy" (V-DEM, Coppedge et al., 2022; Pemstein et al., 2022);;Population;;;;;
+Political Institutions|Equality Before Law and Individual Liberty;;;Aggregated 'Equality Before the Law and Individual Liberty' index as defined by Varieties of Democracy (V-DEM, Coppedge et al., 2022; Pemstein et al., 2022);;Population;;;;;
 Population|Adults|Without Secondary Education [Share];%;;Share of adults aged 20+ without secondary education;;Population;;;;;
 Population|Female|Age 0-4;million;3;Total female population aged 0-4 years;;;;;;;
 Population|Female|Age 0-4|Incomplete Primary Education;million;3;Total female population aged 0-4 years with with incomplete primary education;;;;;;;
