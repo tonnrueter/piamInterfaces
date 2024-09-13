@@ -1057,19 +1057,19 @@ Final Energy|Hydrogen|Electricity;EJ/yr;2;Final energy fuel consumption of hydro
 Final Energy|Hydrogen|Fossil;EJ/yr;2;Final energy fuel consumption of hydrogen from fossils;;;;;;;
 Final Energy|Hydrogen|Other;EJ/yr;2;Final energy fuel consumption of hydrogen from other sources;;;;;;;
 Final Energy|Industry;EJ/yr;;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks);;;FE|w/o Non-energy Use|Industry;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);Rx
-Final Energy|Industry|Cement;EJ/yr;;Final energy consumption by the cement sector;;;;;;mapping taken from AR6_MAgPIE;
-Final Energy|Industry|Cement|Electricity;EJ/yr;;Final energy consumption by the cement sector of electricity;;;;;;mapping taken from AR6_MAgPIE;
-Final Energy|Industry|Cement|Gases;EJ/yr;1;Final energy consumption by the cement sector of gaseous fuels not including hydrogen;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Cement;EJ/yr;;Final energy consumption by the cement sector;;;FE|Industry|+++|Cement;EJ/yr;;adapted manually, previously part of Non-Metallic Minerals, now separate as Cement;R
+Final Energy|Industry|Cement|Electricity;EJ/yr;;Final energy consumption by the cement sector of electricity;;;FE|Industry|Cement|+|Electricity;EJ/yr;;adapted manually, previously part of Non-Metallic Minerals, now separate as Cement;R
+Final Energy|Industry|Cement|Gases;EJ/yr;1;Final energy consumption by the cement sector of gaseous fuels not including hydrogen;;;FE|Industry|Cement|+|Gases;EJ/yr;;adapted manually, previously part of Non-Metallic Minerals, now separate as Cement;R
 Final Energy|Industry|Cement|Gases|Biomass;EJ/yr;2;Final energy consumption by the cement sector of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Cement|Gases|Coal;EJ/yr;2;Final energy consumption by the cement sector of gaseous fuels from coal;;;;;;;
 Final Energy|Industry|Cement|Gases|Gas;EJ/yr;2;Final energy consumption by the cement sector of fossil methane (natural gas);;;;;;;
-Final Energy|Industry|Cement|Heat;EJ/yr;1;Final energy consumption by the cement sector of heat;;;;;;mapping taken from AR6_MAgPIE;
-Final Energy|Industry|Cement|Hydrogen;EJ/yr;1;Final energy consumption by the cement sector of hydrogen;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Cement|Heat;EJ/yr;1;Final energy consumption by the cement sector of heat;;;;;;;
+Final Energy|Industry|Cement|Hydrogen;EJ/yr;1;Final energy consumption by the cement sector of hydrogen;;;FE|Industry|Cement|+|Hydrogen;EJ/yr;;adapted manually, previously part of Non-Metallic Minerals, now separate as Cement;R
 Final Energy|Industry|Cement|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the cement sector of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Cement|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the cement sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Cement|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the cement sector of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Cement|Hydrogen|Other;EJ/yr;2;Final energy consumption by the cement sector of hydrogen from other sources;;;;;;;
-Final Energy|Industry|Cement|Liquids;EJ/yr;1;Final energy consumption by the cement sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Cement|Liquids;EJ/yr;1;Final energy consumption by the cement sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Industry|Cement|+|Liquids;EJ/yr;;adapted manually, previously part of Non-Metallic Minerals, now separate as Cement;R
 Final Energy|Industry|Cement|Liquids|Biomass;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Cement|Liquids|Coal;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from coal;;;;;;;
 Final Energy|Industry|Cement|Liquids|Electricity;EJ/yr;2;Final energy consumption by the cement sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
@@ -1080,11 +1080,11 @@ Final Energy|Industry|Cement|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy c
 Final Energy|Industry|Cement|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the cement sector of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Cement|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the cement sector of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Cement|Liquids|Oil;EJ/yr;2;Final energy consumption by the cement sector of liquid fuels from refined crude oil;;;;;;;
-Final Energy|Industry|Cement|Other;EJ/yr;;Final energy consumption by the cement sector of other energy sources;;;;;;mapping taken from AR6_MAgPIE;
-Final Energy|Industry|Cement|Solids;EJ/yr;1;Final energy consumption by the cement sector of solid fuels;;;;;;mapping taken from AR6_MAgPIE;
+Final Energy|Industry|Cement|Other;EJ/yr;;Final energy consumption by the cement sector of other energy sources;;;;;;;
+Final Energy|Industry|Cement|Solids;EJ/yr;1;Final energy consumption by the cement sector of solid fuels;;;FE|Industry|Cement|+|Solids;EJ/yr;;adapted manually, previously part of Non-Metallic Minerals, now separate as Cement;R
 Final Energy|Industry|Cement|Solids|Biomass;EJ/yr;2;Final energy consumption by the cement sector of solid biomass;;;;;;;
 Final Energy|Industry|Cement|Solids|Coal;EJ/yr;2;Final energy consumption by the cement sector of coal and coal products;;;;;;;
-Final Energy|Industry|Chemicals;EJ/yr;;Final energy consumption by the chemicals sector excluding feedstocks;;;FE|w/o Non-energy Use|Industry|Chemicals;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
+Final Energy|Industry|Chemicals;EJ/yr;;Final energy consumption by the chemicals sector excluding feedstocks;;;FE|w/o Non-energy Use|Industry|Chemicals;EJ/yr;;adapted manually, previously part of Non-Metallic Minerals, now separate as Cement;R
 Final Energy|Industry|Chemicals|Ammonia;EJ/yr;;Final energy consumption by the ammonia sector;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Industry|Chemicals|Ammonia|Electricity;EJ/yr;;Final energy consumption by the ammonia sector of electricity;;;;;;mapping taken from AR6_MAgPIE;
 Final Energy|Industry|Chemicals|Ammonia|Gases;EJ/yr;1;Final energy consumption by the ammonia sector of gaseous fuels not including hydrogen;;;;;;mapping taken from AR6_MAgPIE;
@@ -1297,22 +1297,22 @@ Final Energy|Industry|Non-Ferrous Metals|Other;EJ/yr;;Final energy consumption b
 Final Energy|Industry|Non-Ferrous Metals|Solids;EJ/yr;1;Final energy consumption by the non-ferrous metals sector of solid fuels;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
 Final Energy|Industry|Non-Ferrous Metals|Solids|Biomass;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of solid biomass;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
 Final Energy|Industry|Non-Ferrous Metals|Solids|Coal;EJ/yr;2;Final energy consumption by the non-ferrous metals sector of coal and coal products;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
-Final Energy|Industry|Non-Metallic Minerals;EJ/yr;;Final energy consumption by the non-metallic minerals sector excluding cement;;;FE|Industry|+++|Cement;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), In remind cement = non-metallic minerals;R
-Final Energy|Industry|Non-Metallic Minerals|Electricity;EJ/yr;;Final energy consumption by the non-metallic minerals sector excluding cement of electricity;;;FE|Industry|Cement|+|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), In remind cement = non-metallic minerals;R
-Final Energy|Industry|Non-Metallic Minerals|Gases;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of gaseous fuels not including hydrogen;;;FE|Industry|Cement|+|Gases;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), In remind cement = non-metallic minerals;R
-Final Energy|Industry|Non-Metallic Minerals|Gases|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of gas from biogenic sources, mainly biogas;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Industry|Non-Metallic Minerals;EJ/yr;;Final energy consumption by the non-metallic minerals sector excluding cement;;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Electricity;EJ/yr;;Final energy consumption by the non-metallic minerals sector excluding cement of electricity;;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Gases;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of gaseous fuels not including hydrogen;;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Gases|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of gas from biogenic sources, mainly biogas;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Gases|Coal;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of gaseous fuels from coal;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Gases|Gas;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of fossil methane (natural gas);;;;;;;
-Final Energy|Industry|Non-Metallic Minerals|Heat;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of heat;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
-Final Energy|Industry|Non-Metallic Minerals|Hydrogen;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen;;;FE|Industry|Cement|+|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), In remind cement = non-metallic minerals;R
+Final Energy|Industry|Non-Metallic Minerals|Heat;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of heat;;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Hydrogen;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen generated from biomass;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen from electrolysis;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen from fossils;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Hydrogen|Other;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of hydrogen from other sources;;;;;;;
-Final Energy|Industry|Non-Metallic Minerals|Liquids;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Industry|Cement|+|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), In remind cement = non-metallic minerals;R
-Final Energy|Industry|Non-Metallic Minerals|Liquids|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from biomass;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Industry|Non-Metallic Minerals|Liquids;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Liquids|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from biomass;;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Coal;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from coal;;;;;;;
-Final Energy|Industry|Non-Metallic Minerals|Liquids|Electricity;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Industry|Non-Metallic Minerals|Liquids|Electricity;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Gas;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1320,10 +1320,10 @@ Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Electricity;EJ/yr;3
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Industry|Non-Metallic Minerals|Liquids|Oil;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of liquid fuels from refined crude oil;;;;;;;
-Final Energy|Industry|Non-Metallic Minerals|Other;EJ/yr;;Final energy consumption by the non-metallic minerals sector excluding cement of other energy sources;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
-Final Energy|Industry|Non-Metallic Minerals|Solids;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of solid fuels;;;FE|Industry|Cement|+|Solids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), In remind cement = non-metallic minerals;R
-Final Energy|Industry|Non-Metallic Minerals|Solids|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of solid biomass;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
-Final Energy|Industry|Non-Metallic Minerals|Solids|Coal;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of coal and coal products;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
+Final Energy|Industry|Non-Metallic Minerals|Other;EJ/yr;;Final energy consumption by the non-metallic minerals sector excluding cement of other energy sources;;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Solids;EJ/yr;1;Final energy consumption by the non-metallic minerals sector excluding cement of solid fuels;;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Solids|Biomass;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of solid biomass;;;;;;;
+Final Energy|Industry|Non-Metallic Minerals|Solids|Coal;EJ/yr;2;Final energy consumption by the non-metallic minerals sector excluding cement of coal and coal products;;;;;;;
 Final Energy|Industry|Other;EJ/yr;;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of other energy sources;;;;;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);
 Final Energy|Industry|Other Sector;EJ/yr;;Final energy consumption by the other industrial sectors;;;FE|Industry|+++|Other Industry;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), Other industry in REMIND includes also pulp & paper and non-ferrous metals;R
 Final Energy|Industry|Other Sector|Electricity;EJ/yr;;Final energy consumption by the other industrial sectors of electricity;;;FE|Industry|Other Industry|+|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final), Other industry in REMIND includes also pulp & paper and non-ferrous metals;R
