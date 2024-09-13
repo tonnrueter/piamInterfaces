@@ -67,7 +67,7 @@
 #' )
 #' }
 #' @export
-generateIIASASubmission <- function(mifs = ".", # nolint cyclocomp_linter
+generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
                                     mapping = NULL,
                                     model = NULL,
                                     removeFromScen = NULL,
