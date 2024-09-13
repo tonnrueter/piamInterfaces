@@ -2240,11 +2240,11 @@ Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;;Nitrogen inputs on cropland from 
 Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;;Nitrogen inputs on cropland from other sources;;;Resources|Nitrogen|Cropland Budget|Inputs|+|Recycled Belowground Crop Residues;Mt Nr/yr;;mapping taken from SHAPE;M
 Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;;Nitrogen inputs on cropland from other sources;;;Resources|Nitrogen|Cropland Budget|Inputs|+|Seed;Mt Nr/yr;;mapping taken from SHAPE;M
 Ocean|Acidification;pH;;Ocean acidification;;;Ocean|pH value;pH;;additional mapping taken from additional_SHAPE;S
-Ocean|Carbonate Saturation|Aragonite;;;Saturation state of aragonite (Omega A);;;Ocean|Carbonate Saturation|Aragonite;;;mapping taken from SHAPE;S
-Ocean|Carbonate Saturation|Calcite;;;Saturation state of calcite (Omega C);;;Ocean|Carbonate Saturation|Calcite;;;mapping taken from SHAPE;S
+Ocean|Carbonate Saturation|Aragonite;-;;Saturation state of aragonite (Omega A);;;Ocean|Carbonate Saturation|Aragonite;-;;mapping taken from SHAPE;S
+Ocean|Carbonate Saturation|Calcite;-;;Saturation state of calcite (Omega C);;;Ocean|Carbonate Saturation|Calcite;-;;mapping taken from SHAPE;S
 Policy Cost|GDP Loss w/o Transfers;billion USD_2010/yr;;GDP loss without international transfers in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers);;;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1.12;additional mapping taken from additional_SHAPE;Rx
 Policy Cost|Transfers;billion USD_2010/yr;;Net international climate finance transfers (positive for inflow, negative for payment);;;Policy Cost|Transfers;billion US$2005/yr;1.12;mapping taken from SHAPE;Rx
-Political institutions|Equality before law and individual liberty;;;;;;Political institutions|Equality before law and individual liberty;;;mapping taken from SHAPE;S
+Political institutions|Equality before law and individual liberty;-;;;;;Political institutions|Equality before law and individual liberty;-;;mapping taken from SHAPE;S
 Pollution|Nitrogen|Surplus|Animal Waste Management;Tg N/yr;;Nitrogen surplus of animal waste management;;;Resources|Nitrogen|Pollution|Surplus|+|Animal Waste Management;Mt Nr/yr;;additional mapping taken from additional_SHAPE;Mx
 Pollution|Nitrogen|Surplus|Cropland;Tg N/yr;;Nitrogen surplus of soil inputs over soil withdrawals in cropland;;;Resources|Nitrogen|Pollution|Surplus|+|Cropland;Mt Nr/yr;;additional mapping taken from additional_SHAPE;M
 Pollution|Nitrogen|Surplus|Non-Agricultural Land;Tg N/yr;;Nitrogen surplus of non-agricultural land;;;Resources|Nitrogen|Pollution|Surplus|+|Non-agricultural land;Mt Nr/yr;;additional mapping taken from additional_SHAPE;M
