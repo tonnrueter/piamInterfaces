@@ -679,13 +679,22 @@ Energy Service|Transportation|Passenger|Road;billion pkm/yr;;Energy service dema
 Population|Risk of Hunger;million;;Population at risk of hunger, calculated by multipling total population and prevalence of undernourishment which is computed from a probability distribution of daily dietary energy consumption and minimum dietary energy requirement.;;;SDG|SDG02|Prevalence of underweight;million;;mapping taken from NAVIGATE, NAVIGATE category: food;M
 Revenue|government;;;;;;;;;mapping taken from NAVIGATE, NAVIGATE category: government;
 Land Cover;million ha;2;Total land cover;;;Resources|Land Cover;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Built-up Area;;;;;;Resources|Land Cover|+|Urban Area;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Built-Up Area;million ha;2;Built-up land associated with human settlements;;;Resources|Land Cover|+|Urban Area;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland;million ha;2;Arable land, i.e. land in bioenergy crop, food, and feed/fodder crops, permanent crops as well as other arable land (physical area);;;Resources|Land Cover|+|Cropland;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Forest;million ha;2;Managed and unmanaged forest area;;;Resources|Land Cover|+|Forest;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Pasture;million ha;2;Pasture, not only high quality rangeland, based on FAO definition of permanent meadows and pastures;;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Cropland|Cereals;million ha;3;Cropland with maize, rice, temperate cereals and tropical cereals (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland|Energy Crops;million ha;3;Cropland with short rotation grasses, short rotation trees (physical area);;;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Forest|Managed;million ha;2;Managed forest area incl. timber plantations and re-/afforestation areas;;;Resources|Land Cover|Forest|Managed Forest|+|Plantations;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Cropland|Cereals;million ha;3;Cropland with maize, rice, temperate cereals and tropical cereals (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Cropland|Oil Crops;million ha;3;Cropland with cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Oil crops;million ha;;;M
+Land Cover|Cropland|Other Crops;million ha;3;Cropland with fruits, vegetables, nuts, potatoes, pulses, tropical roots (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Other crops;million ha;;;M
+Land Cover|Cropland|Sugar Crops;million ha;3;Cropland with sugar beet, sugar cane (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Sugar crops;million ha;;;M
+Land Cover|Pasture;million ha;2;Pasture, not only high quality rangeland, based on FAO definition of permanent meadows and pastures;;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Forest;million ha;2;Managed and unmanaged forest area;;;Resources|Land Cover|+|Forest;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Forest|Managed;million ha;2;Managed forest area incl. timber plantations and re-/afforestation areas;;;Resources|Land Cover|Forest|+|Managed Forest;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
+Land Cover|Forest|Managed|Afforestation;million ha;2;Afforestation area;;;;;;;
+Land Cover|Forest|Managed|Reforestation;million ha;2;Reforestation area;;;Resources|Land Cover|Forest|Managed Forest|+|Afforestation;million ha;;;M
+Land Cover|Forest|Managed|Reforestation;million ha;2;Reforestation area;;;Resources|Land Cover|Forest|Managed Forest|+|NPI/NDC;million ha;;;M
+Land Cover|Forest|Managed|Timber Plantations;million ha;2;Area of timber plantations;;;Resources|Land Cover|Forest|Managed Forest|+|Plantations;million ha;;;M
+Land Cover|Forest|Primary Forest;million ha;2;Primary forest area;revise for next submission when Land Cover|Forest|Natural is back in the template;;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;M
+Land Cover|Forest|Secondary Forest;million ha;2;Secondary forest area;revise for next submission when Land Cover|Forest|Natural is back in the template;;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;M
 Land Cover|Other Land;million ha;2;Other land cover that does not fit into any other category;;;Resources|Land Cover|+|Other Land;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2005/t CO2;1.12;mapping taken from NAVIGATE, NAVIGATE category: policy;R
 Final Energy|Commercial|Water|Desalination;EJ/yr;;Energy consumption for water desalination;;;;;;mapping taken from NAVIGATE, NAVIGATE category: water (energy);
@@ -2389,14 +2398,6 @@ Health|Child Mortality|Indoor Air Pollution;million;;Child mortality associated 
 Health|Disability-Adjusted Life Years|PM2.5;DALY/yr;;Disability adjusted life years lost per year from health impacts due to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);;;;;;;
 Health|Premature Deaths|PM2.5;million;;Number of premature deaths associated with increased health risks from exposure to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);;;;;;;
 Labor Force|Inactive;million;1;Inhabitants which are not part of the labor force, including working-age people neither employed nor unemployed, and people not in a working-age cohort (e.g., children, retirees);;;;;;;
-Land Cover|Cropland|Oil Crops;million ha;3;Cropland with cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower (physical area);;;;;;;
-Land Cover|Cropland|Other Crops;million ha;3;Cropland with fruits, vegetables, nuts, potatoes, pulses, tropical roots (physical area);;;;;;;
-Land Cover|Cropland|Sugar Crops;million ha;3;Cropland with sugar beet, sugar cane (physical area);;;;;;;
-Land Cover|Forest|Managed|Afforestation;million ha;2;Afforestation area;;;;;;;
-Land Cover|Forest|Managed|Reforestation;million ha;2;Reforestation area;;;;;;;
-Land Cover|Forest|Managed|Timber Plantations;million ha;2;Area of timber plantations;;;;;;;
-Land Cover|Forest|Primary Forest;million ha;2;Primary forest area;;;;;;;
-Land Cover|Forest|Secondary Forest;million ha;2;Secondary forest area;;;;;;;
 Material Recycling|Aluminum;Mt/year;;Production of recycled aluminum;;;;;;;
 Material Recycling|Aluminum [Share];%;;Share of recycled aluminum;;;;;;;
 Material Recycling|Chemicals [Share];%;;Share of recycled chemicals;;;;;;;
