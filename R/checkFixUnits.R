@@ -15,7 +15,7 @@
 #' @return quitte object with adapted mif data
 #' @export
 
-checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) {
+checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) {  # nolint: cyclocomp_linter
   haspiam <- all(c("piam_variable", "piam_unit") %in% colnames(template))
   unitcol <- if (haspiam) "piam_unit" else "unit"
   varcol <- if (haspiam) "piam_variable" else "variable"
