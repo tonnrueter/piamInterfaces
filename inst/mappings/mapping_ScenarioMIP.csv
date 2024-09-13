@@ -975,17 +975,19 @@ Agricultural Demand|Residues;million t DM/yr;3;Demand for residues from agricult
 Agricultural Demand|Residues|Bioenergy;million t DM/yr;3;Demand for residues as bioenergy;;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;;M
 Agricultural Demand|Residues|Feed;million t DM/yr;3;Demand for residues as feed;;;;;;;
 Agricultural Demand|Residues|Other;million t DM/yr;3;Demand of residues for other uses;;;;;;;
-Agricultural Production|Crops;million t DM/yr;2;Production of crops;;;;;;;
-Agricultural Production|Crops|Cereals;million t DM/yr;3;Production of crops;;;;;;;
-Agricultural Production|Crops|Energy Crops;million t DM/yr;2;Production of crops;;;;;;;
-Agricultural Production|Crops|Oil Crops;million t DM/yr;3;Production of oil crops;;;;;;;
-Agricultural Production|Crops|Other Crops;million t DM/yr;3;Production of crops;;;;;;;
-Agricultural Production|Crops|Sugar Crops;million t DM/yr;3;Production of crops;;;;;;;
-Agricultural Production|Livestock;million t DM/yr;2;Production of livestock products;;;;;;;
-Agricultural Production|Livestock|Dairy;million t DM/yr;3;Production of dairy livestock products;;;;;;;
-Agricultural Production|Livestock|Non-Ruminant;million t DM/yr;3;Production of livestock products from monogastrics and poultry;;;;;;;
-Agricultural Production|Livestock|Ruminant;million t DM/yr;3;Production of livestock products from ruminants;;;;;;;
-Agricultural Production|Residues;million t DM/yr;2;Production of agricultural residues;;;;;;;
+Agricultural Production|Crops;million t DM/yr;2;Production of crops;;;Production|+|Crops;Mt DM/yr;;;M
+Agricultural Production|Crops|Cereals;million t DM/yr;3;Production of crops;;;Production|Crops|+|Cereals;Mt DM/yr;;;M
+Agricultural Production|Crops|Energy Crops;million t DM/yr;2;Production of crops;;;Production|+|Bioenergy crops;Mt DM/yr;;;M
+Agricultural Production|Crops|Oil Crops;million t DM/yr;3;Production of oil crops;;;Production|Crops|+|Oil crops;Mt DM/yr;;;M
+Agricultural Production|Crops|Other Crops;million t DM/yr;3;Production of crops;;;Production|Crops|+|Other crops;Mt DM/yr;;;M
+Agricultural Production|Crops|Sugar Crops;million t DM/yr;3;Production of crops;;;Production|Crops|+|Sugar crops;Mt DM/yr;;;M
+Agricultural Production|Livestock;million t DM/yr;2;Production of livestock products;;;Production|+|Livestock products;Mt DM/yr;;;M
+Agricultural Production|Livestock|Dairy;million t DM/yr;3;Production of dairy livestock products;;;Production|Livestock products|+|Dairy;Mt DM/yr;;;M
+Agricultural Production|Livestock|Dairy;million t DM/yr;3;Production of dairy livestock products;;;Production|Livestock products|+|Eggs;Mt DM/yr;;;M
+Agricultural Production|Livestock|Non-Ruminant;million t DM/yr;3;Production of livestock products from monogastrics and poultry;;;Production|Livestock products|+|Monogastric meat;Mt DM/yr;;;M
+Agricultural Production|Livestock|Non-Ruminant;million t DM/yr;3;Production of livestock products from monogastrics and poultry;;;Production|Livestock products|+|Poultry meat;Mt DM/yr;;;M
+Agricultural Production|Livestock|Ruminant;million t DM/yr;3;Production of livestock products from ruminants;;;Production|Livestock products|+|Ruminant meat;Mt DM/yr;;;M
+Agricultural Production|Residues;million t DM/yr;2;Production of agricultural residues;;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;;M
 Air Pollution|PM2.5|Urban Population;ug/m3;;Urban population weighted annual average PM2.5 concentrations.;;Population|Urban;;;;;
 Carbon Removal|Bio-Oil Storage;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by use of bio-oil;, Values should be reported as positive numbers;;;;;;
 Carbon Removal|Biochar;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by conversion of biomass to recalcitrant carbon via pyrolysis and its subsequent application to croplands to increase soil carbon stocks;, Values should be reported as positive numbers;;;;;;
