@@ -1807,7 +1807,6 @@ Final Energy|Solids|Biomass;EJ/yr;2;Final energy fuel consumption of solid bioma
 Final Energy|Solids|Coal;EJ/yr;2;Final energy fuel consumption of coal and coal products;;;;;;;
 Final Energy|Transportation;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers);;;FE|Transport|w/o Bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Transportation (w/ bunkers);EJ/yr;;Final energy consumption by the transportation sector including international aviation and shipping;;;FE|Transport with bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
-Final Energy|Transportation (w/ bunkers);EJ/yr;;Final energy consumption by the transportation sector including international aviation and shipping;;;FE|Transport;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation (w/ bunkers)|Electricity;EJ/yr;;Final energy consumption by the transportation sector including international aviation and shipping of electricity;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Gases;EJ/yr;1;Final energy consumption by the transportation sector including international aviation and shipping of gaseous fuels not including hydrogen;;;;;;;
 Final Energy|Transportation (w/ bunkers)|Gases|Biomass;EJ/yr;2;Final energy consumption by the transportation sector including international aviation and shipping of gas from biogenic sources, mainly biogas;;;;;;;
