@@ -757,7 +757,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 687;Energy Service|Transportation|Aviation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation;
 688;Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight;billion tkm/yr;;;;;annual demand for energy services related to freight transportation;R
 689;Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in aviation;
-690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in international shipping;
+690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;ES|Transport|Bunkers|Freight|International Shipping;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in international shipping;
 691;Energy Service|Transportation|Freight|Navigation;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in navigation;T
 692;Energy Service|Transportation|Freight|Other;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation (other);
 693;Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in railways;T
