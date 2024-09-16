@@ -51,19 +51,15 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
     summationsFile <- chooseFromList(summationsOptions, multiple = FALSE, type = "summation file")
   }
   if (isTRUE(summationsFile == "extractVariableGroups")) {
-    checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE)
+    checkVariables <- extractVariableGroups(levels(data$variable), keepOrigNames = TRUE, sorted = TRUE)
     names(checkVariables) <- make.unique(names(checkVariables), sep = " ")
+    summationGroups <- bind_rows(lapply(names(checkVariables),
+                                        function(x) data.frame(parent = x, child = checkVariables[[x]], factor = 1)))
   } else {
     summationGroups <- getSummations(summationsFile)
+    checkVariables <- getSummations(summationsFile, format = "list")
     if (summationsFile %in% names(summationsNames())) {
       summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(summationsFile))
-    }
-
-    checkVariables <- list()
-
-    # generate list of summation rules from summations file
-    for (i in unique(summationGroups$parent)) {
-      checkVariables[[i]] <- summationGroups[summationGroups[, "parent"] == i, "child"]
     }
   }
 

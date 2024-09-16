@@ -11,7 +11,7 @@ for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS"
       filter(!is.na(.data$variable)) %>%
       mutate(model = "REMIND", scenario = "default", region = "GLO", value = 1) %>%
       mutate(variable = deletePlus(.data$variable)) %>%
-      distinct()
+      distinct(.data$variable, .keep_all = TRUE)
 
     data <- tidyr::crossing(data, year = seq(2005, 2020, 5))
 

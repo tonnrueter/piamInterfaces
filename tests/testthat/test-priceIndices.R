@@ -46,7 +46,7 @@ test_that("priceIndices (Add, Fix, IIASA) works", {
   expectedPriceIndex2010 <- expectedPriceIndex
   expectedPriceIndex2010$value <- c(1. / 3, 1., 1. / 4, 1.)
   expectedPriceIndex2010$unit <- as.factor("Index (2010 = 1)")
-  expect_identical(mifdataPI2010, rbind(mifdata, expectedPriceIndex2010))
+  expect_identical(quitteSort(mifdataPI2010), quitteSort(rbind(mifdata, expectedPriceIndex2010)))
 
   # correct it back using checkIIASASubmission
   capture.output(mifdataPIIIASA <- checkIIASASubmission(mifdataPI2010, iiasatemplate))

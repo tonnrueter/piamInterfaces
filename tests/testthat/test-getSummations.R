@@ -20,3 +20,12 @@ test_that("basic checks on summation Groups", {
     }
   }
 })
+
+test_that("getSummations works from community template (errors might be caused by changes in the template)", {
+  templateurl <- "https://files.ece.iiasa.ac.at/common-definitions/common-definitions-template.xlsx"
+  expect_silent(summationsData <- getSummations(templateurl))
+  expect_equal(names(summationsData), c("parent", "child", "factor"))
+  expect_no_warning(checkVarNames(summationsData$parent, withunit = FALSE))
+  expect_no_warning(checkVarNames(summationsData$child, withunit = FALSE))
+  expect_true(all(summationsData$factor == 1))
+})

@@ -1591,21 +1591,25 @@ Water Consumption;Water Consumption|Liquids;1
 
 Water Consumption|Electricity;Water Consumption|Electricity|Biomass;1
 Water Consumption|Electricity;Water Consumption|Electricity|Coal;1
+
+
 Water Consumption|Electricity;Water Consumption|Electricity|Cooling Pond;1
 Water Consumption|Electricity;Water Consumption|Electricity|Dry Cooling;1
-Water Consumption|Electricity;Water Consumption|Electricity|Fossil;1
+
 Water Consumption|Electricity;Water Consumption|Electricity|Gas;1
 Water Consumption|Electricity;Water Consumption|Electricity|Geothermal;1
 Water Consumption|Electricity;Water Consumption|Electricity|Hydro;1
-Water Consumption|Electricity;Water Consumption|Electricity|Non-Biomass Renewables;1
 Water Consumption|Electricity;Water Consumption|Electricity|Nuclear;1
 Water Consumption|Electricity;Water Consumption|Electricity|Oil;1
-Water Consumption|Electricity;Water Consumption|Electricity|Once Through;1
-Water Consumption|Electricity;Water Consumption|Electricity|Other;1
-Water Consumption|Electricity;Water Consumption|Electricity|Sea Cooling;1
 Water Consumption|Electricity;Water Consumption|Electricity|Solar;1
-Water Consumption|Electricity;Water Consumption|Electricity|Wet Tower;1
 Water Consumption|Electricity;Water Consumption|Electricity|Wind;1
+
+Water Consumption|Electricity 2;Water Consumption|Electricity|Cooling Pond;1
+Water Consumption|Electricity 2;Water Consumption|Electricity|Dry Cooling;1
+Water Consumption|Electricity 2;Water Consumption|Electricity|Once Through;1
+Water Consumption|Electricity 2;Water Consumption|Electricity|Other;1
+Water Consumption|Electricity 2;Water Consumption|Electricity|Sea Cooling;1
+Water Consumption|Electricity 2;Water Consumption|Electricity|Wet Tower;1
 
 Water Consumption|Electricity|Biomass;Water Consumption|Electricity|Biomass|w/ CCS;1
 Water Consumption|Electricity|Biomass;Water Consumption|Electricity|Biomass|w/o CCS;1
@@ -1713,20 +1717,21 @@ Water Withdrawal 3;Water Withdrawal|Liquids;1
 
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Biomass;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Coal;1
-Water Withdrawal|Electricity;Water Withdrawal|Electricity|Cooling Pond;1
-Water Withdrawal|Electricity;Water Withdrawal|Electricity|Dry Cooling;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Gas;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Geothermal;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Hydro;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Nuclear;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Ocean;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Oil;1
-Water Withdrawal|Electricity;Water Withdrawal|Electricity|Once Through;1
-Water Withdrawal|Electricity;Water Withdrawal|Electricity|Other;1
-Water Withdrawal|Electricity;Water Withdrawal|Electricity|Sea Cooling;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Solar;1
-Water Withdrawal|Electricity;Water Withdrawal|Electricity|Wet Tower;1
 Water Withdrawal|Electricity;Water Withdrawal|Electricity|Wind;1
+
+Water Withdrawal|Electricity 2;Water Withdrawal|Electricity|Cooling Pond;1
+Water Withdrawal|Electricity 2;Water Withdrawal|Electricity|Dry Cooling;1
+Water Withdrawal|Electricity 2;Water Withdrawal|Electricity|Once Through;1
+Water Withdrawal|Electricity 2;Water Withdrawal|Electricity|Other;1
+Water Withdrawal|Electricity 2;Water Withdrawal|Electricity|Sea Cooling;1
+Water Withdrawal|Electricity 2;Water Withdrawal|Electricity|Wet Tower;1
 
 Water Withdrawal|Electricity|Biomass;Water Withdrawal|Electricity|Biomass|w/ CCS;1
 Water Withdrawal|Electricity|Biomass;Water Withdrawal|Electricity|Biomass|w/o CCS;1
