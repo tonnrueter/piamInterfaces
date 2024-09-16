@@ -28,11 +28,9 @@ Prices|Index2020|Agriculture|Producer*                  ;Prices|Producer Price I
 # Changes from edgeT refactoring v2.0
 Emi|CO2|Energy|Demand|Transport|Bunkers|Freight|International Shipping;Emi|CO2|Transport|Freight|International Shipping|Demand
 Emi|CO2|Energy|Demand|Transport|Bunkers|Pass|International Aviation;Emi|CO2|Transport|Pass|Aviation|International|Demand
-Emi|CO2|Energy|Demand|Transport|Freight;Emi|CO2|Transport|Freight|w/o bunkers|Demand
 Emi|CO2|Energy|Demand|Transport|Freight|Domestic Shipping;Emi|CO2|Transport|Freight|Navigation|Demand
 Emi|CO2|Energy|Demand|Transport|Freight|Rail;Emi|CO2|Transport|Freight|Rail|Demand
 Emi|CO2|Energy|Demand|Transport|Freight|Road;Emi|CO2|Transport|Freight|Road|Demand
-Emi|CO2|Energy|Demand|Transport|Pass;Emi|CO2|Transport|Pass|w/o bunkers|Demand
 Emi|CO2|Energy|Demand|Transport|Pass|Domestic Aviation;Emi|CO2|Transport|Pass|Aviation|Domestic|Demand
 Emi|CO2|Energy|Demand|Transport|Pass|Rail;Emi|CO2|Transport|Pass|Rail|Demand
 Emi|CO2|Energy|Demand|Transport|Pass|Road;Emi|CO2|Transport|Pass|Road|Demand
@@ -46,7 +44,6 @@ ES|Transport|Pass|Domestic Aviation;ES|Transport|Pass|Aviation|Domestic
 ES|Transport|Pass|Non-motorized;ES|Transport|Pass|Road|Non-Motorized
 ES|Transport|Pass|Non-motorized|Cycle;ES|Transport|Pass|Road|Non-Motorized|Cycling
 ES|Transport|Pass|Non-motorized|Walk;ES|Transport|Pass|Road|Non-Motorized|Walking
-FE|Transport with bunkers;FE|Transport edge
 FE|Transport|Bunkers|Freight|International Shipping;FE|Transport|Freight|International Shipping
 FE|Transport|Bunkers|Freight|International Shipping|Liquids;FE|Transport|Freight|International Shipping|Liquids
 FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass;FE|Transport|Freight|International Shipping|Liquids|Biomass
