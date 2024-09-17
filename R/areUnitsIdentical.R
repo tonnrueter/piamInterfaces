@@ -37,6 +37,7 @@ areUnitsIdentical <- function(vec1, vec2 = NULL) {
     c("Nr/Nr", "Nr per Nr"),
     c("unitless", "", "-", "1", "index"),
     c("W/m2", "W/m^2"),
+    c("million vehicles", "million veh"),
     # below, exceptionally added units that actually differ for backwards compatibility
     # for 'Energy Service|Residential and Commercial|Floor Space'
     c("bn m2/yr", "bn m2"),
