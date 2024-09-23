@@ -65,6 +65,19 @@ For a human-readable output, save the old version of the mapping and run:
 ```
 remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL)
 ```
+### Creating a new mapping
+
+Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings. 
+
+1. Identify which existing mappings are most relevant for your new mapping. Criteria might include the time at which the existing mapping was created and the proximity of the templates (e.g. follow-up project). If you are unsure, ask your experienced colleagues for advice. This provides you with a list of existing mappings that is ordered by relevance, say `mapping_OLD1.csv`, ... , `mapping_OLD9.csv`. 
+2. Use `read.csv2` to get the template as a dataframe `template`.
+3. Looping over the existing mappings in descending order of relevance,
+    - use `getMapping` to get the existing mapping `mapping_OLDi` as a dataframe,
+    - `filter` `mapping_OLDi` for variables which are contained in `template` and which have not yet been added to `mapping_NEW`,
+    - `left_join` (by variable) the filtered `mapping_OLDi` with `template`  to add the information from the template (consider using `str_to_lower` for case-insensitive matching when filtering and joining),
+    - `select`/`mutate` the columns of the joined dataframe to keep the desired columns for the new mapping (see above for description of mandatory and recommended columns),
+    - `bind_rows` to `mapping_NEW`
+5. Use `write.csv2` to export `mapping_NEW` as `mapping_NEW.csv`. It is recommended to make a few checks (e.g. by looking at all variables for which the description or the unit does not agree between the existing mapping and the template).
 
 ## Model intercomparison
 
