@@ -58,7 +58,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("0.9096", "US$2010", "US$17"),
                           c("0.9096", "US$2010/t CO2", "US$2017/tCO2"),
                           c("0.9096", "USD_2010", "US$2017"),
-                          c("0.0009096", "billion US$2010/yr", "million US$17 PPP/yr"),
+                          c("0.0009096", "billion US$2010/yr", "million US$2017 PPP/yr"),
                           c("0.001099", "EJ/billion US$2010", "MJ/US$2017"), # 0.001 divided by 0.9096
                           c("0.9502", "EUR_2020", "US$2017"), # ESABCC
                           c("0.9534", "EUR2020", "US$2017"),  # ARIADNE
@@ -74,7 +74,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1", "MtCO2e", "Mt CO2e/yr"),
                           c("1000", "1000 t", "Mt Nr/yr"),
                           c("1", "TgN/year", "Mt Nr/yr"),
-                          c("0.001", "bn USD 2005 MER", "million US$05 MER/yr"),
+                          c("0.0008121", "bn USD 2005 MER", "million US$2017 MER/yr"),
                           c("1000", "1000 t dm", "Mt DM/yr")
                          )
   template$piam_factor[is.na(template$piam_factor)] <- 1

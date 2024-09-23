@@ -811,7 +811,7 @@ WATR.VFN;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Frui
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Potatoes;km3/yr;1;NULL;;M
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Pulses;km3/yr;1;NULL;;M
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Tropical roots;km3/yr;1;NULL;;M
-GDPT.TOT;bn USD 2005 MER;Total income;million US$05 MER/yr;0.001;NULL;;M
+GDPT.TOT;bn USD 2005 MER;Total income;million US$2017 MER/yr;0.0008121;NULL;;M
 NETT.ECP;1000 t dm;Trade|Net-Trade|Bioenergy crops;Mt DM/yr;1000;NULL;;M
 NETT.AGR;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
 NETT.CRP;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
