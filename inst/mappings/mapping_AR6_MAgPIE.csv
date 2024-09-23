@@ -166,7 +166,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 150;Price|Agriculture|Rice|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Rice;1;;M;;;price index of rice
 151;Price|Agriculture|Soybean|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Soybean;1;;M;;;price index of soybean
 152;Price|Agriculture|Wheat|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Temperate cereals;1;;M;;;price index of wheat
-153;Price|Carbon;US$2010/t CO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2005/tCO2;1.12;M;;;price of carbon (for regional aggregrates the weighted price of carbon by subregion should be used)
+153;Price|Carbon;US$2010/t CO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2017/tCO2;0.9096;M;;;price of carbon (for regional aggregrates the weighted price of carbon by subregion should be used)
 ;Price|Carbon|Demand|Industry;US$2010/t CO2;;;;;;;price of carbon for the industry sector
 ;Price|Carbon|Demand|Residential and Commercial;US$2010/t CO2;;;;;;;price of carbon for the residential and commerical sector
 ;Price|Carbon|Demand|Transportation;US$2010/t CO2;;;;;;;price of carbon for the transportation sector

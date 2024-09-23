@@ -649,7 +649,7 @@ CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Molasses;kcal/ca
 CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Oils;kcal/capita/day;1;NULL;;M
 CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Sugar;kcal/capita/day;1;NULL;;M
 POPT.TOT;million;Population;million people;1;NULL;;M
-CTAX.TOT;USD05/tCO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2005/tCO2;1;NULL;;M
+CTAX.TOT;USD05/tCO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2017/tCO2;0.8121;NULL;;M
 PROD.ECP;1000 t dm;Production|Bioenergy crops;Mt DM/yr;1000;NULL;;M
 PROD.AGR;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;;M
 PROD.CRP;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;;M
