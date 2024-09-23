@@ -61,7 +61,7 @@ Agricultural Production|Livestock|Non-Ruminant;million t DM/yr;3;Production of l
 Agricultural Production|Livestock|Ruminant;million t DM/yr;3;Production of livestock products from ruminants;;;Production|Livestock products|+|Ruminant meat;Mt DM/yr;;;M
 Agricultural Production|Residues;million t DM/yr;2;Production of agricultural residues;;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;;M
 Air Pollution|PM2.5|Urban Population;ug/m3;;Urban population weighted annual average PM2.5 concentrations.;;Population|Urban;;;;;
-Capital Formation;billion USD_2010/yr;1;Net additions to the physical capital stock;;;Investments;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+Capital Formation;billion USD_2010/yr;1;Net additions to the physical capital stock;;;Investments;billion US$2017/yr;0.9096;mapping taken from NAVIGATE, NAVIGATE category: economy;R
 Carbon Removal;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;, Values should be reported as positive numbers;;Emi|CO2|CDR;Mt CO2/yr;-1;mapping taken from NAVIGATE, NAVIGATE category: carbon management;R
 Carbon Removal|Biochar;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by conversion of biomass to recalcitrant carbon via pyrolysis and its subsequent application to croplands to increase soil carbon stocks;, Values should be reported as positive numbers;;;;;;
 Carbon Removal|Bioenergy with CCS;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by use of bioenergy in combination with carbon-capture and sequestration (CCS);, Values should be reported as positive numbers;;Emi|CO2|CDR|BECCS;Mt CO2/yr;-1;added manually;R
@@ -80,7 +80,7 @@ Carbon Removal|Ocean Fertilization;Mt CO2/yr;;Gross removals of carbon dioxide (
 Carbon Removal|Other Methods;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by other methods not explicitly listed;, Values should be reported as positive numbers;;;;;;
 Carbon Removal|Peatland and Wetland Restoration;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by restoration of peat and coastal wetlands;, Values should be reported as positive numbers;;;;;;
 Carbon Removal|Soil Carbon Sequestration;Mt CO2/yr;;Gross removals of carbon dioxide (CO2) by soil carbon sequestration in croplands and graslands;, Values should be reported as positive numbers;;;;;;
-Consumption;billion USD_2010/yr;1;total consumption of all goods, by all consumers in a region;;;Consumption;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+Consumption;billion USD_2010/yr;1;total consumption of all goods, by all consumers in a region;;;Consumption;billion US$2017/yr;0.9096;mapping taken from NAVIGATE, NAVIGATE category: economy;R
 Emissions|BC;Mt BC/yr;;Emissions of black carbon (soot, BC);;;Emi|BC;Mt BC/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R
 Emissions|BC|AFOLU;Mt BC/yr;;Emissions of black carbon (soot, BC) from agriculture, forestry and other land use (IPCC category 3);;;Emi|BC|Land Use;Mt BC/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R
 Emissions|BC|AFOLU|Agriculture;Mt BC/yr;;Emissions of black carbon (soot, BC) from the agriculture sector;;;;;;;
@@ -2105,8 +2105,8 @@ Food|Availability [per capita];kcal/cap/day;;Amount of food available for consum
 Food|Availability|Crops [per capita];kcal/cap/day;;Amount of food crops available for consumption per capita;;Population;;;;;
 Food|Availability|Livestock [per capita];kcal/cap/day;;Amount of livestock products available for consumption per capita;;Population;;;;;
 Freshwater|Environmental Flow Violations;km3/yr;;Water withdrawals at the expense of environmental flow requirements;;;Water|Environmental flow violation volume;km3/yr;;mapping taken from SHAPE;M
-GDP|MER;billion USD_2010/yr;1;GDP converted to USD at market exchange rate (MER);;;GDP|MER;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
-GDP|PPP;billion USD_2010/yr;1;GDP converted to USD using purchasing power parity (PPP);;;GDP|PPP;billion US$2005/yr;1.12;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+GDP|MER;billion USD_2010/yr;1;GDP converted to USD at market exchange rate (MER);;;GDP|MER;billion US$2017/yr;0.9096;mapping taken from NAVIGATE, NAVIGATE category: economy;R
+GDP|PPP;billion USD_2010/yr;1;GDP converted to USD using purchasing power parity (PPP);;;GDP|PPP;billion US$2017/yr;0.9096;mapping taken from NAVIGATE, NAVIGATE category: economy;R
 GDP|PPP [Growth Rate per capita];%;;Annual growth rate of GDP-per-capita (PPP);;GDP|PPP;GDP|PPP|Per capita growth rate;percent;;additional mapping taken from additional_SHAPE;S
 GDP|PPP [per capita relative to OECD];%;;Ratio of GDP-per-capita (PPP) relative to OECD average;;Population;GDP|PPP|Per capita ratio to OECD;percent;;additional mapping taken from additional_SHAPE;S
 Gender Inequality Index;-;;Geometric average of reproductive health, empowerment and labor market force participation rate (see Andrijevic et al., 2020);;Population;;;;;
@@ -2241,8 +2241,8 @@ Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;;Nitrogen inputs on cropland from 
 Ocean|Acidification;pH;;Ocean acidification;;;Ocean|pH value;pH;;additional mapping taken from additional_SHAPE;S
 Ocean|Carbonate Saturation|Aragonite;-;;Saturation state of aragonite (Omega A);;;Ocean|Carbonate Saturation|Aragonite;-;;mapping taken from SHAPE;S
 Ocean|Carbonate Saturation|Calcite;-;;Saturation state of calcite (Omega C);;;Ocean|Carbonate Saturation|Calcite;-;;mapping taken from SHAPE;S
-Policy Cost|GDP Loss w/o Transfers;billion USD_2010/yr;;GDP loss without international transfers in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers);;;Policy Cost|GDP Loss|w/o transfers;billion US$2005/yr;1.12;additional mapping taken from additional_SHAPE;Rx
-Policy Cost|Transfers;billion USD_2010/yr;;Net international climate finance transfers (positive for inflow, negative for payment);;;Policy Cost|Transfers;billion US$2005/yr;1.12;mapping taken from SHAPE;Rx
+Policy Cost|GDP Loss w/o Transfers;billion USD_2010/yr;;GDP loss without international transfers in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers);;;Policy Cost|GDP Loss|w/o transfers;billion US$2017/yr;0.9096;additional mapping taken from additional_SHAPE;Rx
+Policy Cost|Transfers;billion USD_2010/yr;;Net international climate finance transfers (positive for inflow, negative for payment);;;Policy Cost|Transfers;billion US$2017/yr;0.9096;mapping taken from SHAPE;Rx
 Political institutions|Equality before law and individual liberty;-;;;;;Political institutions|Equality before law and individual liberty;-;;mapping taken from SHAPE;S
 Pollution|Nitrogen|Surplus|Animal Waste Management;Tg N/yr;;Nitrogen surplus of animal waste management;;;Resources|Nitrogen|Pollution|Surplus|+|Animal Waste Management;Mt Nr/yr;;additional mapping taken from additional_SHAPE;Mx
 Pollution|Nitrogen|Surplus|Cropland;Tg N/yr;;Nitrogen surplus of soil inputs over soil withdrawals in cropland;;;Resources|Nitrogen|Pollution|Surplus|+|Cropland;Mt Nr/yr;;additional mapping taken from additional_SHAPE;M
@@ -2574,7 +2574,7 @@ Population|Urban;million;2;Total population living in urban areas;;;Population|U
 Population|Urban [Share];%;;Share of population living in urban areas;;Population;;;;;
 Population|Without Education [Share];%;;Share of people aged 15 or older without education, not counting those with incomplete primary education;;Population;;;;;
 Price|Agriculture|Livestock [Index];Index (2020 = 1);;Weighted average price index of livestock;;;Prices|Index2020|Agriculture|Food products|Livestock;1;;additional mapping taken from additional_SHAPE;M
-Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2005/t CO2;1.12;mapping taken from NAVIGATE, NAVIGATE category: policy;R
+Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2017/t CO2;0.9096;mapping taken from NAVIGATE, NAVIGATE category: policy;R
 Price|Carbon [relative to OECD];%;;Carbon price relative to OECD carbon price;;;;;;;
 Primary Energy;EJ/yr;;Total primary energy consumption (direct equivalent);;;PE;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
 Primary Energy|Biomass;EJ/yr;;Primary energy consumption of purpose-grown bioenergy crops, crop and forestry residue, municipal solid waste bioenergy and traditional biomass;;;PE|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R

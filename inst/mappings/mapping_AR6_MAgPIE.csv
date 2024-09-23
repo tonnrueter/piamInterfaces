@@ -147,7 +147,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 132;Expenditure|household|Services|Water & sanitation;billion US$2010/yr;;;;;;;expenditure of households for Water & Sanitation services
 133;Export;billion US$2010/yr;;;;;;;total exports measured in monetary quantities.
 134;GDP|MER;billion US$2010/yr;;;;;;;GDP at market exchange rate
-135;GDP|PPP;billion US$2010/yr;Total income;million US$05 PPP/yr;0.00112;M;;;GDP at purchasing power parity
+135;GDP|PPP;billion US$2010/yr;Total income;million US$2017 PPP/yr;0.0009096;M;;;GDP at purchasing power parity
 136;GINI;0;;;;;;;GINI income inequality index
 137;Import;billion US$2010/yr;;;;;;;total imports measured in monetary quantities.
 138;Interest Rate|Real;%;;;;;;time preference rate as component of the interest rate is exogenous;Real interest rate or return on capital that is relevant for energy system investments
@@ -166,7 +166,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 150;Price|Agriculture|Rice|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Rice;1;;M;;;price index of rice
 151;Price|Agriculture|Soybean|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Soybean;1;;M;;;price index of soybean
 152;Price|Agriculture|Wheat|Index;Index (2010 = 1);Prices|Index2010|Agriculture|Food products|Plant-based|Temperate cereals;1;;M;;;price index of wheat
-153;Price|Carbon;US$2010/t CO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2005/tCO2;1.12;M;;;price of carbon (for regional aggregrates the weighted price of carbon by subregion should be used)
+153;Price|Carbon;US$2010/t CO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2017/tCO2;0.9096;M;;;price of carbon (for regional aggregrates the weighted price of carbon by subregion should be used)
 ;Price|Carbon|Demand|Industry;US$2010/t CO2;;;;;;;price of carbon for the industry sector
 ;Price|Carbon|Demand|Residential and Commercial;US$2010/t CO2;;;;;;;price of carbon for the residential and commerical sector
 ;Price|Carbon|Demand|Transportation;US$2010/t CO2;;;;;;;price of carbon for the transportation sector
@@ -198,7 +198,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 168;Price|Industry|Plastics;US$2010/Mt;;;;;;;Plastics producer price
 169;Price|Industry|Pulp and Paper;US$2010/Mt;;;;;;;Pulp and Paper producer price
 170;Price|Industry|Steel;US$2010/Mt;;;;;;;Steel producer price
-171;Price|Primary Energy|Biomass;US$2010/GJ;Prices|Bioenergy;US$05/GJ;1.12;M;;;biomass producer price
+171;Price|Primary Energy|Biomass;US$2010/GJ;Prices|Bioenergy;US$2017/GJ;0.9096;M;;;biomass producer price
 172;Price|Primary Energy|Coal;US$2010/GJ;;;;;;;coal price at the primary level (i.e. the spot price at the global or regional market)
 173;Price|Primary Energy|Gas;US$2010/GJ;;;;;;;natural gas price at the primary level (i.e. the spot price at the global or regional market)
 174;Price|Primary Energy|Oil;US$2010/GJ;;;;;;;crude oil price at the primary level (i.e. the spot price at the global or regional market)

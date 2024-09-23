@@ -58,7 +58,7 @@ test_that("Correct Prices are selected and plusses ignored", {
                                             outputFilename = basename(f), logFile = file.path(tempdir(), "price.log")))
   expect_true(file.exists(f))
   qemif <- quitte::as.quitte(f)
-  # you have to devide by 1.1 and round to compensate for inflation 2005 -> 2010
+  # you have to divide by 1.1 and round to compensate for inflation 2005 -> 2010
   peSeElec <- unique(filter(qemif, !!sym("variable") == "Price|Secondary Energy|Electricity")$value)
   expect_identical(round(peSeElec / 1.1), 3)
 

@@ -51,10 +51,22 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("0.00112", "billion US$2010/yr", "million US$05 PPP/yr"),
                           c("0.000892857", "EJ/billion US$2010", "MJ/US$2005"), # 0.001 divided by 1.12
                           c("1.33", "US$2020", "US$2005"),
-                          c("1.17", "EUR_2020", "US$2005"),
-                          c("1.174", "EUR2020", "US$2005"),
+                          c("1.17", "EUR_2020", "US$2005"), # ESABCC
+                          c("1.174", "EUR2020", "US$2005"), # ARIADNE
+                          # converted aboves numbers using GDPuc
+                          c("0.9096", "US$2010", "US$2017"),
+                          c("0.9096", "US$2010", "US$17"),
+                          c("0.9096", "US$2010/t CO2", "US$2017/tCO2"),
+                          c("0.9096", "USD_2010", "US$2017"),
+                          c("0.0009096", "billion US$2010/yr", "million US$2017 PPP/yr"),
+                          c("0.001099", "EJ/billion US$2010", "MJ/US$2017"), # 0.001 divided by 0.9096
+                          c("0.9502", "EUR_2020", "US$2017"), # ESABCC
+                          c("0.9534", "EUR2020", "US$2017"),  # ARIADNE
+                          # c("0.9311", "EUR2020", "US$2017"),  # GDPuc 0.931132
+                          c("0.8121", "USD05", "US$2017"),
                           # temporary, error in ARIADNE mapping for 'Capital Stock'
                           c("1.174", "billion EUR2020/yr", "billion US$2005"),
+                          c("0.9534", "billion EUR2020/yr", "billion US$2017"),
                           # AgMIP
                           c("1000", "1000 ha", "million ha"),
                           c("1", "MtCO2", "Mt CO2/yr"),
@@ -62,7 +74,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1", "MtCO2e", "Mt CO2e/yr"),
                           c("1000", "1000 t", "Mt Nr/yr"),
                           c("1", "TgN/year", "Mt Nr/yr"),
-                          c("0.001", "bn USD 2005 MER", "million US$05 MER/yr"),
+                          c("0.0008121", "bn USD 2005 MER", "million US$2017 MER/yr"),
                           c("1000", "1000 t dm", "Mt DM/yr")
                          )
   template$piam_factor[is.na(template$piam_factor)] <- 1

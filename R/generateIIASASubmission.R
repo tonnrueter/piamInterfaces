@@ -90,7 +90,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     warning("mappingFile is deprecated and ignored. If you got here via output.R -> export -> xlsx_IIASA,
             please pick a newer xlsx_IIASA.R file from remindmodel/develop")
   }
-
+  if (is.null(mapping)) mapping <- chooseFromList(names(mappingNames()))
   if (isTRUE(timesteps == "all")) timesteps <- seq(1, 3000)
 
   if (is.null(outputDirectory) && any(! is.null(c(outputFilename, logFile)), isTRUE(generatePlots))) {
@@ -126,7 +126,9 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
   # read in data from mifs ----
 
   # for each directory, include all mif files
+  message("# Read data...")
   mifdata <- deletePlus(readMifs(mifs))
+
   # report if duplicates are found
   invisible(reportDuplicates(mifdata))
 
@@ -135,9 +137,13 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
    warning("Your data contains no Price|*|Rawdata variables. If it is based on a remind2 version",
            " before 1.111.0 on 2023-05-26, please use piamInterfaces version 0.9.0 or earlier, see PR #128.")
   }
+
   mifdata <- .dropRegi(mifdata, dropRegi)
+  message("# Rename old variables...")
   mifdata <- renameOldVariables(mifdata, mapData$piam_variable, logFile = logFile)
+  message("# Check and fix units...")
   mifdata <- checkFixUnits(mifdata, mapData, logFile = logFile, failOnUnitMismatch = FALSE)
+  message("# Adapt model and scenario name...")
   mifdata <- .setModelAndScenario(mifdata, model, removeFromScen, addToScen)
 
   # apply mapping to data ----
@@ -273,11 +279,11 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
   }
   normalizedData <- dataframe %>%
     mutate(
-      "piam_weight" = removePlus(.data$piam_weight)
+      "piam_weight" = deletePlus(.data$piam_weight)
     )
   normalizedWeights <- weightSource %>%
     mutate(
-      "piam_variable" = removePlus(.data$piam_variable),
+      "piam_variable" = deletePlus(.data$piam_variable),
     )
   # ensure the source data variables are normalised in the same way
   normalizedData %>%

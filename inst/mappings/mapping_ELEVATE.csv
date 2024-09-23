@@ -1,6 +1,6 @@
 idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
-;Price|Imported Carbon;US$2010/t CO2;Price|Carbon|Imported;US$2005/t CO2;1.12;;;;Tax on regional imported CO2 (for regional aggregrates the weighted price of carbon by subregion should be used);Rx
-;Revenue|government|Import Tax;billion US$2010/yr;Net Taxes|Primary energy import;billion US$2005/yr;1.12;;;;government revenue from import taxes;R
+;Price|Imported Carbon;US$2010/t CO2;Price|Carbon|Imported;US$2017/t CO2;0.9096;;;;Tax on regional imported CO2 (for regional aggregrates the weighted price of carbon by subregion should be used);Rx
+;Revenue|government|Import Tax;billion US$2010/yr;Net Taxes|Primary energy import;billion US$2017/yr;0.9096;;;;government revenue from import taxes;R
 ;Resource|Extraction|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
 ;Resource|Extraction|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
 ;Resource|Extraction|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R

@@ -23,8 +23,8 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
   width <- 60
 
   .getChilds <- function(v, c, keepparent = FALSE) {
-    tobefound <- paste0("^", gsub("|", "\\|", removePlus(v), fixed = TRUE), "\\|", if (keepparent) "?", "[^\\|]*$")
-    c[which(grepl(tobefound, removePlus(c)))]
+    tobefound <- paste0("^", gsub("|", "\\|", deletePlus(v), fixed = TRUE), "\\|", if (keepparent) "?", "[^\\|]*$")
+    c[which(grepl(tobefound, deletePlus(c)))]
   }
 
   varname <- trimws(varname)
@@ -35,8 +35,8 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
     mappingData <- getMapping(m)
     mappingName <- basename(m)
     # find fitting variables in piam_variable and variable columns
-    piamno <- which(removePlus(varname) == removePlus(mappingData[, "piam_variable"]))
-    exportno <- head(which(removePlus(varname) == removePlus(mappingData$variable)), n = 1)
+    piamno <- which(deletePlus(varname) == deletePlus(mappingData[, "piam_variable"]))
+    exportno <- head(which(deletePlus(varname) == deletePlus(mappingData$variable)), n = 1)
     nothingfound <- isTRUE(length(piamno) + length(exportno) == 0)
     message("\n### ", ifelse(nothingfound, "Nothing found in", "Results from"), " mapping: ", blue, mappingName, nc)
     if (nothingfound) next

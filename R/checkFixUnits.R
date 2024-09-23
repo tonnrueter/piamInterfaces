@@ -9,7 +9,8 @@
 #'        recommended for submission, not used for generating mappings
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter mutate
-#' @importFrom piamutils deletePlus
+#' @importFrom GDPuc convertSingle
+#' @importFrom piamutils deletePlus niceround
 #' @importFrom rlang .data
 #' @importFrom stringr str_split
 #' @return quitte object with adapted mif data
@@ -28,8 +29,9 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
   logtext <- NULL
   for (mifvar in intersect(levels(mifdata$variable), unique(template[[varcol]]))) {
     templateunit <- unique(template[[unitcol]][template[[varcol]] %in% mifvar])
+    if (length(templateunit) != 1) stop(mifvar, " not mapped to unique unit: ", paste(templateunit, collapse = ", "))
     mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
-    # find unit mismatches
+    # find and potentially fix unit mismatches
     if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
       if (length(templateunit) > 1 || length(mifunit) > 1) {
         warning("Non-unique units for ", mifvar, ": templateunit: ", paste(templateunit, collapse = ", "),
@@ -41,10 +43,24 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
         mifdata <- mifdata %>%
           mutate(unit = factor(ifelse(.data$variable == mifvar, templateunit, as.character(.data$unit))))
       } else if (all(grepl("^Index \\([0-9]* = 1\\)$", mifunit))) {
+        # adjust different reference year for Index values
         if ("value" %in% names(mifdata)) {
-          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, ", data adapted."))
           referenceYear <- as.numeric(extractReferenceYear(templateunit))
           mifdata <- priceIndicesFix(mifdata, mifvar, referenceYear)
+          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, ", data adapted."))
+        }
+      } else if (all(gsub("US\\$(20)?05", "US$2017", mifunit) == templateunit)) {
+        # convert US$2005 to US$2017 for backwards compatibility with old REMIND setting
+        if ("value" %in% names(mifdata)) {
+          convfact <- convertSingle(x = 1, iso3c = "USA",
+                                    unit_in = "constant 2005 Int$PPP", unit_out = "constant 2017 Int$PPP")
+          if (grepl("/US\\$(20)?05", mifunit)) convfact <- 1 / convfact
+          mifdata <- mutate(mifdata,
+                       unit = factor(ifelse(.data$variable %in% mifvar, templateunit, as.character(.data$unit))),
+                       value = ifelse(.data$variable %in% mifvar, round(.data$value * convfact, 7), .data$value)) %>%
+                     droplevels()
+          logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit,
+                                       ", data multiplied by ", niceround(convfact, 4), "."))
         }
       } else {
         # log units unable to fix
@@ -53,6 +69,14 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
       }
     }
   }
+
+  reportCheckFixUnits(logtext, wrongUnits, logFile, failOnUnitMismatch)
+
+  return(mifdata)
+}
+
+# collect reporting and fail if needed
+reportCheckFixUnits <- function(logtext, wrongUnits, logFile, failOnUnitMismatch) {
   if (length(logtext) > 0) {
     cat(paste0("# ", length(logtext), " units were automatically corrected.\n"))
     logtext <- paste0("\n\n#--- ", length(logtext), " units were automatically corrected: ---#\n",
@@ -70,8 +94,6 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
   if (failOnUnitMismatch && nrow(wrongUnits) > 0) {
     stop("Unit mismatches!")
   }
-
-  return(mifdata)
 }
 
 

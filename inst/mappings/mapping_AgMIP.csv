@@ -649,7 +649,7 @@ CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Molasses;kcal/ca
 CALO.OSD;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Oils;kcal/capita/day;1;NULL;;M
 CALO.SGC;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Sugar;kcal/capita/day;1;NULL;;M
 POPT.TOT;million;Population;million people;1;NULL;;M
-CTAX.TOT;USD05/tCO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2005/tCO2;1;NULL;;M
+CTAX.TOT;USD05/tCO2;Prices|GHG Emission|CO2|Secondary Forest|Vegetation carbon;US$2017/tCO2;0.8121;NULL;;M
 PROD.ECP;1000 t dm;Production|Bioenergy crops;Mt DM/yr;1000;NULL;;M
 PROD.AGR;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;;M
 PROD.CRP;1000 t dm;Production|Crops;Mt DM/yr;1000;NULL;;M
@@ -811,7 +811,7 @@ WATR.VFN;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Frui
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Potatoes;km3/yr;1;NULL;;M
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Pulses;km3/yr;1;NULL;;M
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Tropical roots;km3/yr;1;NULL;;M
-GDPT.TOT;bn USD 2005 MER;Total income;million US$05 MER/yr;0.001;NULL;;M
+GDPT.TOT;bn USD 2005 MER;Total income;million US$2017 MER/yr;0.0008121;NULL;;M
 NETT.ECP;1000 t dm;Trade|Net-Trade|Bioenergy crops;Mt DM/yr;1000;NULL;;M
 NETT.AGR;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
 NETT.CRP;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
