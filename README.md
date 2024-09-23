@@ -67,7 +67,7 @@ remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.nam
 ```
 ### Creating a new mapping
 
-Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely build based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on exisiting mappings. 
+Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings. 
 
 1. Identify which existing mappings are most relevant for your new mapping. Criteria might include the time at which the existing mapping was created and the proximity of the templates (e.g. follow-up project). If you are unsure, ask your experienced colleagues for advice. This provides you with a list of existing mappings that is ordered by relevance, say `mapping_OLD1.csv`, ... , `mapping_OLD9.csv`. 
 2. Use `read.csv2` to get the template as a dataframe `template`.
