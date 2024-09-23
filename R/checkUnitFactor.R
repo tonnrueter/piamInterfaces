@@ -46,6 +46,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           # conversion factors taken from ECEMF Model Comparison Protocol, DOI:10.5281/zenodo.6811317
                           c("1.12", "US$2010", "US$2005"),
                           c("1.12", "US$2010", "US$05"),
+                          c("1.12", "USD_2010", "US$2005"),
                           c("1.12", "US$2010/t CO2", "US$2005/tCO2"),
                           c("0.00112", "billion US$2010/yr", "million US$05 PPP/yr"),
                           c("0.000892857", "EJ/billion US$2010", "MJ/US$2005"), # 0.001 divided by 1.12

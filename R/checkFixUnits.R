@@ -17,7 +17,7 @@
 #' @return quitte object with adapted mif data
 #' @export
 
-checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) {
+checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch = TRUE) {  # nolint: cyclocomp_linter
   haspiam <- all(c("piam_variable", "piam_unit") %in% colnames(template))
   unitcol <- if (haspiam) "piam_unit" else "unit"
   varcol <- if (haspiam) "piam_variable" else "variable"
@@ -34,7 +34,11 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
     mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
     # find and potentially fix unit mismatches
     if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
-      if (areUnitsIdentical(mifunit, templateunit)) {
+      if (length(templateunit) > 1 || length(mifunit) > 1) {
+        warning("Non-unique units for ", mifvar, ": templateunit: ", paste(templateunit, collapse = ", "),
+                ". mifunit: ", paste(mifunit, collapse = ", "))
+      }
+      if (all(areUnitsIdentical(c(mifunit, templateunit)))) {
         # fix wrong spelling of units as allowed in identicalUnits
         logtext <- c(logtext, paste0("  - for ", mifvar, ": ", mifunit, " -> ", templateunit, "."))
         mifdata <- mifdata %>%

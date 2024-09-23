@@ -755,28 +755,28 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Energy Service|Residential and Commercial|Residential|Construction rate;%/yr;;;;;;;;
 ;Energy Service|Residential and Commercial|Residential|Renovation rate;%/yr;;;;;;;;
 687;Energy Service|Transportation|Aviation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Aviation;
-688;Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight;bn tkm/yr;;;;;annual demand for energy services related to freight transportation;R
+688;Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight;billion tkm/yr;;;;;annual demand for energy services related to freight transportation;R
 689;Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation in aviation;
-690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;ES|Transport|Bunkers|Freight|International Shipping;bn tkm/yr;;;;;annual demand for energy services related to freight transportation in international shipping;T
-691;Energy Service|Transportation|Freight|Navigation;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;bn tkm/yr;;;;;annual demand for energy services related to freight transportation in navigation;T
+690;Energy Service|Transportation|Freight|International Shipping;bn tkm/yr;ES|Transport|Bunkers|Freight|International Shipping;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in international shipping;T
+691;Energy Service|Transportation|Freight|Navigation;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in navigation;T
 692;Energy Service|Transportation|Freight|Other;bn tkm/yr;;;;;;;annual demand for energy services related to freight transportation (other);
-693;Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;;annual demand for energy services related to freight transportation in railways;T
-694;Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;;annual demand for energy services related to freight transportation on roads;T
+693;Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;billion tkm/yr;;;;;annual demand for energy services related to freight transportation in railways;T
+694;Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;billion tkm/yr;;;;;annual demand for energy services related to freight transportation on roads;T
 695;Energy Service|Transportation|Navigation;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Navigation;
-696;Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass;bn pkm/yr;;;;;annual demand for energy services related to passenger transportation;R
-697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Pass|Domestic Aviation;bn pkm/yr;;;;;annual demand for energy services related to passenger transportation in aviation;T
-697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Bunkers|Pass|International Aviation;bn pkm/yr;;;;;annual demand for energy services related to passenger transportation in aviation;T
-698;Energy Service|Transportation|Passenger|Bicycling and Walking;bn pkm/yr;ES|Transport|Pass|Non-motorized;bn pkm/yr;;;;;energy service demand for passenger transport on bicycles and by foot;T
+696;Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass;billion pkm/yr;;;;;annual demand for energy services related to passenger transportation;R
+697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Pass|Domestic Aviation;billion pkm/yr;;;;;annual demand for energy services related to passenger transportation in aviation;T
+697;Energy Service|Transportation|Passenger|Aviation;bn pkm/yr;ES|Transport|Bunkers|Pass|International Aviation;billion pkm/yr;;;;;annual demand for energy services related to passenger transportation in aviation;T
+698;Energy Service|Transportation|Passenger|Bicycling and Walking;bn pkm/yr;ES|Transport|Pass|Non-motorized;billion pkm/yr;;;;;energy service demand for passenger transport on bicycles and by foot;T
 699;Energy Service|Transportation|Passenger|Navigation;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation in navigation;
 700;Energy Service|Transportation|Passenger|Other;bn pkm/yr;;;;;;;annual demand for energy services related to passenger transportation (other);
-701;Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;;annual demand for energy services related to passenger transportation in railways;T
-702;Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;bn pkm/yr;1;;;;annual demand for energy services related to passenger transportation on roads;T
-;Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Non-motorized;bn pkm/yr;-1;;;;annual demand for energy services related to road passenger transportation;T
+701;Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;billion pkm/yr;;;;;annual demand for energy services related to passenger transportation in railways;T
+702;Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;billion pkm/yr;1;;;;annual demand for energy services related to passenger transportation on roads;T
+;Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Non-motorized;billion pkm/yr;-1;;;;annual demand for energy services related to road passenger transportation;T
 703;Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;;;;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles);
-704;Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;;energy service demand for passenger transport on roads (buses);T
-705;Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);T
+704;Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;billion pkm/yr;;;;;energy service demand for passenger transport on roads (buses);T
+705;Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;billion pkm/yr;;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);T
 706;Energy Service|Transportation|Rail;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Rail;
-707;Energy Service|Transportation|Road;bn vkm/yr;ES|Transport|VKM|Road;bn vkm/yr;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Road;T
+707;Energy Service|Transportation|Road;bn vkm/yr;;;;;;;Annual demand for energy services in billion vehicle-kms related to both passenger and freight transportation by Road;
 708;Final Energy;EJ/yr;FE;EJ/yr;;;;;total final energy consumption by all end-use sectors and all fuels,excluding transmission/distribution losses;R
 ;Final Energy (excl. feedstocks)|Industry;EJ/yr;;;;;;;;
 709;Final Energy (excl. feedstocks)|Industry|Electricity;EJ/yr;;;;;;;Final Energy consumption by the industrial sector,excluding feedstocks use,of electricity;
@@ -1088,7 +1088,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1005;Final Energy|Transportation|Freight|Liquids;EJ/yr;FE|Transport|Freight|Liquids;EJ/yr;;;;;final energy consumption by the freight transportation sector of refined liquids (conventional & unconventional oil,biofuels,coal-to-liquids,gas-to-liquids);R
 1006;Final Energy|Transportation|Freight|Liquids|Bioenergy;EJ/yr;FE|Transport|Freight|Liquids|Biomass;EJ/yr;;;;;Final biofuels based (liquid or gas) energy consumed in the transport sector by freight vehicles;T
 1008;Final Energy|Transportation|Freight|Liquids|Fossil synfuel;EJ/yr;;;;;;;Final energy,in the form of fossil synfuel (e.g. CTL,GTL,Methanol,and DME),consumed in the transport sector by freight vehicles;
-1009;Final Energy|Transportation|Freight|Liquids|Oil;EJ/yr;FE|Transport|Freight|Liquids|Oil;EJ/yr;;;;;final energy consumption by the freight transportation sector of liquid oil products (from conventional & unconventional oil);T
+1009;Final Energy|Transportation|Freight|Liquids|Oil;EJ/yr;;;;;;;final energy consumption by the freight transportation sector of liquid oil products (from conventional & unconventional oil);
 1010;Final Energy|Transportation|Freight|Other;EJ/yr;FE|Transport|Freight|Liquids|Hydrogen;EJ/yr;;;;“Green” synthetic fuels from hydrogen made from electrolysis + “blue” synfuels from fossil H2;final energy consumption by the freight transportation sector of other sources that do not fit to any other category (please provide a definition of the sources in this category in the 'comments' tab);T
 1011;Final Energy|Transportation|Gases;EJ/yr;FE|Transport|+|Gases;EJ/yr;;;;;final energy consumption by the transportation sector of gases (natural gas,biogas,coal-gas),excluding transmission/distribution losses;R
 1012;Final Energy|Transportation|Gases|Bioenergy;EJ/yr;FE|Transport|Gases|+|Biomass;EJ/yr;;;;;Final bioenergy-based gas energy consumed in the transportation sector;R
@@ -1125,7 +1125,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1041;Final Energy|Transportation|Road|Freight|FC;EJ/yr;FE|Transport|Freight|Road|Hydrogen;EJ/yr;;;;;Final energy consumed in the transport sector by road transport freight  fuel cell vehicles;T
 1042;Final Energy|Transportation|Road|Freight|ICE;EJ/yr;FE|Transport|Freight|Road|Liquids;EJ/yr;;;;;Final energy consumed in the transport sector by road transport freight vehicles,driven by an internal combustion engine (including HEVs);T
 1043;Final Energy|Transportation|Road|Passenger;EJ/yr;FE|Transport|Pass|Road;EJ/yr;;;;;Final energy consumed in the transport sector by road transport passenger vehicles;T
-1044;Final Energy|Transportation|Road|Passenger|2W&3W;EJ/yr;FE|Transport|Pass|Road|LDV|Two-Wheelers;EJ/yr;;;;;Final energy consumed in the transport sector by road passenger transport by 2W and 3W vehicles;T
+1044;Final Energy|Transportation|Road|Passenger|2W&3W;EJ/yr;FE|Transport|Pass|Road|LDV|Two Wheelers;EJ/yr;;;;;Final energy consumed in the transport sector by road passenger transport by 2W and 3W vehicles;T
 ;Final Energy|Transportation|Road|Passenger|Bus;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;;;;final energy consumption by the bus road freight transportation sector, excluding transmission/distribution losses;T
 ;Final Energy|Transportation|Road|Passenger|LDV;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;;;;final energy consumed in the transport sector by road passenger transport (light-duty vehicles: passenger cars and light trucks/SUVs/vans);T
 1045;Price|Final Energy|Transportation|Electricity;US$2010/GJ;Price|Final Energy|Transport|Electricity;US$2005/GJ;1.12;;;;Electricity price at the final level in the transportation sector. Prices should include taxes and the effect of carbon prices;R
@@ -1733,8 +1733,8 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 1603;Transport|Stock|Road|Freight;million vehicles;;;;;;;The stock of road transport freight vehicles at the reported year;
 1604;Transport|Stock|Road|Passenger;million vehicles;;;;;;;The stock of road transport passenger vehicles at the reported year;
 1605;Transport|Stock|Road|Passenger|2W&3W;million vehicles;;;;;;;The stock of road transport passenger 2W &3W vehicles at the reported year;
-1606;Transport|Stock|Road|Passenger|Bus;million vehicles;Stock|Transport|Pass|Road|Bus;Million vehicles;;;;;The stock of road transport passenger buses at the reported year;T
-1607;Transport|Stock|Road|Passenger|LDV;million vehicles;Stock|Transport|Pass|Road|LDV;Million vehicles;;;;;The stock of road transport passenger LDVs at the reported year;T
+1606;Transport|Stock|Road|Passenger|Bus;million vehicles;Stock|Transport|Pass|Road|Bus;million veh;;;;;The stock of road transport passenger buses at the reported year;T
+1607;Transport|Stock|Road|Passenger|LDV;million vehicles;Stock|Transport|Pass|Road|LDV;million veh;;;;;The stock of road transport passenger LDVs at the reported year;T
 1608;Final Energy|Residential and Commercial|Commercial|Water|Desalination;EJ/yr;;;;;;;Energy consumption for desalination water;
 1609;Final Energy|Residential and Commercial|Commercial|Water|Groundwater Extraction;EJ/yr;;;;;;;Energy consumption for groundwater extraction;
 1610;Final Energy|Residential and Commercial|Commercial|Water|Surface Water Extraction;EJ/yr;;;;;;;Energy consumption for surface water extraction;

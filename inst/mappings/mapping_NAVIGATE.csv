@@ -9,11 +9,11 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 4;1;agriculture;Agricultural Demand|Energy|Crops;million t DM/yr;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;;demand for modern primary energy crops (1st and 2nd generation);M
 5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock);M
 5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops and livestock);M
-5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|Bioenergy|+|Crop residues ;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops and livestock);M
+5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|Bioenergy|+|Crop residues;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops and livestock);M
 5;1;agriculture;Agricultural Demand|Non-Energy;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;total demand for food, non-food and feed products (crops and livestock);M
 6;1;agriculture;Agricultural Demand|Non-Energy|Crops;million t DM/yr;Demand|++|Crops;Mt DM/yr;;;;total demand for food, non-food and feed products (crops);M
 6;1;agriculture;Agricultural Demand|Non-Energy|Crops;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops);M
-6;1;agriculture;Agricultural Demand|Non-Energy|Crops;million t DM/yr;Demand|Bioenergy|+|Crop residues ;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops);M
+6;1;agriculture;Agricultural Demand|Non-Energy|Crops;million t DM/yr;Demand|Bioenergy|+|Crop residues;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for food, non-food and feed products (crops);M
 7;1;agriculture;Agricultural Production;million t DM/yr;Production|+|Crops;Mt DM/yr;;;;total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 7;1;agriculture;Agricultural Production;million t DM/yr;Production|+|Livestock products;Mt DM/yr;;;;total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
 7;1;agriculture;Agricultural Production;million t DM/yr;Production|+|Bioenergy crops;Mt DM/yr;;;;total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
@@ -43,7 +43,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 25;2;agriculture;Agricultural Demand|Non-Energy|Crops|Other;million t DM/yr;Demand|Processing|+|Crops;Mt DM/yr;;;;total demand for non-food and non-feed (crops);M
 25;2;agriculture;Agricultural Demand|Non-Energy|Crops|Other;million t DM/yr;Demand|Seed|+|Crops;Mt DM/yr;;;;total demand for non-food and non-feed (crops);M
 25;2;agriculture;Agricultural Demand|Non-Energy|Crops|Other;million t DM/yr;Demand|Bioenergy|+|Secondary products;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for non-food and non-feed (crops);M
-25;2;agriculture;Agricultural Demand|Non-Energy|Crops|Other;million t DM/yr;Demand|Bioenergy|+|Crop residues ;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for non-food and non-feed (crops);M
+25;2;agriculture;Agricultural Demand|Non-Energy|Crops|Other;million t DM/yr;Demand|Bioenergy|+|Crop residues;Mt DM/yr;-1;remove from Demand|Crops to avoid double-counting;;total demand for non-food and non-feed (crops);M
 26;2;agriculture;Agricultural Demand|Non-Energy|Livestock;million t DM/yr;Demand|++|Livestock products;Mt DM/yr;;;;total demand for livestock products;M
 27;2;agriculture;Agricultural Demand|Non-Energy|Livestock|Food;million t DM/yr;Demand|Food|+|Livestock products;Mt DM/yr;;;;total demand for food livestock products;M
 28;2;agriculture;Agricultural Demand|Non-Energy|Livestock|Other;million t DM/yr;Demand|Agricultural Supply Chain Loss|+|Livestock products;Mt DM/yr;;;;total demand for non-food livestock products;M
@@ -877,8 +877,7 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 823;2;energy (final);Final Energy|Residential and Commercial|Liquids|Electricity;EJ/yr;FE|Buildings|Liquids|+|Hydrogen;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquid efuels (power-to-liquid);R
 824;2;energy (final);Final Energy|Residential and Commercial|Liquids|Fossil;EJ/yr;FE|Buildings|Liquids|+|Fossil;EJ/yr;;;;final energy consumption by the residential & commercial sector of liquids from fossil origin (conventional & unconventional petroleum, coal-to-liquids, gas-to-liquids);R
 825;1;energy (final);Final Energy|Transportation;EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;;;;final energy consumed in the transportation sector, excluding bunker fuels, excluding pipelines;R
-826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport with bunkers;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;T
-826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|Transport;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;T
+826;1;energy (final);Final Energy|Transportation (w/ bunkers);EJ/yr;FE|++|Transport;EJ/yr;;;;final energy consumed in the transportation sector, including bunker fuels, excluding pipelines;T
 827;1;energy (final);Final Energy|Transportation|Electricity;EJ/yr;FE|Transport|w/o Bunkers|+|Electricity;EJ/yr;;;;final energy consumption by the transportation sector of electricity (including on-site solar PV), excluding transmission/distribution losses;R
 828;1;energy (final);Final Energy|Transportation|Gases;EJ/yr;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;;;;final energy consumption by the transportation sector of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses;R
 829;1;energy (final);Final Energy|Transportation|Hydrogen;EJ/yr;FE|Transport|w/o Bunkers|+|Hydrogen;EJ/yr;;;;final energy consumption by the transportation sector of hydrogen;R
@@ -903,9 +902,9 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 848;2;energy (final);Final Energy|Transportation|Bus|Gases;EJ/yr;FE|Transport|Pass|Road|Bus|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by bus;T
 849;2;energy (final);Final Energy|Transportation|Bus|Hydrogen;EJ/yr;FE|Transport|Pass|Road|Bus|Hydrogen;EJ/yr;;;;final energy consumption of hydrogen in the transportation sector by bus;T
 850;2;energy (final);Final Energy|Transportation|Bus|Liquids;EJ/yr;FE|Transport|Pass|Road|Bus|Liquids;EJ/yr;;;;final energy consumption of refined liquids (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in the transportation sector by bus;T
-851;2;energy (final);Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|LDV|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by LDV;T
-852;2;energy (final);Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|LDV|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by LDV;T
-853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|LDV|Hydrogen;EJ/yr;;;;;T
+851;2;energy (final);Final Energy|Transportation|LDV|Electricity;EJ/yr;FE|Transport|Pass|Road|LDV|Electricity;EJ/yr;;;;final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses in the transportation sector by LDV;T
+852;2;energy (final);Final Energy|Transportation|LDV|Gases;EJ/yr;FE|Transport|Pass|Road|LDV|Gases;EJ/yr;;;;final energy consumption of gases (natural gas, biogas, coal-gas), excluding transmission/distribution losses in the transportation sector by LDV;T
+853;2;energy (final);Final Energy|Transportation|LDV|Hydrogen;EJ/yr;FE|Transport|Pass|Road|LDV|Hydrogen;EJ/yr;;;;;T
 854;2;energy (final);Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|Liquids;EJ/yr;;;;;T
 855;2;energy (final);Final Energy|Transportation|Rail|Electricity;EJ/yr;FE|Transport|Pass|Rail|Electricity;EJ/yr;;;;;T
 855;2;energy (final);Final Energy|Transportation|Rail|Electricity;EJ/yr;FE|Transport|Freight|Rail|Electricity;EJ/yr;;;;;T
@@ -1339,29 +1338,29 @@ idx;Tier;Category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 1250;1;energy (service);Energy Service|Commercial|Floor Space;bn m2;ES|Buildings|Commercial|Floor Space;bn m2;;;;energy service demand for conditioned floor space in commercial buildings;Rx
 1251;1;energy (service);Energy Service|Residential and Commercial|Floor Space;bn m2;ES|Buildings|Floor Space;bn m2;;;;energy service demand for conditioned floor space in buildings;R
 1252;1;energy (service);Energy Service|Residential|Floor Space;bn m2;ES|Buildings|Residential|Floor Space;bn m2;;;;energy service demand for conditioned floor space in residential buildings;Rx
-1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport;T
-1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport;T
-1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;bn tkm/yr;;;;energy service demand for freight transport;T
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport;T
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport;T
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport;T
-1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Domestic Aviation;bn pkm/yr;;;;energy service demand for passenger transport;T
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Road;billion tkm/yr;;;;energy service demand for freight transport;T
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Rail;billion tkm/yr;;;;energy service demand for freight transport;T
+1253;1;energy (service);Energy Service|Transportation|Freight;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;billion tkm/yr;;;;energy service demand for freight transport;T
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|Bus;billion pkm/yr;;;;energy service demand for passenger transport;T
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Road|LDV;billion pkm/yr;;;;energy service demand for passenger transport;T
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Rail;billion pkm/yr;;;;energy service demand for passenger transport;T
+1254;1;energy (service);Energy Service|Transportation|Passenger;bn pkm/yr;ES|Transport|Pass|Domestic Aviation;billion pkm/yr;;;;energy service demand for passenger transport;T
 1255;2;energy (service);Energy Service|Transportation|Freight|Aviation;bn tkm/yr;;;;;;energy service demand for freight transport on aircrafts;
-1256;2;energy (service);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;bn tkm/yr;;;;energy service demand for freight transport on domestic ships;T
+1256;2;energy (service);Energy Service|Transportation|Freight|Domestic Navigation;bn tkm/yr;ES|Transport|Freight|Domestic Shipping;billion tkm/yr;;;;energy service demand for freight transport on domestic ships;T
 1257;2;energy (service);Energy Service|Transportation|Freight|Other;bn tkm/yr;;;;;;energy service demand for freight transport using other modes (please provide a definition of the modes in this category in the 'comments' tab);
-1258;2;energy (service);Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;bn tkm/yr;;;;energy service demand for freight transport on railways;T
-1259;2;energy (service);Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;bn tkm/yr;;;;energy service demand for freight transport on roads;T
-1260;2;energy (service);Energy Service|Transportation|Passenger|Domestic Aviation;bn pkm/yr;ES|Transport|Pass|Domestic Aviation;bn pkm/yr;;;;energy service demand for passenger transport on aircrafts;T
+1258;2;energy (service);Energy Service|Transportation|Freight|Railways;bn tkm/yr;ES|Transport|Freight|Rail;billion tkm/yr;;;;energy service demand for freight transport on railways;T
+1259;2;energy (service);Energy Service|Transportation|Freight|Road;bn tkm/yr;ES|Transport|Freight|Road;billion tkm/yr;;;;energy service demand for freight transport on roads;T
+1260;2;energy (service);Energy Service|Transportation|Passenger|Domestic Aviation;bn pkm/yr;ES|Transport|Pass|Domestic Aviation;billion pkm/yr;;;;energy service demand for passenger transport on aircrafts;T
 1262;2;energy (service);Energy Service|Transportation|Passenger|Domestic Navigation;bn pkm/yr;;;;;;energy service demand for passenger transport on domestic ships;
 1263;2;energy (service);Energy Service|Transportation|Passenger|Other;bn pkm/yr;;;;;;energy service demand for passenger transport using other modes (please provide a definition of the modes in this category in the 'comments' tab);
-1264;2;energy (service);Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;bn pkm/yr;;;;energy service demand for passenger transport on railways;T
-1265;2;energy (service);Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;bn pkm/yr;;;;energy service demand for passenger transport on roads;T
+1264;2;energy (service);Energy Service|Transportation|Passenger|Railways;bn pkm/yr;ES|Transport|Pass|Rail;billion pkm/yr;;;;energy service demand for passenger transport on railways;T
+1265;2;energy (service);Energy Service|Transportation|Passenger|Road;bn pkm/yr;ES|Transport|Pass|Road;billion pkm/yr;;;;energy service demand for passenger transport on roads;T
 1266;2;energy (service);Energy Service|Bunkers|Freight|International Shipping;bn tkm/yr;;;;;;energy service demand for freight transport operating on international shipping routes;
-1267;2;energy (service);Energy Service|Transportation|Passenger|Cycling;bn pkm/yr;ES|Transport|Pass|Non-motorized|Cycle;bn pkm/yr;;;;energy service demand for passenger transport on bicycles and by foot;T
-1267;2;energy (service);Energy Service|Transportation|Passenger|Walking;bn pkm/yr;ES|Transport|Pass|Non-motorized|Walk;bn pkm/yr;;;;energy service demand for passenger transport on bicycles and by foot;T
-1268;2;energy (service);Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;ES|Transport|Pass|Road|LDV|Two Wheelers;bn pkm/yr;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles);T
-1269;2;energy (service);Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;bn pkm/yr;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);T
-1270;2;energy (service);Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;bn pkm/yr;;;;energy service demand for passenger transport on roads (buses);T
+1267;2;energy (service);Energy Service|Transportation|Passenger|Cycling;bn pkm/yr;ES|Transport|Pass|Non-motorized|Cycle;billion pkm/yr;;;;energy service demand for passenger transport on bicycles and by foot;T
+1267;2;energy (service);Energy Service|Transportation|Passenger|Walking;bn pkm/yr;ES|Transport|Pass|Non-motorized|Walk;billion pkm/yr;;;;energy service demand for passenger transport on bicycles and by foot;T
+1268;2;energy (service);Energy Service|Transportation|Passenger|Road|2W and 3W;bn pkm/yr;ES|Transport|Pass|Road|LDV|Two Wheelers;billion pkm/yr;;;;energy service demand for passenger transport on roads (two- and three-wheel vehicles);T
+1269;2;energy (service);Energy Service|Transportation|Passenger|Road|LDV;bn pkm/yr;ES|Transport|Pass|Road|LDV;billion pkm/yr;;;;energy service demand for passenger transport on roads (light-duty vehicles: passenger cars and light trucks/SUVs/vans);T
+1270;2;energy (service);Energy Service|Transportation|Passenger|Road|Bus;bn pkm/yr;ES|Transport|Pass|Road|Bus;billion pkm/yr;;;;energy service demand for passenger transport on roads (buses);T
 1270;1;energy (trade);Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;;;;net exports of solid, unprocessed biomass, at the global level these should add up to the trade losses only;R
 1271;1;energy (trade);Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;;;;net exports of coal, at the global level these should add up to the trade losses only;R
 1272;1;energy (trade);Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;;;;net exports of natural gas, at the global level these should add up to the trade losses only;R

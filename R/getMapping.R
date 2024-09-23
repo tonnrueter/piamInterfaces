@@ -30,7 +30,7 @@ getMapping <- function(project = NULL) {
   filename <- if (project %in% names(mappings)) mappings[project] else project
   if (file.exists(filename)) {
     data <- read.csv2(filename, header = TRUE, sep = ";", na.strings = list(""),
-                      strip.white = TRUE, quote = "", comment.char = "#")
+                      strip.white = TRUE, quote = "", comment.char = "#", dec = ".")
 
     # check if more than one column is found
     if (length(data) == 1) {
