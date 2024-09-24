@@ -584,8 +584,8 @@ AEMP_abs.LSP;million;Labor|Employment|Agricultural employment|Livestock products
 AEMP_prcn.AGR;%;Labor|Employment|Share of working age population employed in agriculture;%;1;NULL;;M
 AEMP_prcn.CRP;%;Labor|Employment|Share of working age population employed in agriculture|Crop products;%;1;NULL;;M
 AEMP_prcn.LSP;%;Labor|Employment|Share of working age population employed in agriculture|Livestock products;%;1;NULL;;M
-AWAG.AGR;USDMER05/h;Labor|Wages|Hourly labor costs;USDMER05/h;1;NULL;;M
-AWAG.TOT;USDMER05/h;Labor|Wages|Hourly labor costs;USDMER05/h;1;NULL;;M
+AWAG.AGR;USDMER05/h;Labor|Wages|Hourly labor costs;US$2017/h;0.8121;NULL;;M
+AWAG.TOT;USDMER05/h;Labor|Wages|Hourly labor costs;US$2017/h;0.8121;NULL;;M
 CALI.TOT;kcal/cap/d;Nutrition|Calorie Intake;kcal/capita/day;1;NULL;;M
 CALI.AGR;kcal/cap/d;Nutrition|Calorie Intake|Crops;kcal/capita/day;1;NULL;;M
 CALI.CRP;kcal/cap/d;Nutrition|Calorie Intake|Crops;kcal/capita/day;1;NULL;;M

@@ -74,6 +74,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1", "MtCO2e", "Mt CO2e/yr"),
                           c("1000", "1000 t", "Mt Nr/yr"),
                           c("1", "TgN/year", "Mt Nr/yr"),
+                          c("0.8121", "USDMER05", "US$2017"),
                           c("0.0008121", "bn USD 2005 MER", "million US$2017 MER/yr"),
                           c("1000", "1000 t dm", "Mt DM/yr")
                          )
