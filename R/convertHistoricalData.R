@@ -13,6 +13,7 @@
 #' @importFrom dplyr %>% mutate select right_join left_join
 #' @importFrom quitte read.quitte as.quitte
 #' @importFrom stats aggregate
+#' @importFrom tidyselect all_of
 #' @examples
 #' \dontrun{
 #' data <- convertHistoricalData(
