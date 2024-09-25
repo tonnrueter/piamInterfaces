@@ -70,7 +70,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
     from <- intersect(names(regmap), c("REMIND", "CountryCode"))[[1]]
     to <- intersect(names(regmap), c("project_region", "RegionCode"))[[1]]
     if (length(from) == 0 || length(to) == 0) {
-      stop("regionMapping must contain columns 'REMIND'/'project_region' or 'CountryCode'/'RegionCodet_region'")
+      stop("regionMapping must contain columns 'REMIND'/'project_region' or 'CountryCode'/'RegionCode'")
     }
 
     out <- left_join(out, regmap, by = c("region" = from)) %>%
