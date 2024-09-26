@@ -82,6 +82,9 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   template$piam_factor[is.na(template$piam_factor)] <- 1
   success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
   success <- success | is.na(template$piam_variable)
+  ignore <-  c(paste0("Emi|CO2|Energy|Waste", c("", "|Feedstocks unknown fate", "|Plastics Incineration")),
+               "Emi|CO2|Gross|Energy|Waste")
+  success <- success | removePlus(as.character(template$piam_variable)) %in% ignore
 
   firsterror <- TRUE
   for (sc in scaleConversion) {
