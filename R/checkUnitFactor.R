@@ -60,6 +60,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("0.9096", "USD_2010", "US$2017"),
                           c("0.0009096", "billion US$2010/yr", "million US$2017 PPP/yr"),
                           c("0.001099", "EJ/billion US$2010", "MJ/US$2017"), # 0.001 divided by 0.9096
+                          c("0.001099", "EJ/billion USD_2010", "MJ/US$2017"), # 0.001 divided by 0.9096
                           c("0.9502", "EUR_2020", "US$2017"), # ESABCC
                           c("0.9534", "EUR2020", "US$2017"),  # ARIADNE
                           # c("0.9311", "EUR2020", "US$2017"),  # GDPuc 0.931132
