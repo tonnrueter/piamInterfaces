@@ -83,14 +83,16 @@ Carbon Removal|Soil Carbon Sequestration;Mt CO2/yr;;Gross removals of carbon dio
 Consumption;billion USD_2010/yr;1;total consumption of all goods, by all consumers in a region;;;Consumption;billion US$2017/yr;0.9096;mapping taken from NAVIGATE, NAVIGATE category: economy;R
 Emissions|BC;Mt BC/yr;;Emissions of black carbon (soot, BC);;;Emi|BC;Mt BC/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R
 Emissions|BC|AFOLU;Mt BC/yr;;Emissions of black carbon (soot, BC) from agriculture, forestry and other land use (IPCC category 3);;;Emi|BC|Land Use;Mt BC/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R
-Emissions|BC|AFOLU|Agriculture;Mt BC/yr;;Emissions of black carbon (soot, BC) from the agriculture sector;;;;;;;
+Emissions|BC|AFOLU|Agriculture;Mt BC/yr;;Emissions of black carbon (soot, BC) from the agriculture sector;;;Emi|BC|Land Use|Agriculture;Mt BC/yr;;mapping taken from AR6;R
+Emissions|BC|AFOLU|Agriculture;Mt BC/yr;;Emissions of black carbon (soot, BC) from the agriculture sector;;;Emi|BC|Land Use|Agricultural Waste Burning;Mt BC/yr;;mapping taken from AR6;R
 Emissions|BC|AFOLU|Agriculture|Livestock;Mt BC/yr;;Emissions of black carbon (soot, BC) from livestock in the agriculture sector;;;;;;;
 Emissions|BC|AFOLU|Agriculture|Livestock|Enteric Fermentation;Mt BC/yr;;Emissions of black carbon (soot, BC) from enteric fermentation of livestock in the agriculture sector;;;;;;;
 Emissions|BC|AFOLU|Agriculture|Livestock|Manure Management;Mt BC/yr;;Emissions of black carbon (soot, BC) from processes involving manure (waste) management in Livestock in the agriculture sector;;;;;;;
 Emissions|BC|AFOLU|Agriculture|Managed Soils;Mt BC/yr;;Emissions of black carbon (soot, BC) from soil management practices in the agriculture sector;;;;;;;
 Emissions|BC|AFOLU|Agriculture|Rice;Mt BC/yr;;Emissions of black carbon (soot, BC) from rice cultivation;;;;;;;
 Emissions|BC|AFOLU|Biomass Burning;Mt BC/yr;;black carbon (soot, BC) emissions from on-field biomass burning (e.g., agricultural waste including stubble, straw, IPCC category 3C1);;;;;;;
-Emissions|BC|AFOLU|Land;Mt BC/yr;;Emissions of black carbon (soot, BC) from forestry and other land use;;;;;;;
+Emissions|BC|AFOLU|Land;Mt BC/yr;;Emissions of black carbon (soot, BC) from forestry and other land use;;;Emi|BC|Land Use|Forest Burning;Mt BC/yr;;mapping taken from AR6;R
+Emissions|BC|AFOLU|Land;Mt BC/yr;;Emissions of black carbon (soot, BC) from forestry and other land use;;;Emi|BC|Land Use|Savannah Burning;Mt BC/yr;;mapping taken from AR6;R
 Emissions|BC|AFOLU|Land|Forest Burning;Mt BC/yr;;Emissions and removals of black carbon (soot, BC) from land with woody vegetation (forests, IPCC category 3B1);;;;;;;
 Emissions|BC|AFOLU|Land|Grassland Burning;Mt BC/yr;;Emissions and removals of black carbon (soot, BC) from rangelands and pasture land (IPCC category 3B3);;;;;;;
 Emissions|BC|AFOLU|Land|Other Land Burning;Mt BC/yr;;Emissions and removals of black carbon (soot, BC) from any other categories of land burning (e.g. peatlands);;;;;;;
@@ -421,7 +423,8 @@ Emissions|CO2|Energy|Supply;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) 
 Emissions|CO2|Energy|Supply|Autoproduction;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) for own-use energy supply;;;;;;;
 Emissions|CO2|Energy|Supply|Combustion;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from fuel combustion in energy supply, including electricity and heat production and distribution (IPCC category 1A1a), other energy conversion (e.g. refineries, synfuel production, solid fuel processing, IPCC category 1Ab, 1Ac), incl. pipeline transportation (IPCC category 1A3ei) and emissions from carbon dioxide transport and storage (IPCC category 1C);;;;;;;
 Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) for electricity generation;;;Emi|CO2|Energy|Supply|+|Electricity w/ couple prod;Mt CO2/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (CO2);R
-Emissions|CO2|Energy|Supply|Electricity and Heat;Mt CO2/yr;;fossil carbon dioxide (CO2) emissions from electricity and heat production and distribution (IPCC category 1A1a);;;;;;;
+Emissions|CO2|Energy|Supply|Electricity and Heat;Mt CO2/yr;;fossil carbon dioxide (CO2) emissions from electricity and heat production and distribution (IPCC category 1A1a);;;Emi|CO2|Energy|Supply|++|Electricity and Heat;Mt CO2/yr;1;mapping taken from ARIADNE;R
+Emissions|CO2|Energy|Supply|Electricity and Heat;Mt CO2/yr;;fossil carbon dioxide (CO2) emissions from electricity and heat production and distribution (IPCC category 1A1a);;;Emi|CO2|Energy|Supply|Electricity|Autoproducer;Mt CO2/yr;-1;mapping taken from ARIADNE;Rx
 Emissions|CO2|Energy|Supply|Fugitive;Mt CO2/yr;;Fugitive emissions of fossil carbon dioxide (CO2) from fuels in energy extraction, processing, storage and transport (IPCC category 1B);;;;;;;
 Emissions|CO2|Energy|Supply|Gases;Mt CO2/yr;1;Emissions of fossil carbon dioxide (CO2) for production of gaseous fuels not including hydrogen;;;Emi|CO2|Energy|Supply|+|Gases w/ couple prod;Mt CO2/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (CO2);R
 Emissions|CO2|Energy|Supply|Gases|Biomass;Mt CO2/yr;2;Emissions of fossil carbon dioxide (CO2) for production of gas from biogenic sources, mainly biogas;;;;;;;
@@ -456,7 +459,7 @@ Emissions|CO2|Energy|Supply|Solids|Combustion;Mt CO2/yr;;fossil carbon dioxide (
 Emissions|CO2|Energy|Supply|Solids|Fugitive;Mt CO2/yr;;fossil carbon dioxide (CO2) fugitive emissions from fuels: solid fuel extraction and processing (IPCC category 1B1);;;;;;;
 Emissions|CO2|Fossil Fuel Fires;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from fossil fuel fires (IPCC category 7);;;;;;;
 Emissions|CO2|Industrial Processes;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E), net of negative emissions using CCS;;;Emi|CO2|+|Industrial Processes;Mt CO2/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (CO2);R
-Emissions|CO2|Industrial Processes|Cement;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the cement sector;;;;;;;
+Emissions|CO2|Industrial Processes|Cement;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the cement sector;;;Emi|CO2|Industrial Processes|+|Cement;Mt CO2/yr;;mapping taken from AR6;R
 Emissions|CO2|Industrial Processes|Chemicals;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the chemical sector;;;Emi|CO2|Industrial Processes|+|Chemicals;Mt CO2/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (CO2);R
 Emissions|CO2|Industrial Processes|Chemicals|Ammonia;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the ammonia sector;;;;;;;
 Emissions|CO2|Industrial Processes|Chemicals|High Value Chemicals;Mt CO2/yr;;Emissions of fossil carbon dioxide (CO2) from industrial processes (IPCC categories 2A, B, C, E) in the high-value-chemicals sector;;;;;;;
@@ -615,7 +618,7 @@ Emissions|N2O|Energy|Supply|Solids;kt N2O/yr;;nitrous oxide (N2O) emissions from
 Emissions|N2O|Energy|Supply|Solids|Combustion;kt N2O/yr;;nitrous oxide (N2O) emissions from fuel combustion: solid fuel extraction and processing (IPCC category 1A1ci, parts of 1A1cii);;;;;;;
 Emissions|N2O|Energy|Supply|Solids|Fugitive;kt N2O/yr;;nitrous oxide (N2O) fugitive emissions from fuels: solid fuel extraction and processing (IPCC category 1B1);;;;;;;
 Emissions|N2O|Fossil Fuel Fires;kt N2O/yr;;Emissions of nitrous oxide (N2O) from fossil fuel fires (IPCC category 7);;;;;;;
-Emissions|N2O|Industrial Processes;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E), net of negative emissions using CCS;;;;;;;
+Emissions|N2O|Industrial Processes;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E), net of negative emissions using CCS;;;Emi|N2O|+|Industry;kt N2O/yr;;mapping taken from AR6;R
 Emissions|N2O|Industrial Processes|Cement;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the cement sector;;;;;;;
 Emissions|N2O|Industrial Processes|Chemicals;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the chemical sector;;;;;;;
 Emissions|N2O|Industrial Processes|Chemicals|Ammonia;kt N2O/yr;;Emissions of nitrous oxide (N2O) from industrial processes (IPCC categories 2A, B, C, E) in the ammonia sector;;;;;;;
@@ -1033,14 +1036,14 @@ Final Energy|Agriculture|Solids|Biomass;EJ/yr;2;Final energy consumption by the 
 Final Energy|Agriculture|Solids|Coal;EJ/yr;2;Final energy consumption by the agriculture sector including fishing of coal and coal products;;;;;;;
 Final Energy|Bunkers;EJ/yr;;Final energy consumption by the international aviation and shipping;;;FE|Transport|Bunkers|Pass|International Aviation;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Bunkers;EJ/yr;;Final energy consumption by the international aviation and shipping;;;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
-Final Energy|Bunkers|Electricity;EJ/yr;;Final energy consumption by the international aviation and shipping of electricity;;;;;;;
+Final Energy|Bunkers|Electricity;EJ/yr;;Final energy consumption by the international aviation and shipping of electricity;;;FE|Transport|Bunkers|+|Electricity;EJ/yr;1;mapping taken from ESABCC;R
 Final Energy|Bunkers|Freight;EJ/yr;;Final energy consumption for freight transport in international aviation and shipping;;;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
-Final Energy|Bunkers|Gases;EJ/yr;1;Final energy consumption by the international aviation and shipping of gaseous fuels not including hydrogen;;;;;;;
+Final Energy|Bunkers|Gases;EJ/yr;1;Final energy consumption by the international aviation and shipping of gaseous fuels not including hydrogen;;;FE|Transport|Bunkers|+|Gases;EJ/yr;1;mapping taken from ESABCC;R
 Final Energy|Bunkers|Gases|Biomass;EJ/yr;2;Final energy consumption by the international aviation and shipping of gas from biogenic sources, mainly biogas;;;FE|Transport|Bunkers|Gases|+|Biomass;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Bunkers|Gases|Coal;EJ/yr;2;Final energy consumption by the international aviation and shipping of gaseous fuels from coal;;;;;;;
 Final Energy|Bunkers|Gases|Gas;EJ/yr;2;Final energy consumption by the international aviation and shipping of fossil methane (natural gas);;;;;;;
 Final Energy|Bunkers|Heat;EJ/yr;1;Final energy consumption by the international aviation and shipping of heat;;;;;;;
-Final Energy|Bunkers|Hydrogen;EJ/yr;1;Final energy consumption by the international aviation and shipping of hydrogen;;;;;;;
+Final Energy|Bunkers|Hydrogen;EJ/yr;1;Final energy consumption by the international aviation and shipping of hydrogen;;;FE|Transport|Bunkers|+|Hydrogen;EJ/yr;1;mapping taken from ESABCC;R
 Final Energy|Bunkers|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the international aviation and shipping of hydrogen generated from biomass;;;;;;;
 Final Energy|Bunkers|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the international aviation and shipping of hydrogen from electrolysis;;;;;;;
 Final Energy|Bunkers|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the international aviation and shipping of hydrogen from fossils;;;;;;;
@@ -1051,8 +1054,8 @@ Final Energy|Bunkers|International Aviation|Passenger;EJ/yr;;Final energy consum
 Final Energy|Bunkers|International Shipping;EJ/yr;;Final energy consumption for international shipping;;;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Bunkers|International Shipping|Freight;EJ/yr;;Final energy consumption for freight transport in international shipping;;;FE|Transport|Bunkers|Freight|International Shipping;EJ/yr;;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: energy (final);T
 Final Energy|Bunkers|International Shipping|Passenger;EJ/yr;;Final energy consumption for passenger transport in international shipping;;;;;;;
-Final Energy|Bunkers|Liquids;EJ/yr;1;Final energy consumption by the international aviation and shipping of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;;;;;
-Final Energy|Bunkers|Liquids|Biomass;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from biomass;;;;;;;
+Final Energy|Bunkers|Liquids;EJ/yr;1;Final energy consumption by the international aviation and shipping of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Transport|Bunkers|+|Liquids;EJ/yr;1;mapping taken from ESABCC;R
+Final Energy|Bunkers|Liquids|Biomass;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from biomass;;;FE|Transport|Bunkers|Liquids|+|Biomass;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Bunkers|Liquids|Coal;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from coal;;;;;;;
 Final Energy|Bunkers|Liquids|Electricity;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;FE|Transport|Bunkers|Liquids|+|Hydrogen;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Bunkers|Liquids|Gas;EJ/yr;2;Final energy consumption by the international aviation and shipping of liquid fuels from fossil methane (natural gas);;;;;;;
@@ -1625,7 +1628,7 @@ Final Energy|Industry|Pulp and Paper|Solids|Coal;EJ/yr;2;Final energy consumptio
 Final Energy|Industry|Solar;EJ/yr;;Final energy consumption by the industrial sector of solar thermal heat;;;;;;;
 Final Energy|Industry|Solids;EJ/yr;1;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of solid fuels;;;FE|w/o Non-energy Use|Industry|Solids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);Rx
 Final Energy|Industry|Solids|Biomass;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of solid biomass;;;FE|w/o Non-energy Use|Industry|Solids|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Industry|Solids|Coal;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of coal and coal products;;;;;;;
+Final Energy|Industry|Solids|Coal;EJ/yr;2;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of coal and coal products;;;FE|Industry|Solids|Coal;EJ/yr;;mapping taken from AR6;R
 Final Energy|Industry|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the industrial sector;;;;;;;
 Final Energy|Liquids;EJ/yr;1;Final energy fuel consumption of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|+|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Liquids|Biomass;EJ/yr;2;Final energy fuel consumption of liquid fuels from biomass;;;FE|Liquids|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
@@ -1639,7 +1642,7 @@ Final Energy|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy fuel consumption of li
 Final Energy|Liquids|Hydrogen|Other;EJ/yr;3;Final energy fuel consumption of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Liquids|Oil;EJ/yr;2;Final energy fuel consumption of liquid fuels from refined crude oil;;;;;;;
 Final Energy|Non-Energy Use;EJ/yr;;Final energy consumption in non-combustion processes;;;FE|Non-energy Use|Industry;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);Rx
-Final Energy|Non-Energy Use|Chemicals;EJ/yr;;Final energy consumption by the chemical sector for non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Chemicals;EJ/yr;;Final energy consumption by the chemical sector for non-combustion processes;;;FE|Non-energy Use|+|Industry;EJ/yr;1000;mapping taken from ARIADNE;R
 Final Energy|Non-Energy Use|Chemicals|Ammonia;EJ/yr;;Final energy consumption by the ammonia sector for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Ammonia|Gases;EJ/yr;1;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Ammonia|Gases|Biomass;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
@@ -1667,7 +1670,7 @@ Final Energy|Non-Energy Use|Chemicals|Ammonia|Solids;EJ/yr;1;Final energy consum
 Final Energy|Non-Energy Use|Chemicals|Ammonia|Solids|Biomass;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Ammonia|Solids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Ammonia|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the ammonia sector for non-combustion processes;;;;;;;
-Final Energy|Non-Energy Use|Chemicals|Gases;EJ/yr;1;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Chemicals|Gases;EJ/yr;1;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;FE|Non-energy Use|Industry|+|Gases;EJ/yr;1000;mapping taken from ARIADNE;R
 Final Energy|Non-Energy Use|Chemicals|Gases|Biomass;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Gases|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Gases|Gas;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
@@ -1704,7 +1707,7 @@ Final Energy|Non-Energy Use|Chemicals|Hydrogen|Biomass;EJ/yr;2;Final energy cons
 Final Energy|Non-Energy Use|Chemicals|Hydrogen|Electricity;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Hydrogen|Fossil;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Hydrogen|Other;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
-Final Energy|Non-Energy Use|Chemicals|Liquids;EJ/yr;1;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Chemicals|Liquids;EJ/yr;1;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;FE|Non-energy Use|Industry|+|Liquids;EJ/yr;1000;mapping taken from ARIADNE;R
 Final Energy|Non-Energy Use|Chemicals|Liquids|Biomass;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Liquids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Liquids|Electricity;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
@@ -1770,12 +1773,12 @@ Final Energy|Non-Energy Use|Chemicals|Other Sector|Solids;EJ/yr;1;Final energy c
 Final Energy|Non-Energy Use|Chemicals|Other Sector|Solids|Biomass;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Other Sector|Solids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Other Sector|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the other use in the chemical sector for non-combustion processes;;;;;;;
-Final Energy|Non-Energy Use|Chemicals|Solids;EJ/yr;1;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Chemicals|Solids;EJ/yr;1;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;FE|Non-energy Use|Industry|+|Solids;EJ/yr;1000;mapping taken from ARIADNE;R
 Final Energy|Non-Energy Use|Chemicals|Solids|Biomass;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Solids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Chemicals|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the chemical sector for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Gases;EJ/yr;1;Final energy consumption of gaseous fuels not including hydrogen in non-combustion processes;;;FE|Non-energy Use|Industry|+|Gases;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);Rx
-Final Energy|Non-Energy Use|Gases|Biomass;EJ/yr;2;Final energy consumption of gas from biogenic sources, mainly biogas in non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Gases|Biomass;EJ/yr;2;Final energy consumption of gas from biogenic sources, mainly biogas in non-combustion processes;;;FE|Non-energy Use|Industry|Gases|+|Biomass;EJ/yr;1000;mapping taken from ARIADNE;R
 Final Energy|Non-Energy Use|Gases|Coal;EJ/yr;2;Final energy consumption of gaseous fuels from coal in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Gases|Gas;EJ/yr;2;Final energy consumption of fossil methane (natural gas) in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Heat;EJ/yr;1;Final energy consumption of heat in non-combustion processes;;;;;;;
@@ -1812,9 +1815,9 @@ Final Energy|Non-Energy Use|Iron and Steel|Solids|Biomass;EJ/yr;2;Final energy c
 Final Energy|Non-Energy Use|Iron and Steel|Solids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Iron and Steel|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the iron and steel sector for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Liquids;EJ/yr;1;Final energy consumption of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in non-combustion processes;;;FE|Non-energy Use|Industry|+|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);Rx
-Final Energy|Non-Energy Use|Liquids|Biomass;EJ/yr;2;Final energy consumption of liquid fuels from biomass in non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Liquids|Biomass;EJ/yr;2;Final energy consumption of liquid fuels from biomass in non-combustion processes;;;FE|Non-energy Use|Industry|Liquids|+|Biomass;EJ/yr;1000;mapping taken from ARIADNE;R
 Final Energy|Non-Energy Use|Liquids|Coal;EJ/yr;2;Final energy consumption of liquid fuels from coal in non-combustion processes;;;;;;;
-Final Energy|Non-Energy Use|Liquids|Electricity;EJ/yr;2;Final energy consumption of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product) in non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Liquids|Electricity;EJ/yr;2;Final energy consumption of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product) in non-combustion processes;;;FE|Non-energy Use|Industry|Liquids|+|Hydrogen;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Non-Energy Use|Liquids|Gas;EJ/yr;2;Final energy consumption of liquid fuels from fossil methane (natural gas) in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Liquids|Hydrogen;EJ/yr;2;Final energy consumption of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies) in non-combustion processes;;;;;;;
@@ -1932,26 +1935,26 @@ Final Energy|Non-Energy Use|Plastics|Solids|Biomass;EJ/yr;2;Final energy consump
 Final Energy|Non-Energy Use|Plastics|Solids|Coal;EJ/yr;2;Final energy consumption of {Secondary Fuel} by the {Non-Energy Sector with Source} for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Plastics|Waste;EJ/yr;;Final energy consumption of non-renewable waste by the plastics sector for non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Solids;EJ/yr;1;Final energy consumption of solid fuels in non-combustion processes;;;FE|Non-energy Use|Industry|+|Solids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);Rx
-Final Energy|Non-Energy Use|Solids|Biomass;EJ/yr;2;Final energy consumption of solid biomass in non-combustion processes;;;;;;;
+Final Energy|Non-Energy Use|Solids|Biomass;EJ/yr;2;Final energy consumption of solid biomass in non-combustion processes;;;FE|Non-energy Use|Industry|Solids|+|Biomass;EJ/yr;1;mapping taken from ESABCC;R
 Final Energy|Non-Energy Use|Solids|Coal;EJ/yr;2;Final energy consumption of coal and coal products in non-combustion processes;;;;;;;
 Final Energy|Non-Energy Use|Waste;EJ/yr;;Final energy consumption of non-renewable waste in non-combustion processes;;;;;;;
 Final Energy|Other;EJ/yr;;Final energy consumption of other energy sources;;;;;;;
-Final Energy|Other Sector;EJ/yr;;Final energy consumption by the other sectors;;;;;;;
-Final Energy|Other Sector|Electricity;EJ/yr;;Final energy consumption by the other sectors of electricity;;;;;;;
-Final Energy|Other Sector|Gases;EJ/yr;1;Final energy consumption by the other sectors of gaseous fuels not including hydrogen;;;;;;;
-Final Energy|Other Sector|Gases|Biomass;EJ/yr;2;Final energy consumption by the other sectors of gas from biogenic sources, mainly biogas;;;;;;;
+Final Energy|Other Sector;EJ/yr;;Final energy consumption by the other sectors;;;FE|++|CDR;EJ/yr;1;mapping taken from ESABCC;R
+Final Energy|Other Sector|Electricity;EJ/yr;;Final energy consumption by the other sectors of electricity;;;FE|CDR|+|Electricity;EJ/yr;1;mapping taken from ESABCC;R
+Final Energy|Other Sector|Gases;EJ/yr;1;Final energy consumption by the other sectors of gaseous fuels not including hydrogen;;;FE|CDR|+|Gases;EJ/yr;1;mapping taken from ESABCC;R
+Final Energy|Other Sector|Gases|Biomass;EJ/yr;2;Final energy consumption by the other sectors of gas from biogenic sources, mainly biogas;;;FE|CDR|Gases|+|Biomass;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Other Sector|Gases|Coal;EJ/yr;2;Final energy consumption by the other sectors of gaseous fuels from coal;;;;;;;
 Final Energy|Other Sector|Gases|Gas;EJ/yr;2;Final energy consumption by the other sectors of fossil methane (natural gas);;;;;;;
-Final Energy|Other Sector|Heat;EJ/yr;1;Final energy consumption by the other sectors of heat;;;;;;;
-Final Energy|Other Sector|Hydrogen;EJ/yr;1;Final energy consumption by the other sectors of hydrogen;;;;;;;
+Final Energy|Other Sector|Heat;EJ/yr;1;Final energy consumption by the other sectors of heat;;;FE|CDR|+|Heat;EJ/yr;1;mapping taken from ESABCC;R
+Final Energy|Other Sector|Hydrogen;EJ/yr;1;Final energy consumption by the other sectors of hydrogen;;;FE|CDR|+|Hydrogen;EJ/yr;1;mapping taken from ESABCC;R
 Final Energy|Other Sector|Hydrogen|Biomass;EJ/yr;2;Final energy consumption by the other sectors of hydrogen generated from biomass;;;;;;;
 Final Energy|Other Sector|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the other sectors of hydrogen from electrolysis;;;;;;;
 Final Energy|Other Sector|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the other sectors of hydrogen from fossils;;;;;;;
 Final Energy|Other Sector|Hydrogen|Other;EJ/yr;2;Final energy consumption by the other sectors of hydrogen from other sources;;;;;;;
-Final Energy|Other Sector|Liquids;EJ/yr;1;Final energy consumption by the other sectors of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;;;;;
-Final Energy|Other Sector|Liquids|Biomass;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from biomass;;;;;;;
+Final Energy|Other Sector|Liquids;EJ/yr;1;Final energy consumption by the other sectors of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|CDR|+|Liquids;EJ/yr;1;mapping taken from ESABCC;R
+Final Energy|Other Sector|Liquids|Biomass;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from biomass;;;FE|CDR|Liquids|+|Biomass;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Other Sector|Liquids|Coal;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from coal;;;;;;;
-Final Energy|Other Sector|Liquids|Electricity;EJ/yr;2;Final energy consumption by the other sectors of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
+Final Energy|Other Sector|Liquids|Electricity;EJ/yr;2;Final energy consumption by the other sectors of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;FE|CDR|Liquids|+|Hydrogen;EJ/yr;1;mapping taken from ECEMF;R
 Final Energy|Other Sector|Liquids|Gas;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Other Sector|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the other sectors of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Other Sector|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consumption by the other sectors of liquid fuels using hydrogen generated from biomass (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
@@ -1990,7 +1993,7 @@ Final Energy|Residential and Commercial|Liquids|Oil;EJ/yr;2;Final energy consump
 Final Energy|Residential and Commercial|Other;EJ/yr;;Final energy consumption by the residential and commercial sector of other energy sources;;;;;;;
 Final Energy|Residential and Commercial|Solids;EJ/yr;1;Final energy consumption by the residential and commercial sector of solid fuels;;;FE|Buildings|+|Solids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Residential and Commercial|Solids|Biomass;EJ/yr;2;Final energy consumption by the residential and commercial sector of solid biomass;;;FE|Buildings|Solids|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Residential and Commercial|Solids|Coal;EJ/yr;2;Final energy consumption by the residential and commercial sector of coal and coal products;;;;;;;
+Final Energy|Residential and Commercial|Solids|Coal;EJ/yr;2;Final energy consumption by the residential and commercial sector of coal and coal products;;;FE|Buildings|Solids|Coal;EJ/yr;;mapping taken from AR6;R
 Final Energy|Residential|Electricity;EJ/yr;;Final energy consumption by the residential sector of electricity;;;;;;;
 Final Energy|Residential|Gases;EJ/yr;1;Final energy consumption by the residential sector of gaseous fuels not including hydrogen;;;;;;;
 Final Energy|Residential|Gases|Biomass;EJ/yr;2;Final energy consumption by the residential sector of gas from biogenic sources, mainly biogas;;;;;;;
@@ -2020,7 +2023,7 @@ Final Energy|Residential|Solids|Coal;EJ/yr;2;Final energy consumption by the res
 Final Energy|Solar;EJ/yr;;Final energy consumption of solar-thermal heat (e.g., from roof-top solar hot water collector systems);;;;;;;
 Final Energy|Solids;EJ/yr;1;Final energy fuel consumption of solid fuels;;;FE|+|Solids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Solids|Biomass;EJ/yr;2;Final energy fuel consumption of solid biomass;;;FE|Solids|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Solids|Coal;EJ/yr;2;Final energy fuel consumption of coal and coal products;;;;;;;
+Final Energy|Solids|Coal;EJ/yr;2;Final energy fuel consumption of coal and coal products;;;FE|Solids|Fossil|+|Coal;EJ/yr;;mapping taken from AR6;R
 Final Energy|Transportation;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers);;;FE|Transport|w/o Bunkers;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Transportation (w/ bunkers);EJ/yr;;Final energy consumption by the transportation sector including international aviation and shipping;;;FE|++|Transport;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation (w/ bunkers)|Electricity;EJ/yr;;Final energy consumption by the transportation sector including international aviation and shipping of electricity;;;;;;;
@@ -2089,7 +2092,7 @@ Final Energy|Transportation|Domestic Aviation|Hydrogen|Electricity;EJ/yr;2;Final
 Final Energy|Transportation|Domestic Aviation|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the domestic aviation sector of hydrogen from fossils;;;;;;;
 Final Energy|Transportation|Domestic Aviation|Hydrogen|Other;EJ/yr;2;Final energy consumption by the domestic aviation sector of hydrogen from other sources;;;;;;;
 Final Energy|Transportation|Domestic Aviation|Liquids;EJ/yr;1;Final energy consumption by the domestic aviation sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Transport|Pass|Domestic Aviation|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
-Final Energy|Transportation|Domestic Aviation|Liquids|Biomass;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from biomass;;;;;;;
+Final Energy|Transportation|Domestic Aviation|Liquids|Biomass;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from biomass;;;FE|Transport|Pass|Domestic Aviation|Liquids|Biomass;EJ/yr;1000;mapping taken from ARIADNE;T
 Final Energy|Transportation|Domestic Aviation|Liquids|Coal;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from coal;;;;;;;
 Final Energy|Transportation|Domestic Aviation|Liquids|Electricity;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
 Final Energy|Transportation|Domestic Aviation|Liquids|Gas;EJ/yr;2;Final energy consumption by the domestic aviation sector of liquid fuels from fossil methane (natural gas);;;;;;;
@@ -2160,12 +2163,12 @@ Final Energy|Transportation|Freight|Liquids|Hydrogen|Electricity;EJ/yr;3;Final e
 Final Energy|Transportation|Freight|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Freight|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Freight|Liquids|Oil;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of liquid fuels from refined crude oil;;;;;;;
-Final Energy|Transportation|Freight|Other;EJ/yr;;Final energy consumption by the freight transportation sector excluding international aviation and shipping of other energy sources;;;;;;;
+Final Energy|Transportation|Freight|Other;EJ/yr;;Final energy consumption by the freight transportation sector excluding international aviation and shipping of other energy sources;;;FE|Transport|Freight|Liquids|Hydrogen;EJ/yr;;mapping taken from AR6;T
 Final Energy|Transportation|Freight|Solids;EJ/yr;1;Final energy consumption by the freight transportation sector excluding international aviation and shipping of solid fuels;;;;;;;
 Final Energy|Transportation|Freight|Solids|Biomass;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of solid biomass;;;;;;;
 Final Energy|Transportation|Freight|Solids|Coal;EJ/yr;2;Final energy consumption by the freight transportation sector excluding international aviation and shipping of coal and coal products;;;;;;;
 Final Energy|Transportation|Gases;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of gaseous fuels not including hydrogen;;;FE|Transport|w/o Bunkers|+|Gases;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Gases|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of gas from biogenic sources, mainly biogas;;;;;;;
+Final Energy|Transportation|Gases|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of gas from biogenic sources, mainly biogas;;;FE|Transport|w/o Bunkers|Gases|+|Biomass;EJ/yr;1000;mapping taken from ARIADNE;R
 Final Energy|Transportation|Gases|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of gaseous fuels from coal;;;;;;;
 Final Energy|Transportation|Gases|Gas;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Heat;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of heat;;;;;;;
@@ -2203,7 +2206,7 @@ Final Energy|Transportation|Light Duty Vehicle|Solids|Biomass;EJ/yr;2;Final ener
 Final Energy|Transportation|Light Duty Vehicle|Solids|Coal;EJ/yr;2;Final energy consumption by the transportation sector with light-duty vehicles of coal and coal products;;;;;;;
 Final Energy|Transportation|Liquids;EJ/yr;1;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Transport|w/o Bunkers|+|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Transportation|Liquids|Biomass;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from biomass;;;FE|Transport|w/o Bunkers|Liquids|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
-Final Energy|Transportation|Liquids|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from coal;;;;;;;
+Final Energy|Transportation|Liquids|Coal;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from coal;;;FE|Transport|Liquids|Fossil|+|Coal;EJ/yr;;mapping taken from AR6;R
 Final Energy|Transportation|Liquids|Electricity;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;FE|Transport|w/o Bunkers|Liquids|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);R
 Final Energy|Transportation|Liquids|Gas;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from fossil methane (natural gas);;;;;;;
 Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;FE|Transport|Liquids|Hydrogen;EJ/yr;1;mapping taken from AR6_NGFS;R
@@ -2211,7 +2214,7 @@ Final Energy|Transportation|Liquids|Hydrogen|Biomass;EJ/yr;3;Final energy consum
 Final Energy|Transportation|Liquids|Hydrogen|Electricity;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
-Final Energy|Transportation|Liquids|Oil;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from refined crude oil;;;;;;;
+Final Energy|Transportation|Liquids|Oil;EJ/yr;2;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of liquid fuels from refined crude oil;;;FE|Transport|Liquids|Fossil|+|Oil;EJ/yr;;mapping taken from AR6;R
 Final Energy|Transportation|Other;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see Bunkers) of other energy sources;;;;;;;
 Final Energy|Transportation|Passenger;EJ/yr;;Final energy consumption by the passenger transportation sector excluding international aviation and shipping;;;FE|Transport|Pass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
 Final Energy|Transportation|Passenger|Electricity;EJ/yr;;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of electricity;;;FE|Transport|Pass|Road|Bus|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (final);T
@@ -2250,7 +2253,7 @@ Final Energy|Transportation|Passenger|Liquids|Hydrogen|Electricity;EJ/yr;3;Final
 Final Energy|Transportation|Passenger|Liquids|Hydrogen|Fossil;EJ/yr;3;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Passenger|Liquids|Hydrogen|Other;EJ/yr;3;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Final Energy|Transportation|Passenger|Liquids|Oil;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of liquid fuels from refined crude oil;;;;;;;
-Final Energy|Transportation|Passenger|Other;EJ/yr;;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of other energy sources;;;;;;;
+Final Energy|Transportation|Passenger|Other;EJ/yr;;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of other energy sources;;;FE|Transport|Pass|Liquids|Hydrogen;EJ/yr;;mapping taken from AR6;T
 Final Energy|Transportation|Passenger|Solids;EJ/yr;1;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of solid fuels;;;;;;;
 Final Energy|Transportation|Passenger|Solids|Biomass;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of solid biomass;;;;;;;
 Final Energy|Transportation|Passenger|Solids|Coal;EJ/yr;2;Final energy consumption by the passenger transportation sector excluding international aviation and shipping of coal and coal products;;;;;;;
@@ -2267,8 +2270,10 @@ Final Energy|Transportation|Rail|Hydrogen|Biomass;EJ/yr;2;Final energy consumpti
 Final Energy|Transportation|Rail|Hydrogen|Electricity;EJ/yr;2;Final energy consumption by the rail transportation sector of hydrogen from electrolysis;;;;;;;
 Final Energy|Transportation|Rail|Hydrogen|Fossil;EJ/yr;2;Final energy consumption by the rail transportation sector of hydrogen from fossils;;;;;;;
 Final Energy|Transportation|Rail|Hydrogen|Other;EJ/yr;2;Final energy consumption by the rail transportation sector of hydrogen from other sources;;;;;;;
-Final Energy|Transportation|Rail|Liquids;EJ/yr;1;Final energy consumption by the rail transportation sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;;;;;
-Final Energy|Transportation|Rail|Liquids|Biomass;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from biomass;;;;;;;
+Final Energy|Transportation|Rail|Liquids;EJ/yr;1;Final energy consumption by the rail transportation sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Transport|Freight|Rail|Liquids;EJ/yr;1000;mapping taken from ARIADNE;T
+Final Energy|Transportation|Rail|Liquids;EJ/yr;1;Final energy consumption by the rail transportation sector of liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids);;;FE|Transport|Pass|Rail|Liquids;EJ/yr;1000;mapping taken from ARIADNE;T
+Final Energy|Transportation|Rail|Liquids|Biomass;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from biomass;;;FE|Transport|Freight|Rail|Liquids|Biomass;EJ/yr;1000;mapping taken from ARIADNE;T
+Final Energy|Transportation|Rail|Liquids|Biomass;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from biomass;;;FE|Transport|Pass|Rail|Liquids|Biomass;EJ/yr;1000;mapping taken from ARIADNE;T
 Final Energy|Transportation|Rail|Liquids|Coal;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from coal;;;;;;;
 Final Energy|Transportation|Rail|Liquids|Electricity;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid synthetic fuels from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
 Final Energy|Transportation|Rail|Liquids|Gas;EJ/yr;2;Final energy consumption by the rail transportation sector of liquid fuels from fossil methane (natural gas);;;;;;;
@@ -2371,7 +2376,7 @@ Health|Child Mortality|Indoor Air Pollution;million;;Child mortality associated 
 Health|Disability-Adjusted Life Years|PM2.5;DALY/yr;;Disability adjusted life years lost per year from health impacts due to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);;;;;;;
 Health|Premature Deaths|PM2.5;million;;Number of premature deaths associated with increased health risks from exposure to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);;;;;;;
 Inequality|Average Income|Bottom 40% [Ratio];%;;Average income of bottom 40% of population relative to national average;;Population;Inequality|Bottom 40% average income|Ratio;percent;;additional mapping taken from additional_SHAPE;S
-Intensity|Final Energy;EJ/billion USD_2010;;Final Energy intensity;;GDP|PPP;;;;;
+Intensity|Final Energy;EJ/billion USD_2010;;Final Energy intensity;;GDP|PPP;Intensity|GDP|Final Energy;MJ/US$2017;0.001099;mapping taken from AR6;R
 Labor Force|Employed;million;1;Working-age inhabitants which are employed (part of the active labor force);;;;;;;
 Labor Force|Inactive;million;1;Inhabitants which are not part of the labor force, including working-age people neither employed nor unemployed, and people not in a working-age cohort (e.g., children, retirees);;;;;;;
 Labor Force|Unemployed;million;1;Working-age inhabitants which are unemployed (part of the active labor force);;;;;;;
@@ -2818,15 +2823,15 @@ Primary Energy|Biomass|Liquids;EJ/yr;;Primary energy input of biomass for conver
 Primary Energy|Biomass|Liquids|w/ CCS;EJ/yr;;Primary energy input of biomass for conversion to liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) in combination with CCS;;;PE|Biomass|Liquids|w/ CC;EJ/yr;;added manually;R
 Primary Energy|Biomass|Liquids|w/o CCS;EJ/yr;;Primary energy input of biomass for conversion to liquid fuels (conventional & unconventional oil, biofuels, coal-to-liquids, gas-to-liquids) without CCS;;;PE|Biomass|Liquids|w/o CC;EJ/yr;;added manually;R
 Primary Energy|Biomass|Modern;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy;;;PE|Biomass|Modern;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
-Primary Energy|Biomass|Modern|w/ CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy in combination with CCS;;;;;;;
-Primary Energy|Biomass|Modern|w/o CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy without CCS;;;;;;;
+Primary Energy|Biomass|Modern|w/ CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy in combination with CCS;;;PE|Biomass|w/ CC;EJ/yr;;mapping taken from AR6;R
+Primary Energy|Biomass|Modern|w/o CCS;EJ/yr;;Primary energy consumption of modern biomass, including purpose-grown bioenergy crops, crop and forestry residue and municipal solid waste bioenergy without CCS;;;PE|Biomass|w/o CC;EJ/yr;;mapping taken from AR6;R
 Primary Energy|Biomass|Residues;EJ/yr;;Primary energy consumption from residues;;;PE|Biomass|Residues;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
 Primary Energy|Biomass|Solids;EJ/yr;;Primary energy input of biomass for conversion to solid fuels;;;PE|Biomass|Solids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
 Primary Energy|Biomass|Solids|w/ CCS;EJ/yr;;Primary energy input of biomass for conversion to solid fuels in combination with CCS;;;;;;;
 Primary Energy|Biomass|Solids|w/o CCS;EJ/yr;;Primary energy input of biomass for conversion to solid fuels without CCS;;;;;;;
 Primary Energy|Biomass|Traditional;EJ/yr;;Primary energy consumption of traditional biomass;;;PE|Biomass|Traditional;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
-Primary Energy|Biomass|w/ CCS;EJ/yr;;Primary energy consumption of purpose-grown bioenergy crops, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with CCS;;;;;;;
-Primary Energy|Biomass|w/o CCS;EJ/yr;;Primary energy consumption of purpose-grown bioenergy crops, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without CCS;;;;;;;
+Primary Energy|Biomass|w/ CCS;EJ/yr;;Primary energy consumption of purpose-grown bioenergy crops, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with CCS;;;PE|Biomass|w/ CC;EJ/yr;1;mapping taken from ESABCC;R
+Primary Energy|Biomass|w/o CCS;EJ/yr;;Primary energy consumption of purpose-grown bioenergy crops, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without CCS;;;PE|Biomass|w/o CC;EJ/yr;1;mapping taken from ESABCC;R
 Primary Energy|Coal;EJ/yr;;Primary energy consumption of coal including lignite;;;PE|+|Coal;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
 Primary Energy|Coal|Electricity;EJ/yr;;Primary energy consumption of coal including lignite for electricity generation;;;PE|Coal|Electricity;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
 Primary Energy|Coal|Electricity|w/ CCS;EJ/yr;;Primary energy consumption of coal including lignite for electricity generation in combination with CCS;;;PE|Coal|Electricity|w/ CC;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
@@ -2946,14 +2951,17 @@ Secondary Energy|Electricity|Coal|w/o CCS;EJ/yr;;Net electricity generation from
 Secondary Energy|Electricity|Fossil;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil;;;SE|Electricity|+|Coal;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Fossil;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil;;;SE|Electricity|+|Gas;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Fossil;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil;;;SE|Electricity|+|Oil;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
-Secondary Energy|Electricity|Fossil|w/ CCS;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil in combination with CCS;;;;;;;
-Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil without CCS;;;;;;;
+Secondary Energy|Electricity|Fossil|w/ CCS;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil in combination with CCS;;;SE|Electricity|Coal|+|w/ CC;EJ/yr;1000;mapping taken from ARIADNE;R
+Secondary Energy|Electricity|Fossil|w/ CCS;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil in combination with CCS;;;SE|Electricity|Gas|+|w/ CC;EJ/yr;1000;mapping taken from ARIADNE;R
+Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil without CCS;;;SE|Electricity|Coal|+|w/o CC;EJ/yr;1000;mapping taken from ARIADNE;R
+Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil without CCS;;;SE|Electricity|Oil|w/o CC;EJ/yr;1000;mapping taken from ARIADNE;R
+Secondary Energy|Electricity|Fossil|w/o CCS;EJ/yr;;Net electricity generation from fossil fuels including coal, natural gas and conventional/unconventional oil without CCS;;;SE|Electricity|Gas|+|w/o CC;EJ/yr;1000;mapping taken from ARIADNE;R
 Secondary Energy|Electricity|Gas;EJ/yr;;Net electricity generation from natural gas (fossil methane);;;SE|Electricity|+|Gas;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Gas|w/ CCS;EJ/yr;;Net electricity generation from natural gas (fossil methane) in combination with CCS;;;SE|Electricity|Gas|+|w/ CC;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Gas|w/o CCS;EJ/yr;;Net electricity generation from natural gas (fossil methane) without CCS;;;SE|Electricity|Gas|+|w/o CC;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Geothermal;EJ/yr;;Net electricity generation from geothermal sources;;;SE|Electricity|+|Geothermal;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Hydro;EJ/yr;;Net electricity generation from hydropower;;;SE|Electricity|+|Hydro;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
-Secondary Energy|Electricity|Hydrogen;EJ/yr;;Net electricity generation from hydrogen;;;;;;;
+Secondary Energy|Electricity|Hydrogen;EJ/yr;;Net electricity generation from hydrogen;;;SE|Electricity|+|Hydrogen;EJ/yr;1;mapping taken from ESABCC;R
 Secondary Energy|Electricity|Non-Biomass Renewables;EJ/yr;;Net electricity generation from hydro, wind, solar, geothermal, ocean, and other renewable sources excluding biomass;;;SE|Electricity|Non-Biomass Renewables;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Nuclear;EJ/yr;;Net electricity generation from nuclear power;;;SE|Electricity|+|Nuclear;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Electricity|Ocean;EJ/yr;;Net electricity generation from oceans;;;;;;;
@@ -2980,7 +2988,7 @@ Secondary Energy|Gases|Coal;EJ/yr;;Production of coal gas from coal gasification
 Secondary Energy|Gases|Electricity;EJ/yr;;Production of gas from electricity (power-to-gas);;;SE|Gases|+|Hydrogen;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Gases|Fossil;EJ/yr;;Production of gaseous fuels from fossil energy carriers;;;SE|Gases|Fossil;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Gases|Gas;EJ/yr;;Consumption of natural gas (fossil methane);;;;;;;
-Secondary Energy|Gases|Other;EJ/yr;;Production of gases from sources that do not fit any other category;;;;;;;
+Secondary Energy|Gases|Other;EJ/yr;;Production of gases from sources that do not fit any other category;;;SE|Gases|+|Hydrogen;EJ/yr;;mapping taken from AR6;R
 Secondary Energy|Heat;EJ/yr;;Total production of centralized heat;;;SE|Heat;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Heat|Biomass;EJ/yr;;Centralized heat generation from biomass, including biogas;;;SE|Heat|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Heat|Biomass|w/ CCS;EJ/yr;;Centralized heat generation from biomass, including biogas, in combination with CCS;;;;;;;
@@ -2991,7 +2999,6 @@ Secondary Energy|Heat|Coal|w/o CCS;EJ/yr;;Centralized heat generation from coal 
 Secondary Energy|Heat|Electricity;EJ/yr;;Centralized heat generation from electricity;;;SE|Heat|+|Geothermal;EJ/yr;;mapping taken from ARIADNE, ARIADNE category: energy (supply);R
 Secondary Energy|Heat|Fossil;EJ/yr;;Centralized heat generation from fossil fuels including coal, natural gas and conventional/unconventional oil;;;SE|Heat|+|Coal;EJ/yr;1;mapping taken from ESABCC;R
 Secondary Energy|Heat|Fossil;EJ/yr;;Centralized heat generation from fossil fuels including coal, natural gas and conventional/unconventional oil;;;SE|Heat|+|Gas;EJ/yr;1;mapping taken from ESABCC;R
-Secondary Energy|Heat|Fossil;EJ/yr;;Centralized heat generation from fossil fuels including coal, natural gas and conventional/unconventional oil;;;;;;;
 Secondary Energy|Heat|Fossil|w/ CCS;EJ/yr;;Centralized heat generation from fossil fuels including coal, natural gas and conventional/unconventional oil in combination with CCS;;;;;;;
 Secondary Energy|Heat|Fossil|w/o CCS;EJ/yr;;Centralized heat generation from fossil fuels including coal, natural gas and conventional/unconventional oil without CCS;;;;;;;
 Secondary Energy|Heat|Gas;EJ/yr;;Centralized heat generation from natural gas (fossil methane);;;SE|Heat|+|Gas;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
@@ -3027,7 +3034,7 @@ Secondary Energy|Hydrogen|Solar;EJ/yr;;Production of hydrogen from solar energy 
 Secondary Energy|Liquids;EJ/yr;;Total production of refined liquid fuels from all energy sources, including oil products, synthetic fossil fuels from gas and coal, and biofuels;;;SE|Liquids;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Liquids|Biomass;EJ/yr;;Production of liquid fuels from biomass;;;SE|Liquids|+|Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Liquids|Coal;EJ/yr;;Production of fossil liquid fuels from coal including lignite;;;SE|Liquids|Fossil|+|Coal;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
-Secondary Energy|Liquids|Electricity;EJ/yr;;Production of liquid fuels mainly from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;;;;;
+Secondary Energy|Liquids|Electricity;EJ/yr;;Production of liquid fuels mainly from electricity, i.e., e-fuels (if hydrogen is not explicitly modeled as an intermediate product);;;SE|Liquids|+|Hydrogen;EJ/yr;1;mapping taken from ECEMF;R
 Secondary Energy|Liquids|Fossil;EJ/yr;;Production of fossil liquid fuels from fossil fuels including coal, natural gas and conventional/unconventional oil;;;SE|Liquids|+|Fossil;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Liquids|Gas;EJ/yr;;Production of fossil liquid fuels from natural gas (fossil methane);;;SE|Liquids|Fossil|+|Gas;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Liquids|Hydrogen;EJ/yr;;Production of liquid fuels from hydrogen (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;SE|Liquids|+|Hydrogen;EJ/yr;;mapping taken from ARIADNE, ARIADNE category: energy (supply);R
