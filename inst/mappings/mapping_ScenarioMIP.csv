@@ -2800,7 +2800,7 @@ Population|Substandard Accommodation;million;;Number of people living in substan
 Population|Urban;million;2;Total population living in urban areas;;;Population|Urban;million;;mapping taken from NAVIGATE, NAVIGATE category: demography;S
 Population|Urban [Share];%;;Share of population living in urban areas;;Population;;;;;
 Population|Without Education [Share];%;;Share of people aged 15 or older without education, not counting those with incomplete primary education;;Population;;;;;
-Price|Agriculture|Livestock [Index];Index (2020 = 1);;Weighted average price index of livestock;;;Prices|Index2020|Agriculture|Food products|Livestock;1;;additional mapping taken from additional_SHAPE;M
+Price|Agriculture|Livestock [Index];Index (2020 = 1);;Weighted average price index of livestock;;Production|+|Livestock products;Prices|Index2020|Agriculture|Food products|Livestock;1;;additional mapping taken from additional_SHAPE;M
 Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2017/t CO2;0.9096;mapping taken from NAVIGATE, NAVIGATE category: policy;R
 Price|Carbon [relative to OECD];%;;Carbon price relative to OECD carbon price;;;;;;;
 Primary Energy;EJ/yr;;Total primary energy consumption (direct equivalent);;;PE;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
@@ -3072,15 +3072,15 @@ Water Ecosystems|Forests;million ha;3;All water ecosystems;;;;;;;
 Water Ecosystems|Lakes;million ha;3;All water ecosystems;;;;;;;
 Water Ecosystems|Rivers;million ha;3;All water ecosystems;;;;;;;
 Water Ecosystems|Wetlands;million ha;3;Wetlands;;;;;;;
-Water Ecosystems|Wetlands|Peatlands;million ha;3;Peatlands;;;;;;;
-Water Ecosystems|Wetlands|Peatlands|Drained;million ha;3;Drained peatlands;;;;;;;
-Water Ecosystems|Wetlands|Peatlands|Intact;million ha;3;Intact peatlands;;;;;;;
-Water Ecosystems|Wetlands|Peatlands|Rewetted;million ha;3;Rewetted peatlands;;;;;;;
+Water Ecosystems|Wetlands|Peatlands;million ha;3;Peatlands;;;Resources|Peatland;million ha;;;M
+Water Ecosystems|Wetlands|Peatlands|Drained;million ha;3;Drained peatlands;;;Resources|Peatland|+|Degraded;million ha;;;M
+Water Ecosystems|Wetlands|Peatlands|Intact;million ha;3;Intact peatlands;;;Resources|Peatland|+|Intact;million ha;;;M
+Water Ecosystems|Wetlands|Peatlands|Rewetted;million ha;3;Rewetted peatlands;;;Resources|Peatland|+|Rewetted;million ha;;;M
 Water Quality|Nitrogen Concentration;mg N/l;;Concentration of nitrogen in water at river mouths;;;;;;;
 Water Quality|Phosphorus Concentration;mg P/l;;Concentration of phosphorus in water at river mouths;;;;;;;
-Yield|Cropland;t DM/ha/yr;;Yield of total cropland;;Land Cover|Cropland;;;;;
-Yield|Cropland|Cereals;t DM/ha/yr;;Yield of cropland with maize, rice, temperate cereals and tropical cereals;;Land Cover|Cropland|Cereals;;;;;
-Yield|Cropland|Energy Crops;t DM/ha/yr;;Yield of cropland with short rotation grasses, short rotation trees;;Land Cover|Cropland|Energy Crops;;;;;
-Yield|Cropland|Oil Crops;t DM/ha/yr;;Yield of cropland with cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower;;Land Cover|Cropland|Oil Crops;;;;;
-Yield|Cropland|Other Crops;t DM/ha/yr;;Yield of cropland with fruits, vegetables, nuts, potatoes, pulses, tropical roots;;Land Cover|Cropland|Other Crops;;;;;
-Yield|Cropland|Sugar Crops;t DM/ha/yr;;Yield of cropland with sugar beet, sugar cane;;Land Cover|Cropland|Sugar Crops;;;;;
+Yield|Cropland;t DM/ha/yr;;Yield of total cropland;;;;;;;
+Yield|Cropland|Cereals;t DM/ha/yr;;Yield of cropland with maize, rice, temperate cereals and tropical cereals;;Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;Productivity|Yield|Crops|+|Cereals;t DM/ha;;;M
+Yield|Cropland|Energy Crops;t DM/ha/yr;;Yield of cropland with short rotation grasses, short rotation trees;;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;Productivity|Yield|+|Bioenergy crops;t DM/ha;;;M
+Yield|Cropland|Oil Crops;t DM/ha/yr;;Yield of cropland with cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower;;Resources|Land Cover|Cropland|Croparea|Crops|+|Oil crops;Productivity|Yield|Crops|+|Oil crops;t DM/ha;;;M
+Yield|Cropland|Other Crops;t DM/ha/yr;;Yield of cropland with fruits, vegetables, nuts, potatoes, pulses, tropical roots;;Resources|Land Cover|Cropland|Croparea|Crops|+|Other crops;Productivity|Yield|Crops|+|Other crops;t DM/ha;;;M
+Yield|Cropland|Sugar Crops;t DM/ha/yr;;Yield of cropland with sugar beet, sugar cane;;Resources|Land Cover|Cropland|Croparea|Crops|+|Sugar crops;Productivity|Yield|Crops|+|Sugar crops;t DM/ha;;;M
