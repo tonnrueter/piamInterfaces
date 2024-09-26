@@ -1351,9 +1351,6 @@ Land Cover|Forest;Land Cover|Forest|Afforestation and Reforestation;1
 Land Cover|Forest;Land Cover|Forest|Managed;1
 Land Cover|Forest;Land Cover|Forest|Natural Forest;1
 
-OM Cost|Fixed|Electricity|Wind;OM Cost|Fixed|Electricity|Wind|Offshore;1
-OM Cost|Fixed|Electricity|Wind;OM Cost|Fixed|Electricity|Wind|Onshore;1
-
 Population;Population|Rural;1
 Population;Population|Urban;1
 
