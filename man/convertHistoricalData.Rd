@@ -12,8 +12,11 @@ convertHistoricalData(mif, project, regionMapping = NULL)
 
 \item{project}{name of the project, determines the mapping to be loaded}
 
-\item{regionMapping}{(optional) csv file with mapping of REMIND regions to
-project regions, must contain two columns 'REMIND' and 'project_region'}
+\item{regionMapping}{(optional) csv file with mapping of REMIND regions or ISO to
+project regions, must contain two columns:
+One can be called 'REMIND' or 'CountryCode' and contains the regions in the data.
+The second can be called 'project_region' or 'RegionCode', to which the first is mapped.
+You can also specify the filename part before the .csv from inst/regionmapping}
 }
 \description{
 Converts data in historical.mif to match project-specific variables and

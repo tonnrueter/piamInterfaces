@@ -5,11 +5,15 @@
 #' @author Falk Benke
 #' @param mif quitte object with historical data or path to historical.mif
 #' @param project name of the project, determines the mapping to be loaded
-#' @param regionMapping (optional) csv file with mapping of REMIND regions to
-#'  project regions, must contain two columns 'REMIND' and 'project_region'
+#' @param regionMapping (optional) csv file with mapping of REMIND regions or ISO to
+#'  project regions, must contain two columns:
+#'  One can be called 'REMIND' or 'CountryCode' and contains the regions in the data.
+#'  The second can be called 'project_region' or 'RegionCode', to which the first is mapped.
+#'  You can also specify the filename part before the .csv from inst/regionmapping
 #' @importFrom dplyr %>% mutate select right_join left_join
 #' @importFrom quitte read.quitte as.quitte
 #' @importFrom stats aggregate
+#' @importFrom tidyselect all_of
 #' @examples
 #' \dontrun{
 #' data <- convertHistoricalData(
@@ -59,15 +63,19 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
     select(-c("actualRemindVar", "countRemindVar"))
 
   if (!is.null(regionMapping)) {
+    mappings <- Sys.glob(file.path(system.file("regionmapping", package = "piamInterfaces"), "*.csv"))
+    names(mappings) <- gsub(".csv", "", basename(mappings))
+    if (regionMapping %in% names(mappings)) regionMapping <- mappings[[regionMapping]]
     regmap <- read.csv2(regionMapping, header = TRUE)
-
-    if (!all(c("REMIND", "project_region") %in% names(regmap))) {
-      stop("regionMapping must contain columns 'REMIND' and 'project_region'")
+    from <- intersect(names(regmap), c("REMIND", "CountryCode"))[[1]]
+    to <- intersect(names(regmap), c("project_region", "RegionCode"))[[1]]
+    if (length(from) == 0 || length(to) == 0) {
+      stop("regionMapping must contain columns 'REMIND'/'project_region' or 'CountryCode'/'RegionCode'")
     }
 
-    out <- left_join(out, regmap, by = c("region" = "REMIND")) %>%
-      filter(!is.na(.data$project_region)) %>%
-      select("model", "scenario", "region" = "project_region", "variable", "unit", "period", "value")
+    out <- left_join(out, regmap, by = c("region" = from)) %>%
+      filter(!is.na(.data[[to]])) %>%
+      select("model", "scenario", "region" = all_of(to), "variable", "unit", "period", "value")
   }
 
   out <- aggregate(value ~ model + scenario + region + period + variable + unit, data = out, FUN = sum)
