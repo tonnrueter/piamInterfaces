@@ -5,7 +5,7 @@
 \title{Retrieves all variables allocated to source potentially used
 in mappings to project variables}
 \usage{
-getMappingVariables(project, sources = TRUE)
+getMappingVariables(project = TRUE, sources = TRUE)
 }
 \arguments{
 \item{project}{name of the project of requested mappings

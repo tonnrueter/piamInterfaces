@@ -7,7 +7,7 @@
 #'        is expected to have a 'components' column as well.
 #'        If project is a https://files.ece.iiasa.ac.at/*.xlsx  URL, it will be automatically downloaded.
 #' @param format either "dataframe" or "list", the latter ignores the factor column
-#' @importFrom utils read.csv2
+#' @importFrom utils read.csv2 packageVersion
 #' @importFrom gms chooseFromList
 #' @importFrom dplyr filter mutate select rename
 #' @importFrom jsonlite fromJSON
@@ -21,7 +21,7 @@ getSummations <- function(project = NULL, format = "dataframe") {
     if (length(project) == 0) stop("No summation group files selected, abort.")
   }
   if (! file.exists(project)) {
-    project <- gsub("\\.csv$", "", gsub("^summation_groups_", "", project))
+    project <- gsub("^summation_groups_|\\.csv$", "", project)
   }
   filename <- if (project %in% names(summations)) summations[project] else project
   if (file.exists(filename) || grepl("^https:\\/\\/files\\.ece\\.iiasa\\.ac\\.at\\/.*\\.xlsx$", filename)) {
@@ -50,7 +50,8 @@ getSummations <- function(project = NULL, format = "dataframe") {
       return(summations)
     }
   } else {
-    stop("Summation group file ", filename, " not found.")
+    stop("Summation group file ", filename, " not found in piamInterfaces@",
+         packageVersion("piamInterfaces"), ". Maybe try updating...")
   }
 }
 

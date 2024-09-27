@@ -13,7 +13,7 @@
 #' @examples
 #' getMappingVariables("AR6", "RT")
 #' @export
-getMappingVariables <- function(project, sources = TRUE) {
+getMappingVariables <- function(project = TRUE, sources = TRUE) {
   if (isTRUE(project)) project <- names(mappingNames())
   mapping <- NULL
   for (p in project) {

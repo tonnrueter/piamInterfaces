@@ -9,7 +9,7 @@
 #' @md
 #' @author Falk Benke, Oliver Richters
 #' @param project name of requested mapping, or file name pointing to a mapping
-#' @importFrom utils read.csv2
+#' @importFrom utils read.csv2 packageVersion
 #' @importFrom gms chooseFromList
 #' @examples
 #' \dontrun{
@@ -25,7 +25,7 @@ getMapping <- function(project = NULL) {
     if (length(project) == 0) stop("No mapping selected, abort.")
   }
   if (! file.exists(project)) {
-    project <- gsub("\\.csv$", "", gsub("^mapping_", "", project))
+    project <- gsub("^mapping_|\\.csv$", "", project)
   }
   filename <- if (project %in% names(mappings)) mappings[project] else project
   if (file.exists(filename)) {
@@ -34,7 +34,7 @@ getMapping <- function(project = NULL) {
 
     # check if more than one column is found
     if (length(data) == 1) {
-      stop(paste0("Failed to read in ", filename, ". Is source file separated by semicolons?"))
+      stop(paste0("Failed to read in ", filename, ". Possible reason: source file must be separated by semicolons!"))
     }
 
     # fail if required columns are missing
@@ -47,7 +47,8 @@ getMapping <- function(project = NULL) {
     # return data
     return(data)
   } else {
-    stop("Mapping file ", filename, " not found.")
+    stop("Mapping file ", filename, " not found in piamInterfaces@",
+         packageVersion("piamInterfaces"), ". Maybe try updating...")
   }
 }
 
