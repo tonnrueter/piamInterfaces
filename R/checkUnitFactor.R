@@ -29,7 +29,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   # For example, line 7 check that mapping "billion whatever" to "million whatever" uses a factor 1000 etc.
   # This uses regex matching, so "1000 million US$" = "1 billion US$" is covered by that as well.
   scaleConversion <- list(
-                          c("1", "million", "Million vehicles"),
+                          c("1", "million", "million veh"),
                           c("1", "Index (2020 = 1)", "1"),
                           c("1", "Index (2010 = 1)", "1"),
                           c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'

@@ -174,8 +174,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
   summarytext <- NULL
   if (! is.null(mapping)) {
-    if (length(mapping) == 1 && is.character(mapping) && mapping %in% names(mappingNames())) {
-      mappingData <- getMapping(mapping)
+    if (is.character(mapping) && mapping %in% names(mappingNames())) {
+      mappingCols <- function(x) select(getMapping(x), c("variable", "piam_variable", "piam_factor"))
+      mappingData <- bind_rows(lapply(mapping, mappingCols))
       mappingName <- gsub(".*piamInterfaces", "piamInterfaces", mappingNames(mapping))
       text <- c(text, paste0("# Derive mapping from ", mappingName))
     } else {

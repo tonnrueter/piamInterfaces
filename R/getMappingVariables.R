@@ -4,17 +4,24 @@
 #' @md
 #' @author Falk Benke, Oliver Richters
 #' @param project name of the project of requested mapping
+#'        such as c('AR6', 'AR6_NGFS') or 'mapping.csv'
 #' @param sources model abbreviation(s) used in 'source' column.
 #'        R = REMIND, M = MAgPIE, T = EDGE-T, B = Brick, C = Climate/MAGICC, TRUE = all
-#' @importFrom dplyr %>%
+#' @importFrom dplyr %>% select filter mutate
 #' @importFrom rlang .data
+#' @importFrom tidyselect any_of
 #' @examples
 #' getMappingVariables("AR6", "RT")
 #' @export
 getMappingVariables <- function(project, sources = TRUE) {
-  mapping <- getMapping(project) %>%
-    filter(! is.na(.data$piam_variable)) %>%
-    mutate("modelvars" = paste0(.data$piam_variable, " (", .data$piam_unit, ")"))
+  mapping <- NULL
+  for (p in project) {
+    mapping <- getMapping(p) %>%
+      select(any_of(c("piam_variable", "piam_unit", "source"))) %>%
+      filter(! is.na(.data$piam_variable)) %>%
+      mutate("modelvars" = paste0(.data$piam_variable, " (", .data$piam_unit, ")")) %>%
+      rbind(mapping)
+  }
   if (! isTRUE(sources)) {
     if (! "source" %in% names(mapping)) {
       stop("Mapping ", project, " has no column 'source', please add it.")
@@ -25,7 +32,7 @@ getMappingVariables <- function(project, sources = TRUE) {
     mapping <- mapping %>%
       filter(! is.na(.data$source), .data$source %in% sources)
   }
-  modelvars <- unique(as.character(mapping$modelvars))
+  modelvars <- sort(unique(as.character(mapping$modelvars)))
   return(modelvars)
 }
 
