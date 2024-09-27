@@ -8,7 +8,8 @@ in mappings to project variables}
 getMappingVariables(project, sources = TRUE)
 }
 \arguments{
-\item{project}{name of the project of requested mapping}
+\item{project}{name of the project of requested mapping
+such as c('AR6', 'AR6_NGFS') or 'mapping.csv'}
 
 \item{sources}{model abbreviation(s) used in 'source' column.
 R = REMIND, M = MAgPIE, T = EDGE-T, B = Brick, C = Climate/MAGICC, TRUE = all}
