@@ -30,12 +30,17 @@
 checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions = NULL,
                                     variables = NULL, skipUnits = NULL, skipBunkers = NULL, intensiveUnits = TRUE,
                                     absDiff = 0.0001, relDiff = 0.1) {
-
+  message("Running checkSummationsRegional")
   # load data
   data <- droplevels(quitte::as.quitte(mifFile, na.rm = TRUE))
   if (! is.null(variables))  data <- droplevels(filter(data, .data$variable %in% variables))
   if (is.null(parentRegion)) parentRegion <- intersect(c("World", "GLO"), levels(data$region))[[1]]
   if (is.null(childRegions)) childRegions <- setdiff(levels(data$region), parentRegion)
+  if (length(childRegions) == 0) {
+    warning("No childRegions found, skipping checkSummationsRegional.")
+    return(NULL)
+  }
+
 
   # generate a set of units that are intensive units, that get aggregated not by sum but via (weighted) mean
   years <- paste0(c("05", 2005, 2010, 2015, 2017, 2020))
