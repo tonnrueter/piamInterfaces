@@ -4,10 +4,13 @@
 \alias{getMapping}
 \title{getMapping}
 \usage{
-getMapping(project = NULL)
+getMapping(project = NULL, requiredColsOnly = FALSE)
 }
 \arguments{
 \item{project}{name of requested mapping, or file name pointing to a mapping}
+
+\item{requiredColsOnly}{whether only the mandatory 5 columns are return
+set to TRUE if you want to concatenate mappings}
 }
 \description{
 Retrieves latest mapping for a given project.

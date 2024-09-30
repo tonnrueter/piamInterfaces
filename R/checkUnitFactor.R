@@ -30,6 +30,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   # This uses regex matching, so "1000 million US$" = "1 billion US$" is covered by that as well.
   scaleConversion <- list(
                           c("1", "million", "million veh"),
+                          c("1", "million vehicles/yr", "million veh"),
                           c("1", "Index (2020 = 1)", "1"),
                           c("1", "Index (2010 = 1)", "1"),
                           c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'
@@ -79,6 +80,9 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("0.0008121", "bn USD 2005 MER", "million US$2017 MER/yr"),
                           c("1000", "1000 t dm", "Mt DM/yr")
                          )
+  if (! isTRUE(unique(lapply(scaleConversion, length)) == 3)) {
+    warning("scaleConversion has some parts that have not 3 elements")
+  }
   template$piam_factor[is.na(template$piam_factor)] <- 1
   success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
   success <- success | is.na(template$piam_variable)
