@@ -12,7 +12,7 @@ test_that("convertHistoricalData works with ISO_2_R5", {
   regi <- c("DEU", "FRA")
   d <- as.quitte(data.frame(model = "REMIND", scenario = "default", region = regi,
                             period = 2030, variable = "FE", value = 1, unit = "EJ/yr"))
-  expect_silent(p <- as.quitte(convertHistoricalData(d, project = "AR6", regionMapping = "ISO_2_R5")))
+  expect_silent(p <- as.quitte(convertHistoricalData(d, project = c("NAVIGATE", "ELEVATE"), regionMapping = "ISO_2_R5")))
   expect_true(all(grepl(" \\(R5\\)|^World$", levels(p$region))))
   expect_equal(p$value, 2)
   expect_equal(levels(p$model), "REMIND")

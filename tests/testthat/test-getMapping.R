@@ -1,7 +1,10 @@
+
+allMappings <- NULL # used to concatenate all mappings and see whether that works
 minimalLength <- list("AR6" = 1900, "NAVIGATE" = 1900)
 for (mapping in names(mappingNames())) {
   test_that(paste("checks on mapping", mapping), {
-    expect_silent(mappingData <- getTemplate(mapping))
+    expect_silent(allMappings <- rbind(allMappings, getMapping(mapping, requiredColsOnly = TRUE)))
+    expect_silent(mappingData <- getMapping(mapping))
     expect_true(all(c("variable", "unit", "piam_variable", "piam_unit", "piam_factor") %in% names(mappingData)))
     expect_true(class(mappingData) == "data.frame")
     expect_true(length(mappingData$variable) > max(0, unlist(minimalLength[mapping])))

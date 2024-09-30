@@ -9,15 +9,18 @@
 #' @md
 #' @author Falk Benke, Oliver Richters
 #' @param project name of requested mapping, or file name pointing to a mapping
+#' @param requiredColsOnly whether only the mandatory 5 columns are return
+#'        set to TRUE if you want to concatenate mappings
 #' @importFrom utils read.csv2 packageVersion
 #' @importFrom gms chooseFromList
+#' @importFrom tidyselect all_of
 #' @examples
 #' \dontrun{
 #' getMapping("ECEMF")
 #' getMapping("/path/to/mapping/file")
 #' }
 #' @export
-getMapping <- function(project = NULL) {
+getMapping <- function(project = NULL, requiredColsOnly = FALSE) {
   mappings <- mappingNames()
   if (is.null(project)) {
     project <- chooseFromList(names(mappings), type = "mappings",
@@ -45,6 +48,9 @@ getMapping <- function(project = NULL) {
     }
 
     # return data
+    if (isTRUE(requiredColsOnly)) {
+      return(select(data, all_of(requiredCols)))
+    }
     return(data)
   } else {
     stop("Mapping file ", filename, " not found in piamInterfaces@",
