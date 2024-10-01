@@ -12,6 +12,7 @@
 #'  You can also specify the filename part before the .csv from inst/regionmapping
 #' @importFrom dplyr %>% mutate select right_join left_join
 #' @importFrom quitte read.quitte as.quitte
+#' @importFrom piamutils deletePlus
 #' @importFrom stats aggregate
 #' @importFrom tidyselect all_of
 #' @examples
@@ -38,7 +39,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
     filter(!is.na(.data$piam_variable)) %>%
     mutate(
       "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor)), # nolint
-      "piam_variable" = sub("\\|\\++\\|", "|", .data$piam_variable) # nolint
+      "piam_variable" = deletePlus(.data$piam_variable) # nolint
     )
 
   # for each project variable count number REMIND variables mapping to it
