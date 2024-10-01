@@ -9,15 +9,18 @@
 #' @md
 #' @author Falk Benke, Oliver Richters
 #' @param project name of requested mapping, or file name pointing to a mapping
-#' @importFrom utils read.csv2
+#' @param requiredColsOnly whether only the mandatory 5 columns are return
+#'        set to TRUE if you want to concatenate mappings
+#' @importFrom utils read.csv2 packageVersion
 #' @importFrom gms chooseFromList
+#' @importFrom tidyselect all_of
 #' @examples
 #' \dontrun{
 #' getMapping("ECEMF")
 #' getMapping("/path/to/mapping/file")
 #' }
 #' @export
-getMapping <- function(project = NULL) {
+getMapping <- function(project = NULL, requiredColsOnly = FALSE) {
   mappings <- mappingNames()
   if (is.null(project)) {
     project <- chooseFromList(names(mappings), type = "mappings",
@@ -25,7 +28,7 @@ getMapping <- function(project = NULL) {
     if (length(project) == 0) stop("No mapping selected, abort.")
   }
   if (! file.exists(project)) {
-    project <- gsub("\\.csv$", "", gsub("^mapping_", "", project))
+    project <- gsub("^mapping_|\\.csv$", "", project)
   }
   filename <- if (project %in% names(mappings)) mappings[project] else project
   if (file.exists(filename)) {
@@ -34,7 +37,7 @@ getMapping <- function(project = NULL) {
 
     # check if more than one column is found
     if (length(data) == 1) {
-      stop(paste0("Failed to read in ", filename, ". Is source file separated by semicolons?"))
+      stop(paste0("Failed to read in ", filename, ". Possible reason: source file must be separated by semicolons!"))
     }
 
     # fail if required columns are missing
@@ -45,9 +48,13 @@ getMapping <- function(project = NULL) {
     }
 
     # return data
+    if (isTRUE(requiredColsOnly)) {
+      return(select(data, all_of(requiredCols)))
+    }
     return(data)
   } else {
-    stop("Mapping file ", filename, " not found.")
+    stop("Mapping file ", filename, " not found in piamInterfaces@",
+         packageVersion("piamInterfaces"), ". Maybe try updating...")
   }
 }
 

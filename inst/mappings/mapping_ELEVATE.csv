@@ -1,32 +1,37 @@
 idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
-# temporary fix. Waste is now separated, but ELEVATE still runs on a REMIND version where this is not the case. Therefore, add Emi|CO2|Energy|Waste and subtract its elements that were introduced only when it was fixed. So it will not affect the new version;;;;;;;;; # https://github.com/remindmodel/development_issues/issues/261 https://github.com/pik-piam/remind2/pull/641
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
-;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
-;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
-;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
-;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
-;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
-;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.2;;;;;Rx
-;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.2;;;;;Rx
-;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
-;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.2;;;;;Rx
-;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.2;;;;;Rx
-;Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
-;Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
-;Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
-;Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
-;Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.2;;;;;Rx
-;Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.2;;;;;Rx
-;Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
-;Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
-;Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
-# ;;;;;;;;;;
-;Price|Imported Carbon;US$2010/t CO2;Price|Carbon|Imported;US$2017/t CO2;0.9096;;;;Tax on regional imported CO2 (for regional aggregrates the weighted price of carbon by subregion should be used);Rx
-;Revenue|government|Import Tax;billion US$2010/yr;Net Taxes|Primary energy import;billion US$2017/yr;0.9096;;;;government revenue from import taxes;R
-;Resource|Extraction|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
-;Resource|Extraction|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
-;Resource|Extraction|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R
-;Extracted|Primary Energy|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
-;Extracted|Primary Energy|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
-;Extracted|Primary Energy|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R
+1;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
+1;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
+1;Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
+2;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
+2;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
+2;Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
+3;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
+3;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.2;;;;;Rx
+3;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.2;;;;;Rx
+4;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
+4;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.2;;;;;Rx
+4;Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.2;;;;;Rx
+5;Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
+5;Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
+5;Gross Emissions|CO2|Energy|Supply;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
+6;Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.2;;;;;Rx
+6;Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.2;;;;;Rx
+6;Gross Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.2;;;;;Rx
+7;Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Gross|Energy|+|Waste;Mt CO2/yr;0.8;;;;;Rx
+7;Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Feedstocks unknown fate;Mt CO2/yr;-0.8;;;;;Rx
+7;Gross Emissions|CO2|Energy|Supply|Other;Mt CO2/yr;Emi|CO2|Energy|Waste|Plastics Incineration;Mt CO2/yr;-0.8;;;;;Rx
+8;Price|Imported Carbon;US$2010/t CO2;Price|Carbon|Imported;US$2017/t CO2;0.9096;;;;Tax on regional imported CO2 (for regional aggregrates the weighted price of carbon by subregion should be used);Rx
+9;Revenue|government|Import Tax;billion US$2010/yr;Net Taxes|Primary energy import;billion US$2017/yr;0.9096;;;;government revenue from import taxes;R
+10;Resource|Extraction|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
+11;Resource|Extraction|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
+12;Resource|Extraction|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R
+13;Extracted|Primary Energy|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
+14;Extracted|Primary Energy|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
+15;Extracted|Primary Energy|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R
+16;Sales|Transport|LDV|BEV;million vehicles/yr;Sales|Transport|Pass|Road|LDV|BEV;million veh;1;;;;;R
+17;Stock|Transport|LDV|BEV;million vehicles/yr;Stock|Transport|Pass|Road|LDV|BEV;million veh;1;;;;;R
+18;Sales|Transport|Truck|Electric;million vehicles/yr;Sales|Transport|Freight|Road|BEV;million veh;1;;;;;R
+19;Stock|Transport|Truck|Electric;million vehicles/yr;Stock|Transport|Freight|Road|BEV;million veh;1;;;;;R
+20;Sales|Transport|Bus|Electric;million vehicles/yr;Sales|Transport|Pass|Road|Bus|BEV;million veh;1;;;;;R
+21;Stock|Transport|Bus|Electric;million vehicles/yr;Stock|Transport|Pass|Road|Bus|BEV;million veh;1;;;;;R
+22;Final Energy|Residential and Commercial|Space Heating|Electricity|Heat Pumps;EJ/yr;FE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1;;;;;R

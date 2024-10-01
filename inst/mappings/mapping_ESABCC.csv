@@ -139,7 +139,7 @@ Energy Service|Transportation|Freight|Domestic Aviation;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Domestic Shipping;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Rail;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Truck;Gtkm/yr;;;;;;;
-Energy Service|Transportation|Passenger;Gpkm/yr;ES|Transport|Pass;bn pkm/yr;1;;;;R
+Energy Service|Transportation|Passenger;Gpkm/yr;ES|Transport|Pass;billion pkm/yr;1;;;;R
 Energy Service|Transportation|Passenger|2W and 3W;Gpkm/yr;;;;;;;
 Energy Service|Transportation|Passenger|Bicycling and Walking;Gpkm/yr;;;;;;;
 Energy Service|Transportation|Passenger|Bus;Gpkm/yr;;;;;;;

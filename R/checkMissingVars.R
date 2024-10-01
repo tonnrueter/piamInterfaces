@@ -19,7 +19,7 @@ checkMissingVars <- function(mifdata, mapping = TRUE, sources = TRUE) {
   if (length(missingVariables) > 0) {
     message("# The following ", length(missingVariables), " variables are expected in the piamInterfaces package",
             if (! isTRUE(mapping)) paste0(" for mapping ", paste(mapping, collapse = ", ")),
-            if (! isTRUE(sources)) paste0(" and source ", sources),
+            if (! isTRUE(sources)) paste0(" with source ", sources),
             ", but cannot be found in the reporting:\n- ", paste(missingVariables, collapse = ",\n- "), "\n")
   }
   return(invisible(missingVariables))

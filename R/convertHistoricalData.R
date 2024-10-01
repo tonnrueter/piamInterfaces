@@ -31,7 +31,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
   m <- NULL
 
   for (i in project) {
-    m <- rbind(m, getMapping(i))
+    m <- rbind(m, getMapping(i, requiredColsOnly = TRUE))
   }
 
   varmap <- m %>%
