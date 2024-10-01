@@ -54,7 +54,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
         if ("value" %in% names(mifdata)) {
           convfact <- convertSingle(x = 1, iso3c = "USA",
                                     unit_in = "constant 2005 Int$PPP", unit_out = "constant 2017 Int$PPP")
-          if (grepl("/(.illion )?US\\$(20)?05|/USDMER05", mifunit)) convfact <- 1 / convfact
+          if (grepl("/.*US\\$(20)?05|/.*USDMER05", mifunit)) convfact <- 1 / convfact
           mifdata <- mutate(mifdata,
                        unit = factor(ifelse(.data$variable %in% mifvar, templateunit, as.character(.data$unit))),
                        value = ifelse(.data$variable %in% mifvar, round(.data$value * convfact, 7), .data$value)) %>%
