@@ -141,7 +141,7 @@ Energy Service|Bunkers|Passenger|International Shipping;Gpkm/yr;;;;;;;
 Energy Service|Commercial|Floor Space;bn m2/yr;;;;;;;
 Energy Service|Residential and Commercial|Floor Space;bn m2/yr;ES|Buildings|Floor Space;bn m2;1;;;;R
 Energy Service|Residential|Floor Space;bn m2/yr;;;;;;;
-Energy Service|Transportation|Freight;Gtkm/yr;ES|Transport|Freight;bn tkm/yr;1;;;;R
+Energy Service|Transportation|Freight;Gtkm/yr;ES|Transport|Freight;billion tkm/yr;1;;;;R
 Energy Service|Transportation|Freight|Domestic Aviation;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Domestic Shipping;Gtkm/yr;;;;;;;
 Energy Service|Transportation|Freight|Rail;Gtkm/yr;;;;;;;
