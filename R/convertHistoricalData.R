@@ -10,6 +10,7 @@
 #'  One can be called 'REMIND' or 'CountryCode' and contains the regions in the data.
 #'  The second can be called 'project_region' or 'RegionCode', to which the first is mapped.
 #'  You can also specify the filename part before the .csv from inst/regionmapping
+#' @param mainReg if regionMapping is specified, additional main region that is kept as is
 #' @importFrom dplyr %>% mutate select right_join left_join
 #' @importFrom quitte read.quitte as.quitte
 #' @importFrom piamutils deletePlus
@@ -24,7 +25,7 @@
 #' )
 #' }
 #' @export
-convertHistoricalData <- function(mif, project, regionMapping = NULL) {
+convertHistoricalData <- function(mif, project, regionMapping = NULL, mainReg = "World") {
 
   hist <- suppressWarnings(as.quitte(mif, na.rm = TRUE)) %>%
     rename("hist_variable" = "variable", "hist_unit" = "unit")
@@ -73,7 +74,9 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL) {
     if (length(from) == 0 || length(to) == 0) {
       stop("regionMapping must contain columns 'REMIND'/'project_region' or 'CountryCode'/'RegionCode'")
     }
-
+    if (length(mainReg) == 1 && ! mainReg %in% regmap[[to]]) {
+      rbind(select(regmap, all_of(to), all_of(from)), c(mainReg, mainReg))
+    }
     out <- left_join(out, regmap, by = c("region" = from)) %>%
       filter(!is.na(.data[[to]])) %>%
       select("model", "scenario", "region" = all_of(to), "variable", "unit", "period", "value")
