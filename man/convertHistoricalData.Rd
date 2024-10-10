@@ -5,7 +5,7 @@
 \title{Converts data in historical.mif to match project-specific variables and
 regions so that it can be used for comparison in an intermodel comparison project}
 \usage{
-convertHistoricalData(mif, project, regionMapping = NULL)
+convertHistoricalData(mif, project, regionMapping = NULL, mainReg = "World")
 }
 \arguments{
 \item{mif}{quitte object with historical data or path to historical.mif}
@@ -17,6 +17,8 @@ project regions, must contain two columns:
 One can be called 'REMIND' or 'CountryCode' and contains the regions in the data.
 The second can be called 'project_region' or 'RegionCode', to which the first is mapped.
 You can also specify the filename part before the .csv from inst/regionmapping}
+
+\item{mainReg}{if regionMapping is specified, additional main region that is kept as is}
 }
 \description{
 Converts data in historical.mif to match project-specific variables and

@@ -28,10 +28,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 13;Extracted|Primary Energy|Coal;EJ/yr;Res|Extraction|Coal;EJ/yr;1;;;;Extracted coal;R
 14;Extracted|Primary Energy|Gas;EJ/yr;Res|Extraction|Gas;EJ/yr;1;;;;Extracted gas;R
 15;Extracted|Primary Energy|Oil;EJ/yr;Res|Extraction|Oil;EJ/yr;1;;;;Extracted oil;R
-16;Sales|Transport|LDV|BEV;million vehicles/yr;Sales|Transport|Pass|Road|LDV|BEV;million veh;1;;;;;R
-17;Stock|Transport|LDV|BEV;million vehicles/yr;Stock|Transport|Pass|Road|LDV|BEV;million veh;1;;;;;R
-18;Sales|Transport|Truck|Electric;million vehicles/yr;Sales|Transport|Freight|Road|BEV;million veh;1;;;;;R
-19;Stock|Transport|Truck|Electric;million vehicles/yr;Stock|Transport|Freight|Road|BEV;million veh;1;;;;;R
-20;Sales|Transport|Bus|Electric;million vehicles/yr;Sales|Transport|Pass|Road|Bus|BEV;million veh;1;;;;;R
-21;Stock|Transport|Bus|Electric;million vehicles/yr;Stock|Transport|Pass|Road|Bus|BEV;million veh;1;;;;;R
+16;Sales|Transport|LDV|BEV;million vehicles/yr;Sales|Transport|Pass|Road|LDV|BEV;million veh;1;;;;;T
+17;Stock|Transport|LDV|BEV;million vehicles/yr;Stock|Transport|Pass|Road|LDV|BEV;million veh;1;;;;;T
+18;Sales|Transport|Truck|Electric;million vehicles/yr;Sales|Transport|Freight|Road|BEV;million veh;1;;;;;T
+19;Stock|Transport|Truck|Electric;million vehicles/yr;Stock|Transport|Freight|Road|BEV;million veh;1;;;;;T
+20;Sales|Transport|Bus|Electric;million vehicles/yr;Sales|Transport|Pass|Road|Bus|BEV;million veh;1;;;;;T
+21;Stock|Transport|Bus|Electric;million vehicles/yr;Stock|Transport|Pass|Road|Bus|BEV;million veh;1;;;;;T
 22;Final Energy|Residential and Commercial|Space Heating|Electricity|Heat Pumps;EJ/yr;FE|Buildings|Heating|Electricity|Heat pump;EJ/yr;1;;;;;R
