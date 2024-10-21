@@ -75,7 +75,7 @@ convertHistoricalData <- function(mif, project, regionMapping = NULL, mainReg = 
       stop("regionMapping must contain columns 'REMIND'/'project_region' or 'CountryCode'/'RegionCode'")
     }
     if (length(mainReg) == 1 && ! mainReg %in% regmap[[to]]) {
-      rbind(select(regmap, all_of(to), all_of(from)), c(mainReg, mainReg))
+      regmap <- rbind(select(regmap, all_of(to), all_of(from)), c(mainReg, mainReg))
     }
     out <- left_join(out, regmap, by = c("region" = from)) %>%
       filter(!is.na(.data[[to]])) %>%
