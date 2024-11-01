@@ -2397,8 +2397,7 @@ Land Cover|Forest|Managed|Reforestation;million ha;2;Reforestation area;;;Resour
 Land Cover|Forest|Managed|Timber Plantations;million ha;2;Area of timber plantations;;;Resources|Land Cover|Forest|Managed Forest|+|Plantations;million ha;;;M
 Land Cover|Forest|Natural Forest|Primary Forest;million ha;;Undisturbed primary natural forests;;;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;mapping taken from SHAPE;M
 Land Cover|Forest|Natural Forest|Secondary Forest;million ha;;Modified natural forests and secondary forests from natural succession;;;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;mapping taken from SHAPE;M
-Land Cover|Forest|Primary Forest;million ha;2;Primary forest area;revise for next submission when Land Cover|Forest|Natural is back in the template;;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;M
-Land Cover|Forest|Secondary Forest;million ha;2;Secondary forest area;revise for next submission when Land Cover|Forest|Natural is back in the template;;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;M
+Land Cover|Forest|Natural Forest;million ha;2;Undisturbed (primary), modified and secondary forests from natural succession;Florian, please check if correct (Laurin);;Resources|Land Cover|Forest|Natural Forest;million ha;;;M
 Land Cover|Other Land;million ha;2;Other land cover that does not fit into any other category;;;Resources|Land Cover|+|Other Land;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Pasture;million ha;2;Pasture, not only high quality rangeland, based on FAO definition of permanent meadows and pastures;;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Material Recycling|Aluminum;Mt/year;;Production of recycled aluminum;;;;;;;
@@ -2800,7 +2799,7 @@ Population|Substandard Accommodation;million;;Number of people living in substan
 Population|Urban;million;2;Total population living in urban areas;;;Population|Urban;million;;mapping taken from NAVIGATE, NAVIGATE category: demography;S
 Population|Urban [Share];%;;Share of population living in urban areas;;Population;;;;;
 Population|Without Education [Share];%;;Share of people aged 15 or older without education, not counting those with incomplete primary education;;Population;;;;;
-Price|Agriculture|Livestock [Index];Index (2020 = 1);;Weighted average price index of livestock;;Production|+|Livestock products;Prices|Index2020|Agriculture|Food products|Livestock;1;;additional mapping taken from additional_SHAPE;M
+Price|Agriculture|Food Products|Livestock [Index];Index (2020 = 1);;Weighted average price index of livestock;;Production|+|Livestock products;Prices|Index2020|Agriculture|Food products|Livestock;1;;additional mapping taken from additional_SHAPE;M
 Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2017/t CO2;0.9096;mapping taken from NAVIGATE, NAVIGATE category: policy;R
 Price|Carbon [relative to OECD];%;;Carbon price relative to OECD carbon price;;;;;;;
 Primary Energy;EJ/yr;;Total primary energy consumption (direct equivalent);;;PE;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (primary);R
@@ -3057,8 +3056,7 @@ Terrestrial Biodiversity|Mean Species Abundance;%;;Terrestrial biodiversity meas
 Terrestrial Biodiversity|Mean Species Abundance|Plants;%;;Terrestrial biodiversity of plant species measured in Mean Species Abundance (MSA);;Land Cover;;;;;
 Terrestrial Biodiversity|Mean Species Abundance|Vertebrates;%;;Terrestrial biodiversity of vertebrate species measured in Mean Species Abundance (MSA);;Land Cover;;;;;
 Terrestrial Biodiversity|Shannon Crop Diversity Index;index;;Crop diversity measured by the Shannon index accounting for crop richness and abundance;;;Biodiversity|Shannon crop area diversity index;unitless;;mapping taken from SHAPE;M
-Trade|Export [Value];billion USD_2010/yr;1;total exports measured in monetary quantities;;;;;;;
-Trade|Import [Value];billion USD_2010/yr;1;total imports measured in monetary quantities;;;;;;;
+Trade|Goods [Value];billion USD_2010/yr;1;Net exports of all goods measured in monetary quantities;;;;;;;
 Useful Energy|Commercial [per capita];GJ/cap/yr;;Useful energy per capita for buildings;;Population;;;;;
 Useful Energy|Industry [per capita];GJ/cap/yr;;Useful energy per capita for industry;;Population;;;;;
 Useful Energy|Residential [per capita];GJ/cap/yr;;Useful energy per capita for buildings;;Population;;;;;
@@ -3068,7 +3066,6 @@ Value Added|Agriculture;billion USD_2010/yr;1;Value added by the the aggregated 
 Value Added|Industry;billion USD_2010/yr;1;Value added by the the aggregated industrial sector (ISIC Rev.4 B-F);;;;;;;
 Value Added|Services;billion USD_2010/yr;1;Value added by the the aggregated services sector (ISIC Rev.4 G-X);;;;;;;
 Water Ecosystems;million ha;3;All water ecosystems;;;;;;;
-Water Ecosystems|Forests;million ha;3;All water ecosystems;;;;;;;
 Water Ecosystems|Lakes;million ha;3;All water ecosystems;;;;;;;
 Water Ecosystems|Rivers;million ha;3;All water ecosystems;;;;;;;
 Water Ecosystems|Wetlands;million ha;3;Wetlands;;;;;;;
@@ -3078,7 +3075,6 @@ Water Ecosystems|Wetlands|Peatlands|Intact;million ha;3;Intact peatlands;;;Resou
 Water Ecosystems|Wetlands|Peatlands|Rewetted;million ha;3;Rewetted peatlands;;;Resources|Peatland|+|Rewetted;million ha;;;M
 Water Quality|Nitrogen Concentration;mg N/l;;Concentration of nitrogen in water at river mouths;;;;;;;
 Water Quality|Phosphorus Concentration;mg P/l;;Concentration of phosphorus in water at river mouths;;;;;;;
-Yield|Cropland;t DM/ha/yr;;Yield of total cropland;;;;;;;
 Yield|Cropland|Cereals;t DM/ha/yr;;Yield of cropland with maize, rice, temperate cereals and tropical cereals;;Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;Productivity|Yield|Crops|+|Cereals;t DM/ha;;;M
 Yield|Cropland|Energy Crops;t DM/ha/yr;;Yield of cropland with short rotation grasses, short rotation trees;;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;Productivity|Yield|+|Bioenergy crops;t DM/ha;;;M
 Yield|Cropland|Oil Crops;t DM/ha/yr;;Yield of cropland with cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower;;Resources|Land Cover|Cropland|Croparea|Crops|+|Oil crops;Productivity|Yield|Crops|+|Oil crops;t DM/ha;;;M
