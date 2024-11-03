@@ -327,7 +327,8 @@ Carbon Removal|Land Use;Mt CO2/yr;1;Gross removals of carbon dioxide (CO2) throu
 Carbon Removal|Land Use|Agroforestry;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through intentionally integrating trees with crops or pasture on the same land;, Values should be reported as positive numbers.;;;;;;
 Carbon Removal|Land Use|Biochar;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through conversion of biomass to recalcitrant carbon via pyrolysis and its subsequent application to croplands to increase soil carbon stocks;, Values should be reported as positive numbers.;;;;;;
 Carbon Removal|Land Use|Forest Management;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through improved forest management;, Values should be reported as positive numbers.;;;;;;
-Carbon Removal|Land Use|Re/Afforestation;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through reforestation (natural forest) or afforestation (monoculture/non-native species);, Values should be reported as positive numbers.;;;;;;
+Carbon Removal|Land Use|Re/Afforestation;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through reforestation (natural forest) or afforestation (monoculture/non-native species);, Values should be reported as positive numbers.;;Emissions|CO2|Land RAW|Land-use Change|Regrowth|+|CO2-price AR;Mt CO2/yr;-1;;M
+Carbon Removal|Land Use|Re/Afforestation;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through reforestation (natural forest) or afforestation (monoculture/non-native species);, Values should be reported as positive numbers.;;Emissions|CO2|Land RAW|Land-use Change|Regrowth|+|NPI_NDC AR;Mt CO2/yr;-1;;M
 Carbon Removal|Land Use|Re/Afforestation|Natural Forest;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through reforestation and/or afforestation for carbon sequestration with native tree species resembling natural vegetation;, Values should be reported as positive numbers.;;;;;;
 Carbon Removal|Land Use|Re/Afforestation|Plantation;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through reforestation and/or afforestation for carbon sequestration with non-native species and/or as monoculture plantation;, Values should be reported as positive numbers.;;;;;;
 Carbon Removal|Land Use|Soil Carbon Management;Mt CO2/yr;2;Gross removals of carbon dioxide (CO2) through enhancing the carbon content of soils;, Values should be reported as positive numbers.;;;;;;
@@ -1071,11 +1072,12 @@ Energy Service|Transportation|Passenger|Road;billion pkm/yr;;Energy service dema
 Expenditure|Government;billion USD_2010/yr;1;Total expenditure by governments;;;;;;;
 Expenditure|Households;billion USD_2010/yr;1;Total expenditure by households;;;;;;;
 Expenditure|Households|Food [Share];%;;Share of food expenditure in total income;;GDP|PPP;SDG|SDG02|Food expenditure share;income;100;additional mapping taken from additional_SHAPE;M
+Fertilizer Use|Nitrogen;Tg N/yr;1;Nitrogen fertilizer use on cropland (synthetic and organic);;;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;M
+Fertilizer Use|Nitrogen;Tg N/yr;1;Nitrogen fertilizer use on cropland (synthetic and organic);;;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;M
 Fertilizer Use|Nitrogen;Tg N/yr;1;Nitrogen fertilizer use on cropland (synthetic and organic);;;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;M
 Fertilizer Use|Nitrogen|Organic;Tg N/yr;2;Organic nitrogen fertilizer use on cropland (e.g. manure);;;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;M
 Fertilizer Use|Nitrogen|Organic;Tg N/yr;2;Organic nitrogen fertilizer use on cropland (e.g. manure);;;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;M
-Fertilizer Use|Nitrogen|Organic;Tg N/yr;2;Organic nitrogen fertilizer use on cropland (e.g. manure);;;Resources|Nitrogen|Cropland Budget|Inputs|+|Recycled Aboveground Crop Residues;Mt Nr/yr;;;M
-Fertilizer Use|Nitrogen|Synthetic;Tg N/yr;2;Synthetic nitrogen fertilizer use on cropland;;;;;;;
+Fertilizer Use|Nitrogen|Synthetic;Tg N/yr;2;Synthetic nitrogen fertilizer use on cropland;;;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;M
 Fertilizer Use|Phosphorus;Tg P/yr;2;Phosphorus fertilizer use on cropland (synthetic and organic);;;;;;;
 Fertilizer Use|Phosphorus|Organic;Tg P/yr;2;Organic phosphorus fertilizer use on cropland (e.g. rock phosphate, manure and compost);;;;;;;
 Fertilizer Use|Phosphorus|Synthetic;Tg P/yr;2;Synthetic phosphorus fertilizer use on cropland;;;;;;;
@@ -3243,28 +3245,32 @@ Final Energy|Transportation|Truck|Solids;EJ/yr;1;Final energy consumption by the
 Final Energy|Transportation|Truck|Solids|Biomass;EJ/yr;2;Final energy consumption by the trucking sector of solid biomass (e.g., commercial charcoal, wood chips, wood pellets), not including traditional bioenergy;;;;;;;
 Final Energy|Transportation|Truck|Solids|Coal;EJ/yr;2;Final energy consumption by the trucking sector of coal, lignite, and derived products (e.g., coke, briquettes);;;;;;;
 Final Energy|Waste;EJ/yr;;Final energy consumption of non-renewable waste;;;;;;;
-Food Availability [per capita];kcal/cap/day;1;Amount of crops and livestock products available per capita for consumption;;Population;;;;;
-Food Availability|Crops [per capita];kcal/cap/day;1;Amount of crops available per capita for consumption;;Population;;;;;
-Food Availability|Crops|Cereals [per capita];kcal/cap/day;3;Amount of cereals (maize, rice, temperate cereals and tropical cereals) available per capita for consumption;;Population;;;;;
-Food Availability|Crops|Oil Crops [per capita];kcal/cap/day;3;Amount of oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower) available per capita for consumption;;Population;;;;;
-Food Availability|Crops|Other Crops [per capita];kcal/cap/day;3;Amount of other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots) available per capita for consumption;;Population;;;;;
-Food Availability|Crops|Sugar Crops [per capita];kcal/cap/day;3;Amount of sugar crops (sugar beet, sugar cane) available per capita for consumption;;Population;;;;;
-Food Availability|Livestock [per capita];kcal/cap/day;1;Amount of livestock products available per capita for consumption;;Population;;;;;
-Food Availability|Livestock|Dairy [per capita];kcal/cap/day;3;Amount of dairy products (milk, eggs) available per capita for consumption;;Population;;;;;
-Food Availability|Livestock|Non-Ruminant [per capita];kcal/cap/day;3;Amount of monogastric meat (pig, poultry) available per capita for consumption;;Population;;;;;
-Food Availability|Livestock|Ruminant [per capita];kcal/cap/day;3;Amount of ruminant meat (cattle, goat, sheep) available per capita for consumption;;Population;;;;;
-Food Intake [per capita];kcal/cap/day;2;Amount of crops and livestock products consumed per capita;;Population;;;;;
-Food Intake|Crops [per capita];kcal/cap/day;2;Amount of crops consumed per capita;;Population;;;;;
-Food Intake|Crops|Cereals [per capita];kcal/cap/day;3;Amount of cereals (maize, rice, temperate cereals and tropical cereals) consumed per capita;;Population;;;;;
-Food Intake|Crops|Oil Crops [per capita];kcal/cap/day;3;Amount of oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower) consumed per capita;;Population;;;;;
-Food Intake|Crops|Other Crops [per capita];kcal/cap/day;3;Amount of other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots) consumed per capita;;Population;;;;;
-Food Intake|Crops|Sugar Crops [per capita];kcal/cap/day;3;Amount of sugar crops (sugar beet, sugar cane) consumed per capita;;Population;;;;;
-Food Intake|Livestock [per capita];kcal/cap/day;2;Amount of livestock products consumed per capita;;Population;;;;;
-Food Intake|Livestock|Dairy [per capita];kcal/cap/day;3;Amount of dairy products (milk, eggs) consumed per capita;;Population;;;;;
-Food Intake|Livestock|Non-Ruminant [per capita];kcal/cap/day;3;Amount of monogastric meat (pig, poultry) consumed per capita;;Population;;;;;
-Food Intake|Livestock|Ruminant [per capita];kcal/cap/day;3;Amount of ruminant meat (cattle, goat, sheep) consumed per capita;;Population;;;;;
-Food Waste [per capita];kcal/cap/day;2;Amount of food (crops and livestock) per capita that is disposed and not consumed (difference between food availability and food intake), including food losses and food waste;;Population;;;;;
-Forest Area Change;million ha/yr;3;Annual net change in total forest area;, This variable should be computed as yearly average change between the previous and the current reported time step.;;;;;;
+Food Availability [per capita];kcal/cap/day;1;Amount of crops and livestock products available per capita for consumption;;Population;Nutrition|Calorie Supply;kcal/capita/day;;;M
+Food Availability|Crops [per capita];kcal/cap/day;1;Amount of crops available per capita for consumption;;Population;Nutrition|Calorie Supply|+|Crops;kcal/capita/day;;;M
+Food Availability|Crops|Cereals [per capita];kcal/cap/day;3;Amount of cereals (maize, rice, temperate cereals and tropical cereals) available per capita for consumption;;Population;Nutrition|Calorie Supply|Crops|+|Cereals;kcal/capita/day;;;M
+Food Availability|Crops|Oil Crops [per capita];kcal/cap/day;3;Amount of oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower) available per capita for consumption;;Population;Nutrition|Calorie Supply|Crops|+|Oil crops;kcal/capita/day;;;M
+Food Availability|Crops|Other Crops [per capita];kcal/cap/day;3;Amount of other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots) available per capita for consumption;;Population;Nutrition|Calorie Supply|Crops|+|Other crops;kcal/capita/day;;;M
+Food Availability|Crops|Sugar Crops [per capita];kcal/cap/day;3;Amount of sugar crops (sugar beet, sugar cane) available per capita for consumption;;Population;Nutrition|Calorie Supply|Crops|+|Sugar crops;kcal/capita/day;;;M
+Food Availability|Livestock [per capita];kcal/cap/day;1;Amount of livestock products available per capita for consumption;;Population;Nutrition|Calorie Supply|+|Livestock products;kcal/capita/day;;;M
+Food Availability|Livestock|Dairy [per capita];kcal/cap/day;3;Amount of dairy products (milk, eggs) available per capita for consumption;;Population;Nutrition|Calorie Supply|Livestock products|+|Dairy;kcal/capita/day;;;M
+Food Availability|Livestock|Dairy [per capita];kcal/cap/day;3;Amount of dairy products (milk, eggs) available per capita for consumption;;Population;Nutrition|Calorie Supply|Livestock products|+|Eggs;kcal/capita/day;;;M
+Food Availability|Livestock|Non-Ruminant [per capita];kcal/cap/day;3;Amount of monogastric meat (pig, poultry) available per capita for consumption;;Population;Nutrition|Calorie Supply|Livestock products|+|Monogastric meat;kcal/capita/day;;;M
+Food Availability|Livestock|Non-Ruminant [per capita];kcal/cap/day;3;Amount of monogastric meat (pig, poultry) available per capita for consumption;;Population;Nutrition|Calorie Supply|Livestock products|+|Poultry meat;kcal/capita/day;;;M
+Food Availability|Livestock|Ruminant [per capita];kcal/cap/day;3;Amount of ruminant meat (cattle, goat, sheep) available per capita for consumption;;Population;Nutrition|Calorie Supply|Livestock products|+|Ruminant meat;kcal/capita/day;;;M
+Food Intake [per capita];kcal/cap/day;2;Amount of crops and livestock products consumed per capita;;Population;Nutrition|Calorie Intake;kcal/capita/day;;;M
+Food Intake|Crops [per capita];kcal/cap/day;2;Amount of crops consumed per capita;;Population;Nutrition|Calorie Intake|+|Crops;kcal/capita/day;;;M
+Food Intake|Crops|Cereals [per capita];kcal/cap/day;3;Amount of cereals (maize, rice, temperate cereals and tropical cereals) consumed per capita;;Population;Nutrition|Calorie Intake|Crops|+|Cereals;kcal/capita/day;;;M
+Food Intake|Crops|Oil Crops [per capita];kcal/cap/day;3;Amount of oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower) consumed per capita;;Population;Nutrition|Calorie Intake|Crops|+|Oil crops;kcal/capita/day;;;M
+Food Intake|Crops|Other Crops [per capita];kcal/cap/day;3;Amount of other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots) consumed per capita;;Population;Nutrition|Calorie Intake|Crops|+|Other crops;kcal/capita/day;;;M
+Food Intake|Crops|Sugar Crops [per capita];kcal/cap/day;3;Amount of sugar crops (sugar beet, sugar cane) consumed per capita;;Population;Nutrition|Calorie Intake|Crops|+|Sugar crops;kcal/capita/day;;;M
+Food Intake|Livestock [per capita];kcal/cap/day;2;Amount of livestock products consumed per capita;;Population;Nutrition|Calorie Intake|+|Livestock products;kcal/capita/day;;;M
+Food Intake|Livestock|Dairy [per capita];kcal/cap/day;3;Amount of dairy products (milk, eggs) consumed per capita;;Population;Nutrition|Calorie Intake|Livestock products|+|Dairy;kcal/capita/day;;;M
+Food Intake|Livestock|Dairy [per capita];kcal/cap/day;3;Amount of dairy products (milk, eggs) consumed per capita;;Population;Nutrition|Calorie Intake|Livestock products|+|Eggs;kcal/capita/day;;;M
+Food Intake|Livestock|Non-Ruminant [per capita];kcal/cap/day;3;Amount of monogastric meat (pig, poultry) consumed per capita;;Population;Nutrition|Calorie Intake|Livestock products|+|Monogastric meat;kcal/capita/day;;;M
+Food Intake|Livestock|Non-Ruminant [per capita];kcal/cap/day;3;Amount of monogastric meat (pig, poultry) consumed per capita;;Population;Nutrition|Calorie Intake|Livestock products|+|Poultry meat;kcal/capita/day;;;M
+Food Intake|Livestock|Ruminant [per capita];kcal/cap/day;3;Amount of ruminant meat (cattle, goat, sheep) consumed per capita;;Population;Nutrition|Calorie Intake|Livestock products|+|Ruminant meat;kcal/capita/day;;;M
+Food Waste [per capita];kcal/cap/day;2;Amount of food (crops and livestock) per capita that is disposed and not consumed (difference between food availability and food intake), including food losses and food waste;;Population;SDG|SDG12|Food waste;kcal/capita/day;;;M
+Forest Area Change;million ha/yr;3;Annual net change in total forest area;, This variable should be computed as yearly average change between the previous and the current reported time step.;;Resources|NetForestChange;Mha/yr;;;M
 Forest Area Change|Deforestation;million ha/yr;3;Annual gross deforested area;, This variable should be computed as yearly average change between the previous and the current reported time step.;;;;;;
 Forest Area Change|Deforestation|Primary;million ha/yr;3;Annual gross loss of primary forest area;, This variable should be computed as yearly average change between the previous and the current reported time step.;;;;;;
 Forest Area Change|Deforestation|Secondary;million ha/yr;3;Annual gross loss of secondary forest area;, This variable should be computed as yearly average change between the previous and the current reported time step.;;;;;;
@@ -3277,20 +3283,22 @@ Forest Area Change|Forest Expansion|Planted|Plantation;million ha/yr;3;Annual gr
 Forest Area Change|Forest Expansion|Planted|Plantation|Re/Afforestation;million ha/yr;3;Annual gross expansion of carbon plantation area through reforestation and/or afforestation with monoculture and/or non-native species;, This variable should be computed as yearly average change between the previous and the current reported time step.;;;;;;
 Forest Area Change|Forest Expansion|Planted|Plantation|Timber;million ha/yr;3;Annual gross expansion of timber plantation area;, This variable should be computed as yearly average change between the previous and the current reported time step.;;;;;;
 Forest Area Change|Forest Expansion|Secondary;million ha/yr;3;Annual gross expansion of secondary forest area;, This variable should be computed as yearly average change between the previous and the current reported time step.;;;;;;
-Forestry Demand|Roundwood;million m3/yr;1;Total roundwood demand;;;;;;;
-Forestry Demand|Roundwood|Industrial Roundwood;million m3/yr;2;Demand for industrial roundwood;;;;;;;
+Forestry Demand|Roundwood;million m3/yr;1;Total roundwood demand;;;Timber|Volumetric|Demand|+|Roundwood;Mm3/yr;;;M
+Forestry Demand|Roundwood|Industrial Roundwood;million m3/yr;2;Demand for industrial roundwood;;;Timber|Volumetric|Demand|Industrial roundwood;Mm3/yr;;;M
+Forestry Demand|Roundwood|Industrial Roundwood;million m3/yr;2;Demand for industrial roundwood;;;Timber|Volumetric|Demand|Timber for construction;Mm3/yr;;;M
 Forestry Demand|Roundwood|Industrial Roundwood|Energy Use;million m3/yr;2;Demand for industrial roundwood for energy use;;;;;;;
 Forestry Demand|Roundwood|Industrial Roundwood|Material Use;million m3/yr;2;Demand for industrial roundwood to be used as material for wood products;;;;;;;
-Forestry Demand|Roundwood|Wood Fuel;million m3/yr;2;Demand for wood fuel;;;;;;;
+Forestry Demand|Roundwood|Wood Fuel;million m3/yr;2;Demand for wood fuel;;;Timber|Volumetric|Demand|Wood fuel;Mm3/yr;;;M
 Forestry Demand|Semi-Finished|Chemical Pulp;million tDM/yr;3;Demand for chemical pulp;;;;;;;
 Forestry Demand|Semi-Finished|Fiberboard;million m3/yr;3;Demand for fiberboard;;;;;;;
 Forestry Demand|Semi-Finished|Mechanical Pulp;million tDM/yr;3;Demand for mechanical pulp;;;;;;;
 Forestry Demand|Semi-Finished|Other Wood Products;million m3/yr;3;Demand for other wood products;;;;;;;
 Forestry Demand|Semi-Finished|Plywood;million m3/yr;3;Demand for plywood;;;;;;;
 Forestry Demand|Semi-Finished|Sawnwood;million m3/yr;3;Demand for sawnwood;;;;;;;
-Forestry Production|Roundwood;million m3/yr;1;Total roundwood production;;;;;;;
-Forestry Production|Roundwood|Industrial Roundwood;million m3/yr;2;Prodution of industrial roundwood;;;;;;;
-Forestry Production|Roundwood|Wood Fuel;million m3/yr;2;Prodution of wood fuel;;;;;;;
+Forestry Production|Roundwood;million m3/yr;1;Total roundwood production;;;Timber|Volumetric|Production|+|Roundwood;Mm3/yr;;;M
+Forestry Production|Roundwood|Industrial Roundwood;million m3/yr;2;Prodution of industrial roundwood;;;Timber|Volumetric|Production|Industrial roundwood;Mm3/yr;;;M
+Forestry Production|Roundwood|Industrial Roundwood;million m3/yr;2;Prodution of industrial roundwood;;;Timber|Volumetric|Production|Timber for construction;Mm3/yr;;;M
+Forestry Production|Roundwood|Wood Fuel;million m3/yr;2;Prodution of wood fuel;;;Timber|Volumetric|Production|Wood fuel;Mm3/yr;;;M
 Forestry Production|Semi-Finished|Chemical Pulp;million tDM/yr;3;Production of chemical pulp;;;;;;;
 Forestry Production|Semi-Finished|Fiberboard;million m3/yr;3;Production of fiberboard;;;;;;;
 Forestry Production|Semi-Finished|Mechanical Pulp;million tDM/yr;3;Production of mechanical pulp;;;;;;;
@@ -3507,41 +3515,38 @@ Land Cover;million ha;1;Total land cover;;;Resources|Land Cover;million ha;;mapp
 Land Cover|Built-Up Area;million ha;1;Built-up land associated with human settlements;;;Resources|Land Cover|+|Urban Area;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland;million ha;1;Arable land, i.e. land in bioenergy crop, food, and feed/fodder crops, permanent crops as well as other arable land (physical area);;;Resources|Land Cover|+|Cropland;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Land Cover|Cropland|Cereals;million ha;2;Cropland for cereals (maize, rice, temperate cereals and tropical cereals);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Cereals;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Cropland|Cereals|Irrigated;million ha;3;Irrigated cropland (physical area) for cereals (maize, rice, temperate cereals and tropical cereals);;;;;;;
-Land Cover|Cropland|Cereals|Rainfed;million ha;3;Rainfed cropland (physical area) for cereals (maize, rice, temperate cereals and tropical cereals);;;;;;;
+Land Cover|Cropland|Cereals|Irrigated;million ha;3;Irrigated cropland (physical area) for cereals (maize, rice, temperate cereals and tropical cereals);;;Resources|Land Cover|Cropland|Croparea|Crops|Cereals|++|rainfed;million ha;;;M
+Land Cover|Cropland|Cereals|Rainfed;million ha;3;Rainfed cropland (physical area) for cereals (maize, rice, temperate cereals and tropical cereals);;;Resources|Land Cover|Cropland|Croparea|++|Rainfed;million ha;;;M
 Land Cover|Cropland|Energy Crops;million ha;2;Cropland for second-generation bioenergy crops (short rotation grasses, short rotation trees);;;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Cropland|Energy Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for second-generation bioenergy crops (short rotation grasses, short rotation trees);;;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|irrigated;million ha;;;M
-Land Cover|Cropland|Energy Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for second-generation bioenergy crops (short rotation grasses, short rotation trees);;;;;;;
-Land Cover|Cropland|Irrigated;million ha;1;Irrigated cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|irrigated;million ha;;;M
-Land Cover|Cropland|Irrigated;million ha;1;Irrigated cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|Forage|irrigated;million ha;;;M
-Land Cover|Cropland|Irrigated;million ha;1;Irrigated cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|irrigated;million ha;;;M
+Land Cover|Cropland|Energy Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for second-generation bioenergy crops (short rotation grasses, short rotation trees);;;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|++|irrigated;million ha;;;M
+Land Cover|Cropland|Energy Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for second-generation bioenergy crops (short rotation grasses, short rotation trees);;;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|++|rainfed;million ha;;;M
+Land Cover|Cropland|Irrigated;million ha;1;Irrigated cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|++|Irrigated;million ha;;;M
 Land Cover|Cropland|Oil Crops;million ha;2;Cropland for oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Oil crops;million ha;;;M
-Land Cover|Cropland|Oil Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;;;;;
-Land Cover|Cropland|Oil Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;;;;;
+Land Cover|Cropland|Oil Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|++|irrigated;million ha;;;M
+Land Cover|Cropland|Oil Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Resources|Land Cover|Cropland|Croparea|Crops|Oil crops|++|rainfed;million ha;;;M
 Land Cover|Cropland|Other Crops;million ha;2;Cropland for other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Other crops;million ha;;;M
-Land Cover|Cropland|Other Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;;;;;
-Land Cover|Cropland|Other Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;;;;;
-Land Cover|Cropland|Rainfed;million ha;1;Rainfed cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|Crops|rainfed;million ha;;;M
-Land Cover|Cropland|Rainfed;million ha;1;Rainfed cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|Forage|rainfed;million ha;;;M
-Land Cover|Cropland|Rainfed;million ha;1;Rainfed cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|rainfed;million ha;;;M
+Land Cover|Cropland|Other Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|++|irrigated;million ha;;;M
+Land Cover|Cropland|Other Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Resources|Land Cover|Cropland|Croparea|Crops|Other crops|++|rainfed;million ha;;;M
+Land Cover|Cropland|Rainfed;million ha;1;Rainfed cropland (physical area);;;Resources|Land Cover|Cropland|Croparea|++|Rainfed;million ha;;;M
 Land Cover|Cropland|Sugar Crops;million ha;2;Cropland for sugar crops (sugar beet, sugar cane);;;Resources|Land Cover|Cropland|Croparea|Crops|+|Sugar crops;million ha;;;M
-Land Cover|Cropland|Sugar Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for sugar crops (sugar beet, sugar cane);;;;;;;
-Land Cover|Cropland|Sugar Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for sugar crops (sugar beet, sugar cane);;;;;;;
+Land Cover|Cropland|Sugar Crops|Irrigated;million ha;3;Irrigated cropland (physical area) for sugar crops (sugar beet, sugar cane);;;Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar beet|++|irrigated;million ha;;;M
+Land Cover|Cropland|Sugar Crops|Rainfed;million ha;3;Rainfed cropland (physical area) for sugar crops (sugar beet, sugar cane);;;Resources|Land Cover|Cropland|Croparea|Crops|Sugar crops|Sugar beet|++|rainfed;million ha;;;M
 Land Cover|Forest;million ha;1;Sum of primary, secondary and planted forest (FAO definition);;;Resources|Land Cover|+|Forest;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Forest|Planted;million ha;2;Forest predominantly composed of trees established through planting and/or deliberate seeding (FAO definition);;;;;;;
-Land Cover|Forest|Planted|Natural;million ha;2;Planted forest which is not classified as plantation forest. In particular, this includes re/afforestation for carbon sequestration with native tree species;;;;;;;
+Land Cover|Forest|Planted;million ha;2;Forest predominantly composed of trees established through planting and/or deliberate seeding (FAO definition);;;Resources|Land Cover|Forest|+|Planted Forest;million ha;;;M
+Land Cover|Forest|Planted|Natural;million ha;2;Planted forest which is not classified as plantation forest. In particular, this includes re/afforestation for carbon sequestration with native tree species;;;Resources|Land Cover|Forest|Planted Forest|+|Natural;million ha;;;M
 Land Cover|Forest|Planted|Natural|Other;million ha;2;Other planted forest which is not classified as plantation forest;;;;;;;
-Land Cover|Forest|Planted|Natural|Re/Afforestation;million ha;2;Reforestation and/or Afforestation for carbon sequestration with native tree species resembling natural vegetation;;;;;;;
-Land Cover|Forest|Planted|Plantation;million ha;2;Plantations are planted forests that are intensively managed and meet ALL the following criteria at planting and stand maturity; one or two species, even age class, and regular spacing (FAO definition);;;;;;
-Land Cover|Forest|Planted|Plantation|Re/Afforestation;million ha;2;Reforestation and/or Afforestation for carbon sequestration with non-native species and/or as monoculture plantation;;;;;;;
-Land Cover|Forest|Planted|Plantation|Timber;million ha;2;Plantations for timber production;;;;;;;
-Land Cover|Forest|Primary;million ha;2;Naturally regenerated forest of native tree species, where there are no clearly visible indications of human activities and the ecological processes are not significantly disturbed (FAO definition);;;;;;;
+Land Cover|Forest|Planted|Natural|Re/Afforestation;million ha;2;Reforestation and/or Afforestation for carbon sequestration with native tree species resembling natural vegetation;;;Resources|Land Cover|Forest|Planted Forest|Natural|+|CO2-price AR;million ha;;;M
+Land Cover|Forest|Planted|Natural|Re/Afforestation;million ha;2;Reforestation and/or Afforestation for carbon sequestration with native tree species resembling natural vegetation;;;Resources|Land Cover|Forest|Planted Forest|Natural|+|NPI_NDC AR;million ha;;;M
+Land Cover|Forest|Planted|Plantation;million ha;2;Plantations are planted forests that are intensively managed and meet ALL the following criteria at planting and stand maturity; one or two species, even age class, and regular spacing (FAO definition);;Resources|Land Cover|Forest|Planted Forest|+|Plantations;million ha;;;M
+Land Cover|Forest|Planted|Plantation|Re/Afforestation;million ha;2;Reforestation and/or Afforestation for carbon sequestration with non-native species and/or as monoculture plantation;;;Resources|Land Cover|Forest|Planted Forest|Plantations|+|CO2-price AR;million ha;;;M
+Land Cover|Forest|Planted|Plantation|Timber;million ha;2;Plantations for timber production;;;Resources|Land Cover|Forest|Planted Forest|Plantations|+|Timber;million ha;;;M
+Land Cover|Forest|Primary;million ha;2;Naturally regenerated forest of native tree species, where there are no clearly visible indications of human activities and the ecological processes are not significantly disturbed (FAO definition);;;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;M
 Land Cover|Forest|Secondary;million ha;2;Forest predominantly composed of trees established through natural regeneration excluding primary forest (based on FAO definition of Naturally Regenerating Forest);;;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;M
-Land Cover|Other Land;million ha;2;Other land cover that does not fit into any other land cover category, e.g. ice and water bodies;;;Resources|Land Cover|+|Other Land;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
-Land Cover|Other Natural;million ha;1;Non-forest natural land; sum of primary non-forest, restored and recovered natural land;;;;;;
-Land Cover|Other Natural|Primary Non-Forest;million ha;2;Primary non-forest natural land without clearly visible indications of human activities;;;;;;;
-Land Cover|Other Natural|Recovered;million ha;2;Recovered natural land due to the abandonment of agricultural or forestry land - without intention for nature/biodiversity conservation;;;;;;;
-Land Cover|Other Natural|Restored;million ha;2;Intentionally restored natural land for the purpose of nature and/or biodiversity conservation;;;;;;;
+Land Cover|Other Land;million ha;2;Other land cover that does not fit into any other land cover category, e.g. ice and water bodies;;;;;;mapping taken from NAVIGATE, NAVIGATE category: land cover;
+Land Cover|Other Natural;million ha;1;Non-forest natural land; sum of primary non-forest, restored and recovered natural land;;Resources|Land Cover|+|Other Land;million ha;;;M
+Land Cover|Other Natural|Primary Non-Forest;million ha;2;Primary non-forest natural land without clearly visible indications of human activities;;;Resources|Land Cover|Other Land|Initial;million ha;;;M
+Land Cover|Other Natural|Recovered;million ha;2;Recovered natural land due to the abandonment of agricultural or forestry land - without intention for nature/biodiversity conservation;;;Resources|Land Cover|Other Land|Recovered;million ha;;;M
+Land Cover|Other Natural|Restored;million ha;2;Intentionally restored natural land for the purpose of nature and/or biodiversity conservation;;;Resources|Land Cover|Other Land|Restored;million ha;;;M
 Land Cover|Pasture;million ha;1;Pasture, not only high quality rangeland, based on FAO definition of permanent meadows and pastures;;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Material Recycling|Aluminum;Mt/year;;Production of recycled aluminum;;;;;;;
 Material Recycling|Aluminum [Share];%;;Share of recycled aluminum;;;;;;;
@@ -3930,13 +3935,13 @@ Population|Substandard Accommodation;million;;Number of people living in substan
 Population|Urban;million;2;Total population living in urban areas;;;Population|Urban;million;;mapping taken from NAVIGATE, NAVIGATE category: demography;S
 Population|Urban [Share];%;2;Share of population living in urban areas;;Population;;;;;
 Population|Without Education [Share];%;;Share of people aged 15 or older without education, not counting those with incomplete primary education;;Population;;;;;
-Price|Agriculture|Energy Crops;USD_2010/GJ;1;Farm-gate price of second-generation bioenergy crops (short rotation grasses, short rotation trees);;Agricultural Production|Crops|Energy Crops;;;;;
-Price|Agriculture|Food Products [Index];Index (2020 = 1);1;Farm-gate price index of food crops and livestock products (weighted average);;Agricultural Production;;;;;
-Price|Agriculture|Food Products|Crops [Index];Index (2020 = 1);1;Farm-gate price index of food crops (weighted average);;Agricultural Production|Crops;;;;;
-Price|Agriculture|Food Products|Crops|Maize [Index];Index (2020 = 1);2;Farm-gate price index of maize;;Agricultural Production|Crops;;;;;
-Price|Agriculture|Food Products|Crops|Rice [Index];Index (2020 = 1);2;Farm-gate price index of rice;;Agricultural Production|Crops;;;;;
-Price|Agriculture|Food Products|Crops|Soybean [Index];Index (2020 = 1);2;Farm-gate price index of soybean;;Agricultural Production|Crops;;;;;
-Price|Agriculture|Food Products|Crops|Wheat [Index];Index (2020 = 1);2;Farm-gate price index of wheat;;Agricultural Production|Crops;;;;;
+Price|Agriculture|Energy Crops;USD_2010/GJ;1;Farm-gate price of second-generation bioenergy crops (short rotation grasses, short rotation trees);;Agricultural Production|Crops|Energy Crops;Prices|Bioenergy;US$2017/GJ;0.9096;;M
+Price|Agriculture|Food Products [Index];Index (2020 = 1);1;Farm-gate price index of food crops and livestock products (weighted average);;Agricultural Production;Prices|Index2020|Agriculture|Food products;1;;;M
+Price|Agriculture|Food Products|Crops [Index];Index (2020 = 1);1;Farm-gate price index of food crops (weighted average);;Agricultural Production|Crops;Prices|Index2020|Agriculture|Food products|Plant-based;1;;;M
+Price|Agriculture|Food Products|Crops|Maize [Index];Index (2020 = 1);2;Farm-gate price index of maize;;Agricultural Production|Crops;Prices|Index2020|Agriculture|Food products|Plant-based|Maize;1;;;M
+Price|Agriculture|Food Products|Crops|Rice [Index];Index (2020 = 1);2;Farm-gate price index of rice;;Agricultural Production|Crops;Prices|Index2020|Agriculture|Food products|Plant-based|Rice;1;;;M
+Price|Agriculture|Food Products|Crops|Soybean [Index];Index (2020 = 1);2;Farm-gate price index of soybean;;Agricultural Production|Crops;Prices|Index2020|Agriculture|Food products|Plant-based|Soybean;1;;;M
+Price|Agriculture|Food Products|Crops|Wheat [Index];Index (2020 = 1);2;Farm-gate price index of wheat;;Agricultural Production|Crops;Prices|Index2020|Agriculture|Food products|Plant-based|Temperate cereals;1;;;M
 Price|Agriculture|Food Products|Livestock [Index];Index (2020 = 1);1;Farm-gate price index of livestock products (weighted average);;Agricultural Production|Livestock;Prices|Index2020|Agriculture|Food products|Livestock;1;;additional mapping taken from additional_SHAPE;M
 Price|Carbon;USD_2010/t CO2;1;Price of carbon;;Emissions|CO2;Price|Carbon;US$2017/t CO2;0.9096;mapping taken from NAVIGATE, NAVIGATE category: policy;R
 Price|Carbon [relative to OECD];%;;Carbon price relative to OECD carbon price;;;;;;;
@@ -5505,26 +5510,31 @@ Secondary Energy|Solids|Biomass;EJ/yr;2;Production of solid biomass (e.g., comme
 Secondary Energy|Solids|Biomass;EJ/yr;2;Production of solid biomass (e.g., commercial charcoal, wood chips, wood pellets), not including traditional bioenergy;;;SE|Solids|+|Traditional Biomass;EJ/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (secondary);R
 Secondary Energy|Solids|Coal;EJ/yr;2;Production of coal, lignite, and derived products (e.g., coke, briquettes);;;SE|Solids|+|Coal;EJ/yr;1;;R
 Terrestrial Biodiversity|Biodiversity Intactness Index;%;2;Terrestrial biodiversity measured with Biodiversity Intactness Index (BII);;Land Cover;Biodiversity|BII;unitless;100;additional mapping taken from additional_NAVIGATE, additional_NAVIGATE category: SDG;Mx
-Terrestrial Biodiversity|Biodiversity Intactness Index|Areas Outside Key Conservation and Cropland Landscapes;%;3;Terrestrial biodiversity in areas outside biodiversity hotspot, intact forest & cropland landscapes measured with Biodiversity Intactness Index (BII);;Land Cover;;;;;
-Terrestrial Biodiversity|Biodiversity Intactness Index|Biodiversity Hotspots;%;3;Terrestrial biodiversity in biodiversity hotspot landscapes measured with Biodiversity Intactness Index (BII);;Land Cover;;;;;
-Terrestrial Biodiversity|Biodiversity Intactness Index|Cropland Landscapes;%;3;Terrestrial biodiversity in landscapes containing cropland measured with Biodiversity Intactness Index (BII);;Land Cover;;;;;
-Terrestrial Biodiversity|Biodiversity Intactness Index|Key Conservation Landscapes;%;3;Terrestrial biodiversity in biodiversity hotspot and intact forest landscapes measured with Biodiversity Intactness Index (BII);;Land Cover;;;;;
+Terrestrial Biodiversity|Biodiversity Intactness Index|Areas Outside Key Conservation and Cropland Landscapes;%;3;Terrestrial biodiversity in areas outside biodiversity hotspot, intact forest & cropland landscapes measured with Biodiversity Intactness Index (BII);;Land Cover;Biodiversity|BII in areas outside Biodiversity Hotspots, Intact Forest & Cropland Landscapes;unitless;100;;M
+Terrestrial Biodiversity|Biodiversity Intactness Index|Biodiversity Hotspots;%;3;Terrestrial biodiversity in biodiversity hotspot landscapes measured with Biodiversity Intactness Index (BII);;Land Cover;Biodiversity|Biodiversity Hotspot BII;unitless;100;;M
+Terrestrial Biodiversity|Biodiversity Intactness Index|Cropland Landscapes;%;3;Terrestrial biodiversity in landscapes containing cropland measured with Biodiversity Intactness Index (BII);;Land Cover;Biodiversity|Cropland Landscapes BII;unitless;100;;M
+Terrestrial Biodiversity|Biodiversity Intactness Index|Key Conservation Landscapes;%;3;Terrestrial biodiversity in biodiversity hotspot and intact forest landscapes measured with Biodiversity Intactness Index (BII);;Land Cover;Biodiversity|Key Biodiversity Area BII;unitless;100;;M
 Terrestrial Biodiversity|Mean Species Abundance;%;3;Terrestrial biodiversity measured in Mean Species Abundance (MSA);;Land Cover;;;;;
 Terrestrial Biodiversity|Mean Species Abundance|Plants;%;3;Terrestrial biodiversity of plant species measured in Mean Species Abundance (MSA);;Land Cover;;;;;
 Terrestrial Biodiversity|Mean Species Abundance|Vertebrates;%;3;Terrestrial biodiversity of vertebrate species measured in Mean Species Abundance (MSA);;Land Cover;;;;;
 Terrestrial Biodiversity|Shannon Crop Diversity Index;-;3;Crop diversity measured by the Shannon index accounting for crop richness and abundance;;Land Cover;Biodiversity|Shannon crop area diversity index;-;;mapping taken from SHAPE;M
-Trade|Agriculture;million t DM/yr;2;Net export of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;;;;;
-Trade|Agriculture|Crops;million t DM/yr;2;Net export of crops;;;;;;;
-Trade|Agriculture|Crops|Cereals;million t DM/yr;2;Net export of cereals (maize, rice, temperate cereals and tropical cereals);;;;;;;
-Trade|Agriculture|Crops|Energy Crops;million t DM/yr;2;Net export of second-generation bioenergy crops (short rotation grasses, short rotation trees);;;;;;;
-Trade|Agriculture|Crops|Oil Crops;million t DM/yr;2;Net export of oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;;;;;
-Trade|Agriculture|Crops|Other Crops;million t DM/yr;2;Net export of other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;;;;;
-Trade|Agriculture|Crops|Sugar Crops;million t DM/yr;2;Net export of sugar crops (sugar beet, sugar cane);;;;;;;
-Trade|Agriculture|Livestock;million t DM/yr;2;Net export of livestock products (excluding fish);;;;;;;
-Trade|Agriculture|Livestock|Dairy;million t DM/yr;2;Net export of dairy products (milk, eggs);;;;;;;
-Trade|Agriculture|Livestock|Non-Ruminant;million t DM/yr;2;Net export of monogastric meat (pig, poultry);;;;;;;
-Trade|Agriculture|Livestock|Ruminant;million t DM/yr;2;Net export of ruminant meat (cattle, goat, sheep);;;;;;;
-Trade|Agriculture|Residues;million t DM/yr;2;Net export of agricultural residues;;;;;;;
+Trade|Agriculture;million t DM/yr;2;Net export of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Trade|Exports|+|Crops;Mt DM/yr;;;M
+Trade|Agriculture;million t DM/yr;2;Net export of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Trade|Exports|+|Bioenergy crops;Mt DM/yr;;;M
+Trade|Agriculture;million t DM/yr;2;Net export of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Trade|Exports|+|Livestock products;Mt DM/yr;;;M
+Trade|Agriculture;million t DM/yr;2;Net export of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Trade|Exports|+|Crop residues;Mt DM/yr;;;M
+Trade|Agriculture|Crops;million t DM/yr;2;Net export of crops;;;Trade|Exports|+|Crops;Mt DM/yr;;;M
+Trade|Agriculture|Crops|Cereals;million t DM/yr;2;Net export of cereals (maize, rice, temperate cereals and tropical cereals);;;Trade|Exports|Crops|+|Cereals;Mt DM/yr;;;M
+Trade|Agriculture|Crops|Energy Crops;million t DM/yr;2;Net export of second-generation bioenergy crops (short rotation grasses, short rotation trees);;;Trade|Exports|+|Bioenergy crops;Mt DM/yr;;;M
+Trade|Agriculture|Crops|Oil Crops;million t DM/yr;2;Net export of oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Trade|Exports|Crops|+|Oil crops;Mt DM/yr;;;M
+Trade|Agriculture|Crops|Other Crops;million t DM/yr;2;Net export of other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Trade|Exports|Crops|+|Other crops;Mt DM/yr;;;M
+Trade|Agriculture|Crops|Sugar Crops;million t DM/yr;2;Net export of sugar crops (sugar beet, sugar cane);;;Trade|Exports|Crops|+|Sugar crops;Mt DM/yr;;;M
+Trade|Agriculture|Livestock;million t DM/yr;2;Net export of livestock products (excluding fish);;;Trade|Exports|+|Livestock products;Mt DM/yr;;;M
+Trade|Agriculture|Livestock|Dairy;million t DM/yr;2;Net export of dairy products (milk, eggs);;;Trade|Exports|Livestock products|+|Dairy;Mt DM/yr;;;M
+Trade|Agriculture|Livestock|Dairy;million t DM/yr;2;Net export of dairy products (milk, eggs);;;Trade|Exports|Livestock products|+|Eggs;Mt DM/yr;;;M
+Trade|Agriculture|Livestock|Non-Ruminant;million t DM/yr;2;Net export of monogastric meat (pig, poultry);;;Trade|Exports|Livestock products|+|Monogastric meat;Mt DM/yr;;;M
+Trade|Agriculture|Livestock|Non-Ruminant;million t DM/yr;2;Net export of monogastric meat (pig, poultry);;;Trade|Exports|Livestock products|+|Poultry meat;Mt DM/yr;;;M
+Trade|Agriculture|Livestock|Ruminant;million t DM/yr;2;Net export of ruminant meat (cattle, goat, sheep);;;Trade|Exports|Livestock products|+|Ruminant meat;Mt DM/yr;;;M
+Trade|Agriculture|Residues;million t DM/yr;2;Net export of agricultural residues;;;Trade|Exports|+|Crop residues;Mt DM/yr;;;M
 Trade|Emissions Allowances [Value];billion USD_2010/yr;;Net trade (international sales minus purchases) of GHG emission allowances measured in monetary quantities;, Negative values indicate that purchases (imports) exceed sales (exports). At the global level these should add up to zero.;;;;;;
 Trade|Emissions Allowances [Volume];Mt CO2-equiv/yr;;Net trade (international sales minus purchases) of GHG emission allowances measured in physical quantities;, Negative values indicate that purchases (imports) exceed sales (exports). At the global level these should add up to zero.;;;;;;
 Trade|Forestry|Roundwood;million m3/yr;2;Net export of roundwood;;;;;;;
