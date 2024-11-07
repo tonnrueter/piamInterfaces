@@ -25,7 +25,7 @@ Resources|Land Cover|Cropland|Croparea|Forage*          ;Resources|Land Cover|Cr
 # https://github.com/pik-piam/magpie4/commit/2847a13e5c171b9dc78dccdc7d6a085e8c8d74d3
 Prices|Index2020|Agriculture|Producer*                  ;Prices|Producer Price Index*
 
-# Changes from edgeT refactoring v2.0
+# Changes from edgeT refactoring v2.0, see also /p/projects/edget/Refactoring/remind/output/variableMappingOldNew.csv
 Emi|CO2|Energy|Demand|Transport|Bunkers|Freight|International Shipping;Emi|CO2|Transport|Freight|International Shipping|Demand
 Emi|CO2|Energy|Demand|Transport|Bunkers|Pass|International Aviation;Emi|CO2|Transport|Pass|Aviation|International|Demand
 Emi|CO2|Energy|Demand|Transport|Freight|Domestic Shipping;Emi|CO2|Transport|Freight|Navigation|Demand
@@ -65,6 +65,9 @@ FE|Transport|Pass|Domestic Aviation|Liquids;FE|Transport|Pass|Aviation|Domestic|
 FE|Transport|Pass|Domestic Aviation|Liquids|Biomass;FE|Transport|Pass|Aviation|Domestic|Liquids|Biomass
 FE|Transport|Pass|Domestic Aviation|Liquids|Fossil;FE|Transport|Pass|Aviation|Domestic|Liquids|Fossil
 FE|Transport|Pass|Domestic Aviation|Liquids|Hydrogen;FE|Transport|Pass|Aviation|Domestic|Liquids|Hydrogen
+Sales|Transport|Freight|Road|BEV;Sales|Transport|Truck|Electric
+Sales|Transport|Pass|Road|Bus|BEV;Sales|Transport|Bus|Electric
+Sales|Transport|Pass|Road|LDV|BEV;Sales|Transport|LDV|BEV
 Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Sales|Transport|LDV|Large Car and SUV|BEV
 Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Sales|Transport|LDV|Large Car and SUV|FCEV
 Sales|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Sales|Transport|LDV|Large Car and SUV|Hybrid Electric
@@ -82,8 +85,11 @@ Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Sales|Tran
 Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Sales|Transport|LDV|Subcompact Car|Hybrid Electric
 Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Sales|Transport|LDV|Subcompact Car|Liquids
 Sales|Transport|Pass|Road|LDV|Hybrid electric;Sales|Transport|LDV|Hybrid Electric
+Stock|Transport|Freight|Road|BEV;Stock|Transport|Truck|Electric
 Stock|Transport|Pass|Road|Bus;Stock|Transport|Bus
+Stock|Transport|Pass|Road|Bus|BEV;Stock|Transport|Bus|Electric
 Stock|Transport|Pass|Road|LDV;Stock|Transport|LDV
+Stock|Transport|Pass|Road|LDV|BEV;Stock|Transport|LDV|BEV
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|BEV;Stock|Transport|LDV|Large Car and SUV|BEV
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|FCEV;Stock|Transport|LDV|Large Car and SUV|FCEV
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hybrid electric;Stock|Transport|LDV|Large Car and SUV|Hybrid Electric

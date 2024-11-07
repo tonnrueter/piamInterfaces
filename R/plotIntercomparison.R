@@ -57,6 +57,8 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   if (isTRUE(summationsFile == "extractVariableGroups")) {
     summationList <- extractVariableGroups(levels(data$variable), keepOrigNames = FALSE, sorted = TRUE)
     summationList <- lapply(summationList, removePlus)
+    summationGroups <- bind_rows(lapply(names(summationList),
+                                        function(x) data.frame(parent = x, child = summationList[[x]], factor = 1)))
     data <- removePlus(data)
   } else if (! is.null(summationsFile)) {
     data <- removePlus(data)
@@ -77,7 +79,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   data <- data %>%
     left_join(summationGroups, by = c("variable" = "child")) %>%
     droplevels()
-  if ("diffto" %in% interactive) {
+  if ("diffto" %in% interactive && length(setdiff(levels(data$scenario), "historical")) > 1) {
     diffto <- chooseFromList(setdiff(levels(data$scenario), "historical"), multiple = FALSE,
                              userinfo = "Leave empty to get the normal absolute values.",
                              type = "scenario that serves as reference, so the difference to this scenario is plotted")
@@ -94,6 +96,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   levels(data$model) <- newModelNames
 
   combineVariables <- function(vars) {
+    if (length(vars) == 0 || isFALSE(vars)) return(NULL)
     mappingfiles <- vars[vars %in% names(mappingNames()) | file.exists(vars)]
     tmpVars <- setdiff(vars, mappingfiles)
     for (mapping in mappingfiles) {
@@ -196,20 +199,16 @@ makepdf <- function(pdfFilename, plotdata, lineplotVariables, areaplotVariables,
   plotvariables <- plotvariables[removeNo(plotvariables) %in% plotdata$variable]
   for (p in plotvariables) {
     message(which(p == plotvariables), "/", length(plotvariables), ": Add plot for ", p)
-    areaworked <- FALSE
     # area plot
     if (p %in% names(areaplotVariables)) {
       childs <- intersect(areaplotVariables[[p]], unique(plotdata$variable))
       message("Childs: ", paste(gsub(p, "", childs, fixed = TRUE), collapse = ", "))
-      if (length(getModels(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1 ||
-          length(getScenarios(droplevels(filter(plotdata, .data$variable %in% childs)))) > 1) {
-        e <- try(showAreaAndBarPlots(plotdata, if (length(childs) > 0) childs else removeNo(p), tot = removeNo(p),
-                                     mainReg = mainReg, scales = "fixed",
-                                     yearsBarPlot = intersect(yearsBarPlot, unique(plotdata$period))))
-        if (! inherits(e, "try-error")) areaworked <- TRUE
-      }
-      if (isFALSE(areaworked)) {
-        lineplotVariables <- c(lineplotVariables, removeNo(p)) # if no area plot possible, do lineplot
+      e <- try(showAreaAndBarPlots(plotdata, if (length(childs) > 0) childs else removeNo(p), tot = removeNo(p),
+                                   mainReg = mainReg, scales = "fixed",
+                                   yearsBarPlot = intersect(yearsBarPlot, unique(plotdata$period))))
+      if (inherits(e, "try-error")) {
+        message("areaplot failed for ", p, ", do lineplot.")
+        lineplotVariables <- c(lineplotVariables, removeNo(p)) # if area plot fails, do lineplot
       }
     }
     # line plot
