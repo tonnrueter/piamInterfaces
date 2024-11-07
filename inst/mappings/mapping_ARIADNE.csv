@@ -2034,7 +2034,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 2;policy;Price|Carbon|EU-wide Regulation Non-ETS;EUR2020/t CO2;Price of carbon implied by EU-wide Non-ETS sector target;;;;;0;;
 2;policy;Price|Carbon|National Climate Target;EUR2020/t CO2;Price of carbon due to national policies for all sectors - either from a direct carbon price, or as result of a national climate target;;;;;0;;
 2;policy;Price|Carbon|National Climate Target Non-ETS;EUR2020/t CO2;Price of carbon due to national policies for the non-ETS sectors - either from a direct carbon price, or as result of a national climate target for these sectors;;;;;0;;
-1;economy;Cost|Total Energy System Cost;billion EUR2020/yr;total energy system cost;;;;;0;;
+1;economy;Cost|Total Energy System Cost;billion EUR2020/yr;total energy system cost;Energy system costs;billion US$2017/yr;0.9534;;0;;R
 1;economy;Cost|Energy Service|Transportation|Passenger;EUR2020/Pkm;average/specific transportation cost per pkm;;;;;0;;
 1;economy;Cost|Energy Service|Transportation|Freight;EUR2020/tkm;average/specific transportation cost per tkm;;;;;0;;
 1;economy;Cost|Energy Service|Residential and Commercial|Heating;EUR2020/m2/yr;average/specific heating cost per heated floor m2;;;;;0;;
