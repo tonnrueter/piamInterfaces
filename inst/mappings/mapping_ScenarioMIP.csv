@@ -316,7 +316,7 @@ Capital Cost|Electricity|Gas|w/ CCS;USD_2010/kW;;Capital cost of a newly install
 Capital Cost|Electricity|Gas|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from natural gas (fossil methane) without carbon capture and storage (CCS);;;Tech|Electricity|Gas|Combined Cycle w/o CC|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Geothermal;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from geothermal sources;;;Tech|Electricity|Geothermal|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Hydro;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydropower;;;Tech|Electricity|Hydro|Capital Costs;US$2017/kW;0.9096;;R
-Capital Cost|Electricity|Hydrogen;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydrogen;;;;;;;
+Capital Cost|Electricity|Hydrogen;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydrogen;;;Tech|Electricity|Hydrogen|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Non-Biomass Renewables;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydro, wind, solar, geothermal, ocean, and other renewable sources excluding biomass;;;;;;;
 Capital Cost|Electricity|Nuclear;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from nuclear power;;;Tech|Electricity|Nuclear|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Ocean;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from oceans;;;;;;;
