@@ -303,30 +303,30 @@ Capacity|Solids|w/ CCS;GW;1;Installed (available) capacity to produce solid ener
 Capacity|Solids|w/o CCS;GW;1;Installed (available) capacity to produce solid energy carriers, including coal, briquettes, coke, and wood pellets without carbon capture and storage (CCS);;;;;;;
 Capital Cost|Electricity|Ammonia;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from ammonia;;;;;;;
 Capital Cost|Electricity|Biomass;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass;;;;;;;
-Capital Cost|Electricity|Biomass|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with carbon capture and storage (CCS);;;;;;;
-Capital Cost|Electricity|Biomass|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without carbon capture and storage (CCS);;;;;;;
+Capital Cost|Electricity|Biomass|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with carbon capture and storage (CCS);;;Tech|Electricity|Biomass|Gasification Combined Cycle w/ CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Electricity|Biomass|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without carbon capture and storage (CCS);;;Tech|Electricity|Biomass|Combined Heat and Power w/o CC|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Coal;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from coal including lignite;;;;;;;
-Capital Cost|Electricity|Coal|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from coal including lignite in combination with carbon capture and storage (CCS);;;;;;;
-Capital Cost|Electricity|Coal|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from coal including lignite without carbon capture and storage (CCS);;;;;;;
+Capital Cost|Electricity|Coal|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from coal including lignite in combination with carbon capture and storage (CCS);;;Tech|Electricity|Coal|Gasification Combined Cycle w/ CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Electricity|Coal|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from coal including lignite without carbon capture and storage (CCS);;;Tech|Electricity|Coal|Combined Heat and Power w/o CC|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Fossil;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil;;;;;;;
 Capital Cost|Electricity|Fossil|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil in combination with carbon capture and storage (CCS);;;;;;;
 Capital Cost|Electricity|Fossil|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil without carbon capture and storage (CCS);;;;;;;
 Capital Cost|Electricity|Gas;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from natural gas (fossil methane);;;;;;;
-Capital Cost|Electricity|Gas|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from natural gas (fossil methane) in combination with carbon capture and storage (CCS);;;;;;;
-Capital Cost|Electricity|Gas|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from natural gas (fossil methane) without carbon capture and storage (CCS);;;;;;;
-Capital Cost|Electricity|Geothermal;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from geothermal sources;;;;;;;
-Capital Cost|Electricity|Hydro;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydropower;;;;;;;
+Capital Cost|Electricity|Gas|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from natural gas (fossil methane) in combination with carbon capture and storage (CCS);;;Tech|Electricity|Gas|Combined Cycle w/ CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Electricity|Gas|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from natural gas (fossil methane) without carbon capture and storage (CCS);;;Tech|Electricity|Gas|Combined Cycle w/o CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Electricity|Geothermal;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from geothermal sources;;;Tech|Electricity|Geothermal|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Electricity|Hydro;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydropower;;;Tech|Electricity|Hydro|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Hydrogen;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydrogen;;;;;;;
 Capital Cost|Electricity|Non-Biomass Renewables;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from hydro, wind, solar, geothermal, ocean, and other renewable sources excluding biomass;;;;;;;
-Capital Cost|Electricity|Nuclear;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from nuclear power;;;;;;;
+Capital Cost|Electricity|Nuclear;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from nuclear power;;;Tech|Electricity|Nuclear|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Ocean;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from oceans;;;;;;;
 Capital Cost|Electricity|Oil;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from conventional and unconventional crude oil in combination with carbon capture and storage (CCS);;;;;;;
 Capital Cost|Electricity|Oil|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from conventional and unconventional crude oil in combination with carbon capture and storage (CCS);;;;;;;
 Capital Cost|Electricity|Oil|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from conventional and unconventional crude oil without carbon capture and storage (CCS);;;;;;;
 Capital Cost|Electricity|Other;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from sources that do not fit any other category;;;;;;;
 Capital Cost|Electricity|Solar;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from solar energy;;;;;;;
-Capital Cost|Electricity|Solar|CSP;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from utility-scale concentrated solar power (CSP);;;;;;;
-Capital Cost|Electricity|Solar|PV;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from photovoltaics (PV);;;;;;;
+Capital Cost|Electricity|Solar|CSP;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from utility-scale concentrated solar power (CSP);;;Tech|Electricity|Solar|CSP|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Electricity|Solar|PV;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from photovoltaics (PV);;;Tech|Electricity|Solar|PV|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Electricity|Solar|PV|Agri-PV;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from photovoltaics (PV) on agricultural land (mixed use);;;;;;;
 Capital Cost|Electricity|Solar|PV|Commercial;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from commercial rooftop photovoltaics (PV);;;;;;;
 Capital Cost|Electricity|Solar|PV|Floating;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from photovoltaics (PV) on water;;;;;;;
@@ -334,8 +334,8 @@ Capital Cost|Electricity|Solar|PV|Open Land;USD_2010/kW;;Capital cost of a newly
 Capital Cost|Electricity|Solar|PV|Other;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from other types of photovoltaics (PV);;;;;;;
 Capital Cost|Electricity|Solar|PV|Residential;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from residential rooftop photovoltaics (PV);;;;;;;
 Capital Cost|Electricity|Wind;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from wind power;;;;;;;
-Capital Cost|Electricity|Wind|Offshore;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from offshore wind power;;;;;;;
-Capital Cost|Electricity|Wind|Onshore;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from onshore wind power;;;;;;;
+Capital Cost|Electricity|Wind|Offshore;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from offshore wind power;;;Tech|Electricity|Wind|Offshore|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Electricity|Wind|Onshore;USD_2010/kW;;Capital cost of a newly installed plant to generate electricity from onshore wind power;;;Tech|Electricity|Wind|Onshore|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Gases;USD_2010/kW;;Capital cost of a newly installed plant to produce gaseous fuels including natural gas and biogas, not including hydrogen;;;;;;;
 Capital Cost|Gases|Biomass;USD_2010/kW;;Capital cost of a newly installed plant to produce gas from biogenic sources, mainly biogas;;;;;;;
 Capital Cost|Gases|Coal;USD_2010/kW;;Capital cost of a newly installed plant to produce gaseous fuels from coal gasification;;;;;;;
@@ -376,18 +376,18 @@ Capital Cost|Heat|Other;USD_2010/kW;;Capital cost of a newly installed plant to 
 Capital Cost|Heat|Solar;USD_2010/kW;;Capital cost of a newly installed plant to produce centralized heat from solar energy;;;;;;;
 Capital Cost|Hydrogen;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen;;;;;;;
 Capital Cost|Hydrogen|Biomass;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen generated from biomass;;;;;;;
-Capital Cost|Hydrogen|Biomass|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen generated from biomass in combination with carbon capture and storage (CCS);;;;;;;
-Capital Cost|Hydrogen|Biomass|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen generated from biomass without carbon capture and storage (CCS);;;;;;;
+Capital Cost|Hydrogen|Biomass|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen generated from biomass in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Biomass|w/ CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Hydrogen|Biomass|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen generated from biomass without carbon capture and storage (CCS);;;Tech|Hydrogen|Biomass|w/o CC|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Hydrogen|Coal;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from coal;;;;;;;
-Capital Cost|Hydrogen|Coal|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from coal in combination with carbon capture and storage (CCS);;;;;;;
-Capital Cost|Hydrogen|Coal|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from coal without carbon capture and storage (CCS);;;;;;;
-Capital Cost|Hydrogen|Electricity;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from electrolysis;;;;;;;
+Capital Cost|Hydrogen|Coal|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from coal in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Coal|w/ CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Hydrogen|Coal|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from coal without carbon capture and storage (CCS);;;Tech|Hydrogen|Coal|w/o CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Hydrogen|Electricity;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from electrolysis;;;Tech|Hydrogen|Electricity|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Hydrogen|Fossil;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal;;;;;;;
 Capital Cost|Hydrogen|Fossil|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal in combination with carbon capture and storage (CCS);;;;;;;
 Capital Cost|Hydrogen|Fossil|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal without carbon capture and storage (CCS);;;;;;;
 Capital Cost|Hydrogen|Gas;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil methane ('natural gas');;;;;;;
-Capital Cost|Hydrogen|Gas|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil methane ('natural gas') in combination with carbon capture and storage (CCS);;;;;;;
-Capital Cost|Hydrogen|Gas|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil methane ('natural gas') without carbon capture and storage (CCS);;;;;;;
+Capital Cost|Hydrogen|Gas|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil methane ('natural gas') in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Gas|w/ CC|Capital Costs;US$2017/kW;0.9096;;R
+Capital Cost|Hydrogen|Gas|w/o CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from fossil methane ('natural gas') without carbon capture and storage (CCS);;;Tech|Hydrogen|Gas|w/o CC|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Hydrogen|Nuclear;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from nuclear energy (e.g. thermochemical water splitting with nuclear heat);;;;;;;
 Capital Cost|Hydrogen|Oil;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from refined crude oil;;;;;;;
 Capital Cost|Hydrogen|Oil|w/ CCS;USD_2010/kW;;Capital cost of a newly installed plant to produce hydrogen from refined crude oil in combination with carbon capture and storage (CCS);;;;;;;
@@ -405,7 +405,7 @@ Capital Cost|Liquids|Hydrogen|Biomass;USD_2010/kW;;Capital cost of a newly insta
 Capital Cost|Liquids|Hydrogen|Electricity;USD_2010/kW;;Capital cost of a newly installed plant to produce liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Capital Cost|Liquids|Hydrogen|Fossil;USD_2010/kW;;Capital cost of a newly installed plant to produce liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Capital Cost|Liquids|Hydrogen|Other;USD_2010/kW;;Capital cost of a newly installed plant to produce liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
-Capital Cost|Liquids|Oil;USD_2010/kW;;Capital cost of a newly installed plant to produce liquid fuels from refined crude oil;;;;;;;
+Capital Cost|Liquids|Oil;USD_2010/kW;;Capital cost of a newly installed plant to produce liquid fuels from refined crude oil;;;Tech|Liquids|Fossil|Oil|Capital Costs;US$2017/kW;0.9096;;R
 Capital Cost|Liquids|Other;USD_2010/kW;;Capital cost of a newly installed plant to produce sources that do not fit any other category;;;;;;;
 Capital Cost|Solids;USD_2010/kW;;Capital cost of a newly installed plant to produce solid energy carriers, including coal, briquettes, coke, and wood pellets;;;;;;;
 Capital Cost|Solids|Biomass;USD_2010/kW;;Capital cost of a newly installed plant to produce solid biomass (e.g., commercial charcoal, wood chips, wood pellets), not including traditional bioenergy;;;;;;;
@@ -454,17 +454,17 @@ Carbon Removal|Ocean|Ocean Alkalinity Enhancement;Mt CO2/yr;2;Gross removals of 
 Consumption;billion USD_2010/yr;1;total consumption of all goods, by all consumers in a region;;;Consumption;billion US$2017/yr;0.9096;mapping taken from NAVIGATE, NAVIGATE category: economy;R
 Efficiency|Electricity|Ammonia;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from ammonia;;;;;;;
 Efficiency|Electricity|Biomass;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass;;;;;;;
-Efficiency|Electricity|Biomass|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with carbon capture and storage (CCS);;;;;;;
-Efficiency|Electricity|Biomass|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without carbon capture and storage (CCS);;;;;;;
+Efficiency|Electricity|Biomass|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with carbon capture and storage (CCS);;;Tech|Electricity|Biomass|Gasification Combined Cycle w/ CC|Efficiency;%;;;R
+Efficiency|Electricity|Biomass|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without carbon capture and storage (CCS);;;Tech|Electricity|Biomass|Combined Heat and Power w/o CC|Efficiency;%;;;R
 Efficiency|Electricity|Coal;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from coal including lignite;;;;;;;
 Efficiency|Electricity|Coal|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from coal including lignite in combination with carbon capture and storage (CCS);;;;;;;
-Efficiency|Electricity|Coal|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from coal including lignite without carbon capture and storage (CCS);;;;;;;
+Efficiency|Electricity|Coal|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from coal including lignite without carbon capture and storage (CCS);;;Tech|Electricity|Coal|Pulverised Coal w/o CC|Efficiency;%;;;R
 Efficiency|Electricity|Fossil;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil;;;;;;;
 Efficiency|Electricity|Fossil|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil in combination with carbon capture and storage (CCS);;;;;;;
 Efficiency|Electricity|Fossil|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil without carbon capture and storage (CCS);;;;;;;
 Efficiency|Electricity|Gas;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from natural gas (fossil methane);;;;;;;
-Efficiency|Electricity|Gas|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from natural gas (fossil methane) in combination with carbon capture and storage (CCS);;;;;;;
-Efficiency|Electricity|Gas|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from natural gas (fossil methane) without carbon capture and storage (CCS);;;;;;;
+Efficiency|Electricity|Gas|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from natural gas (fossil methane) in combination with carbon capture and storage (CCS);;;Tech|Electricity|Gas|Combined Cycle w/ CC|Efficiency;%;;;R
+Efficiency|Electricity|Gas|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from natural gas (fossil methane) without carbon capture and storage (CCS);;;Tech|Electricity|Gas|Combined Heat and Power w/o CC|Efficiency;%;;;R
 Efficiency|Electricity|Geothermal;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from geothermal sources;;;;;;;
 Efficiency|Electricity|Hydro;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from hydropower;;;;;;;
 Efficiency|Electricity|Hydrogen;%;;Conversion efficiency per unit of primary energy of a newly installed plant to generate electricity from hydrogen;;;;;;;
@@ -527,18 +527,18 @@ Efficiency|Heat|Other;%;;Conversion efficiency per unit of primary energy of a n
 Efficiency|Heat|Solar;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce centralized heat from solar energy;;;;;;;
 Efficiency|Hydrogen;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen;;;;;;;
 Efficiency|Hydrogen|Biomass;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen generated from biomass;;;;;;;
-Efficiency|Hydrogen|Biomass|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen generated from biomass in combination with carbon capture and storage (CCS);;;;;;;
-Efficiency|Hydrogen|Biomass|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen generated from biomass without carbon capture and storage (CCS);;;;;;;
+Efficiency|Hydrogen|Biomass|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen generated from biomass in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Biomass|w/ CC|Efficiency;%;;;R
+Efficiency|Hydrogen|Biomass|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen generated from biomass without carbon capture and storage (CCS);;;Tech|Hydrogen|Biomass|w/o CC|Efficiency;%;;;R
 Efficiency|Hydrogen|Coal;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from coal;;;;;;;
-Efficiency|Hydrogen|Coal|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from coal in combination with carbon capture and storage (CCS);;;;;;;
-Efficiency|Hydrogen|Coal|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from coal without carbon capture and storage (CCS);;;;;;;
-Efficiency|Hydrogen|Electricity;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from electrolysis;;;;;;;
+Efficiency|Hydrogen|Coal|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from coal in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Coal|w/ CC|Efficiency;%;;;R
+Efficiency|Hydrogen|Coal|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from coal without carbon capture and storage (CCS);;;Tech|Hydrogen|Coal|w/o CC|Efficiency;%;;;R
+Efficiency|Hydrogen|Electricity;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from electrolysis;;;Tech|Hydrogen|Electricity|Efficiency;%;;;R
 Efficiency|Hydrogen|Fossil;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal;;;;;;;
 Efficiency|Hydrogen|Fossil|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal in combination with carbon capture and storage (CCS);;;;;;;
 Efficiency|Hydrogen|Fossil|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal without carbon capture and storage (CCS);;;;;;;
 Efficiency|Hydrogen|Gas;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil methane ('natural gas');;;;;;;
-Efficiency|Hydrogen|Gas|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil methane ('natural gas') in combination with carbon capture and storage (CCS);;;;;;;
-Efficiency|Hydrogen|Gas|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil methane ('natural gas') without carbon capture and storage (CCS);;;;;;;
+Efficiency|Hydrogen|Gas|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil methane ('natural gas') in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Gas|w/ CC|Efficiency;%;;;R
+Efficiency|Hydrogen|Gas|w/o CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from fossil methane ('natural gas') without carbon capture and storage (CCS);;;Tech|Hydrogen|Gas|w/o CC|Efficiency;%;;;R
 Efficiency|Hydrogen|Nuclear;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from nuclear energy (e.g. thermochemical water splitting with nuclear heat);;;;;;;
 Efficiency|Hydrogen|Oil;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from refined crude oil;;;;;;;
 Efficiency|Hydrogen|Oil|w/ CCS;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce hydrogen from refined crude oil in combination with carbon capture and storage (CCS);;;;;;;
@@ -556,7 +556,7 @@ Efficiency|Liquids|Hydrogen|Biomass;%;;Conversion efficiency per unit of primary
 Efficiency|Liquids|Hydrogen|Electricity;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Efficiency|Liquids|Hydrogen|Fossil;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Efficiency|Liquids|Hydrogen|Other;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
-Efficiency|Liquids|Oil;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce liquid fuels from refined crude oil;;;;;;;
+Efficiency|Liquids|Oil;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce liquid fuels from refined crude oil;;;Tech|Liquids|Fossil|Oil|Efficiency;%;;;R
 Efficiency|Liquids|Other;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce sources that do not fit any other category;;;;;;;
 Efficiency|Solids;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce solid energy carriers, including coal, briquettes, coke, and wood pellets;;;;;;;
 Efficiency|Solids|Biomass;%;;Conversion efficiency per unit of primary energy of a newly installed plant to produce solid biomass (e.g., commercial charcoal, wood chips, wood pellets), not including traditional bioenergy;;;;;;;
@@ -4305,7 +4305,7 @@ Land Cover|Forest|Planted|Plantation|Re/Afforestation;million ha;2;Reforestation
 Land Cover|Forest|Planted|Plantation|Timber;million ha;2;Plantations for timber production;;;Resources|Land Cover|Forest|Planted Forest|Plantations|+|Timber;million ha;;;M
 Land Cover|Forest|Primary;million ha;2;Naturally regenerated forest of native tree species, where there are no clearly visible indications of human activities and the ecological processes are not significantly disturbed (FAO definition);;;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;M
 Land Cover|Forest|Secondary;million ha;2;Forest predominantly composed of trees established through natural regeneration excluding primary forest (based on FAO definition of Naturally Regenerating Forest);;;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;M
-Land Cover|Other Land;million ha;2;Other land cover that does not fit into any other land cover category, e.g. ice and water bodies;;;;;;;
+Land Cover|Other Land;million ha;2;Other land cover that does not fit into any other land cover category, e.g. ice and water bodies;;;Resources|Land Cover|+|Other Land;million ha;;;M
 Land Cover|Other Natural;million ha;1;Non-forest natural land, sum of primary non-forest, restored and recovered natural land;;;Resources|Land Cover|+|Other Land;million ha;;;M
 Land Cover|Other Natural|Primary Non-Forest;million ha;2;Primary non-forest natural land without clearly visible indications of human activities;;;Resources|Land Cover|Other Land|Initial;million ha;;;M
 Land Cover|Other Natural|Recovered;million ha;2;Recovered natural land due to the abandonment of agricultural or forestry land - without intention for nature/biodiversity conservation;;;Resources|Land Cover|Other Land|Recovered;million ha;;;M
@@ -4313,39 +4313,39 @@ Land Cover|Other Natural|Restored;million ha;2;Intentionally restored natural la
 Land Cover|Pasture;million ha;1;Pasture, not only high quality rangeland, based on FAO definition of permanent meadows and pastures;;;Resources|Land Cover|+|Pastures and Rangelands;million ha;;mapping taken from NAVIGATE, NAVIGATE category: land cover;M
 Lifetime|Electricity|Ammonia;years;;Technical lifetime of a newly installed plant to generate electricity from ammonia;;;;;;;
 Lifetime|Electricity|Biomass;years;;Technical lifetime of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass;;;;;;;
-Lifetime|Electricity|Biomass|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with carbon capture and storage (CCS);;;;;;;
-Lifetime|Electricity|Biomass|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without carbon capture and storage (CCS);;;;;;;
+Lifetime|Electricity|Biomass|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass in combination with carbon capture and storage (CCS);;;Tech|Electricity|Biomass|Gasification Combined Cycle w/ CC|Lifetime;years;;;R
+Lifetime|Electricity|Biomass|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass without carbon capture and storage (CCS);;;Tech|Electricity|Biomass|Combined Heat and Power w/o CC|Lifetime;years;;;R
 Lifetime|Electricity|Coal;years;;Technical lifetime of a newly installed plant to generate electricity from coal including lignite;;;;;;;
-Lifetime|Electricity|Coal|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from coal including lignite in combination with carbon capture and storage (CCS);;;;;;;
-Lifetime|Electricity|Coal|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from coal including lignite without carbon capture and storage (CCS);;;;;;;
+Lifetime|Electricity|Coal|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from coal including lignite in combination with carbon capture and storage (CCS);;;Tech|Electricity|Coal|Gasification Combined Cycle w/ CC|Lifetime;years;;;R
+Lifetime|Electricity|Coal|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from coal including lignite without carbon capture and storage (CCS);;;Tech|Electricity|Coal|Pulverised Coal w/o CC|Lifetime;years;;;R
 Lifetime|Electricity|Fossil;years;;Technical lifetime of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil;;;;;;;
 Lifetime|Electricity|Fossil|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil in combination with carbon capture and storage (CCS);;;;;;;
 Lifetime|Electricity|Fossil|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from fossil fuels including coal, natural gas and conventional/unconventional oil without carbon capture and storage (CCS);;;;;;;
 Lifetime|Electricity|Gas;years;;Technical lifetime of a newly installed plant to generate electricity from natural gas (fossil methane);;;;;;;
-Lifetime|Electricity|Gas|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from natural gas (fossil methane) in combination with carbon capture and storage (CCS);;;;;;;
-Lifetime|Electricity|Gas|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from natural gas (fossil methane) without carbon capture and storage (CCS);;;;;;;
-Lifetime|Electricity|Geothermal;years;;Technical lifetime of a newly installed plant to generate electricity from geothermal sources;;;;;;;
-Lifetime|Electricity|Hydro;years;;Technical lifetime of a newly installed plant to generate electricity from hydropower;;;;;;;
+Lifetime|Electricity|Gas|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from natural gas (fossil methane) in combination with carbon capture and storage (CCS);;;Tech|Electricity|Gas|Combined Cycle w/ CC|Lifetime;years;;;R
+Lifetime|Electricity|Gas|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from natural gas (fossil methane) without carbon capture and storage (CCS);;;Tech|Electricity|Gas|Combined Heat and Power w/o CC|Lifetime;years;;;R
+Lifetime|Electricity|Geothermal;years;;Technical lifetime of a newly installed plant to generate electricity from geothermal sources;;;Tech|Electricity|Geothermal|Lifetime;years;;;R
+Lifetime|Electricity|Hydro;years;;Technical lifetime of a newly installed plant to generate electricity from hydropower;;;Tech|Electricity|Hydro|Lifetime;years;;;R
 Lifetime|Electricity|Hydrogen;years;;Technical lifetime of a newly installed plant to generate electricity from hydrogen;;;;;;;
 Lifetime|Electricity|Non-Biomass Renewables;years;;Technical lifetime of a newly installed plant to generate electricity from hydro, wind, solar, geothermal, ocean, and other renewable sources excluding biomass;;;;;;;
-Lifetime|Electricity|Nuclear;years;;Technical lifetime of a newly installed plant to generate electricity from nuclear power;;;;;;;
+Lifetime|Electricity|Nuclear;years;;Technical lifetime of a newly installed plant to generate electricity from nuclear power;;;Tech|Electricity|Nuclear|Lifetime;years;;;R
 Lifetime|Electricity|Ocean;years;;Technical lifetime of a newly installed plant to generate electricity from oceans;;;;;;;
 Lifetime|Electricity|Oil;years;;Technical lifetime of a newly installed plant to generate electricity from conventional and unconventional crude oil in combination with carbon capture and storage (CCS);;;;;;;
 Lifetime|Electricity|Oil|w/ CCS;years;;Technical lifetime of a newly installed plant to generate electricity from conventional and unconventional crude oil in combination with carbon capture and storage (CCS);;;;;;;
 Lifetime|Electricity|Oil|w/o CCS;years;;Technical lifetime of a newly installed plant to generate electricity from conventional and unconventional crude oil without carbon capture and storage (CCS);;;;;;;
 Lifetime|Electricity|Other;years;;Technical lifetime of a newly installed plant to generate electricity from sources that do not fit any other category;;;;;;;
 Lifetime|Electricity|Solar;years;;Technical lifetime of a newly installed plant to generate electricity from solar energy;;;;;;;
-Lifetime|Electricity|Solar|CSP;years;;Technical lifetime of a newly installed plant to generate electricity from utility-scale concentrated solar power (CSP);;;;;;;
-Lifetime|Electricity|Solar|PV;years;;Technical lifetime of a newly installed plant to generate electricity from photovoltaics (PV);;;;;;;
+Lifetime|Electricity|Solar|CSP;years;;Technical lifetime of a newly installed plant to generate electricity from utility-scale concentrated solar power (CSP);;;Tech|Electricity|Solar|CSP|Lifetime;years;;;R
+Lifetime|Electricity|Solar|PV;years;;Technical lifetime of a newly installed plant to generate electricity from photovoltaics (PV);;;Tech|Electricity|Solar|PV|Lifetime;years;;;R
 Lifetime|Electricity|Solar|PV|Agri-PV;years;;Technical lifetime of a newly installed plant to generate electricity from photovoltaics (PV) on agricultural land (mixed use);;;;;;;
 Lifetime|Electricity|Solar|PV|Commercial;years;;Technical lifetime of a newly installed plant to generate electricity from commercial rooftop photovoltaics (PV);;;;;;;
 Lifetime|Electricity|Solar|PV|Floating;years;;Technical lifetime of a newly installed plant to generate electricity from photovoltaics (PV) on water;;;;;;;
 Lifetime|Electricity|Solar|PV|Open Land;years;;Technical lifetime of a newly installed plant to generate electricity from photovoltaics (PV) on open land (no mixed use);;;;;;;
 Lifetime|Electricity|Solar|PV|Other;years;;Technical lifetime of a newly installed plant to generate electricity from other types of photovoltaics (PV);;;;;;;
 Lifetime|Electricity|Solar|PV|Residential;years;;Technical lifetime of a newly installed plant to generate electricity from residential rooftop photovoltaics (PV);;;;;;;
-Lifetime|Electricity|Wind;years;;Technical lifetime of a newly installed plant to generate electricity from wind power;;;;;;;
-Lifetime|Electricity|Wind|Offshore;years;;Technical lifetime of a newly installed plant to generate electricity from offshore wind power;;;;;;;
-Lifetime|Electricity|Wind|Onshore;years;;Technical lifetime of a newly installed plant to generate electricity from onshore wind power;;;;;;;
+Lifetime|Electricity|Wind;years;;Technical lifetime of a newly installed plant to generate electricity from wind power;;;Tech|Electricity|Wind|Offshore|Lifetime;years;;;R
+Lifetime|Electricity|Wind|Offshore;years;;Technical lifetime of a newly installed plant to generate electricity from offshore wind power;;;Tech|Electricity|Wind|Offshore|Lifetime;years;;;R
+Lifetime|Electricity|Wind|Onshore;years;;Technical lifetime of a newly installed plant to generate electricity from onshore wind power;;;Tech|Electricity|Wind|Onshore|Lifetime;years;;;R
 Lifetime|Gases;years;;Technical lifetime of a newly installed plant to produce gaseous fuels including natural gas and biogas, not including hydrogen;;;;;;;
 Lifetime|Gases|Biomass;years;;Technical lifetime of a newly installed plant to produce gas from biogenic sources, mainly biogas;;;;;;;
 Lifetime|Gases|Coal;years;;Technical lifetime of a newly installed plant to produce gaseous fuels from coal gasification;;;;;;;
@@ -4386,18 +4386,18 @@ Lifetime|Heat|Other;years;;Technical lifetime of a newly installed plant to prod
 Lifetime|Heat|Solar;years;;Technical lifetime of a newly installed plant to produce centralized heat from solar energy;;;;;;;
 Lifetime|Hydrogen;years;;Technical lifetime of a newly installed plant to produce hydrogen;;;;;;;
 Lifetime|Hydrogen|Biomass;years;;Technical lifetime of a newly installed plant to produce hydrogen generated from biomass;;;;;;;
-Lifetime|Hydrogen|Biomass|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen generated from biomass in combination with carbon capture and storage (CCS);;;;;;;
-Lifetime|Hydrogen|Biomass|w/o CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen generated from biomass without carbon capture and storage (CCS);;;;;;;
+Lifetime|Hydrogen|Biomass|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen generated from biomass in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Biomass|w/ CC|Lifetime;years;;;R
+Lifetime|Hydrogen|Biomass|w/o CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen generated from biomass without carbon capture and storage (CCS);;;Tech|Hydrogen|Biomass|w/o CC|Lifetime;years;;;R
 Lifetime|Hydrogen|Coal;years;;Technical lifetime of a newly installed plant to produce hydrogen from coal;;;;;;;
-Lifetime|Hydrogen|Coal|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from coal in combination with carbon capture and storage (CCS);;;;;;;
-Lifetime|Hydrogen|Coal|w/o CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from coal without carbon capture and storage (CCS);;;;;;;
-Lifetime|Hydrogen|Electricity;years;;Technical lifetime of a newly installed plant to produce hydrogen from electrolysis;;;;;;;
+Lifetime|Hydrogen|Coal|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from coal in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Coal|w/ CC|Lifetime;years;;;R
+Lifetime|Hydrogen|Coal|w/o CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from coal without carbon capture and storage (CCS);;;Tech|Hydrogen|Coal|w/o CC|Lifetime;years;;;R
+Lifetime|Hydrogen|Electricity;years;;Technical lifetime of a newly installed plant to produce hydrogen from electrolysis;;;Tech|Hydrogen|Electricity|Lifetime;years;;;R
 Lifetime|Hydrogen|Fossil;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal;;;;;;;
 Lifetime|Hydrogen|Fossil|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal in combination with carbon capture and storage (CCS);;;;;;;
 Lifetime|Hydrogen|Fossil|w/o CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil fuels including natural gas, oil and coal without carbon capture and storage (CCS);;;;;;;
 Lifetime|Hydrogen|Gas;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil methane ('natural gas');;;;;;;
-Lifetime|Hydrogen|Gas|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil methane ('natural gas') in combination with carbon capture and storage (CCS);;;;;;;
-Lifetime|Hydrogen|Gas|w/o CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil methane ('natural gas') without carbon capture and storage (CCS);;;;;;;
+Lifetime|Hydrogen|Gas|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil methane ('natural gas') in combination with carbon capture and storage (CCS);;;Tech|Hydrogen|Gas|w/ CC|Lifetime;years;;;R
+Lifetime|Hydrogen|Gas|w/o CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from fossil methane ('natural gas') without carbon capture and storage (CCS);;;Tech|Hydrogen|Gas|w/o CC|Lifetime;years;;;R
 Lifetime|Hydrogen|Nuclear;years;;Technical lifetime of a newly installed plant to produce hydrogen from nuclear energy (e.g. thermochemical water splitting with nuclear heat);;;;;;;
 Lifetime|Hydrogen|Oil;years;;Technical lifetime of a newly installed plant to produce hydrogen from refined crude oil;;;;;;;
 Lifetime|Hydrogen|Oil|w/ CCS;years;;Technical lifetime of a newly installed plant to produce hydrogen from refined crude oil in combination with carbon capture and storage (CCS);;;;;;;
@@ -4415,7 +4415,7 @@ Lifetime|Liquids|Hydrogen|Biomass;years;;Technical lifetime of a newly installed
 Lifetime|Liquids|Hydrogen|Electricity;years;;Technical lifetime of a newly installed plant to produce liquid fuels using hydrogen from electrolysis, i.e., e-fuels (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Lifetime|Liquids|Hydrogen|Fossil;years;;Technical lifetime of a newly installed plant to produce liquid fuels using hydrogen from fossils (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
 Lifetime|Liquids|Hydrogen|Other;years;;Technical lifetime of a newly installed plant to produce liquid fuels using hydrogen from other sources (if hydrogen is explicitly modeled as a commodity and not an implicit intermediate product of the transformation technologies);;;;;;;
-Lifetime|Liquids|Oil;years;;Technical lifetime of a newly installed plant to produce liquid fuels from refined crude oil;;;;;;;
+Lifetime|Liquids|Oil;years;;Technical lifetime of a newly installed plant to produce liquid fuels from refined crude oil;;;Tech|Liquids|Fossil|Oil|Lifetime;years;;;R
 Lifetime|Liquids|Other;years;;Technical lifetime of a newly installed plant to produce sources that do not fit any other category;;;;;;;
 Lifetime|Solids;years;;Technical lifetime of a newly installed plant to produce solid energy carriers, including coal, briquettes, coke, and wood pellets;;;;;;;
 Lifetime|Solids|Biomass;years;;Technical lifetime of a newly installed plant to produce solid biomass (e.g., commercial charcoal, wood chips, wood pellets), not including traditional bioenergy;;;;;;;
