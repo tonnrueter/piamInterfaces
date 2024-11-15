@@ -16,6 +16,14 @@ MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile ;Concentration|N2O
 # changed magpie4 reporting variables
 Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Resources|Nitrogen|Cropland Budget|Inputs|Manure
 
+# magpie4 timber
+Timber|Volumetric|Demand|Roundwood|+|Industrial roundwood;Timber|Volumetric|Demand|Industrial roundwood
+Timber|Volumetric|Demand|Roundwood|+|Timber for construction;Timber|Volumetric|Demand|Timber for construction
+Timber|Volumetric|Demand|Roundwood|+|Wood fuel;Timber|Volumetric|Demand|Wood fuel
+Timber|Volumetric|Production|Roundwood|+|Industrial roundwood;Timber|Volumetric|Production|Industrial roundwood
+Timber|Volumetric|Production|Roundwood|+|Timber for construction;Timber|Volumetric|Production|Timber for construction
+Timber|Volumetric|Production|Roundwood|+|Wood fuel;Timber|Volumetric|Production|Wood fuel
+
 # magpie4 reporting variables for cropland changed with magpie4 2.3.2
 Resources|Land Cover|Cropland|Croparea|Bioenergy crops* ;Resources|Land Cover|Cropland|Bioenergy crops*
 Resources|Land Cover|Cropland|Croparea|Crops*           ;Resources|Land Cover|Cropland|Crops*
