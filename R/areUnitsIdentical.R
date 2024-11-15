@@ -47,6 +47,7 @@ areUnitsIdentical <- function(vec1, vec2 = NULL) {
     c("km3/yr", "km3"),
     c("Mm3/yr", "million m3/yr"),
     c("Mha/yr", "million ha/yr"),
+    c("mha per yr", "million ha/yr"),
   NULL)
 
   # function to apply abbreviations
