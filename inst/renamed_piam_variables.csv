@@ -24,6 +24,11 @@ Timber|Volumetric|Production|Roundwood|+|Industrial roundwood;Timber|Volumetric|
 Timber|Volumetric|Production|Roundwood|+|Timber for construction;Timber|Volumetric|Production|Timber for construction
 Timber|Volumetric|Production|Roundwood|+|Wood fuel;Timber|Volumetric|Production|Wood fuel
 
+# magpie4 forest
+Resources|Land Cover|Forest|Planted Forest|Natural|+|CO2-price AR;Resources|Land Cover|Forest|Managed Forest|+|Afforestation
+Resources|Land Cover|Forest|Planted Forest|Natural|+|NPI_NDC AR;Resources|Land Cover|Forest|Managed Forest|+|NPI/NDC
+Resources|Land Cover|Forest|Planted Forest|Plantations|+|Timber;Resources|Land Cover|Forest|Managed Forest|+|Plantations
+
 # magpie4 reporting variables for cropland changed with magpie4 2.3.2
 Resources|Land Cover|Cropland|Croparea|Bioenergy crops* ;Resources|Land Cover|Cropland|Bioenergy crops*
 Resources|Land Cover|Cropland|Croparea|Crops*           ;Resources|Land Cover|Cropland|Crops*

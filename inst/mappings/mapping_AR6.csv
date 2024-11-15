@@ -1526,10 +1526,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 ;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Croparea|Forage|rainfed;million ha;;;;;area of land that is rain-fed;M
 ;Land Cover|Cropland|Rainfed;million ha;Resources|Land Cover|Cropland|Croparea|Bioenergy crops|rainfed;million ha;;;;;area of land that is rain-fed;M
 1404;Land Cover|Forest;million ha;Resources|Land Cover|+|Forest;million ha;;;;;managed and unmanaged forest area;M
-1405;Land Cover|Forest|Afforestation and Reforestation;million ha;Resources|Land Cover|Forest|Managed Forest|+|NPI/NDC;million ha;;;;;area with afforestation and reforestation;M
-;Land Cover|Forest|Afforestation and Reforestation;million ha;Resources|Land Cover|Forest|Managed Forest|+|Afforestation;million ha;;;;;area with afforestation and reforestation;M
+1405;Land Cover|Forest|Afforestation and Reforestation;million ha;Resources|Land Cover|Forest|Planted Forest|Natural|+|NPI_NDC AR;million ha;;;;;area with afforestation and reforestation;M
+;Land Cover|Forest|Afforestation and Reforestation;million ha;Resources|Land Cover|Forest|Planted Forest|Natural|+|CO2-price AR;million ha;;;;;area with afforestation and reforestation;M
 1406;Land Cover|Forest|Forestry|Harvested Area;million ha;;;;;;;Forest area harvested;
-1407;Land Cover|Forest|Managed;million ha;Resources|Land Cover|Forest|Managed Forest|+|Plantations;million ha;;;;;managed forests producing commercial wood supply for timber or energy (note: woody energy crops reported under ‘energy crops’);M
+1407;Land Cover|Forest|Managed;million ha;Resources|Land Cover|Forest|Planted Forest|Plantations|+|Timber;million ha;;;;;managed forests producing commercial wood supply for timber or energy (note: woody energy crops reported under ‘energy crops’);M
 1408;Land Cover|Forest|Natural Forest;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;;;;undisturbed natural forests,modified natural forests;M
 1409;Land Cover|Forest|Secondary;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;;;;regrown (unmanaged) secondary forests,e.g. from abandoned agricultural land;M
 1410;Land Cover|Other Arable Land;million ha;;;;;;;other arable land that is unmanaged (e.g.,grassland,savannah,shrubland),excluding unmanaged forests that are arable;
