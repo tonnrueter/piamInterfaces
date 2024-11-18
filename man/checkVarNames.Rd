@@ -4,12 +4,14 @@
 \alias{checkVarNames}
 \title{checkVariablesNames checks reporting and mappings on inconsistency in variable names}
 \usage{
-checkVarNames(vars, withunits = TRUE)
+checkVarNames(vars, withunits = TRUE, mappingName = NULL)
 }
 \arguments{
 \item{vars}{vector with variable names (and units such as "PE (EJ)")}
 
 \item{withunits}{should the var vector contain units in paranthesis?}
+
+\item{mappingName}{enables to define variablesWithoutUnit for specific mapping}
 }
 \description{
 Pass a vector of variable names (including the units if withunits=TRUE).
