@@ -14,7 +14,7 @@ test_that("checkVarNames works", {
 for (mapping in names(mappingNames())) {
   mappingData <- getMapping(mapping)
   test_that(paste0("checkVarNames for variable in mapping ", mapping), {
-    expect_no_warning(checkVarNames(paste0(mappingData$variable, " (", mappingData$unit, ")")))
+    expect_no_warning(checkVarNames(paste0(mappingData$variable, " (", mappingData$unit, ")"), mappingName = mapping))
   })
   test_that(paste0("checkVarNames for piam_variable in mapping ", mapping), {
     mpiam <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
