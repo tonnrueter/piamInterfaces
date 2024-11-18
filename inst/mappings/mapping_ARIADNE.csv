@@ -1604,8 +1604,8 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Sales|Transportation|LDV|Two-Wheelers;million;Sales of two-wheelers;;;;;0;;
 3;energy (transport);Sales|Transportation|LDV|Midsize Car;million;Sales of midsize cars (US EPA);;;;;0;;
 3;energy (transport);Sales|Transportation|LDV|Large Car and SUV;million;Sales of large cars and SUVs (US EPA);;;;;0;;
-2;energy (transport);Sales|Transportation|Truck;million;Sales of heavy trucks;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|ICE;million;Sales of trucks with internal combustion engine including hybrids and plug-in hybrids;;;;;0;;
+2;energy (transport);Sales|Transportation|Truck;million;Sales of heavy trucks;Sales|Transport|Freight|Road;million veh;1;;0;;T
+3;energy (transport);Sales|Transportation|Truck|ICE;million;Sales of trucks with internal combustion engine including hybrids and plug-in hybrids;Sales|Transport|Freight|Road|Liquids;million veh;1;;0;;T
 3;energy (transport);Sales|Transportation|Truck|ICE|Truck (0-3.5t);million;Sales of internal-combustion engine trucks with weight < 3.5t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|ICE|Truck (26t);million;Sales of internal-combustion engine trucks with weight 26t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|ICE|Truck (40t);million;Sales of internal-combustion engine trucks with weight 40t;;;;;0;;
@@ -1613,7 +1613,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Sales|Transportation|Truck|ICE|Truck (12t);million;Sales of internal-combustion engine trucks with weight 7.5 - 12t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|ICE|Truck (12t+);million;Sales of internal-combustion engine trucks with weight >12t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|ICE|Tractor Truck;million;Sales of internal combustion engine tractor trucks;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|BEV;million;Sales of battery electric trucks;;;;;0;;
+3;energy (transport);Sales|Transportation|Truck|BEV;million;Sales of battery electric trucks;Sales|Transport|Freight|Road|BEV;million veh;1;;0;;T
 3;energy (transport);Sales|Transportation|Truck|BEV|Truck (0-3.5t);million;Sales of battery electric trucks with weight < 3.5t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|BEV|Truck (26t);million;Sales of battery electric trucks with weight 26t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|BEV|Truck (40t);million;Sales of battery electric trucks with weight 40t;;;;;0;;
@@ -1621,7 +1621,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Sales|Transportation|Truck|BEV|Truck (12t);million;Sales of battery electric trucks with weight 7.5 - 12t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|BEV|Truck (12t+);million;Sales of battery electric trucks with weight >12t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|BEV|Tractor Truck;million;Sales of battery electric tractor trucks;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|FCEV;million;Sales of fuel cell electric trucks;;;;;0;;
+3;energy (transport);Sales|Transportation|Truck|FCEV;million;Sales of fuel cell electric trucks;Sales|Transport|Freight|Road|FCEV;million veh;1;;0;;T
 3;energy (transport);Sales|Transportation|Truck|FCEV|Truck (0-3.5t);million;Sales of fuel-cell electric trucks with weight < 3.5t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|FCEV|Truck (26t);million;Sales of fuel-cell electric trucks with weight 26t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|FCEV|Truck (40t);million;Sales of fuel-cell electric trucks with weight 40t;;;;;0;;
@@ -1648,17 +1648,17 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Sales|Transportation|Truck|Overhead Line|ICE|Truck (12t);million;Sales of overhead line trucks with additional internal combustion engine and weight 7.5 - 12t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|Overhead Line|ICE|Truck (12t+);million;Sales of overhead line trucks with additional internal combustion engine and weight >12t;;;;;0;;
 3;energy (transport);Sales|Transportation|Truck|Overhead Line|ICE|Tractor Truck;million;Sales of overhead line tractor trucks with additional internal combustion engine;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|Truck (0-3.5t);million;Sales of trucks with weight < 3.5t;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|Truck (26t);million;Sales of trucks with weight 26t;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|Truck (40t);million;Sales of trucks with weight 40t;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|Truck (7.5t);million;Sales of trucks with weight 3.5 - 7.5t;;;;;0;;
+3;energy (transport);Sales|Transportation|Truck|Truck (0-3.5t);million;Sales of trucks with weight < 3.5t;Sales|Transport|Freight|Road|Light|Truck(0-3_5t);million veh;1;;0;;T
+3;energy (transport);Sales|Transportation|Truck|Truck (26t);million;Sales of trucks with weight 26t;Sales|Transport|Freight|Road|Heavy|Truck(26t);million veh;1;;0;;T
+3;energy (transport);Sales|Transportation|Truck|Truck (40t);million;Sales of trucks with weight 40t;Sales|Transport|Freight|Road|Heavy|Truck(40t);million veh;1;;0;;T
+3;energy (transport);Sales|Transportation|Truck|Truck (7.5t);million;Sales of trucks with weight 3.5 - 7.5t;Sales|Transport|Freight|Road|Light|Truck(7_5t);million veh;1;;0;;T
 3;energy (transport);Sales|Transportation|Truck|Truck (12t);million;Sales of trucks with weight 7.5 - 12t;;;;;0;;
-3;energy (transport);Sales|Transportation|Truck|Truck (12t+);million;Sales of trucks with weight >12t;;;;;0;;
+3;energy (transport);Sales|Transportation|Truck|Truck (12t+);million;Sales of trucks with weight >12t;Sales|Transport|Freight|Road|Heavy|Truck(18t);million veh;1;;0;;T
 3;energy (transport);Sales|Transportation|Truck|Tractor Truck;million;Sales of tractor trucks;;;;;0;;
-2;energy (transport);Sales|Transportation|Bus;million;Sales of heavy buses;;;;;0;;
-3;energy (transport);Sales|Transportation|Bus|ICE;million;Sales of buses with internal combustion engine including hybrids and plug-in hybrids;;;;;0;;
-3;energy (transport);Sales|Transportation|Bus|BEV;million;Sales of battery electric buses;;;;;0;;
-3;energy (transport);Sales|Transportation|Bus|FCEV;million;Sales of fuel cell electric buses;;;;;0;;
+2;energy (transport);Sales|Transportation|Bus;million;Sales of heavy buses;Sales|Transport|Pass|Road|Bus;million veh;1;;0;;T
+3;energy (transport);Sales|Transportation|Bus|ICE;million;Sales of buses with internal combustion engine including hybrids and plug-in hybrids;Sales|Transport|Pass|Road|Bus|Liquids;million veh;1;;0;;T
+3;energy (transport);Sales|Transportation|Bus|BEV;million;Sales of battery electric buses;Sales|Transport|Pass|Road|Bus|BEV;million veh;1;;0;;T
+3;energy (transport);Sales|Transportation|Bus|FCEV;million;Sales of fuel cell electric buses;Sales|Transport|Pass|Road|Bus|FCEV;million veh;1;;0;;T
 2;energy (supply);Trade|Primary Energy|Biomass|Volume;PJ/yr;net exports of solid, unprocessed biomass, at the global level these should add up to the trade losses only;Trade|Biomass;EJ/yr;1000;;0;;R
 2;energy (supply);Trade|Primary Energy|Coal|Volume;PJ/yr;net exports of coal, at the global level these should add up to the trade losses only;Trade|Coal;EJ/yr;1000;;0;;R
 2;energy (supply);Trade|Primary Energy|Gas|Volume;PJ/yr;net exports of natural gas, at the global level these should add up to the trade losses only;Trade|Gas;EJ/yr;1000;;0;;R
