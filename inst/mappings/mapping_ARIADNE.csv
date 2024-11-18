@@ -1497,8 +1497,8 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Stock|Transportation|LDV|Two-Wheelers;million;Stock of two-wheelers;;;;;0;;
 3;energy (transport);Stock|Transportation|LDV|Midsize Car;million;Stock of midsize cars (US EPA);;;;;0;;
 3;energy (transport);Stock|Transportation|LDV|Large Car and SUV;million;Stock of large cars and SUVs (US EPA);;;;;0;;
-2;energy (transport);Stock|Transportation|Truck;million;Stock of trucks;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|ICE;million;Stock of trucks with internal combustion engine including hybrids and plug-in hybrids;;;;;0;;
+2;energy (transport);Stock|Transportation|Truck;million;Stock of trucks;Stock|Transport|Freight|Road;million veh;1;;0;;T
+3;energy (transport);Stock|Transportation|Truck|ICE;million;Stock of trucks with internal combustion engine including hybrids and plug-in hybrids;Stock|Transport|Freight|Road|Liquids;million veh;1;;0;;T
 3;energy (transport);Stock|Transportation|Truck|ICE|Truck (0-3.5t);million;Stock of internal-combustion engine trucks with weight < 3.5t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|ICE|Truck (26t);million;Stock of internal-combustion engine trucks with weight 26t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|ICE|Truck (40t);million;Stock of internal-combustion engine trucks with weight 40t;;;;;0;;
@@ -1506,7 +1506,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Stock|Transportation|Truck|ICE|Truck (12t);million;Stock of internal-combustion engine trucks with weight 7.5 - 12t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|ICE|Truck (12t+);million;Stock of internal-combustion engine trucks with weight >12t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|ICE|Tractor Truck;million;Stock of internal combustion engine tractor trucks;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|BEV;million;Stock of battery electric trucks;;;;;0;;
+3;energy (transport);Stock|Transportation|Truck|BEV;million;Stock of battery electric trucks;Stock|Transport|Freight|Road|BEV;million veh;1;;0;;T
 3;energy (transport);Stock|Transportation|Truck|BEV|Truck (0-3.5t);million;Stock of battery electric trucks with weight < 3.5t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|BEV|Truck (26t);million;Stock of battery electric trucks with weight 26t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|BEV|Truck (40t);million;Stock of battery electric trucks with weight 40t;;;;;0;;
@@ -1514,7 +1514,7 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Stock|Transportation|Truck|BEV|Truck (12t);million;Stock of battery electric trucks with weight 7.5 - 12t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|BEV|Truck (12t+);million;Stock of battery electric trucks with weight >12t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|BEV|Tractor Truck;million;Stock of battery electric tractor trucks;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|FCEV;million;Stock of fuel cell electric trucks;;;;;0;;
+3;energy (transport);Stock|Transportation|Truck|FCEV;million;Stock of fuel cell electric trucks;Stock|Transport|Freight|Road|FCEV;million veh;1;;0;;T
 3;energy (transport);Stock|Transportation|Truck|FCEV|Truck (0-3.5t);million;Stock of fuel-cell electric trucks with weight < 3.5t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|FCEV|Truck (26t);million;Stock of fuel-cell electric trucks with weight 26t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|FCEV|Truck (40t);million;Stock of fuel-cell electric trucks with weight 40t;;;;;0;;
@@ -1541,17 +1541,17 @@ Tier;Category;variable;unit;Definition;piam_variable;piam_unit;piam_factor;Comme
 3;energy (transport);Stock|Transportation|Truck|Overhead Line|ICE|Truck (12t);million;Stock of overhead line trucks with additional internal combustion engine and weight 7.5 - 12t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|Overhead Line|ICE|Truck (12t+);million;Stock of overhead line trucks with additional internal combustion engine and weight >12t;;;;;0;;
 3;energy (transport);Stock|Transportation|Truck|Overhead Line|ICE|Tractor Truck;million;Stock of overhead line tractor trucks with additional internal combustion engine;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|Truck (0-3.5t);million;Stock of trucks with weight < 3.5t;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|Truck (26t);million;Stock of trucks with weight 26t;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|Truck (40t);million;Stock of trucks with weight 40t;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|Truck (7.5t);million;Stock of trucks with weight 3.5 - 7.5t;;;;;0;;
+3;energy (transport);Stock|Transportation|Truck|Truck (0-3.5t);million;Stock of trucks with weight < 3.5t;Stock|Transport|Freight|Road|Light|Truck(0-3_5t);million veh;1;;0;;T
+3;energy (transport);Stock|Transportation|Truck|Truck (26t);million;Stock of trucks with weight 26t;Stock|Transport|Freight|Road|Heavy|Truck(26t);million veh;1;;0;;T
+3;energy (transport);Stock|Transportation|Truck|Truck (40t);million;Stock of trucks with weight 40t;Stock|Transport|Freight|Road|Heavy|Truck(40t);million veh;1;;0;;T
+3;energy (transport);Stock|Transportation|Truck|Truck (7.5t);million;Stock of trucks with weight 3.5 - 7.5t;Stock|Transport|Freight|Road|Light|Truck(7_5t);million veh;1;;0;;T
 3;energy (transport);Stock|Transportation|Truck|Truck (12t);million;Stock of trucks with weight 7.5 - 12t;;;;;0;;
-3;energy (transport);Stock|Transportation|Truck|Truck (12t+);million;Stock of trucks with weight >12t;;;;;0;;
+3;energy (transport);Stock|Transportation|Truck|Truck (12t+);million;Stock of trucks with weight >12t;Stock|Transport|Freight|Road|Heavy|Truck(18t);million veh;1;;0;Ariadne and EDGE-T weight class not fully overlapping. Take closest category. ;T
 3;energy (transport);Stock|Transportation|Truck|Tractor Truck;million;Stock of tractor trucks;;;;;0;;
-2;energy (transport);Stock|Transportation|Bus;million;Stock of buses;;;;;0;;
-3;energy (transport);Stock|Transportation|Bus|ICE;million;Stock of buses with internal combustion engine including hybrids and plug-in hybrids;;;;;0;;
-3;energy (transport);Stock|Transportation|Bus|BEV;million;Stock of battery electric buses;;;;;0;;
-3;energy (transport);Stock|Transportation|Bus|FCEV;million;Stock of fuel cell electric buses;;;;;0;;
+2;energy (transport);Stock|Transportation|Bus;million;Stock of buses;Stock|Transport|Pass|Road|Bus;million veh;1;;0;;T
+3;energy (transport);Stock|Transportation|Bus|ICE;million;Stock of buses with internal combustion engine including hybrids and plug-in hybrids;Stock|Transport|Pass|Road|Bus|Liquids;million veh;1;;0;;T
+3;energy (transport);Stock|Transportation|Bus|BEV;million;Stock of battery electric buses;Stock|Transport|Pass|Road|Bus|BEV;million veh;1;;0;;T
+3;energy (transport);Stock|Transportation|Bus|FCEV;million;Stock of fuel cell electric buses;Stock|Transport|Pass|Road|Bus|FCEV;million veh;1;;0;;T
 2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;million veh;1;;0;;T
 2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids;million veh;1;;0;;T
 2;energy (transport);Sales|Transportation|LDV;million;Sales of light duty vehicles;Sales|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids;million veh;1;;0;;T
