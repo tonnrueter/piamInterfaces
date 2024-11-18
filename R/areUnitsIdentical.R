@@ -45,6 +45,9 @@ areUnitsIdentical <- function(vec1, vec2 = NULL) {
     c("t DM/ha", "t DM/ha/yr", "dm t/ha"),
     # for 'Water|Environmental flow violation volume'
     c("km3/yr", "km3"),
+    c("Mm3/yr", "million m3/yr"),
+    c("Mha/yr", "million ha/yr"),
+    c("mha per yr", "million ha/yr"),
   NULL)
 
   # function to apply abbreviations
