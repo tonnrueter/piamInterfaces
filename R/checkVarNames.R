@@ -13,7 +13,7 @@ checkVarNames <- function(vars, withunits = TRUE, mappingName = NULL) {
     warning("These variable names have wrong bars and spaces: ", paste(barspace, collapse = ", "))
   }
 
-  variablesWithoutUnit_ScenarioMIP <- c(
+  variablesWithoutUnitScenarioMIP <- c(
     "Gender Inequality Index (NA)",
     "Ocean|Carbonate Saturation|Aragonite (NA)",
     "Ocean|Carbonate Saturation|Calcite (NA)",
@@ -25,7 +25,7 @@ checkVarNames <- function(vars, withunits = TRUE, mappingName = NULL) {
   if (is.null(mappingName) || !(mappingName == "ScenarioMIP")) {
     naVar <- unique(grep("[\\|\\( ]NA[\\|\\) ]|^NA", vars, value = TRUE))
   } else if (mappingName == "ScenarioMIP") {
-    filteredVars <- vars[!vars %in% variablesWithoutUnit_ScenarioMIP]
+    filteredVars <- vars[!vars %in% variablesWithoutUnitScenarioMIP]
     naVar <- unique(grep("[\\|\\( ]NA[\\|\\) ]|^NA", filteredVars, value = TRUE))
   }
 
