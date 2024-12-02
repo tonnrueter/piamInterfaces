@@ -147,7 +147,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;Co
 132;Expenditure|household|Services|Water & sanitation;billion US$2010/yr;;;;;;;expenditure of households for Water & Sanitation services
 133;Export;billion US$2010/yr;;;;;;;total exports measured in monetary quantities.
 134;GDP|MER;billion US$2010/yr;;;;;;;GDP at market exchange rate
-135;GDP|PPP;billion US$2010/yr;Total income;million US$2017 PPP/yr;0.0009096;M;;;GDP at purchasing power parity
+135;GDP|PPP;billion US$2010/yr;Income PPP;million US$2017 PPP/yr;0.0009096;M;;;GDP at purchasing power parity
 136;GINI;0;;;;;;;GINI income inequality index
 137;Import;billion US$2010/yr;;;;;;;total imports measured in monetary quantities.
 138;Interest Rate|Real;%;;;;;;time preference rate as component of the interest rate is exogenous;Real interest rate or return on capital that is relevant for energy system investments
