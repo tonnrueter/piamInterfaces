@@ -383,6 +383,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 336;Emissions|CO2|Industrial Processes|Steel;Mt CO2/yr;;;;;;;CO2 emissions from industrial processes (excl. fuel combustion IPCC 1A2) in the steel sector  (IPCC categories 2A,B,C,E);
 337;Emissions|CO2|Other;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;;;;;CO2 emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);R
 ;Emissions|CO2|Other;Mt CO2/yr;Emi|CO2|CDR|EW;Mt CO2/yr;;;;;CO2 emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);R
+;Emissions|CO2|Other;Mt CO2/yr;Emi|CO2|CDR|OAE;Mt CO2/yr;;;;;CO2 emissions from other sources (please provide a definition of other sources in this category in the 'comments' tab);R
 338;Emissions|CO2|Waste;Mt CO2/yr;;;;;;;;
 339;Emissions|CO|AFOLU;Mt CO/yr;Emi|CO|Land Use;Mt CO/yr;;;;;Land Use based carbon monoxide emissions;R
 340;Emissions|CO|AFOLU|Agriculture;Mt CO/yr;;;;;;;CO|AFOLU|Agric emissions from agriculture;
