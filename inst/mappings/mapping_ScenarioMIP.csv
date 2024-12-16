@@ -2383,9 +2383,9 @@ Emissions|VOC|Product Use|Solvents;Mt VOC/yr;3;Emissions of volatile organic com
 Emissions|VOC|Waste;Mt VOC/yr;2;Emissions of volatile organic compound from waste of fossil-based products through incineration or decomposition (IPCC 1996 category 6, IPCC 2006 category 4), not including emissions from organic waste handling and decay;;;Emi|VOC|Waste;Mt VOC/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R
 Energy Service|Commercial|Floor Space;bn m2;2;Energy service demand for conditioned floor space in commercial buildings;;;ES|Buildings|Commercial|Floor Space;bn m2;;;Rx
 Energy Service|Residential and Commercial|Floor Space;bn m2;2;Energy service demand for conditioned floor space in all buildings;;;ES|Buildings|Floor Space;bn m2;;;R
-Energy Service|Residential|Cooling Degree Days; C-days;;Measure of how hot the temperature was over a given period indicating higher energy needs for cooling;;;;;;;
+Energy Service|Residential|Cooling Degree Days;°C-days;;Measure of how hot the temperature was over a given period indicating higher energy needs for cooling;;;;;;;
 Energy Service|Residential|Floor Space;bn m2;2;Energy service demand for conditioned floor space in residential buildings;;;ES|Buildings|Residential|Floor Space;bn m2;;;Rx
-Energy Service|Residential|Heating Degree Days; C-days;;Measure of how cold the temperature was over a given period indicating higher energy needs for heating;;;;;;;
+Energy Service|Residential|Heating Degree Days;°C-days;;Measure of how cold the temperature was over a given period indicating higher energy needs for heating;;;;;;;
 Energy Service|Transportation|Freight;billion tkm/yr;;Energy service demand for freight transport;;;ES|Transport|Freight|Road;billion tkm/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (service);T
 Energy Service|Transportation|Freight;billion tkm/yr;;Energy service demand for freight transport;;;ES|Transport|Freight|Rail;billion tkm/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (service);T
 Energy Service|Transportation|Freight;billion tkm/yr;;Energy service demand for freight transport;;;ES|Transport|Freight|Domestic Shipping;billion tkm/yr;;mapping taken from NAVIGATE, NAVIGATE category: energy (service);T
@@ -4847,8 +4847,8 @@ Gross Removals|CO2|AFOLU;Mt CO2/yr;1;Gross removals of carbon dioxide (CO2) from
 Harvested Area|Forestry;million ha/yr;2;Total timber harvest/production area (= sum of timber plantations, and other productive forest that is being harvested);;;Resources|Timber operations|Harvested area for timber|Total;mha per yr;1;;M
 Health|Child Mortality;million;;Child mortality;;;;;;;
 Health|Child Mortality|Indoor Air Pollution;million;;Child mortality associated with indoor air pollution;;;;;;;
-Health|Disability-Adjusted Life Years|PM2.5;DALY/yr;;Disability adjusted life years lost per year from health impacts due to air pollution of fine particles with a diameter of 2.5 ?m or less (PM2.5);;;Disability-Adjusted Life Year|PM2_5;DALY/yr;;additional mapping taken from additional_SHAPE;S
-Health|Premature Deaths|PM2.5;million;;Number of premature deaths associated with increased health risks from exposure to air pollution of fine particles with a diameter of 2.5 ?m or less (PM2.5);;;;;;;
+Health|Disability-Adjusted Life Years|PM2.5;DALY/yr;;Disability adjusted life years lost per year from health impacts due to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);;;Disability-Adjusted Life Year|PM2_5;DALY/yr;;additional mapping taken from additional_SHAPE;S
+Health|Premature Deaths|PM2.5;million;;Number of premature deaths associated with increased health risks from exposure to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);;;;;;;
 Inequality|Average Income|Bottom 40% [Ratio];%;;Average income of bottom 40% of population relative to national average;;Population;Inequality|Bottom 40% average income|Ratio;percent;;additional mapping taken from additional_SHAPE;S
 Intensity|Final Energy;EJ/billion USD_2010;;Final Energy intensity;;GDP|PPP;Intensity|GDP|Final Energy;MJ/US$2017;0.001099;mapping taken from AR6;R
 Investment;billion USD_2010/yr;;Total economy-wide investments including macro-economic capital stock, energy system, R&D, etc.;;;Investments;billion US$2017/yr;0.9096;;R
