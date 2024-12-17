@@ -47,7 +47,7 @@ To edit a mapping in `R`, use:
 ```
 mappingdata <- getMapping("AR6")
 ...
-write.csv2(mappingdata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
+write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
 ```
 
 Opening the csv files in Excel can be problematic, as it sometimes changes values and quotation marks.
