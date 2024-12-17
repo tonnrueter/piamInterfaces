@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.38.3**
+R package **piamInterfaces**, version **0.38.4**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -36,6 +36,7 @@ Recommended column:
   [remind2](https://github.com/pik-piam/remind2/blob/master/tests/testthat/test-convGDX2mif.R#L13-L26)
   and [coupling tests](https://github.com/remindmodel/remind/blob/develop/tests/testthat/test_20-coupled.R).
   If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped.
+- `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 
 Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
@@ -120,7 +121,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2024). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.38.3, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2024). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.38.4, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -129,7 +130,7 @@ A BibTeX entry for LaTeX users is
   title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
   year = {2024},
-  note = {R package version 0.38.3},
+  note = {R package version 0.38.4},
   url = {https://github.com/pik-piam/piamInterfaces},
 }
 ```
