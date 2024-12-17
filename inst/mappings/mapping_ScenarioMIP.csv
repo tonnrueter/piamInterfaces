@@ -7360,7 +7360,7 @@ Production|Iron and Steel|Iron;Mt/yr;2;Production of raw iron, used in the iron 
 Production|Iron and Steel|Iron Ore;Mt/yr;2;Production of ores, from which metallic iron can be economically extracted;;;;;;;
 Production|Iron and Steel|Iron|Pig Iron;Mt/yr;3;Production of pig iron, an intermediate good used in the iron industry for the production of steel produced by smelting iron in a blast furnace;;;;;;;
 Production|Iron and Steel|Iron|Sponge Iron;Mt/yr;3;Production of sponge iron (also called direct reduced iron);;;;;;;
-Production|Iron and Steel|Steel;Mt/yr;1;Production of raw steel, an alloy of carbon and iron;;;;;;;
+Production|Iron and Steel|Steel;Mt/yr;1;Production of raw steel, an alloy of carbon and iron;;;Production|Industry|Steel;Mt/yr;;;R
 Production|Iron and Steel|Steel|Primary;Mt/yr;2;Production of raw steel, an alloy of carbon and iron, extracted from minerals and free of reclaimed metal scrap;;;Production|Industry|Steel|Primary;Mt/yr;;;R
 Production|Iron and Steel|Steel|Secondary;Mt/yr;2;Production of raw steel, an alloy of carbon and iron, that does not directly originate from a primary mineral but from a recycling process or from the processing of waste streams from primary production;;;Production|Industry|Steel|Secondary;Mt/yr;;;R
 Production|Non-Ferrous Metals|Aluminum;Mt/yr;2;Production of aluminum;;;;;;;
