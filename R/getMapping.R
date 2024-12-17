@@ -51,6 +51,12 @@ getMapping <- function(project = NULL, requiredColsOnly = FALSE) {
     if (isTRUE(requiredColsOnly)) {
       return(select(data, all_of(requiredCols)))
     }
+
+    # add optional interpolation column if it does not exist
+    if (!"interpolation" %in% colnames(data)) {
+      data$interpolation <- NA
+    }
+
     return(data)
   } else {
     stop("Mapping file ", filename, " not found in piamInterfaces@",

@@ -118,7 +118,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
       mutate(
         "piam_weight" = .data$weight
       ) %>%
-      select("variable", "unit", "piam_variable", "piam_unit", "piam_factor", "piam_weight")
+      select("variable", "unit", "piam_variable", "piam_unit",
+             "piam_factor", "piam_weight", "interpolation")
     checkUnitFactor(t, logFile = logFile, failOnUnitMismatch = FALSE)
     mapData <- rbind(mapData, t)
   }
@@ -184,6 +185,10 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     FUN = "sum",
     na.action = naAction
   )
+
+  if (any(mapData$interpolate == "linear", na.rm = TRUE)) {
+    submission <- .interpolate(submission, mapData)
+  }
 
   # apply corrections using IIASA template ----
 
@@ -330,4 +335,19 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
         "piam_factor"
       )
   )
+}
+
+.interpolate <- function(submission, mapData)  {
+
+  message("# Apply linear interpolation to submission data")
+
+  intVars <- filter(mapData, .data$interpolate == "linear") %>%
+    dplyr::pull("variable") %>%
+    unique()
+
+  tmp <- submission %>%
+    filter(.data$variable %in% intVars) %>%
+    quitte::interpolate_missing_periods(method = "linear", period = seq(2005, 2100, 1))
+
+  return(rbind(filter(submission, !.data$variable %in% intVars), tmp))
 }
