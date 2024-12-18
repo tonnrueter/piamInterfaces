@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.38.6**
+R package **piamInterfaces**, version **0.39.0**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -36,6 +36,7 @@ Recommended column:
   [remind2](https://github.com/pik-piam/remind2/blob/master/tests/testthat/test-convGDX2mif.R#L13-L26)
   and [coupling tests](https://github.com/remindmodel/remind/blob/develop/tests/testthat/test_20-coupled.R).
   If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped.
+- `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 
 Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
@@ -117,7 +118,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2024). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.38.6, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2024). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.39.0, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -128,6 +129,6 @@ A BibTeX entry for LaTeX users is
   date = {2024-12-18},
   year = {2024},
   url = {https://github.com/pik-piam/piamInterfaces},
-  note = {Version: 0.38.6},
+  note = {Version: 0.39.0},
 }
 ```
