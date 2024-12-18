@@ -186,7 +186,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     na.action = naAction
   )
 
-  if (any(mapData$interpolate == "linear", na.rm = TRUE)) {
+  if (any(mapData$interpolation == "linear", na.rm = TRUE)) {
     submission <- .interpolate(submission, mapData)
   }
 
@@ -341,7 +341,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
 
   message("# Apply linear interpolation to submission data")
 
-  intVars <- filter(mapData, .data$interpolate == "linear") %>%
+  intVars <- filter(mapData, .data$interpolation == "linear") %>%
     dplyr::pull("variable") %>%
     unique()
 
