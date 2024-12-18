@@ -347,7 +347,9 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
 
   tmp <- submission %>%
     filter(.data$variable %in% intVars) %>%
-    quitte::interpolate_missing_periods(method = "linear", period = seq(2005, 2100, 1))
+    quitte::interpolate_missing_periods(method = "linear",
+                                        period = seq(min(submission$period),
+                                                     max(submission$period), 1))
 
   return(rbind(filter(submission, !.data$variable %in% intVars), tmp))
 }
