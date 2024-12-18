@@ -39,7 +39,7 @@ To edit a mapping in `R`, use:
 ```
 mappingdata <- getMapping("AR6")
 ...
-write.csv2(mappingdata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
+write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
 ```
 
 Opening the csv files in Excel can be problematic, as it sometimes changes values and quotation marks.
@@ -53,10 +53,7 @@ You can edit the files in LibreOffice Calc using these settings in the Text Impo
   - String Delimiter: (none)
 
 The github diff on a large semicolon-separated file is often unreadable.
-For a human-readable output, save the old version of the mapping and run:
-```
-remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL)
-```
+
 ### Creating a new mapping
 
 Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings. 

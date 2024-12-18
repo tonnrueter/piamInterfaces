@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.38.4**
+R package **piamInterfaces**, version **0.38.6**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -48,7 +48,7 @@ To edit a mapping in `R`, use:
 ```
 mappingdata <- getMapping("AR6")
 ...
-write.csv2(mappingdata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
+write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
 ```
 
 Opening the csv files in Excel can be problematic, as it sometimes changes values and quotation marks.
@@ -62,10 +62,7 @@ You can edit the files in LibreOffice Calc using these settings in the Text Impo
   - String Delimiter: (none)
 
 The github diff on a large semicolon-separated file is often unreadable.
-For a human-readable output, save the old version of the mapping and run:
-```
-remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL)
-```
+
 ### Creating a new mapping
 
 Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings. 
@@ -121,16 +118,18 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2024). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.38.4, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2024). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.38.6, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
  ```latex
-@Manual{,
+@Misc{,
   title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
+  date = {2024-12-18},
   year = {2024},
   note = {R package version 0.38.4},
   url = {https://github.com/pik-piam/piamInterfaces},
+  note = {Version: 0.38.6},
 }
 ```
