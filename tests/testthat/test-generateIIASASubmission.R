@@ -114,8 +114,8 @@ test_that("interpolation for ScenarioMIP works as expected", {
     outputFilename = NULL
   )
 
-  expect_that(all(seq(2005, 2020, 1) %in% unique(result$period)), condition = TRUE)
-  expect_that(max(result$period) == 2020, condition = TRUE)
+  expect_true(all(seq(2005, 2020, 1) %in% unique(result$period)))
+  expect_true(max(result$period) == 2020)
 
 })
 
