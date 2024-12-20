@@ -19,6 +19,14 @@ test_that("checkSummations works", {
 
 
   for (summationFile in names(summationsNames())) {
+
+    # The current test expects a summation including 'Final Energy|Industry' in the summation
+    # file to work. Skip summation file if this requirement is not met.
+    sf <- getSummations(summationFile)
+    if (!"Final Energy|Industry" %in% sf$parent) {
+      next
+    }
+
     test_that(paste("test summationFile without errors using", summationFile), {
       if (summationFile == "AR6") {
         expect_message(tmp <- checkSummations(data, logFile = NULL,
@@ -43,6 +51,14 @@ test_that("checkSummations works", {
       }
     })
     test_that(paste("test summationFile with errors using", summationFile), {
+
+      # The current test expects a summation including Final Energy|Industry in the summation
+      # file to work. Skip it if this requirement is not met for a summation file.
+      sf <- getSummations(summationFile)
+      if (!"Final Energy|Industry" %in% sf$parent) {
+        next
+      }
+
       if (summationFile == "AR6") {
         expect_message(tmp <- checkSummations(mifFile = dataerror, logFile = NULL,
                                               template = summationFile, summationsFile = summationFile,

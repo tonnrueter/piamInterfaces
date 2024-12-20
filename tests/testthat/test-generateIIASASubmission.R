@@ -96,6 +96,28 @@ test_that("fail on duplicated data", {
                  "Duplicated data found")
 })
 
+test_that("interpolation for ScenarioMIP works as expected", {
+
+  # this test assumes that Emi|BC is one of the variables that should
+  # be interpolated as per the ScenarioMIP template
+
+  data <- data.frame(
+    variable = "Emi|BC", unit = "Mt BC/yr",
+    model = "REMIND", scenario = "default", region = "GLO",
+    period = c(2005, 2010, 2020),
+    value = c(1, 10, 15)
+  )
+
+  result <- generateIIASASubmission(
+    mifs = data,
+    mapping = "ScenarioMIP",
+    outputFilename = NULL
+  )
+
+  expect_true(all(seq(2005, 2020, 1) %in% unique(result$period)))
+  expect_true(max(result$period) == 2020)
+
+})
 
 # Unit test to ensure functionality of weighted
 # averages in the mapping. Generates a mapping file with

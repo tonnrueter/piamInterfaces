@@ -189,12 +189,3 @@ Emissions|VOC;Emissions|VOC|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Fires|Peat Burning;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Wetlands;1
 Emissions|VOC;Emissions|VOC|Waste;1
-;;
-# Dummy, needs to be present for tests
-Final Energy|Industry;Final Energy|Industry|Electricity;1
-Final Energy|Industry;Final Energy|Industry|Gases;1
-Final Energy|Industry;Final Energy|Industry|Heat;1
-Final Energy|Industry;Final Energy|Industry|Hydrogen;1
-Final Energy|Industry;Final Energy|Industry|Liquids;1
-Final Energy|Industry;Final Energy|Industry|Other;1
-Final Energy|Industry;Final Energy|Industry|Solids;1
