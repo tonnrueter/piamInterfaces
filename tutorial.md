@@ -14,7 +14,7 @@ serve to map variables from the PIAM framework to variables needed for the submi
 The mappings are `;`-separated files, using `#` as comment character, with the following mandatory columns:
 
 - `variable`: name of the variable in the project template
-- `unit`: unit corresponding to `variable`
+- `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`.
 - `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
@@ -53,6 +53,11 @@ You can edit the files in LibreOffice Calc using these settings in the Text Impo
   - String Delimiter: (none)
 
 The github diff on a large semicolon-separated file is often unreadable.
+For a human-readable output, save the old version of the mapping and run:
+```
+remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL, expanddata = FALSE)
+```
+On the PIK cluster, you can run `comparescenconf mapping_AR6.csv` in the `inst/mappings` folder and it will compare to a recent `master` version.
 
 ### Creating a new mapping
 
