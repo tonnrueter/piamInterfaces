@@ -14,7 +14,7 @@ serve to map variables from the PIAM framework to variables needed for the submi
 The mappings are `;`-separated files, using `#` as comment character, with the following mandatory columns:
 
 - `variable`: name of the variable in the project template
-- `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`.
+- `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`: an empty cell will fail the tests to avoid unintentially forgetting units.
 - `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
