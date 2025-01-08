@@ -4,7 +4,6 @@
 #' Get warnings if inconsistencies are found for the reporting
 #' @param vars vector with variable names (and units such as "PE (EJ)")
 #' @param withunits should the var vector contain units in paranthesis?
-#' @param mappingName enables to define variablesWithoutUnit for specific mapping
 #' @author Oliver Richters
 #' @export
 checkVarNames <- function(vars, withunits = TRUE) {
