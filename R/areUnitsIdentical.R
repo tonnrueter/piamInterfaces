@@ -35,7 +35,7 @@ areUnitsIdentical <- function(vec1, vec2 = NULL) {
     c("Mt Nr/yr", "Tg N/yr"),
     c("Mt NO2/yr", "Mt NOX/yr"),
     c("Nr/Nr", "Nr per Nr"),
-    c("unitless", "", "-", "1", "index"),
+    c("unitless", "", "-", "1", "index", NA),
     c("W/m2", "W/m^2"),
     c("million vehicles", "million veh"),
     # below, exceptionally added units that actually differ for backwards compatibility
@@ -48,7 +48,6 @@ areUnitsIdentical <- function(vec1, vec2 = NULL) {
     c("Mm3/yr", "million m3/yr"),
     c("Mha/yr", "million ha/yr"),
     c("mha per yr", "million ha/yr"),
-    c(NA, "-"),
   NULL)
 
   # function to apply abbreviations
