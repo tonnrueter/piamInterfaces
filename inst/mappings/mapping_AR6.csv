@@ -1,4 +1,4 @@
-idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
+idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;comment;description;source
 0;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M
 ;Fertilizer Use|Nitrogen;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;;;total nitrogen fertilizer use (organic + inorganic);M

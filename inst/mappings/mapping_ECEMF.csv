@@ -1,4 +1,4 @@
-variable;unit;piam_variable;piam_unit;piam_factor;Definition;Comment;internal_comment;source
+variable;unit;piam_variable;piam_unit;piam_factor;description;comment;internal_comment;source
 Carbon Capture;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;1;;;;R
 Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
 Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R

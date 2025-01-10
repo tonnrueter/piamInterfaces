@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.40.7**
+R package **piamInterfaces**, version **0.40.8**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -23,12 +23,12 @@ serve to map variables from the PIAM framework to variables needed for the submi
 The mappings are `;`-separated files, using `#` as comment character, with the following mandatory columns:
 
 - `variable`: name of the variable in the project template
-- `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`.
+- `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`: an empty cell will fail the tests to avoid unintentially forgetting units.
 - `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
 
-Recommended column:
+Recommended columns:
 - `description`: description text defining the `variable`. Never use `"` and `;` in the text.
 - `source`: abbreviation of the PIAM part where the `piam_variable` comes from.
   Use `B` = Brick, `C` = MAGICC, `M` = MAgPIE, `R` = REMIND, `S` = SDP postprocessing, `T` = EDGE-Transport.
@@ -36,12 +36,12 @@ Recommended column:
   [remind2](https://github.com/pik-piam/remind2/blob/master/tests/testthat/test-convGDX2mif.R#L13-L26)
   and [coupling tests](https://github.com/remindmodel/remind/blob/develop/tests/testthat/test_20-coupled.R).
   If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped.
-- `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 
 Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
-- `Tier`: importance of variable. 1 means most important
-- `Comment`: place for comments
+- `tier`: importance of variable, with 1 being most important
+- `comment`: place for internal comments
+- `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 - `weight`: calculates a weighted average of multiple entries of `piam_variable`. Provide a different `piam_variable` in this column, and `generateIIASASubmission()` will split the data on the rows which contain weight pointers, resolve these weights into numerical values (via a join operation between the submission and the input data) and then modify the value based on the weighting. This takes place in the private .resolveWeights method.
 
 To edit a mapping in `R`, use:
@@ -123,7 +123,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.40.7, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.40.8, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -131,9 +131,9 @@ A BibTeX entry for LaTeX users is
 @Misc{,
   title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
-  date = {2025-01-08},
+  date = {2025-01-10},
   year = {2025},
   url = {https://github.com/pik-piam/piamInterfaces},
-  note = {Version: 0.40.7},
+  note = {Version: 0.40.8},
 }
 ```

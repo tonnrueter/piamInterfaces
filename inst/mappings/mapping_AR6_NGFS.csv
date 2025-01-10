@@ -1,4 +1,4 @@
-variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
+variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;comment;description;source
 Emissions|Kyoto Gases|AFOLU;Mt CO2-equiv/yr;Emi|GHG|AFOLU;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Industry;Mt CO2-equiv/yr;Emi|GHG|Industry;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Transport;Mt CO2eq/yr;1;;;;;R

@@ -1,4 +1,4 @@
-idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
+idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;comment;description;source
 1;Useful Energy|Transportation|Passenger;GJ/cap/yr;UE|per capita|Transport|Pass;GJ/cap/yr;;;;;Useful energy per capita for passenger transport.;T
 2;Disability-Adjusted Life Year|PM2_5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;;;;Disability adjusted life years lost per year from air pollution health impact;S
 3;Useful Energy|Industry;GJ/cap/yr;;;;;;;Useful energy per capita for industry.;
