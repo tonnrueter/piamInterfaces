@@ -19,7 +19,7 @@ The mappings are `;`-separated files, using `#` as comment character, with the f
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
 
-Recommended column:
+Recommended columns:
 - `description`: description text defining the `variable`. Never use `"` and `;` in the text.
 - `source`: abbreviation of the PIAM part where the `piam_variable` comes from.
   Use `B` = Brick, `C` = MAGICC, `M` = MAgPIE, `R` = REMIND, `S` = SDP postprocessing, `T` = EDGE-Transport.
@@ -27,12 +27,12 @@ Recommended column:
   [remind2](https://github.com/pik-piam/remind2/blob/master/tests/testthat/test-convGDX2mif.R#L13-L26)
   and [coupling tests](https://github.com/remindmodel/remind/blob/develop/tests/testthat/test_20-coupled.R).
   If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped.
-- `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 
 Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
-- `Tier`: importance of variable. 1 means most important
-- `Comment`: place for comments
+- `tier`: importance of variable, with 1 being most important
+- `comment`: place for internal comments
+- `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 - `weight`: calculates a weighted average of multiple entries of `piam_variable`. Provide a different `piam_variable` in this column, and `generateIIASASubmission()` will split the data on the rows which contain weight pointers, resolve these weights into numerical values (via a join operation between the submission and the input data) and then modify the value based on the weighting. This takes place in the private .resolveWeights method.
 
 To edit a mapping in `R`, use:

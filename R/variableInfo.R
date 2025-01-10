@@ -100,9 +100,9 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
       message("Units: ", str_pad(paste0(unique(mappingData$unit[no]), collapse = ", "), width, "right"),
               " Units: ", paste0(unique(mappingData[, "piam_unit"][no]), collapse = ", "))
       # print definitions if existing
-      if ("Definition" %in% colnames(mappingData) && ! is.na(mappingData$Definition[[no]])) {
-        message("\nDefinition of ", mappingData$variable[[no]], " (", mappingData$unit[[no]], "): ",
-                mappingData$Definition[[no]])
+      if ("description" %in% colnames(mappingData) && ! is.na(mappingData$description[[no]])) {
+        message("\ndescription of ", mappingData$variable[[no]], " (", mappingData$unit[[no]], "): ",
+                mappingData$description[[no]])
       }
     }
   }
