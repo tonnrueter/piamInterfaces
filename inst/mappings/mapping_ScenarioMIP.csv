@@ -7,46 +7,64 @@ Agricultural Demand|Crops;million t DM/yr;1;Demand for crops including food, fee
 Agricultural Demand|Crops;million t DM/yr;1;Demand for crops including food, feed products and bioenergy (1st & 2nd generation crops);;;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Crops|Bioenergy;million t DM/yr;1;Demand for bioenergy crops (1st & 2nd generation);;;Demand|++|Bioenergy crops;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Bioenergy|1st Generation;million t DM/yr;2;Demand for 1st generation bioenergy crops (sugar, starch and oil crops);;;Demand|Bioenergy|+|Crops;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Bioenergy|1st Generation;million t DM/yr;2;Demand for 1st generation bioenergy crops (sugar, starch and oil crops);;;Demand|Bioenergy|+|Secondary products;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Bioenergy|2nd generation;million t DM/yr;1;Demand for second-generation bioenergy crops (short rotation grasses, short rotation trees);;;Demand|Bioenergy|+|Bioenergy crops;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Feed;million t DM/yr;2;Demand for feed crops;;;Demand|Feed|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
+Agricultural Demand|Crops|Feed;million t DM/yr;2;Demand for feed crops;;;Demand|Feed|+|Secondary products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Crops|Feed|Cereals;million t DM/yr;3;Demand for feed crops - cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Feed|Crops|+|Cereals;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Feed|Cereals;million t DM/yr;3;Demand for feed crops - cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Feed|Secondary products|+|Brans;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Feed|Cereals;million t DM/yr;3;Demand for feed crops - cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Feed|Secondary products|+|Distillers grains;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Feed|Oil Crops;million t DM/yr;3;Demand for feed crops - oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Demand|Feed|Crops|+|Oil crops;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Feed|Oil Crops;million t DM/yr;3;Demand for feed crops - oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Demand|Feed|Secondary products|+|Oils;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Feed|Oil Crops;million t DM/yr;3;Demand for feed crops - oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Demand|Feed|Secondary products|+|Oilcakes;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Feed|Other Crops;million t DM/yr;3;Demand for feed crops - other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Demand|Food|Crops|+|Other crops;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Feed|Sugar Crops;million t DM/yr;3;Demand for feed crops - sugar crops (sugar beet, sugar cane);;;Demand|Feed|Crops|+|Sugar crops;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Feed|Sugar Crops;million t DM/yr;3;Demand for feed crops - sugar crops (sugar beet, sugar cane);;;Demand|Feed|Secondary products|+|Molasses;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Feed|Sugar Crops;million t DM/yr;3;Demand for feed crops - sugar crops (sugar beet, sugar cane);;;Demand|Feed|Secondary products|+|Sugar;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Food;million t DM/yr;2;Demand for food crops;;;Demand|Food|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
+Agricultural Demand|Crops|Food;million t DM/yr;2;Demand for food crops;;;Demand|Food|+|Secondary products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Crops|Food|Cereals;million t DM/yr;3;Demand for food crops - cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Food|Crops|+|Cereals;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Food|Cereals;million t DM/yr;3;Demand for food crops - cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Food|Secondary products|+|Alcoholic beverages;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Food|Cereals;million t DM/yr;3;Demand for food crops - cereals (maize, rice, temperate cereals and tropical cereals);;;Demand|Food|Secondary products|+|Brans;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Food|Oil Crops;million t DM/yr;3;Demand for food crops - oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Demand|Food|Crops|+|Oil crops;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Food|Oil Crops;million t DM/yr;3;Demand for food crops - oil crops (cotton seed, groundnuts, oilpalms, other oil crops incl rapeseed, soybean, sunflower);;;Demand|Food|Secondary products|+|Oils;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Food|Other Crops;million t DM/yr;3;Demand for food crops - other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;;Demand|Food|Crops|+|Other crops;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Food|Sugar Crops;million t DM/yr;3;Demand for food crops - sugar crops (sugar beet, sugar cane);;;Demand|Food|Crops|+|Sugar crops;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Food|Sugar Crops;million t DM/yr;3;Demand for food crops - sugar crops (sugar beet, sugar cane);;;Demand|Food|Secondary products|+|Sugar;Mt DM/yr;;;M;
+Agricultural Demand|Crops|Food|Sugar Crops;million t DM/yr;3;Demand for food crops - sugar crops (sugar beet, sugar cane);;;Demand|Food|Secondary products|+|Molasses;Mt DM/yr;;;M;
 Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Agricultural Supply Chain Loss|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Domestic Balanceflow|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Material|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
-Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Processing|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Seed|+|Crops;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
+Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Material|+|Secondary products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
+Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Agricultural Supply Chain Loss|+|Secondary products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
+Agricultural Demand|Crops|Other;million t DM/yr;2;Demand for crops for other uses;;;Demand|Domestic Balanceflow|+|Secondary products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Livestock;million t DM/yr;1;Demand for livestock products (excluding fish);;;Demand|++|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Livestock|Feed;million t DM/yr;2;Demand for livestock products used as feed (excluding fish);;;Demand|Feed|+|Livestock products;Mt DM/yr;;;M;
 Agricultural Demand|Livestock|Food;million t DM/yr;2;Demand for livestock products used as food (excluding fish);;;Demand|Food|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
-Agricultural Demand|Livestock|Food|Dairy;million t DM/yr;3;Demand for livestock products used as food - dairy products (milk, eggs);;;Demand|Food|Livestock products|+|Dairy;Mt DM/yr;;;M;
-Agricultural Demand|Livestock|Food|Dairy;million t DM/yr;3;Demand for livestock products used as food - dairy products (milk, eggs);;;Demand|Food|Livestock products|+|Eggs;Mt DM/yr;;;M;
+Agricultural Demand|Livestock|Food|Dairy;million t DM/yr;3;Demand for livestock products used as food - dairy products (milk, cheese);;;Demand|Food|Livestock products|+|Dairy;Mt DM/yr;;;M;
+Agricultural Demand|Livestock|Food|Eggs;million t DM/yr;3;Demand for livestock products used as food - eggs;;;Demand|Food|Livestock products|+|Eggs;Mt DM/yr;;;M;
 Agricultural Demand|Livestock|Food|Non-Ruminant;million t DM/yr;3;Demand for livestock products used as food - monogastric meat (pig, poultry);;;Demand|Food|Livestock products|+|Monogastric meat;Mt DM/yr;;;M;
 Agricultural Demand|Livestock|Food|Non-Ruminant;million t DM/yr;3;Demand for livestock products used as food - monogastric meat (pig, poultry);;;Demand|Food|Livestock products|+|Poultry meat;Mt DM/yr;;;M;
 Agricultural Demand|Livestock|Food|Ruminant;million t DM/yr;3;Demand for livestock products used as food - ruminant meat (cattle, goat, sheep);;;Demand|Food|Livestock products|+|Ruminant meat;Mt DM/yr;;;M;
 Agricultural Demand|Livestock|Other;million t DM/yr;2;Demand for livestock products for other uses;;;Demand|Agricultural Supply Chain Loss|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Livestock|Other;million t DM/yr;2;Demand for livestock products for other uses;;;Demand|Bioenergy|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Livestock|Other;million t DM/yr;2;Demand for livestock products for other uses;;;Demand|Domestic Balanceflow|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
-Agricultural Demand|Livestock|Other;million t DM/yr;2;Demand for livestock products for other uses;;;Demand|Feed|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Livestock|Other;million t DM/yr;2;Demand for livestock products for other uses;;;Demand|Material|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
-Agricultural Demand|Livestock|Other;million t DM/yr;2;Demand for livestock products for other uses;;;Demand|Processing|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Livestock|Other;million t DM/yr;2;Demand for livestock products for other uses;;;Demand|Seed|+|Livestock products;Mt DM/yr;;mapping taken from AR6_MAgPIE;M;
 Agricultural Demand|Residues;million t DM/yr;2;Demand for residues from agricultural production for feed, bioenergy and other uses;;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;;M;
+Agricultural Demand|Residues;million t DM/yr;2;Demand for residues from agricultural production for feed, bioenergy and other uses;;;Demand|Feed|+|Crop residues;Mt DM/yr;;;M;
+Agricultural Demand|Residues;million t DM/yr;2;Demand for residues from agricultural production for feed, bioenergy and other uses;;;Demand|Material|+|Crop residues;Mt DM/yr;;;M;
 Agricultural Demand|Residues|Bioenergy;million t DM/yr;2;Demand for residues as bioenergy;;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;;M;
-Agricultural Demand|Residues|Feed;million t DM/yr;2;Demand for residues as feed;;;;;;;;
-Agricultural Demand|Residues|Other;million t DM/yr;2;Demand of residues for other uses;;;;;;;;
+Agricultural Demand|Residues|Feed;million t DM/yr;2;Demand for residues as feed;;;Demand|Feed|+|Crop residues;Mt DM/yr;;;M;
+Agricultural Demand|Residues|Other;million t DM/yr;2;Demand of residues for other uses;;;Demand|Feed|+|Crop residues;Mt DM/yr;;;M;
 Agricultural Material Footprint [per capita];tDM/cap/yr;;Biomass usage per capita excluding pasture and forestry;;Population;SDG|SDG12|Material footprint;tDM/capita/yr;;additional mapping taken from additional_SHAPE;M;
 Agricultural Production;million t DM/yr;1;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Production|+|Crops;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M;
 Agricultural Production;million t DM/yr;1;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Production|+|Livestock products;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M;
 Agricultural Production;million t DM/yr;1;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Production|+|Bioenergy crops;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M;
 Agricultural Production;million t DM/yr;1;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M;
+Agricultural Production;million t DM/yr;1;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Demand|Feed|+|Crop residues;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M;
+Agricultural Production;million t DM/yr;1;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);;;Demand|Material|+|Crop residues;Mt DM/yr;;mapping taken from NAVIGATE, NAVIGATE category: agriculture;M;
 Agricultural Production|Crops;million t DM/yr;1;Production of crops;;;Production|+|Crops;Mt DM/yr;;;M;
 Agricultural Production|Crops|Cereals;million t DM/yr;2;Production of cereals (maize, rice, temperate cereals and tropical cereals);;;Production|Crops|+|Cereals;Mt DM/yr;;;M;
 Agricultural Production|Crops|Energy Crops;million t DM/yr;2;Production of second-generation bioenergy crops (short rotation grasses, short rotation trees);;;Production|+|Bioenergy crops;Mt DM/yr;;;M;
@@ -55,11 +73,13 @@ Agricultural Production|Crops|Other Crops;million t DM/yr;2;Production of other 
 Agricultural Production|Crops|Sugar Crops;million t DM/yr;2;Production of sugar crops (sugar beet, sugar cane);;;Production|Crops|+|Sugar crops;Mt DM/yr;;;M;
 Agricultural Production|Livestock;million t DM/yr;1;Production of livestock products (excluding fish);;;Production|+|Livestock products;Mt DM/yr;;;M;
 Agricultural Production|Livestock|Dairy;million t DM/yr;2;Production of dairy products (milk, eggs);;;Production|Livestock products|+|Dairy;Mt DM/yr;;;M;
-Agricultural Production|Livestock|Dairy;million t DM/yr;2;Production of dairy products (milk, eggs);;;Production|Livestock products|+|Eggs;Mt DM/yr;;;M;
+Agricultural Production|Livestock|Eggs;million t DM/yr;2;Production of eggs;;;Production|Livestock products|+|Eggs;Mt DM/yr;;;M;
 Agricultural Production|Livestock|Non-Ruminant;million t DM/yr;2;Production of monogastric meat (pig, poultry);;;Production|Livestock products|+|Monogastric meat;Mt DM/yr;;;M;
 Agricultural Production|Livestock|Non-Ruminant;million t DM/yr;2;Production of monogastric meat (pig, poultry);;;Production|Livestock products|+|Poultry meat;Mt DM/yr;;;M;
 Agricultural Production|Livestock|Ruminant;million t DM/yr;2;Production of ruminant meat (cattle, goat, sheep);;;Production|Livestock products|+|Ruminant meat;Mt DM/yr;;;M;
-Agricultural Production|Residues;million t DM/yr;2;Production of agricultural residues;;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;;M;
+Agricultural Production|Residues;million t DM/yr;2;Harvested agricultural residues;;;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;;M;
+Agricultural Production|Residues;million t DM/yr;2;Harvested agricultural residues;;;Demand|Feed|+|Crop residues;Mt DM/yr;;;M;
+Agricultural Production|Residues;million t DM/yr;2;Harvested agricultural residues;;;Demand|Material|+|Crop residues;Mt DM/yr;;;M;
 Air Pollution|PM2.5|Urban Population;ug/m3;;Urban population weighted annual average PM2.5 concentrations.;;Population|Urban;Air pollution concentration|PM2_5|Urban population;ug/m3;;mapping taken from SHAPE;S;
 Capacity Additions|Electricity;GW/yr;2;Total annual new installation of electricity generation capacity;This variable should be computed as yearly average additions between the previous and the current reported time step.;;New Cap|Electricity;GW/yr;1;;R;
 Capacity Additions|Electricity|Ammonia;GW/yr;2;Annual new installation of capacity to generate electricity from ammonia;This variable should be computed as yearly average additions between the previous and the current reported time step.;;;;;;;
@@ -1706,7 +1726,7 @@ Emissions|N2O|AFOLU [NGHGI];kt N2O/yr;2;Emissions of nitrous oxide (N2O) from ag
 Emissions|N2O|AFOLU|Agricultural Waste Burning;kt N2O/yr;2;Emissions from agricultural waste burning (IPCC 1996 category 4F - partially IPCC 2006 category 3C1);Also sometimes known as 'biomass burning' or 'open agricultural burning';;Emi|N2O|Agriculture|+|Waste Burning;kt N2O/yr;;added manually;R;linear
 Emissions|N2O|AFOLU|Agriculture;kt N2O/yr;2;Emissions of nitrous oxide (N2O) from the agriculture sector (IPCC 1996 category 4 - IPCC 2006 category 3A and 3C except 3C1);;;Emi|N2O|+|Agriculture;kt N2O/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R;linear
 Emissions|N2O|AFOLU|Agriculture;kt N2O/yr;2;Emissions of nitrous oxide (N2O) from the agriculture sector (IPCC 1996 category 4 - IPCC 2006 category 3A and 3C except 3C1);;;Emi|N2O|Agriculture|+|Waste Burning;kt N2O/yr;-1;The IAMC Agricultural Waste Burning is not be part of Agriculture, so it needs to be removed;R;linear
-Emissions|N2O|AFOLU|Agriculture|Livestock;kt N2O/yr;2;Emissions of nitrous oxide (N2O) from livestock in the agriculture sector (IPCC 1996 category 4A and 4B - IPCC 2006 category 3A);;;;;;;;linear
+Emissions|N2O|AFOLU|Agriculture|Livestock;kt N2O/yr;2;Emissions of nitrous oxide (N2O) from livestock in the agriculture sector (IPCC 1996 category 4A and 4B - IPCC 2006 category 3A);;;Emi|N2O|Agriculture|+|Animal Waste Management;kt N2O/yr;;;R;linear
 Emissions|N2O|AFOLU|Agriculture|Livestock|Enteric Fermentation;kt N2O/yr;3;Emissions of nitrous oxide (N2O) from enteric fermentation of livestock (IPCC 1996 category 4A - IPCC 2006 category 3A1) in the agriculture sector;;;;;;;;linear
 Emissions|N2O|AFOLU|Agriculture|Livestock|Manure Management;kt N2O/yr;3;Emissions of nitrous oxide (N2O) from processes involving manure (waste) management in Livestock in the agriculture sector (IPCC 1996 category 4B - IPCC 2006 category 3A2);;;Emi|N2O|Agriculture|+|Animal Waste Management;kt N2O/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R;linear
 Emissions|N2O|AFOLU|Agriculture|Managed Soils;kt N2O/yr;3;Emissions of nitrous oxide (N2O) from soil management practices in the agriculture sector (IPCC 1996 category 4D - IPCC 2006 category 3C4 and 3C5);;;Emi|N2O|Agriculture|+|Inorganic Fertilizers;kt N2O/yr;;mapping taken from NAVIGATE, NAVIGATE category: emissions (non-CO2);R;linear
