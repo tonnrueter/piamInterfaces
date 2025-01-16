@@ -26,7 +26,7 @@ areUnitsIdentical <- function(vec1, vec2 = NULL) {
     c("\u00B0C", "\u00C2\u00B0C", "K"),
     c("Gtkm/yr", "bn tkm/yr"),
     c("Gpkm/yr", "bn pkm/yr"),
-    c("kcal/cap/day", "kcal/capita/day", "kcal/cap/d"),
+    c("kcal/cap/day", "kcal/cap/d"),
     c("kt CF4/yr", "kt CF4-equiv/yr"),
     c("ktU/yr", "kt U/yr"),
     c("km\u00b3", "km3"),

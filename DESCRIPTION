@@ -28,7 +28,7 @@ Imports:
     yaml
 Suggests:
     covr,
-    testthat,
+    testthat (>= 3.2.3),
     withr,
     writexl
 Encoding: UTF-8
