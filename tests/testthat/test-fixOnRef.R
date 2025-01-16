@@ -22,7 +22,7 @@ test_that("fixOnRef works", {
   expect_true(is.null(fixOnRef(dwrong, d, startyear = 2020, ret = "fails")))
   data <- fixOnRef(dwrong, d, startyear = 2025, ret = "fails")
   expect_true("Population" %in% levels(data$variable))
-  expect_true(length(levels(data$variable)) == 1)
+  expect_length(levels(data$variable), 1)
   expect_identical(quitteSort(d), quitteSort(fixOnRef(dwrong, d, startyear = 2025, ret = "fixed")))
   expect_identical(dwrong, fixOnRef(dwrong, d, startyear = 2010, ret = "fixed"))
   expect_true(fixOnRef(dwrong, d, startyear = min(dwrong$period), ret = "boolean"))

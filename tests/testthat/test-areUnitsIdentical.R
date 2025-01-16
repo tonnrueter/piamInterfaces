@@ -1,5 +1,5 @@
 test_that("areUnitsIdentical works", {
-  # error if not exactly two vectors given
+  # error if more than three parameters passed
   expect_error(areUnitsIdentical("%", "percent", "FE/yr"))
   # does the function work as intended on examples?
   expect_true(areUnitsIdentical("%", "percent"))

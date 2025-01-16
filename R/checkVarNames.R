@@ -5,8 +5,10 @@
 #' @param vars vector with variable names (and units such as "PE (EJ)")
 #' @param withunits should the var vector contain units in paranthesis?
 #' @author Oliver Richters
+#' @importFrom quitte is.quitte
 #' @export
 checkVarNames <- function(vars, withunits = TRUE) {
+  if (is.quitte(vars)) vars <- paste0(vars$variable, if (withunits) paste0(" (", vars$unit, ")"))
   barspace <- unique(grep("[\\| ]{2}|^[\\| ]|[\\| ]$", vars, value = TRUE))
   if (length(barspace) > 0) {
     warning("These variable names have wrong bars and spaces: ", paste(barspace, collapse = ", "))
