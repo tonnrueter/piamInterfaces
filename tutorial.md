@@ -35,6 +35,8 @@ Additionally, some mappings use those columns:
 - `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 - `weight`: calculates a weighted average of multiple entries of `piam_variable`. Provide a different `piam_variable` in this column, and `generateIIASASubmission()` will split the data on the rows which contain weight pointers, resolve these weights into numerical values (via a join operation between the submission and the input data) and then modify the value based on the weighting. This takes place in the private .resolveWeights method.
 
+### Editing a mapping
+
 To edit a mapping in `R`, use:
 ```
 mappingdata <- getMapping("AR6")
@@ -58,6 +60,14 @@ For a human-readable output, save the old version of the mapping and run:
 remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL, expanddata = FALSE)
 ```
 On the PIK cluster, you can run `comparescenconf mapping_AR6.csv` in the `inst/mappings` folder and it will compare to a recent `master` version.
+
+### Renaming a piam_variable
+
+If a variable used as `piam_variable` has to be renamed, please add it with its `old_name` to [`inst/renamed_piam_variables.csv`](./inst/renamed_piam_variables.csv).
+Like this, if someone arrives with a dataset that contains the old name but not the new, [`renameOldVariables()`](./R/renameOldVariables.R) makes sure the data is automatically adjusted.
+[`test-renameOldVariables.R`](./tests/testthat/test-renameOldVariables.R) enforces that the old variable name is not used anywhere in the mappings.
+To adjust the mappings automatically, make sure you commit the current state to be able to reset its results, and then run `Rscript -e "devtools::load_all(); renameOldInMappings()"`.
+Check the `diff` carefully, for example using `comparescenconf`, see above.
 
 ### Creating a new mapping
 

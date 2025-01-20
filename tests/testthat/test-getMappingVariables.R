@@ -25,6 +25,8 @@ test_that("getMappingVariables works", {
   expect_equal(getMappingVariables(c(mappingfile, mappingfile), TRUE), allvars)
   expect_length(getMappingVariables(mappingfile, "M"), 0)
   expect_identical(getMappingVariables(mappingfile, "R"), getREMINDTemplateVariables(mappingfile))
+  # addunit = FALSE
+  expect_equal(getMappingVariables(mappingfile, TRUE, addunit = FALSE), c("Emi|Transport", "FE"))
 })
 
 for (t in c(as.list(names(mappingNames())), list(names(mappingNames())))) {

@@ -47,7 +47,8 @@ test_that("no renamed_piam_variable used in mapping", {
     if (nrow(oldvars) > 0) {
       warning("In mapping_", n, ".csv, those variables are stated as renamed in inst/renamed_piam_variables.csv and",
               " should use the new name.\nIf the old variable name is passed in the data, it will work anyway:\n",
-              paste(oldvars$old_name, "->", oldvars$piam_variable, collapse = "\n"))
+              paste("-", oldvars$old_name, "->", oldvars$piam_variable, collapse = "\n"),
+              "\nTry to run the following, see also tutorial: Rscript -e 'devtools::load_all(); renameOldInMappings()'")
     }
     expect_true(nrow(oldvars) == 0)
   }

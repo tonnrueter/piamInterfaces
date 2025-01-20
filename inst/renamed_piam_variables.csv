@@ -1,5 +1,6 @@
 piam_variable                                 ;old_name
 # you are allowed to add a wildcard *, but only at the end of both columns simultaneously
+# after adding variables, you can automatically adjust all mappings, see README.md.
 
 # temporary, can be removed after EDGE-T refactoring
 FE|Transport|Pass|w/o Bunkers          ;FE|Transport|Pass|w/o bunkers
