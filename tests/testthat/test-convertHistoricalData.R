@@ -5,7 +5,7 @@ test_that("convertHistoricalData works with REMIND_2_R10", {
   expect_silent(p <- as.quitte(convertHistoricalData(d, project = "AR6", regionMapping = "REMIND_2_R10")))
   expect_true(all(grepl(" \\(R10\\)|^World$", levels(p$region))))
   expect_true(all(p$value %in% c(1, 2)))
-  expect_equal(length(levels(p$region)), 12) # R10, Other, World
+  expect_length(levels(p$region), 12) # R10, Other, World
 })
 
 test_that("convertHistoricalData works with ISO_2_R5", {

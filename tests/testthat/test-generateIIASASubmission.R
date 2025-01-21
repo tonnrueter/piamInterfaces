@@ -163,7 +163,7 @@ test_that("interpolation for ScenarioMIP works as expected", {
   }
 
   # apply the mapping
-  piam <- testthat::expect_no_warning(generateIIASASubmission(
+  piam <- expect_no_warning(generateIIASASubmission(
     mifs = .getMif(values),
     mapping = .getMapping(includeWeightColumn = includeWeightInMap),
     model = modelName,
@@ -195,31 +195,31 @@ test_that("interpolation for ScenarioMIP works as expected", {
 
 test_that("Mapping handles weights as expected.", {
   # When all values present, with either a weight column included or not
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, 10, 10), includeWeightInMap = FALSE),
     10 + 1000 * 10
   )
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, 10, 10), includeWeightInMap = TRUE),
     10 * (10 / 20) + 1000 * 10 * (10 / 20)
   )
   # When a value is missing from the mif. If its a weighted variable then
   # omit it from the weighted sum. therefore expect the total weight to 10
   # not 20
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(NA, 10, 10, 10), includeWeightInMap = FALSE),
     1000 * 10
   )
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(NA, 10, 10, 10), includeWeightInMap = TRUE),
     1000 * 10 * (10 / 10) # ignore first row.
   )
   # When a weight is missing drop that whole row from the weighted average.
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, NA, 10), includeWeightInMap = FALSE),
     10 + 1000 * 10
   )
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, 10, NA), includeWeightInMap = TRUE),
     10 * (10 / 10) # if the weight is NA then ignore that from the total weight
   )
