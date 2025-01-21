@@ -36,9 +36,15 @@ renameOldInMappings <- function(folder = ".") {
     for (i in seq_along(splitted)) {
       if (length(splitted[[i]] >= col)) {
         replaceid <- which(csvdata$old_name == deletePlus(splitted[[i]][col]))
-        if (length(replaceid) == 1) {
-          message("In ", basename(m), ", replace: ", splitted[[i]][col], " -> ", csvdata$piam_variable[[replaceid]])
-          splitted[[i]][col] <- csvdata$piam_variable[[replaceid]]
+        if (length(replaceid) == 0) next;
+        replaceby <- unique(csvdata$piam_variable[replaceid])
+        if (length(replaceby) == 1) {
+          message("In ", basename(m), ", replace: ", splitted[[i]][col], " -> ", replaceby)
+          splitted[[i]][col] <- replaceby
+        } else if (length(replaceby) > 1) {
+          stop("For ", splitted[[i]][col], ", more than one replacement variable found. ",
+               "Please correct renamed_piam_variables.csv: ",
+               paste(replaceby, collapse = ", "))
         }
       }
     }

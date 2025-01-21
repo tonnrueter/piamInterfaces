@@ -13,6 +13,19 @@ test_that("renamed_piam_variables wildcards match", {
   expect_true(nrow(inconsistentAsterisk) == 0)
 })
 
+test_that("renamed_piam_variables has no duplicates", {
+  csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
+    read.csv2(comment.char = "#", strip.white = TRUE) %>%
+    as_tibble() %>%
+    pull("old_name")
+  duplicates <- csvdata[duplicated(csvdata)]
+  if (length(duplicates) > 0) {
+    warning("In inst/renamed_piam_variables.csv, these old_name variables are duplicated, but replacement must be unique:\n",
+            paste("- ", duplicates, collapse = "\n"))
+  }
+  expect_length(duplicates, 0)
+})
+
 test_that("renameOldVariables() works", {
   oldvar <- qeAR6
   newtemperature <- "MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile"
