@@ -38,5 +38,5 @@ test_that("All variables in MAGICC7 template are mapped to something from REMIND
     warning("MAGICC7 variables with no piam_variable in AR6 template: ",
             paste0(missingvars, collapse = ", "))
   }
-  expect_true(length(missingvars) == 0)
+  expect_length(missingvars, 0)
 })

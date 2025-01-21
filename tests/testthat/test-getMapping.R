@@ -29,7 +29,7 @@ for (mapping in names(mappingNames())) {
               "') %>% mutate(piam_factor = gsub(',', '.', .data$piam_factor)), mappingNames('", mapping,
               "'), na = '', row.names = FALSE, quote = FALSE)")
     }
-    expect_true(length(factorWithComma) == 0)
+    expect_length(factorWithComma, 0)
 
     # look for Moving Avg prices in REMIND variables
     movingavg <- mappingData %>%
@@ -40,7 +40,7 @@ for (mapping in names(mappingNames())) {
       warning("These variables use 'Price|*|Moving Avg' which is deprecated since remind2 1.111.0 on 2023-05-26.\n",
               "Please remove '|Moving Avg' to use a fixed moving average:\n", paste(movingavg, collapse = ", "))
     }
-    expect_equal(length(movingavg), 0)
+    expect_length(movingavg, 0)
 
     # check for duplicated rows
     duplicates <- mappingData %>%
@@ -61,7 +61,7 @@ for (mapping in names(mappingNames())) {
       warning("Inconsistent use of |+| notation for these variables:\n",
               paste(somePlusSomeNot, collapse = ", "))
     }
-    expect_equal(length(somePlusSomeNot), 0)
+    expect_length(somePlusSomeNot, 0)
 
     # check for inconsistent variable + unit combinations
     nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
@@ -104,7 +104,7 @@ for (mapping in names(mappingNames())) {
       warning("These variables in mapping ", mapping, " have a piam_factor, but nothing specified in piam_variable:\n",
               paste(factorWithoutVar, collapse = "\n"))
     }
-    expect_true(length(factorWithoutVar) == 0)
+    expect_length(factorWithoutVar, 0)
 
     # checks only if source is supplied
     if ("source" %in% colnames(mappingData)) {
@@ -116,7 +116,7 @@ for (mapping in names(mappingNames())) {
         warning("These variables in mapping ", mapping, " have a source, but nothing specified in piam_variable:\n",
                 paste(sourceWithoutVar, collapse = "\n"))
       }
-      expect_true(length(sourceWithoutVar) == 0)
+      expect_length(sourceWithoutVar, 0)
 
       # check for piam_variable without source if source is supplied
       varWithoutSource <- mappingData %>%
@@ -127,7 +127,7 @@ for (mapping in names(mappingNames())) {
         warning("These piam_variable in mapping ", mapping, " have no source:\n",
                 paste(varWithoutSource, collapse = "\n"))
       }
-      expect_true(length(varWithoutSource) == 0)
+      expect_length(varWithoutSource, 0)
     } # end source checks
   })
 }
