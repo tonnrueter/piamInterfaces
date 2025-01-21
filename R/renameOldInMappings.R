@@ -36,7 +36,7 @@ renameOldInMappings <- function(folder = ".") {
     for (i in seq_along(splitted)) {
       if (length(splitted[[i]] >= col)) {
         replaceid <- which(csvdata$old_name == deletePlus(splitted[[i]][col]))
-        if (length(replaceid) == 0) next;
+        if (length(replaceid) == 0) next
         replaceby <- unique(csvdata$piam_variable[replaceid])
         if (length(replaceby) == 1) {
           message("In ", basename(m), ", replace: ", splitted[[i]][col], " -> ", replaceby)

@@ -21,7 +21,7 @@ getMappingVariables <- function(project = TRUE, sources = TRUE, addunit = TRUE) 
     mapping <- getMapping(p) %>%
       select(any_of(c("piam_variable", "piam_unit", "source"))) %>%
       filter(! is.na(.data$piam_variable)) %>%
-      mutate("modelvars" = paste0(.data$piam_variable, if(isTRUE(addunit)) paste0(" (", .data$piam_unit, ")"))) %>%
+      mutate("modelvars" = paste0(.data$piam_variable, if (isTRUE(addunit)) paste0(" (", .data$piam_unit, ")"))) %>%
       rbind(mapping)
   }
   if (! isTRUE(sources)) {

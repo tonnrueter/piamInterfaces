@@ -20,7 +20,7 @@ test_that("renamed_piam_variables has no duplicates", {
     pull("old_name")
   duplicates <- csvdata[duplicated(csvdata)]
   if (length(duplicates) > 0) {
-    warning("In inst/renamed_piam_variables.csv, these old_name variables are duplicated, but replacement must be unique:\n",
+    warning("In inst/renamed_piam_variables.csv, these old_name variables are duplicates:\n",
             paste("- ", duplicates, collapse = "\n"))
   }
   expect_length(duplicates, 0)
