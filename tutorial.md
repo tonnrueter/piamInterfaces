@@ -69,6 +69,15 @@ Like this, if someone arrives with a dataset that contains the old name but not 
 To adjust the mappings automatically, make sure you commit the current state to be able to reset its results, and then run `Rscript -e "devtools::load_all(); renameOldInMappings()"`.
 Check the `diff` carefully, for example using `comparescenconf`, see above.
 
+### piam_factor and unit checks
+
+While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed.
+It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `0.001` or mapping `US$2005` to `US$2017` without accounting for inflation.
+These checks are performed using [`checkUnitFactor()`](./R/checkUnitFactor.R).
+It first calls [`areUnitsIdentical()`](./R/areUnitsIdentical.R) where a number of identical units are specified (such as `Mt CO2` = `Mt CO2eq`, where `piam_factor` is 1).
+Then, it compares a list of accepted factors against the templates.
+In case your tests fails, carefully check whether the `piam_factor` is correct, and if so, add it to one of the functions.
+
 ### Creating a new mapping
 
 Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings. 
