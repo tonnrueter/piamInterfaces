@@ -1,8 +1,8 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.30.0**
+R package **piamInterfaces**, version **0.41.0**
 
-[![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces)  [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
+[![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
 ## Purpose and Functionality
 
@@ -23,31 +23,34 @@ serve to map variables from the PIAM framework to variables needed for the submi
 The mappings are `;`-separated files, using `#` as comment character, with the following mandatory columns:
 
 - `variable`: name of the variable in the project template
-- `unit`: unit corresponding to `variable`
+- `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`: an empty cell will fail the tests to avoid unintentially forgetting units.
 - `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
 
-Recommended column:
+Recommended columns:
 - `description`: description text defining the `variable`. Never use `"` and `;` in the text.
 - `source`: abbreviation of the PIAM part where the `piam_variable` comes from.
   Use `B` = Brick, `C` = MAGICC, `M` = MAgPIE, `R` = REMIND, `S` = SDP postprocessing, `T` = EDGE-Transport.
   This column is used to select the variables passed to
-  [remind2](https://github.com/pik-piam/remind2/blob/master/tests/testthat/test-convGDX2mif.R#L13-L26)
+  [remind2](https://github.com/pik-piam/remind2/blob/master/tests/testthat/test-convGDX2mif.R)
   and [coupling tests](https://github.com/remindmodel/remind/blob/develop/tests/testthat/test_20-coupled.R).
-  If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped.
+  If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped in those tests.
 
 Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
-- `Tier`: importance of variable. 1 means most important
-- `Comment`: place for comments
+- `tier`: importance of variable, with 1 being most important
+- `comment`: place for internal comments
+- `interpolation`: sets the interpolation method for the `variable` (i.e. not `piam_variable`) (currently only supports `linear`). When set to `linear`, adds yearly values between 2005 and 2100 through linear interpolation for the selected output variables.
 - `weight`: calculates a weighted average of multiple entries of `piam_variable`. Provide a different `piam_variable` in this column, and `generateIIASASubmission()` will split the data on the rows which contain weight pointers, resolve these weights into numerical values (via a join operation between the submission and the input data) and then modify the value based on the weighting. This takes place in the private .resolveWeights method.
+
+### Editing a mapping
 
 To edit a mapping in `R`, use:
 ```
 mappingdata <- getMapping("AR6")
 ...
-write.csv2(mappingdata, "test.csv", na = "", row.names = FALSE, quote = FALSE)
+write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
 ```
 
 Opening the csv files in Excel can be problematic, as it sometimes changes values and quotation marks.
@@ -63,8 +66,27 @@ You can edit the files in LibreOffice Calc using these settings in the Text Impo
 The github diff on a large semicolon-separated file is often unreadable.
 For a human-readable output, save the old version of the mapping and run:
 ```
-remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL)
+remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL, expanddata = FALSE)
 ```
+On the PIK cluster, you can run `comparescenconf mapping_AR6.csv` in the `inst/mappings` folder and it will compare to a recent `master` version.
+
+### Renaming a piam_variable
+
+If a variable used as `piam_variable` has to be renamed, please add it with its `old_name` to [`inst/renamed_piam_variables.csv`](./inst/renamed_piam_variables.csv).
+Like this, if someone arrives with a dataset that contains the old name but not the new, [`renameOldVariables()`](./R/renameOldVariables.R) makes sure the data is automatically adjusted.
+[`test-renameOldVariables.R`](./tests/testthat/test-renameOldVariables.R) enforces that the old variable name is not used anywhere in the mappings.
+To adjust the mappings automatically, make sure you commit the current state to be able to reset its results, and then run `Rscript -e "devtools::load_all(); renameOldInMappings()"`.
+Check the `diff` carefully, for example using `comparescenconf`, see above.
+
+### piam_factor and unit checks
+
+While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed.
+It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `0.001` or mapping `US$2005` to `US$2017` without accounting for inflation.
+These checks are performed using [`checkUnitFactor()`](./R/checkUnitFactor.R).
+It first calls [`areUnitsIdentical()`](./R/areUnitsIdentical.R) where a number of identical units are specified (such as `Mt CO2` = `Mt CO2eq`, where `piam_factor` is 1).
+Then, it compares a list of accepted factors against the templates.
+In case your tests fails, carefully check whether the `piam_factor` is correct, and if so, add it to one of the functions.
+
 ### Creating a new mapping
 
 Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings. 
@@ -81,7 +103,8 @@ Since templates contain between several hundreds and a few thousand variables, r
 
 ## Model intercomparison
 
-- To compare the results of different models, pass as `modeldata` a [quitte](https://github.com/pik-piam/quitte/) object or a csv/xlsx file. You get a PDF document for each scenario and each model with area plots for all the summation groups in `AR6` (or `NAVIGATE`) [summation files](https://github.com/pik-piam/piamInterfaces/tree/master/inst/summations) plus line plots for each variable in the `lineplotVariables` vector you supplied. It takes some time, better use a `slurm` job for:
+- To compare the results of different models, pass as `modeldata` a [quitte](https://github.com/pik-piam/quitte/) object or a csv/xlsx file.
+You get a PDF document for each scenario and each model with area plots for all the summation groups in `AR6` (or `NAVIGATE`) [summation files](https://github.com/pik-piam/piamInterfaces/tree/master/inst/summations) plus line plots for each variable in the `lineplotVariables` vector you supplied. It takes some time, better use a `slurm` job for:
   ```
   plotIntercomparison(modeldata, summationsFile = "AR6", lineplotVariables = c("Temperature|Global Mean", "Population"))
   ```
@@ -120,16 +143,17 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2024). _piamInterfaces: Project specific interfaces to REMIND / MAgPIE_. R package version 0.30.0, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.41.0, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
  ```latex
-@Manual{,
+@Misc{,
   title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
-  year = {2024},
-  note = {R package version 0.30.0},
+  date = {2025-01-23},
+  year = {2025},
   url = {https://github.com/pik-piam/piamInterfaces},
+  note = {Version: 0.41.0},
 }
 ```
