@@ -90,8 +90,8 @@ for (mapping in names(mappingNames())) {
     if (nrow(unitfails) > 0) {
       printoutput <- withr::with_options(list(width = 180), print(unitfails, n = 200, na.print = "")) %>%
         capture.output()
-      warning("Failing units in ", mapping, ".\nIf that is a false positive, ",
-              "adjust areUnitsIdentical() or checkUnitFactor()\n",
+      warning("Unknown unit conversion in ", mapping, ".\nFix it, or if that is a false positive, ",
+              "adjust areUnitsIdentical() or checkUnitFactor(), see README.md\n",
               paste(printoutput, collapse = "\n"))
     }
     expect_true(nrow(unitfails) == 0)

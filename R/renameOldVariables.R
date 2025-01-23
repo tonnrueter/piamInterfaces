@@ -5,7 +5,7 @@
 #' @param mifdata quitte object or filename of mif file
 #' @param variables the list of requested variables
 #' @param logFile filename of file for logging
-#' @importFrom dplyr filter
+#' @importFrom dplyr filter distinct
 #' @importFrom piamutils deletePlus
 #' @importFrom rlang .data
 #' @importFrom tibble as_tibble
@@ -42,6 +42,11 @@ getExpandRenamedVariables <- function(variables) {
            old_name = deletePlus(.data$old_name))
   variables <- deletePlus(variables)
 
+  duplicates <- csvdata$old_name[duplicated(csvdata$old_name)]
+  if (length(duplicates) > 0) {
+    stop("Duplicates in 'old_name' found: ", paste(duplicates, collapse = ", "))
+  }
+
   csvdataNew <- NULL
   for (i in seq_len(nrow(csvdata))) {
     # if both end with *, replace by options taken from 'variables'
@@ -57,5 +62,14 @@ getExpandRenamedVariables <- function(variables) {
       csvdataNew <- rbind(csvdataNew, csvdata[i, ])
     }
   }
-  return(filter(csvdataNew, .data$old_name %in% variables))
+  # remove duplicated lines with distinct
+  csvdataNew <- distinct(filter(csvdataNew, .data$old_name %in% variables))
+
+  # check for remaining duplicates in old_name
+  duplicates <- csvdata$old_name[duplicated(csvdata$old_name)]
+  if (length(duplicates) > 0) {
+    stop("Duplicates in 'old_name' found after expansion: ", paste(duplicates, collapse = ", "))
+  }
+
+  return(csvdataNew)
 }

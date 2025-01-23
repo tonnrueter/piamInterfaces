@@ -44,6 +44,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1000", "G", "T"),
                           c("1000", "M", "G"),
                           c("1000", "k", "M"),
+                          c("0.001", "/k", "/M"),
                           # conversion factors taken from ECEMF Model Comparison Protocol, DOI:10.5281/zenodo.6811317
                           c("1.12", "US$2010", "US$2005"),
                           c("1.12", "US$2010", "US$05"),
@@ -86,14 +87,15 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   template$piam_factor[is.na(template$piam_factor)] <- 1
   success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
   success <- success | is.na(template$piam_variable)
-  ignore <-  c(paste0("Emi|CO2|Energy|Waste", c("", "|Feedstocks unknown fate", "|Plastics Incineration")),
-               "Emi|CO2|Gross|Energy|Waste")
+  ignore <- NULL # for temporary deletions, for example if a project template is wrong
   success <- success | removePlus(as.character(template$piam_variable)) %in% ignore
 
   firsterror <- TRUE
   for (sc in scaleConversion) {
     fails <- template %>%
+               # check whether substitution implies identical units
                mutate(matches = .data$piam_unit == gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
+               # check whether any substitution has actually taken place (excludes all other where piam_unit = unit)
                mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
                mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
                mutate(failed  = ! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
