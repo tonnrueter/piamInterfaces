@@ -825,8 +825,10 @@ Capital Cost|Electricity|Storage|Reservoir Capacity;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Transmissions Grid;EUR_2020/kW;;;;;;;
 Efficiency|Hydrogen|Electricity;%;Tech|Electricity|Hydrogen|Efficiency;%;1;;;;R
 Lifetime|Electricity|Nuclear;years;Tech|Electricity|Nuclear|Lifetime;years;1;;;;R
-Carbon Sequestration|CCS|Biomass;Mt CO2/yr;Carbon Management|Storage|Biomass;Mt CO2/yr;1;;;;R
-Carbon Sequestration|CCS|Fossil;Mt CO2/yr;Carbon Management|Storage|Fossil;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Biomass;Mt CO2/yr;Carbon Management|Storage|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Biomass;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Fossil;Mt CO2/yr;Carbon Management|Storage|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Fossil;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
 Carbon Sequestration|CCS|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|+|Industry Process;Mt CO2/yr;1;;;;R
 Carbon Sequestration|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Bunkers|Intra-EU;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers|+|Intra-region;Mt CO2/yr;1;;;;R
