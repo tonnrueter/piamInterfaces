@@ -16,14 +16,10 @@ test_that("checkVarNames works", {
 for (mapping in names(mappingNames())) {
   mappingData <- getMapping(mapping)
   test_that(paste0("checkVarNames for variable in mapping ", mapping), {
-    expect_no_warning(checkVarNames(paste0(mappingData$variable, " (", mappingData$unit, ")")))
+    expect_no_warning(checkVarNames(unitjoin(mappingData$variable, mappingData$unit)))
   })
   test_that(paste0("checkVarNames for piam_variable in mapping ", mapping), {
     mpiam <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
-    if (nrow(mpiam) > 0) {
-      expect_no_warning(checkVarNames(paste0(mpiam$piam_variable, " (", mpiam$piam_unit, ")")))
-    } else {
-      skip(paste0("mapping_", mapping, ".csv has no piam_variable."))
-    }
+    expect_no_warning(checkVarNames(unitjoin(mpiam$piam_variable, mpiam$piam_unit)))
   })
 }

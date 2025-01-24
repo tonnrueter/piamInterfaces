@@ -23,6 +23,7 @@
 #'             filter select desc reframe last_col
 #' @importFrom gms chooseFromList
 #' @importFrom grDevices pdf dev.off
+#' @importFrom magclass unitjoin
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
 #' @importFrom rlang sym syms
@@ -119,8 +120,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         details = paste(
           ifelse(
             !!sym("factor") == 1,
-            paste0(!!sym("child"), " (", !!sym("childVal"), ")"),
-            paste0(!!sym("factor"), " * ", !!sym("child"), " (", !!sym("childVal"), ")")
+            unitjoin(!!sym("child"), !!sym("childVal")),
+            paste0(!!sym("factor"), " * ", unitjoin(!!sym("child"), !!sym("childVal")))
           ),
           collapse = " + "),
         .groups = "drop") %>%

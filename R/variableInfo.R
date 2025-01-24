@@ -6,6 +6,7 @@
 #' @param mif filename of miffile
 #' @param mapping vector of mapping shortcuts (AR6, NAVIGATE) or mapping filenames. NULL means all
 #' @importFrom quitte read.quitte as.quitte
+#' @importFrom magclass unitjoin
 #' @importFrom stringr str_split str_pad
 #' @importFrom utils head
 #' @return prints human-readable summary to the user
@@ -101,7 +102,7 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
               " Units: ", paste0(unique(mappingData[, "piam_unit"][no]), collapse = ", "))
       # print definitions if existing
       if ("description" %in% colnames(mappingData) && ! is.na(mappingData$description[[no]])) {
-        message("\ndescription of ", mappingData$variable[[no]], " (", mappingData$unit[[no]], "): ",
+        message("\ndescription of ", unitjoin(mappingData$variable[[no]], mappingData$unit[[no]]), ": ",
                 mappingData$description[[no]])
       }
     }
