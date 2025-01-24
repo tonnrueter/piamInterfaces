@@ -1,4 +1,5 @@
 variable;unit;tier;description;comment;weight;piam_variable;piam_unit;piam_factor;internal_comment;source;interpolation
+Test;EJ;1;comment;;;Test;EJ;;test;Rx;linear
 Final Energy|Industry|Non-Ferrous Metals|Copper;EJ/yr;3;Final energy consumption by the copper;;;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Copper|Electricity;EJ/yr;3;Final energy consumption by the copper of electricity;;;;;;;;
 Final Energy|Industry|Non-Ferrous Metals|Copper|Gases;EJ/yr;3;Final energy consumption by the copper of gaseous fuels including natural gas and biogas, not including hydrogen;;;;;;;;
