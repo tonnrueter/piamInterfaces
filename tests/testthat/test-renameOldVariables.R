@@ -53,8 +53,8 @@ test_that("renameOldVariables() works", {
                    droplevels(select(quitteSort(newvar), -"variable")))
 })
 
-test_that("no renamed_piam_variable used in mapping", {
-  for (n in names(mappingNames())) {
+for (n in names(mappingNames())) {
+  test_that(paste("no renamed_piam_variable used in", n), {
     mapvars <- getMapping(n)$piam_variable
     oldvars <- getExpandRenamedVariables(mapvars)
     if (nrow(oldvars) > 0) {
@@ -64,5 +64,5 @@ test_that("no renamed_piam_variable used in mapping", {
               "\nTry to run the following, see also tutorial: Rscript -e 'devtools::load_all(); renameOldInMappings()'")
     }
     expect_true(nrow(oldvars) == 0)
-  }
-})
+  })
+}

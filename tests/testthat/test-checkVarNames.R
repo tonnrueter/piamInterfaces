@@ -20,6 +20,10 @@ for (mapping in names(mappingNames())) {
   })
   test_that(paste0("checkVarNames for piam_variable in mapping ", mapping), {
     mpiam <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
-    expect_no_warning(checkVarNames(paste0(mpiam$piam_variable, " (", mpiam$piam_unit, ")")))
+    if (nrow(mpiam) > 0) {
+      expect_no_warning(checkVarNames(paste0(mpiam$piam_variable, " (", mpiam$piam_unit, ")")))
+    } else {
+      skip(paste0("mapping_", mapping, ".csv has no piam_variable."))
+    }
   })
 }

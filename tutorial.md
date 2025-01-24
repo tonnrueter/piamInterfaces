@@ -71,12 +71,12 @@ Check the `diff` carefully, for example using `comparescenconf`, see above.
 
 ### piam_factor and unit checks
 
-While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed.
-It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `0.001` or mapping `US$2005` to `US$2017` without accounting for inflation.
+While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed in each mapping.
+It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `1` or mapping `US$2005` to `US$2017` without accounting for inflation.
 These checks are performed using [`checkUnitFactor()`](./R/checkUnitFactor.R).
 It first calls [`areUnitsIdentical()`](./R/areUnitsIdentical.R) where a number of identical units are specified (such as `Mt CO2` = `Mt CO2eq`, where `piam_factor` is 1).
-Then, it compares a list of accepted factors against the templates.
-In case your tests fails, carefully check whether the `piam_factor` is correct, and if so, add it to one of the functions.
+Then, `checkUnitFactor()` compares a list of accepted factors against the mappings.
+In case your tests fails, carefully check whether the `piam_factor` is correct, and if you a certain, add it to one of the functions so it will be accepted.
 
 ### Creating a new mapping
 
