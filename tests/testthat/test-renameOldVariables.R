@@ -13,6 +13,19 @@ test_that("renamed_piam_variables wildcards match", {
   expect_true(nrow(inconsistentAsterisk) == 0)
 })
 
+test_that("renamed_piam_variables has no duplicates", {
+  csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
+    read.csv2(comment.char = "#", strip.white = TRUE) %>%
+    as_tibble() %>%
+    pull("old_name")
+  duplicates <- csvdata[duplicated(csvdata)]
+  if (length(duplicates) > 0) {
+    warning("In inst/renamed_piam_variables.csv, these old_name variables are duplicates:\n",
+            paste("- ", duplicates, collapse = "\n"))
+  }
+  expect_length(duplicates, 0)
+})
+
 test_that("renameOldVariables() works", {
   oldvar <- qeAR6
   newtemperature <- "MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile"
@@ -47,7 +60,8 @@ test_that("no renamed_piam_variable used in mapping", {
     if (nrow(oldvars) > 0) {
       warning("In mapping_", n, ".csv, those variables are stated as renamed in inst/renamed_piam_variables.csv and",
               " should use the new name.\nIf the old variable name is passed in the data, it will work anyway:\n",
-              paste(oldvars$old_name, "->", oldvars$piam_variable, collapse = "\n"))
+              paste("-", oldvars$old_name, "->", oldvars$piam_variable, collapse = "\n"),
+              "\nTry to run the following, see also tutorial: Rscript -e 'devtools::load_all(); renameOldInMappings()'")
     }
     expect_true(nrow(oldvars) == 0)
   }

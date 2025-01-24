@@ -9,6 +9,8 @@ test_that("checkVarNames works", {
     w <- capture_warnings(checkVarNames(v))
     expect_true(length(w) > 0)
   }
+  w <- capture_warnings(checkVarNames(qeAR6))
+  expect_length(w, 0)
 })
 
 for (mapping in names(mappingNames())) {

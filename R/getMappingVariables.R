@@ -7,20 +7,21 @@
 #'        such as c('AR6', 'AR6_NGFS') or 'mapping.csv'. Use TRUE for all mappings.
 #' @param sources model abbreviation(s) used in 'source' column.
 #'        R = REMIND, M = MAgPIE, T = EDGE-T, B = Brick, C = Climate/MAGICC, TRUE = all
+#' @param addunit boolean whether units should be appended as 'Variable (Unit)'
 #' @importFrom dplyr %>% select filter mutate
 #' @importFrom rlang .data
 #' @importFrom tidyselect any_of
 #' @examples
 #' getMappingVariables("AR6", "RT")
 #' @export
-getMappingVariables <- function(project = TRUE, sources = TRUE) {
+getMappingVariables <- function(project = TRUE, sources = TRUE, addunit = TRUE) {
   if (isTRUE(project)) project <- names(mappingNames())
   mapping <- NULL
   for (p in project) {
     mapping <- getMapping(p) %>%
       select(any_of(c("piam_variable", "piam_unit", "source"))) %>%
       filter(! is.na(.data$piam_variable)) %>%
-      mutate("modelvars" = paste0(.data$piam_variable, " (", .data$piam_unit, ")")) %>%
+      mutate("modelvars" = paste0(.data$piam_variable, if (isTRUE(addunit)) paste0(" (", .data$piam_unit, ")"))) %>%
       rbind(mapping)
   }
   if (! isTRUE(sources)) {
