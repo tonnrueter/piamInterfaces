@@ -136,3 +136,6 @@ Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Stock|Trans
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Stock|Transport|LDV|Subcompact Car|FCEV
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Stock|Transport|LDV|Subcompact Car|Hybrid Electric
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Stock|Transport|LDV|Subcompact Car|Liquids
+
+# https://github.com/remindmodel/remind/pull/1829
+Emi|CO2|CDR|Synthetic Fuels CCS;Emi|CO2|CDR|Industry CCS|Synthetic Fuels
