@@ -2,9 +2,11 @@ variable;unit;piam_variable;piam_unit;piam_factor;description;comment;internal_c
 Carbon Capture;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;1;;;;R
 Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
 Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Waste|+|Biomass;Mt CO2/yr;1;;;;R
 Carbon Capture|Direct Air Capture;Mt CO2/yr;Carbon Management|Carbon Capture|+|DAC;Mt CO2/yr;1;;;;R
 Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
 Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Waste|+|Fossil;Mt CO2/yr;1;;;;R
 Carbon Capture|Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;R
 Carbon Capture|Other;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
 Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
@@ -14,9 +16,11 @@ Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Car
 Carbon Capture|Storage;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Waste|+|Biomass;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Waste|+|Fossil;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|+|Industry Process;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Other;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
 Carbon Capture|Usage;Mt CO2/yr;Carbon Management|Usage;Mt CO2/yr;1;;;;R
@@ -28,16 +32,16 @@ Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|EW;Mt CO2/yr;1;;;;R
 Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|BECCS;Mt CO2/yr;1;;;;R
 Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;R
 Carbon Removal;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;R
-Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|Industry CCS|Synthetic Fuels;Mt CO2/yr;1;;;;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|Synthetic Fuels CCS;Mt CO2/yr;1;;;;R
 Carbon Removal|Enhanced Weathering;Mt CO2/yr;Emi|CO2|CDR|EW;Mt CO2/yr;1;;;;R
 Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|BECCS;Mt CO2/yr;1;;;;R
 Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;R
-Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|Industry CCS|Synthetic Fuels;Mt CO2/yr;1;;;;R
+Carbon Removal|Geological Storage;Mt CO2/yr;Emi|CO2|CDR|Synthetic Fuels CCS;Mt CO2/yr;1;;;;R
 Carbon Removal|Land Use;Mt CO2/yr;Emi|CO2|Land-Use Change|LULUCF national accounting;Mt CO2/yr;1;;;;R
 Carbon Removal|Land Use|Afforestation;Mt CO2/yr;;;;;;;
 Carbon Removal|Land Use|Biochar;Mt CO2/yr;;;;;;;
 Carbon Removal|Land Use|Soil Carbon Management;Mt CO2/yr;;;;;;;
-Carbon Removal|Materials;Mt CO2/yr;;;;;;;
+Carbon Removal|Materials;Mt CO2/yr;Emi|CO2|CDR|Materials;Mt CO2/yr;1;;;;R
 Carbon Removal|Materials|Other;Mt CO2/yr;;;;;;;
 Carbon Removal|Materials|Plastics;Mt CO2/yr;;;;;;;
 Carbon Removal|Materials|Timber;Mt CO2/yr;;;;;;;
@@ -96,7 +100,7 @@ Emissions|CO2|Industrial Processes;Mt CO2/yr;Emi|CO2|+|Industrial Processes;Mt C
 Emissions|CO2|Industry and Industrial Processes;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;R
 Emissions|CO2|Other;Mt CO2/yr;;;;;;;
 Emissions|CO2|Other Removal;Mt CO2/yr;Emi|CO2|CDR|DACCS;Mt CO2/yr;1;;;;R
-Emissions|CO2|Waste;Mt CO2/yr;;;;;;;
+Emissions|CO2|Waste;Mt CO2/yr;Emi|CO2|+|Waste;Mt CO2/yr;1;;;;R
 Emissions|CO2|Waste|Biomass;Mt CO2/yr;;;;;;;
 Emissions|CO2|Waste|Fossil;Mt CO2/yr;;;;;;;
 Emissions|F-Gases;Mt CO2e/yr;Emi|GHG|+|F-Gases;Mt CO2eq/yr;1;;;;R
