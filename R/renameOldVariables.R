@@ -35,11 +35,8 @@ renameOldVariables <- function(mifdata, variables, logFile = NULL) {
 }
 
 getExpandRenamedVariables <- function(variables) {
-  csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
-    read.csv2(comment.char = "#", strip.white = TRUE) %>%
-    as_tibble() %>%
-    mutate(piam_variable = deletePlus(.data$piam_variable),
-           old_name = deletePlus(.data$old_name))
+  if (length(variables) == 0) return(NULL)
+  csvdata <- readRenames()
   variables <- deletePlus(variables)
 
   duplicates <- csvdata$old_name[duplicated(csvdata$old_name)]
@@ -62,7 +59,7 @@ getExpandRenamedVariables <- function(variables) {
       csvdataNew <- rbind(csvdataNew, csvdata[i, ])
     }
   }
-  # remove duplicated lines with distinct
+  # filter what is necessary and remove duplicated lines with distinct
   csvdataNew <- distinct(filter(csvdataNew, .data$old_name %in% variables))
 
   # check for remaining duplicates in old_name
@@ -72,4 +69,13 @@ getExpandRenamedVariables <- function(variables) {
   }
 
   return(csvdataNew)
+}
+
+readRenames <- function() {
+  system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
+    read.csv2(comment.char = "#", strip.white = TRUE) %>%
+    as_tibble() %>%
+    filter(! .data$old_name %in% c(NA, "") | ! .data$piam_variable %in% c(NA, "")) %>%
+    mutate(piam_variable = deletePlus(.data$piam_variable),
+           old_name = deletePlus(.data$old_name))
 }

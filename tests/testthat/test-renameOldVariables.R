@@ -14,11 +14,8 @@ test_that("renamed_piam_variables wildcards match", {
 })
 
 test_that("renamed_piam_variables has no duplicates", {
-  csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
-    read.csv2(comment.char = "#", strip.white = TRUE) %>%
-    as_tibble() %>%
-    pull("old_name")
-  duplicates <- csvdata[duplicated(csvdata)]
+  oldNames <- pull(readRenames(), "old_name")
+  duplicates <- oldNames[duplicated(oldNames)]
   if (length(duplicates) > 0) {
     warning("In inst/renamed_piam_variables.csv, these old_name variables are duplicates:\n",
             paste("- ", duplicates, collapse = "\n"))
@@ -53,8 +50,8 @@ test_that("renameOldVariables() works", {
                    droplevels(select(quitteSort(newvar), -"variable")))
 })
 
-test_that("no renamed_piam_variable used in mapping", {
-  for (n in names(mappingNames())) {
+for (n in names(mappingNames())) {
+  test_that(paste("no renamed_piam_variable used in", n), {
     mapvars <- getMapping(n)$piam_variable
     oldvars <- getExpandRenamedVariables(mapvars)
     if (nrow(oldvars) > 0) {
@@ -64,5 +61,5 @@ test_that("no renamed_piam_variable used in mapping", {
               "\nTry to run the following, see also tutorial: Rscript -e 'devtools::load_all(); renameOldInMappings()'")
     }
     expect_true(nrow(oldvars) == 0)
-  }
-})
+  })
+}

@@ -65,7 +65,7 @@ for (mapping in names(mappingNames())) {
 
     # check for inconsistent variable + unit combinations
     nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
-    allVarUnit <- paste0(nonempty$piam_variable, " (", nonempty$piam_unit, ")")
+    allVarUnit <- unitjoin(nonempty$piam_variable, nonempty$piam_unit)
     unclearVar <- nonempty$piam_variable[duplicated(nonempty$piam_variable) & ! duplicated(allVarUnit)]
     unclearVarUnit <- sort(unique(allVarUnit[nonempty$piam_variable %in% unclearVar]))
     if (length(unclearVarUnit) > 0) {
@@ -74,7 +74,7 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(length(unclearVarUnit) == 0, label = paste("PIAM variables and units are consistent for", mapping))
 
-    allVarUnit <- paste0(mappingData$variable, " (", mappingData$unit, ")")
+    allVarUnit <- unitjoin(mappingData$variable, mappingData$unit)
     unclearVar <- mappingData$variable[duplicated(mappingData$variable) & ! duplicated(allVarUnit)]
     unclearVarUnit <- sort(unique(allVarUnit[mappingData$variable %in% unclearVar]))
     if (length(unclearVarUnit) > 0) {

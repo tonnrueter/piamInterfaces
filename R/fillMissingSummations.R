@@ -9,7 +9,7 @@
 #' @param iteration keeps track of number of recursive calls, leave to default
 #' @param logFile path to logFile. if NULL, write to stdout, if FALSE don't write
 #' @importFrom dplyr select mutate filter count
-#' @importFrom magclass as.magpie mbind is.magpie
+#' @importFrom magclass as.magpie mbind is.magpie unitjoin
 #'
 #' @export
 fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFile = NULL) { #nolint: cyclocomp_linter
@@ -133,7 +133,7 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFil
     # remains unchanged
     newMifFile <- out %>%
       select(-"sum_id") %>%
-      mutate("variable" = paste0(!!sym("variable"), " (", !!sym("unit"), ")")) %>%
+      mutate("variable" = unitjoin(!!sym("variable"), !!sym("unit"))) %>%
       select(c("scenario", "model", "region", "variable", "year" = "period", "value")) %>%
       as.magpie(spatial = "region", temporal = "year", data = "value", tidy = TRUE) %>%
       mbind(mifFile)

@@ -31,8 +31,8 @@ test_that("All variables in MAGICC7 template are mapped to something from REMIND
   magicc <- loadIIASATemplate(magiccfile)
   expect_true("variable" %in% colnames(magicc))
   expect_true("unit" %in% colnames(magicc))
-  magiccvars <- paste0(magicc$variable, " (", magicc$unit, ")")
-  tvars <- paste0(t$variable, " (", t$unit, ")")[! is.na(t$piam_variable)]
+  magiccvars <- unitjoin(magicc$variable, magicc$unit)
+  tvars <- unitjoin(t$variable, t$unit)[! is.na(t$piam_variable)]
   missingvars <- setdiff(magiccvars, tvars)
   if (length(missingvars) > 0) {
     warning("MAGICC7 variables with no piam_variable in AR6 template: ",

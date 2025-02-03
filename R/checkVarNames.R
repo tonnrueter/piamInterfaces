@@ -8,9 +8,10 @@
 #' @return vector with all variables that show issues
 #' @author Oliver Richters
 #' @importFrom quitte is.quitte
+#' @importFrom magclass unitjoin
 #' @export
 checkVarNames <- function(vars, withunits = TRUE) {
-  if (is.quitte(vars)) vars <- unique(paste0(vars$variable, if (withunits) paste0(" (", vars$unit, ")")))
+  if (is.quitte(vars)) vars <- unique(unitjoin(vars$variable, if (withunits) vars$unit))
 
   barspace <- unique(grep("[\\| ]{2}|^[\\| ]|[\\| ]$", vars, value = TRUE))
   if (length(barspace) > 0) {
