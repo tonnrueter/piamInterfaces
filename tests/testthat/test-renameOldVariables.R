@@ -14,11 +14,8 @@ test_that("renamed_piam_variables wildcards match", {
 })
 
 test_that("renamed_piam_variables has no duplicates", {
-  csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
-    read.csv2(comment.char = "#", strip.white = TRUE) %>%
-    as_tibble() %>%
-    pull("old_name")
-  duplicates <- csvdata[duplicated(csvdata)]
+  oldNames <- pull(readRenames(), "old_name")
+  duplicates <- oldNames[duplicated(oldNames)]
   if (length(duplicates) > 0) {
     warning("In inst/renamed_piam_variables.csv, these old_name variables are duplicates:\n",
             paste("- ", duplicates, collapse = "\n"))
