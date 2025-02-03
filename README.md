@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.42.1**
+R package **piamInterfaces**, version **0.42.2**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -80,12 +80,12 @@ Check the `diff` carefully, for example using `comparescenconf`, see above.
 
 ### piam_factor and unit checks
 
-While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed.
-It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `0.001` or mapping `US$2005` to `US$2017` without accounting for inflation.
+While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed in each mapping.
+It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `1` or mapping `US$2005` to `US$2017` without accounting for inflation.
 These checks are performed using [`checkUnitFactor()`](./R/checkUnitFactor.R).
 It first calls [`areUnitsIdentical()`](./R/areUnitsIdentical.R) where a number of identical units are specified (such as `Mt CO2` = `Mt CO2eq`, where `piam_factor` is 1).
-Then, it compares a list of accepted factors against the templates.
-In case your tests fails, carefully check whether the `piam_factor` is correct, and if so, add it to one of the functions.
+Then, `checkUnitFactor()` compares a list of accepted factors against the mappings.
+In case your tests fails, carefully check whether the `piam_factor` is correct, and if you a certain, add it to one of the functions so it will be accepted.
 
 ### Creating a new mapping
 
@@ -143,15 +143,17 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE - Version 0.42.1."
+Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.42.2, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
  ```latex
 @Misc{,
-  title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE - Version 0.42.1},
+  title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
-  date = {2025-01-31},
+  date = {2025-02-03},
   year = {2025},
+  url = {https://github.com/pik-piam/piamInterfaces},
+  note = {Version: 0.42.2},
 }
 ```
