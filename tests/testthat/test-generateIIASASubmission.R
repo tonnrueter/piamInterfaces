@@ -1,4 +1,6 @@
-for (mapping in c(list(c("ScenarioMIP", "PRISMA")), list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))) {
+testmappings <- c(list(c("ScenarioMIP", "PRISMA")), list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))
+testmappings <- c(testmappings, as.list(setdiff(names(mappingNames()), unlist(testmappings))))
+for (mapping in testmappings) {
   test_that(paste("test generateIIASASubmission with", paste(mapping, collapse = ",")), {
     data <- data.frame()
     for (i in unlist(mapping)) {

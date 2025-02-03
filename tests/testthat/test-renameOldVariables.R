@@ -13,12 +13,22 @@ test_that("renamed_piam_variables wildcards match", {
   expect_true(nrow(inconsistentAsterisk) == 0)
 })
 
+test_that("renamed_piam_variables has no half-empty lines", {
+  onlyOne <- readRenames() %>%
+    filter(.data$old_name %in% c("", NA) | .data$piam_variable %in% c("", NA))
+  if (nrow(onlyOne) > 0) {
+    warning("In inst/renamed_piam_variables.csv, these lines are partially empty:\n",
+            paste0("- ", onlyOne$piam_variable, ";", onlyOne$old_name, collapse = "\n"))
+  }
+  expect_length(onlyOne$piam_variable, 0)
+})
+
 test_that("renamed_piam_variables has no duplicates", {
   oldNames <- pull(readRenames(), "old_name")
   duplicates <- oldNames[duplicated(oldNames)]
   if (length(duplicates) > 0) {
     warning("In inst/renamed_piam_variables.csv, these old_name variables are duplicates:\n",
-            paste("- ", duplicates, collapse = "\n"))
+            paste("-", duplicates, collapse = "\n"))
   }
   expect_length(duplicates, 0)
 })
