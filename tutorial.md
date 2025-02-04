@@ -11,7 +11,7 @@ To improve the tutorial, edit [`tutorial.md`](./tutorial.md).
 ## Mappings
 
 Mappings found in
-[the `inst/mappings` folder](https://github.com/pik-piam/piamInterfaces/tree/master/inst/mappings)
+the [`inst/mappings`](https://github.com/pik-piam/piamInterfaces/tree/master/inst/mappings) folder
 serve to map variables from the PIAM framework to variables needed for the submission to databases.
 The mappings are `;`-separated files, using `#` as comment character, with the following mandatory columns:
 
@@ -39,22 +39,27 @@ Additionally, some mappings use those columns:
 
 ### Editing a mapping
 
-To edit a mapping in `R`, use:
+You can use a text editor, `R` or a spreadsheet editor to adjust the mappings.
+
+For `R`, use:
 ```
 mappingdata <- getMapping("AR6")
-...
+... whatever data.frame operations you want ...
 write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
 ```
 
-Opening the csv files in Excel can be problematic, as it sometimes changes values and quotation marks.
-You can edit the files in LibreOffice Calc using these settings in the Text Import dialog:
-- Text Import with:
+Using `Excel` can be problematic, as it sometimes changes values and quotation marks.
+
+For `LibreOffice Calc`, use these settings:
+```
+Text Import:
   - Character set: Unicode (UTF-8)
   - Separated by: Semicolon.
-- Save with:
+Save -> Edit filter settings:
   - Character set: Unicode (UTF-8)
   - Field Delimiter: ;
   - String Delimiter: (none)
+```
 
 The github diff on a large semicolon-separated file is often unreadable.
 For a human-readable output, save the old version of the mapping and run:
@@ -65,7 +70,7 @@ On the PIK cluster, you can run `comparescenconf mapping_AR6.csv` in the `inst/m
 
 After you adjusted the mapping, run `make test` on Linux (incl. the cluster) or `Rscript -e 'devtools::test(show_report = TRUE)'` on Windows, and various tests will be performed.
 
-### Renaming a piam_variable
+#### Renaming a piam_variable
 
 If a variable used as `piam_variable` has to be renamed, please add it with its `old_name` to [`inst/renamed_piam_variables.csv`](./inst/renamed_piam_variables.csv).
 Like this, if someone arrives with a dataset that contains the old name but not the new, [`renameOldVariables()`](./R/renameOldVariables.R) makes sure the data is automatically adjusted.
@@ -73,7 +78,7 @@ Like this, if someone arrives with a dataset that contains the old name but not 
 To adjust the mappings automatically, make sure you commit the current state to be able to reset its results, and then run `Rscript -e "devtools::load_all(); renameOldInMappings()"`.
 Check the `diff` carefully, for example using `comparescenconf`, see above.
 
-### piam_factor and unit checks
+#### piam_factor and unit checks
 
 While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed in each mapping.
 It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `1` or mapping `US$2005` to `US$2017` without accounting for inflation.
