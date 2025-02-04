@@ -41,7 +41,7 @@ getExpandRenamedVariables <- function(variables) {
 
   duplicates <- csvdata$old_name[duplicated(csvdata$old_name)]
   if (length(duplicates) > 0) {
-    stop("Duplicates in 'old_name' found: ", paste(duplicates, collapse = ", "))
+    warning("Duplicates in 'old_name' found: ", paste(duplicates, collapse = ", "))
   }
 
   csvdataNew <- NULL
@@ -65,7 +65,7 @@ getExpandRenamedVariables <- function(variables) {
   # check for remaining duplicates in old_name
   duplicates <- csvdata$old_name[duplicated(csvdata$old_name)]
   if (length(duplicates) > 0) {
-    stop("Duplicates in 'old_name' found after expansion: ", paste(duplicates, collapse = ", "))
+    warning("Duplicates in 'old_name' found after expansion: ", paste(duplicates, collapse = ", "))
   }
 
   return(csvdataNew)

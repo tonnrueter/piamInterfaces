@@ -1,6 +1,8 @@
 
 # Tutorial
 
+To improve the tutorial, edit [`tutorial.md`](./tutorial.md).
+
 - To understand how to submit to the IIASA database, read this
   [REMIND tutorial](https://github.com/remindmodel/remind/blob/develop/tutorials/13_Submit_to_IIASA_database.md).
 - In the following, we differentiate templates (list of variables and corresponding units used in a project)
@@ -60,6 +62,8 @@ For a human-readable output, save the old version of the mapping and run:
 remind2::compareScenConf(fileList = c("oldfile.csv", "mappingfile.csv"), row.names = NULL, expanddata = FALSE)
 ```
 On the PIK cluster, you can run `comparescenconf mapping_AR6.csv` in the `inst/mappings` folder and it will compare to a recent `master` version.
+
+After you adjusted the mapping, run `make test` on Linux (incl. the cluster) or `Rscript -e 'devtools::test(show_report = TRUE)'` on Windows, and various tests will be performed.
 
 ### Renaming a piam_variable
 
