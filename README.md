@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.42.4**
+R package **piamInterfaces**, version **0.43.0**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -57,7 +57,8 @@ mappingdata <- getMapping("AR6")
 write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
 ```
 
-Using `Excel` can be problematic, as it sometimes changes values and quotation marks.
+Using `Excel` can be problematic, as it sometimes changes values and quotation marks, depending on how it is set up. 
+You can easily check if your setup poses problems by opening one of the mappings in excel, changing a line, saving it, and then running `git diff`. If only your changes in the one line are shown/marked (instead of eg all lines being displayed with changed separators or so), all is fine and you can use excel to adjust the mapping.  
 
 For `LibreOffice Calc`, use these settings:
 ```
@@ -152,7 +153,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.42.4, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.43.0, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -163,6 +164,6 @@ A BibTeX entry for LaTeX users is
   date = {2025-02-04},
   year = {2025},
   url = {https://github.com/pik-piam/piamInterfaces},
-  note = {Version: 0.42.4},
+  note = {Version: 0.43.0},
 }
 ```
