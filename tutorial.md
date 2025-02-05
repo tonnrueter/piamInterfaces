@@ -29,6 +29,7 @@ Recommended columns:
   [remind2](https://github.com/pik-piam/remind2/blob/master/tests/testthat/test-convGDX2mif.R)
   and [coupling tests](https://github.com/remindmodel/remind/blob/develop/tests/testthat/test_20-coupled.R).
   If the variable is not normally reported, add a small `x` after the model abbreviation for it to be skipped in those tests.
+  New source abbreviations should be explained here and must be added to [`inst/sources.csv`](./inst/sources.csv).
 
 Additionally, some mappings use those columns:
 - `idx`: serial number of `variable`
@@ -45,7 +46,7 @@ For `R`, use:
 ```
 mappingdata <- getMapping("AR6")
 ... whatever data.frame operations you want ...
-write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
+writeMapping(mappingdata, "inst/mappings/mapping_yourproject.csv")
 ```
 
 Using `Excel` can be problematic, as it sometimes changes values and quotation marks, depending on how it is set up. 
@@ -71,7 +72,7 @@ On the PIK cluster, you can run `comparescenconf mapping_AR6.csv` in the `inst/m
 
 After you adjusted the mapping, run `make test` on Linux (incl. the cluster) or `Rscript -e 'devtools::test(show_report = TRUE)'` on Windows, and various tests will be performed.
 
-#### Renaming a piam_variable
+### Renaming a piam_variable
 
 If a variable used as `piam_variable` has to be renamed, please add it with its `old_name` to [`inst/renamed_piam_variables.csv`](./inst/renamed_piam_variables.csv).
 Like this, if someone arrives with a dataset that contains the old name but not the new, [`renameOldVariables()`](./R/renameOldVariables.R) makes sure the data is automatically adjusted.
@@ -79,7 +80,7 @@ Like this, if someone arrives with a dataset that contains the old name but not 
 To adjust the mappings automatically, make sure you commit the current state to be able to reset its results, and then run `Rscript -e "devtools::load_all(); renameOldInMappings()"`.
 Check the `diff` carefully, for example using `comparescenconf`, see above.
 
-#### piam_factor and unit checks
+### piam_factor and unit checks
 
 While running the tests, an extensive check of the compatibility of `piam_unit`, `unit` and `piam_factor` is performed in each mapping.
 It helps to find mismatches, for example mapping `Mt` to `Gt` with a factor of `1` or mapping `US$2005` to `US$2017` without accounting for inflation.
@@ -88,11 +89,19 @@ It first calls [`areUnitsIdentical()`](./R/areUnitsIdentical.R) where a number o
 Then, `checkUnitFactor()` compares a list of accepted factors against the mappings.
 In case your tests fails, carefully check whether the `piam_factor` is correct, and if you a certain, add it to one of the functions so it will be accepted.
 
+### Price indices
+
+While running `generateIIASASubmission()`, if `Price|*|Index` variables are part of the `iiasatemplate` and `Price|*` is part of the data, the missing price indices will be calculated automatically by [`priceIndicesIIASA()`](./R/priceIndicesIIASA.R). Price indices with wrong reference year (the year where the index is 1) are corrected automatically by [`priceIndicesFix()`](./R/priceIndicesFix.R).
+
 ### Creating a new mapping
 
-Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings. 
+First consider whether you need a new mapping or whether we can reduce redundancy.
+For example, if your project just uses a subset of an established mapping, using that mapping together with `iiasatemplate` to filter automatically just the variables you need is sufficient.
+If you additionally need some project-specific variables, create a mapping with just those and combine the mappings for submission, for example calling `mapping = c("ScenarioMIP", "PRISMA")`.
 
-1. Identify which existing mappings are most relevant for your new mapping. Criteria might include the time at which the existing mapping was created and the proximity of the templates (e.g. follow-up project). If you are unsure, ask your experienced colleagues for advice. This provides you with a list of existing mappings that is ordered by relevance, say `mapping_OLD1.csv`, ... , `mapping_OLD9.csv`. 
+If you need to set up a new mapping: Since templates contain between several hundreds and a few thousand variables, relying on existing mappings can save substantial amounts of work compared to setting up a new mapping from scratch. Since the template itself is most likely built based on earlier templates from other projects, chances are good that existing mappings already provide parts of the required new mapping. Using `R`, we describe a simple way to create a new mapping `mapping_NEW.csv` based on existing mappings.
+
+1. Identify which existing mappings are most relevant for your new mapping. Criteria might include the time at which the existing mapping was created and the proximity of the templates (e.g. follow-up project). If you are unsure, ask your experienced colleagues for advice. This provides you with a list of existing mappings that is ordered by relevance, say `mapping_OLD1.csv`, ... , `mapping_OLD9.csv`.
 2. Use `read.csv2` to get the template as a dataframe `template`.
 3. Looping over the existing mappings in descending order of relevance,
     - use `getMapping` to get the existing mapping `mapping_OLDi` as a dataframe,
@@ -100,7 +109,7 @@ Since templates contain between several hundreds and a few thousand variables, r
     - `left_join` (by variable) the filtered `mapping_OLDi` with `template`  to add the information from the template (consider using `str_to_lower` for case-insensitive matching when filtering and joining),
     - `select`/`mutate` the columns of the joined dataframe to keep the desired columns for the new mapping (see above for description of mandatory and recommended columns),
     - `bind_rows` to `mapping_NEW`
-5. Use `write.csv2` to export `mapping_NEW` as `mapping_NEW.csv`. It is recommended to make a few checks (e.g. by looking at all variables for which the description or the unit does not agree between the existing mapping and the template).
+5. Use `writeMapping()` to export `mapping_NEW` as `mapping_NEW.csv`. It is recommended to make a few checks (e.g. by looking at all variables for which the description or the unit does not agree between the existing mapping and the template).
 
 ## Model intercomparison
 

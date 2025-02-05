@@ -107,6 +107,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
 
   mapData <- NULL
 
+  # loop over mappings
   for (i in seq_along(mapping)) {
     t <- getMapping(mapping[i]) %>%
       filter(! .data$piam_variable %in% "", ! is.na(.data$piam_variable)) %>%
@@ -118,6 +119,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
       mutate(
         "piam_weight" = .data$weight
       ) %>%
+      # add interpolation column if not existing
+      bind_rows(tibble(interpolation = NA)) %>%
       select("variable", "unit", "piam_variable", "piam_unit",
              "piam_factor", "piam_weight", "interpolation")
     checkUnitFactor(t, logFile = logFile, failOnUnitMismatch = FALSE)
@@ -337,7 +340,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
   )
 }
 
-.interpolate <- function(submission, mapData)  {
+.interpolate <- function(submission, mapData) {
 
   message("# Apply linear interpolation to submission data")
 
