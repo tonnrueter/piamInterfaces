@@ -48,7 +48,8 @@ mappingdata <- getMapping("AR6")
 write.table(mappingdata, "inst/mappings/test_mapping.csv", na = "",  dec = ".", sep = ";", row.names = FALSE, quote = FALSE)
 ```
 
-Using `Excel` can be problematic, as it sometimes changes values and quotation marks.
+Using `Excel` can be problematic, as it sometimes changes values and quotation marks, depending on how it is set up. 
+You can easily check if your setup poses problems by opening one of the mappings in excel, changing a line, saving it, and then running `git diff`. If only your changes in the one line are shown/marked (instead of eg all lines being displayed with changed separators or so), all is fine and you can use excel to adjust the mapping.  
 
 For `LibreOffice Calc`, use these settings:
 ```

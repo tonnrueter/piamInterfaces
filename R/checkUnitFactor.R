@@ -30,7 +30,8 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   # This uses regex matching, so "1000 million US$" = "1 billion US$" is covered by that as well.
   scaleConversion <- list(
                           c("1", "million", "million veh"),
-                          c("1", "million vehicles/yr", "million veh"),
+                          c("1", "million/yr", "million veh"), # EDGE-T still not reporting correctly
+                          c("1", "million vehicles/yr", "million veh"), # EDGE-T still not reporting correctly
                           c("1", "Index (2020 = 1)", "1"),
                           c("1", "Index (2010 = 1)", "1"),
                           c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'
