@@ -24,7 +24,7 @@ for (mapping in names(mappingNames())) {
       pull("variable")
     if (length(factorWithComma) > 0) {
       warning("These variables in mapping ", mapping, " have a piam_factor using a ',' as decimal. Please use '.':\n",
-              paste(factorWithComma, collapse = "\n"),
+              paste("-", factorWithComma, collapse = "\n"),
               "\nYou can run: devtools::load_all(); write.csv2(getMapping('", mapping,
               "') %>% mutate(piam_factor = gsub(',', '.', .data$piam_factor)), mappingNames('", mapping,
               "'), na = '', row.names = FALSE, quote = FALSE)")
@@ -102,7 +102,7 @@ for (mapping in names(mappingNames())) {
       pull("variable")
     if (length(factorWithoutVar) > 0) {
       warning("These variables in mapping ", mapping, " have a piam_factor, but nothing specified in piam_variable:\n",
-              paste(factorWithoutVar, collapse = "\n"))
+              paste("-", factorWithoutVar, collapse = "\n"))
     }
     expect_length(factorWithoutVar, 0)
 
@@ -114,9 +114,12 @@ for (mapping in names(mappingNames())) {
         pull("variable")
       if (length(sourceWithoutVar) > 0) {
         warning("These variables in mapping ", mapping, " have a non-empty source column, ",
-                "but nothing specified in piam_variable:\n", paste(sourceWithoutVar, collapse = "\n"))
+                "but nothing specified in piam_variable:\n", paste("-", sourceWithoutVar, collapse = "\n"))
       }
       expect_length(sourceWithoutVar, 0)
+
+      sources <- read.csv2(system.file("sources.csv", package = "piamInterfaces"))
+      sourceinfo <- paste0("The options are ", paste0(sources$symbol, " (", sources$model, ")", collapse = ", "), ".")
 
       # check for piam_variable without source if source is supplied
       varWithoutSource <- mappingData %>%
@@ -125,19 +128,17 @@ for (mapping in names(mappingNames())) {
         unique()
       if (length(varWithoutSource) > 0) {
         warning("These piam_variable in mapping ", mapping, " have an empty source column, see tutorial.md:\n",
-                paste(varWithoutSource, collapse = "\n"))
+                paste("-", varWithoutSource, collapse = "\n"), "\n", sourceinfo)
       }
       expect_length(varWithoutSource, 0)
 
-      # add here once you added new options to the tutorial
-      sources <- read.csv2(system.file("sources.csv", package = "piamInterfaces"))
+      # check whether all sources are described in inst/sources.csv
       sourceOptions <- sort(c(sources$symbol, paste0(sources$symbol, "x")))
       unknownSource <- mappingData %>% pull("source") %>% unique() %>% setdiff(c(NA, sourceOptions))
       if (length(unknownSource) > 0) {
-        warning("The source column of mapping ", mapping, " contains these unknown options:\n",
-                paste0(unknownSource, collapse = ", "),
-                ".\nThe only options are ", paste0(sources$symbol, " (", sources$model, ")", collapse = ", "), ".\n",
-                "New options should be explained in 'tutorial.md' and added to 'inst/sources.csv'.")
+        warning("The source column of mapping ", mapping, " contains these unknown options: ",
+                paste0(unknownSource, collapse = ", "), "\n", sourceinfo,
+                "\nNew options should be explained in 'tutorial.md' and added to 'inst/sources.csv'.")
       }
       expect_length(unknownSource, 0)
     } # end source checks
