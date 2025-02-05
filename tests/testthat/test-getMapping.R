@@ -113,8 +113,8 @@ for (mapping in names(mappingNames())) {
         filter(! is.na(.data$source), is.na(.data$piam_variable)) %>%
         pull("variable")
       if (length(sourceWithoutVar) > 0) {
-        warning("These variables in mapping ", mapping, " have a source, but nothing specified in piam_variable:\n",
-                paste(sourceWithoutVar, collapse = "\n"))
+        warning("These variables in mapping ", mapping, " have a non-empty source column, ",
+                "but nothing specified in piam_variable:\n", paste(sourceWithoutVar, collapse = "\n"))
       }
       expect_length(sourceWithoutVar, 0)
 
@@ -124,10 +124,27 @@ for (mapping in names(mappingNames())) {
         pull("piam_variable") %>%
         unique()
       if (length(varWithoutSource) > 0) {
-        warning("These piam_variable in mapping ", mapping, " have no source:\n",
+        warning("These piam_variable in mapping ", mapping, " have an empty source column, see tutorial.md:\n",
                 paste(varWithoutSource, collapse = "\n"))
       }
       expect_length(varWithoutSource, 0)
+
+      # add here once you added new options to the tutorial
+      sources <- read.csv2(system.file("sources.csv", package = "piamInterfaces"))
+      sourceOptions <- sort(c(sources$symbol, paste0(sources$symbol, "x")))
+      unknownSource <- mappingData %>% pull("source") %>% unique() %>% setdiff(c(NA, sourceOptions))
+      if (length(unknownSource) > 0) {
+        warning("The source column of mapping ", mapping, " contains these unknown options:\n",
+                paste0(unknownSource, collapse = ", "),
+                ".\nThe only options are ", paste0(sources$symbol, " (", sources$model, ")", collapse = ", "), ".\n",
+                "New options should be explained in 'tutorial.md' and added to 'inst/sources.csv'.")
+      }
+      expect_length(unknownSource, 0)
     } # end source checks
+
+    testfile <- file.path(tempdir(), paste0("mapping_", mapping, ".csv"))
+    writeMapping(mappingData, testfile)
+    mappingAfterWriting <- getMapping(testfile)
+    expect_identical(mappingData, mappingAfterWriting)
   })
 }
