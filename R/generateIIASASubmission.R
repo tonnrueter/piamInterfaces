@@ -159,7 +159,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     mutate(
       "piam_variable" = str_trim(.data$variable),
       "piam_unit" = str_trim(.data$unit)
-      ) %>%
+    ) %>%
     select(-c("variable", "unit")) %>%
     distinct()
 
@@ -212,10 +212,10 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     message("# Apply summation checks")
     for (sumFile in setdiff(sumFiles, FALSE)) {
       invisible(checkSummations(submission, template = mapData,
-                              summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
-                              outputDirectory = outputDirectory, generatePlots = generatePlots,
-                              dataDumpFile = paste0(prefix, "_checkSummations.csv"),
-                              plotprefix = paste0(prefix, "_")))
+                                summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
+                                outputDirectory = outputDirectory, generatePlots = generatePlots,
+                                dataDumpFile = paste0(prefix, "_checkSummations.csv"),
+                                plotprefix = paste0(prefix, "_")))
     }
   }
 
@@ -248,33 +248,33 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
 }
 
 .setModelAndScenario <- function(dt, modelname, scenRemove = NULL, scenAdd = NULL) {
-    scenarioNames <- unique(dt$scenario)
-    if (! is.null(modelname)) {
-      dt$model <- modelname
-      message("# Correct model name to '", modelname, "'.")
+  scenarioNames <- unique(dt$scenario)
+  if (! is.null(modelname)) {
+    dt$model <- modelname
+    message("# Correct model name to '", modelname, "'.")
+  }
+  if (! is.null(scenRemove) && ! scenRemove %in% "") {
+    dt$scenario <- gsub(scenRemove, "", dt$scenario)
+    message("# Adapt scenario names: '", scenRemove, "' will be removed.")
+  }
+  if (! is.null(scenAdd)) {
+    if (all(grepl(scenAdd, unique(dt$scenario), fixed = TRUE))) {
+      message("Prefix ", scenAdd, " already found in all scenario names. Skipping.")
+    } else {
+      dt$scenario <- paste0(scenAdd, dt$scenario)
+      message("# Adapt scenario names: '", scenAdd, "' will be prepended.")
     }
-    if (! is.null(scenRemove) && ! scenRemove %in% "") {
-      dt$scenario <- gsub(scenRemove, "", dt$scenario)
-      message("# Adapt scenario names: '", scenRemove, "' will be removed.")
-    }
-    if (! is.null(scenAdd)) {
-      if (all(grepl(scenAdd, unique(dt$scenario), fixed = TRUE))) {
-        message("Prefix ", scenAdd, " already found in all scenario names. Skipping.")
-      } else {
-        dt$scenario <- paste0(scenAdd, dt$scenario)
-        message("# Adapt scenario names: '", scenAdd, "' will be prepended.")
-      }
-    }
-    if (length(unique(dt$scenario)) < length(scenarioNames)) {
-      message(length(scenarioNames), " scenario names before changes: ", paste(scenarioNames, collapse = ", "))
-      message(length(unique(dt$scenario)), " scenario names after changes:  ",
-              paste(unique(dt$scenario), collapse = ", "))
-      stop("Changes to scenario names lead to duplicates. Adapt scenRemove='",
-           scenRemove, "' and scenAdd='", scenAdd, "'!")
-    }
+  }
+  if (length(unique(dt$scenario)) < length(scenarioNames)) {
+    message(length(scenarioNames), " scenario names before changes: ", paste(scenarioNames, collapse = ", "))
+    message(length(unique(dt$scenario)), " scenario names after changes:  ",
+            paste(unique(dt$scenario), collapse = ", "))
+    stop("Changes to scenario names lead to duplicates. Adapt scenRemove='",
+         scenRemove, "' and scenAdd='", scenAdd, "'!")
+  }
 
-    dt$scenario <- as.factor(dt$scenario)
-    return(dt)
+  dt$scenario <- as.factor(dt$scenario)
+  return(dt)
 }
 
 # resolve the weight column if present else return

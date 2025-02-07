@@ -76,10 +76,10 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   # start with an empty tibble, such that return values always have the same
   # structure
   comparison <- tibble(model = factor(), scenario = factor(),
-                region = factor(), period = integer(),
-                variable = character(), unit = factor(),
-                value = numeric(), checkSum = numeric(),
-                diff = numeric(), reldiff = numeric())
+                       region = factor(), period = integer(),
+                       variable = character(), unit = factor(),
+                       value = numeric(), checkSum = numeric(),
+                       diff = numeric(), reldiff = numeric())
 
   # iterate over summation rules
   for (i in seq_along(checkVariables)) {
@@ -216,7 +216,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         childs <- checkVariables[[p]]
 
         piamchilds <- if (is.null(mapping)) NULL else
-                        sumNamesWithFactors(mappingData, pn)
+          sumNamesWithFactors(mappingData, pn)
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                   paste0(piamchilds, " ", signofdiff)[! is.null(piamchilds)]
                   ))
@@ -268,12 +268,12 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       # print to log or stdout
       summarytext <- c(summarytext, paste0("\n# Summary of summation group checks for model ", thismodel, ":"),
         paste0("# ", length(problematic), " equations are not satisfied but should according to ",
-              basename(summationsFile), "."),
+               basename(summationsFile), "."),
         paste0("# All deviations can be found in the returned object",
                paste0(" and in ", dataDumpFile)[! is.null(dataDumpFile)], "."),
         paste0("# To get more detailed information on '", p, "', run piamInterfaces::variableInfo('",
                pn, "').")
-        )
+      )
       if (generatePlots) {
         dev.off()
         summarytext <- c(summarytext, paste0("\n# Find plot comparison of all errors in ", pdfFilename))

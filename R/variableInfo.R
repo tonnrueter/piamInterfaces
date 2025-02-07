@@ -47,13 +47,13 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
       # print table column names
       summationsFile <- gsub(".*piamInterfaces", "piamInterfaces", summationsNames(m))
       message(str_pad(paste0("# Export variable groups found in ",
-                           basename(summationsFile)), width + 8, "right"),
-            "# Corresponding sum of 'piam_variable'")
+                             basename(summationsFile)), width + 8, "right"),
+              "# Corresponding sum of 'piam_variable'")
     } else {
       summationGroups <- NULL
       message("# No corresponding summation groups file found, show variables in mapping.")
       message("\n", str_pad(paste0("# Export variable"), width + 8, "right"),
-            "# Corresponding 'piam_variable'")
+              "# Corresponding 'piam_variable'")
     }
     # loop through all lines found
     for (no in unique(c(piamno, exportno))) {

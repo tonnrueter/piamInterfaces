@@ -74,7 +74,7 @@ for (piam_unit in c("1/billion US$2005", "1/billion US$2017")) {
       } else if (piam_unit == "1/billion US$2017" && mif_unit == "1/billion US$2005") {
         # is automatically adapting GDP values
         expect_no_error(gdp17 <- checkFixUnits(gdp, getMapping(mappingfile)))
-        expect_true(all(abs(gdp17$value - 1/1.231357 * gdp$value) < 0.00001))
+        expect_true(all(abs(gdp17$value - 1 / 1.231357 * gdp$value) < 0.00001))
         expect_true(all(gdp17$unit == piam_unit))
       } else {
         # no need to adapt anything
@@ -117,7 +117,7 @@ for (piam_unit in c("1/US$2005", "1/US$2017")) {
       } else if (piam_unit == "1/US$2017" && mif_unit == "1/US$2005") {
         # is automatically adapting GDP values
         expect_no_error(gdp17 <- checkFixUnits(gdp, getMapping(mappingfile)))
-        expect_true(all(abs(gdp17$value - 1/1.231357 * gdp$value) < 0.00001))
+        expect_true(all(abs(gdp17$value - 1 / 1.231357 * gdp$value) < 0.00001))
         expect_true(all(gdp17$unit == piam_unit))
       } else {
         # no need to adapt anything
