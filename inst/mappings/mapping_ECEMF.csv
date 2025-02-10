@@ -668,7 +668,7 @@ Secondary Energy|Heat;EJ/yr;SE|Heat;EJ/yr;1;;;;R
 Secondary Energy|Heat|Biomass;EJ/yr;SE|Heat|+|Biomass;EJ/yr;1;;;;R
 Secondary Energy|Heat|Coal;EJ/yr;;;;;;;
 Secondary Energy|Heat|Electricity;EJ/yr;SE|Heat|Electricity|Heat Pump;EJ/yr;1;;;;R
-Secondary Energy|Heat|Electricity|Heat Pump;EJ/yr;SE|Heat|Electricity|Heat Pump;EJ/yr;1;;;;R
+Secondary Energy|Heat|Electricity|Heat Pumps;EJ/yr;SE|Heat|Electricity|Heat Pump;EJ/yr;1;;;;R
 Secondary Energy|Heat|Gas;EJ/yr;;EJ/yr;;;;;
 Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Coal;EJ/yr;1;;;;R
 Secondary Energy|Heat|Fossil;EJ/yr;SE|Heat|+|Gas;EJ/yr;1;;;;R
@@ -758,7 +758,6 @@ Capacity|Electricity|Oil;GW;Cap|Electricity|Oil|w/o CC;GW;1;;;;R
 Capacity|Electricity|Ocean;GW;;;;;;;
 Capacity|Electricity|Other;GW;Cap|Electricity|Hydrogen;GW;1;;;;R
 Capacity|Electricity|Solar;GW;Cap|Electricity|Solar;GW;1;;;;R
-Capacity|Electricity|Storage;GW;Cap|Electricity|Storage|Battery;GW;1;;;;R
 Capacity|Electricity|Storage|Power;GW;Cap|Electricity|Storage|Battery;GW;1;;;;R
 Capacity|Electricity|Storage|Reservoir;GWh;Cap|Electricity|Storage|Battery;GW;6;;;;R
 Capacity|Electricity|Storage|Power|Battery;GW;Cap|Electricity|Storage|Battery;GW;1;;;;R
