@@ -111,7 +111,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
   # select the plot style if undefined
   if (is.null(plotby) || "plotby" %in% interactive) {
     plotby <- chooseFromList(c("onefile", "model", "scenario"), "pdfs to be generated",
-                          userinfo = "all in one file, and/or one file per model, scenario")
+                             userinfo = "all in one file, and/or one file per model, scenario")
   }
   if (any(c("model", "scenario", "region", "period") %in% interactive)) {
     data <- quitte::chooseFilter(data, types = intersect(c("model", "scenario", "region", "period"), interactive),
@@ -135,7 +135,7 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     default <- sort(head(intersect(c(2030, 2050, 2040, 2020, 2100, unique(data$period)), unique(data$period)), 2))
     chosen <- chooseFromList(unique(data$period), multiple = TRUE, type = "years used for bar plots",
                              userinfo = paste0("Choose years used for bar plots. Press Enter to select ",
-                                        paste(default, collapse = ", "), "."))
+                                               paste(default, collapse = ", "), "."))
     yearsBarPlot <- if (length(chosen) > 0) chosen else default
   }
 
@@ -193,7 +193,7 @@ makepdf <- function(pdfFilename, plotdata, lineplotVariables, areaplotVariables,
   }
   pdf(pdfFilename,
       width = 1.2 * max(12, length(quitte::getRegs(plotdata)),
-                  length(quitte::getModels(plotdata)) * length(quitte::getScenarios(plotdata)) * 2),
+                        length(quitte::getModels(plotdata)) * length(quitte::getScenarios(plotdata)) * 2),
       height = 1.2 * 9)
   plotvariables <- sort(unique(c(lineplotVariables, names(areaplotVariables))))
   plotvariables <- plotvariables[removeNo(plotvariables) %in% plotdata$variable]

@@ -724,14 +724,14 @@ Trade|Primary Energy|Biomass|Volume;EJ/yr;Trade|Biomass;EJ/yr;1;;;;R
 Trade|Primary Energy|Coal|Volume;EJ/yr;Trade|Coal;EJ/yr;1;;;;R
 Trade|Primary Energy|Gas|Volume;EJ/yr;Trade|Gas;EJ/yr;1;;;;R
 Trade|Primary Energy|Oil|Volume;EJ/yr;Trade|Oil;EJ/yr;1;;;;R
-Trade|Secondary Energy|Electricity|Volume;EJ/yr;Trade|SE|Electricity;EJ/yr;1;;;;R
-Trade|Secondary Energy|Hydrogen|Volume;EJ/yr;Trade|SE|Hydrogen;EJ/yr;1;;;;R
+Trade|Secondary Energy|Electricity|Volume;EJ/yr;Trade|SE|Electricity;EJ/yr;1;;;;Rx
+Trade|Secondary Energy|Hydrogen|Volume;EJ/yr;Trade|SE|Hydrogen;EJ/yr;1;;;;Rx
 Trade|Secondary Energy|Liquids|Biomass|Volume;EJ/yr;;;;;;;
 Trade|Secondary Energy|Liquids|Coal|Volume;EJ/yr;;;;;;;
-Trade|Secondary Energy|Liquids|Electricity|Volume;EJ/yr;Trade|SE|Liquids|Hydrogen;EJ/yr;1;;;;R
+Trade|Secondary Energy|Liquids|Electricity|Volume;EJ/yr;Trade|SE|Liquids|Hydrogen;EJ/yr;1;;;;Rx
 Trade|Secondary Energy|Liquids|Gas|Volume;EJ/yr;;;;;;;
 Trade|Secondary Energy|Liquids|Oil|Volume;EJ/yr;;;;;;;
-Trade|Secondary Energy|Liquids|Volume;EJ/yr;Trade|SE|Liquids|Hydrogen;EJ/yr;1;;;;R
+Trade|Secondary Energy|Liquids|Volume;EJ/yr;Trade|SE|Liquids|Hydrogen;EJ/yr;1;;;;Rx
 Trade|Uranium|Mass;kt U/yr;Trade|Uranium|Mass;ktU/yr;1;;;;R
 Capacity|Electricity;GW;Cap|Electricity;GW;1;;;;R
 Capacity|Electricity|Biomass|w/ CCS;GW;Cap|Electricity|Biomass|w/ CC;GW;1;;;;R
