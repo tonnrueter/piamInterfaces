@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.44.3**
+R package **piamInterfaces**, version **0.44.4**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -162,7 +162,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.44.3, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.44.4, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -170,9 +170,9 @@ A BibTeX entry for LaTeX users is
 @Misc{,
   title = {piamInterfaces: Project specific interfaces to REMIND / MAgPIE},
   author = {Falk Benke and Oliver Richters},
-  date = {2025-02-12},
+  date = {2025-02-13},
   year = {2025},
   url = {https://github.com/pik-piam/piamInterfaces},
-  note = {Version: 0.44.3},
+  note = {Version: 0.44.4},
 }
 ```
