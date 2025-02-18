@@ -1,2 +1,2 @@
-linters: lucode2::lintrRules(allowUndesirable = TRUE)
+linters: lucode2::lintrRules(modification = list(indentation_linter = NULL, return_linter = NULL))
 encoding: "UTF-8"
