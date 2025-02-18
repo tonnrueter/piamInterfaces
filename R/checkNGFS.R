@@ -43,7 +43,6 @@ checkNGFS <- function(mifdata, iiasatemplate, logFile, generatePlots = TRUE) {
   checkyear <- 2050
   failregi <- csregi %>%
     filter(abs(.data$reldiff) > 0.5, abs(.data$diff) > 0.00015, .data$period == checkyear) %>%
-    # filter(! .data$variable %in% bunkervars) %>%
     select(-"model", -"period")
   if (nrow(failregi) > 0) {
     message("For those variables, the sum of regional values does not match the World value in 2050:")
