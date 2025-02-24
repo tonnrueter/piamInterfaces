@@ -189,3 +189,96 @@ Emissions|VOC;Emissions|VOC|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Fires|Peat Burning;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Wetlands;1
 Emissions|VOC;Emissions|VOC|Waste;1
+;;
+#  Additional summation checks for emission variables;;
+## Total CO2: net emissions equal to gross emissions minus gross removals;;
+Emissions|CO2;Gross Emissions|CO2;1
+Emissions|CO2;Gross Removals|CO2;-1
+;;
+## AFOLU CO2: net emissions equal to gross emissions minus gross removals;;
+Emissions|CO2|AFOLU;Gross Emissions|CO2|AFOLU;1
+Emissions|CO2|AFOLU;Gross Removals|CO2|AFOLU;-1
+;;
+#  Carbon Capture and Carbon Removal;;
+## Carbon Capture by Source;;
+Carbon Capture;Carbon Capture|Direct Air Capture;1
+Carbon Capture;Carbon Capture|Direct Ocean Capture;1
+Carbon Capture;Carbon Capture|Energy|Demand;1
+Carbon Capture;Carbon Capture|Energy|Supply;1
+Carbon Capture;Carbon Capture|Industrial Processes;1
+Carbon Capture;Carbon Capture|Other Sources;1
+;;
+## Carbon Capture by Sink;;
+Carbon Capture;Carbon Capture|Geological Storage;1
+Carbon Capture;Carbon Capture|Leakage;1
+Carbon Capture;Carbon Capture|Other Storage;1
+Carbon Capture;Carbon Capture|Utilization;1
+;;
+## Carbon Removal;;
+Carbon Removal;Carbon Removal|Enhanced Weathering;1
+Carbon Removal;Carbon Removal|Geological Storage;1
+Carbon Removal;Carbon Removal|Land Use;1
+Carbon Removal;Carbon Removal|Long-Lived Materials;1
+Carbon Removal;Carbon Removal|Ocean;1
+Carbon Removal;Carbon Removal|Other;1
+;;
+# Final Energy;;
+## Final Energy by Sector;;
+Final Energy;Final Energy|Agriculture;1
+Final Energy;Final Energy|Bunkers;1
+Final Energy;Final Energy|Carbon Management;1
+Final Energy;Final Energy|Industry;1
+Final Energy;Final Energy|Non-Energy Use;1
+Final Energy;Final Energy|Other Sector;1
+Final Energy;Final Energy|Residential and Commercial;1
+Final Energy;Final Energy|Transportation;1
+;;
+## Final Energy by Sector without bunkers;;
+Final Energy (w/o bunkers);Final Energy|Agriculture;1
+Final Energy (w/o bunkers);Final Energy|Carbon Management;1
+Final Energy (w/o bunkers);Final Energy|Industry;1
+Final Energy (w/o bunkers);Final Energy|Non-Energy Use;1
+Final Energy (w/o bunkers);Final Energy|Other Sector;1
+Final Energy (w/o bunkers);Final Energy|Residential and Commercial;1
+Final Energy (w/o bunkers);Final Energy|Transportation;1
+;;
+## Final Energy by Carrier;;
+Final Energy;Final Energy|Electricity;1
+Final Energy;Final Energy|Gases;1
+Final Energy;Final Energy|Geothermal;1
+Final Energy;Final Energy|Heat;1
+Final Energy;Final Energy|Hydrogen;1
+Final Energy;Final Energy|Liquids;1
+Final Energy;Final Energy|Other;1
+Final Energy;Final Energy|Solar;1
+Final Energy;Final Energy|Solids;1
+Final Energy;Final Energy|Waste;1
+;;
+## Final Energy Transportation with and without bunkers;;
+Final Energy|Transportation;Final Energy|Transportation (w/ bunkers);1
+Final Energy|Transportation;Final Energy|Bunkers;-1
+;;
+# Primary Energy;;
+## Primary Energy by Carrier;;
+Primary Energy;Primary Energy|Biomass;1
+Primary Energy;Primary Energy|Coal;1
+Primary Energy;Primary Energy|Gas;1
+Primary Energy;Primary Energy|Geothermal;1
+Primary Energy;Primary Energy|Hydro;1
+Primary Energy;Primary Energy|Nuclear;1
+Primary Energy;Primary Energy|Ocean;1
+Primary Energy;Primary Energy|Oil;1
+Primary Energy;Primary Energy|Solar;1
+Primary Energy;Primary Energy|Wind;1
+;;
+# Primary Energy Fossil;;
+Primary Energy|Fossil;Primary Energy|Coal;1
+Primary Energy|Fossil;Primary Energy|Gas;1
+Primary Energy|Fossil;Primary Energy|Oil;1
+;;
+# Primary Energy Non-Biomass Renewables;;
+Primary Energy|Non-Biomass Renewables;Primary Energy|Geothermal;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Hydro;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Ocean;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Solar;1
+Primary Energy|Non-Biomass Renewables;Primary Energy|Wind;1
