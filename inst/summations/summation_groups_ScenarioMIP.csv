@@ -1,23 +1,63 @@
 parent;child;factor
 #  Variables that need add up for the emissions harmonization process (see https://docs.google.com/spreadsheets/d/1HKfl21NX8wohPEHpHlmf5XithknPw8zjLpVe4MiOU9U/edit?gid=1877841403#gid=1877841403);;
 ## Total CO2 - Note that for AFOLU we only report the total net variable;;
-Emissions|CO2;Emissions|CO2|Energy|Supply;1
-Emissions|CO2;Emissions|CO2|Energy|Demand|Industry;1
-Emissions|CO2;Emissions|CO2|Energy|Demand|Other Sector;1
-Emissions|CO2;Emissions|CO2|Industrial Processes;1
-Emissions|CO2;Emissions|CO2|Other;1
-Emissions|CO2;Emissions|CO2|Energy|Demand|Bunkers|International Aviation;1
-Emissions|CO2;Emissions|CO2|Energy|Demand|Transportation;1
-Emissions|CO2;Emissions|CO2|Energy|Demand|Bunkers|International Shipping;1
-Emissions|CO2;Emissions|CO2|Energy|Demand|Residential and Commercial and AFOFI;1
-Emissions|CO2;Emissions|CO2|Product Use;1
 Emissions|CO2;Emissions|CO2|AFOLU;1
+Emissions|CO2;Emissions|CO2|Energy and Industrial Processes;1
+Emissions|CO2;Emissions|CO2|Other;1
+Emissions|CO2;Emissions|CO2|Other Capture and Removal;1
+Emissions|CO2;Emissions|CO2|Product Use;1
 Emissions|CO2;Emissions|CO2|Waste;1
-Emissions|CO2;Carbon Removal|Enhanced Weathering;-1
-Emissions|CO2;Carbon Removal|Geological Storage|Direct Air Capture;-1
-Emissions|CO2;Carbon Removal|Geological Storage|Other Sources;-1
-Emissions|CO2;Carbon Removal|Long-Lived Materials;-1
-Emissions|CO2;Carbon Removal|Ocean;-1
+;;
+## AFOLU CO2: In ScenarioMIP, the variable Emissions|CO2|AFOLU is taken from the REMIND reporting, but the variable Emissions|CO2|AFOLU|Land is taken from the MAgPIE reporting. This check ensures consistency;;
+Emissions|CO2|AFOLU;Emissions|CO2|AFOLU|Agricultural Waste Burning;1
+Emissions|CO2|AFOLU;Emissions|CO2|AFOLU|Agriculture;1
+Emissions|CO2|AFOLU;Emissions|CO2|AFOLU|Land;1
+;;
+## AFOLU|Land CO2;;
+Emissions|CO2|AFOLU|Land;Emissions|CO2|AFOLU|Land|Fires;1
+Emissions|CO2|AFOLU|Land;Emissions|CO2|AFOLU|Land|Harvested Wood Products;1
+Emissions|CO2|AFOLU|Land;Emissions|CO2|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|CO2|AFOLU|Land;Emissions|CO2|AFOLU|Land|Other;1
+Emissions|CO2|AFOLU|Land;Emissions|CO2|AFOLU|Land|Wetlands;1
+;;
+# Energy and Industrial Processes CO2;;
+Emissions|CO2|Energy and Industrial Processes;Emissions|CO2|Energy;1
+Emissions|CO2|Energy and Industrial Processes;Emissions|CO2|Industrial Processes;1
+;;
+## Energy CO2;;
+Emissions|CO2|Energy;Emissions|CO2|Energy|Supply;1
+Emissions|CO2|Energy;Emissions|CO2|Energy|Demand;1
+;;
+## Energy Demand CO2;;
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Industry;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Other Sector;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Bunkers;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Transportation;1
+Emissions|CO2|Energy|Demand;Emissions|CO2|Energy|Demand|Residential and Commercial and AFOFI;1
+;;
+## Energy Demand Bunkers CO2;;
+Emissions|CO2|Energy|Demand|Bunkers;Emissions|CO2|Energy|Demand|Bunkers|International Aviation;1
+Emissions|CO2|Energy|Demand|Bunkers;Emissions|CO2|Energy|Demand|Bunkers|International Shipping;1
+;;
+## Energy Supply CO2;;
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Autoproduction;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Combustion;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Electricity;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Fugitive;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Gases;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Heat;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Hydrogen;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Liquids;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Other;1
+Emissions|CO2|Energy|Supply;Emissions|CO2|Energy|Supply|Solids;1
+;;
+## Other Capture and Removal CO2: Carbon Removal|Long-Lived Materials|Timber is already part of Emissions|CO2|AFOLU;;
+Emissions|CO2|Other Capture and Removal;Carbon Removal|Enhanced Weathering;-1
+Emissions|CO2|Other Capture and Removal;Carbon Removal|Geological Storage|Direct Air Capture;-1
+Emissions|CO2|Other Capture and Removal;Carbon Removal|Geological Storage|Other Sources;-1
+Emissions|CO2|Other Capture and Removal;Carbon Removal|Long-Lived Materials;-1
+Emissions|CO2|Other Capture and Removal;Carbon Removal|Long-Lived Materials|Timber;1
+Emissions|CO2|Other Capture and Removal;Carbon Removal|Ocean;-1
 ;;
 ## Total BC;;
 Emissions|BC;Emissions|BC|Energy|Supply;1
@@ -25,6 +65,7 @@ Emissions|BC;Emissions|BC|Energy|Demand|Industry;1
 Emissions|BC;Emissions|BC|Energy|Demand|Other Sector;1
 Emissions|BC;Emissions|BC|Industrial Processes;1
 Emissions|BC;Emissions|BC|Other;1
+Emissions|BC;Emissions|BC|Other Capture and Removal;1
 Emissions|BC;Emissions|BC|Energy|Demand|Bunkers|International Aviation;1
 Emissions|BC;Emissions|BC|Energy|Demand|Transportation;1
 Emissions|BC;Emissions|BC|Energy|Demand|Bunkers|International Shipping;1
@@ -35,6 +76,9 @@ Emissions|BC;Emissions|BC|AFOLU|Agricultural Waste Burning;1
 Emissions|BC;Emissions|BC|AFOLU|Land|Fires|Forest Burning;1
 Emissions|BC;Emissions|BC|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|BC;Emissions|BC|AFOLU|Land|Fires|Peat Burning;1
+Emissions|BC;Emissions|BC|AFOLU|Land|Harvested Wood Products;1
+Emissions|BC;Emissions|BC|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|BC;Emissions|BC|AFOLU|Land|Other;1
 Emissions|BC;Emissions|BC|AFOLU|Land|Wetlands;1
 Emissions|BC;Emissions|BC|Waste;1
 ;;
@@ -44,6 +88,7 @@ Emissions|CH4;Emissions|CH4|Energy|Demand|Industry;1
 Emissions|CH4;Emissions|CH4|Energy|Demand|Other Sector;1
 Emissions|CH4;Emissions|CH4|Industrial Processes;1
 Emissions|CH4;Emissions|CH4|Other;1
+Emissions|CH4;Emissions|CH4|Other Capture and Removal;1
 Emissions|CH4;Emissions|CH4|Energy|Demand|Bunkers|International Aviation;1
 Emissions|CH4;Emissions|CH4|Energy|Demand|Transportation;1
 Emissions|CH4;Emissions|CH4|Energy|Demand|Bunkers|International Shipping;1
@@ -54,6 +99,9 @@ Emissions|CH4;Emissions|CH4|AFOLU|Agricultural Waste Burning;1
 Emissions|CH4;Emissions|CH4|AFOLU|Land|Fires|Forest Burning;1
 Emissions|CH4;Emissions|CH4|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|CH4;Emissions|CH4|AFOLU|Land|Fires|Peat Burning;1
+Emissions|CH4;Emissions|CH4|AFOLU|Land|Harvested Wood Products;1
+Emissions|CH4;Emissions|CH4|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|CH4;Emissions|CH4|AFOLU|Land|Other;1
 Emissions|CH4;Emissions|CH4|AFOLU|Land|Wetlands;1
 Emissions|CH4;Emissions|CH4|Waste;1
 ;;
@@ -63,6 +111,7 @@ Emissions|CO;Emissions|CO|Energy|Demand|Industry;1
 Emissions|CO;Emissions|CO|Energy|Demand|Other Sector;1
 Emissions|CO;Emissions|CO|Industrial Processes;1
 Emissions|CO;Emissions|CO|Other;1
+Emissions|CO;Emissions|CO|Other Capture and Removal;1
 Emissions|CO;Emissions|CO|Energy|Demand|Bunkers|International Aviation;1
 Emissions|CO;Emissions|CO|Energy|Demand|Transportation;1
 Emissions|CO;Emissions|CO|Energy|Demand|Bunkers|International Shipping;1
@@ -73,6 +122,9 @@ Emissions|CO;Emissions|CO|AFOLU|Agricultural Waste Burning;1
 Emissions|CO;Emissions|CO|AFOLU|Land|Fires|Forest Burning;1
 Emissions|CO;Emissions|CO|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|CO;Emissions|CO|AFOLU|Land|Fires|Peat Burning;1
+Emissions|CO;Emissions|CO|AFOLU|Land|Harvested Wood Products;1
+Emissions|CO;Emissions|CO|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|CO;Emissions|CO|AFOLU|Land|Other;1
 Emissions|CO;Emissions|CO|AFOLU|Land|Wetlands;1
 Emissions|CO;Emissions|CO|Waste;1
 ;;
@@ -82,6 +134,7 @@ Emissions|NH3;Emissions|NH3|Energy|Demand|Industry;1
 Emissions|NH3;Emissions|NH3|Energy|Demand|Other Sector;1
 Emissions|NH3;Emissions|NH3|Industrial Processes;1
 Emissions|NH3;Emissions|NH3|Other;1
+Emissions|NH3;Emissions|NH3|Other Capture and Removal;1
 Emissions|NH3;Emissions|NH3|Energy|Demand|Bunkers|International Aviation;1
 Emissions|NH3;Emissions|NH3|Energy|Demand|Transportation;1
 Emissions|NH3;Emissions|NH3|Energy|Demand|Bunkers|International Shipping;1
@@ -92,6 +145,9 @@ Emissions|NH3;Emissions|NH3|AFOLU|Agricultural Waste Burning;1
 Emissions|NH3;Emissions|NH3|AFOLU|Land|Fires|Forest Burning;1
 Emissions|NH3;Emissions|NH3|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|NH3;Emissions|NH3|AFOLU|Land|Fires|Peat Burning;1
+Emissions|NH3;Emissions|NH3|AFOLU|Land|Harvested Wood Products;1
+Emissions|NH3;Emissions|NH3|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|NH3;Emissions|NH3|AFOLU|Land|Other;1
 Emissions|NH3;Emissions|NH3|AFOLU|Land|Wetlands;1
 Emissions|NH3;Emissions|NH3|Waste;1
 ;;
@@ -101,6 +157,7 @@ Emissions|N2O;Emissions|N2O|Energy|Demand|Industry;1
 Emissions|N2O;Emissions|N2O|Energy|Demand|Other Sector;1
 Emissions|N2O;Emissions|N2O|Industrial Processes;1
 Emissions|N2O;Emissions|N2O|Other;1
+Emissions|N2O;Emissions|N2O|Other Capture and Removal;1
 Emissions|N2O;Emissions|N2O|Energy|Demand|Bunkers|International Aviation;1
 Emissions|N2O;Emissions|N2O|Energy|Demand|Transportation;1
 Emissions|N2O;Emissions|N2O|Energy|Demand|Bunkers|International Shipping;1
@@ -111,6 +168,9 @@ Emissions|N2O;Emissions|N2O|AFOLU|Agricultural Waste Burning;1
 Emissions|N2O;Emissions|N2O|AFOLU|Land|Fires|Forest Burning;1
 Emissions|N2O;Emissions|N2O|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|N2O;Emissions|N2O|AFOLU|Land|Fires|Peat Burning;1
+Emissions|N2O;Emissions|N2O|AFOLU|Land|Harvested Wood Products;1
+Emissions|N2O;Emissions|N2O|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|N2O;Emissions|N2O|AFOLU|Land|Other;1
 Emissions|N2O;Emissions|N2O|AFOLU|Land|Wetlands;1
 Emissions|N2O;Emissions|N2O|Waste;1
 ;;
@@ -120,6 +180,7 @@ Emissions|NOx;Emissions|NOx|Energy|Demand|Industry;1
 Emissions|NOx;Emissions|NOx|Energy|Demand|Other Sector;1
 Emissions|NOx;Emissions|NOx|Industrial Processes;1
 Emissions|NOx;Emissions|NOx|Other;1
+Emissions|NOx;Emissions|NOx|Other Capture and Removal;1
 Emissions|NOx;Emissions|NOx|Energy|Demand|Bunkers|International Aviation;1
 Emissions|NOx;Emissions|NOx|Energy|Demand|Transportation;1
 Emissions|NOx;Emissions|NOx|Energy|Demand|Bunkers|International Shipping;1
@@ -130,6 +191,9 @@ Emissions|NOx;Emissions|NOx|AFOLU|Agricultural Waste Burning;1
 Emissions|NOx;Emissions|NOx|AFOLU|Land|Fires|Forest Burning;1
 Emissions|NOx;Emissions|NOx|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|NOx;Emissions|NOx|AFOLU|Land|Fires|Peat Burning;1
+Emissions|NOx;Emissions|NOx|AFOLU|Land|Harvested Wood Products;1
+Emissions|NOx;Emissions|NOx|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|NOx;Emissions|NOx|AFOLU|Land|Other;1
 Emissions|NOx;Emissions|NOx|AFOLU|Land|Wetlands;1
 Emissions|NOx;Emissions|NOx|Waste;1
 ;;
@@ -139,6 +203,7 @@ Emissions|OC;Emissions|OC|Energy|Demand|Industry;1
 Emissions|OC;Emissions|OC|Energy|Demand|Other Sector;1
 Emissions|OC;Emissions|OC|Industrial Processes;1
 Emissions|OC;Emissions|OC|Other;1
+Emissions|OC;Emissions|OC|Other Capture and Removal;1
 Emissions|OC;Emissions|OC|Energy|Demand|Bunkers|International Aviation;1
 Emissions|OC;Emissions|OC|Energy|Demand|Transportation;1
 Emissions|OC;Emissions|OC|Energy|Demand|Bunkers|International Shipping;1
@@ -149,6 +214,9 @@ Emissions|OC;Emissions|OC|AFOLU|Agricultural Waste Burning;1
 Emissions|OC;Emissions|OC|AFOLU|Land|Fires|Forest Burning;1
 Emissions|OC;Emissions|OC|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|OC;Emissions|OC|AFOLU|Land|Fires|Peat Burning;1
+Emissions|OC;Emissions|OC|AFOLU|Land|Harvested Wood Products;1
+Emissions|OC;Emissions|OC|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|OC;Emissions|OC|AFOLU|Land|Other;1
 Emissions|OC;Emissions|OC|AFOLU|Land|Wetlands;1
 Emissions|OC;Emissions|OC|Waste;1
 ;;
@@ -158,6 +226,7 @@ Emissions|Sulfur;Emissions|Sulfur|Energy|Demand|Industry;1
 Emissions|Sulfur;Emissions|Sulfur|Energy|Demand|Other Sector;1
 Emissions|Sulfur;Emissions|Sulfur|Industrial Processes;1
 Emissions|Sulfur;Emissions|Sulfur|Other;1
+Emissions|Sulfur;Emissions|Sulfur|Other Capture and Removal;1
 Emissions|Sulfur;Emissions|Sulfur|Energy|Demand|Bunkers|International Aviation;1
 Emissions|Sulfur;Emissions|Sulfur|Energy|Demand|Transportation;1
 Emissions|Sulfur;Emissions|Sulfur|Energy|Demand|Bunkers|International Shipping;1
@@ -168,6 +237,9 @@ Emissions|Sulfur;Emissions|Sulfur|AFOLU|Agricultural Waste Burning;1
 Emissions|Sulfur;Emissions|Sulfur|AFOLU|Land|Fires|Forest Burning;1
 Emissions|Sulfur;Emissions|Sulfur|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|Sulfur;Emissions|Sulfur|AFOLU|Land|Fires|Peat Burning;1
+Emissions|Sulfur;Emissions|Sulfur|AFOLU|Land|Harvested Wood Products;1
+Emissions|Sulfur;Emissions|Sulfur|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|Sulfur;Emissions|Sulfur|AFOLU|Land|Other;1
 Emissions|Sulfur;Emissions|Sulfur|AFOLU|Land|Wetlands;1
 Emissions|Sulfur;Emissions|Sulfur|Waste;1
 ;;
@@ -177,6 +249,7 @@ Emissions|VOC;Emissions|VOC|Energy|Demand|Industry;1
 Emissions|VOC;Emissions|VOC|Energy|Demand|Other Sector;1
 Emissions|VOC;Emissions|VOC|Industrial Processes;1
 Emissions|VOC;Emissions|VOC|Other;1
+Emissions|VOC;Emissions|VOC|Other Capture and Removal;1
 Emissions|VOC;Emissions|VOC|Energy|Demand|Bunkers|International Aviation;1
 Emissions|VOC;Emissions|VOC|Energy|Demand|Transportation;1
 Emissions|VOC;Emissions|VOC|Energy|Demand|Bunkers|International Shipping;1
@@ -187,17 +260,48 @@ Emissions|VOC;Emissions|VOC|AFOLU|Agricultural Waste Burning;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Fires|Forest Burning;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Fires|Grassland Burning;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Fires|Peat Burning;1
+Emissions|VOC;Emissions|VOC|AFOLU|Land|Harvested Wood Products;1
+Emissions|VOC;Emissions|VOC|AFOLU|Land|Land Use and Land-Use Change;1
+Emissions|VOC;Emissions|VOC|AFOLU|Land|Other;1
 Emissions|VOC;Emissions|VOC|AFOLU|Land|Wetlands;1
 Emissions|VOC;Emissions|VOC|Waste;1
 ;;
 #  Additional summation checks for emission variables;;
-## Total CO2: net emissions equal to gross emissions minus gross removals;;
-Emissions|CO2;Gross Emissions|CO2;1
-Emissions|CO2;Gross Removals|CO2;-1
+## Total CO2: gross emissions equal to net emissions plus gross removals;;
+Gross Emissions|CO2;Emissions|CO2;1
+Gross Emissions|CO2;Gross Removals|CO2;1
 ;;
-## AFOLU CO2: net emissions equal to gross emissions minus gross removals;;
-Emissions|CO2|AFOLU;Gross Emissions|CO2|AFOLU;1
-Emissions|CO2|AFOLU;Gross Removals|CO2|AFOLU;-1
+## AFOLU CO2: gross emissions equal to net emissions plus gross removals;;
+Gross Emissions|CO2|AFOLU;Emissions|CO2|AFOLU;1
+Gross Emissions|CO2|AFOLU;Gross Removals|CO2|AFOLU;1
+;;
+## Kyoto Gases;;
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|AFOLU;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Energy and Industrial Processes;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Other;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Other Capture and Removal;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Product Use;1
+Emissions|Kyoto Gases;Emissions|Kyoto Gases|Waste;1
+;;
+## AFOLU Kyoto Gases;;
+Emissions|Kyoto Gases|AFOLU;Emissions|Kyoto Gases|AFOLU|Agricultural Waste Burning;1
+Emissions|Kyoto Gases|AFOLU;Emissions|Kyoto Gases|AFOLU|Agriculture;1
+Emissions|Kyoto Gases|AFOLU;Emissions|Kyoto Gases|AFOLU|Land;1
+;;
+# Energy and Industrial Processes Kyoto Gases;;
+Emissions|Kyoto Gases|Energy and Industrial Processes;Emissions|Kyoto Gases|Energy;1
+Emissions|Kyoto Gases|Energy and Industrial Processes;Emissions|Kyoto Gases|Industrial Processes;1
+;;
+## Energy Kyoto Gases;;
+Emissions|Kyoto Gases|Energy;Emissions|Kyoto Gases|Energy|Supply;1
+Emissions|Kyoto Gases|Energy;Emissions|Kyoto Gases|Energy|Demand;1
+;;
+## Energy Demand Kyoto Gases;;
+Emissions|Kyoto Gases|Energy|Demand;Emissions|Kyoto Gases|Energy|Demand|Industry;1
+Emissions|Kyoto Gases|Energy|Demand;Emissions|Kyoto Gases|Energy|Demand|Other Sector;1
+Emissions|Kyoto Gases|Energy|Demand;Emissions|Kyoto Gases|Energy|Demand|Bunkers;1
+Emissions|Kyoto Gases|Energy|Demand;Emissions|Kyoto Gases|Energy|Demand|Transportation;1
+Emissions|Kyoto Gases|Energy|Demand;Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial and AFOFI;1
 ;;
 #  Carbon Capture and Carbon Removal;;
 ## Carbon Capture by Source;;
@@ -221,6 +325,12 @@ Carbon Removal;Carbon Removal|Land Use;1
 Carbon Removal;Carbon Removal|Long-Lived Materials;1
 Carbon Removal;Carbon Removal|Ocean;1
 Carbon Removal;Carbon Removal|Other;1
+;;
+## Carbon Removal Geological Storage;;
+Carbon Removal|Geological Storage;Carbon Removal|Geological Storage|Biomass;1
+Carbon Removal|Geological Storage;Carbon Removal|Geological Storage|Direct Air Capture;1
+Carbon Removal|Geological Storage;Carbon Removal|Geological Storage|Other Sources;1
+Carbon Removal|Geological Storage;Carbon Removal|Geological Storage|Synthetic Fuels;1
 ;;
 # Final Energy;;
 ## Final Energy by Sector;;
