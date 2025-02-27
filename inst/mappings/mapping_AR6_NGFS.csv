@@ -24,4 +24,4 @@ GDP|MER|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|MER|w/ Macro-Eco
 Emissions|NH3;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
 Emissions|NH3|AFOLU;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
 Emissions|CO2|Energy|Supply|Extraction;Mt CO2/yr;Emi|CO2|Energy|Supply|Extraction;Mt CO2/yr;1;;;;energy-related CO2 emissions from extraction processes;R
-Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;FE|Transport|Liquids|Hydrogen;EJ/yr;1;;;;Final energy, in the form of synfuel generated from Hydrogen;R
+Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;FE|Transport|Liquids|+|Hydrogen;EJ/yr;1;;;;Final energy, in the form of synfuel generated from Hydrogen;R
