@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.45.6**
+R package **piamInterfaces**, version **0.45.7**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -26,7 +26,7 @@ The mappings are `;`-separated files, using `#` as comment character, with the f
 
 - `variable`: name of the variable in the project template
 - `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`: an empty cell will fail the tests to avoid unintentially forgetting units.
-- `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting
+- `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting. Please use `|+|` notation and try to remain consistent with a REMIND mif, see [#460](https://github.com/pik-piam/piamInterfaces/pull/460), but from a technical point of view it is irrelevant.
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
 
@@ -162,7 +162,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.45.6, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.45.7, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -173,6 +173,6 @@ A BibTeX entry for LaTeX users is
   date = {2025-02-27},
   year = {2025},
   url = {https://github.com/pik-piam/piamInterfaces},
-  note = {Version: 0.45.6},
+  note = {Version: 0.45.7},
 }
 ```
