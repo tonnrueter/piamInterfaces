@@ -1,28 +1,28 @@
 variable;unit;piam_variable;piam_unit;piam_factor;description;comment;internal_comment;source
 Carbon Capture;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;1;;;;R
-Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
-Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Industry|Biomass;Mt CO2/yr;1;;;;R
 Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Waste|+|Biomass;Mt CO2/yr;1;;;;R
 Carbon Capture|Direct Air Capture;Mt CO2/yr;Carbon Management|Carbon Capture|+|DAC;Mt CO2/yr;1;;;;R
-Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
-Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Industry|Fossil;Mt CO2/yr;1;;;;R
 Carbon Capture|Fossil;Mt CO2/yr;Carbon Management|Carbon Capture|Waste|+|Fossil;Mt CO2/yr;1;;;;R
-Carbon Capture|Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;R
-Carbon Capture|Other;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
-Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|+|Industry Process;Mt CO2/yr;1;;;;R
+Carbon Capture|Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industrial Processes|Industry;Mt CO2/yr;1;;;;R
+Carbon Capture|Other;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Industry|Synfuel;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Industry|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Industry|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Industry|Synfuel;Mt CO2/yr;1;;;;R
+Carbon Capture|Industry and Industrial Processes;Mt CO2/yr;Carbon Management|Carbon Capture|Industrial Processes|Industry;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;1;;;;R
-Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
-Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Energy|Pe2Se|Biomass;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Energy|Industry|Biomass;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Waste|+|Biomass;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;1;;;;R
-Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
-Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Energy|Pe2Se|Fossil;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Energy|Industry|Fossil;Mt CO2/yr;1;;;;R
 Carbon Capture|Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Waste|+|Fossil;Mt CO2/yr;1;;;;R
-Carbon Capture|Storage|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|+|Industry Process;Mt CO2/yr;1;;;;R
-Carbon Capture|Storage|Other;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Synfuel;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|Industrial Processes|Industry;Mt CO2/yr;1;;;;R
+Carbon Capture|Storage|Other;Mt CO2/yr;Carbon Management|Storage|Energy|Industry|Synfuel;Mt CO2/yr;1;;;;R
 Carbon Capture|Usage;Mt CO2/yr;Carbon Management|Usage;Mt CO2/yr;1;;;;R
 Carbon Capture|Usage|Gases;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Gases;Mt CO2/yr;1;;;;R
 Carbon Capture|Usage|Liquids;Mt CO2/yr;Carbon Management|Usage|+|Synthetic Liquids;Mt CO2/yr;1;;;;R
@@ -77,7 +77,7 @@ Emissions|CO2|Energy|Demand|Bunkers|International Aviation;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Bunkers|International Shipping;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Commercial;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Industry;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;R
-Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Demand|+|CDR;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Demand|CDR Sektor;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Residential;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Residential and Commercial;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Buildings;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Transportation;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Transport;Mt CO2/yr;1;;;;R
@@ -114,7 +114,7 @@ Emissions|Kyoto Gases|Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Pro
 Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Energy;Mt CO2eq/yr;1;;;;R
 Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2e/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;;;;R
 Emissions|Kyoto Gases|Industry and Industrial Processes;Mt CO2e/yr;;;;;;;
-Emissions|Kyoto Gases|Other;Mt CO2e/yr;Emi|GHG|+++|non-BECCS CDR;Mt CO2eq/yr;1;;;;R
+Emissions|Kyoto Gases|Other;Mt CO2e/yr;Emi|GHG|non-ES CDR;Mt CO2eq/yr;1;;;;R
 Emissions|Kyoto Gases|Waste;Mt CO2e/yr;Emi|GHG|+++|Waste;Mt CO2eq/yr;1;;;;R
 Emissions|N2O;kt N2O/yr;Emi|N2O;kt N2O/yr;1;;;;R
 Emissions|N2O|AFOLU;kt N2O/yr;;;;;;;
@@ -829,11 +829,11 @@ Capital Cost|Electricity|Storage|Reservoir Capacity;EUR_2020/kW;;;;;;;
 Capital Cost|Electricity|Transmissions Grid;EUR_2020/kW;;;;;;;
 Efficiency|Hydrogen|Electricity;%;Tech|Electricity|Hydrogen|Efficiency;%;1;;;;R
 Lifetime|Electricity|Nuclear;years;Tech|Electricity|Nuclear|Lifetime;years;1;;;;R
-Carbon Sequestration|CCS|Biomass;Mt CO2/yr;Carbon Management|Storage|+|Biomass|Pe2Se;Mt CO2/yr;1;;;;R
-Carbon Sequestration|CCS|Biomass;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Biomass;Mt CO2/yr;1;;;;R
-Carbon Sequestration|CCS|Fossil;Mt CO2/yr;Carbon Management|Storage|+|Fossil|Pe2Se;Mt CO2/yr;1;;;;R
-Carbon Sequestration|CCS|Fossil;Mt CO2/yr;Carbon Management|Storage|Industry Energy|+|Fossil;Mt CO2/yr;1;;;;R
-Carbon Sequestration|CCS|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|+|Industry Process;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Biomass;Mt CO2/yr;Carbon Management|Storage|Energy|Pe2Se|Biomass;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Biomass;Mt CO2/yr;Carbon Management|Storage|Energy|Industry|Biomass;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Fossil;Mt CO2/yr;Carbon Management|Storage|Energy|Pe2Se|Fossil;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Fossil;Mt CO2/yr;Carbon Management|Storage|Energy|Industry|Fossil;Mt CO2/yr;1;;;;R
+Carbon Sequestration|CCS|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|Industrial Processes|Industry;Mt CO2/yr;1;;;;R
 Carbon Sequestration|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Bunkers|Intra-EU;Mt CO2/yr;Emi|CO2|Energy|Demand|Transport|International Bunkers|+|Intra-region;Mt CO2/yr;1;;;;R
 Investment|Energy Supply;billion EUR_2020/yr;Energy Investments|Supply;billion US$2017/yr;0.9502;;;;R
