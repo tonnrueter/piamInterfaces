@@ -7998,4 +7998,3 @@ Yield|Cropland|Oil Crops;t DM/ha/yr;2;Yield of cropland with oil crops (cotton s
 Yield|Cropland|Other Crops;t DM/ha/yr;2;Yield of cropland with other crops (fruits, vegetables, nuts, potatoes, pulses, tropical roots);;Land Cover|Cropland|Other Crops;Productivity|Yield|Crops|+|Other crops;t DM/ha;;;M;
 Yield|Cropland|Sugar Crops;t DM/ha/yr;2;Yield of cropland with sugar crops (sugar beet, sugar cane);;Land Cover|Cropland|Sugar Crops;Productivity|Yield|Crops|+|Sugar crops;t DM/ha;;;M;
 Yield|Forestry|Timber Production;m3/ha;2;Actual timber yield, average on productive forest land. Equals to harvested biomass volume divided by forest area used for timber production;;Harvested Area|Forestry;Timber Yields|Harvest|Total;m3 per ha;;;M;
-|Total;m3 per ha;;;M;
