@@ -25,9 +25,9 @@ for (mapping in names(mappingNames())) {
     if (length(factorWithComma) > 0) {
       warning("These variables in mapping ", mapping, " have a piam_factor using a ',' as decimal. Please use '.':\n",
               paste("-", factorWithComma, collapse = "\n"),
-              "\nYou can run: devtools::load_all(); write.csv2(getMapping('", mapping,
+              "\nYou can run: devtools::load_all(); writeMapping(getMapping('", mapping,
               "') %>% mutate(piam_factor = gsub(',', '.', .data$piam_factor)), mappingNames('", mapping,
-              "'), na = '', row.names = FALSE, quote = FALSE)")
+              "')")
     }
     expect_length(factorWithComma, 0)
 

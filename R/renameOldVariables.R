@@ -17,6 +17,7 @@ renameOldVariables <- function(mifdata, variables, logFile = NULL) {
 
   toadd <- unique(setdiff(variables, levels(mifdata$variable)))
   csvdata <- getExpandRenamedVariables(levels(mifdata$variable)) %>%
+    mutate(piam_variable = deletePlus(piam_variable)) %>%
     filter(.data$piam_variable %in% toadd)
   old2new <- csvdata$piam_variable
   names(old2new) <- csvdata$old_name
@@ -76,6 +77,5 @@ readRenames <- function() {
     read.csv2(comment.char = "#", strip.white = TRUE) %>%
     as_tibble() %>%
     filter(! .data$old_name %in% c(NA, "") | ! .data$piam_variable %in% c(NA, "")) %>%
-    mutate(piam_variable = deletePlus(.data$piam_variable),
-           old_name = deletePlus(.data$old_name))
+    mutate(old_name = deletePlus(.data$old_name))
 }
