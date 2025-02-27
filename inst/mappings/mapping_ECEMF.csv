@@ -83,7 +83,7 @@ Emissions|CO2|Energy|Demand|Bunkers|International Aviation;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Bunkers|International Shipping;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Commercial;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Industry;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Industry;Mt CO2/yr;1;;;;R
-Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Demand|CDR Sektor;Mt CO2/yr;1;;;;R
+Emissions|CO2|Energy|Demand|Other Sector;Mt CO2/yr;Emi|CO2|Energy|Demand|CDR Sector;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Residential;Mt CO2/yr;;;;;;;
 Emissions|CO2|Energy|Demand|Residential and Commercial;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Buildings;Mt CO2/yr;1;;;;R
 Emissions|CO2|Energy|Demand|Transportation;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Transport;Mt CO2/yr;1;;;;R
