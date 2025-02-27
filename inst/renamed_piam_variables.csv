@@ -148,7 +148,6 @@ Emi|CO2|CDR|Synthetic Fuels CCS;Emi|CO2|CDR|Industry CCS|Synthetic Fuels
 Carbon Management|Carbon Capture|Energy|Pe2Se|+|Biomass;Carbon Management|Carbon Capture|+|Biomass|Pe2Se
 Carbon Management|Carbon Capture|Energy|Pe2Se|+|Fossil;Carbon Management|Carbon Capture|+|Fossil|Pe2Se
 Carbon Management|Carbon Capture|Energy|+|CDR Sector;Carbon Management|Carbon Capture|+|CDR energy
-Carbon Management|Carbon Capture|Ambient Air|+|DAC;Carbon Management|Carbon Capture|+|DAC
 Carbon Management|Carbon Capture|Energy|+|Industry;Carbon Management|Carbon Capture|+|Industry Energy
 Carbon Management|Carbon Capture|Energy|Industry|+|Biomass;Carbon Management|Carbon Capture|Industry Energy|+|Biomass
 Carbon Management|Carbon Capture|Energy|Industry|+|Fossil;Carbon Management|Carbon Capture|Industry Energy|+|Fossil
@@ -166,7 +165,6 @@ Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Liquids w/ couple prod;Ca
 Carbon Management|Storage|Energy|Pe2Se|+|Biomass;Carbon Management|Storage|+|Biomass|Pe2Se
 Carbon Management|Storage|Energy|Pe2Se|+|Fossil;Carbon Management|Storage|+|Fossil|Pe2Se
 Carbon Management|Storage|Energy|+|CDR Sector;Carbon Management|Storage|+|CDR energy
-Carbon Management|Storage|+|Ambient Air;Carbon Management|Storage|+|DAC
 Carbon Management|Storage|Energy|+|Industry;Carbon Management|Storage|+|Industry Energy
 Carbon Management|Storage|Energy|Industry|+|Biomass;Carbon Management|Storage|Industry Energy|+|Biomass
 Carbon Management|Storage|Energy|Industry|+|Fossil;Carbon Management|Storage|Industry Energy|+|Fossil
