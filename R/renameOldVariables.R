@@ -17,7 +17,7 @@ renameOldVariables <- function(mifdata, variables, logFile = NULL) {
 
   toadd <- unique(setdiff(variables, levels(mifdata$variable)))
   csvdata <- getExpandRenamedVariables(levels(mifdata$variable)) %>%
-    mutate(piam_variable = deletePlus(piam_variable)) %>%
+    mutate(piam_variable = deletePlus(.data$piam_variable)) %>%
     filter(.data$piam_variable %in% toadd)
   old2new <- csvdata$piam_variable
   names(old2new) <- csvdata$old_name

@@ -17,7 +17,7 @@ The mappings are `;`-separated files, using `#` as comment character, with the f
 
 - `variable`: name of the variable in the project template
 - `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`: an empty cell will fail the tests to avoid unintentially forgetting units.
-- `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting
+- `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting. Please use `|+|` notation and try to remain consistent with a REMIND mif, see [#460](https://github.com/pik-piam/piamInterfaces/pull/460), but from a technical point of view it is irrelevant.
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
 

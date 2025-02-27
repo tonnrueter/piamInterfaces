@@ -266,7 +266,7 @@ Final Energy|Liquids;EJ/yr;FE|+|Liquids;EJ/yr;1;;;;R
 Final Energy|Liquids|Biomass;EJ/yr;FE|Liquids|+|Biomass;EJ/yr;1;;;;R
 Final Energy|Liquids|Electricity;EJ/yr;FE|Liquids|+|Hydrogen;EJ/yr;1;;;;R
 Final Energy|Liquids|Fossil;EJ/yr;FE|Liquids|+|Fossil;EJ/yr;1;;;;R
-Final Energy|Non-Energy Use;EJ/yr;FE|Non-energy Use|Industry;EJ/yr;1;;;;R
+Final Energy|Non-Energy Use;EJ/yr;FE|Non-energy Use|+|Industry;EJ/yr;1;;;;R
 Final Energy|Non-Energy Use|Gases;EJ/yr;FE|Non-energy Use|Industry|+|Gases;EJ/yr;1;;;;R
 Final Energy|Non-Energy Use|Gases|Biomass;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Biomass;EJ/yr;1;;;;R
 Final Energy|Non-Energy Use|Gases|Electricity;EJ/yr;FE|Non-energy Use|Industry|Gases|+|Hydrogen;EJ/yr;1;;;;R
@@ -439,7 +439,7 @@ Final Energy|Transportation|LDV|Hydrogen|Fossil;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE|Gases;EJ/yr;;;;;;;
 Final Energy|Transportation|LDV|ICE|Liquids;EJ/yr;;;;;;;
-Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|+|Liquids;EJ/yr;1;;;;T
+Final Energy|Transportation|LDV|Liquids;EJ/yr;FE|Transport|LDV|Liquids;EJ/yr;1;;;;T
 Final Energy|Transportation|LDV|Liquids|Biomass;EJ/yr;FE|Transport|LDV|Liquids|+|Biomass;EJ/yr;1;;;;R
 Final Energy|Transportation|LDV|Liquids|Electricity;EJ/yr;FE|Transport|LDV|Liquids|+|Hydrogen;EJ/yr;1;;;;R
 Final Energy|Transportation|LDV|Liquids|Fossil;EJ/yr;FE|Transport|LDV|Liquids|+|Fossil;EJ/yr;1;;;;R
