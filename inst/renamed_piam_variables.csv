@@ -179,14 +179,6 @@ Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Gases w/ couple prod;Carbon Mana
 Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Hydrogen w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Hydrogen w/ couple prod
 Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Liquids w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Liquids w/ couple prod
 #
-Emi|CO2|CDR|+|BECCS;Emi|CO2|CDR|BECCS
-Emi|CO2|CDR|+|DACCS;Emi|CO2|CDR|DACCS
-Emi|CO2|CDR|+|Synthetic Fuels CCS;Emi|CO2|CDR|Synthetic Fuels CCS
-Emi|CO2|CDR|+|EW;Emi|CO2|CDR|EW
-Emi|CO2|CDR|+|Land-Use Change;Emi|CO2|CDR|Land-Use Change
-Emi|CO2|CDR|+|Materials;Emi|CO2|CDR|Materials
-Emi|CO2|CDR|+|OAE;Emi|CO2|CDR|OAE
-#
 Emi|CO2|Industrial Processes|Industry|+|Cement;Emi|CO2|Industrial Processes|+|Cement
 Emi|CO2|Industrial Processes|Industry|+|Chemicals;Emi|CO2|Industrial Processes|+|Chemicals
 Emi|GHG|+++|non-ES CDR;Emi|GHG|+++|non-BECCS CDR
