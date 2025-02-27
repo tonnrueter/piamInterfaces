@@ -31,6 +31,15 @@ test_that("renamed_piam_variables has no duplicates", {
             paste("-", duplicates, collapse = "\n"))
   }
   expect_length(duplicates, 0)
+
+  nodiff <- readRenames() %>%
+    filter(deletePlus(.data$old_name) == deletePlus(.data$piam_variable))
+  if (nrow(nodiff) > 0) {
+    warning("In inst/renamed_piam_variables.csv, these piam_variable and old_name are identical:\n",
+            paste("-", nodiff$piam_variable, "<-", nodiff$old_name, collapse = "\n"))
+  }
+  expect_true(nrow(nodiff) == 0)
+
 })
 
 test_that("renameOldVariables() works", {
