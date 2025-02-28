@@ -333,25 +333,6 @@ Carbon Removal|Geological Storage;Carbon Removal|Geological Storage|Other Source
 Carbon Removal|Geological Storage;Carbon Removal|Geological Storage|Synthetic Fuels;1
 ;;
 # Final Energy;;
-## Final Energy by Sector;;
-Final Energy;Final Energy|Agriculture;1
-Final Energy;Final Energy|Bunkers;1
-Final Energy;Final Energy|Carbon Management;1
-Final Energy;Final Energy|Industry;1
-Final Energy;Final Energy|Non-Energy Use;1
-Final Energy;Final Energy|Other Sector;1
-Final Energy;Final Energy|Residential and Commercial;1
-Final Energy;Final Energy|Transportation;1
-;;
-## Final Energy by Sector without bunkers;;
-Final Energy (w/o bunkers);Final Energy|Agriculture;1
-Final Energy (w/o bunkers);Final Energy|Carbon Management;1
-Final Energy (w/o bunkers);Final Energy|Industry;1
-Final Energy (w/o bunkers);Final Energy|Non-Energy Use;1
-Final Energy (w/o bunkers);Final Energy|Other Sector;1
-Final Energy (w/o bunkers);Final Energy|Residential and Commercial;1
-Final Energy (w/o bunkers);Final Energy|Transportation;1
-;;
 ## Final Energy by Carrier;;
 Final Energy;Final Energy|Electricity;1
 Final Energy;Final Energy|Gases;1
@@ -363,6 +344,19 @@ Final Energy;Final Energy|Other;1
 Final Energy;Final Energy|Solar;1
 Final Energy;Final Energy|Solids;1
 Final Energy;Final Energy|Waste;1
+;;
+## Final Energy by Sector without bunkers;;
+Final Energy (w/o bunkers);Final Energy|Agriculture;1
+Final Energy (w/o bunkers);Final Energy|Carbon Management;1
+Final Energy (w/o bunkers);Final Energy|Industry;1
+Final Energy (w/o bunkers);Final Energy|Non-Energy Use;1
+Final Energy (w/o bunkers);Final Energy|Other Sector;1
+Final Energy (w/o bunkers);Final Energy|Residential and Commercial;1
+Final Energy (w/o bunkers);Final Energy|Transportation;1
+;;
+## Final Energy Bunkers;;
+Final Energy|Bunkers;Final Energy;1
+Final Energy|Bunkers;Final Energy (w/o bunkers);-1
 ;;
 ## Final Energy Transportation with and without bunkers;;
 Final Energy|Transportation;Final Energy|Transportation (w/ bunkers);1
