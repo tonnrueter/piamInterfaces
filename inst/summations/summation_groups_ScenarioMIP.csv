@@ -312,12 +312,6 @@ Carbon Capture;Carbon Capture|Energy|Supply;1
 Carbon Capture;Carbon Capture|Industrial Processes;1
 Carbon Capture;Carbon Capture|Other Sources;1
 ;;
-## Carbon Capture by Sink;;
-Carbon Capture;Carbon Capture|Geological Storage;1
-Carbon Capture;Carbon Capture|Leakage;1
-Carbon Capture;Carbon Capture|Other Storage;1
-Carbon Capture;Carbon Capture|Utilization;1
-;;
 ## Carbon Removal;;
 Carbon Removal;Carbon Removal|Enhanced Weathering;1
 Carbon Removal;Carbon Removal|Geological Storage;1
