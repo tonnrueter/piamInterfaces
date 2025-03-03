@@ -347,7 +347,6 @@ Final Energy;Final Energy|Waste;1
 ;;
 ## Final Energy by Sector without bunkers;;
 Final Energy (w/o bunkers);Final Energy|Agriculture;1
-Final Energy (w/o bunkers);Final Energy|Carbon Management;1
 Final Energy (w/o bunkers);Final Energy|Industry;1
 Final Energy (w/o bunkers);Final Energy|Non-Energy Use;1
 Final Energy (w/o bunkers);Final Energy|Other Sector;1
