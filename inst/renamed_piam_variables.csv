@@ -144,15 +144,19 @@ Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Stock|T
 # https://github.com/remindmodel/remind/pull/1829
 Emi|CO2|CDR|Synthetic Fuels CCS;Emi|CO2|CDR|Industry CCS|Synthetic Fuels
 #
-# ANNE: add link to remind2 PR here;
+# https://github.com/pik-piam/remind2/pull/696;
 Carbon Management|Carbon Capture|Energy|Pe2Se|+|Biomass;Carbon Management|Carbon Capture|+|Biomass|Pe2Se
+Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Heat w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|Heat w/ couple prod
 Carbon Management|Carbon Capture|Energy|Pe2Se|+|Fossil;Carbon Management|Carbon Capture|+|Fossil|Pe2Se
+Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Heat w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|Heat w/ couple prod
 Carbon Management|Carbon Capture|Energy|+|CDR Sector;Carbon Management|Carbon Capture|+|CDR energy
 Carbon Management|Carbon Capture|Energy|+|Industry;Carbon Management|Carbon Capture|+|Industry Energy
 Carbon Management|Carbon Capture|Energy|Industry|+|Biomass;Carbon Management|Carbon Capture|Industry Energy|+|Biomass
 Carbon Management|Carbon Capture|Energy|Industry|+|Fossil;Carbon Management|Carbon Capture|Industry Energy|+|Fossil
 Carbon Management|Carbon Capture|Energy|Industry|+|Synfuel;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel
 Carbon Management|Carbon Capture|Industrial Processes|+|Industry;Carbon Management|Carbon Capture|+|Industry Process
+Carbon Management|Carbon Capture|Industrial Processes|Industry|+|Cement;Carbon Management|Carbon Capture|Industry Process|Cement
+Carbon Management|Carbon Capture|Industrial Processes|CDR Sector|+|OAE;Carbon Management|Carbon Capture|+|OAE calcination
 Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Electricity w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|+|Electricity w/ couple prod
 Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Gases w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|+|Gases w/ couple prod
 Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Hydrogen w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|+|Hydrogen w/ couple prod
@@ -161,6 +165,8 @@ Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Electricity w/ couple pro
 Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Gases w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|+|Gases w/ couple prod
 Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Hydrogen w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|+|Hydrogen w/ couple prod
 Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Liquids w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|+|Liquids w/ couple prod
+Carbon Management|Carbon Capture|+|Waste;Carbon Management|Carbon Capture|Waste|Plastics Incineration
+Carbon Management|Carbon Capture|Waste|+|Synfuel;Carbon Management|Carbon Capture|Waste|Synfuels
 #
 Carbon Management|Storage|Energy|Pe2Se|+|Biomass;Carbon Management|Storage|+|Biomass|Pe2Se
 Carbon Management|Storage|Energy|Pe2Se|+|Fossil;Carbon Management|Storage|+|Fossil|Pe2Se
@@ -170,6 +176,7 @@ Carbon Management|Storage|Energy|Industry|+|Biomass;Carbon Management|Storage|In
 Carbon Management|Storage|Energy|Industry|+|Fossil;Carbon Management|Storage|Industry Energy|+|Fossil
 Carbon Management|Storage|Energy|Industry|+|Synfuel;Carbon Management|Storage|Industry Energy|+|Synfuel
 Carbon Management|Storage|Industrial Processes|+|Industry;Carbon Management|Storage|+|Industry Process
+Carbon Management|Storage|Industrial Processes|CDR Sector|+|OAE;Carbon Management|Storage|+|OAE calcination
 Carbon Management|Storage|Energy|Pe2Se|Biomass|+|Electricity w/ couple prod;Carbon Management|Storage|Biomass|Pe2Se|+|Electricity w/ couple prod
 Carbon Management|Storage|Energy|Pe2Se|Biomass|+|Gases w/ couple prod;Carbon Management|Storage|Biomass|Pe2Se|+|Gases w/ couple prod
 Carbon Management|Storage|Energy|Pe2Se|Biomass|+|Hydrogen w/ couple prod;Carbon Management|Storage|Biomass|Pe2Se|+|Hydrogen w/ couple prod
@@ -178,6 +185,8 @@ Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Electricity w/ couple prod;Carbo
 Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Gases w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Gases w/ couple prod
 Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Hydrogen w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Hydrogen w/ couple prod
 Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Liquids w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Liquids w/ couple prod
+Carbon Management|Storage|+|Waste;Carbon Management|Storage|Waste|Plastics Incineration
+Carbon Management|Storage|Waste|+|Synfuel;Carbon Management|Storage|Waste|Synfuels
 #
 Emi|CO2|Industrial Processes|Industry|+|Cement;Emi|CO2|Industrial Processes|+|Cement
 Emi|CO2|Industrial Processes|Industry|+|Chemicals;Emi|CO2|Industrial Processes|+|Chemicals
