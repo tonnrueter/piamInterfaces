@@ -304,6 +304,12 @@ Emissions|Kyoto Gases|Energy|Demand;Emissions|Kyoto Gases|Energy|Demand|Transpor
 Emissions|Kyoto Gases|Energy|Demand;Emissions|Kyoto Gases|Energy|Demand|Residential and Commercial and AFOFI;1
 ;;
 #  Carbon Capture and Carbon Removal;;
+## Carbon Capture by Sink;;
+Carbon Capture|Utilization;Carbon Capture;1
+Carbon Capture|Utilization;Carbon Capture|Leakage;-1
+Carbon Capture|Utilization;Carbon Capture|Other Storage;-1
+Carbon Capture|Utilization;Carbon Capture|Geological Storage;-1
+;;
 ## Carbon Capture by Source;;
 Carbon Capture;Carbon Capture|Direct Air Capture;1
 Carbon Capture;Carbon Capture|Direct Ocean Capture;1
