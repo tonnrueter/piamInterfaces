@@ -267,13 +267,13 @@ Emissions|VOC;Emissions|VOC|AFOLU|Land|Wetlands;1
 Emissions|VOC;Emissions|VOC|Waste;1
 ;;
 #  Additional summation checks for emission variables;;
-## Total CO2: gross emissions equal to net emissions plus gross removals;;
+## Total CO2: net emissions = gross emissions plus gross removals;;
 Gross Emissions|CO2;Emissions|CO2;1
-Gross Emissions|CO2;Gross Removals|CO2;1
+Gross Emissions|CO2;Gross Removals|CO2;-1
 ;;
-## AFOLU CO2: gross emissions equal to net emissions plus gross removals;;
+## AFOLU CO2: net emissions equal gross emissions plus gross removals;;
 Gross Emissions|CO2|AFOLU;Emissions|CO2|AFOLU;1
-Gross Emissions|CO2|AFOLU;Gross Removals|CO2|AFOLU;1
+Gross Emissions|CO2|AFOLU;Gross Removals|CO2|AFOLU;-1
 ;;
 ## Kyoto Gases;;
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|AFOLU;1
