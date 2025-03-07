@@ -115,12 +115,12 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
   }
 
   match <- function(x) {
-    grepl(paste0("^", gsub("*", ".*", gsub("|", "\\|", x, fixed = TRUE), fixed = TRUE), "$"), varname)
+    startsWith(varname, sub("\\*$", "", deletePlus(x)))
   }
   csvdata <- system.file("renamed_piam_variables.csv", package = "piamInterfaces") %>%
     read.csv2(comment.char = "#", strip.white = TRUE) %>%
     as_tibble() %>%
-    filter(unlist(lapply(deletePlus(.data$piam_variable), match)) | unlist(lapply(deletePlus(.data$old_name), match)))
+    filter(unlist(lapply(.data$piam_variable, match)) | unlist(lapply(.data$old_name, match)))
   if (nrow(csvdata) > 0) {
     message("\n### Renaming found in renamed_piam_variables.csv:\n",
             paste0("- ", csvdata$old_name, " -> ", csvdata$piam_variable, collapse = "\n"))
