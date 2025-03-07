@@ -76,7 +76,7 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
     return(returnhelper(ret, boolean = TRUE, fails = NULL, fixed = data))
   }
   # print human-readbable summary
-  .printRefDiff(data, comp)
+  .printRefDiff(data, comp, failfile = failfile)
   # save mismatches to file, if requested
   if (! is.null(failfile) && nrow(comp) > 0) {
     message("Find ", length(levels(comp$variable)), " failing variables in '", failfile, "'.")
@@ -97,13 +97,14 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
   return(returnhelper(ret, boolean = FALSE, fails = comp, fixed = fixeddata))
 }
 
-.printRefDiff <- function(data, comp, groupdepth = 3) {
+.printRefDiff <- function(data, comp, groupdepth = 3, failfile = NULL) {
   .extractvargroup <- function(x, depth) {
     return(unlist(lapply(lapply(str_split(x, "\\|"), head, depth), paste, collapse = "|")))
   }
+  allyears <- unique(data$period)
   summarizePeriods <- function(x) {
     years <- sort(unique(c(unlist(lapply(x, strsplit, ",")))))
-    summarize <- try(suppressWarnings(seq(min(as.numeric(years)), max(as.numeric(years)))))
+    summarize <- try(suppressWarnings(intersect(seq(min(as.numeric(years)), max(as.numeric(years))), allyears)))
     if (! inherits(summarize, "try-error") && length(years) > 1 && isTRUE(all.equal(years, paste(summarize)))) {
       return(paste0(min(summarize), "-", max(summarize)))
     } else {
@@ -120,6 +121,8 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
       if (nrow(mismatches) == 0) {
         message("\n### Everything fine for model=", m, " and scenario=", s)
       } else {
+        grouped <- FALSE
+        showrows <- 250
         wrongvars <- length(levels(mismatches$variable))
         mismatches <- mismatches %>%
           mutate(variable = factor(deletePlus(variable))) %>%
@@ -127,17 +130,22 @@ fixOnRef <- function(data, refscen, startyear, ret = "boolean", failfile = NULL,
           summarise(period = paste(sort(unique(period)), collapse = ","),
                     reldiff = max(reldiff),
                     .by = variable) %>%
-          mutate(group = factor(.extractvargroup(variable, groupdepth))) %>%
-          summarise(variable = if (length(unique(variable)) == 1) unique(variable) else unique(group),
-                    variables = n(),
-                    period = summarizePeriods(period),
-                    reldiff = max(reldiff),
-                    .by = group) %>%
-          mutate(reldiff = paste(niceround(reldiff), "%"), group = variable, variable = NULL) %>%
           droplevels()
-        message("\n### Incorrect fixing for ", wrongvars,
-                " variables (grouped below) for model=", m, " and scenario=", s)
-        showrows <- 250
+        if (showrows < nrow(mismatches)) {
+          grouped <- TRUE
+          mismatches <- mismatches %>%
+            mutate(group = factor(.extractvargroup(variable, groupdepth))) %>%
+            summarise(variable = if (n() == 1) unique(variable) else paste0(unique(group), "* (", n(), "x)"),
+                      period = summarizePeriods(period),
+                      reldiff = max(reldiff),
+                      .by = group) %>%
+            mutate(reldiff = paste(niceround(reldiff), "%"), group = variable, variable = NULL) %>%
+            droplevels()
+          }
+        message("\n### Incorrect fixing for ", wrongvars, " variables",
+                if (grouped) " (grouped below)", " for model=", m, " and scenario=", s)
+        message("For groups ending with *, the number of variables affected and the biggest deviation is stated.")
+        if (! is.null(failfile)) message("See ", failfile, " for detailed variable names.")
         rlang::with_options(width = 160, print(mismatches, n = showrows))
         if (showrows < nrow(mismatches)) {
           message("Further ", (nrow(mismatches) - showrows), " variable groups differ.")

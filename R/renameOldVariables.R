@@ -50,7 +50,7 @@ getExpandRenamedVariables <- function(variables) {
     # if both end with *, replace by options taken from 'variables'
     if (all(grepl("\\*$", c(csvdata$piam_variable[i], csvdata$old_name[i])))) {
       matchOld <- sub("\\*$", "", csvdata$old_name[i])
-      postfix <- gsub(matchOld, "", grep(matchOld, variables, fixed = TRUE, value = TRUE), fixed = TRUE)
+      postfix <- sub(matchOld, "", variables[startsWith(variables, matchOld)], fixed = TRUE)
       csvdataNew <- rbind(
         csvdataNew,
         data.frame(piam_variable = paste0(gsub("\\*$", "", csvdata$piam_variable[i]), postfix),
