@@ -79,7 +79,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
                                       paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename)),
                                     iiasatemplate = NULL,
                                     generatePlots = FALSE,
-                                    timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+                                    timesteps = seq(2005, 2100, 1),
                                     checkSummation = TRUE,
                                     mappingFile = NULL,
                                     naAction = "na.omit") {
@@ -190,7 +190,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
   )
 
   if (any(mapData$interpolation == "linear", na.rm = TRUE)) {
-    submission <- .interpolate(submission, mapData)
+    submission <- .interpolate(submission, mapData, timesteps)
   }
 
   # apply corrections using IIASA template ----
@@ -340,7 +340,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
   )
 }
 
-.interpolate <- function(submission, mapData) {
+.interpolate <- function(submission, mapData, timesteps) {
 
   message("# Apply linear interpolation to submission data")
 
@@ -348,11 +348,10 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     dplyr::pull("variable") %>%
     unique()
 
+  timesteps <- intersect(timesteps, seq(min(submission$period), max(submission$period), 1))
   tmp <- submission %>%
     filter(.data$variable %in% intVars) %>%
-    quitte::interpolate_missing_periods(method = "linear",
-                                        period = seq(min(submission$period),
-                                                     max(submission$period), 1))
+    quitte::interpolate_missing_periods(method = "linear", period = timesteps)
 
   return(rbind(filter(submission, !.data$variable %in% intVars), tmp))
 }

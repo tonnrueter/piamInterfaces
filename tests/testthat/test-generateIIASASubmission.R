@@ -112,7 +112,8 @@ test_that("interpolation for ScenarioMIP works as expected", {
   result <- generateIIASASubmission(
     mifs = data,
     mapping = "ScenarioMIP",
-    outputFilename = NULL
+    outputFilename = NULL,
+    timesteps = seq(2005, 2020, 1)
   )
 
   expect_true(all(seq(2005, 2020, 1) %in% unique(result$period)))

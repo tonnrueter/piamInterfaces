@@ -17,7 +17,7 @@ generateIIASASubmission(
     "_log.txt", outputFilename)),
   iiasatemplate = NULL,
   generatePlots = FALSE,
-  timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+  timesteps = seq(2005, 2100, 1),
   checkSummation = TRUE,
   mappingFile = NULL,
   naAction = "na.omit"
