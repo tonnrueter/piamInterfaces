@@ -55,7 +55,8 @@ used to delete superfluous variables and adapt units}
 
 \item{generatePlots}{boolean, whether to generate plots of failing summation checks. Needs outputDirectory not NULL.}
 
-\item{timesteps}{timesteps that are accepted in final submission}
+\item{timesteps}{set of timesteps used to filter the data for the submission file.
+For variables that have the 'interpolation' column filled, steps between start and end of the data are added.}
 
 \item{checkSummation}{either TRUE to identify summation files from mapping, or filename, or FALSE}
 

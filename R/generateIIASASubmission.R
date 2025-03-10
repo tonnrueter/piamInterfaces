@@ -48,7 +48,8 @@
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks. Needs outputDirectory not NULL.
-#' @param timesteps timesteps that are accepted in final submission
+#' @param timesteps set of timesteps used to filter the data for the submission file.
+#'        For variables that have the 'interpolation' column filled, steps between start and end of the data are added.
 #' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @param naAction a function which indicates what should happen when the data contain NA values.
