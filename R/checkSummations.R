@@ -220,15 +220,19 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                   paste0(piamchilds, " ", signofdiff)[! is.null(piamchilds)]
                   ))
-        for (ch in childs) {
-          piamch <- if (is.null(mapping)) NULL else sumNamesWithFactors(mappingData, ch)
-          text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
-                    if (! is.null(piamch)) paste0("      ", piamch)))
+        chfactor <- pull(filter(summationGroups, .data$parent == p), "factor")
+        chfactor <- paste0(ifelse(chfactor > 0, "+", "-"), ifelse(abs(chfactor) != 1, paste0(" ", abs(chfactor)), ""))
+        for (ch in seq_along(childs)) {
+          piamch <- if (is.null(mapping)) NULL else sumNamesWithFactors(mappingData, childs[[ch]])
+          text <- c(text, paste0(str_pad(paste0("   ", chfactor[[ch]], " ", childs[[ch]]), width + 5, "right"),
+                    if (! is.null(piamch)) paste0("      ",
+                    ifelse(chfactor[[ch]] == "+" | as.character(piamch) %in% c("", "NA"),
+                           piamch, paste0(chfactor[[ch]], if (chfactor[[ch]] != "-") "*", "(", piamch, ")")))))
         }
 
         relDiffMin <- min(fileLarge$reldiff[fileLarge$variable == p])
-        relDiffMax  <- max(fileLarge$reldiff[fileLarge$variable == p])
-        absDiffMax  <- max(abs(fileLarge$diff[fileLarge$variable == p]))
+        relDiffMax <- max(fileLarge$reldiff[fileLarge$variable == p])
+        absDiffMax <- max(abs(fileLarge$diff[fileLarge$variable == p]))
 
         if (roundDiff) {
           relDiffMin <- niceround(relDiffMin)
