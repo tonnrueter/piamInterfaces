@@ -173,6 +173,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
   summarytext <- NULL
+  mappingData <- NULL
   if (! is.null(mapping)) {
     if (is.character(mapping) && mapping %in% names(mappingNames())) {
       mappingCols <- function(x) select(getMapping(x), c("variable", "piam_variable", "piam_factor"))
@@ -213,22 +214,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
                              ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
 
-        childs <- checkVariables[[p]]
-
-        piamchilds <- if (is.null(mapping)) NULL else
-          sumNamesWithFactors(mappingData, pn)
-        text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
-                  paste0(piamchilds, " ", signofdiff)[! is.null(piamchilds)]
-                  ))
-        chfactor <- pull(filter(summationGroups, .data$parent == p), "factor")
-        chfactor <- paste0(ifelse(chfactor > 0, "+", "-"), ifelse(abs(chfactor) != 1, paste0(" ", abs(chfactor)), ""))
-        for (ch in seq_along(childs)) {
-          piamch <- if (is.null(mapping)) NULL else sumNamesWithFactors(mappingData, childs[[ch]])
-          text <- c(text, paste0(str_pad(paste0("   ", chfactor[[ch]], " ", childs[[ch]]), width + 5, "right"),
-                    if (! is.null(piamch)) paste0("      ",
-                    ifelse(chfactor[[ch]] == "+" | as.character(piamch) %in% c("", "NA"),
-                           piamch, paste0(chfactor[[ch]], if (chfactor[[ch]] != "-") "*", "(", piamch, ")")))))
-        }
+        text <- c(text, printSumGroup(summationGroups, mappingData, p, signofdiff, width))
 
         relDiffMin <- min(fileLarge$reldiff[fileLarge$variable == p])
         relDiffMax <- max(fileLarge$reldiff[fileLarge$variable == p])
@@ -247,6 +233,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                           absDiffMax, " ",
                           paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
         )
+
+        childs <- checkVariables[[p]]
         childMissing <- childs[!childs %in% data$variable]
         if (length(childMissing) > 0) {
           text <- c(text, paste0("Variables not found in the data: ", toString(childMissing)))
