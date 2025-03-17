@@ -1,6 +1,6 @@
 # Project specific interfaces to REMIND / MAgPIE
 
-R package **piamInterfaces**, version **0.46.2**
+R package **piamInterfaces**, version **0.47.0**
 
 [![CRAN status](https://www.r-pkg.org/badges/version/piamInterfaces)](https://cran.r-project.org/package=piamInterfaces) [![R build status](https://github.com/pik-piam/piamInterfaces/workflows/check/badge.svg)](https://github.com/pik-piam/piamInterfaces/actions) [![codecov](https://codecov.io/gh/pik-piam/piamInterfaces/branch/master/graph/badge.svg)](https://app.codecov.io/gh/pik-piam/piamInterfaces) [![r-universe](https://pik-piam.r-universe.dev/badges/piamInterfaces)](https://pik-piam.r-universe.dev/builds)
 
@@ -26,7 +26,7 @@ The mappings are `;`-separated files, using `#` as comment character, with the f
 
 - `variable`: name of the variable in the project template
 - `unit`: unit corresponding to `variable`. If the IIASA template has no unit, use `unitless`: an empty cell will fail the tests to avoid unintentially forgetting units.
-- `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting. Please use `|+|` notation and try to remain consistent with a REMIND mif, see [#460](https://github.com/pik-piam/piamInterfaces/pull/460), but from a technical point of view it is irrelevant.
+- `piam_variable`: name of the variable in REMIND / MAgPIE / EDGE-T etc. reporting. Please use `|+|` notation and try to remain consistent with a REMIND mif to facilitate debugging for humans, but from a technical point of view it is completely irrelevant. You can use [`updatePlusUnit()`](./R/updatePlusUnit.R) to update the correct `|+|` spelling and the unit based on a model data file.
 - `piam_unit`: unit corresponding to `piam_variable`
 - `piam_factor`: factor with which the `piam_variable` has to be multiplied for units to match
 
@@ -120,7 +120,37 @@ If you need to set up a new mapping: Since templates contain between several hun
     - `bind_rows` to `mapping_NEW`
 5. Use `writeMapping()` to export `mapping_NEW` as `mapping_NEW.csv`. It is recommended to make a few checks (e.g. by looking at all variables for which the description or the unit does not agree between the existing mapping and the template).
 
-## Model intercomparison
+## Summation checks
+
+Templates often have a structure where some 'parent' variable has to be the sum of its 'childs', such as `Emissions|CO|Energy ` = `Emissions|CO|Energy|Demand` + `Emissions|CO|Energy|Supply`.
+This can be checked using summation files that are placed in the [`inst/summations`](https://github.com/pik-piam/piamInterfaces/tree/master/inst/summations) folder.
+The first column contains the parent, the second all its childs. If you want further groups for a single parent, use `Emissions|CO2|Energy 2` etc. with a single-digit number.
+The [`checkSummations()`](./R/checkSummations.R) function allows to check your data based on a summation file and a mapping, for example like this:
+```
+d <- generateIIASASubmission("remind.mif", mapping = "ScenarioMIP", outputDirectory = NULL, checkSummation = FALSE)
+checkSummations(d, template = "ScenarioMIP", summationsFile = "ScenarioMIP", outputDirectory = NULL)
+```
+You can also simply pass a IIASA snapshot xlsx or csv file to checkSummations.
+
+A starting point for a new summation file based on a mapping can be generated like this:
+```
+library(tidyverse); library(piamInterfaces)
+vars <- grep("^Lifetime|^Price|^OM Cost|^Capital Cost", unique(piamInterfaces::getMapping("ScenarioMIP")$variable), invert = TRUE, value = TRUE)
+liste <- mip::extractVariableGroups(vars)
+tbl <- tibble()
+for (l in sort(names(liste))) {
+  childs <- grep("\\*$", liste[[l]], invert = TRUE, value = TRUE)
+  if (length(childs) > 1) {
+    tbl <- rbind(tbl, tibble(parent = l, child = childs, factor = 1), tibble(parent = "", child = "", factor = ""))
+  }
+}
+writeMapping(tbl, "summation_group_ScenarioMIP.csv")
+```
+This will put all childs into a single summation group, so you will have to split them up when needed and remove some nonsensical ones.
+
+In REMIND, summation checks can be performed automatically after every run if added to [`checkProjectSummations.R`](https://github.com/remindmodel/remind/blob/develop/scripts/output/single/checkProjectSummations.R).
+
+## Model intercomparison plots
 
 - To compare the results of different models, pass as `modeldata` a [quitte](https://github.com/pik-piam/quitte/) object or a csv/xlsx file.
 You get a PDF document for each scenario and each model with area plots for all the summation groups in `AR6` (or `NAVIGATE`) [summation files](https://github.com/pik-piam/piamInterfaces/tree/master/inst/summations) plus line plots for each variable in the `lineplotVariables` vector you supplied. It takes some time, better use a `slurm` job for:
@@ -162,7 +192,7 @@ In case of questions / problems please contact Falk Benke <benke@pik-potsdam.de>
 
 To cite package **piamInterfaces** in publications use:
 
-Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.46.2, <https://github.com/pik-piam/piamInterfaces>.
+Benke F, Richters O (2025). "piamInterfaces: Project specific interfaces to REMIND / MAgPIE." Version: 0.47.0, <https://github.com/pik-piam/piamInterfaces>.
 
 A BibTeX entry for LaTeX users is
 
@@ -173,6 +203,6 @@ A BibTeX entry for LaTeX users is
   date = {2025-03-17},
   year = {2025},
   url = {https://github.com/pik-piam/piamInterfaces},
-  note = {Version: 0.46.2},
+  note = {Version: 0.47.0},
 }
 ```
