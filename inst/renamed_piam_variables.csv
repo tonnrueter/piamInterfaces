@@ -15,6 +15,8 @@ MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile ;Concentration|N2O
 Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Resources|Nitrogen|Cropland Budget|Inputs|Manure
 Income PPP;Total income
 #
+# magpie4 SOM
+Emissions|CO2|Land|Land-use Change|+|Soil;Emissions|CO2|Land|Land-use Change|+|SOM
 # magpie4 CO2 carbon stored in Harvested Wood Products (HWP)
 Emissions|CO2|Land|Land-use Change|Timber|Storage in HWP|+|Industrial Roundwood;Emissions|CO2|Long-Lived Material|Timber|Industrial Roundwood|+|Inflow
 Emissions|CO2|Land|Land-use Change|Timber|Storage in HWP|+|Buildings;Emissions|CO2|Long-Lived Material|Timber|Buildings|+|Inflow
