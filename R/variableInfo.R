@@ -56,47 +56,57 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
               "# Corresponding 'piam_variable'")
     }
     # loop through all lines found
+    allexportchilds <- NULL
+    printedexportchilds <- NULL
+    allpiamchilds <- NULL
+    printedpiamchilds <- NULL
     for (no in unique(c(piamno, exportno))) {
       exportname <- mappingData$variable[no]
       # find child variables (example: PE|Oil is child of PE) for piam and export variables
-      allexportchilds <- unique(.getChilds(exportname, mappingData$variable))
+      allexportchilds <- unique(c(allexportchilds, .getChilds(exportname, mappingData$variable)))
       width <- max(minwidth, max(nchar(c(exportname, allexportchilds))))
-      allpiamchilds <- unique(.getChilds(varname, mappingData$piam_variable))
+      allpiamchilds <- unique(c(allpiamchilds, .getChilds(varname, mappingData$piam_variable)))
       # check whether variable is parent in one or more summation groups
-      parentgroups <- intersect(c(exportname, paste(exportname, seq(10))), summationGroups$parent)
+      parentgroups <- unique(c(intersect(c(exportname, paste(exportname, seq(10))), summationGroups$parent),
+                               summationGroups$parent[summationGroups$child == exportname]))
       # if not parent of a summation group, just print the variables
       if (length(parentgroups) == 0) {
-        message(". ", str_pad(exportname, width + 3, "right"), "     ", sumNamesWithFactors(mappingData, exportname))
+        allexportchilds <- unique(c(exportname, allexportchilds))
       } else {
         for (parentname in parentgroups) {
           message(paste(printSumGroup(summationGroups, mappingData, parentname, "=", width), collapse = "\n"))
           exportchilds <- summationGroups$child[summationGroups$parent %in% parentname]
-          allpiamchilds <- setdiff(allpiamchilds, mappingData$piam_variable[mappingData$variable %in% exportchilds])
-          allexportchilds <- setdiff(allexportchilds, exportchilds)
+          printedpiamchilds <- c(printedpiamchilds, mappingData$piam_variable[mappingData$variable %in% exportchilds])
+          printedexportchilds <- c(printedexportchilds, exportchilds)
         }
       }
-      # print remaining childs not in summation group (or if no group exists)
-      if (length(allexportchilds) + length(allpiamchilds) > 0) {
-        message("\n# Child variables", if (m %in% names(summationsNames())) " not in summation group")
-        for (ch in allexportchilds) {
-          piamchilds <- mappingData[, "piam_variable"][mappingData$variable %in% ch]
-          message("  . ", str_pad(ch, width + 3, "right"), "   = ",
-                  gsub("^\\+ ", "", sumNamesWithFactors(mappingData, ch)))
-          allpiamchilds <- setdiff(allpiamchilds, piamchilds)
-        }
-        for (ch in allpiamchilds) {
-          exportchild <- unique(mappingData$variable[mappingData[, "piam_variable"] %in% ch])
-          exportchild <- exportchild[! is.na(exportchild)]
-          for (x in exportchild) {
-            message("  . ", str_pad(x, width + 3, "right"), "   = ",
-                    gsub("\\+ ", "", sumNamesWithFactors(mappingData, x)))
-          }
+    }
+    # print remaining childs not in summation group (or if no group exists)
+    allexportchilds <- sort(setdiff(allexportchilds, printedexportchilds))
+    allpiamchilds <- sort(setdiff(allpiamchilds, printedpiamchilds))
+    if (length(allexportchilds) + length(allpiamchilds) > 0) {
+      message("\n# Child variables", if (m %in% names(summationsNames())) " not in summation group")
+      for (ch in allexportchilds) {
+        piamchilds <- mappingData[, "piam_variable"][mappingData$variable %in% ch]
+        message("  . ", str_pad(ch, width + 3, "right"), "   = ",
+                gsub("^\\+ ", "", sumNamesWithFactors(mappingData, ch)))
+        allpiamchilds <- setdiff(allpiamchilds, piamchilds)
+      }
+      for (ch in allpiamchilds) {
+        exportchild <- unique(mappingData$variable[mappingData[, "piam_variable"] %in% ch])
+        exportchild <- exportchild[! is.na(exportchild)]
+        for (x in exportchild) {
+          message("  . ", str_pad(x, width + 3, "right"), "   = ",
+                  gsub("\\+ ", "", sumNamesWithFactors(mappingData, x)))
         }
       }
-      # print units
-      message("Units: ", str_pad(paste0(unique(mappingData$unit[no]), collapse = ", "), width, "right"),
-              " Units: ", paste0(unique(mappingData[, "piam_unit"][no]), collapse = ", "))
-      # print definitions if existing
+    }
+    # print units
+    unitno <- unique(c(piamno, exportno))
+    message("Units: ", str_pad(paste0(unique(mappingData$unit[unitno]), collapse = ", "), width, "right"),
+            " Units: ", paste0(unique(mappingData[, "piam_unit"][unitno]), collapse = ", "))
+    # print definitions if existing
+    for (no in unitno) {
       if ("description" %in% colnames(mappingData) && ! is.na(mappingData$description[[no]])) {
         message("\ndescription of ", unitjoin(mappingData$variable[[no]], mappingData$unit[[no]]), ": ",
                 mappingData$description[[no]])
@@ -127,17 +137,23 @@ variableInfo <- function(varname, mif = NULL, mapping = NULL) {   # nolint: cycl
 printSumGroup <- function(summationGroups, mappingData, p, signofdiff, width) {
   childs <- summationGroups$child[summationGroups$parent %in% p]
   pn <- gsub(" [1-9]$", "", p)
+  punit <- if (is.null(mappingData)) NULL else unique(mappingData$unit[mappingData$variable %in% pn])
   piamchilds <- if (is.null(mappingData)) NULL else sumNamesWithFactors(mappingData, pn)
   text <- paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
                  paste0(piamchilds, " ", signofdiff)[! is.null(piamchilds)])
   chfactor <- summationGroups$factor[summationGroups$parent %in% p]
   chfactor <- paste0(ifelse(chfactor > 0, "+", "-"), ifelse(abs(chfactor) != 1, paste0(" ", abs(chfactor)), ""))
   for (ch in seq_along(childs)) {
-    textch <- str_pad(paste0("  ", chfactor[[ch]], " ", childs[[ch]]), width + 5, "right")
+    chunit <- NULL
+    if (! is.null(mappingData)) {
+      chunit <- unique(mappingData$unit[mappingData$variable %in% childs[[ch]]])
+      chunit <- if (identical(chunit, punit)) NULL else paste0(" (", chunit, ")")
+    }
+    textch <- str_pad(paste0("  ", chfactor[[ch]], " ", childs[[ch]], chunit), width + 5, "right")
     if (! is.null(mappingData)) {
       piamch <- sumNamesWithFactors(mappingData, childs[[ch]])
       if (! chfactor[[ch]] == "+" && ! as.character(piamch) %in% c("", "NA")) {
-        piamch <- paste0(chfactor[[ch]], "(", gsub("^\\+ ", "", piamch), ")")
+        piamch <- paste0(chfactor[[ch]], " (", gsub("^\\+ ", "", piamch), ")")
       }
       textch <- paste0(textch, "     ", piamch)
     }

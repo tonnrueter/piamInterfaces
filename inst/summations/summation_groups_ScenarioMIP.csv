@@ -1624,15 +1624,6 @@ Emissions|CO2|Product Use;Emissions|CO2|Product Use|ODS Substitutes;1
 Emissions|CO2|Product Use;Emissions|CO2|Product Use|Other;1
 Emissions|CO2|Product Use;Emissions|CO2|Product Use|Solvents;1
 ;;
-Emissions|HFC;Emissions|HFC|HFC125;1
-Emissions|HFC;Emissions|HFC|HFC134a;1
-Emissions|HFC;Emissions|HFC|HFC143a;1
-Emissions|HFC;Emissions|HFC|HFC227ea;1
-Emissions|HFC;Emissions|HFC|HFC23;1
-Emissions|HFC;Emissions|HFC|HFC245fa;1
-Emissions|HFC;Emissions|HFC|HFC32;1
-Emissions|HFC;Emissions|HFC|HFC43-10;1
-;;
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|AFOLU;1
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|Energy and Industrial Processes;1
 Emissions|Kyoto Gases;Emissions|Kyoto Gases|Other;1
