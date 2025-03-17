@@ -135,7 +135,7 @@ fillMissingSummations <- function(mifFile, summationsFile, iteration = 1, logFil
       select(-"sum_id") %>%
       mutate("variable" = unitjoin(!!sym("variable"), !!sym("unit"))) %>%
       select(c("scenario", "model", "region", "variable", "year" = "period", "value")) %>%
-      as.magpie(spatial = "region", temporal = "year", data = "value", tidy = TRUE) %>%
+      as.magpie(spatial = "region", temporal = "year", datacol = "value", tidy = TRUE) %>%
       mbind(mifFile)
   } else {
     newMifFile <- out %>%
