@@ -147,7 +147,7 @@ printSumGroup <- function(summationGroups, mappingData, p, signofdiff, width) {
     chunit <- NULL
     if (! is.null(mappingData)) {
       chunit <- unique(mappingData$unit[mappingData$variable %in% childs[[ch]]])
-      chunit <- if (identical(chunit, punit)) NULL else paste0(" (", chunit, ")")
+      chunit <- if (identical(chunit, punit) || length(chunit) == 0) NULL else paste0(" (", chunit, ")")
     }
     textch <- str_pad(paste0("  ", chfactor[[ch]], " ", childs[[ch]], chunit), width + 5, "right")
     if (! is.null(mappingData)) {
