@@ -194,3 +194,34 @@ Emi|CO2|Industrial Processes|Industry|+|Cement;Emi|CO2|Industrial Processes|+|Ce
 Emi|CO2|Industrial Processes|Industry|+|Chemicals;Emi|CO2|Industrial Processes|+|Chemicals
 Emi|GHG|+++|non-ES CDR;Emi|GHG|+++|non-BECCS CDR
 Emi|CO2|Energy|Demand|+|CDR Sector;Emi|CO2|Energy|Demand|+|CDR
+# https://github.com/pik-piam/remind2/pull/709
+# To make it more understandable, always use the explict version 'w/ Bunkers' or 'w/o Bunkers'
+# This part makes sure that if the 'w/o Bunkers' variable does not yet exist, it uses the main variable
+# because before of PR #709 was merged, this contained bunkers only at the global level
+Emi|CO2|w/o Bunkers                                      ;Emi|CO2
+Emi|CO2|w/o Bunkers|Energy                               ;Emi|CO2|Energy
+Emi|CO2|w/o Bunkers|Energy and Industrial Processes      ;Emi|CO2|Energy and Industrial Processes
+Emi|CO2|w/o Bunkers|Energy|Demand                        ;Emi|CO2|Energy|Demand
+Emi|CO2|w/o Bunkers|Energy|Demand|Liquids                ;Emi|CO2|Energy|Demand|Liquids
+Emi|CO2|w/o Bunkers|Energy|Demand|Transport              ;Emi|CO2|Energy|Demand|Transport
+Emi|CO2|w/o Bunkers|Energy|Demand|Transport|Liquids      ;Emi|CO2|Energy|Demand|Transport|Liquids
+Emi|CO2|w/o Bunkers|Gross                                ;Emi|CO2|Gross
+Emi|CO2|w/o Bunkers|Gross|Energy                         ;Emi|CO2|Gross|Energy
+Emi|CO2|w/o Bunkers|Gross|Energy and Industrial Processes;Emi|CO2|Gross|Energy and Industrial Processes
+Emi|CO2|w/o Bunkers|Gross|Energy|Demand                  ;Emi|CO2|Gross|Energy|Demand
+Emi|CO2|w/o Bunkers|Gross|Energy|Demand|Transport        ;Emi|CO2|Gross|Energy|Demand|Transport
+Emi|CO2|w/o Bunkers|LULUCF national accounting           ;Emi|CO2|LULUCF national accounting
+Emi|CO2|w/o Bunkers|Outside ETS and ESR                  ;Emi|CO2|Outside ETS and ESR
+Emi|CO2|w/o Bunkers|w/o Land-Use Change                  ;Emi|CO2|w/o Land-Use Change
+Emi|GHG|w/o Bunkers                                      ;Emi|GHG
+Emi|GHG|w/o Bunkers|CO2                                  ;Emi|GHG|CO2
+Emi|GHG|w/o Bunkers|Energy                               ;Emi|GHG|Energy
+Emi|GHG|w/o Bunkers|Energy|Demand                        ;Emi|GHG|Energy|Demand
+Emi|GHG|w/o Bunkers|Energy|Demand|Transport              ;Emi|GHG|Energy|Demand|Transport
+Emi|GHG|w/o Bunkers|Gross|Energy                         ;Emi|GHG|Gross|Energy
+Emi|GHG|w/o Bunkers|Gross|Energy|Demand                  ;Emi|GHG|Gross|Energy|Demand
+Emi|GHG|w/o Bunkers|Gross|Energy|Demand|Transport        ;Emi|GHG|Gross|Energy|Demand|Transport
+Emi|GHG|w/o Bunkers|LULUCF national accounting           ;Emi|GHG|LULUCF national accounting
+Emi|GHG|w/o Bunkers|Outside ETS and ESR                  ;Emi|GHG|Outside ETS and ESR
+Emi|GHG|w/o Bunkers|Outside ETS and ESR|Transport        ;Emi|GHG|Outside ETS and ESR|Transport
+Emi|GHG|w/o Bunkers|w/o Land-Use Change                  ;Emi|GHG|w/o Land-Use Change

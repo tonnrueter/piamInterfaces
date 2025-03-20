@@ -6,8 +6,8 @@
 #' @param parentRegion region to sum up to. Defaults to World or GLO
 #' @param childRegions regions that should sum up to `parentRegion`. Default to all except parentRegion
 #' @param variables list of variables to check. Defaults to all in mifFile
-#' @param skipUnits units to be skipped. Set to TRUE to get list of units pointing towards
-#'        their variable being intensive. You can also use c(TRUE, "additionalunit")
+#' @param skipUnits units to be skipped. Add TRUE to add the list of units pointing towards
+#'        their variable being intensive.
 #' @param skipBunkers set to TRUE to skip AR6 variables that contain bunkers only at the global level
 #' @param intensiveUnits intensive units where the global value should not be the sum, but instead lie between
 #'        the regional values. Set to TRUE to get list of units pointing towards their variable being intensive.
@@ -28,7 +28,8 @@
 #'}
 #' @export
 checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions = NULL,
-                                    variables = NULL, skipUnits = NULL, skipBunkers = NULL, intensiveUnits = TRUE,
+                                    variables = NULL, skipUnits = c("", "arbitrary unit", "arbitrary unit/yr"),
+                                    skipBunkers = NULL, intensiveUnits = TRUE,
                                     absDiff = 0.0001, relDiff = 0.1) {
   message("Running checkSummationsRegional")
   # load data
@@ -70,7 +71,7 @@ checkSummationsRegional <- function(mifFile, parentRegion = NULL, childRegions =
   }
   data <- droplevels(filter(data, ! .data$unit %in% skipUnits))
 
-  # if desired, skip bunker emissions where regional values are not thought to sum to global sums
+  # if desired, skip bunker emissions where regional values were not thought to sum to global sums in the AR6 template
   if (isTRUE(skipBunkers)) {
     gases <- c("BC", "CO", "CO2", "Kyoto Gases", "NOx", "OC", "Sulfur", "VOC")
     vars <- c("", "|Energy", "|Energy Demand|Transportation", "|Energy and Industrial Processes",
