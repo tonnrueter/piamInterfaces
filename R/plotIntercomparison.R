@@ -66,7 +66,8 @@ plotIntercomparison <- function(mifFile, outputDirectory = "output", summationsF
     summationGroups$parent <- removePlus(summationGroups$parent)
     summationGroups$child <- removePlus(summationGroups$child)
     # only leave in areaplotVariables contained in summationFile and where at least one child is in the data
-    for (i in intersect(unique(summationGroups$parent), unique(data$variable))) {
+    parentsInData <- gsub(" [0-9]+$", "", unique(summationGroups$parent)) %in% unique(data$variable)
+    for (i in unique(summationGroups$parent)[parentsInData]) {
       childVariables <- intersect(summationGroups[which(summationGroups[, "parent"] == i), "child"],
                                   unique(data$variable))
       if (length(childVariables) > 0) {
