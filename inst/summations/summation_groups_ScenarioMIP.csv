@@ -5546,7 +5546,7 @@ Population;Population|Female;1
 Population;Population|Male;1
 ;;
 Population 2;Population|Prevalence of Normal Weight;1
-Population 2;Population|Prevalence of Obesity;1
+# Population 2;Population|Prevalence of Obesity;1 # taken out because it is a sub-category of Overweight
 Population 2;Population|Prevalence of Overweight;1
 Population 2;Population|Prevalence of Underweight;1
 ;;
