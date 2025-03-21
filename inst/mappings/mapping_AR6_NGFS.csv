@@ -1,7 +1,7 @@
 variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;comment;description;source
 Emissions|Kyoto Gases|AFOLU;Mt CO2-equiv/yr;Emi|GHG|AFOLU;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Industry;Mt CO2-equiv/yr;Emi|GHG|Industry;Mt CO2eq/yr;1;;;;;R
-Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Transport;Mt CO2eq/yr;1;;;;;R
+Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|w/ Bunkers|Energy|Demand|Transport;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Residential and Commercial;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Buildings;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Supply;Mt CO2-equiv/yr;Emi|GHG|Energy|+|Supply;Mt CO2eq/yr;1;;;;;R
 Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;1;;;;;R
