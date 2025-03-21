@@ -9,7 +9,7 @@ checkSummationsRegional(
   parentRegion = NULL,
   childRegions = NULL,
   variables = NULL,
-  skipUnits = NULL,
+  skipUnits = c("", "arbitrary unit", "arbitrary unit/yr"),
   skipBunkers = NULL,
   intensiveUnits = TRUE,
   absDiff = 1e-04,
@@ -25,8 +25,8 @@ checkSummationsRegional(
 
 \item{variables}{list of variables to check. Defaults to all in mifFile}
 
-\item{skipUnits}{units to be skipped. Set to TRUE to get list of units pointing towards
-their variable being intensive. You can also use c(TRUE, "additionalunit")}
+\item{skipUnits}{units to be skipped. Add TRUE to add the list of units pointing towards
+their variable being intensive.}
 
 \item{skipBunkers}{set to TRUE to skip AR6 variables that contain bunkers only at the global level}
 
