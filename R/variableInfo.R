@@ -139,7 +139,7 @@ printSumGroup <- function(summationGroups, mappingData, p, signofdiff, width) {
   pn <- gsub(" [1-9]$", "", p)
   punit <- if (is.null(mappingData)) NULL else unique(mappingData$unit[mappingData$variable %in% pn])
   piamchilds <- if (is.null(mappingData)) NULL else sumNamesWithFactors(mappingData, pn)
-  text <- paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
+  text <- paste0("\n", str_pad(paste(p, signofdiff, "  "), width + 5, "right", pad = "."), "   ",
                  paste0(piamchilds, " ", signofdiff)[! is.null(piamchilds)])
   chfactor <- summationGroups$factor[summationGroups$parent %in% p]
   chfactor <- paste0(ifelse(chfactor > 0, "+", "-"), ifelse(abs(chfactor) != 1, paste0(" ", abs(chfactor)), ""))
@@ -149,7 +149,7 @@ printSumGroup <- function(summationGroups, mappingData, p, signofdiff, width) {
       chunit <- unique(mappingData$unit[mappingData$variable %in% childs[[ch]]])
       chunit <- if (identical(chunit, punit) || length(chunit) == 0) NULL else paste0(" (", chunit, ")")
     }
-    textch <- str_pad(paste0("  ", chfactor[[ch]], " ", childs[[ch]], chunit), width + 5, "right")
+    textch <- str_pad(paste0("  ", chfactor[[ch]], " ", childs[[ch]], chunit, " "), width + 5, "right", pad = ".")
     if (! is.null(mappingData)) {
       piamch <- sumNamesWithFactors(mappingData, childs[[ch]])
       if (! chfactor[[ch]] == "+" && ! as.character(piamch) %in% c("", "NA")) {

@@ -2733,7 +2733,6 @@ Final Energy;Final Energy|Waste;1
 ;;
 Final Energy 2;Final Energy|Agriculture;1
 Final Energy 2;Final Energy|Bunkers;1
-Final Energy 2;Final Energy|Carbon Management;1
 Final Energy 2;Final Energy|Industry;1
 Final Energy 2;Final Energy|Non-Energy Use;1
 Final Energy 2;Final Energy|Other Sector;1
@@ -4639,12 +4638,14 @@ Final Energy|Other Sector|Hydrogen;Final Energy|Other Sector|Hydrogen|Other;1
 Final Energy|Other Sector|Hydrogen;Final Energy|Other Sector|Hydrogen|Solar;1
 ;;
 Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Biomass;1
-Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Coal;1
 Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Electricity;1
-Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Gas;1
+Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Fossil;1
 Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Hydrogen;1
-Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Oil;1
 Final Energy|Other Sector|Liquids;Final Energy|Other Sector|Liquids|Other;1
+;;
+Final Energy|Other Sector|Liquids|Fossil;Final Energy|Other Sector|Liquids|Coal;1
+Final Energy|Other Sector|Liquids|Fossil;Final Energy|Other Sector|Liquids|Gas;1
+Final Energy|Other Sector|Liquids|Fossil;Final Energy|Other Sector|Liquids|Oil;1
 ;;
 Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Biomass;1
 Final Energy|Other Sector|Solids;Final Energy|Other Sector|Solids|Coal;1
