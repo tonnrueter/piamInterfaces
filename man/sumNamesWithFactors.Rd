@@ -4,12 +4,15 @@
 \alias{sumNamesWithFactors}
 \title{From mappingData, return the piam_variable sum as a string for a given exportname}
 \usage{
-sumNamesWithFactors(mappingData, exportname)
+sumNamesWithFactors(mappingData, exportname, width = NULL)
 }
 \arguments{
 \item{mappingData}{mapping data as obtained by getMapping()}
 
 \item{exportname}{name to be matched in 'variable' column}
+
+\item{width}{can be NULL so everything is pasted after each other, or the width argument
+from checkSummations such that every element gets its own line}
 }
 \description{
 From mappingData, return the piam_variable sum as a string for a given exportname

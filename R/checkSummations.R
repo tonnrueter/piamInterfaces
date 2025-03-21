@@ -24,7 +24,7 @@
 #' @importFrom gms chooseFromList
 #' @importFrom grDevices pdf dev.off
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
-#' @importFrom quitte as.quitte getModels getRegs getScenarios
+#' @importFrom quitte as.quitte getModels getRegs getScenarios unique_or_levels
 #' @importFrom rlang sym syms
 #' @importFrom stringr str_pad
 #' @importFrom tibble tibble
@@ -71,6 +71,9 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   if (nrow(data) == 0) {
     warning("No variable found that matches summationsFile=", paste(summationsFile, collapse = ", "))
     return(NULL)
+  } else {
+    message("# Start summation checks on ", length(unique_or_levels(data$variable)),
+            " variables with ", length(intersect(unique_or_levels(data$variable), parentVariables)), " parents.")
   }
 
   # start with an empty tibble, such that return values always have the same
