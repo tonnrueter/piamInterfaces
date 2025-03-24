@@ -304,7 +304,7 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comm
 257;Emissions|CO2|AFOLU|Land;Mt CO2/yr;;;;;;;CO2|AFOL emissions from forestry and other land use;
 ;Emissions|CO2|AFOLU|Wetlands|Peatlands;Mt CO2/yr;;;;;;;;
 258;Emissions|CO2|Energy;Mt CO2/yr;Emi|CO2|w/ Bunkers|Energy;Mt CO2/yr;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B);R
-259;Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|w Bunkers|Energy and Industrial Processes;Mt CO2/yr;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B) and from industrial processes (IPCC categories 2A,B,C,E);R
+259;Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|w/ Bunkers|Energy and Industrial Processes;Mt CO2/yr;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B) and from industrial processes (IPCC categories 2A,B,C,E);R
 260;Emissions|CO2|Energy|Demand;Mt CO2/yr;Emi|CO2|w/ Bunkers|Energy|Demand;Mt CO2/yr;;;;;CO2 emissions from fuel combustion in industry (IPCC category 1A2),residential,commercial,institutional sectors and agriculture,forestry,fishing (AFOFI) (IPCC category 1A4a,1A4b,1A4c),and transportation sector (IPCC category 1A3),excluding pipeline emissions (IPCC category 1A3ei);R
 261;Emissions|CO2|Energy|Demand|AFOFI;Mt CO2/yr;;;;;;;CO2 emissions from fuel combustion in agriculture,forestry,fishing (AFOFI) (IPCC category 1A4c);
 262;Emissions|CO2|Energy|Demand|Residential and Commercial;Mt CO2/yr;Emi|CO2|Energy|Demand|+|Buildings;Mt CO2/yr;;;;;CO2 emissions from fuel combustion in residential,commercial,institutional sectors (IPCC category 1A4a,1A4b);R
