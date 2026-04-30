@@ -32,7 +32,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
     if (length(templateunit) != 1) stop(mifvar, " not mapped to unique unit: ", paste(templateunit, collapse = ", "))
     mifunit <- levels(droplevels(filter(mifdata, .data$variable %in% mifvar))$unit)
     # find and potentially fix unit mismatches
-    if (! all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
+    if (!all(mifunit %in% c(unlist(str_split(templateunit, " [Oo][Rr] ")), templateunit))) {
       if (length(templateunit) > 1 || length(mifunit) > 1) {
         warning("Non-unique units for ", mifvar, ": templateunit: ", paste(templateunit, collapse = ", "),
                 ". mifunit: ", paste(mifunit, collapse = ", "))
@@ -65,7 +65,7 @@ checkFixUnits <- function(mifdata, template, logFile = NULL, failOnUnitMismatch 
       } else {
         # log units unable to fix
         wrongUnits[nrow(wrongUnits) + 1, ] <- c(mifvar, paste(templateunit, collapse = ","),
-                                                       paste(mifunit, collapse = ","))
+                                                paste(mifunit, collapse = ","))
       }
     }
   }
@@ -80,14 +80,14 @@ reportCheckFixUnits <- function(logtext, wrongUnits, logFile, failOnUnitMismatch
   if (length(logtext) > 0) {
     cat(paste0("# ", length(logtext), " units were automatically corrected.\n"))
     logtext <- paste0("\n\n#--- ", length(logtext), " units were automatically corrected: ---#\n",
-          paste0(logtext, collapse = "\n"))
+                      paste0(logtext, collapse = "\n"))
   }
 
   if (nrow(wrongUnits) > 0) {
     logtext <- c(logtext, reportWrongUnits(wrongUnits))
   }
 
-  if (length(logtext) > 0 && ! is.null(logFile) && ! isFALSE(logFile)) {
+  if (length(logtext) > 0 && !is.null(logFile) && !isFALSE(logFile)) {
     write(logtext, file = logFile, append = TRUE)
   }
 

@@ -23,15 +23,17 @@ test_that("getMappingVariables works", {
   expect_equal(getMappingVariables(mappingfile, "MRT"), allvars)
   expect_equal(getMappingVariables(mappingfile, TRUE), allvars)
   expect_equal(getMappingVariables(c(mappingfile, mappingfile), TRUE), allvars)
-  expect_equal(length(getMappingVariables(mappingfile, "M")), 0)
+  expect_length(getMappingVariables(mappingfile, "M"), 0)
   expect_identical(getMappingVariables(mappingfile, "R"), getREMINDTemplateVariables(mappingfile))
+  # for addunit: FALSE
+  expect_equal(getMappingVariables(mappingfile, TRUE, addunit = FALSE), c("Emi|Transport", "FE"))
 })
 
 for (t in c(as.list(names(mappingNames())), list(names(mappingNames())))) {
   test_that(paste("getMappingVariables works on", paste(t, collapse = ", ")), {
     expect_no_error(vars <- getMappingVariables(t, TRUE))
-    expect_false(all(duplicated(vars)))
+    if (length(vars) == 0) skip(paste0("mapping_", t, ".csv has no piam_variable."))
+    expect_false(any(duplicated(vars)))
     expect_false(any(is.na(vars)))
-    expect_true(length(vars) > 0)
   })
 }

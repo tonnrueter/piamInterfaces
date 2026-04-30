@@ -14,25 +14,25 @@ priceIndicesAdd <- function(mifdata, priceIndices, scenBase = NULL, referenceYea
   # price indices
   if (is.null(scenBase)) {
     dataForReferenceYear <- mifdata %>%
-        filter(!!sym("period") == referenceYear) %>%
-        select(-!!sym("period")) %>%
-        rename(value_ref = !!sym("value"))
+      filter(!!sym("period") == referenceYear) %>%
+      select(-!!sym("period")) %>%
+      rename(value_ref = !!sym("value"))
     joinby <- c("model", "region", "variable", "unit", "scenario")
   } else {
     dataForReferenceYear <- mifdata %>%
-        filter(!!sym("period") == referenceYear, grepl(scenBase, !!sym("scenario"))) %>%
-        select(-!!sym("period"), -!!sym("scenario")) %>%
-        rename(value_ref = !!sym("value"))
+      filter(!!sym("period") == referenceYear, grepl(scenBase, !!sym("scenario"))) %>%
+      select(-!!sym("period"), -!!sym("scenario")) %>%
+      rename(value_ref = !!sym("value"))
     joinby <- c("model", "region", "variable", "unit")
   }
 
   priceVariables <- gsub("\\|Index$", "", priceIndices)
   priceIndexData <- filter(mifdata, !!sym("variable") %in% priceVariables) %>%
-      left_join(dataForReferenceYear, by = joinby, relationship = "many-to-many") %>%
-      mutate(value = !!sym("value") / !!sym("value_ref")) %>%
-      mutate(variable = paste0(!!sym("variable"), "|Index")) %>%
-      mutate(unit = paste0("Index (", referenceYear, " = 1)")) %>%
-      select(-!!sym("value_ref"))
+    left_join(dataForReferenceYear, by = joinby, relationship = "many-to-many") %>%
+    mutate(value = !!sym("value") / !!sym("value_ref")) %>%
+    mutate(variable = paste0(!!sym("variable"), "|Index")) %>%
+    mutate(unit = paste0("Index (", referenceYear, " = 1)")) %>%
+    select(-!!sym("value_ref"))
 
   mifdata <- rbind(mifdata, priceIndexData)
   return(mifdata)

@@ -5,7 +5,7 @@
 \title{Retrieves all variables allocated to source potentially used
 in mappings to project variables}
 \usage{
-getMappingVariables(project = TRUE, sources = TRUE)
+getMappingVariables(project = TRUE, sources = TRUE, addunit = TRUE)
 }
 \arguments{
 \item{project}{name of the project of requested mappings
@@ -13,6 +13,8 @@ such as c('AR6', 'AR6_NGFS') or 'mapping.csv'. Use TRUE for all mappings.}
 
 \item{sources}{model abbreviation(s) used in 'source' column.
 R = REMIND, M = MAgPIE, T = EDGE-T, B = Brick, C = Climate/MAGICC, TRUE = all}
+
+\item{addunit}{boolean whether units should be appended as 'Variable (Unit)'}
 }
 \description{
 Retrieves all variables allocated to source potentially used

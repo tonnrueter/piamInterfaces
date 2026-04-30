@@ -5,6 +5,6 @@ for (t in names(mappingNames())) {
       warning(paste0("These lines in mapping ", t, " contain double quotes. They create a mess, avoid them.\n"),
               paste(code, collapse = "\n"))
     }
-    expect_true(length(code) == 0)
+    expect_length(code, 0)
   })
 }

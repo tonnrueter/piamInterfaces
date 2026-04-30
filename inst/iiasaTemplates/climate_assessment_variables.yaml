@@ -134,3 +134,17 @@
     unit: kt CF4-equiv/yr
 - Emissions|SF6:
     unit: kt SF6/yr
+- Emissions|BC:
+    unit: Mt BC/yr
+- Emissions|NOx:
+    unit: Mt NO2/yr
+- Emissions|OC:
+    unit: Mt OC/yr
+- Emissions|NH3:
+    unit: Mt NH3/yr
+- Emissions|VOC:
+    unit: Mt VOC/yr
+- Emissions|Sulfur:
+    unit: Mt SO2/yr
+- Emissions|CO:
+    unit: Mt CO/yr

@@ -1,5 +1,6 @@
-for (mapping in c(setdiff(names(mappingNames()), c("AR6", "NAVIGATE", "AR6_NGFS", "SHAPE")),
-                  list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))) {
+testmappings <- c(list(c("ScenarioMIP", "PRISMA")), list(c("AR6", "AR6_NGFS")), list(c("NAVIGATE", "SHAPE")))
+testmappings <- c(testmappings, as.list(setdiff(names(mappingNames()), unlist(testmappings))))
+for (mapping in testmappings) {
   test_that(paste("test generateIIASASubmission with", paste(mapping, collapse = ",")), {
     data <- data.frame()
     for (i in unlist(mapping)) {
@@ -96,6 +97,29 @@ test_that("fail on duplicated data", {
                  "Duplicated data found")
 })
 
+test_that("interpolation for ScenarioMIP works as expected", {
+
+  # this test assumes that Emi|BC|w/ Bunkers is one of the variables that should
+  # be interpolated as per the ScenarioMIP template
+
+  data <- data.frame(
+    variable = "Emi|BC|w/ Bunkers", unit = "Mt BC/yr",
+    model = "REMIND", scenario = "default", region = "GLO",
+    period = c(2005, 2010, 2020),
+    value = c(1, 10, 15)
+  )
+
+  result <- generateIIASASubmission(
+    mifs = data,
+    mapping = "ScenarioMIP",
+    outputFilename = NULL,
+    timesteps = seq(2005, 2020, 1)
+  )
+
+  expect_true(all(seq(2005, 2020, 1) %in% unique(result$period)))
+  expect_true(max(result$period) == 2020)
+
+})
 
 # Unit test to ensure functionality of weighted
 # averages in the mapping. Generates a mapping file with
@@ -115,10 +139,10 @@ test_that("fail on duplicated data", {
       piam_variable = piamVariables,
       piam_unit = rep("PiamUnit", 2),
       piam_factor = c("1", "1000"),
-      weight = piamWeights,
+      piam_weight = piamWeights,
       comment = rep("", 2)
     )
-    if (includeWeightColumn == FALSE) mapping <- mapping %>% select(- "weight")
+    if (includeWeightColumn == FALSE) mapping <- mapping %>% select(- "piam_weight")
     write.csv2(mapping, quote = FALSE, file = file.path(tempdir(), "test_mappings.csv"), row.names = FALSE)
     return(file.path(tempdir(), "test_mappings.csv"))
   }
@@ -141,7 +165,7 @@ test_that("fail on duplicated data", {
   }
 
   # apply the mapping
-  piam <- testthat::expect_no_warning(generateIIASASubmission(
+  piam <- expect_no_warning(generateIIASASubmission(
     mifs = .getMif(values),
     mapping = .getMapping(includeWeightColumn = includeWeightInMap),
     model = modelName,
@@ -173,31 +197,31 @@ test_that("fail on duplicated data", {
 
 test_that("Mapping handles weights as expected.", {
   # When all values present, with either a weight column included or not
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, 10, 10), includeWeightInMap = FALSE),
     10 + 1000 * 10
   )
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, 10, 10), includeWeightInMap = TRUE),
     10 * (10 / 20) + 1000 * 10 * (10 / 20)
   )
   # When a value is missing from the mif. If its a weighted variable then
   # omit it from the weighted sum. therefore expect the total weight to 10
   # not 20
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(NA, 10, 10, 10), includeWeightInMap = FALSE),
     1000 * 10
   )
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(NA, 10, 10, 10), includeWeightInMap = TRUE),
     1000 * 10 * (10 / 10) # ignore first row.
   )
   # When a weight is missing drop that whole row from the weighted average.
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, NA, 10), includeWeightInMap = FALSE),
     10 + 1000 * 10
   )
-  testthat::expect_equal(
+  expect_equal(
     .weightedVariablesTest(c(10, 10, 10, NA), includeWeightInMap = TRUE),
     10 * (10 / 10) # if the weight is NA then ignore that from the total weight
   )

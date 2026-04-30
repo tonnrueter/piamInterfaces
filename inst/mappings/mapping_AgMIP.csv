@@ -1,4 +1,4 @@
-variable;unit;piam_variable;piam_unit;piam_factor;weight;comment;source
+variable;unit;piam_variable;piam_unit;piam_factor;piam_weight;comment;source
 CONS.AGR;1000 t dm;Demand|Bioenergy;Mt DM/yr;1000;NULL;;M
 OTHU.AGR;1000 t dm;Demand|Bioenergy;Mt DM/yr;1000;NULL;;M
 CONS.AGR;1000 t dm;Demand|Food;Mt DM/yr;1000;NULL;;M
@@ -57,8 +57,8 @@ CONS.DRY;1000 t dm;Demand|Bioenergy|Livestock products|Dairy;Mt DM/yr;1000;NULL;
 OTHU.DRY;1000 t dm;Demand|Bioenergy|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
 OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
-OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 OTHU.NRM;1000 t dm;Demand|Bioenergy|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 CONS.RUM;1000 t dm;Demand|Bioenergy|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
@@ -217,37 +217,37 @@ FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Molasses;Mt DM/y
 FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
 FNRM.OSD;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
 FNRM.SGC;1000 t dm;Demand|Feed|Feed for Eggs|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crop residues;Mt DM/yr;1000;NULL;;M
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops;Mt DM/yr;1000;NULL;;M
-FNRM.FSH;1000 t dm;Demand|Feed|Feed for Monogastric meat|Fish;Mt DM/yr;1000;NULL;;M
-FNRM.OFD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Forage;Mt DM/yr;1000;NULL;;M
-FNRM.GRS;1000 t dm;Demand|Feed|Feed for Monogastric meat|Pasture;Mt DM/yr;1000;NULL;;M
-FNRM.CRP;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products;Mt DM/yr;1000;NULL;;M
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
-FNRM.RIC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
-FNRM.VFN;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
-FNRM.OCR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
-FNRM.WHT;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
-FNRM.PFB;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
-FNRM.CGR;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
-FNRM.OSD;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
-FNRM.SGC;1000 t dm;Demand|Feed|Feed for Monogastric meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Pig meat|Crop residues;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Pig meat|Crops;Mt DM/yr;1000;NULL;;M
+FNRM.FSH;1000 t dm;Demand|Feed|Feed for Pig meat|Fish;Mt DM/yr;1000;NULL;;M
+FNRM.OFD;1000 t dm;Demand|Feed|Feed for Pig meat|Forage;Mt DM/yr;1000;NULL;;M
+FNRM.GRS;1000 t dm;Demand|Feed|Feed for Pig meat|Pasture;Mt DM/yr;1000;NULL;;M
+FNRM.CRP;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Sugar crops;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Cereals|Maize;Mt DM/yr;1000;NULL;;M
+FNRM.RIC;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Cereals|Rice;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Cereals|Temperate cereals;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Cereals|Tropical cereals;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Oil crops|Cotton seed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Oil crops|Groundnuts;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Oil crops|Oilpalms;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Oil crops|Other oil crops incl rapeseed;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Oil crops|Soybean;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Oil crops|Sunflower;Mt DM/yr;1000;NULL;;M
+FNRM.VFN;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Other crops|Fruits Vegetables Nuts;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
+FNRM.OCR;1000 t dm;Demand|Feed|Feed for Pig meat|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
+FNRM.WHT;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Brans;Mt DM/yr;1000;NULL;;M
+FNRM.PFB;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Cotton lint;Mt DM/yr;1000;NULL;;M
+FNRM.CGR;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Distillers grains;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Ethanol;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Microbial protein;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Molasses;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Oilcakes;Mt DM/yr;1000;NULL;;M
+FNRM.OSD;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Oils;Mt DM/yr;1000;NULL;;M
+FNRM.SGC;1000 t dm;Demand|Feed|Feed for Pig meat|Secondary products|Sugar;Mt DM/yr;1000;NULL;;M
 FNRM.OFD;1000 t dm;Demand|Feed|Feed for Poultry meat|Crop residues;Mt DM/yr;1000;NULL;;M
 FNRM.CRP;1000 t dm;Demand|Feed|Feed for Poultry meat|Crops;Mt DM/yr;1000;NULL;;M
 FNRM.FSH;1000 t dm;Demand|Feed|Feed for Poultry meat|Fish;Mt DM/yr;1000;NULL;;M
@@ -374,8 +374,8 @@ CONS.DRY;1000 t dm;Demand|Food|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 FOOD.DRY;1000 t dm;Demand|Food|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Food|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
 FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-CONS.NRM;1000 t dm;Demand|Food|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
-FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Food|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
+FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Food|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 FOOD.NRM;1000 t dm;Demand|Food|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 CONS.RUM;1000 t dm;Demand|Food|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
@@ -448,8 +448,8 @@ CONS.DRY;1000 t dm;Demand|Material|Livestock products|Dairy;Mt DM/yr;1000;NULL;;
 OTHU.DRY;1000 t dm;Demand|Material|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Material|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
 OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-CONS.NRM;1000 t dm;Demand|Material|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
-OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Material|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Material|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 OTHU.NRM;1000 t dm;Demand|Material|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 CONS.RUM;1000 t dm;Demand|Material|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
@@ -522,8 +522,8 @@ CONS.DRY;1000 t dm;Demand|Seed|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 OTHU.DRY;1000 t dm;Demand|Seed|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
 OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
-OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
+OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 CONS.NRM;1000 t dm;Demand|Seed|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 OTHU.NRM;1000 t dm;Demand|Seed|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 CONS.RUM;1000 t dm;Demand|Seed|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
@@ -609,7 +609,7 @@ CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Pulses;kcal/capit
 CALI.OCR;kcal/cap/d;Nutrition|Calorie Intake|Crops|Other crops|Tropical roots;kcal/capita/day;1;NULL;;M
 CALI.DRY;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Dairy;kcal/capita/day;1;NULL;;M
 CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Eggs;kcal/capita/day;1;NULL;;M
-CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Monogastric meat;kcal/capita/day;1;NULL;;M
+CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Pig meat;kcal/capita/day;1;NULL;;M
 CALI.NRM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Poultry meat;kcal/capita/day;1;NULL;;M
 CALI.RUM;kcal/cap/d;Nutrition|Calorie Intake|Livestock products|Ruminant meat;kcal/capita/day;1;NULL;;M
 CALI.WHT;kcal/cap/d;Nutrition|Calorie Intake|Secondary products|Alcoholic beverages;kcal/capita/day;1;NULL;;M
@@ -640,7 +640,7 @@ CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Pulses;kcal/capit
 CALO.OCR;kcal/cap/d;Nutrition|Calorie Supply|Crops|Other crops|Tropical roots;kcal/capita/day;1;NULL;;M
 CALO.DRY;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Dairy;kcal/capita/day;1;NULL;;M
 CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Eggs;kcal/capita/day;1;NULL;;M
-CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Monogastric meat;kcal/capita/day;1;NULL;;M
+CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Pig meat;kcal/capita/day;1;NULL;;M
 CALO.NRM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Poultry meat;kcal/capita/day;1;NULL;;M
 CALO.RUM;kcal/cap/d;Nutrition|Calorie Supply|Livestock products|Ruminant meat;kcal/capita/day;1;NULL;;M
 CALO.WHT;kcal/cap/d;Nutrition|Calorie Supply|Secondary products|Alcoholic beverages;kcal/capita/day;1;NULL;;M
@@ -674,7 +674,7 @@ PROD.OCR;1000 t dm;Production|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
 PROD.OCR;1000 t dm;Production|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
 PROD.DRY;1000 t dm;Production|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 PROD.NRM;1000 t dm;Production|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-PROD.NRM;1000 t dm;Production|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+PROD.NRM;1000 t dm;Production|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 PROD.NRM;1000 t dm;Production|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 PROD.RUM;1000 t dm;Production|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
 YILD_endoTC.CRP;%/yr;Productivity|Yield-increasing technological change crops;%/yr;1;NULL;;M
@@ -811,7 +811,7 @@ WATR.VFN;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Frui
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Potatoes;km3/yr;1;NULL;;M
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Pulses;km3/yr;1;NULL;;M
 WATR.OCR;km3;Resources|Water|Withdrawal|Agriculture|Crops|Crops|Other crops|Tropical roots;km3/yr;1;NULL;;M
-GDPT.TOT;bn USD 2005 MER;Total income;million US$2017 MER/yr;0.0008121;NULL;;M
+GDPT.TOT;bn USD 2005 MER;Income MER;million US$2017 MER/yr;0.0008121;NULL;;M
 NETT.ECP;1000 t dm;Trade|Net-Trade|Bioenergy crops;Mt DM/yr;1000;NULL;;M
 NETT.AGR;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
 NETT.CRP;1000 t dm;Trade|Net-Trade|Crops;Mt DM/yr;1000;NULL;;M
@@ -836,7 +836,7 @@ NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;
 NETT.OCR;1000 t dm;Trade|Net-Trade|Crops|Other crops|Tropical roots;Mt DM/yr;1000;NULL;;M
 NETT.DRY;1000 t dm;Trade|Net-Trade|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 NETT.NRM;1000 t dm;Trade|Net-Trade|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 NETT.RUM;1000 t dm;Trade|Net-Trade|Livestock products|Ruminant meat;Mt DM/yr;1000;NULL;;M
 NETT.WHT;1000 t dm;Trade|Net-Trade|Secondary products|Alcoholic beverages;Mt DM/yr;1000;NULL;;M
@@ -862,7 +862,7 @@ IMPO.DRY;1000 t dm;Trade|Imports|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 IMPO.FSH;1000 t dm;Trade|Imports|Fish;Mt DM/yr;1000;NULL;;M
 IMPO.LSP;1000 t dm;Trade|Imports|Livestock products;Mt DM/yr;1000;NULL;;M
 IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 IMPO.NRM;1000 t dm;Trade|Imports|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
 IMPO.OCR;1000 t dm;Trade|Imports|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
@@ -899,7 +899,7 @@ EXPO.DRY;1000 t dm;Trade|Exports|Livestock products|Dairy;Mt DM/yr;1000;NULL;;M
 EXPO.FSH;1000 t dm;Trade|Exports|Fish;Mt DM/yr;1000;NULL;;M
 EXPO.LSP;1000 t dm;Trade|Exports|Livestock products;Mt DM/yr;1000;NULL;;M
 EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Eggs;Mt DM/yr;1000;NULL;;M
-EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Monogastric meat;Mt DM/yr;1000;NULL;;M
+EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Pig meat;Mt DM/yr;1000;NULL;;M
 EXPO.NRM;1000 t dm;Trade|Exports|Livestock products|Poultry meat;Mt DM/yr;1000;NULL;;M
 EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Potatoes;Mt DM/yr;1000;NULL;;M
 EXPO.OCR;1000 t dm;Trade|Exports|Crops|Other crops|Pulses;Mt DM/yr;1000;NULL;;M
@@ -949,7 +949,7 @@ FRTN.CRP;1000 t;Resources|Nitrogen|Inorganic Fertilizer Application|Crops;Mt Nr/
 FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Poultry meat;Nr per Nr;1;Production Nr|Livestock products|+|Poultry meat;;M
 FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Eggs;Nr per Nr;1;Production Nr|Livestock products|+|Eggs;;M
 FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy;;M
-FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Monogastric meat;Nr per Nr;1;Production Nr|Livestock products|+|Monogastric meat;;M
+FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Pig meat;Nr per Nr;1;Production Nr|Livestock products|+|Pig meat;;M
 FEEF.LSP;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat;;M
 FEEF.RUM;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Production Nr|Livestock products|+|Ruminant meat;;M
 FEEF.RUM;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy;;M
@@ -957,7 +957,7 @@ FEEF.DRY;Nr/Nr;Productivity|Feed protein conversion|Ruminant meat;Nr per Nr;1;Pr
 FEEF.DRY;Nr/Nr;Productivity|Feed protein conversion|Dairy;Nr per Nr;1;Production Nr|Livestock products|+|Dairy;;M
 FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Poultry meat;Nr per Nr;1;Production Nr|Livestock products|+|Poultry meat;;M
 FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Eggs;Nr per Nr;1;Production Nr|Livestock products|+|Eggs;;M
-FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Monogastric meat;Nr per Nr;1;Production Nr|Livestock products|+|Monogastric meat;;M
+FEEF.NRM;Nr/Nr;Productivity|Feed protein conversion|Pig meat;Nr per Nr;1;Production Nr|Livestock products|+|Pig meat;;M
 LABS.CRP;%;Factor requirement shares|Crop products|Labor requirement share;%;1;NULL;;M
 CAPS.CRP;%;Factor requirement shares|Crop products|Capital requirement share;%;1;NULL;;M
 LABS.LSP;%;Factor requirement shares|Livestock products|Labor requirement share;%;1;NULL;;M
@@ -985,7 +985,7 @@ XPRP.OCR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Pulses;Index 2020=
 XPRP.OCR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Potatoes;Index 2020=100;1;Production|Crops|Other crops|+|Potatoes;;M
 XPRP.OCR;Index 2020=100;Prices|Index2020|Agriculture|Producer|Tropical roots;Index 2020=100;1;Production|Crops|Other crops|+|Tropical roots;;M
 XPRP.RUM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Ruminant meat;Index 2020=100;1;NULL;;M
-XPRP.NRM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Monogastric meat;Index 2020=100;1;Production|Livestock products|+|Monogastric meat;;M
+XPRP.NRM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Pig meat;Index 2020=100;1;Production|Livestock products|+|Pig meat;;M
 XPRP.NRM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Poultry meat;Index 2020=100;1;Production|Livestock products|+|Poultry meat;;M
 XPRP.NRM;Index 2020=100;Prices|Index2020|Agriculture|Producer|Eggs;Index 2020=100;1;Production|Livestock products|+|Eggs;;M
 XPRP.DRY;Index 2020=100;Prices|Index2020|Agriculture|Producer|Dairy;Index 2020=100;1;Production|Livestock products|+|Dairy;;M

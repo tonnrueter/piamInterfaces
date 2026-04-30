@@ -24,7 +24,7 @@
 #' @importFrom gms chooseFromList
 #' @importFrom grDevices pdf dev.off
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
-#' @importFrom quitte as.quitte getModels getRegs getScenarios
+#' @importFrom quitte as.quitte getModels getRegs getScenarios unique_or_levels
 #' @importFrom rlang sym syms
 #' @importFrom stringr str_pad
 #' @importFrom tibble tibble
@@ -71,15 +71,18 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   if (nrow(data) == 0) {
     warning("No variable found that matches summationsFile=", paste(summationsFile, collapse = ", "))
     return(NULL)
+  } else {
+    message("# Start summation checks on ", length(unique_or_levels(data$variable)),
+            " variables with ", length(intersect(unique_or_levels(data$variable), parentVariables)), " parents.")
   }
 
   # start with an empty tibble, such that return values always have the same
   # structure
   comparison <- tibble(model = factor(), scenario = factor(),
-                region = factor(), period = integer(),
-                variable = character(), unit = factor(),
-                value = numeric(), checkSum = numeric(),
-                diff = numeric(), reldiff = numeric())
+                       region = factor(), period = integer(),
+                       variable = character(), unit = factor(),
+                       value = numeric(), checkSum = numeric(),
+                       diff = numeric(), reldiff = numeric())
 
   # iterate over summation rules
   for (i in seq_along(checkVariables)) {
@@ -173,6 +176,7 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
   text <- paste0("\n### Analyzing ", if (is.null(ncol(mifFile))) mifFile else "provided data",
                  ".\n# Use ", summationsFile, " to check if summation groups add up.")
   summarytext <- NULL
+  mappingData <- NULL
   if (! is.null(mapping)) {
     if (is.character(mapping) && mapping %in% names(mappingNames())) {
       mappingCols <- function(x) select(getMapping(x), c("variable", "piam_variable", "piam_factor"))
@@ -213,22 +217,11 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
         signofdiff <- paste0("<"[max(fileLarge$diff[fileLarge$variable == p]) > 0],
                              ">"[min(fileLarge$diff[fileLarge$variable == p]) < 0])
 
-        childs <- checkVariables[[p]]
-
-        piamchilds <- if (is.null(mapping)) NULL else
-                        sumNamesWithFactors(mappingData, pn)
-        text <- c(text, paste0("\n", str_pad(paste(p, signofdiff), width + 5, "right"), "   ",
-                  paste0(piamchilds, " ", signofdiff)[! is.null(piamchilds)]
-                  ))
-        for (ch in childs) {
-          piamch <- if (is.null(mapping)) NULL else sumNamesWithFactors(mappingData, ch)
-          text <- c(text, paste0("   + ", str_pad(ch, width, "right"),
-                    if (! is.null(piamch)) paste0("      ", piamch)))
-        }
+        text <- c(text, printSumGroup(summationGroups, mappingData, p, signofdiff, width))
 
         relDiffMin <- min(fileLarge$reldiff[fileLarge$variable == p])
-        relDiffMax  <- max(fileLarge$reldiff[fileLarge$variable == p])
-        absDiffMax  <- max(abs(fileLarge$diff[fileLarge$variable == p]))
+        relDiffMax <- max(fileLarge$reldiff[fileLarge$variable == p])
+        absDiffMax <- max(abs(fileLarge$diff[fileLarge$variable == p]))
 
         if (roundDiff) {
           relDiffMin <- niceround(relDiffMin)
@@ -243,6 +236,8 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
                           absDiffMax, " ",
                           paste0(unique(fileLarge$unit[fileLarge$variable == p]), collapse = ", "), ".")
         )
+
+        childs <- checkVariables[[p]]
         childMissing <- childs[!childs %in% data$variable]
         if (length(childMissing) > 0) {
           text <- c(text, paste0("Variables not found in the data: ", toString(childMissing)))
@@ -268,12 +263,12 @@ checkSummations <- function(mifFile, outputDirectory = ".", template = NULL, sum
       # print to log or stdout
       summarytext <- c(summarytext, paste0("\n# Summary of summation group checks for model ", thismodel, ":"),
         paste0("# ", length(problematic), " equations are not satisfied but should according to ",
-              basename(summationsFile), "."),
+               basename(summationsFile), "."),
         paste0("# All deviations can be found in the returned object",
                paste0(" and in ", dataDumpFile)[! is.null(dataDumpFile)], "."),
         paste0("# To get more detailed information on '", p, "', run piamInterfaces::variableInfo('",
                pn, "').")
-        )
+      )
       if (generatePlots) {
         dev.off()
         summarytext <- c(summarytext, paste0("\n# Find plot comparison of all errors in ", pdfFilename))

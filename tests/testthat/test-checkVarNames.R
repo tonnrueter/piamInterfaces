@@ -9,15 +9,17 @@ test_that("checkVarNames works", {
     w <- capture_warnings(checkVarNames(v))
     expect_true(length(w) > 0)
   }
+  w <- capture_warnings(checkVarNames(qeAR6))
+  expect_length(w, 0)
 })
 
 for (mapping in names(mappingNames())) {
   mappingData <- getMapping(mapping)
   test_that(paste0("checkVarNames for variable in mapping ", mapping), {
-    expect_no_warning(checkVarNames(paste0(mappingData$variable, " (", mappingData$unit, ")")))
+    expect_no_warning(checkVarNames(unitjoin(mappingData$variable, mappingData$unit)))
   })
   test_that(paste0("checkVarNames for piam_variable in mapping ", mapping), {
     mpiam <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
-    expect_no_warning(checkVarNames(paste0(mpiam$piam_variable, " (", mpiam$piam_unit, ")")))
+    expect_no_warning(checkVarNames(unitjoin(mpiam$piam_variable, mpiam$piam_unit)))
   })
 }

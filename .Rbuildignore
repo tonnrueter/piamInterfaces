@@ -16,3 +16,5 @@
 tutorial.md
 ^.*CITATION.cff$
 ^\.git$
+^\.claude$
+^_pkgdown\.yml$

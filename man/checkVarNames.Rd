@@ -11,8 +11,12 @@ checkVarNames(vars, withunits = TRUE)
 
 \item{withunits}{should the var vector contain units in paranthesis?}
 }
+\value{
+vector with all variables that show issues
+}
 \description{
-Pass a vector of variable names (including the units if withunits=TRUE).
+Pass a vector of variable names (including the units if withunits=TRUE) or
+a quitte object.
 Get warnings if inconsistencies are found for the reporting
 }
 \author{

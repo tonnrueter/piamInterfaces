@@ -48,7 +48,8 @@
 #' @param iiasatemplate optional filename of xlsx or yaml file provided by IIASA
 #'        used to delete superfluous variables and adapt units
 #' @param generatePlots boolean, whether to generate plots of failing summation checks. Needs outputDirectory not NULL.
-#' @param timesteps timesteps that are accepted in final submission
+#' @param timesteps set of timesteps used to filter the data for the submission file.
+#'        For variables that have the 'interpolation' column filled, steps between start and end of the data are added.
 #' @param checkSummation either TRUE to identify summation files from mapping, or filename, or FALSE
 #' @param mappingFile has no effect and is only kept for backwards-compatibility
 #' @param naAction a function which indicates what should happen when the data contain NA values.
@@ -79,7 +80,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
                                       paste0(gsub("\\.[a-zA-Z]+$", "_log.txt", outputFilename)),
                                     iiasatemplate = NULL,
                                     generatePlots = FALSE,
-                                    timesteps = c(seq(2005, 2060, 5), seq(2070, 2100, 10)),
+                                    timesteps = seq(2005, 2100, 1),
                                     checkSummation = TRUE,
                                     mappingFile = NULL,
                                     naAction = "na.omit") {
@@ -107,6 +108,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
 
   mapData <- NULL
 
+  # loop over mappings
   for (i in seq_along(mapping)) {
     t <- getMapping(mapping[i]) %>%
       filter(! .data$piam_variable %in% "", ! is.na(.data$piam_variable)) %>%
@@ -114,11 +116,11 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
         "piam_variable" = removePlus(.data$piam_variable),
         "piam_factor" = ifelse(is.na(.data$piam_factor), 1, as.numeric(.data$piam_factor))
       ) %>%
-      dplyr::bind_rows(tibble("weight" = "NULL")) %>% # add the optional weight column if not present
-      mutate(
-        "piam_weight" = .data$weight
-      ) %>%
-      select("variable", "unit", "piam_variable", "piam_unit", "piam_factor", "piam_weight")
+      dplyr::bind_rows(tibble("piam_weight" = "NULL")) %>% # add the optional piam_weight column if not present
+      # add interpolation column if not existing
+      bind_rows(tibble(interpolation = NA)) %>%
+      select("variable", "unit", "piam_variable", "piam_unit",
+             "piam_factor", "piam_weight", "interpolation")
     checkUnitFactor(t, logFile = logFile, failOnUnitMismatch = FALSE)
     mapData <- rbind(mapData, t)
   }
@@ -155,7 +157,7 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     mutate(
       "piam_variable" = str_trim(.data$variable),
       "piam_unit" = str_trim(.data$unit)
-      ) %>%
+    ) %>%
     select(-c("variable", "unit")) %>%
     distinct()
 
@@ -204,11 +206,17 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
     message("# Apply summation checks")
     for (sumFile in setdiff(sumFiles, FALSE)) {
       invisible(checkSummations(submission, template = mapData,
-                              summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
-                              outputDirectory = outputDirectory, generatePlots = generatePlots,
-                              dataDumpFile = paste0(prefix, "_checkSummations.csv"),
-                              plotprefix = paste0(prefix, "_")))
+                                summationsFile = sumFile, logFile = logFile, logAppend = TRUE,
+                                outputDirectory = outputDirectory, generatePlots = generatePlots,
+                                dataDumpFile = paste0(prefix, "_checkSummations.csv"),
+                                plotprefix = paste0(prefix, "_")))
     }
+  }
+
+  # apply interpolation ----
+
+  if (any(mapData$interpolation == "linear", na.rm = TRUE)) {
+    submission <- .interpolate(submission, mapData, timesteps)
   }
 
   # write or return data ----
@@ -230,8 +238,8 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
   if ("auto" %in% dropRegi) {
     regiEU21 <- c("DEU", "ECE", "ECS", "ENC", "ESC", "ESW", "EWN", "FRA", "UKI", "NEN", "NES")
     if (all(regiEU21 %in% levels(mifdata$region))) {
-      dropRegi <- c(dropRegi, "EUR", "NEU", "EU27")
-      warning("Because of dropRegi='auto', dropping 'EUR', 'NEU' and 'EU27' region.")
+      dropRegi <- c(dropRegi, "EUR", "NEU")
+      warning("Because of dropRegi='auto', dropping 'EUR' and 'NEU' region.")
     }
     dropRegi <- unique(setdiff(dropRegi, "auto"))
   }
@@ -240,33 +248,33 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
 }
 
 .setModelAndScenario <- function(dt, modelname, scenRemove = NULL, scenAdd = NULL) {
-    scenarioNames <- unique(dt$scenario)
-    if (! is.null(modelname)) {
-      dt$model <- modelname
-      message("# Correct model name to '", modelname, "'.")
+  scenarioNames <- unique(dt$scenario)
+  if (! is.null(modelname)) {
+    dt$model <- modelname
+    message("# Correct model name to '", modelname, "'.")
+  }
+  if (! is.null(scenRemove) && ! scenRemove %in% "") {
+    dt$scenario <- gsub(scenRemove, "", dt$scenario)
+    message("# Adapt scenario names: '", scenRemove, "' will be removed.")
+  }
+  if (! is.null(scenAdd)) {
+    if (all(grepl(scenAdd, unique(dt$scenario), fixed = TRUE))) {
+      message("Prefix ", scenAdd, " already found in all scenario names. Skipping.")
+    } else {
+      dt$scenario <- paste0(scenAdd, dt$scenario)
+      message("# Adapt scenario names: '", scenAdd, "' will be prepended.")
     }
-    if (! is.null(scenRemove) && ! scenRemove %in% "") {
-      dt$scenario <- gsub(scenRemove, "", dt$scenario)
-      message("# Adapt scenario names: '", scenRemove, "' will be removed.")
-    }
-    if (! is.null(scenAdd)) {
-      if (all(grepl(scenAdd, unique(dt$scenario), fixed = TRUE))) {
-        message("Prefix ", scenAdd, " already found in all scenario names. Skipping.")
-      } else {
-        dt$scenario <- paste0(scenAdd, dt$scenario)
-        message("# Adapt scenario names: '", scenAdd, "' will be prepended.")
-      }
-    }
-    if (length(unique(dt$scenario)) < length(scenarioNames)) {
-      message(length(scenarioNames), " scenario names before changes: ", paste(scenarioNames, collapse = ", "))
-      message(length(unique(dt$scenario)), " scenario names after changes:  ",
-              paste(unique(dt$scenario), collapse = ", "))
-      stop("Changes to scenario names lead to duplicates. Adapt scenRemove='",
-           scenRemove, "' and scenAdd='", scenAdd, "'!")
-    }
+  }
+  if (length(unique(dt$scenario)) < length(scenarioNames)) {
+    message(length(scenarioNames), " scenario names before changes: ", paste(scenarioNames, collapse = ", "))
+    message(length(unique(dt$scenario)), " scenario names after changes:  ",
+            paste(unique(dt$scenario), collapse = ", "))
+    stop("Changes to scenario names lead to duplicates. Adapt scenRemove='",
+         scenRemove, "' and scenAdd='", scenAdd, "'!")
+  }
 
-    dt$scenario <- as.factor(dt$scenario)
-    return(dt)
+  dt$scenario <- as.factor(dt$scenario)
+  return(dt)
 }
 
 # resolve the weight column if present else return
@@ -330,4 +338,20 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
         "piam_factor"
       )
   )
+}
+
+.interpolate <- function(submission, mapData, timesteps) {
+
+  message("# Apply linear interpolation to submission data")
+
+  intVars <- filter(mapData, .data$interpolation == "linear") %>%
+    dplyr::pull("variable") %>%
+    unique()
+
+  timesteps <- intersect(timesteps, seq(min(submission$period), max(submission$period), 1))
+  tmp <- submission %>%
+    filter(.data$variable %in% intVars) %>%
+    quitte::interpolate_missing_periods(method = "linear", period = timesteps)
+
+  return(rbind(filter(submission, !.data$variable %in% intVars), tmp))
 }

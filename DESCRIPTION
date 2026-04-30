@@ -1,8 +1,8 @@
 Type: Package
 Package: piamInterfaces
 Title: Project specific interfaces to REMIND / MAgPIE
-Version: 0.36.9
-Date: 2024-11-18
+Version: 0.59.0
+Date: 2026-03-31
 Authors@R: c(
     person("Falk", "Benke", , "benke@pik-potsdam.de", role = c("aut", "cre")),
     person("Oliver", "Richters", role = "aut")
@@ -15,7 +15,7 @@ Imports:
     GDPuc,
     gms,
     jsonlite,
-    magclass,
+    magclass (>= 6.17.2),
     mip (>= 0.150.0),
     readxl,
     quitte (>= 0.3137.1),
@@ -28,11 +28,12 @@ Imports:
     yaml
 Suggests:
     covr,
-    testthat,
+    testthat (>= 3.2.3),
     withr,
     writexl
 Encoding: UTF-8
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Config/testthat/parallel: true
 Config/testthat/edition: 3
 Config/testthat/start-first: plotIntercomparison, generateIIASASubmission, checkSummations
+Config/Needs/website: tidyverse/tidytemplate

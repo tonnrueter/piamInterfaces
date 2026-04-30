@@ -1,0 +1,239 @@
+X;CountryCode;RegionCode
+Angola;AGO;Africa
+Cameroon;CMR;Africa
+Central African Republic;CAF;Africa
+Chad;TCD;Africa
+Congo;COG;Africa
+Democratic Republic of the Congo;COD;Africa
+Equatorial Guinea;GNQ;Africa
+Gabon;GAB;Africa
+Burundi;BDI;Africa
+Djibouti;DJI;Africa
+Eritrea;ERI;Africa
+Ethiopia;ETH;Africa
+Kenya;KEN;Africa
+Madagascar;MDG;Africa
+Malawi;MWI;Africa
+Mayotte;MYT;Africa
+Mozambique;MOZ;Africa
+Rwanda;RWA;Africa
+Réunion;REU;Africa
+Somalia;SOM;Africa
+South Sudan;SSD;Africa
+Uganda;UGA;Africa
+United Republic of Tanzania;TZA;Africa
+Zambia;ZMB;Africa
+Zimbabwe;ZWE;Africa
+Algeria;DZA;Africa
+Egypt;EGY;Africa
+Libya;LBY;Africa
+Morocco;MAR;Africa
+Sudan;SDN;Africa
+Tunisia;TUN;Africa
+Western Sahara;ESH;Africa
+Botswana;BWA;Africa
+Eswatini;SWZ;Africa
+Lesotho;LSO;Africa
+Namibia;NAM;Africa
+South Africa;ZAF;Africa
+Benin;BEN;Africa
+Burkina Faso;BFA;Africa
+Côte d'Ivoire;CIV;Africa
+Gambia;GMB;Africa
+Ghana;GHA;Africa
+Guinea;GIN;Africa
+Liberia;LBR;Africa
+Mali;MLI;Africa
+Mauritania;MRT;Africa
+Niger;NER;Africa
+Nigeria;NGA;Africa
+Saint Helena;SHN;Africa
+Senegal;SEN;Africa
+Sierra Leone;SLE;Africa
+Togo;TGO;Africa
+Kazakhstan;KAZ;Asia
+Kyrgyzstan;KGZ;Asia
+Tajikistan;TJK;Asia
+Turkmenistan;TKM;Asia
+Uzbekistan;UZB;Asia
+China;CHN;Asia
+China, Hong Kong SAR;HKG;Asia
+China, Macao SAR;MAC;Asia
+China, Taiwan Province of China;TWN;Asia
+Dem. People's Republic of Korea;PRK;Asia
+Japan;JPN;Asia
+Mongolia;MNG;Asia
+Republic of Korea;KOR;Asia
+Afghanistan;AFG;Asia
+Bangladesh;BGD;Asia
+Bhutan;BTN;Asia
+India;IND;Asia
+Iran (Islamic Republic of);IRN;Asia
+Nepal;NPL;Asia
+Pakistan;PAK;Asia
+Sri Lanka;LKA;Asia
+Brunei Darussalam;BRN;Asia
+Cambodia;KHM;Asia
+Indonesia;IDN;Asia
+Lao People's Democratic Republic;LAO;Asia
+Malaysia;MYS;Asia
+Myanmar;MMR;Asia
+Philippines;PHL;Asia
+Thailand;THA;Asia
+Viet Nam;VNM;Asia
+Armenia;ARM;Asia
+Azerbaijan;AZE;Asia
+Bahrain;BHR;Asia
+Cyprus;CYP;Asia
+Georgia;GEO;Asia
+Iraq;IRQ;Asia
+Israel;ISR;Asia
+Jordan;JOR;Asia
+Kuwait;KWT;Asia
+Lebanon;LBN;Asia
+Oman;OMN;Asia
+Qatar;QAT;Asia
+Saudi Arabia;SAU;Asia
+State of Palestine;PSE;Asia
+Syrian Arab Republic;SYR;Asia
+Türkiye;TUR;Asia
+United Arab Emirates;ARE;Asia
+Yemen;YEM;Asia
+Australia;AUS;Australasia
+New Zealand;NZL;Australasia
+Bonaire, Sint Eustatius and Saba;BES;Small Islands
+Saint Barthélemy;BLM;Small Islands
+Saint Martin (French part);MAF;Small Islands
+Costa Rica;CRI;Central & South America
+El Salvador;SLV;Central & South America
+Guatemala;GTM;Central & South America
+Honduras;HND;Central & South America
+Nicaragua;NIC;Central & South America
+Panama;PAN;Central & South America
+Argentina;ARG;Central & South America
+Bolivia (Plurinational State of);BOL;Central & South America
+Brazil;BRA;Central & South America
+Chile;CHL;Central & South America
+Colombia;COL;Central & South America
+Ecuador;ECU;Central & South America
+Falkland Islands (Malvinas);FLK;Central & South America
+French Guiana;GUF;Central & South America
+Paraguay;PRY;Central & South America
+Peru;PER;Central & South America
+Uruguay;URY;Central & South America
+Venezuela (Bolivarian Republic of);VEN;Central & South America
+Belarus;BLR;Europe
+Bulgaria;BGR;Europe
+Czechia;CZE;Europe
+Hungary;HUN;Europe
+Poland;POL;Europe
+Republic of Moldova;MDA;Europe
+Romania;ROU;Europe
+Russian Federation;RUS;Europe
+Slovakia;SVK;Europe
+Ukraine;UKR;Europe
+Denmark;DNK;Europe
+Estonia;EST;Europe
+Faroe Islands;FRO;Europe
+Finland;FIN;Europe
+Guernsey;GGY;Europe
+Iceland;ISL;Europe
+Ireland;IRL;Europe
+Isle of Man;IMN;Europe
+Jersey;JEY;Europe
+Latvia;LVA;Europe
+Lithuania;LTU;Europe
+Norway;NOR;Europe
+Sweden;SWE;Europe
+United Kingdom;GBR;Europe
+Albania;ALB;Europe
+Andorra;AND;Europe
+Bosnia and Herzegovina;BIH;Europe
+Croatia;HRV;Europe
+Gibraltar;GIB;Europe
+Greece;GRC;Europe
+Holy See;VAT;Europe
+Italy;ITA;Europe
+Kosovo (under UNSC res. 1244);XKX;Europe
+Malta;MLT;Europe
+Montenegro;MNE;Europe
+North Macedonia;MKD;Europe
+Portugal;PRT;Europe
+San Marino;SMR;Europe
+Serbia;SRB;Europe
+Slovenia;SVN;Europe
+Spain;ESP;Europe
+Austria;AUT;Europe
+Belgium;BEL;Europe
+France;FRA;Europe
+Germany;DEU;Europe
+Liechtenstein;LIE;Europe
+Luxembourg;LUX;Europe
+Monaco;MCO;Europe
+Netherlands;NLD;Europe
+Switzerland;CHE;Europe
+Mexico;MEX;North America
+Canada;CAN;North America
+Greenland;GRL;North America
+Saint Pierre and Miquelon;SPM;North America
+United States of America;USA;North America
+Belize;BLZ;Small Islands
+Bermuda;BMU;Small Islands
+Cabo Verde;CPV;Small Islands
+Comoros;COM;Small Islands
+Guinea-Bissau;GNB;Small Islands
+Guyana;GUY;Small Islands
+Maldives;MDV;Small Islands
+Mauritius;MUS;Small Islands
+Sao Tome and Principe;STP;Small Islands
+Seychelles;SYC;Small Islands
+Singapore;SGP;Small Islands
+Suriname;SUR;Small Islands
+Timor-Leste;TLS;Small Islands
+Anguilla;AIA;Small Islands
+Antigua and Barbuda;ATG;Small Islands
+Aruba;ABW;Small Islands
+Bahamas;BHS;Small Islands
+Barbados;BRB;Small Islands
+British Virgin Islands;VGB;Small Islands
+Cayman Islands;CYM;Small Islands
+Cuba;CUB;Small Islands
+Curaçao;CUW;Small Islands
+Dominica;DMA;Small Islands
+Dominican Republic;DOM;Small Islands
+Grenada;GRD;Small Islands
+Guadeloupe;GLP;Small Islands
+Haiti;HTI;Small Islands
+Jamaica;JAM;Small Islands
+Martinique;MTQ;Small Islands
+Montserrat;MSR;Small Islands
+Puerto Rico;PRI;Small Islands
+Saint Kitts and Nevis;KNA;Small Islands
+Saint Lucia;LCA;Small Islands
+Saint Vincent and the Grenadines;VCT;Small Islands
+Sint Maarten (Dutch part);SXM;Small Islands
+Trinidad and Tobago;TTO;Small Islands
+Turks and Caicos Islands;TCA;Small Islands
+United States Virgin Islands;VIR;Small Islands
+American Samoa;ASM;Small Islands
+Cook Islands;COK;Small Islands
+Fiji;FJI;Small Islands
+French Polynesia;PYF;Small Islands
+Guam;GUM;Small Islands
+Kiribati;KIR;Small Islands
+Marshall Islands;MHL;Small Islands
+Micronesia (Fed. States of);FSM;Small Islands
+Nauru;NRU;Small Islands
+New Caledonia;NCL;Small Islands
+Niue;NIU;Small Islands
+Northern Mariana Islands;MNP;Small Islands
+Palau;PLW;Small Islands
+Papua New Guinea;PNG;Small Islands
+Samoa;WSM;Small Islands
+Solomon Islands;SLB;Small Islands
+Tokelau;TKL;Small Islands
+Tonga;TON;Small Islands
+Tuvalu;TUV;Small Islands
+Vanuatu;VUT;Small Islands
+Wallis and Futuna Islands;WLF;Small Islands
+Russian Federation (Asian part);RUS;Asia

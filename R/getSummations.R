@@ -33,7 +33,7 @@ getSummations <- function(project = NULL, format = "dataframe") {
     } else {
       summations <- read.csv2(filename, sep = ";", stringsAsFactors = FALSE,
                               strip.white = TRUE, comment.char = "#") %>%
-      filter(! .data$parent %in% "")
+        filter(! .data$parent %in% "")
     }
     if (!("factor" %in% names(summations))) {
       summations$factor <- 1

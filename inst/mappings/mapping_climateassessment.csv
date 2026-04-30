@@ -1,0 +1,29 @@
+idx;variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;comment;description;source
+1;Emissions|CO2;Mt CO2/yr;Emi|CA|CO2;Mt CO2/yr;;;;;total net-CO2 emissions from all sources;R
+2;Emissions|CO2|AFOLU;Mt CO2/yr;Emi|CA|CO2|Land-Use Change;Mt CO2/yr;;;;;CO2 emissions from agriculture,forestry and other land use (IPCC category 3);R
+3;Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CA|CO2|Energy and Industrial Processes;Mt CO2/yr;;;;;CO2 emissions from energy use on supply and demand side (IPCC category 1A,1B) and from industrial processes (IPCC categories 2A,B,C,E);R
+4;Emissions|BC;Mt BC/yr;Emi|CA|BC;Mt BC/yr;;;Warning: The current remind2 version (2.0.10) does not yet include any MAgPIE-related air pollutant emissions. Moreover, bunker emissions are only added in remind2::reportExtraEmissions and thus not included in this total that is computed in remind2::reportAirPollutantEmissions.;;total black carbon emissions;R
+;Emissions|C2F6;kt C2F6/yr;Emi|CA|C2F6;kt C2F6/yr;;;;;total emissions of C2F6;R
+;Emissions|C6F14;kt C6F14/yr;Emi|CA|C6F14;kt C6F14/yr;;;;;total emissions of CF6F14;R
+;Emissions|CF4;kt CF4-equiv/yr;Emi|CA|CF4;kt CF4/yr;;;;;total emissions of CF4;R
+5;Emissions|CFC;Mt CO2-equiv/yr;;;;;;;;
+6;Emissions|CH4;Mt CH4/yr;Emi|CA|CH4;Mt CH4/yr;;;;;total CH4 emissions;R
+7;Emissions|CO;Mt CO/yr;Emi|CA|CO;Mt CO/yr;;;Warning: The current remind2 version (2.0.10) does not yet include any MAgPIE-related air pollutant emissions. Moreover, bunker emissions are only added in remind2::reportExtraEmissions and thus not included in this total that is computed in remind2::reportAirPollutantEmissions.;;total CO emissions;R
+8;Emissions|F-Gases;Mt CO2-equiv/yr;Emi|CA|GHG|+|F-Gases;Mt CO2eq/yr;;;;;total F-gas emissions,including sulfur hexafluoride (SF6),hydrofluorocarbons (HFCs),perfluorocarbons (PFCs) (preferably use 100-year GWPs from AR4 for aggregation of different F-gases;R
+9;Emissions|HFC;kt HFC134a-equiv/yr;Emi|CA|HFC;kt HFC134a-equiv/yr;;;;;total emissions of hydrofluorocarbons (HFCs),provided as aggregate HFC134a-equivalents;R
+10;Emissions|HFC|HFC125;kt HFC125/yr;Emi|CA|HFC|HFC125;kt HFC125/yr;;;;;total emissions of HFC125;R
+11;Emissions|HFC|HFC134a;kt HFC134a/yr;Emi|CA|HFC|HFC134a;kt HFC134a/yr;;;;;total emissions of HFC134a;R
+12;Emissions|HFC|HFC143a;kt HFC143a/yr;Emi|CA|HFC|HFC143a;kt HFC143a/yr;;;;;total emissions of HFC143a;R
+13;Emissions|HFC|HFC227ea;kt HFC227ea/yr;Emi|CA|HFC|HFC227ea;kt HFC227ea/yr;;;;;total emissions of HFC227ea;R
+14;Emissions|HFC|HFC23;kt HFC23/yr;Emi|CA|HFC|HFC23;kt HFC23/yr;;;;;total emissions of HFC23;R
+15;Emissions|HFC|HFC245fa;kt HFC245fa/yr;Emi|CA|HFC|HFC245fa;kt HFC245fa/yr;;;;;total emissions of HFC245fa;R
+16;Emissions|HFC|HFC32;kt HFC32/yr;Emi|CA|HFC|HFC32;kt HFC32/yr;;;;;total emissions of HFC32;R
+17;Emissions|HFC|HFC43-10;kt HFC43-10/yr;Emi|CA|HFC|HFC43-10;kt HFC43-10/yr;;;;;total emissions of HFC343-10;R
+18;Emissions|N2O;kt N2O/yr;Emi|CA|N2O;kt N2O/yr;;;;;total N2O emissions;R
+19;Emissions|NH3;Mt NH3/yr;Emi|CA|NH3;Mt NH3/yr;;;Warning: The current remind2 version (2.0.10) does not yet include any MAgPIE-related air pollutant emissions. Moreover, bunker emissions are only added in remind2::reportExtraEmissions and thus not included in this total that is computed in remind2::reportAirPollutantEmissions.;;total ammonium (NH3) emissions;R
+20;Emissions|NOx;Mt NO2/yr;Emi|CA|NOx;Mt NOx/yr;;;Warning: The current remind2 version (2.0.10) does not yet include any MAgPIE-related air pollutant emissions. Moreover, bunker emissions are only added in remind2::reportExtraEmissions and thus not included in this total that is computed in remind2::reportAirPollutantEmissions.;;total NOx emissions;R
+21;Emissions|OC;Mt OC/yr;Emi|CA|OC;Mt OC/yr;;;Warning: The current remind2 version (2.0.10) does not yet include any MAgPIE-related air pollutant emissions. Moreover, bunker emissions are only added in remind2::reportExtraEmissions and thus not included in this total that is computed in remind2::reportAirPollutantEmissions.;;total organic carbon emissions;R
+22;Emissions|PFC;kt CF4-equiv/yr;Emi|CA|PFC;kt CF4-equiv/yr;;;;;total emissions of perfluorocarbons (PFCs),provided as aggregate CF4-equivalents;R
+23;Emissions|SF6;kt SF6/yr;Emi|CA|SF6;kt SF6/yr;;;;;total emissions of sulfur hexafluoride (SF6);R
+24;Emissions|Sulfur;Mt SO2/yr;Emi|CA|SO2;Mt SO2/yr;;;Warning: The current remind2 version (2.0.10) does not yet include any MAgPIE-related air pollutant emissions. Moreover, bunker emissions are only added in remind2::reportExtraEmissions and thus not included in this total that is computed in remind2::reportAirPollutantEmissions.;;total sulfur (SO2) emissions;R
+25;Emissions|VOC;Mt VOC/yr;Emi|CA|VOC;Mt VOC/yr;;;Warning: The current remind2 version (2.0.10) does not yet include any MAgPIE-related air pollutant emissions. Moreover, bunker emissions are only added in remind2::reportExtraEmissions and thus not included in this total that is computed in remind2::reportAirPollutantEmissions.;;total volatile organic compound (VOC) emissions;R

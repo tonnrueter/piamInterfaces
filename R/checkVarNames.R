@@ -1,12 +1,17 @@
 #' checkVariablesNames checks reporting and mappings on inconsistency in variable names
 #'
-#' Pass a vector of variable names (including the units if withunits=TRUE).
+#' Pass a vector of variable names (including the units if withunits=TRUE) or
+#' a quitte object.
 #' Get warnings if inconsistencies are found for the reporting
 #' @param vars vector with variable names (and units such as "PE (EJ)")
 #' @param withunits should the var vector contain units in paranthesis?
+#' @return vector with all variables that show issues
 #' @author Oliver Richters
+#' @importFrom quitte is.quitte
+#' @importFrom magclass unitjoin
 #' @export
 checkVarNames <- function(vars, withunits = TRUE) {
+  if (is.quitte(vars)) vars <- unique(unitjoin(vars$variable, if (withunits) vars$unit))
 
   barspace <- unique(grep("[\\| ]{2}|^[\\| ]|[\\| ]$", vars, value = TRUE))
   if (length(barspace) > 0) {
@@ -26,5 +31,5 @@ checkVarNames <- function(vars, withunits = TRUE) {
     }
   }
 
-  return(c(barspace, naVar, noUnit))
+  return(sort(unique(c(barspace, naVar, noUnit))))
 }

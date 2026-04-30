@@ -1341,9 +1341,10 @@ Land Cover;Land Cover|Other Natural Land;1
 
 Land Cover|Cropland;Land Cover|Cropland|Cereals;1
 Land Cover|Cropland;Land Cover|Cropland|Energy Crops;1
-Land Cover|Cropland;Land Cover|Cropland|Irrigated;1
 Land Cover|Cropland;Land Cover|Cropland|Double-cropped;1
-Land Cover|Cropland;Land Cover|Cropland|Rainfed;1
+
+Land Cover|Cropland 2;Land Cover|Cropland|Irrigated;1
+Land Cover|Cropland 2;Land Cover|Cropland|Rainfed;1
 
 Land Cover|Cropland|Energy Crops;Land Cover|Cropland|Energy Crops|Irrigated;1
 

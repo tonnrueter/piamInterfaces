@@ -24,12 +24,12 @@ for (mapping in names(mappingNames())) {
       pull("variable")
     if (length(factorWithComma) > 0) {
       warning("These variables in mapping ", mapping, " have a piam_factor using a ',' as decimal. Please use '.':\n",
-              paste(factorWithComma, collapse = "\n"),
-              "\nYou can run: devtools::load_all(); write.csv2(getMapping('", mapping,
+              paste("-", factorWithComma, collapse = "\n"),
+              "\nYou can run: devtools::load_all(); writeMapping(getMapping('", mapping,
               "') %>% mutate(piam_factor = gsub(',', '.', .data$piam_factor)), mappingNames('", mapping,
-              "'), na = '', row.names = FALSE, quote = FALSE)")
+              "')")
     }
-    expect_true(length(factorWithComma) == 0)
+    expect_length(factorWithComma, 0)
 
     # look for Moving Avg prices in REMIND variables
     movingavg <- mappingData %>%
@@ -40,7 +40,7 @@ for (mapping in names(mappingNames())) {
       warning("These variables use 'Price|*|Moving Avg' which is deprecated since remind2 1.111.0 on 2023-05-26.\n",
               "Please remove '|Moving Avg' to use a fixed moving average:\n", paste(movingavg, collapse = ", "))
     }
-    expect_equal(length(movingavg), 0)
+    expect_length(movingavg, 0)
 
     # check for duplicated rows
     duplicates <- mappingData %>%
@@ -61,11 +61,11 @@ for (mapping in names(mappingNames())) {
       warning("Inconsistent use of |+| notation for these variables:\n",
               paste(somePlusSomeNot, collapse = ", "))
     }
-    expect_equal(length(somePlusSomeNot), 0)
+    expect_length(somePlusSomeNot, 0)
 
     # check for inconsistent variable + unit combinations
     nonempty <- dplyr::filter(mappingData, ! is.na(.data$piam_variable))
-    allVarUnit <- paste0(nonempty$piam_variable, " (", nonempty$piam_unit, ")")
+    allVarUnit <- unitjoin(nonempty$piam_variable, nonempty$piam_unit)
     unclearVar <- nonempty$piam_variable[duplicated(nonempty$piam_variable) & ! duplicated(allVarUnit)]
     unclearVarUnit <- sort(unique(allVarUnit[nonempty$piam_variable %in% unclearVar]))
     if (length(unclearVarUnit) > 0) {
@@ -74,7 +74,7 @@ for (mapping in names(mappingNames())) {
     }
     expect_true(length(unclearVarUnit) == 0, label = paste("PIAM variables and units are consistent for", mapping))
 
-    allVarUnit <- paste0(mappingData$variable, " (", mappingData$unit, ")")
+    allVarUnit <- unitjoin(mappingData$variable, mappingData$unit)
     unclearVar <- mappingData$variable[duplicated(mappingData$variable) & ! duplicated(allVarUnit)]
     unclearVarUnit <- sort(unique(allVarUnit[mappingData$variable %in% unclearVar]))
     if (length(unclearVarUnit) > 0) {
@@ -90,8 +90,8 @@ for (mapping in names(mappingNames())) {
     if (nrow(unitfails) > 0) {
       printoutput <- withr::with_options(list(width = 180), print(unitfails, n = 200, na.print = "")) %>%
         capture.output()
-      warning("Failing units in ", mapping, ".\nIf that is a false positive, ",
-              "adjust areUnitsIdentical() or checkUnitFactor()\n",
+      warning("Unknown unit conversion in ", mapping, ".\nFix it, or if that is a false positive, ",
+              "adjust areUnitsIdentical() or checkUnitFactor(), see README.md\n",
               paste(printoutput, collapse = "\n"))
     }
     expect_true(nrow(unitfails) == 0)
@@ -102,9 +102,9 @@ for (mapping in names(mappingNames())) {
       pull("variable")
     if (length(factorWithoutVar) > 0) {
       warning("These variables in mapping ", mapping, " have a piam_factor, but nothing specified in piam_variable:\n",
-              paste(factorWithoutVar, collapse = "\n"))
+              paste("-", factorWithoutVar, collapse = "\n"))
     }
-    expect_true(length(factorWithoutVar) == 0)
+    expect_length(factorWithoutVar, 0)
 
     # checks only if source is supplied
     if ("source" %in% colnames(mappingData)) {
@@ -113,10 +113,13 @@ for (mapping in names(mappingNames())) {
         filter(! is.na(.data$source), is.na(.data$piam_variable)) %>%
         pull("variable")
       if (length(sourceWithoutVar) > 0) {
-        warning("These variables in mapping ", mapping, " have a source, but nothing specified in piam_variable:\n",
-                paste(sourceWithoutVar, collapse = "\n"))
+        warning("These variables in mapping ", mapping, " have a non-empty source column, ",
+                "but nothing specified in piam_variable:\n", paste("-", sourceWithoutVar, collapse = "\n"))
       }
-      expect_true(length(sourceWithoutVar) == 0)
+      expect_length(sourceWithoutVar, 0)
+
+      sources <- read.csv2(system.file("sources.csv", package = "piamInterfaces"))
+      sourceinfo <- paste0("The options are ", paste0(sources$symbol, " (", sources$model, ")", collapse = ", "), ".")
 
       # check for piam_variable without source if source is supplied
       varWithoutSource <- mappingData %>%
@@ -124,10 +127,25 @@ for (mapping in names(mappingNames())) {
         pull("piam_variable") %>%
         unique()
       if (length(varWithoutSource) > 0) {
-        warning("These piam_variable in mapping ", mapping, " have no source:\n",
-                paste(varWithoutSource, collapse = "\n"))
+        warning("These piam_variable in mapping ", mapping, " have an empty source column, see tutorial.md:\n",
+                paste("-", varWithoutSource, collapse = "\n"), "\n", sourceinfo)
       }
-      expect_true(length(varWithoutSource) == 0)
+      expect_length(varWithoutSource, 0)
+
+      # check whether all sources are described in inst/sources.csv
+      sourceOptions <- sort(c(sources$symbol, paste0(sources$symbol, "x")))
+      unknownSource <- mappingData %>% pull("source") %>% unique() %>% setdiff(c(NA, sourceOptions))
+      if (length(unknownSource) > 0) {
+        warning("The source column of mapping ", mapping, " contains these unknown options: ",
+                paste0(unknownSource, collapse = ", "), "\n", sourceinfo,
+                "\nNew options should be explained in 'tutorial.md' and added to 'inst/sources.csv'.")
+      }
+      expect_length(unknownSource, 0)
     } # end source checks
+
+    testfile <- file.path(tempdir(), paste0("mapping_", mapping, ".csv"))
+    writeMapping(mappingData, testfile)
+    mappingAfterWriting <- getMapping(testfile)
+    expect_identical(mappingData, mappingAfterWriting)
   })
 }

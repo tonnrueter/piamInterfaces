@@ -14,6 +14,7 @@
 #' @importFrom utils read.csv2 packageVersion
 #' @importFrom gms chooseFromList
 #' @importFrom tidyselect all_of
+#' @importFrom dplyr mutate across
 #' @examples
 #' \dontrun{
 #' getMapping("ECEMF")
@@ -47,10 +48,15 @@ getMapping <- function(project = NULL, requiredColsOnly = FALSE) {
                   paste0(setdiff(requiredCols, colnames(data)), collapse = ", ")))
     }
 
+    # to character if columns are empty
+    data <- data %>%
+      mutate(across(setdiff(colnames(data), c("tier", "piam_factor")), as.character))
+
     # return data
     if (isTRUE(requiredColsOnly)) {
       return(select(data, all_of(requiredCols)))
     }
+
     return(data)
   } else {
     stop("Mapping file ", filename, " not found in piamInterfaces@",

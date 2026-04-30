@@ -1,21 +1,94 @@
 piam_variable                                 ;old_name
 # you are allowed to add a wildcard *, but only at the end of both columns simultaneously
-
-# temporary, can be removed after EDGE-T refactoring
-FE|Transport|Pass|w/o Bunkers          ;FE|Transport|Pass|w/o bunkers
-
+# after adding variables, you can automatically adjust all mappings, see README.md.
+#
+# Renaming of investment variables acording to the IAMC template
+Investment|Energy Supply|Electricity|++|Fossil;Energy Investments|Electricity|Fossil
+Investment|Energy Supply|Electricity|Fossil|+|w/o CCSS;Energy Investments|Electricity|Fossil|w/o CCS
+Investment|Energy Supply|Electricity|+|Coal;Energy Investments|Electricity|+|Coal
+Investment|Energy Supply|Electricity|Coal|+|CCS;Energy Investments|Electricity|Coal|+|w/ CC
+Investment|Energy Supply|Electricity|Coal|+|w/o CCS;Energy Investments|Electricity|Coal|+|w/o CC
+Investment|Energy Supply|Electricity|+|Gas;Energy Investments|Electricity|+|Gas
+Investment|Energy Supply|Electricity|Gas|+|CCS;Energy Investments|Electricity|Gas|+|w/ CC
+Investment|Energy Supply|Electricity|Gas|+|w/o CCS;Energy Investments|Electricity|Gas|+|w/o CC
+Investment|Energy Supply|Electricity|+|Hydrogen;Energy Investments|Electricity|+|Hydrogen
+Investment|Energy Supply|Electricity|+|Oil;Energy Investments|Electricity|+|Oil
+Investment|Energy Supply|Electricity|Oil|+|w/o CCS;Energy Investments|Electricity|Oil|+|w/o CC
+Investment|Energy Supply|Electricity|Oil|+|CCS;Energy Investments|Electricity|Oil|+|w/ CC
+Investment|Energy Supply|Electricity|+|Biomass;Energy Investments|Electricity|+|Biomass
+Investment|Energy Supply|Electricity|Biomass|+|CCS;Energy Investments|Electricity|Biomass|+|w/ CC
+Investment|Energy Supply|Electricity|Biomass|+|w/o CCS;Energy Investments|Electricity|Biomass|+|w/o CC
+Investment|Energy Supply|Electricity|+|Nuclear;Energy Investments|Electricity|+|Nuclear
+Investment|Energy Supply|Electricity|+|Solar;Energy Investments|Electricity|+|Solar
+Investment|Energy Supply|Electricity|Wind|+|Onshore;Energy Investments|Electricity|Wind|+|Onshore
+Investment|Energy Supply|Electricity|Wind|+|Offshore;Energy Investments|Electricity|Wind|+|Offshore
+Investment|Energy Supply|Electricity|+|Wind;Energy Investments|Electricity|+|Wind
+Investment|Energy Supply|Electricity|+|Hydro;Energy Investments|Electricity|+|Hydro
+Investment|Energy Supply|Electricity|+|Geothermal;Energy Investments|Electricity|+|Geothermal
+Investment|Energy Supply|Electricity|+|Storage;Energy Investments|Electricity|+|Storage
+Investment|Energy Supply|Electricity|+|Transmission and Distribution;Energy Investments|Electricity|+|Grid
+Investment|Energy Supply|Electricity|Transmission and Distribution|+|BEV Chargers;Energy Investments|Electricity|Grid|+|BEV Chargers
+Investment|Energy Supply|Electricity|Transmission and Distribution|+|Normal;Energy Investments|Electricity|Grid|+|Normal
+Investment|Energy Supply|Electricity|Transmission and Distribution|+|VRE support;Energy Investments|Electricity|Grid|+|VRE support
+Investment|Energy Supply|Electricity|++|Non-Fossil;Energy Investments|Electricity|Non-Fossil
+Investment|Energy Supply|Electricity|Non-Fossil|++|Non-Bio Re;Energy Investments|Electricity|Non-Bio Re
+Investment|Energy Supply|+|Electricity;Energy Investments|Electricity
+Investment|Energy Supply|Electricity|+++|Generation;Energy Investments|Electricity Generation
+Investment|Energy Supply|+|Hydrogen;Energy Investments|Hydrogen
+Investment|Energy Supply|Hydrogen|++|PE;Energy Investments|Hydrogen|PE
+Investment|Energy Supply|Hydrogen|++|se2se;Energy Investments|Hydrogen|se2se
+Investment|Energy Supply|Hydrogen|++|se2fe;Energy Investments|Hydrogen|se2fe
+Investment|Energy Supply|Hydrogen|+|Fossil;Energy Investments|Hydrogen|+|Fossil
+Investment|Energy Supply|Hydrogen|+|RE;Energy Investments|Hydrogen|+|RE
+Investment|Energy Supply|Hydrogen|Bio;Energy Investments|Hydrogen|Bio
+Investment|Energy Supply|Hydrogen|+|Electrolysis;Energy Investments|Hydrogen|+|Electrolysis
+Investment|Energy Supply|Hydrogen|+|Transmission and Distribution;Energy Investments|Hydrogen|+|Transmission and Distribution
+Investment|Energy Supply|Liquids|Fossil|+|Oil Ref;Energy Investments|Liquids|Oil Ref
+Investment|Energy Supply|Liquids|+|Fossil;Energy Investments|Liquids|+|Fossil
+Investment|Energy Supply|Liquids|Fossil|+|w/o oil;Energy Investments|Liquids|Fossil|w/o oil
+Investment|Energy Supply|Liquids|+|Bio;Energy Investments|Liquids|+|Bio
+Investment|Energy Supply|Liquids|+|Hydrogen;Energy Investments|Liquids|+|Hydrogen
+Investment|Energy Supply|Liquids|+|Transport and Distribution;Energy Investments|Liquids|Transport and Distribution including gas stations
+Investment|Energy Supply|+|Liquids;Energy Investments|Liquids including gas stations
+Investment|Energy Supply|+|CO2 Trans&Stor;Energy Investments|CO2 Trans&Stor
+Investment|Energy Supply|+|DAC;Energy Investments|DAC
+Investment|+|Energy Supply;Energy Investments|Supply
+Investment|Energy Supply|+|Solids;Energy Investments|Solids
+Investment|Energy Supply|+|Gases;Energy Investments|Gases
+Investment|Energy Supply|Gases|+|Fossil;Energy Investments|Gases|+|Fossil
+Investment|Energy Supply|Gases|+|Hydrogen;Energy Investments|Gases|+|Hydrogen
+Investment|Energy Supply|Gases|+|Biomass;Energy Investments|Gases|+|Biomass
+Investment|Energy Supply|Gases|Biomass|+|CCS;Energy Investments|Gases|Biomass|+|w/ CC
+Investment|Energy Supply|Gases|Biomass|+|w/o CCS;Energy Investments|Gases|Biomass|+|w/o CC
+Investment|Energy Supply|Gases|+|Transmission and Distribution;Energy Investments|Gases|+|Transmission and Distribution
+Investment|Energy Supply|+|Heat;Energy Investments|Heat
+Investment|Energy Supply|Heat|+|Heat Pump;Energy Investments|Heat|+|Heat Pump
+Investment|Energy Supply|Heat|+|Gas;Energy Investments|Heat|+|Gas
+Investment|Energy Supply|Heat|+|Coal;Energy Investments|Heat|+|Coal
+Investment|Energy Supply|Heat|Fossil;Energy Investments|Heat|Fossil
+Investment|Energy Supply|Heat|+|Biomass;Energy Investments|Heat|+|Biomass
+Investment|Energy Supply|Heat|+|Transmission and Distribution;Energy Investments|Heat|+|Grid
+Investment|Energy Supply|+|Biochar;Energy Investments|Biochar
+Investment|+|Macroeconomy;Investments|Non-ESM
 # renamed in https://github.com/pik-piam/remind2/pull/579
 Energy Investments|Electricity|*       ;Energy Investments|Elec|*
-
+#
 # map MAGICC6 variables to new MAGICC7 names
 MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile     ;Temperature|Global Mean
 MAGICC7 AR6|Atmospheric Concentrations|CH4|50.0th Percentile ;Concentration|CH4
 MAGICC7 AR6|Atmospheric Concentrations|CO2|50.0th Percentile ;Concentration|CO2
 MAGICC7 AR6|Atmospheric Concentrations|N2O|50.0th Percentile ;Concentration|N2O
-
+#
 # changed magpie4 reporting variables
 Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Resources|Nitrogen|Cropland Budget|Inputs|Manure
-
+Income PPP;Total income
+#
+# magpie4 SOM
+Emissions|CO2|Land|Land-use Change|+|Soil;Emissions|CO2|Land|Land-use Change|+|SOM
+# magpie4 CO2 carbon stored in Harvested Wood Products (HWP)
+Emissions|CO2|Land|Land-use Change|Timber|Storage in HWP|+|Industrial Roundwood;Emissions|CO2|Long-Lived Material|Timber|Industrial Roundwood|+|Inflow
+Emissions|CO2|Land|Land-use Change|Timber|Storage in HWP|+|Buildings;Emissions|CO2|Long-Lived Material|Timber|Buildings|+|Inflow
+Emissions|CO2|Land|Land-use Change|+|Wood Harvest;Emissions|CO2|Land|Land-use Change|Timber|+|Wood Harvest
 # magpie4 timber
 Timber|Volumetric|Demand|Roundwood|+|Industrial roundwood;Timber|Volumetric|Demand|Industrial roundwood
 Timber|Volumetric|Demand|Roundwood|+|Timber for construction;Timber|Volumetric|Demand|Timber for construction
@@ -23,21 +96,21 @@ Timber|Volumetric|Demand|Roundwood|+|Wood fuel;Timber|Volumetric|Demand|Wood fue
 Timber|Volumetric|Production|Roundwood|+|Industrial roundwood;Timber|Volumetric|Production|Industrial roundwood
 Timber|Volumetric|Production|Roundwood|+|Timber for construction;Timber|Volumetric|Production|Timber for construction
 Timber|Volumetric|Production|Roundwood|+|Wood fuel;Timber|Volumetric|Production|Wood fuel
-
+#
 # magpie4 forest
 Resources|Land Cover|Forest|Planted Forest|Natural|+|CO2-price AR;Resources|Land Cover|Forest|Managed Forest|+|Afforestation
 Resources|Land Cover|Forest|Planted Forest|Natural|+|NPI_NDC AR;Resources|Land Cover|Forest|Managed Forest|+|NPI/NDC
 Resources|Land Cover|Forest|Planted Forest|Plantations|+|Timber;Resources|Land Cover|Forest|Managed Forest|+|Plantations
-
+#
 # magpie4 reporting variables for cropland changed with magpie4 2.3.2
 Resources|Land Cover|Cropland|Croparea|Bioenergy crops* ;Resources|Land Cover|Cropland|Bioenergy crops*
 Resources|Land Cover|Cropland|Croparea|Crops*           ;Resources|Land Cover|Cropland|Crops*
 Resources|Land Cover|Cropland|Croparea|Fallow Cropland* ;Resources|Land Cover|Cropland|Fallow Cropland*
 Resources|Land Cover|Cropland|Croparea|Forage*          ;Resources|Land Cover|Cropland|Forage*
-
+#
 # https://github.com/pik-piam/magpie4/commit/2847a13e5c171b9dc78dccdc7d6a085e8c8d74d3
 Prices|Index2020|Agriculture|Producer*                  ;Prices|Producer Price Index*
-
+#
 # Changes from edgeT refactoring v2.0, see also /p/projects/edget/Refactoring/remind/output/variableMappingOldNew.csv
 Emi|CO2|Energy|Demand|Transport|Bunkers|Freight|International Shipping;Emi|CO2|Transport|Freight|International Shipping|Demand
 Emi|CO2|Energy|Demand|Transport|Bunkers|Pass|International Aviation;Emi|CO2|Transport|Pass|Aviation|International|Demand
@@ -57,6 +130,7 @@ ES|Transport|Pass|Domestic Aviation;ES|Transport|Pass|Aviation|Domestic
 ES|Transport|Pass|Non-motorized;ES|Transport|Pass|Road|Non-Motorized
 ES|Transport|Pass|Non-motorized|Cycle;ES|Transport|Pass|Road|Non-Motorized|Cycling
 ES|Transport|Pass|Non-motorized|Walk;ES|Transport|Pass|Road|Non-Motorized|Walking
+FE|Transport|Bunkers|Freight;FE|Transport|Freight|Bunkers
 FE|Transport|Bunkers|Freight|International Shipping;FE|Transport|Freight|International Shipping
 FE|Transport|Bunkers|Freight|International Shipping|Liquids;FE|Transport|Freight|International Shipping|Liquids
 FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass;FE|Transport|Freight|International Shipping|Liquids|Biomass
@@ -67,17 +141,34 @@ FE|Transport|Bunkers|Pass|International Aviation|Liquids;FE|Transport|Pass|Aviat
 FE|Transport|Bunkers|Pass|International Aviation|Liquids|Biomass;FE|Transport|Pass|Aviation|International|Liquids|Biomass
 FE|Transport|Bunkers|Pass|International Aviation|Liquids|Fossil;FE|Transport|Pass|Aviation|International|Liquids|Fossil
 FE|Transport|Bunkers|Pass|International Aviation|Liquids|Hydrogen;FE|Transport|Pass|Aviation|International|Liquids|Hydrogen
+FE|Transport|Freight;FE|Transport|Freight|w/o Bunkers
 FE|Transport|Freight|Domestic Shipping;FE|Transport|Freight|Navigation
 FE|Transport|Freight|Domestic Shipping|Liquids;FE|Transport|Freight|Navigation|Liquids
 FE|Transport|Freight|Domestic Shipping|Liquids|Biomass;FE|Transport|Freight|Navigation|Liquids|Biomass
 FE|Transport|Freight|Domestic Shipping|Liquids|Fossil;FE|Transport|Freight|Navigation|Liquids|Fossil
 FE|Transport|Freight|Domestic Shipping|Liquids|Hydrogen;FE|Transport|Freight|Navigation|Liquids|Hydrogen
+FE|Transport|Freight|Liquids;FE|Transport|Freight|w/o Bunkers|Liquids
+FE|Transport|Freight|Liquids|Biomass;FE|Transport|Freight|w/o Bunkers|Liquids|Biomass
+FE|Transport|Freight|Liquids|Fossil;FE|Transport|Freight|w/o Bunkers|Liquids|Fossil
+FE|Transport|Freight|Liquids|Hydrogen;FE|Transport|Freight|w/o Bunkers|Liquids|Hydrogen
+FE|Transport|Pass;FE|Transport|Pass|w/o Bunkers
 FE|Transport|Pass|Domestic Aviation;FE|Transport|Pass|Aviation|Domestic
 FE|Transport|Pass|Domestic Aviation|Hydrogen;FE|Transport|Pass|Aviation|Domestic|Hydrogen
 FE|Transport|Pass|Domestic Aviation|Liquids;FE|Transport|Pass|Aviation|Domestic|Liquids
 FE|Transport|Pass|Domestic Aviation|Liquids|Biomass;FE|Transport|Pass|Aviation|Domestic|Liquids|Biomass
 FE|Transport|Pass|Domestic Aviation|Liquids|Fossil;FE|Transport|Pass|Aviation|Domestic|Liquids|Fossil
 FE|Transport|Pass|Domestic Aviation|Liquids|Hydrogen;FE|Transport|Pass|Aviation|Domestic|Liquids|Hydrogen
+FE|Transport|Pass|Electricity;FE|Transport|Pass|w/o Bunkers|Electricity
+FE|Transport|Pass|Gases;FE|Transport|Pass|w/o Bunkers|Gases
+FE|Transport|Pass|Hydrogen;FE|Transport|Pass|w/o Bunkers|Hydrogen
+FE|Transport|Pass|Liquids;FE|Transport|Pass|w/o Bunkers|Liquids
+FE|Transport|Pass|Liquids|Biomass;FE|Transport|Pass|w/o Bunkers|Liquids|Biomass
+FE|Transport|Pass|Liquids|Fossil;FE|Transport|Pass|w/o Bunkers|Liquids|Fossil
+FE|Transport|Pass|Liquids|Hydrogen;FE|Transport|Pass|w/o Bunkers|Liquids|Hydrogen
+FE|Transport|Pass|Road|LDV;FE|Transport|LDV
+FE|Transport|Pass|Road|LDV|Electricity;FE|Transport|LDV|Electricity
+FE|Transport|Pass|Road|LDV|Gases;FE|Transport|LDV|Gases
+FE|Transport|Pass|Road|LDV|Hydrogen;FE|Transport|LDV|Hydrogen
 Sales|Transport|Freight|Road|BEV;Sales|Transport|Truck|Electric
 Sales|Transport|Pass|Road|Bus|BEV;Sales|Transport|Bus|Electric
 Sales|Transport|Pass|Road|LDV|BEV;Sales|Transport|LDV|BEV
@@ -119,3 +210,185 @@ Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV;Stock|Trans
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV;Stock|Transport|LDV|Subcompact Car|FCEV
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid electric;Stock|Transport|LDV|Subcompact Car|Hybrid Electric
 Stock|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids;Stock|Transport|LDV|Subcompact Car|Liquids
+#
+# https://github.com/remindmodel/remind/pull/1829
+Emi|CO2|CDR|Synthetic Fuels CCS;Emi|CO2|CDR|Industry CCS|Synthetic Fuels
+#
+# https://github.com/pik-piam/remind2/pull/696
+Carbon Management|Carbon Capture|Energy|Pe2Se|+|Biomass;Carbon Management|Carbon Capture|+|Biomass|Pe2Se
+Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Heat w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|Heat w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|+|Fossil;Carbon Management|Carbon Capture|+|Fossil|Pe2Se
+Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Heat w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|Heat w/ couple prod
+Carbon Management|Carbon Capture|Energy|+|CDR Sector;Carbon Management|Carbon Capture|+|CDR energy
+Carbon Management|Carbon Capture|Energy|+|Industry;Carbon Management|Carbon Capture|+|Industry Energy
+Carbon Management|Carbon Capture|Energy|Industry|+|Biomass;Carbon Management|Carbon Capture|Industry Energy|+|Biomass
+Carbon Management|Carbon Capture|Energy|Industry|+|Fossil;Carbon Management|Carbon Capture|Industry Energy|+|Fossil
+Carbon Management|Carbon Capture|Energy|Industry|+|Synfuel;Carbon Management|Carbon Capture|Industry Energy|+|Synfuel
+Carbon Management|Carbon Capture|Industrial Processes|+|Industry;Carbon Management|Carbon Capture|+|Industry Process
+Carbon Management|Carbon Capture|Industrial Processes|Industry|+|Cement;Carbon Management|Carbon Capture|Industry Process|Cement
+Carbon Management|Carbon Capture|Industrial Processes|CDR Sector|+|OAE;Carbon Management|Carbon Capture|+|OAE calcination
+Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Electricity w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|+|Electricity w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Gases w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|+|Gases w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Hydrogen w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|+|Hydrogen w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|Biomass|+|Liquids w/ couple prod;Carbon Management|Carbon Capture|Biomass|Pe2Se|+|Liquids w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Electricity w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|+|Electricity w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Gases w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|+|Gases w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Hydrogen w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|+|Hydrogen w/ couple prod
+Carbon Management|Carbon Capture|Energy|Pe2Se|Fossil|+|Liquids w/ couple prod;Carbon Management|Carbon Capture|Fossil|Pe2Se|+|Liquids w/ couple prod
+Carbon Management|Carbon Capture|+|Waste;Carbon Management|Carbon Capture|Waste|Plastics Incineration
+Carbon Management|Carbon Capture|Waste|+|Synfuel;Carbon Management|Carbon Capture|Waste|Synfuels
+#
+Carbon Management|Storage|Energy|Pe2Se|+|Biomass;Carbon Management|Storage|+|Biomass|Pe2Se
+Carbon Management|Storage|Energy|Pe2Se|+|Fossil;Carbon Management|Storage|+|Fossil|Pe2Se
+Carbon Management|Storage|Energy|+|CDR Sector;Carbon Management|Storage|+|CDR energy
+Carbon Management|Storage|Energy|+|Industry;Carbon Management|Storage|+|Industry Energy
+Carbon Management|Storage|Energy|Industry|+|Biomass;Carbon Management|Storage|Industry Energy|+|Biomass
+Carbon Management|Storage|Energy|Industry|+|Fossil;Carbon Management|Storage|Industry Energy|+|Fossil
+Carbon Management|Storage|Energy|Industry|+|Synfuel;Carbon Management|Storage|Industry Energy|+|Synfuel
+Carbon Management|Storage|Industrial Processes|+|Industry;Carbon Management|Storage|+|Industry Process
+Carbon Management|Storage|Industrial Processes|CDR Sector|+|OAE;Carbon Management|Storage|+|OAE calcination
+Carbon Management|Storage|Energy|Pe2Se|Biomass|+|Electricity w/ couple prod;Carbon Management|Storage|Biomass|Pe2Se|+|Electricity w/ couple prod
+Carbon Management|Storage|Energy|Pe2Se|Biomass|+|Gases w/ couple prod;Carbon Management|Storage|Biomass|Pe2Se|+|Gases w/ couple prod
+Carbon Management|Storage|Energy|Pe2Se|Biomass|+|Hydrogen w/ couple prod;Carbon Management|Storage|Biomass|Pe2Se|+|Hydrogen w/ couple prod
+Carbon Management|Storage|Energy|Pe2Se|Biomass|+|Liquids w/ couple prod;Carbon Management|Storage|Biomass|Pe2Se|+|Liquids w/ couple prod
+Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Electricity w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Electricity w/ couple prod
+Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Gases w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Gases w/ couple prod
+Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Hydrogen w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Hydrogen w/ couple prod
+Carbon Management|Storage|Energy|Pe2Se|Fossil|+|Liquids w/ couple prod;Carbon Management|Storage|Fossil|Pe2Se|+|Liquids w/ couple prod
+Carbon Management|Storage|+|Waste;Carbon Management|Storage|Waste|Plastics Incineration
+Carbon Management|Storage|Waste|+|Synfuel;Carbon Management|Storage|Waste|Synfuels
+#
+Emi|CO2|Industrial Processes|Industry|+|Cement;Emi|CO2|Industrial Processes|+|Cement
+Emi|CO2|Industrial Processes|Industry|+|Chemicals;Emi|CO2|Industrial Processes|+|Chemicals
+Emi|GHG|+++|non-ES CDR;Emi|GHG|+++|non-BECCS CDR
+Emi|CO2|Energy|Demand|+|CDR Sector;Emi|CO2|Energy|Demand|+|CDR
+# https://github.com/pik-piam/remind2/pull/709
+# To make it more understandable, always use the explict version 'w/ Bunkers' or 'w/o Bunkers'
+# This part makes sure that if the 'w/o Bunkers' variable does not yet exist, it uses the main variable
+# because before of PR #709 was merged, this contained bunkers only at the global level
+Emi|CO2|w/o Bunkers                                      ;Emi|CO2
+Emi|CO2|w/o Bunkers|Energy                               ;Emi|CO2|Energy
+Emi|CO2|w/o Bunkers|Energy and Industrial Processes      ;Emi|CO2|Energy and Industrial Processes
+Emi|CO2|w/o Bunkers|Energy|Demand                        ;Emi|CO2|Energy|Demand
+Emi|CO2|w/o Bunkers|Energy|Demand|Liquids                ;Emi|CO2|Energy|Demand|Liquids
+Emi|CO2|w/o Bunkers|Energy|Demand|Transport              ;Emi|CO2|Energy|Demand|Transport
+Emi|CO2|w/o Bunkers|Energy|Demand|Transport|Liquids      ;Emi|CO2|Energy|Demand|Transport|Liquids
+Emi|CO2|w/o Bunkers|Gross                                ;Emi|CO2|Gross
+Emi|CO2|w/o Bunkers|Gross|Energy                         ;Emi|CO2|Gross|Energy
+Emi|CO2|w/o Bunkers|Gross|Energy and Industrial Processes;Emi|CO2|Gross|Energy and Industrial Processes
+Emi|CO2|w/o Bunkers|Gross|Energy|Demand                  ;Emi|CO2|Gross|Energy|Demand
+Emi|CO2|w/o Bunkers|Gross|Energy|Demand|Transport        ;Emi|CO2|Gross|Energy|Demand|Transport
+Emi|CO2|w/o Bunkers|LULUCF national accounting           ;Emi|CO2|LULUCF national accounting
+Emi|CO2|w/o Bunkers|Outside ETS and ESR                  ;Emi|CO2|Outside ETS and ESR
+Emi|CO2|w/o Bunkers|w/o Land-Use Change                  ;Emi|CO2|w/o Land-Use Change
+Emi|GHG|w/o Bunkers                                      ;Emi|GHG
+Emi|GHG|w/o Bunkers|CO2                                  ;Emi|GHG|CO2
+Emi|GHG|w/o Bunkers|Energy                               ;Emi|GHG|Energy
+Emi|GHG|w/o Bunkers|Energy|Demand                        ;Emi|GHG|Energy|Demand
+Emi|GHG|w/o Bunkers|Energy|Demand|Transport              ;Emi|GHG|Energy|Demand|Transport
+Emi|GHG|w/o Bunkers|Gross|Energy                         ;Emi|GHG|Gross|Energy
+Emi|GHG|w/o Bunkers|Gross|Energy|Demand                  ;Emi|GHG|Gross|Energy|Demand
+Emi|GHG|w/o Bunkers|Gross|Energy|Demand|Transport        ;Emi|GHG|Gross|Energy|Demand|Transport
+Emi|GHG|w/o Bunkers|LULUCF national accounting           ;Emi|GHG|LULUCF national accounting
+Emi|GHG|w/o Bunkers|Outside ETS and ESR                  ;Emi|GHG|Outside ETS and ESR
+Emi|GHG|w/o Bunkers|Outside ETS and ESR|Transport        ;Emi|GHG|Outside ETS and ESR|Transport
+Emi|GHG|w/o Bunkers|w/o Land-Use Change                  ;Emi|GHG|w/o Land-Use Change
+#
+# https://github.com/pik-piam/remind2/pull/714
+Tech|Liquids|Biomass|Biodiesel|Capital Costs;Tech|Liquids|Biomass|Biodiesel|w/o CC|Capital Costs
+SE|Liquids|Biomass|Cellulosic|+|Energy Crops;SE|Liquids|Biomass|Energy Crops
+SE|Liquids|Biomass|Cellulosic|+|Residues;SE|Liquids|Biomass|Residues
+#
+# renaming of monogastric meat
+Demand|Bioenergy|Livestock products|Pig meat;Demand|Bioenergy|Livestock products|Monogastric meat
+Demand|Feed|Feed for Pig meat|*;Demand|Feed|Feed for Monogastric meat|*
+Demand|Food|Livestock products|+|Pig meat;Demand|Food|Livestock products|+|Monogastric meat
+Demand|Material|Livestock products|Pig meat;Demand|Material|Livestock products|Monogastric meat
+Demand|Seed|Livestock products|Pig meat;Demand|Seed|Livestock products|Monogastric meat
+Nutrition|Calorie Supply|Livestock products|+|Pig meat;Nutrition|Calorie Supply|Livestock products|+|Monogastric meat
+Nutrition|Calorie Intake|Livestock products|+|Pig meat;Nutrition|Calorie Intake|Livestock products|+|Monogastric meat
+Trade|Net-Trade|Livestock products|+|Pig meat;Trade|Net-Trade|Livestock products|+|Monogastric meat
+Trade|Imports|Livestock products|Pig meat;Trade|Imports|Livestock products|Monogastric meat
+Trade|Exports|Livestock products|Pig meat;Trade|Exports|Livestock products|Monogastric meat
+Productivity|Feed protein conversion|Pig meat;Productivity|Feed protein conversion|Monogastric meat
+Production Nr|Livestock products|+|Pig meat;Production Nr|Livestock products|+|Monogastric meat
+Production|Livestock products|+|Pig meat;Production|Livestock products|+|Monogastric meat
+Prices|Index2020|Agriculture|Producer|Pig meat;Prices|Index2020|Agriculture|Producer|Monogastric meat
+#
+# renaming of air pollutants in REMIND
+# https://github.com/pik-piam/remind2/pull/768
+Emi|BC|w/ Bunkers;Emi|BC
+Emi|BC|w/ Bunkers|Energy;Emi|BC|Energy Supply and Demand
+Emi|BC|Energy|Demand|Buildings;Emi|BC|Energy Demand|Buildings
+Emi|BC|Energy|Demand|Industry;Emi|BC|Energy Demand|Industry
+Emi|BC|Energy|Demand|Transport|Ground;Emi|BC|Energy Demand|Transport|Ground Trans
+Emi|BC|w/ Bunkers|Energy|Demand|Transport;Emi|BC|Energy Demand|Transport
+Emi|BC|Energy|Supply;Emi|BC|Energy Supply
+Emi|BC|Energy|Supply|+|Electricity;Emi|BC|Energy Supply|Electricity
+Emi|BC|Energy|Supply|+|Extraction;Emi|BC|Energy Supply|Extraction
+Emi|BC|Product Use|Solvents;Emi|BC|Solvents
+Emi|CO|w/ Bunkers;Emi|CO
+Emi|CO|w/ Bunkers|Energy;Emi|CO|Energy Supply and Demand
+Emi|CO|Energy|Demand|Buildings;Emi|CO|Energy Demand|Buildings
+Emi|CO|Energy|Demand|Industry;Emi|CO|Energy Demand|Industry
+Emi|CO|Energy|Demand|Transport|Ground;Emi|CO|Energy Demand|Transport|Ground Trans
+Emi|CO|w/ Bunkers|Energy|Demand|Transport;Emi|CO|Energy Demand|Transport
+Emi|CO|Energy|Supply;Emi|CO|Energy Supply
+Emi|CO|Energy|Supply|+|Electricity;Emi|CO|Energy Supply|Electricity
+Emi|CO|Energy|Supply|+|Extraction;Emi|CO|Energy Supply|Extraction
+Emi|CO|Product Use|Solvents;Emi|CO|Solvents
+Emi|NH3|w/ Bunkers;Emi|NH3
+Emi|NH3|w/ Bunkers|Energy;Emi|NH3|Energy Supply and Demand
+Emi|NH3|Energy|Demand|Buildings;Emi|NH3|Energy Demand|Buildings
+Emi|NH3|Energy|Demand|Industry;Emi|NH3|Energy Demand|Industry
+Emi|NH3|Energy|Demand|Transport|Ground;Emi|NH3|Energy Demand|Transport|Ground Trans
+Emi|NH3|w/ Bunkers|Energy|Demand|Transport;Emi|NH3|Energy Demand|Transport
+Emi|NH3|Energy|Supply;Emi|NH3|Energy Supply
+Emi|NH3|Energy|Supply|+|Electricity;Emi|NH3|Energy Supply|Electricity
+Emi|NH3|Energy|Supply|+|Extraction;Emi|NH3|Energy Supply|Extraction
+Emi|NH3|Product Use|Solvents;Emi|NH3|Solvents
+Emi|NOx|w/ Bunkers;Emi|NOX
+Emi|CA|NOx;Emi|CA|NOX
+Emi|NOx|w/ Bunkers|Energy;Emi|NOX|Energy Supply and Demand
+Emi|NOx|Energy|Demand|Buildings;Emi|NOX|Energy Demand|Buildings
+Emi|NOx|Energy|Demand|Industry;Emi|NOX|Energy Demand|Industry
+Emi|NOx|Energy|Demand|Transport|Ground;Emi|NOX|Energy Demand|Transport|Ground Trans
+Emi|NOx|w/ Bunkers|Energy|Demand|Transport;Emi|NOX|Energy Demand|Transport
+Emi|NOx|Extra|Energy|Demand|Transport|Bunkers;Emi|NOX|Extra|Energy|Demand|Transport|Bunkers
+Emi|NOx|Extra|Energy|Demand|Transport|Bunkers|Freight|International Shipping;Emi|NOX|Extra|Energy|Demand|Transport|Bunkers|Freight|International Shipping
+Emi|NOx|Extra|Energy|Demand|Transport|Bunkers|Pass|International Aviation;Emi|NOX|Extra|Energy|Demand|Transport|Bunkers|Pass|International Aviation
+Emi|NOx|Energy|Supply;Emi|NOX|Energy Supply
+Emi|NOx|Energy|Supply|+|Electricity;Emi|NOX|Energy Supply|Electricity
+Emi|NOx|Energy|Supply|+|Extraction;Emi|NOX|Energy Supply|Extraction
+Emi|NOx|Product Use|Solvents;Emi|NOX|Solvents
+Emi|NOx|Waste;Emi|NOX|Waste
+Emi|OC|w/ Bunkers;Emi|OC
+Emi|OC|w/ Bunkers|Energy;Emi|OC|Energy Supply and Demand
+Emi|OC|Energy|Demand|Buildings;Emi|OC|Energy Demand|Buildings
+Emi|OC|Energy|Demand|Industry;Emi|OC|Energy Demand|Industry
+Emi|OC|Energy|Demand|Transport|Ground;Emi|OC|Energy Demand|Transport|Ground Trans
+Emi|OC|w/ Bunkers|Energy|Demand|Transport;Emi|OC|Energy Demand|Transport
+Emi|OC|Energy|Supply;Emi|OC|Energy Supply
+Emi|OC|Energy|Supply|+|Electricity;Emi|OC|Energy Supply|Electricity
+Emi|OC|Energy|Supply|+|Extraction;Emi|OC|Energy Supply|Extraction
+Emi|OC|Product Use|Solvents;Emi|OC|Solvents
+Emi|SO2|w/ Bunkers;Emi|SO2
+Emi|SO2|w/ Bunkers|Energy;Emi|SO2|Energy Supply and Demand
+Emi|SO2|Energy|Demand|Buildings;Emi|SO2|Energy Demand|Buildings
+Emi|SO2|Energy|Demand|Industry;Emi|SO2|Energy Demand|Industry
+Emi|SO2|Energy|Demand|Transport|Ground;Emi|SO2|Energy Demand|Transport|Ground Trans
+Emi|SO2|w/ Bunkers|Energy|Demand|Transport;Emi|SO2|Energy Demand|Transport
+Emi|SO2|Energy|Supply;Emi|SO2|Energy Supply
+Emi|SO2|Energy|Supply|+|Electricity;Emi|SO2|Energy Supply|Electricity
+Emi|SO2|Energy|Supply|+|Extraction;Emi|SO2|Energy Supply|Extraction
+Emi|SO2|Product Use|Solvents;Emi|SO2|Solvents
+Emi|VOC|w/ Bunkers;Emi|VOC
+Emi|VOC|w/ Bunkers|Energy;Emi|VOC|Energy Supply and Demand
+Emi|VOC|Energy|Demand|Buildings;Emi|VOC|Energy Demand|Buildings
+Emi|VOC|Energy|Demand|Industry;Emi|VOC|Energy Demand|Industry
+Emi|VOC|Energy|Demand|Transport|Ground;Emi|VOC|Energy Demand|Transport|Ground Trans
+Emi|VOC|w/ Bunkers|Energy|Demand|Transport;Emi|VOC|Energy Demand|Transport
+Emi|VOC|Energy|Supply;Emi|VOC|Energy Supply
+Emi|VOC|Energy|Supply|+|Electricity;Emi|VOC|Energy Supply|Electricity
+Emi|VOC|Energy|Supply|+|Extraction;Emi|VOC|Energy Supply|Extraction
+Emi|VOC|Product Use|Solvents;Emi|VOC|Solvents

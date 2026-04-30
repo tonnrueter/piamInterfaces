@@ -1,4 +1,4 @@
-ValidationKey: '7396605'
+ValidationKey: '12120370'
 AutocreateReadme: yes
 allowLinterWarnings: no
 AddInReadme: tutorial.md
@@ -8,3 +8,5 @@ AcceptedWarnings:
 AcceptedNotes: checking installed package size
 enforceVersionUpdate: yes
 skipCoverage: no
+AutocreateCITATION: yes
+UsePkgDown: yes

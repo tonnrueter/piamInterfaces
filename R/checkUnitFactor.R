@@ -30,7 +30,8 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   # This uses regex matching, so "1000 million US$" = "1 billion US$" is covered by that as well.
   scaleConversion <- list(
                           c("1", "million", "million veh"),
-                          c("1", "million vehicles/yr", "million veh"),
+                          c("1", "million/yr", "million veh"), # EDGE-T still not reporting correctly
+                          c("1", "million vehicles/yr", "million veh"), # EDGE-T still not reporting correctly
                           c("1", "Index (2020 = 1)", "1"),
                           c("1", "Index (2010 = 1)", "1"),
                           c("6", "GWh/yr", "GW/yr"), # for 'New Cap|Electricity|Storage|Battery'
@@ -44,6 +45,7 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1000", "G", "T"),
                           c("1000", "M", "G"),
                           c("1000", "k", "M"),
+                          c("0.001", "/k", "/M"),
                           # conversion factors taken from ECEMF Model Comparison Protocol, DOI:10.5281/zenodo.6811317
                           c("1.12", "US$2010", "US$2005"),
                           c("1.12", "US$2010", "US$05"),
@@ -58,8 +60,11 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("0.9096", "US$2010", "US$2017"),
                           c("0.9096", "US$2010", "US$17"),
                           c("0.9096", "US$2010/t CO2", "US$2017/tCO2"),
+                          c("0.9096", "USD_2010/t CO2", "US$2017/tCO2"),
                           c("0.9096", "USD_2010", "US$2017"),
                           c("0.0009096", "billion US$2010/yr", "million US$2017 PPP/yr"),
+                          c("0.0009096", "billion USD_2010/yr", "million US$2017 PPP/yr"),
+                          c("0.0009096", "billion USD_2010/yr", "million US$2017 MER/yr"),
                           c("0.001099", "EJ/billion US$2010", "MJ/US$2017"), # 0.001 divided by 0.9096
                           c("0.001099", "EJ/billion USD_2010", "MJ/US$2017"), # 0.001 divided by 0.9096
                           c("0.9502", "EUR_2020", "US$2017"), # ESABCC
@@ -86,14 +91,15 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
   template$piam_factor[is.na(template$piam_factor)] <- 1
   success <- areUnitsIdentical(template$piam_unit, template$unit) & template$piam_factor %in% c(1, -1)
   success <- success | is.na(template$piam_variable)
-  ignore <-  c(paste0("Emi|CO2|Energy|Waste", c("", "|Feedstocks unknown fate", "|Plastics Incineration")),
-               "Emi|CO2|Gross|Energy|Waste")
+  ignore <- NULL # for temporary deletions, for example if a project template is wrong
   success <- success | removePlus(as.character(template$piam_variable)) %in% ignore
 
   firsterror <- TRUE
   for (sc in scaleConversion) {
     fails <- template %>%
+               # check whether substitution implies identical units
                mutate(matches = .data$piam_unit == gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
+               # check whether any substitution has actually taken place (excludes all other where piam_unit = unit)
                mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
                mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
                mutate(failed  = ! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))

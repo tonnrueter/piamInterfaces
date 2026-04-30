@@ -1,7 +1,7 @@
-variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;Comment;Definition;source
+variable;unit;piam_variable;piam_unit;piam_factor;piam_spatial;internal_comment;comment;description;source
 Emissions|Kyoto Gases|AFOLU;Mt CO2-equiv/yr;Emi|GHG|AFOLU;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Industry;Mt CO2-equiv/yr;Emi|GHG|Industry;Mt CO2eq/yr;1;;;;;R
-Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Transport;Mt CO2eq/yr;1;;;;;R
+Emissions|Kyoto Gases|Transportation;Mt CO2-equiv/yr;Emi|GHG|w/ Bunkers|Energy|Demand|Transport;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Residential and Commercial;Mt CO2-equiv/yr;Emi|GHG|Energy|Demand|+|Buildings;Mt CO2eq/yr;1;;;;;R
 Emissions|Kyoto Gases|Supply;Mt CO2-equiv/yr;Emi|GHG|Energy|+|Supply;Mt CO2eq/yr;1;;;;;R
 Final Energy|Residential and Commercial|Liquids|Biomass;EJ/yr;FE|Buildings|Liquids|+|Biomass;EJ/yr;1;;;;;R
@@ -24,4 +24,4 @@ GDP|MER|w/ Macro-Economic Climate Damage;billion US$2010/yr;GDP|MER|w/ Macro-Eco
 Emissions|NH3;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
 Emissions|NH3|AFOLU;Mt NH3/yr;Emissions|NH3|Land;Mt NH3/yr;;;add that temporarily until Emi|NH3 is fixed;;;M
 Emissions|CO2|Energy|Supply|Extraction;Mt CO2/yr;Emi|CO2|Energy|Supply|Extraction;Mt CO2/yr;1;;;;energy-related CO2 emissions from extraction processes;R
-Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;FE|Transport|Liquids|Hydrogen;EJ/yr;1;;;;Final energy, in the form of synfuel generated from Hydrogen;R
+Final Energy|Transportation|Liquids|Hydrogen;EJ/yr;FE|Transport|Liquids|+|Hydrogen;EJ/yr;1;;;;Final energy, in the form of synfuel generated from Hydrogen;R

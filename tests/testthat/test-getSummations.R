@@ -16,7 +16,7 @@ test_that("basic checks on summation Groups", {
         warning("These elements of summation_groups_", template, " are not defined in mapping_", template, ": ",
                 paste(notinMapping, collapse = ", "))
       }
-      expect_equal(length(notinMapping), 0)
+      expect_length(notinMapping, 0)
     }
   }
 })

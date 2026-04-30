@@ -9,12 +9,13 @@
 #'        R = REMIND, M = MAgPIE, T = EDGE-T, B = Brick, C = Climate/MAGICC, TRUE = all
 #' @importFrom piamutils deletePlus
 #' @importFrom quitte as.quitte
+#' @importFrom magclass unitjoin
 #' @return an invisible vector with missing variables
 #' @export
 checkMissingVars <- function(mifdata, mapping = TRUE, sources = TRUE) {
   mifdata <- as.quitte(mifdata)
   mappingVariables <- deletePlus(getMappingVariables(mapping, sources))
-  computedVariables <- unique(paste0(deletePlus(mifdata$variable), " (", gsub("^$", "unitless", mifdata$unit), ")"))
+  computedVariables <- unique(unitjoin(deletePlus(mifdata$variable), gsub("^$", "unitless", mifdata$unit)))
   missingVariables <- sort(setdiff(mappingVariables, computedVariables))
   if (length(missingVariables) > 0) {
     message("# The following ", length(missingVariables), " variables are expected in the piamInterfaces package",
