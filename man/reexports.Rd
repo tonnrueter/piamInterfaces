@@ -11,6 +11,6 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{piamutils}{\code{\link[piamutils]{niceround}}}
+  \item{piamutils}{\code{\link[piamutils:niceround]{niceround()}}}
 }}
 

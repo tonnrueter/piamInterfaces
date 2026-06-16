@@ -1,8 +1,8 @@
 Type: Package
 Package: piamInterfaces
 Title: Project specific interfaces to REMIND / MAgPIE
-Version: 0.59.0
-Date: 2026-03-31
+Version: 0.61.0
+Date: 2026-06-12
 Authors@R: c(
     person("Falk", "Benke", , "benke@pik-potsdam.de", role = c("aut", "cre")),
     person("Oliver", "Richters", role = "aut")
@@ -32,8 +32,8 @@ Suggests:
     withr,
     writexl
 Encoding: UTF-8
-RoxygenNote: 7.3.3
 Config/testthat/parallel: true
 Config/testthat/edition: 3
 Config/testthat/start-first: plotIntercomparison, generateIIASASubmission, checkSummations
 Config/Needs/website: tidyverse/tidytemplate
+Config/roxygen2/version: 8.0.0

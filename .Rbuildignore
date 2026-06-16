@@ -18,3 +18,4 @@ tutorial.md
 ^\.git$
 ^\.claude$
 ^_pkgdown\.yml$
+^\.positai$

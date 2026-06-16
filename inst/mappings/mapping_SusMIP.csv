@@ -1,0 +1,460 @@
+variable;unit;piam_variable;piam_unit;piam_factor;description;source
+Agricultural Material Footprint [per capita];t DM/cap/yr;SDG|SDG12|Material footprint;tDM/capita/yr;;Biomass usage per capita excluding pasture and forestry;M
+Agricultural Production;million t DM/yr;Production|+|Crops;Mt DM/yr;;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
+Agricultural Production;million t DM/yr;Production|+|Livestock products;Mt DM/yr;;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
+Agricultural Production;million t DM/yr;Production|+|Bioenergy crops;Mt DM/yr;;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
+Agricultural Production;million t DM/yr;Demand|Bioenergy|+|Crop residues;Mt DM/yr;;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
+Agricultural Production;million t DM/yr;Demand|Feed|+|Crop residues;Mt DM/yr;;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
+Agricultural Production;million t DM/yr;Demand|Material|+|Crop residues;Mt DM/yr;;Total production of food, non-food and feed products (crops and livestock) and bioenergy crops (1st & 2nd generation);M
+Agricultural Production|Crops;million t DM/yr;Production|+|Crops;Mt DM/yr;;Production of crops;M
+Agricultural Production|Crops;million t DM/yr;Production|+|Bioenergy crops;Mt DM/yr;;Production of crops;M
+Agricultural Production|Crops|Energy Crops;million t DM/yr;Production|+|Bioenergy crops;Mt DM/yr;;Production of second-generation bioenergy crops (short rotation grasses, short rotation trees);M
+Agricultural Production|Livestock;million t DM/yr;Production|+|Livestock products;Mt DM/yr;;Production of livestock products (excluding fish);M
+Air Pollution|PM2.5|Urban Population;ug/m3;Air pollution concentration|PM2_5|Urban population;ug/m3;;Urban population weighted annual average PM2.5 concentrations.;S
+Building Stock|Commercial|Floor Space|Gross;billion m2;;;;Standing stock of floor space in residential and commercial buildings;
+Building Stock|Commercial|Floor Space|Useful;billion m2;;;;Standing stock of floor space in residential and commercial buildings;
+Building Stock|Residential and Commercial|Floor Space|Gross;billion m2;ES|Buildings|Floor Space;bn m2;1;Standing stock of floor space in residential and commercial buildings;R
+Building Stock|Residential and Commercial|Floor Space|Useful;billion m2;ES|Buildings|Floor Space;bn m2;1;Standing stock of floor space in residential and commercial buildings;R
+Building Stock|Residential|Floor Space|Gross;billion m2;;;;Standing stock of floor space in residential and commercial buildings;
+Building Stock|Residential|Floor Space|Useful;billion m2;;;;Standing stock of floor space in residential and commercial buildings;
+Carbon Capture;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;;Total amount of carbon dioxide (CO2) captured either from the atmosphere, directly from oceans, or from point sources as energy use in supply and demand sectors (IPCC category 1A, 1B) or industrial processes (IPCC categories 2A, B, C, E);R
+Carbon Capture|Geological Storage;Mt CO2/yr;Carbon Management|Storage;Mt CO2/yr;;Captured carbon dioxide (CO2) that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture and Sequestration' (CCS);R
+Carbon Capture|Geological Storage|Biomass;Mt CO2/yr;Carbon Management|Storage|Biomass;Mt CO2/yr;;Captured carbon dioxide (CO2) from purpose-grown bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy and traditional biomass that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture and Sequestration' (CCS);R
+Carbon Capture|Geological Storage|Direct Air Capture;Mt CO2/yr;Carbon Management|Storage|+|DAC;Mt CO2/yr;;Captured carbon dioxide (CO2) from direct air capture (DAC) that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Direct Air Capture and Sequestration' (DACCS);R
+Carbon Capture|Geological Storage|Direct Ocean Capture;Mt CO2/yr;;;;Captured carbon dioxide (CO2) from direct ocean capture that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture and Sequestration' (CCS);
+Carbon Capture|Geological Storage|Fossil;Mt CO2/yr;Carbon Management|Storage|Fossil;Mt CO2/yr;;Captured carbon dioxide (CO2) from fossil fuels including coal, natural gas and conventional/unconventional oil that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture and Sequestration' (CCS);R
+Carbon Capture|Geological Storage|Industrial Processes;Mt CO2/yr;Carbon Management|Storage|Industrial Processes|+|Industry;Mt CO2/yr;;Captured carbon dioxide (CO2) from industrial processes (e.g., cement production) that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture and Sequestration' (CCS);R
+Carbon Capture|Geological Storage|Other Sources;Mt CO2/yr;Carbon Management|Storage|Industrial Processes|+|CDR Sector;Mt CO2/yr;;Captured carbon dioxide (CO2) from other sources that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture and Sequestration' (CCS);R
+Carbon Capture|Geological Storage|Synthetic Fuels;Mt CO2/yr;Carbon Management|Storage|Synfuel;Mt CO2/yr;;Captured carbon dioxide (CO2) from synthetic fuels produced from carbon captured from fossil fuels and directly or indirectly from the atmosphere, e.g. using carbon-capture- and-utilization (CCU) from biomass or fossil fuels or Direct Air Capture (DAC) that is injected into subsurface geological storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture and Sequestration' (CCS);R
+Carbon Capture|Leakage;Mt CO2/yr;Carbon Management|Venting of Captured Carbon;Mt CO2/yr;;Captured carbon dioxide (CO2) that is vented, leaked, or re-emitted during transport;R
+Carbon Capture|Other Storage;Mt CO2/yr;;;;Other types of storage for captured carbon dioxide (CO2);
+Carbon Capture|Utilization;Mt CO2/yr;Carbon Management|Usage;Mt CO2/yr;;Captured carbon dioxide (CO2) that is used in the manufacture of fuels or materials, or to enhance the productivity of oil and/or natural gas reservoirs;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|CDR;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|Industrial Processes|+|CDR Sector;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;R
+Carbon Removal;Mt CO2/yr;Emi|CO2|CDR|+|Land-Use Change;Mt CO2/yr;1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;R
+Carbon Removal;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|CO2-price AR;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;M
+Carbon Removal;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|NPI_NDC AR;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;M
+Carbon Removal;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|Cropland Tree Cover;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;M
+Carbon Removal;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Soil|Soil Carbon Management|+|Withdrawals;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;M
+Carbon Removal;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Peatland|+|Negative;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;M
+Carbon Removal;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Timber|+|Storage in HWP;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) from atmospheric origin or biomass through deliberate human activities;M
+Carbon Removal|Enhanced Weathering;Mt CO2/yr;Emi|CO2|CDR|+|EW;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) by terrestrial application of alkalinity to increase CO2 uptake on land;R
+Carbon Removal|Geological Storage|Biomass;Mt CO2/yr;Emi|CO2|CDR|+|BECCS;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through geological storage of CO2 from biogenic orgin, i.e., bioenergy with carbon capture and storage (BECCS);R
+Carbon Removal|Geological Storage|Direct Air Capture;Mt CO2/yr;Emi|CO2|CDR|+|DACCS;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through direct air capture in combination with carbon-capture and sequestration (CCS);R
+Carbon Removal|Geological Storage|Other Sources;Mt CO2/yr;;;;Gross removals of carbon dioxide (CO2) through geological storage of CO2 from other sources, not including carbon from fossil fuels;
+Carbon Removal|Geological Storage|Synthetic Fuels;Mt CO2/yr;Emi|CO2|CDR|+|Synthetic Fuels CCS;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through geological storage of CO2 captured from burning synthetic fuels produced from carbon-capture-and-utilization (CCU), not derived from fossil fuels;R
+Carbon Removal|Land Use;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|CO2-price AR;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);M
+Carbon Removal|Land Use;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|NPI_NDC AR;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);M
+Carbon Removal|Land Use;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|Cropland Tree Cover;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);M
+Carbon Removal|Land Use;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Soil|Soil Carbon Management|+|Withdrawals;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);M
+Carbon Removal|Land Use;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Peatland|+|Negative;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through land-based sinks (e.g., afforestation, soil carbon enhancement, biochar);M
+Carbon Removal|Land Use|Agroforestry;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|Cropland Tree Cover;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through intentionally integrating trees with crops or pasture on the same land;M
+Carbon Removal|Land Use|Biochar;Mt CO2/yr;;;;Gross removals of carbon dioxide (CO2) through conversion of biomass to recalcitrant carbon via pyrolysis and its subsequent application to croplands to increase soil carbon stocks;
+Carbon Removal|Land Use|Forest Management;Mt CO2/yr;;;;Gross removals of carbon dioxide (CO2) through improved forest management;
+Carbon Removal|Land Use|Other;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Peatland|+|Negative;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through other land-related CDR methods;M
+Carbon Removal|Land Use|Re/Afforestation;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|CO2-price AR;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through reforestation (natural forest) or afforestation (monoculture/non-native species);M
+Carbon Removal|Land Use|Re/Afforestation;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Regrowth|+|NPI_NDC AR;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through reforestation (natural forest) or afforestation (monoculture/non-native species);M
+Carbon Removal|Land Use|Soil Carbon Management;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Soil|Soil Carbon Management|+|Withdrawals;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through enhancing the carbon content of soils;M
+Carbon Removal|Long-Lived Materials;Mt CO2/yr;Emi|CO2|CDR|+|Materials;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through long-lived materials;R
+Carbon Removal|Long-Lived Materials;Mt CO2/yr;Emissions|CO2|Land|Land-use Change|Timber|+|Storage in HWP;Mt CO2/yr;-1;Gross removals of carbon dioxide (CO2) through long-lived materials;M
+Consumption;billion USD_2010/yr;Consumption;billion US$2017/yr;0.9096;Total consumption of all goods, by all consumers in a region;R
+Consumption|D1 [Share];%;;;;Share of total consumption accruing to the first decile;
+Consumption|D10 [Share];%;;;;Share of total consumption accruing to the tenth decile;
+Consumption|D2 [Share];%;;;;Share of total consumption accruing to the second decile;
+Consumption|D3 [Share];%;;;;Share of total consumption accruing to the third decile;
+Consumption|D4 [Share];%;;;;Share of total consumption accruing to the fourth decile;
+Consumption|D5 [Share];%;;;;Share of total consumption accruing to the fifth decile;
+Consumption|D6 [Share];%;;;;Share of total consumption accruing to the sixth decile;
+Consumption|D7 [Share];%;;;;Share of total consumption accruing to the seventh decile;
+Consumption|D8 [Share];%;;;;Share of total consumption accruing to the eighth decile;
+Consumption|D9 [Share];%;;;;Share of total consumption accruing to the ninth decile;
+Consumption|Food|D1 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the first decile;
+Consumption|Food|D10 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the tenth decile;
+Consumption|Food|D2 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the second decile;
+Consumption|Food|D3 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the third decile;
+Consumption|Food|D4 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the fourth decile;
+Consumption|Food|D5 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the fifth decile;
+Consumption|Food|D6 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the sixth decile;
+Consumption|Food|D7 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the seventh decile;
+Consumption|Food|D8 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the eighth decile;
+Consumption|Food|D9 [Share];%;;;;Share of total consumption of food and non-alcoholic beverages, for the ninth decile;
+Consumption|Housing|Energy|D1 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the first decile;
+Consumption|Housing|Energy|D10 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the tenth decile;
+Consumption|Housing|Energy|D2 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the second decile;
+Consumption|Housing|Energy|D3 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the third decile;
+Consumption|Housing|Energy|D4 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the fourth decile;
+Consumption|Housing|Energy|D5 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the fifth decile;
+Consumption|Housing|Energy|D6 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the sixth decile;
+Consumption|Housing|Energy|D7 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the seventh decile;
+Consumption|Housing|Energy|D8 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the eighth decile;
+Consumption|Housing|Energy|D9 [Share];%;;;;Share of total consumption of electricity, gas and other fuels in housing (code 04.5), for the ninth decile;
+Consumption|Transport|Energy|D1 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the first decile;
+Consumption|Transport|Energy|D10 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the tenth decile;
+Consumption|Transport|Energy|D2 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the second decile;
+Consumption|Transport|Energy|D3 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the third decile;
+Consumption|Transport|Energy|D4 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the fourth decile;
+Consumption|Transport|Energy|D5 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the fifth decile;
+Consumption|Transport|Energy|D6 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the sixth decile;
+Consumption|Transport|Energy|D7 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the seventh decile;
+Consumption|Transport|Energy|D8 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the eighth decile;
+Consumption|Transport|Energy|D9 [Share];%;;;;Share of total consumption of fuels for personal transport equipment (Diesel 07.2.2.1 - Petrol 07.2.2.3 - Other fuels 07.2.2.4), for the ninth decile;
+Emissions|CH4;Mt CH4/yr;Emi|CH4;Mt CH4/yr;;Emissions of methane (CH4) to the atmosphere;R
+Emissions|CH4;Mt CH4/yr;Emi|CH4|Agriculture|+|Waste Burning;Mt CH4/yr;-1;Emissions of methane (CH4) to the atmosphere;R
+Emissions|CH4;Mt CH4/yr;Emissions|CH4|Land|Biomass Burning|+|Burning of Crop Residues;Mt CH4/yr;;Emissions of methane (CH4) to the atmosphere;M
+Emissions|CH4;Mt CH4/yr;Emissions|CH4|AFOLU|Land|Fires;Mt CH4/yr;;Emissions of methane (CH4) to the atmosphere;M
+Emissions|CH4;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;-1;Emissions of methane (CH4) to the atmosphere;R
+Emissions|CH4;Mt CH4/yr;Emi|CH4|Land-Use Change|+|Peatland;Mt CH4/yr;;Emissions of methane (CH4) to the atmosphere;R
+Emissions|CH4;Mt CH4/yr;Emi|CH4|Extra|Transport|Bunkers|Freight;Mt CH4/yr;;Emissions of methane (CH4) to the atmosphere;R
+Emissions|CH4;Mt CH4/yr;Emi|CH4|Extra|Buildings|Solids;Mt CH4/yr;;Emissions of methane (CH4) to the atmosphere;R
+Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|+|Agriculture;Mt CH4/yr;;Emissions of methane (CH4) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|Agriculture|+|Waste Burning;Mt CH4/yr;-1;Emissions of methane (CH4) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|CH4|AFOLU;Mt CH4/yr;Emissions|CH4|Land|Biomass Burning|+|Burning of Crop Residues;Mt CH4/yr;;Emissions of methane (CH4) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;M
+Emissions|CH4|AFOLU;Mt CH4/yr;Emissions|CH4|AFOLU|Land|Fires;Mt CH4/yr;;Emissions of methane (CH4) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;M
+Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|Land-Use Change|+|Peatland;Mt CH4/yr;;Emissions of methane (CH4) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|CH4|Energy and Industrial Processes;Mt CH4/yr;Emi|CH4|+|Energy Supply;Mt CH4/yr;;Emissions of methane (CH4) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|CH4|Energy and Industrial Processes;Mt CH4/yr;Emi|CH4|+|Extraction;Mt CH4/yr;;Emissions of methane (CH4) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|CH4|Energy and Industrial Processes;Mt CH4/yr;Emi|CH4|Extra|Transport|Bunkers|Freight;Mt CH4/yr;;Emissions of methane (CH4) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|CH4|Energy and Industrial Processes;Mt CH4/yr;Emi|CH4|Extra|Buildings|Solids;Mt CH4/yr;;Emissions of methane (CH4) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|CO2;Mt CO2/yr;Emi|CO2|w/ Bunkers;Mt CO2/yr;;Emissions of carbon dioxide (CO2) to the atmosphere;R
+Emissions|CO2;Mt CO2/yr;Emissions|CO2|Land|Biomass Burning|+|Burning of Crop Residues;Mt CO2/yr;;Emissions of carbon dioxide (CO2) to the atmosphere;M
+Emissions|CO2|AFOLU;Mt CO2/yr;Emi|CO2|+|Land-Use Change;Mt CO2/yr;;Emissions of carbon dioxide (CO2) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|CO2|AFOLU;Mt CO2/yr;Emissions|CO2|Land|Biomass Burning|+|Burning of Crop Residues;Mt CO2/yr;;Emissions of carbon dioxide (CO2) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;M
+Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|w/ Bunkers|Energy and Industrial Processes;Mt CO2/yr;1;Emissions of carbon dioxide (CO2) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|CO2|Energy and Industrial Processes;Mt CO2/yr;Emi|CO2|Industrial Processes|+|CDR Sector;Mt CO2/yr;-1;Emissions of carbon dioxide (CO2) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|Kyoto Gases;Mt CO2-equiv/yr;Emi|GHG|w/ Bunkers;Mt CO2eq/yr;;Emissions of Kyoto GHG emissions, including CO2, CH4, N2O and F-gases to the atmosphere;R
+Emissions|Kyoto Gases|AFOLU;Mt CO2-equiv/yr;Emi|GHG|AFOLU;Mt CO2eq/yr;;Emissions of Kyoto GHG emissions, including CO2, CH4, N2O and F-gases from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2-equiv/yr;Emi|GHG|w/ Bunkers|Energy;Mt CO2eq/yr;1;Emissions of Kyoto GHG emissions, including CO2, CH4, N2O and F-gases from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|Kyoto Gases|Energy and Industrial Processes;Mt CO2-equiv/yr;Emi|GHG|+++|Industrial Processes;Mt CO2eq/yr;1;Emissions of Kyoto GHG emissions, including CO2, CH4, N2O and F-gases from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|N2O;kt N2O/yr;Emi|N2O;kt N2O/yr;;Emissions of nitrous oxide (N2O) to the atmosphere;R
+Emissions|N2O;kt N2O/yr;Emi|N2O|Agriculture|+|Waste Burning;kt N2O/yr;-1;Emissions of nitrous oxide (N2O) to the atmosphere;R
+Emissions|N2O;kt N2O/yr;Emissions|N2O|Land|Biomass Burning|+|Burning of Crop Residues;Mt N2O/yr;1000;Emissions of nitrous oxide (N2O) to the atmosphere;M
+Emissions|N2O;kt N2O/yr;Emissions|N2O|AFOLU|Land|Fires;Mt N2O/yr;1000;Emissions of nitrous oxide (N2O) to the atmosphere;M
+Emissions|N2O;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;-1;Emissions of nitrous oxide (N2O) to the atmosphere;R
+Emissions|N2O;kt N2O/yr;Emi|N2O|Land-Use Change|+|Peatland;kt N2O/yr;;Emissions of nitrous oxide (N2O) to the atmosphere;R
+Emissions|N2O;kt N2O/yr;Emi|N2O|Extra|Transport|Pass|Aviation;kt N2O/yr;;Emissions of nitrous oxide (N2O) to the atmosphere;R
+Emissions|N2O;kt N2O/yr;Emi|N2O|Extra|Transport|Bunkers|Freight;kt N2O/yr;;Emissions of nitrous oxide (N2O) to the atmosphere;R
+Emissions|N2O;kt N2O/yr;Emi|N2O|Extra|Buildings;kt N2O/yr;;Emissions of nitrous oxide (N2O) to the atmosphere;R
+Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Agriculture;kt N2O/yr;;Emissions of nitrous oxide (N2O) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|Agriculture|+|Waste Burning;kt N2O/yr;-1;Emissions of nitrous oxide (N2O) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|N2O|AFOLU;kt N2O/yr;Emissions|N2O|Land|Biomass Burning|+|Burning of Crop Residues;Mt N2O/yr;1000;Emissions of nitrous oxide (N2O) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;M
+Emissions|N2O|AFOLU;kt N2O/yr;Emissions|N2O|AFOLU|Land|Fires;Mt N2O/yr;1000;Emissions of nitrous oxide (N2O) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;M
+Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|Land-Use Change|+|Peatland;kt N2O/yr;;Emissions of nitrous oxide (N2O) from agriculture, forestry and other land use (IPCC 1996 category 4, 5 - IPCC 2006 category 3), including agricultural emissions from livestock, rice cultivation and soil management as well as emissions from land use and land-use change such as deforestation, conversion of non-forest natural land, and drained peatlands;R
+Emissions|N2O|Energy and Industrial Processes;kt N2O/yr;Emi|N2O|+|Energy Supply;kt N2O/yr;;Emissions of nitrous oxide (N2O) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|N2O|Energy and Industrial Processes;kt N2O/yr;Emi|N2O|+|Transport;kt N2O/yr;;Emissions of nitrous oxide (N2O) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|N2O|Energy and Industrial Processes;kt N2O/yr;Emi|N2O|Extra|Transport|Pass|Aviation;kt N2O/yr;;Emissions of nitrous oxide (N2O) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|N2O|Energy and Industrial Processes;kt N2O/yr;Emi|N2O|Extra|Transport|Bunkers|Freight;kt N2O/yr;;Emissions of nitrous oxide (N2O) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|N2O|Energy and Industrial Processes;kt N2O/yr;Emi|N2O|+|Industry;kt N2O/yr;;Emissions of nitrous oxide (N2O) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Emissions|N2O|Energy and Industrial Processes;kt N2O/yr;Emi|N2O|Extra|Buildings;kt N2O/yr;;Emissions of nitrous oxide (N2O) from energy use in supply and demand sectors (IPCC category 1A, 1B) and from industrial processes (IPCC categories 1A2, 1A5, 2A, 2B, 2C, 2E), including emissions from international bunker fuels. This is the sum of sources and sinks, and includes negative emisisons in these sectors, for instance from bioenergy with CCS (BECCS);R
+Energy Service|Commercial|Rooftop Photovoltaics;million households;;;;Residential and commercial buildings with rooftop photovoltaic electricity generation;
+Energy Service|Commercial|Zero Energy Building;million buildings or households;;;;Residential and commercial buildings which have net-zero or positive energy balance;
+Energy Service|Residential and Commercial|Rooftop Photovoltaics;million households;;;;Residential and commercial buildings with rooftop photovoltaic electricity generation;
+Energy Service|Residential and Commercial|Zero Energy Building;million buildings or households;;;;Residential and commercial buildings which have net-zero or positive energy balance;
+Energy Service|Residential|Cooling Degree Days;°C-days;;;;Measure of how hot the temperature was over a given period indicating higher energy needs for cooling;
+Energy Service|Residential|Heating Degree Days;°C-days;;;;Measure of how cold the temperature was over a given period indicating higher energy needs for heating;
+Energy Service|Residential|Rooftop Photovoltaics;million households;;;;Residential and commercial buildings with rooftop photovoltaic electricity generation;
+Energy Service|Residential|Total|Appliance Ownership|Cleaning;units/household;;;;Ownership of appliances per household and appliance group;
+Energy Service|Residential|Total|Appliance Ownership|Cleaning|Clothes dryer;units/household;;;;Ownership of appliances per household and appliance;
+Energy Service|Residential|Total|Appliance Ownership|Cleaning|Dish washer;units/household;;;;Ownership of appliances per household and appliance;
+Energy Service|Residential|Total|Appliance Ownership|Cleaning|Washing machine;units/household;;;;Ownership of appliances per household and appliance;
+Energy Service|Residential|Total|Appliance Ownership|Cooling;units/household;;;;Ownership of appliances per household and appliance group;
+Energy Service|Residential|Total|Appliance Ownership|Cooling|Air conditioner;units/household;;;;Ownership of appliances per household and appliance;
+Energy Service|Residential|Total|Appliance Ownership|Cooling|Air cooler;units/household;;;;Ownership of appliances per household and appliance;
+Energy Service|Residential|Total|Appliance Ownership|Cooling|Fan;units/household;;;;Ownership of appliances per household and appliance;
+Energy Service|Residential|Total|Appliance Ownership|Entertainment;units/household;;;;Ownership of appliances per household and appliance group;
+Energy Service|Residential|Total|Appliance Ownership|Other;units/household;;;;Ownership of appliances per household and appliance group;
+Energy Service|Residential|Total|Appliance Ownership|Refrigeration;units/household;;;;Ownership of appliances per household and appliance group;
+Energy Service|Residential|Total|Rooftop Photovoltaics;million households;;;;Households with rooftop photovoltaic electricity generation;
+Energy Service|Residential|Zero Energy Building;million buildings or households;;;;Residential and commercial buildings which have net-zero or positive energy balance;
+Energy Service|Transportation|Freight;billion tkm/yr;ES|Transport|Freight|Road;billion tkm/yr;;Energy service demand for freight transport;T
+Energy Service|Transportation|Freight;billion tkm/yr;ES|Transport|Freight|Rail;billion tkm/yr;;Energy service demand for freight transport;T
+Energy Service|Transportation|Freight;billion tkm/yr;ES|Transport|Freight|Domestic Shipping;billion tkm/yr;;Energy service demand for freight transport;T
+Energy Service|Transportation|Passenger;billion pkm/yr;ES|Transport|Pass|Road|Bus;billion pkm/yr;;Energy service demand for passenger transport;T
+Energy Service|Transportation|Passenger;billion pkm/yr;ES|Transport|Pass|Road|LDV;billion pkm/yr;;Energy service demand for passenger transport;T
+Energy Service|Transportation|Passenger;billion pkm/yr;ES|Transport|Pass|Rail;billion pkm/yr;;Energy service demand for passenger transport;T
+Energy Service|Transportation|Passenger;billion pkm/yr;ES|Transport|Pass|Domestic Aviation;billion pkm/yr;;Energy service demand for passenger transport;T
+Energy Service|Transportation|Passenger|Active Transport [Share];%;;;;Share of walking and cycling in passenger transport;
+Energy Service|Transportation|Passenger|Public Transport [Share];%;;;;Share of public transit in passenger transport;
+Energy Service|Transportation|Passenger|Road;billion pkm/yr;ES|Transport|Pass|Road;billion pkm/yr;;Energy service demand for passenger transport on roads;T
+Energy Service|Transportation|Passenger|Road|Light-Duty Vehicle;billion pkm/yr;ES|Transport|Pass|Road|LDV;billion pkm/yr;;Energy service demand for passenger transport on roads in light duty vehicles;T
+Energy Service|Transportation|Passenger|Road|Light-Duty Vehicle|Battery-Electric;billion pkm/yr;ES|Transport|Pass|Road|LDV|BEV;billion pkm/yr;;Energy service demand for passenger transport on roads in light duty vehicles with battery-electric drive (BEV);T
+Energy Service|Transportation|Passenger|Road|Light-Duty Vehicle|Fuel-Cell-Electric;billion pkm/yr;ES|Transport|Pass|Road|LDV|FCEV;billion pkm/yr;;Energy service demand for passenger transport on roads in light duty vehicles with fuel-cell-electric drive (FCEV);T
+Energy Service|Transportation|Passenger|Road|Light-Duty Vehicle|Internal Combustion;billion pkm/yr;ES|Transport|Pass|Road|LDV|Liquids;billion pkm/yr;;Energy service demand for passenger transport on roads in light duty vehicles with internal combustion engine drive not including plug-in hybrids (ICE);T
+Energy Service|Transportation|Passenger|Road|Light-Duty Vehicle|Internal Combustion;billion pkm/yr;ES|Transport|Pass|Road|LDV|Gases;billion pkm/yr;;Energy service demand for passenger transport on roads in light duty vehicles with internal combustion engine drive not including plug-in hybrids (ICE);T
+Energy Service|Transportation|Passenger|Road|Light-Duty Vehicle|Plug-in Hybrid;billion pkm/yr;ES|Transport|Pass|Road|LDV|Hybrid electric;billion pkm/yr;;Energy service demand for passenger transport on roads in light duty vehicles with plug-in hybrid drive (PHEV);T
+Expenditure|Households;billion USD_2010/yr;;;;Total expenditure by households;
+Expenditure|Households|Food [Share];%;SDG|SDG02|Food expenditure share;income;100;Share of food expenditure in total income (including value added from food processing chain);M
+Fertilizer Use|Nitrogen|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;Organic nitrogen fertilizer use on cropland (e.g. manure);M
+Fertilizer Use|Nitrogen|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;Organic nitrogen fertilizer use on cropland (e.g. manure);M
+Fertilizer Use|Nitrogen|Synthetic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;Synthetic nitrogen fertilizer use on cropland;M
+Fertilizer Use|Phosphorus;Tg P/yr;;;;Phosphorus fertilizer use on cropland (synthetic and organic);
+Fertilizer Use|Phosphorus|Organic;Tg P/yr;;;;Organic phosphorus fertilizer use on cropland (e.g. rock phosphate, manure and compost);
+Fertilizer Use|Phosphorus|Synthetic;Tg P/yr;;;;Synthetic phosphorus fertilizer use on cropland;
+Final Energy;EJ/yr;FE;EJ/yr;;Final energy consumption by all end-use sectors and all fuels, including non-energy use, excluding transmission/distribution losses;R
+Final Energy|Electricity;EJ/yr;FE|+|Electricity;EJ/yr;;Final energy consumption of electricity (including on-site solar PV), excluding transmission/distribution losses;R
+Final Energy|Industry;EJ/yr;FE|w/o Non-energy Use|Industry;EJ/yr;;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks);Rx
+Final Energy|Industry|Electricity;EJ/yr;FE|Industry|+|Electricity;EJ/yr;;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of electricity;R
+Final Energy|Industry|Electricity [Share];%;FE|Industry|Electricity|Share;%;;Share of electricity in final energy demand for industry;R
+Final Energy|Industry|Hydrogen;EJ/yr;FE|Industry|+|Hydrogen;EJ/yr;;Final energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks) of hydrogen;R
+Final Energy|Solids;EJ/yr;FE|+|Solids;EJ/yr;;Final energy fuel consumption of solid energy carriers, including coal, briquettes, coke, and wood pellets;R
+Final Energy|Solids|Biomass;EJ/yr;FE|Solids|+|Biomass;EJ/yr;;Final energy fuel consumption of solid biomass (e.g., commercial charcoal, wood chips, wood pellets);R
+Final Energy|Transportation;EJ/yr;FE|Transport|w/o Bunkers;EJ/yr;;Final energy consumption by the transportation sector excluding international aviation and shipping (see 'Bunkers');R
+Final Energy|Transportation|Bus;EJ/yr;FE|Transport|Pass|Road|Bus;EJ/yr;;Final energy consumption by the transportation sector by bus;T
+Final Energy|Transportation|Domestic Aviation;EJ/yr;FE|Transport|Pass|Domestic Aviation;EJ/yr;;Final energy consumption by the domestic aviation sector;T
+Final Energy|Transportation|Domestic Shipping;EJ/yr;FE|Transport|Freight|Domestic Shipping;EJ/yr;;Final energy consumption by the domestic shipping sector;T
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight;EJ/yr;;Final energy consumption by the freight transportation sector excluding international aviation and shipping;R
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Bunkers|Freight;EJ/yr;-1;Final energy consumption by the freight transportation sector excluding international aviation and shipping;T
+Final Energy|Transportation|Light-Duty Vehicle;EJ/yr;FE|Transport|Pass|Road|LDV;EJ/yr;;Final energy consumption by the transportation sector with light-duty vehicles;T
+Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Pass;EJ/yr;;Final energy consumption by the passenger transportation sector excluding international aviation and shipping;T
+Final Energy|Transportation|Passenger;EJ/yr;FE|Transport|Bunkers|Pass;EJ/yr;-1;Final energy consumption by the passenger transportation sector excluding international aviation and shipping;T
+Final Energy|Transportation|Rail;EJ/yr;FE|Transport|Rail;EJ/yr;;Final energy consumption by the rail transportation sector;T
+Final Energy|Transportation|Truck;EJ/yr;FE|Transport|Freight|Road;EJ/yr;;Final energy consumption by the trucking sector;T
+Food Availability [per capita];kcal/cap/day;Nutrition|Calorie Supply;kcal/capita/day;;Amount of food available from crops, secondary products and livestock products;M
+Food Availability|Crops [per capita];kcal/cap/day;Nutrition|Calorie Supply|+|Crops;kcal/capita/day;;Amount of food available from crops and secondary products;M
+Food Availability|Crops [per capita];kcal/cap/day;Nutrition|Calorie Supply|+|Secondary products;kcal/capita/day;;Amount of food available from crops and secondary products;M
+Food Availability|Livestock [per capita];kcal/cap/day;Nutrition|Calorie Supply|+|Livestock products;kcal/capita/day;;Amount of food available from livestock products;M
+Food Waste [per capita];kcal/cap/day;SDG|SDG12|Food waste;kcal/cap/day;;Amount of food (crops and livestock) per capita that is disposed and not consumed (difference between food availability and food intake), including food losses and food waste;M
+Freshwater|Environmental Flow Violations;km3/yr;Water|Environmental flow violation volume;km3/yr;;Water withdrawals at the expense of environmental flow requirements;M
+GDP|PPP;billion USD_2010/yr;GDP|PPP;billion US$2017/yr;0.9096;GDP converted to USD using purchasing power parity (PPP);R
+GDP|PPP [Growth Rate per capita];%;GDP|PPP|Per capita growth rate;percent;;Annual growth rate of GDP-per-capita (PPP);S
+GDP|PPP [per capita relative to OECD];%;GDP|PPP|Per capita ratio to OECD;percent;;Ratio of GDP-per-capita (PPP) relative to OECD average;S
+Gender Inequality Index;unitless;;;;Geometric average of reproductive health, empowerment and labor market force participation rate (see Andrijevic et al., 2020);
+Health|Child Mortality;million;;;;Child mortality;
+Health|Child Mortality|Indoor Air Pollution;million;;;;Child mortality associated with indoor air pollution;
+Health|Disability-Adjusted Life Years|PM2.5;DALY/yr;Disability-Adjusted Life Year|PM2_5;DALY/yr;;Disability adjusted life years lost per year from health impacts due to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);S
+Health|Premature Deaths|PM2.5;million;;;;Number of premature deaths associated with increased health risks from exposure to air pollution of fine particles with a diameter of 2.5 μm or less (PM2.5);
+Inequality|Average Income|Bottom 40% [Ratio];%;Inequality|Bottom 40% average income|Ratio;percent;;Average income of bottom 40% of population relative to national average;S
+Intensity|Final Energy;EJ/billion USD_2010;Intensity|GDP|Final Energy;MJ/US$2017;0.001099;Final Energy intensity;R
+Land Cover;million ha;Resources|Land Cover;million ha;;Total land cover;M
+Land Cover|Cropland;million ha;Resources|Land Cover|+|Cropland;million ha;;Arable land, i.e. land in bioenergy crop, food, and feed/fodder crops, permanent crops as well as other arable land (physical area);M
+Land Cover|Cropland|Energy Crops;million ha;Resources|Land Cover|Cropland|Croparea|+|Bioenergy crops;million ha;;Cropland for second-generation bioenergy crops (short rotation grasses, short rotation trees);M
+Land Cover|Forest;million ha;Resources|Land Cover|+|Forest;million ha;;Sum of primary, secondary and planted forest (FAO definition);M
+Land Cover|Forest|Planted;million ha;Resources|Land Cover|Forest|+|Planted Forest;million ha;;Forest predominantly composed of trees established through planting and/or deliberate seeding (FAO definition);M
+Land Cover|Forest|Planted|Natural;million ha;Resources|Land Cover|Forest|Planted Forest|+|Natural;million ha;;Planted forest which is not classified as plantation forest, in particular re/afforestation for carbon sequestration with native tree species;M
+Land Cover|Forest|Planted|Natural|Other;million ha;;;;Other planted forest which is not classified as plantation forest;
+Land Cover|Forest|Planted|Natural|Re/Afforestation;million ha;Resources|Land Cover|Forest|Planted Forest|Natural|+|CO2-price AR;million ha;;Reforestation and/or afforestation for carbon sequestration with native tree species resembling natural vegetation;M
+Land Cover|Forest|Planted|Natural|Re/Afforestation;million ha;Resources|Land Cover|Forest|Planted Forest|Natural|+|NPI_NDC AR;million ha;;Reforestation and/or afforestation for carbon sequestration with native tree species resembling natural vegetation;M
+Land Cover|Forest|Planted|Plantation;million ha;Resources|Land Cover|Forest|Planted Forest|+|Plantations;million ha;;Plantations are planted forests that are intensively managed and meet have one or two species, even age class, and regular spacing at planting and stand maturity (FAO definition);M
+Land Cover|Forest|Planted|Plantation|Re/Afforestation;million ha;Resources|Land Cover|Forest|Planted Forest|Plantations|+|CO2-price AR;million ha;;Reforestation and/or afforestation for carbon sequestration with non-native species and/or as monoculture plantation;M
+Land Cover|Forest|Planted|Plantation|Timber;million ha;Resources|Land Cover|Forest|Planted Forest|Plantations|+|Timber;million ha;;Plantations for timber production;M
+Land Cover|Forest|Primary;million ha;Resources|Land Cover|Forest|Natural Forest|+|Primary Forest;million ha;;Naturally regenerated forest of native tree species, where there are no clearly visible indications of human activities and the ecological processes are not significantly disturbed (FAO definition);M
+Land Cover|Forest|Secondary;million ha;Resources|Land Cover|Forest|Natural Forest|+|Secondary Forest;million ha;;Forest predominantly composed of trees established through natural regeneration excluding primary forest (based on FAO definition of Naturally Regenerating Forest);M
+Land Cover|Other Land;million ha;;;;Other land cover that does not fit into any other land cover category, e.g. ice and water bodies;
+Land Cover|Pasture;million ha;Resources|Land Cover|+|Pastures and Rangelands;million ha;;Pasture and range land based on FAO definition of 'permanent meadows and pastures';M
+Material Recycling|Aluminum;Mt/yr;;;;Production of recycled aluminum;
+Material Recycling|Aluminum [Share];%;;;;Share of recycled aluminum;
+Material Recycling|Chemicals;Mt/yr;;;;Production of recycled chemicals;
+Material Recycling|Chemicals [Share];%;;;;Share of recycled chemicals;
+Material Recycling|Plastics;Mt/yr;;;;Production of recycled plastics;
+Material Recycling|Plastics [Share];%;;;;Share of recycled plastics;
+Material Recycling|Steel;Mt/yr;;;;Production of recycled steel;
+Material Recycling|Steel [Share];%;;;;Share of recycled steel;
+Ocean|Acidification;pH;Ocean|pH value;pH;;Ocean acidification;S
+Ocean|Carbonate Saturation|Aragonite;unitless;Ocean|Carbonate Saturation|Aragonite;-;;Saturation state of aragonite (Omega A);S
+Ocean|Carbonate Saturation|Calcite;unitless;Ocean|Carbonate Saturation|Calcite;-;;Saturation state of calcite (Omega C);S
+Policy Cost|GDP Loss w/o Transfers;billion USD_2010/yr;Policy Cost|GDP Loss|w/o transfers;billion US$2017/yr;0.9096;GDP loss without international transfers in a policy scenario compared to the corresponding baseline (losses should be reported as positive numbers);Rx
+Policy Cost|Transfers;billion USD_2010/yr;Policy Cost|Transfers;billion US$2017/yr;0.9096;Net international climate finance transfers (positive for inflow, negative for payment);Rx
+Political Institutions|Equality Before Law and Individual Liberty;unitless;Political institutions|Equality before law and individual liberty;-;;Aggregated 'Equality Before the Law and Individual Liberty' index as defined by 'Varieties of Democracy' (V-DEM, Coppedge et al. 2022, Pemstein et al. 2022);S
+Pollution|Nitrogen|Surplus|Animal Waste Management;Tg N/yr;Resources|Nitrogen|Pollution|Surplus|+|Animal Waste Management;Mt Nr/yr;;Nitrogen surplus of animal waste management;Mx
+Pollution|Nitrogen|Surplus|Cropland;Tg N/yr;Resources|Nitrogen|Pollution|Surplus|+|Cropland;Mt Nr/yr;;Nitrogen surplus of soil inputs over soil withdrawals in cropland;M
+Pollution|Nitrogen|Surplus|Non-Agricultural Land;Tg N/yr;Resources|Nitrogen|Pollution|Surplus|+|Non-agricultural land;Mt Nr/yr;;Nitrogen surplus of non-agricultural land;M
+Pollution|Nitrogen|Surplus|Pasture;Tg N/yr;Resources|Nitrogen|Pollution|Surplus|+|Pasture;Mt Nr/yr;;Nitrogen surplus of soil inputs over soil withdrawals in pasture;Mx
+Population;million;Population;million;;Total population;R
+Population|Adults|Without Secondary Education [Share];%;;;;Share of adults aged 20+ without secondary education;
+Population|Appliance Access|Cleaning|Clothes dryer|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Cleaning|Dish washer|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Cleaning|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Cleaning|Washing machine|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Cooling|Air conditioner|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Cooling|Air cooler|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Cooling|Fan|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Cooling|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Entertainment|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Other|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Appliance Access|Refrigeration|Total;million;;;;Population with steady access to appliances per appliance category;
+Population|Clean Cooking Access;million;;;;Population with access to improved cooking facilities (electric or gas);
+Population|Drinking Water Access;million;;;;Population with access to improved drinking  water sources;
+Population|Electricity Access;million;;;;Population with access to electricity;
+Population|Female;million;;;;Total female population;
+Population|Gender Education Gap|Primary;percentage points;;;;Difference of percentage of males and females in school-leaving cohort aged 15-19 with at least primary education;
+Population|Gender Education Gap|Secondary;percentage points;;;;Difference of percentage of males and females in school-leaving cohort aged 20-24 with at least lower secondary education;
+Population|Informal Settlements;million;;;;Number of people living in informal settlements, e.g., slums;
+Population|Male;million;;;;Total male population;
+Population|Poverty|Below 50% of National Median Income [Share];%;Population|Relative poverty|wrt median income|Share;percent;;Share of population below 50% of median national income;S
+Population|Poverty|Extreme Poverty;million;Population|Extreme Poverty|International poverty line;million;;Number of people living in extreme poverty with income below USD_2017 2.15 PPP per day (World Bank definition);S
+Population|Poverty|LMIC Poverty Line;million;Population|Poverty|LMIC poverty line;million;;Number of people living in poverty with income with income below USD_2017 3.65 PPP per day (World Bank LMIC definition);S
+Population|Poverty|National Poverty Line [Share];%;;;;Share of population living in relative poverty with income below their respective national poverty lines;
+Population|Poverty|UMIC Poverty Line;million;Population|Poverty|UMIC poverty line;million;;Number of people living in poverty with income below USD_2017 6.85 PPP per day (World Bank UMIC definition);S
+Population|Prevalence of Normal Weight;million;Population;million;;Number of adults with body mass index (BMI) BMI between 18.5 and 25 and children with BMI within two standard deviations below reference (lower bound) and one standard deviations above reference (upper bound);M
+Population|Prevalence of Normal Weight;million;SDG|SDG03|Prevalence of overweight;million;-1;Number of adults with body mass index (BMI) BMI between 18.5 and 25 and children with BMI within two standard deviations below reference (lower bound) and one standard deviations above reference (upper bound);M
+Population|Prevalence of Normal Weight;million;SDG|SDG03|Prevalence of obesity;million;-1;Number of adults with body mass index (BMI) BMI between 18.5 and 25 and children with BMI within two standard deviations below reference (lower bound) and one standard deviations above reference (upper bound);M
+Population|Prevalence of Normal Weight;million;SDG|SDG02|Prevalence of underweight;million;-1;Number of adults with body mass index (BMI) BMI between 18.5 and 25 and children with BMI within two standard deviations below reference (lower bound) and one standard deviations above reference (upper bound);M
+Population|Prevalence of Normal Weight|Children;million;;;;Number of children aged 0-14 with BMI within two standard deviations below reference (lower bound) and one standard deviations above reference (upper bound);
+Population|Prevalence of Obesity;million;SDG|SDG03|Prevalence of obesity;million;;Number of adults with with body mass index (BMI) greater than 30 and children with BMI greater than two standard deviations from reference;M
+Population|Prevalence of Obesity|Children;million;SDG|SDG03|Prevalence of obesity|Children;million;;Number of children aged 0-14 with BMI greater than two standard deviations from reference;M
+Population|Prevalence of Overweight;million;SDG|SDG03|Prevalence of overweight;million;;Number of adults with body mass index (BMI) greater than 25 and children with BMI greater than one standard deviation from reference;M
+Population|Prevalence of Overweight|Children;million;SDG|SDG03|Prevalence of overweight|Children;million;;Number of children aged 0-14 years with BMI greater than one standard deviation from reference;M
+Population|Prevalence of Underweight;million;SDG|SDG02|Prevalence of underweight;million;;Number of adults with body mass index (BMI) lower than 18.5 and children with BMI lower than two standard deviations from reference;M
+Population|Prevalence of Underweight|Children;million;SDG|SDG02|Prevalence of underweight|Children;million;;Number of children aged 0-14 years with BMI lower than two standard deviations from reference;M
+Population|Primary Education|Leaving Cohort [Share];%;;;;Share of school-leaving cohort aged 15-19 completing primary education;
+Population|Relying on Solid Fuels;million;;;;Population without access to electricity and relying on solid fuels for heating-cooking;
+Population|Risk of Hunger;million;SDG|SDG02|Prevalence of underweight;million;;Population at risk of hunger, calculated by multipling total population and prevalence of undernourishment which is computed from a probability distribution of daily dietary energy consumption and minimum dietary energy requirement.;M
+Population|Sanitation Access;million;;;;Population with access to improved sanitation;
+Population|Secondary Education|Leaving Cohort [Share];%;;;;Share of school-leaving cohort aged 20-24 completing secondary education (lower secondary or above);
+Population|Severe Water Stress;million;;;;Number of people living in areas with severe water stress;
+Population|Substandard Accommodation;million;;;;Number of people living in substandard accommodation, e.g., accommodation that does not meet legal requirements and/or enable well being for the occupants;
+Population|Urban;million;Population|Urban;million;;Total population living in urban areas;S
+Population|Urban [Share];%;;;;Share of population living in urban areas;
+Population|Without Education [Share];%;;;;Share of people aged 15 or older without education, not counting those with incomplete primary education;
+Price|Agriculture|Food Products [Index];Index (2020 = 1);Prices|Index2020|Agriculture|Food products;1;;Farm-gate price index of food crops and livestock products (weighted average);M
+Price|Agriculture|Food Products|Crops [Index];Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Plant-based;1;;Farm-gate price index of food crops (weighted average);M
+Price|Agriculture|Food Products|Livestock [Index];Index (2020 = 1);Prices|Index2020|Agriculture|Food products|Livestock;1;;Farm-gate price index of livestock products (weighted average);M
+Price|Carbon;USD_2010/t CO2;Price|Carbon;US$2017/t CO2;0.9096;Price of carbon (as reported by the model);R
+Price|Carbon [relative to OECD];%;;;;Carbon price relative to OECD carbon price;
+Price|Final Energy|Electricity;USD_2010/GJ;;;;Electricity price including transmission and distribution costs, including carbon prices but not including other taxes;
+Primary Energy;EJ/yr;PE;EJ/yr;;Total primary energy consumption (direct equivalent);R
+Primary Energy|Biomass;EJ/yr;PE|+|Biomass;EJ/yr;;Primary energy consumption of 2nd generation bioenergy crops, crop and forestry residue, municipal solid waste bioenergy and traditional biomass;R
+Primary Energy|Biomass|Traditional;EJ/yr;PE|Biomass|Traditional;EJ/yr;;Primary energy consumption of traditional biomass including fuelwood;R
+Primary Energy|Coal;EJ/yr;PE|+|Coal;EJ/yr;;Primary energy consumption of coal including lignite;R
+Primary Energy|Fossil;EJ/yr;PE|Fossil;EJ/yr;;Primary energy consumption of fossil fuels including coal, natural gas and conventional/unconventional oil;R
+Primary Energy|Gas;EJ/yr;PE|+|Gas;EJ/yr;;Primary energy consumption of natural gas (fossil methane);R
+Primary Energy|Gas|w/o CCS;EJ/yr;PE|Gas|w/o CC;EJ/yr;;Primary energy consumption of natural gas (fossil methane) without carbon capture and storage (CCS);R
+Primary Energy|Geothermal;EJ/yr;PE|+|Geothermal;EJ/yr;;Primary energy consumption of geothermal sources;R
+Primary Energy|Hydro;EJ/yr;PE|+|Hydro;EJ/yr;;Primary energy consumption of hydropower;R
+Primary Energy|Non-Biomass Renewables;EJ/yr;PE|Non-Biomass Renewables;EJ/yr;;Primary energy consumption of renewable energy exluding biomass;R
+Primary Energy|Nuclear;EJ/yr;PE|+|Nuclear;EJ/yr;;Primary energy consumption of nuclear power (direct equivalent), includes electricity, heat and hydrogen production from nuclear energy);R
+Primary Energy|Ocean;EJ/yr;;;;Primary energy consumption of oceans;
+Primary Energy|Oil;EJ/yr;PE|+|Oil;EJ/yr;;Primary energy consumption of conventional and unconventional crude oil;R
+Primary Energy|Other;EJ/yr;;;;Primary energy consumption from sources that do not fit any other category (direct equivalent);
+Primary Energy|Solar;EJ/yr;PE|+|Solar;EJ/yr;;Primary energy consumption of solar energy;R
+Primary Energy|Wind;EJ/yr;PE|+|Wind;EJ/yr;;Primary energy consumption of wind power;R
+Production|Iron and Steel|Steel;Mt/yr;Production|Industry|Steel;Mt/yr;;Production of raw steel, an alloy of carbon and iron;R
+Production|Iron and Steel|Steel|Primary;Mt/yr;Production|Industry|Steel|Primary;Mt/yr;;Production of raw steel, an alloy of carbon and iron, extracted from minerals and free of reclaimed metal scrap;R
+Production|Iron and Steel|Steel|Secondary;Mt/yr;Production|Industry|Steel|Secondary;Mt/yr;;Production of raw steel, an alloy of carbon and iron, that does not directly originate from a primary mineral but from a recycling process or from the processing of waste streams from primary production;R
+Production|Non-Ferrous Metals|Aluminum;Mt/yr;;;;Production of aluminum;
+Production|Non-Ferrous Metals|Aluminum Oxide;Mt/yr;;;;Production of aluminum oxide (alumina), commonly produced via the Bayer process from bauxite;
+Production|Non-Ferrous Metals|Aluminum|Primary;Mt/yr;;;;Production of aluminum produced by electrolysis of alumina;
+Production|Non-Ferrous Metals|Aluminum|Secondary;Mt/yr;;;;Production of aluminum produced by re-melting of scrap or that originates from a recycling process, including processing of waste streams from primary production;
+Production|Non-Ferrous Metals|Bauxite;Mt/yr;;;;Production of sedimentary rock with a relatively high aluminium content, main source of aluminium and gallium;
+Production|Non-Ferrous Metals|Copper;Mt/yr;;;;Production of copper;
+Production|Non-Ferrous Metals|Copper|Primary;Mt/yr;;;;Production of copper extracted from minerals and free of reclaimed metal scrap;
+Production|Non-Ferrous Metals|Copper|Secondary;Mt/yr;;;;Production of copper that does not directly originate from a primary mineral but from a recycling process or from the processing of waste streams from primary production;
+Production|Non-Ferrous Metals|Graphite;Mt/yr;;;;Production of graphite;
+Production|Non-Ferrous Metals|Lithium;Mt/yr;;;;Production of lithium;
+Production|Non-Ferrous Metals|Lithium|Primary;Mt/yr;;;;Production of lithium extracted from minerals and free of reclaimed metal scrap;
+Production|Non-Ferrous Metals|Lithium|Secondary;Mt/yr;;;;Production of lithium that does not directly originate from a primary mineral but from a recycling process or from the processing of waste streams from primary production;
+Production|Non-Ferrous Metals|Manganese;Mt/yr;;;;Production of manganese;
+Production|Non-Ferrous Metals|Nickel;Mt/yr;;;;Production of nickel;
+Production|Non-Metallic Minerals;Mt/yr;;;;Production of Non-Metallic Minerals;
+Production|Non-Metallic Minerals|Bricks;Mt/yr;;;;Production of bricks, made from clay;
+Production|Non-Metallic Minerals|Cement;Mt/yr;Production|Industry|Cement;Mt/yr;1;Production of cement, a binder substance used for construction;R
+Production|Non-Metallic Minerals|Cement Clinker;Mt/yr;;;;Production of cement clinker, produced in the manufacture of portland cement as an intermediary product;
+Production|Non-Metallic Minerals|Glass;Mt/yr;;;;Production of glass;
+Production|Non-Metallic Minerals|Limestone;Mt/yr;;;;Production of limestone;
+Production|Pulp and Paper|Paper;Mt/yr;;;;Production of paper, thin sheet material made from cellulose fibers;
+Production|Pulp and Paper|Pulp;Mt/yr;;;;Production of pulp, produced from pulpwood, mainly used for paper, board, textiles and cellophane;
+Terrestrial Biodiversity|Biodiversity Intactness Index;%;Biodiversity|BII;unitless;100;Terrestrial biodiversity measured with Biodiversity Intactness Index (BII);Mx
+Terrestrial Biodiversity|Biodiversity Intactness Index|Areas Outside Key Conservation and Cropland Landscapes;%;Biodiversity|BII in areas outside Biodiversity Hotspots, Intact Forest & Cropland Landscapes;unitless;100;Terrestrial biodiversity in areas outside biodiversity hotspot, intact forest & cropland landscapes measured with Biodiversity Intactness Index (BII);M
+Terrestrial Biodiversity|Biodiversity Intactness Index|Biodiversity Hotspots;%;Biodiversity|Biodiversity Hotspot BII;unitless;100;Terrestrial biodiversity in biodiversity hotspot landscapes measured with Biodiversity Intactness Index (BII);M
+Terrestrial Biodiversity|Biodiversity Intactness Index|Cropland Landscapes;%;Biodiversity|Cropland Landscapes BII;unitless;100;Terrestrial biodiversity in landscapes containing cropland measured with Biodiversity Intactness Index (BII);M
+Terrestrial Biodiversity|Biodiversity Intactness Index|Key Conservation Landscapes;%;Biodiversity|Key Biodiversity Area BII;unitless;100;Terrestrial biodiversity in biodiversity hotspot and intact forest landscapes measured with Biodiversity Intactness Index (BII);M
+Terrestrial Biodiversity|Mean Species Abundance;%;;;;Terrestrial biodiversity measured in Mean Species Abundance (MSA);
+Terrestrial Biodiversity|Mean Species Abundance|Plants;%;;;;Terrestrial biodiversity of plant species measured in Mean Species Abundance (MSA);
+Terrestrial Biodiversity|Mean Species Abundance|Vertebrates;%;;;;Terrestrial biodiversity of vertebrate species measured in Mean Species Abundance (MSA);
+Terrestrial Biodiversity|Shannon Crop Diversity Index;unitless;Biodiversity|Shannon crop area diversity index;unitless;;Crop diversity measured by the Shannon index accounting for crop richness and abundance;M
+Useful Energy|Commercial;EJ/yr;;;;Useful energy consumption by the commercial sector;
+Useful Energy|Industry;EJ/yr;;;;Useful energy consumption by the industrial sector excluding non-energy use (e.g.feedstocks);
+Useful Energy|Residential;EJ/yr;;;;Useful energy consumption by the residential sector;
+Useful Energy|Residential and Commercial;EJ/yr;;;;Useful energy consumption by the residential and commercial sector;
+Useful Energy|Transportation|Passenger;EJ/yr;;;;Useful energy for passenger transport;
+Value Added|Agriculture;billion USD_2010/yr;;;;Value added by the the aggregated agricultural sectors (ISIC Rev.4 - Section A);
+Value Added|Industry;billion USD_2010/yr;;;;Value added by the the aggregated industrial sector (ISIC Rev.4 - Section B-F);
+Value Added|Services;billion USD_2010/yr;;;;Value added by the the aggregated services sector (ISIC Rev.4 - Section G-X);
+Water Consumption;km3/yr;Water Consumption|Electricity;km3/yr;;Total water consumption;Rx
+Water Consumption;km3/yr;Resources|Water|Consumption|Agriculture;km3/yr;;Total water consumption;M
+Water Consumption;km3/yr;Resources|Water|Consumption|Non-agriculture|+|manufacturing;km3/yr;;Total water consumption;M
+Water Consumption;km3/yr;Resources|Water|Consumption|Non-agriculture|+|domestic;km3/yr;;Total water consumption;M
+Water Consumption|Electricity;km3/yr;Water Consumption|Electricity;km3/yr;;Total water withdrawals for total electricity generation;Rx
+Water Consumption|Industrial Water;km3/yr;Resources|Water|Consumption|Non-agriculture|+|manufacturing;km3/yr;;Water consumption for the industrial and manufacturing sector;M
+Water Consumption|Irrigation;km3/yr;Resources|Water|Consumption|Agriculture|Crops|+|Crops;km3/yr;;Water consumption for irrigation;M
+Water Consumption|Irrigation;km3/yr;Resources|Water|Consumption|Agriculture|Crops|+|Forage;km3/yr;;Water consumption for irrigation;M
+Water Consumption|Irrigation;km3/yr;Resources|Water|Consumption|Agriculture|Crops|+|Bioenergy crops;km3/yr;;Water consumption for irrigation;M
+Water Consumption|Livestock;km3/yr;Resources|Water|Consumption|Agriculture|Livestock|+|Livestock products;km3/yr;;Water consumption for livestock;M
+Water Consumption|Municipal Water;km3/yr;Resources|Water|Consumption|Non-agriculture|+|domestic;km3/yr;;Water consumption for the municipal sector including for residential and commercial buildings and municipal irrigation;M
+Water Quality|Nitrogen Concentration;mg N/l;;;;Concentration of nitrogen in water at river mouths;
+Water Quality|Phosphorus Concentration;mg P/l;;;;Concentration of phosphorus in water at river mouths;
+Water Withdrawal;km3/yr;Water Withdrawal|Electricity;km3/yr;;Total water withdrawals;Rx
+Water Withdrawal;km3/yr;Resources|Water|Withdrawal|Agriculture;km3/yr;;Total water withdrawals;M
+Water Withdrawal;km3/yr;Resources|Water|Withdrawal|Non-agriculture|+|manufacturing;km3/yr;;Total water withdrawals;M
+Water Withdrawal;km3/yr;Resources|Water|Withdrawal|Non-agriculture|+|domestic;km3/yr;;Total water withdrawals;M
+Water Withdrawal|Electricity;km3/yr;Water Withdrawal|Electricity;km3/yr;;Total water withdrawals for total electricity generation;Rx
+Water Withdrawal|Industrial Water;km3/yr;Resources|Water|Withdrawal|Non-agriculture|+|manufacturing;km3/yr;;Water withdrawals for the industrial and manufacturing sector;M
+Water Withdrawal|Irrigation;km3/yr;Resources|Water|Withdrawal|Agriculture|Crops|+|Crops;km3/yr;;Water withdrawal for irrigation;M
+Water Withdrawal|Irrigation;km3/yr;Resources|Water|Withdrawal|Agriculture|Crops|+|Forage;km3/yr;;Water withdrawal for irrigation;M
+Water Withdrawal|Irrigation;km3/yr;Resources|Water|Withdrawal|Agriculture|Crops|+|Bioenergy crops;km3/yr;;Water withdrawal for irrigation;M
+Water Withdrawal|Livestock;km3/yr;Resources|Water|Withdrawal|Agriculture|Livestock|+|Livestock products;km3/yr;;Water withdrawals for livestock;M
+Water Withdrawal|Municipal Water;km3/yr;Resources|Water|Withdrawal|Non-agriculture|+|domestic;km3/yr;;Water withdrawals for the municipal sector including for residential and commercial buildings and municipal irrigation;M
+Inequality Index|Gini;unitless;;;;;
+Nutrients|Nitrogen|Cropland Budget|Inputs;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Atmospheric Deposition;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Atmospheric Deposition;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Biological Fixation;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Biological Fixation Freeliving Microorganisms;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Biological Fixation;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Biological Fixation Symbiotic Crops;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Fertilizer;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Manure;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure Recycled from Confinements;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Manure;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Manure From Stubble Grazing;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Ash from Burned Crop Residues;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Recycled Belowground Crop Residues;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Other;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Seed;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Inputs|Recycled Aboveground Crop Residues;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Recycled Aboveground Crop Residues;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Cropland Budget|Withdrawals;Tg N/yr;Resources|Nitrogen|Cropland Budget|Withdrawals;Mt Nr/yr;;;M
+Nutrients|Nitrogen|Pasture Budget|Inputs;Tg N/yr;Resources|Nitrogen|Pasture Budget|Inputs;Mt Nr/yr;;;Mx
+Nutrients|Nitrogen|Pasture Budget|Inputs|Atmospheric Deposition;Tg N/yr;Resources|Nitrogen|Pasture Budget|Inputs|+|Atmospheric Deposition;Mt Nr/yr;;;Mx
+Nutrients|Nitrogen|Pasture Budget|Inputs|Biological Fixation;Tg N/yr;Resources|Nitrogen|Pasture Budget|Inputs|+|Biological Fixation Freeliving Microorganisms;Mt Nr/yr;;;Mx
+Nutrients|Nitrogen|Pasture Budget|Inputs|Fertilizer;Tg N/yr;Resources|Nitrogen|Pasture Budget|Inputs|+|Fertilizer;Mt Nr/yr;;;Mx
+Nutrients|Nitrogen|Pasture Budget|Inputs|Manure;Tg N/yr;Resources|Nitrogen|Pasture Budget|Inputs|+|Manure From Grazing;Mt Nr/yr;;;Mx
+Nutrients|Nitrogen|Pasture Budget|Inputs|Other;Tg N/yr;;;;;
+Nutrients|Nitrogen|Pasture Budget|Withdrawals;Tg N/yr;Resources|Nitrogen|Pasture Budget|Withdrawals;Mt Nr/yr;;;Mx
+Fertilizer Use|Nitrogen|Organic;Tg N/yr;Resources|Nitrogen|Cropland Budget|Inputs|+|Recycled Aboveground Crop Residues;Mt Nr/yr;;Total nitrogen inputs in organic fertilizer use;M
+Forcing;W/m2;Forcing;W/m2;;radiative forcing from all greenhouse gases and forcing agents,including contributions from albedo change,nitrate,and mineral dust;C
+Forcing|Tropospheric Ozone;W/m2;Forcing|Tropospheric Ozone;W/m2;;total radiative forcing from tropospheric ozone;C
+Temperature|Global Mean;°C;MAGICC7 AR6|Surface Temperature (GSAT)|50.0th Percentile;K;;change in global mean surface temperature relative to pre-industrial,reported by the model. Please specify which climate model was used in comments tab;C
+Policy Cost|Area under MAC Curve;billion US$2010/yr;;;;total costs of the policy,i.e. the area under the Marginal Abatement Cost (MAC) curve;
+Emissions|CH4|AFOLU;Mt CH4/yr;Emi|CH4|+|Land-Use Change;Mt CH4/yr;;CH4 emissions from agriculture,forestry and other land use (IPCC category 3);R
+Emissions|N2O|AFOLU;kt N2O/yr;Emi|N2O|+|Land-Use Change;kt N2O/yr;;N2O emissions from agriculture,forestry and other land use (IPCC category 3);R
+Energy Service|Transportation|Freight;billion tkm/yr;ES|Transport|Freight;billion tkm/yr;;annual demand for energy services related to freight transportation;R
+Energy Service|Transportation|Passenger;billion pkm/yr;ES|Transport|Pass;billion pkm/yr;;annual demand for energy services related to passenger transportation;R
+Energy Service|Transportation|Passenger|Road;billion pkm/yr;ES|Transport|Pass|Non-motorized;billion pkm/yr;-1;annual demand for energy services related to road passenger transportation;T
+Final Energy|Industry;EJ/yr;FE|++|Industry;EJ/yr;;final energy consumed by the industrial sector,including feedstocks,including agriculture and fishing;R
+Final Energy|Transportation;EJ/yr;FE|++|Transport;EJ/yr;;final energy consumed in the transportation sector,including bunker fuels,excluding pipelines;R
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Electricity;EJ/yr;;final energy consumed for freight transportation;R
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Gases;EJ/yr;;final energy consumed for freight transportation;R
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Hydrogen;EJ/yr;;final energy consumed for freight transportation;R
+Final Energy|Transportation|Freight;EJ/yr;FE|Transport|Freight|Liquids;EJ/yr;;final energy consumed for freight transportation;R
+Material recycling|Chemicals;Mt/year;;;;Mass of Chemicals recycled per year;
+Material recycling|Plastics;Mt/year;;;;Mass of Plastics recycled per year;
+Material recycling|Steel;Mt/year;;;;Mass of Steel recycled per year;
+Land Cover|Other Land;million ha;Resources|Land Cover|+|Other Land;million ha;;other land cover that does not fit into any other category (e.g.,rock,ice,desert,water,please provide a definition of the sources in this category in the 'comments' tab);M
+Population|Clean cooking Access;million;;;;population with access to clean cooking (e.g. non-solid fuels);
+Population|Informal settlements;million;;;;population living in informal settlements (e.g. slums);
+Population|substandard accommodation;million;;;;population living in substandard accommodation (e.g. accommodation that does not meet legal requirements and/or enable well being for the occupants;
+Freshwater|Environmental Flow;km3/yr;;;;water allocated to environmental flow in rivers and groundwater systems;
+Water Consumption;km3/yr;;;;total water consumption;
+Water Consumption|Industrial Water;km3/yr;;;;water consumption for the industrial sector;
+Water Consumption|Irrigation;km3/yr;;;;water consumption for the irrigation;
+Water Consumption|Livestock;km3/yr;;;;water consumption for livestock;
+Water Consumption|Municipal Water;km3/yr;;;;water consumption for the municipal sector (e.g.,houses,offices,municipal irrigation);
+Water Withdrawal;km3/yr;;;;total water withdrawal;
+Water Withdrawal|Industrial Water;km3/yr;;;;water withdrawals for the industrial sector (manufacturing sector if also reporting energy sector water use);
+Water Withdrawal|Irrigation;km3/yr;SDG|SDG06|Agricultural water use;km3/yr;;water withdrawal for irrigation;M
+Water Withdrawal|Livestock;km3/yr;;;;water withdrawals for livestock;
+Water Withdrawal|Municipal Water;km3/yr;;;;water withdrawals for the municial sector (e.g.,houses,offices,municipal irrigation);
+Population|Poverty|LMIC poverty line;million;Population|Poverty|LMIC poverty line;million;;population living in poverty with income <US$3.20 2011 PPP per day (World Bank LMIC definition);S
+Population|Poverty|UMIC poverty line;million;Population|Poverty|UMIC poverty line;million;;population living in poverty with income <US$5.50 2011 PPP per day (World Bank LMIC definition);S
+Population|Gender education gap|Primary;percentage points;;;;difference between genders in primary education completion rate (age 15+);
+Population|Gender education gap|Secondary;percentage points;;;;difference between genders in secondary education completion rate (age 20+);
+Population|Prevalence of underweight;million;SDG|SDG02|Prevalence of underweight;million;;Number of adults with BMI<18.5 and children with <-1SD from reference BMI;M
+Population|Prevalence of underweight|Children;million;SDG|SDG02|Prevalence of underweight|Children;million;;Number of underweight children (-2SD from reference BMI, aged 0--14);M
+Population|Prevalence of overweight;million;SDG|SDG03|Prevalence of overweight;million;;Number of adults with BMI>25 and children with >1SD from reference BMI;M
+Population|Prevalence of overweight|Children;million;SDG|SDG03|Prevalence of overweight|Children;million;;Number of overweight children (+1SD from reference BMI, aged 0--14);M
+Population|Prevalence of obesity;million;SDG|SDG03|Prevalence of obesity;million;;Number of adults with BMI>30 and children with >2SD from reference BMI;M
+Population|Prevalence of obesity|Children;million;SDG|SDG03|Prevalence of obesity|Children;million;;Number of obese children (+2SD from reference BMI, aged 0--14);M
+Political institutions|Equality before law and individual liberty;-;Political institutions|Equality before law and individual liberty;-;;aggregated ‘Equality Before the Law and Individual Liberty' index (0-1) as defined by V-DEM;S
