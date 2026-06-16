@@ -1411,9 +1411,9 @@ tier;category;variable;unit;description;piam_variable;piam_unit;piam_factor;comm
 2;energy (industry);Production|Non-Ferrous Metals;Mt/yr;production of non-ferrous metals (e.g., aluminum);;;;;0;;
 2;energy (industry);Production|Steel;Mt/yr;production of steel;Production|Industry|Steel;Mt/yr;1;;0;;R
 2;energy (industry);Production|Steel|Primary;Mt/yr;Production of primary / virgin steel;Production|Industry|Steel|Primary;Mt/yr;1;;0;;R
-2;energy (industry);Production|Steel|Primary|Oxygen;Mt/yr;Production of primary / virgin steel via basic oxygen process in an oxygen furnace route;;;;;0;;
-2;energy (industry);Production|Steel|Primary|Direct Reduction Natural Gas;Mt/yr;Production of primary / virgin steel via direct reduction in an electric-arc furnace using natural gas;;;;;0;;
-2;energy (industry);Production|Steel|Primary|Direct Reduction Hydrogen;Mt/yr;Production of primary / virgin steel via direct reduction in an electric-arc furnace based on hydrogen (renewable);;;;;0;;
+2;energy (industry);Production|Steel|Primary|Oxygen;Mt/yr;Production of primary / virgin steel via basic oxygen process in an oxygen furnace route;Production|Industry|Steel|+|BF-BOF;Mt/yr;1;;0;;R
+2;energy (industry);Production|Steel|Primary|Direct Reduction Natural Gas;Mt/yr;Production of primary / virgin steel via direct reduction in an electric-arc furnace using natural gas;Production|Industry|Steel|+|DRI-NG-EAF;Mt/yr;1;;0;;R
+2;energy (industry);Production|Steel|Primary|Direct Reduction Hydrogen;Mt/yr;Production of primary / virgin steel via direct reduction in an electric-arc furnace based on hydrogen (renewable);Production|Industry|Steel|+|DRI-H2-EAF;Mt/yr;1;;0;;R
 2;energy (industry);Production|Steel|Secondary;Mt/yr;Production of secondary steel from recycling of scrap;Production|Industry|Steel|Secondary;Mt/yr;1;;0;;R
 2;energy (industry);Production|Chemicals;Mt/yr;production of chemicals (e.g. sulfuric acid);;;;;0;;
 3;energy (industry);Production|Chemicals|Ammonia;Mt/yr;Production of ammonia;;;;;0;;
