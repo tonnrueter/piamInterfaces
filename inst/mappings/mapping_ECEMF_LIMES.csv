@@ -1,0 +1,76 @@
+variable;unit;piam_variable;piam_unit;piam_factor;description;comment;internal_comment;source
+Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;Emissions|CO2|Energy|Supply|Electricity;Mt CO2/yr;1;;;;L
+Final Energy|Residential and Commercial|Heat;EJ/yr;Final Energy|Heat|District Heating;TWh/yr;0.0036;;;;L
+Primary Energy|Biomass|Electricity;EJ/yr;Primary Energy|Biomass|Electricity;PJ/yr;0.001;;;;L
+Primary Energy|Biomass|Electricity|w/ CCS;EJ/yr;Primary Energy|Biomass|Electricity|w/ CCS;PJ/yr;0.001;;;;L
+Primary Energy|Biomass|Electricity|w/o CCS;EJ/yr;Primary Energy|Biomass|Electricity|w/o CCS;PJ/yr;0.001;;;;L
+Primary Energy|Gas|Electricity;EJ/yr;Primary Energy|Gas|Electricity;PJ/yr;0.001;;;;L
+Primary Energy|Coal|Electricity;EJ/yr;Primary Energy|Coal|Electricity;PJ/yr;0.001;;;;L
+Primary Energy|Oil|Electricity;EJ/yr;Primary Energy|Oil|Electricity;PJ/yr;0.001;;;;L
+Secondary Energy|Electricity;EJ/yr;Secondary Energy|Electricity;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Biomass;EJ/yr;Secondary Energy|Electricity|Biomass;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Biomass|w/ CCS;EJ/yr;Secondary Energy|Electricity|Biomass|w/ CCS;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Biomass|w/o CCS;EJ/yr;Secondary Energy|Electricity|Biomass|w/o CCS;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Coal;EJ/yr;Secondary Energy|Electricity|Coal;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Coal|w/ CCS;EJ/yr;Secondary Energy|Electricity|Coal|w/ CCS;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Coal|w/o CCS;EJ/yr;Secondary Energy|Electricity|Coal|w/o CCS;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Gas;EJ/yr;Secondary Energy|Electricity|Gas;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Gas|w/ CCS;EJ/yr;Secondary Energy|Electricity|Gas|w/ CCS;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Gas|w/o CCS;EJ/yr;Secondary Energy|Electricity|Gas|w/o CCS;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Hydro;EJ/yr;Secondary Energy|Electricity|Hydro;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Nuclear;EJ/yr;Secondary Energy|Electricity|Nuclear;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Oil;EJ/yr;Secondary Energy|Electricity|Oil;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Solar;EJ/yr;Secondary Energy|Electricity|Solar;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Solar|CSP;EJ/yr;Secondary Energy|Electricity|Solar|CSP;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Solar|PV;EJ/yr;Secondary Energy|Electricity|Solar|PV;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Wind;EJ/yr;Secondary Energy|Electricity|Wind;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Wind|Offshore;EJ/yr;Secondary Energy|Electricity|Wind|Offshore;TWh/yr;0.0036;;;;L
+Secondary Energy|Electricity|Wind|Onshore;EJ/yr;Secondary Energy|Electricity|Wind|Onshore;TWh/yr;0.0036;;;;L
+Secondary Energy|Hydrogen|Electricity;EJ/yr;Secondary Energy|Hydrogen|Electricity;TWh/yr;0.0036;;;;L
+Price|Secondary Energy|Electricity;EUR_2020/GJ;Price|Secondary Energy|Electricity;Eur2024/MWh;0.2315;;;;L
+Final Energy|Electricity;EJ/yr;Final Energy|Electricity;TWh/yr;0.0036;;;;L
+Price|Carbon;EUR_2020/t CO2;Price|Carbon|National Climate Target|Power Sector;Eur2024/t CO2;0.7092199;;;;L
+Capacity Additions|Electricity|Biomass;GW/yr;Capacity Additions|Electricity|Biomass;GW/yr;1;;;;L
+Capacity Additions|Electricity|Biomass|w/ CCS;GW/yr;Capacity Additions|Electricity|Biomass|w/ CCS;GW/yr;1;;;;L
+Capacity Additions|Electricity|Biomass|w/o CCS;GW/yr;Capacity Additions|Electricity|Biomass|w/o CCS;GW/yr;1;;;;L
+Capacity Additions|Electricity|Coal;GW/yr;Capacity Additions|Electricity|Coal;GW/yr;1;;;;L
+Capacity Additions|Electricity|Coal|w/ CCS;GW/yr;Capacity Additions|Electricity|Coal|w/ CCS;GW/yr;1;;;;L
+Capacity Additions|Electricity|Coal|w/o CCS;GW/yr;Capacity Additions|Electricity|Coal|w/o CCS;GW/yr;1;;;;L
+Capacity Additions|Electricity|Gas;GW/yr;Capacity Additions|Electricity|Gas;GW/yr;1;;;;L
+Capacity Additions|Electricity|Gas|w/ CCS;GW/yr;Capacity Additions|Electricity|Gas|w/ CCS;GW/yr;1;;;;L
+Capacity Additions|Electricity|Gas|w/o CCS;GW/yr;Capacity Additions|Electricity|Gas|w/o CCS;GW/yr;1;;;;L
+Capacity Additions|Electricity|Hydro;GW/yr;Capacity Additions|Electricity|Hydro;GW/yr;1;;;;L
+Capacity Additions|Electricity|Hydrogen;GW/yr;Capacity Additions|Electricity|Hydrogen;GW/yr;1;;;;L
+Capacity Additions|Electricity|Nuclear;GW/yr;Capacity Additions|Electricity|Nuclear;GW/yr;1;;;;L
+Capacity Additions|Electricity|Oil;GW/yr;Capacity Additions|Electricity|Oil;GW/yr;1;;;;L
+Capacity Additions|Electricity|Other;GW/yr;Capacity Additions|Electricity|Other;GW/yr;1;;;;L
+Capacity Additions|Electricity|Solar;GW/yr;Capacity Additions|Electricity|Solar;GW/yr;1;;;;L
+Capacity Additions|Electricity|Solar|CSP;GW/yr;Capacity Additions|Electricity|Solar|CSP;GW/yr;1;;;;L
+Capacity Additions|Electricity|Solar|PV;GW/yr;Capacity Additions|Electricity|Solar|PV;GW/yr;1;;;;L
+Capacity Additions|Electricity|Storage;GW/yr;Capacity Additions|Electricity|Storage;GW/yr;1;;;;L
+Capacity Additions|Electricity|Other;GW/yr;Capacity Additions|Electricity|Waste;GW/yr;1;;;;L
+Capacity Additions|Electricity|Wind;GW/yr;Capacity Additions|Electricity|Wind;GW/yr;1;;;;L
+Capacity Additions|Electricity|Wind|Offshore;GW/yr;Capacity Additions|Electricity|Wind|Offshore;GW/yr;1;;;;L
+Capacity Additions|Electricity|Wind|Onshore;GW/yr;Capacity Additions|Electricity|Wind|Onshore;GW/yr;1;;;;L
+Capacity|Electricity;GW;Capacity|Electricity;GW;1;;;;L
+Capacity|Electricity|Biomass;GW;Capacity|Electricity|Biomass;GW;1;;;;L
+Capacity|Electricity|Biomass|w/ CCS;GW;Capacity|Electricity|Biomass|w/ CCS;GW;1;;;;L
+Capacity|Electricity|Biomass|w/o CCS;GW;Capacity|Electricity|Biomass|w/o CCS;GW;1;;;;L
+Capacity|Electricity|Coal;GW;Capacity|Electricity|Coal;GW;1;;;;L
+Capacity|Electricity|Coal|w/ CCS;GW;Capacity|Electricity|Coal|w/ CCS;GW;1;;;;L
+Capacity|Electricity|Coal|w/o CCS;GW;Capacity|Electricity|Coal|w/o CCS;GW;1;;;;L
+Capacity|Electricity|Gas;GW;Capacity|Electricity|Gas;GW;1;;;;L
+Capacity|Electricity|Gas|w/ CCS;GW;Capacity|Electricity|Gas|w/ CCS;GW;1;;;;L
+Capacity|Electricity|Gas|w/o CCS;GW;Capacity|Electricity|Gas|w/o CCS;GW;1;;;;L
+Capacity|Electricity|Hydro;GW;Capacity|Electricity|Hydro;GW;1;;;;L
+Capacity|Electricity|Hydrogen;GW;Capacity|Electricity|Hydrogen;GW;1;;;;L
+Capacity|Electricity|Nuclear;GW;Capacity|Electricity|Nuclear;GW;1;;;;L
+Capacity|Electricity|Oil;GW;Capacity|Electricity|Oil;GW;1;;;;L
+Capacity|Electricity|Other;GW;Capacity|Electricity|Other;GW;1;;;;L
+Capacity|Electricity|Solar;GW;Capacity|Electricity|Solar;GW;1;;;;L
+Capacity|Electricity|Solar|CSP;GW;Capacity|Electricity|Solar|CSP;GW;1;;;;L
+Capacity|Electricity|Solar|PV;GW;Capacity|Electricity|Solar|PV;GW;1;;;;L
+Capacity|Electricity|Other;GW;Capacity|Electricity|Waste;GW;1;;;;L
+Capacity|Electricity|Wind;GW;Capacity|Electricity|Wind;GW;1;;;;L
+Capacity|Electricity|Wind|Offshore;GW;Capacity|Electricity|Wind|Offshore;GW;1;;;;L
+Capacity|Electricity|Wind|Onshore;GW;Capacity|Electricity|Wind|Onshore;GW;1;;;;L

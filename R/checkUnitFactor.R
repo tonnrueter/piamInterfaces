@@ -83,7 +83,11 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1", "TgN/year", "Mt Nr/yr"),
                           c("0.8121", "USDMER05", "US$2017"),
                           c("0.0008121", "bn USD 2005 MER", "million US$2017 MER/yr"),
-                          c("1000", "1000 t dm", "Mt DM/yr")
+                          c("1000", "1000 t dm", "Mt DM/yr"),
+                          c("0.0036", "EJ/yr", "TWh/yr"),
+                          c("0.7092199", "EUR_2020/t CO2", "Eur2024/t CO2"),
+                          c("0.2315", "EUR_2020/GJ", "Eur2024/MWh"),
+                          c("0.001", "EJ/yr", "PJ/yr")
                          )
   if (! isTRUE(unique(lapply(scaleConversion, length)) == 3)) {
     warning("scaleConversion has some parts that have not 3 elements")
