@@ -100,12 +100,12 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
 
   firsterror <- TRUE
   for (sc in scaleConversion) {
-    fails <- template %>%
+    fails <- template |>
                # check whether substitution implies identical units
-               mutate(matches = .data$piam_unit == gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$piam_unit == gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) |>
                # check whether any substitution has actually taken place (excludes all other where piam_unit = unit)
-               mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
-               mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) |>
+               mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) |>
                mutate(failed  = ! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
     wrongScale <- filter(fails, .data$failed & .data$matches)
     if (nrow(wrongScale) > 0) {
