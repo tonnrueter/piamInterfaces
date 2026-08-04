@@ -83,7 +83,11 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
                           c("1", "TgN/year", "Mt Nr/yr"),
                           c("0.8121", "USDMER05", "US$2017"),
                           c("0.0008121", "bn USD 2005 MER", "million US$2017 MER/yr"),
-                          c("1000", "1000 t dm", "Mt DM/yr")
+                          c("1000", "1000 t dm", "Mt DM/yr"),
+                          c("0.0036", "EJ/yr", "TWh/yr"),
+                          c("0.7092199", "EUR_2020/t CO2", "Eur2024/t CO2"),
+                          c("0.2315", "EUR_2020/GJ", "Eur2024/MWh"),
+                          c("0.001", "EJ/yr", "PJ/yr")
                          )
   if (! isTRUE(unique(lapply(scaleConversion, length)) == 3)) {
     warning("scaleConversion has some parts that have not 3 elements")
@@ -96,12 +100,12 @@ checkUnitFactor <- function(template, logFile = NULL, failOnUnitMismatch = TRUE)
 
   firsterror <- TRUE
   for (sc in scaleConversion) {
-    fails <- template %>%
+    fails <- template |>
                # check whether substitution implies identical units
-               mutate(matches = .data$piam_unit == gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$piam_unit == gsub(sc[[2]], sc[[3]], .data$unit, fixed = TRUE)) |>
                # check whether any substitution has actually taken place (excludes all other where piam_unit = unit)
-               mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) %>%
-               mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) %>%
+               mutate(matches = .data$matches & grepl(sc[[2]], .data$unit, fixed = TRUE)) |>
+               mutate(matches = .data$matches & ! grepl(paste0("/", sc[[2]]), .data$unit, fixed = TRUE)) |>
                mutate(failed  = ! .data$piam_factor %in% c(sc[[1]], paste0("-", sc[[1]])))
     wrongScale <- filter(fails, .data$failed & .data$matches)
     if (nrow(wrongScale) > 0) {
