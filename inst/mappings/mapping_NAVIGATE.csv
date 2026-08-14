@@ -63,9 +63,9 @@ idx;tier;category;variable;unit;piam_variable;piam_unit;piam_factor;internal_com
 37;2;agriculture;Agricultural Production|Non-Energy|Livestock|Food;million t DM/yr;;;;;;total production for food livestock products;
 38;2;agriculture;Agricultural Production|Non-Energy|Livestock|Other;million t DM/yr;;;;;;total production for non-food livestock products;
 39;2;agriculture;Fertilizer Use|Potassium;Tg K2O/yr;;;;;;total potassium fertilizer use;
-40;2;agriculture;Yield|Cereal;t DM/ha/yr;Productivity|Yield|Crops|Cereals;t DM/ha;;;;yield of cereal production per until of area (used here as repreentative crop to measure yield assumptions);M
-41;2;agriculture;Yield|Oilcrops;t DM/ha/yr;Productivity|Yield|Crops|Oil crops;t DM/ha;;;;aggregated yield of Oilcrops (e.g. soybean, rapeseed, groundnut, sunflower, oilpalm);M
-42;2;agriculture;Yield|Sugarcrops;t DM/ha/yr;Productivity|Yield|Crops|Sugar crops;t DM/ha;;;;aggregated yield of Sugarcrops (e.g. sugarbeet, sugarcane);M
+40;2;agriculture;Yield|Cereal;t DM/ha/yr;Productivity|Yields|Yield by physical area|Crops|Cereals;t DM/ha;;;;yield of cereal production per until of area (used here as repreentative crop to measure yield assumptions);M
+41;2;agriculture;Yield|Oilcrops;t DM/ha/yr;Productivity|Yields|Yield by physical area|Crops|Oil crops;t DM/ha;;;;aggregated yield of Oilcrops (e.g. soybean, rapeseed, groundnut, sunflower, oilpalm);M
+42;2;agriculture;Yield|Sugarcrops;t DM/ha/yr;Productivity|Yields|Yield by physical area|Crops|Sugar crops;t DM/ha;;;;aggregated yield of Sugarcrops (e.g. sugarbeet, sugarcane);M
 43;2;agriculture;Fertilizer|Potassium|Intensity;t K20/ha/yr;;;;;;potassium fertilizer inputs in tonnes per hectare per year (or similar);
 44;1;carbon management;Carbon Capture;Mt CO2/yr;Carbon Management|Carbon Capture;Mt CO2/yr;;;;total carbon dioxide emissions captured, i.e. captured CO2 stream from bioenergy use, fossil fuel use, industrial processes, and direct air capture, should be reported as positive numbers;R
 45;1;carbon management;Carbon Capture|Biomass;Mt CO2/yr;Carbon Management|Carbon Capture|Energy|Pe2Se|+|Biomass;Mt CO2/yr;;;;total carbon dioxide emissions captured from bioenergy use, should be reported as positive numbers;R

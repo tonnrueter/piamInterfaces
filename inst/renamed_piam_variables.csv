@@ -392,3 +392,15 @@ Emi|VOC|Energy|Supply;Emi|VOC|Energy Supply
 Emi|VOC|Energy|Supply|+|Electricity;Emi|VOC|Energy Supply|Electricity
 Emi|VOC|Energy|Supply|+|Extraction;Emi|VOC|Energy Supply|Extraction
 Emi|VOC|Product Use|Solvents;Emi|VOC|Solvents
+#
+# Yield reporting restructured under Productivity|Yields (magpie4 >= 2.80.0).
+# NOTE the wildcard on the realized yields is anchored with a trailing pipe.
+# A bare "Productivity|Yield*" would also swallow "Productivity|Yield by harvested
+# area", "Productivity|Yield (before calibration)" and, critically,
+# "Productivity|Yield-increasing technological change crops", which is NOT renamed.
+Productivity|Yields|Yield by physical area;Productivity|Yield
+Productivity|Yields|Yield by physical area|*;Productivity|Yield|*
+Productivity|Yields|Yield by harvested area*;Productivity|Yield by harvested area*
+Productivity|Yields|Input data|Uncalibrated*;Productivity|Yield (before calibration)*
+Productivity|Yields|Input data|Calibrated*;Productivity|Yield (after calibration)*
+Productivity|Yields|Input data|Calibrated|Including technological change*;Productivity|Yield (including tau)*
