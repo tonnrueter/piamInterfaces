@@ -20,7 +20,6 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Falk Benke \email{benke@pik-potsdam.de}
   \item Oliver Richters
 }
 

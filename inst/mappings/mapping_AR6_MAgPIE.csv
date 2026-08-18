@@ -19,10 +19,10 @@ idx;variable;unit;piam_variable;piam_unit;piam_factor;source;internal_comment;co
 6;Fertilizer Use|Phosphorous|Organic;Tg P/yr;;;;;;;Total phosphorous inputs in organic fertilizer use
 7;Fertilizer Use|Potassium|Inorganic;Tg K2O/yr;;;;;;;Total potassium inputs in inorganic fertilizer use
 8;Fertilizer Use|Potassium|Organic;Tg K2O/yr;;;;;;;Total potassium inputs in organic fertilizer use
-9;Yield|Bioenergy|2nd generation;t DM/ha/yr;Productivity|Yield|+|Bioenergy crops;t DM/ha;;M;;;aggregated yield of 2nd generation energy crops (e.g.,switchgrass,miscanthus,fast-growing wood species)
-10;Yield|Cereal;t DM/ha/yr;Productivity|Yield|Crops|+|Cereals;t DM/ha;;M;;;yield of cereal production per until of area (used here as repreentative crop to measure yield assumptions)
-11;Yield|Oilcrops;t DM/ha/yr;Productivity|Yield|Crops|+|Oil crops;t DM/ha;;M;;;aggregated yield of Oilcrops (e.g. soybean,rapeseed,groundnut,sunflower,oilpalm)
-12;Yield|Sugarcrops;t DM/ha/yr;Productivity|Yield|Crops|+|Sugar crops;t DM/ha;;M;;;aggregated yield of Sugarcrops (e.g. sugarbeet,sugarcane)
+9;Yield|Bioenergy|2nd generation;t DM/ha/yr;Productivity|Yields|Yield by physical area|Bioenergy crops;t DM/ha;;M;;;aggregated yield of 2nd generation energy crops (e.g.,switchgrass,miscanthus,fast-growing wood species)
+10;Yield|Cereal;t DM/ha/yr;Productivity|Yields|Yield by physical area|Crops|Cereals;t DM/ha;;M;;;yield of cereal production per until of area (used here as repreentative crop to measure yield assumptions)
+11;Yield|Oilcrops;t DM/ha/yr;Productivity|Yields|Yield by physical area|Crops|Oil crops;t DM/ha;;M;;;aggregated yield of Oilcrops (e.g. soybean,rapeseed,groundnut,sunflower,oilpalm)
+12;Yield|Sugarcrops;t DM/ha/yr;Productivity|Yields|Yield by physical area|Crops|Sugar crops;t DM/ha;;M;;;aggregated yield of Sugarcrops (e.g. sugarbeet,sugarcane)
 13;Carbon Sequestration|CCS;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 14;Carbon Sequestration|CCS|Biomass;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
 15;Carbon Sequestration|CCS|Biomass|Energy;Mt CO2/yr;;;;;;;total carbon dioxide emissions captured from bioenergy use and stored in geological deposits (e.g. in depleted oil and gas fields,unmined coal seams,saline aquifers) and the deep ocean,stored amounts should be reported as positive numbers
