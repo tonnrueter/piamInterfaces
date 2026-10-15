@@ -222,9 +222,10 @@ generateIIASASubmission <- function(mifs = ".", # nolint: cyclocomp_linter
   # write or return data ----
   submission <- quitteSort(submission)
 
-  # replace unit "unitless" with an empty string
+  # replace unit "unitless" with an empty string ----
   submission <- submission %>%
-    mutate("unit" = ifelse(.data$unit == "unitless", "", .data$unit))
+    mutate("unit" = ifelse(.data$unit == "unitless", "", as.character(.data$unit))) %>%
+    quitte::factor.data.frame()
 
   if (is.null(outputFilename)) {
     return(submission)
